@@ -4,12 +4,12 @@ defaults:
     values:
       permalink: ""
       lang: "en"
-      title: "Priceless"
+      title: "Sustainable"
       description: "Experience the world. Free of charge."
   - scope:
       path: "de/README.md"
     values:
       permalink: "de"
       lang: "de"
-      title: "Unbezahlbar"
+      title: "Nachhaltig"
       description: "Erlebe die Welt. Gratis."

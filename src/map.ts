@@ -10,7 +10,7 @@ import { getJson } from "./utilities/jsonRequest";
 import { get, set } from "./utilities/storage";
 import { groupBy } from "./utilities/data";
 import { getHtmlElement, getHtmlElements } from "./utilities/html";
-import { createPricelessOverPassLayer } from "./createPricelessOverPassLayer";
+import { createSustainableOverPassLayer } from "./createSustainableOverPassLayer";
 
 declare var taginfo_taglist: any;
 
@@ -47,7 +47,7 @@ export function initMap<M>(
   });
 
   getHtmlElement(".about").addEventListener("click", () => {
-    window.location.href = `https://priceless.zottelig.ch${
+    window.location.href = `https://sustainable.zottelig.ch${
       local.code ? `/${local.code}` : ""
     }/docs`;
   });
@@ -463,7 +463,7 @@ function init<M>(
   local: any,
   color: string
 ) {
-  layers[value] = createPricelessOverPassLayer(
+  layers[value] = createSustainableOverPassLayer(
     value,
     icon,
     query,

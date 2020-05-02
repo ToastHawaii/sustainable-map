@@ -1,8 +1,8 @@
-# Unbezahlbar
+# Nachhaltig
 
 Erlebe die Welt. Gratis.
 
-[Hier geht es zur Karte](https://priceless.zottelig.ch/de)
+[Hier geht es zur Karte](https://sustainable.zottelig.ch/de)
 
 Dies ist eine einfache Karte, welche öffentliche und kostenlose Einrichtungen und Angebote in deiner Nähe anzeigt. Die Informationen werden von [OpenStreetMap](https://www.openstreetmap.org) geladen.
 
@@ -40,7 +40,7 @@ Besuche bereits eingetragene Einrichtungen und fotografiere sie und verlinke das
 
 ### Möchtest du die Karte in deine Sprache übersetzen?
 
-Die Texte befinden sich im src Ordner in den Dateien local.ts, index.html und README.md. Sende mir einen Pull Request über [GitHub](https://github.com/ToastHawaii/priceless-map) oder nimm direkt mit mir [kontakt](https://it.zottelig.ch/kontakt) auf.
+Die Texte befinden sich im src Ordner in den Dateien local.ts, index.html und README.md. Sende mir einen Pull Request über [GitHub](https://github.com/ToastHawaii/sustainable-map) oder nimm direkt mit mir [kontakt](https://it.zottelig.ch/kontakt) auf.
 
 ### Schreibs du gerne?
 
@@ -48,13 +48,13 @@ Ergänze die Beschreibung der Einrichtungen im [OpenStreetMap Wiki](https://wiki
 
 ### Kannst du Programmieren?
 
-Dann erweitere diese Karte und sende mir Pull Requests. [Hier geht es zur Projekt Webseite von unbezahlbar](https://github.com/ToastHawaii/priceless-map)
+Dann erweitere diese Karte und sende mir Pull Requests. [Hier geht es zur Projekt Webseite von unbezahlbar](https://github.com/ToastHawaii/sustainable-map)
 
 Oder erweitere die Unterstützung für die Tags und Keys in den Tools der OpenStreetMap. [iD (Browser)](https://wiki.openstreetmap.org/wiki/ID), [JOSM (PC)](https://wiki.openstreetmap.org/wiki/JOSM), [Vespucci (Android)](https://wiki.openstreetmap.org/wiki/Vespucci), [Go Map!! (iOS)](https://wiki.openstreetmap.org/wiki/Go_Map!!)
 
 ### Sonstiges
 
-- Du hast eine Idee wie die Karte erweitert werden kann? Sende mir eine [Issue über GitHub](https://github.com/ToastHawaii/priceless-map/issues/new) oder eine Nachricht über meine [Kontakt Seite](https://it.zottelig.ch/kontakt).
+- Du hast eine Idee wie die Karte erweitert werden kann? Sende mir eine [Issue über GitHub](https://github.com/ToastHawaii/sustainable-map/issues/new) oder eine Nachricht über meine [Kontakt Seite](https://it.zottelig.ch/kontakt).
 - Rede darüber und teile die Karte mit deinen Freunden und Bekannten.
 - Unterstütze [mich](https://it.zottelig.ch/kontakt) mit Kaffee und Kuchen.
 - Geniesse das Leben. ;)
@@ -71,17 +71,9 @@ Ja, der Code steht frei zur Verwendung, Kopierung und Modifizierung.
 
 Der Code kann auch als Basis für eine eigene Themenkarte verwendet werden.
 
-[Quellcode dieser Karte auf GitHub anzeigen](https://github.com/ToastHawaii/priceless-map)
+[Quellcode dieser Karte auf GitHub anzeigen](https://github.com/ToastHawaii/sustainable-map)
 
 ## Weiteres
-
-Die Webseite wurde inspiriert von [Zürich unbezahlbar](https://www.zuerichunbezahlbar.ch/map/), welche öffentliche und gratis Angebote, Events und Einrichtungen in Zürich anzeigt. Ein Dank an dieser Stelle an die Entwickler, Veröffentlicher und Unterstützer von Zürich unbezahlbar, für die Inspiration und Arbeit.
-
-Diverse Einrichtungen z.B. Pumpen, Sportplätze, etc. [Züriplan](https://www.maps.stadt-zuerich.ch/zueriplan3/Stadtplan.aspx)
-
-Orte, an denen Du auch ohne Papiere und/oder Geld an dem Leben in der Stadt teilhaben kannst. [SolidaryCityMap](https://solidary.city/)
-
-Berlin, gratis und ganz einfach für alle erlebbar. [gratis-in-berlin](https://www.gratis-in-berlin.de/)
 
 Besuche öffentliche Bücherschränke und trage diese ein. Schau dir dazu [die schöne Karte von Binnette](https://umap.openstreetmap.fr/fr/map/osm-bookcases-and-boite-a-lire_362287#15/45.2010/5.7389) an, welche auf den Daten von [boite-a-lire](https://www.boite-a-lire.com/) basiert. [Hier geht es zur Projekt Webseite von Binnette's bookcases-to-check](https://github.com/Binnette/bookcases-to-check).
 

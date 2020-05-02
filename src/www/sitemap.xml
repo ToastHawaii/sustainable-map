@@ -3,27 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
 <url>
-<loc>https://priceless.zottelig.ch/docs</loc>
+<loc>https://sustainable.zottelig.ch/docs</loc>
   <xhtml:link 
                rel="alternate"
                hreflang="de"
-               href="https://priceless.zottelig.ch/de/docs"/>
+               href="https://sustainable.zottelig.ch/de/docs"/>
     <xhtml:link 
                rel="alternate"
                hreflang="en"
-               href="https://priceless.zottelig.ch/docs"/>
+               href="https://sustainable.zottelig.ch/docs"/>
 
 </url>
 <url>
-<loc>https://priceless.zottelig.ch</loc>
+<loc>https://sustainable.zottelig.ch</loc>
   <xhtml:link 
                rel="alternate"
                hreflang="de"
-               href="https://priceless.zottelig.ch/de"/>
+               href="https://sustainable.zottelig.ch/de"/>
     <xhtml:link 
                rel="alternate"
                hreflang="en"
-               href="https://priceless.zottelig.ch"/>
+               href="https://sustainable.zottelig.ch"/>
 
 </url>
 </urlset>

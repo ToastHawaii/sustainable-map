@@ -12,9 +12,8 @@ import { getHtmlElement } from "./utilities/html";
 import { parseOpeningHours } from "./map";
 import * as L from "leaflet";
 import { attributeDescriptions } from "./attributeDescriptions";
-import { equalsIgnoreCase } from "./utilities/string";
 
-export function createPricelessOverPassLayer<M>(
+export function createSustainableOverPassLayer<M>(
   value: string,
   icon: string,
   query: string,
@@ -48,31 +47,31 @@ export function createPricelessOverPassLayer<M>(
         };
         let marker;
         const e = data.elements[i];
-        if (e.id in this._ids) continue;
-        if (
-          e.tags.fee &&
-          !equalsIgnoreCase(e.tags.fee, "no") &&
-          !equalsIgnoreCase(e.tags.fee, "donation") &&
-          !equalsIgnoreCase(e.tags.fee, "interval") &&
-          !equalsIgnoreCase(e.tags.fee, "free") &&
-          !equalsIgnoreCase(e.tags.fee, "none") &&
-          !parseOpeningHours(e.tags.fee, local.code || "en") &&
-          !e.tags["fee:conditional"]
-        )
-          continue;
-        if (
-          e.tags.access &&
-          !equalsIgnoreCase(e.tags.access, "yes") &&
-          !equalsIgnoreCase(e.tags.access, "permissive")
-        )
-          continue;
-        if (
-          equalsIgnoreCase(value, "toilets") &&
-          e.tags["toilets:access"] &&
-          !equalsIgnoreCase(e.tags["toilets:access"], "yes") &&
-          !equalsIgnoreCase(e.tags["toilets:access"], "permissive")
-        )
-          this._ids[e.id] = true;
+        // if (e.id in this._ids) continue;
+        // if (
+        //   e.tags.fee &&
+        //   !equalsIgnoreCase(e.tags.fee, "no") &&
+        //   !equalsIgnoreCase(e.tags.fee, "donation") &&
+        //   !equalsIgnoreCase(e.tags.fee, "interval") &&
+        //   !equalsIgnoreCase(e.tags.fee, "free") &&
+        //   !equalsIgnoreCase(e.tags.fee, "none") &&
+        //   !parseOpeningHours(e.tags.fee, local.code || "en") &&
+        //   !e.tags["fee:conditional"]
+        // )
+        //   continue;
+        // if (
+        //   e.tags.access &&
+        //   !equalsIgnoreCase(e.tags.access, "yes") &&
+        //   !equalsIgnoreCase(e.tags.access, "permissive")
+        // )
+        //   continue;
+        // if (
+        //   equalsIgnoreCase(value, "toilets") &&
+        //   e.tags["toilets:access"] &&
+        //   !equalsIgnoreCase(e.tags["toilets:access"], "yes") &&
+        //   !equalsIgnoreCase(e.tags["toilets:access"], "permissive")
+        // )
+        //   this._ids[e.id] = true;
         if (e.type === "node") {
           pos = L.latLng(e.lat, e.lon);
         } else {
