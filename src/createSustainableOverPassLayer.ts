@@ -26,7 +26,8 @@ export function createSustainableOverPassLayer<M>(
       className: "custom-div-icon",
       html: `<div style="background-color:${
         color || "#000000"
-      };" class="marker-pin"></div><img class="${value}-icon" src="${icon}">`,
+      };" class="marker-pin"></div><div class="marker-icon ${value}-icon" style="background-image:url('${icon}');"></div>`,
+      
       iconSize: [36, 48],
       iconAnchor: [18, 48]
     }),
