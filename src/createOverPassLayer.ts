@@ -13,7 +13,7 @@ import { parseOpeningHours } from "./map";
 import * as L from "leaflet";
 import { attributeDescriptions } from "./attributeDescriptions";
 
-export function createSustainableOverPassLayer<M>(
+export function createOverPassLayer<M>(
   value: string,
   icon: string,
   query: string,
