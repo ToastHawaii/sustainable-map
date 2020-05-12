@@ -10,7 +10,7 @@ import { getJson } from "./utilities/jsonRequest";
 import { get, set } from "./utilities/storage";
 import { groupBy } from "./utilities/data";
 import { getHtmlElement, getHtmlElements } from "./utilities/html";
-import { createSustainableOverPassLayer } from "./createSustainableOverPassLayer";
+import { createSustainableOverPassLayer } from "./createOverPassLayer";
 
 declare var taginfo_taglist: any;
 
