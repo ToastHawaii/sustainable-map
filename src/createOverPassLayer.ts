@@ -9,7 +9,7 @@ import {
 import { toTitle, toLevel, toOpenOrClose } from "./view";
 import { getJson } from "./utilities/jsonRequest";
 import { getHtmlElement } from "./utilities/html";
-import { parseOpeningHours } from "./map";
+import { parseOpeningHours, overpassSubs } from "./map";
 import * as L from "leaflet";
 import { attributeDescriptions } from "./attributeDescriptions";
 
@@ -38,10 +38,7 @@ export function createOverPassLayer<M>(
       minZoomMessage: local.minZoomMessage
     },
     minZoom: 14,
-    query: `(${query.replace(
-      /\{interval\}/g,
-      "(PH|SH|((:{0,1}dusk|sun|dawn)[^)]*(:{0,1}-|\\+)[^)]*)|(:{0,1}dusk|sun|dawn).*hours|(:{0,1}dusk|sun|dawn|d{1,2}[.:]d{2})+|ds*-s*(mo|tu|we|th|fr|sa|su)\\b|-s*d{1,2}[:.]d{2}s*+{0,1}|[^0-9a-z .{0,1}]s*-{0,1}s*d{0,2}:d{2}s*[^+]{0,1}|d{1,2}:d{2}s*-{0,1}s*d{0,2}:d{2}s*\\+{0,1}|^(:{0,1}(:{0,1}[0-1][0-9]|2[0-4])(:{0,1}[1-5][0-9]|0[0-9])s*-s*){2}$)"
-    )});out center;`,
+    query: `(${overpassSubs(query)});out center;`,
     timeout: 30, // Seconds
     onSuccess(data: { elements: any[] }) {
       for (let i = 0; i < data.elements.length; i++) {
@@ -52,23 +49,6 @@ export function createOverPassLayer<M>(
         let marker;
         const e = data.elements[i];
         // if (e.id in this._ids) continue;
-        // if (
-        //   e.tags.fee &&
-        //   !equalsIgnoreCase(e.tags.fee, "no") &&
-        //   !equalsIgnoreCase(e.tags.fee, "donation") &&
-        //   !equalsIgnoreCase(e.tags.fee, "interval") &&
-        //   !equalsIgnoreCase(e.tags.fee, "free") &&
-        //   !equalsIgnoreCase(e.tags.fee, "none") &&
-        //   !parseOpeningHours(e.tags.fee, local.code || "en") &&
-        //   !e.tags["fee:conditional"]
-        // )
-        //   continue;
-        // if (
-        //   e.tags.access &&
-        //   !equalsIgnoreCase(e.tags.access, "yes") &&
-        //   !equalsIgnoreCase(e.tags.access, "permissive")
-        // )
-        //   continue;
         // if (
         //   equalsIgnoreCase(value, "toilets") &&
         //   e.tags["toilets:access"] &&

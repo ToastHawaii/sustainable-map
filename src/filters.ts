@@ -1,26 +1,3 @@
-function pub(tag: string[]) {
-  return tag
-    .map(t => [`${t}[!"access"]`, `${t}["access"~"^(yes|permissive)$"]`])
-    .reduce((acc, val) => acc.concat(val), []);
-}
-
-function free(tag: string[]) {
-  return tag
-    .map(t => [
-      `${t}[!"fee"]`,
-      `${t}["fee"~"^(no|donation|interval|free|none|{interval})$"]`,
-      `${t}["fee:conditional"]`
-    ])
-    .reduce((acc, val) => acc.concat(val), []);
-}
-
-// function nw(tag: string[]) {
-//   return tag.map(t => `nw${t};`).join("\n");
-// }
-
-function nwr(tag: string[]) {
-  return tag.map(t => `nwr${t};`).join("\n");
-}
 
 export const filters: {
   group: string;
@@ -33,28 +10,27 @@ export const filters: {
   edit: string[];
   tags: string[];
 }[] = [
-  //   {
-  //     group: "culture",
-  //     value: "artwork",
-  //     icon: "https://wiki.openstreetmap.org/w/images/1/12/Artwork-14.svg",
-  //     query: `
-  //     // Kunst im öffentlichen Raum
-  //     nwr["tourism"="artwork"];`,
-  //     color: "#F4A460",
-  //     tags: ["tourism=artwork"],
-  //     edit: ["tourism=artwork"]
-  //   },
-  //   {
-  //     group: "culture",
-  //     value: "fountain",
-  //     icon: "https://wiki.openstreetmap.org/w/images/a/a1/Fountain-14.svg",
-  //     query: `
-  //     nwr["amenity"="fountain"];
-  //     nwr["playground"="splash_pad"];`,
-  //     color: "#00FFFF",
-  //     tags: ["amenity=fountain", "playground=splash_pad"],
-  //     edit: ["amenity=fountain", "playground"]
-  //   },
+    {
+      group: "culture",
+      value: "artwork",
+      icon: "https://wiki.openstreetmap.org/w/images/1/12/Artwork-14.svg",
+      query: `
+nwr["tourism"="artwork"]&part;`,
+      color: "#F4A460",
+      tags: ["tourism=artwork"],
+      edit: ["tourism=artwork"]
+    },
+    {
+      group: "culture",
+      value: "fountain",
+      icon: "https://wiki.openstreetmap.org/w/images/a/a1/Fountain-14.svg",
+      query: `
+nwr["amenity"="fountain"]&part;
+nwr["playground"="splash_pad"]&part;`,
+      color: "#00FFFF",
+      tags: ["amenity=fountain", "playground=splash_pad"],
+      edit: ["amenity=fountain", "playground"]
+    },
   //   {
   //     group: "culture",
   //     value: "tourist-attraction",
@@ -1119,32 +1095,34 @@ export const filters: {
     group: "trip",
     value: "maze",
     icon: "/lib/temaki-icons/compass.svg",
-    query: `${nwr(free(pub([`["attraction"="maze"]`, `["leisure"="maze"]`])))}`,
+    query: `
+nwr["attraction"="maze"]&part;
+nwr["leisure"="maze"]&part;`,
     color: "#197419",
     tags: ["attraction=maze"],
     edit: ["attraction=maze"]
-  }
-  //   {
-  //     group: "trip",
-  //     value: "webcam",
-  //     icon: "/lib/temaki-icons/security_camera.svg",
-  //     query: `
-  //     node["man_made"="surveillance"]["website"];
-  //     node["man_made"="surveillance"]["contact:website"];
-  //     node["man_made"="surveillance"]["website:webcam"];
+  },
+  {
+    group: "trip",
+    value: "webcam",
+    icon: "/lib/temaki-icons/security_camera.svg",
+    query: `
+node["man_made"="surveillance"]["website"];
+node["man_made"="surveillance"]["contact:website"];
+node["man_made"="surveillance"]["website:webcam"];
 
-  //     node["man_made"="surveillance"]["webcam"];
-  //     node["man_made"="surveillance"]["contact:webcam"];
-  //     node["man_made"="surveillance"]["webcam:url"];
+node["man_made"="surveillance"]["webcam"];
+node["man_made"="surveillance"]["contact:webcam"];
+node["man_made"="surveillance"]["webcam:url"];
 
-  //     node["man_made"="surveillance"]["url"];
-  //     node["man_made"="surveillance"]["url:webcam"];
+node["man_made"="surveillance"]["url"];
+node["man_made"="surveillance"]["url:webcam"];
 
-  //     node["man_made"="surveillance"]["image"];`,
-  //     color: "#a6a6a6",
-  //     tags: ["man_made=surveillance"],
-  //     edit: ["man_made=surveillance"]
-  //   },
+node["man_made"="surveillance"]["image"];`,
+    color: "#a6a6a6",
+    tags: ["man_made=surveillance"],
+    edit: ["man_made=surveillance"]
+  },
   //   {
   //     group: "object_of_utility",
   //     value: "piano",

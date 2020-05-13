@@ -322,7 +322,7 @@ export function initMap<M>(
           ) as HTMLAnchorElement).href = `http://overpass-turbo.eu/?Q=${encodeURI(
             `[out:json][timeout:30][bbox:{{bbox}}];
 (
-  ${f.query.trim()}
+${overpassSubs(f.query).trim()}
 );
 out center;`
           )}`;
@@ -527,6 +527,13 @@ function init<M>(
     color
   );
   map.addLayer(layers[value]);
+}
+
+export function overpassSubs(query: string) {
+  return query.replace(
+    /&part/g,
+    `["access"!~"^(private|no|customers)$"]["fee"!="yes"]`
+  );
 }
 
 export function parseOpeningHours(openingHours: string, localCode: string) {
