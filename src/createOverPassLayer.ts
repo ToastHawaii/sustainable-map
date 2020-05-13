@@ -27,7 +27,7 @@ export function createOverPassLayer<M>(
       html: `<div style="background-color:${
         color || "#000000"
       };" class="marker-pin"></div><div class="marker-icon ${value}-icon" style="background-image:url('${icon}');"></div>`,
-      
+
       iconSize: [36, 48],
       iconAnchor: [18, 48]
     }),
@@ -38,7 +38,10 @@ export function createOverPassLayer<M>(
       minZoomMessage: local.minZoomMessage
     },
     minZoom: 14,
-    query: `(${query});out center;`,
+    query: `(${query.replace(
+      /\{interval\}/g,
+      "(PH|SH|((:{0,1}dusk|sun|dawn)[^)]*(:{0,1}-|\\+)[^)]*)|(:{0,1}dusk|sun|dawn).*hours|(:{0,1}dusk|sun|dawn|d{1,2}[.:]d{2})+|ds*-s*(mo|tu|we|th|fr|sa|su)\\b|-s*d{1,2}[:.]d{2}s*+{0,1}|[^0-9a-z .{0,1}]s*-{0,1}s*d{0,2}:d{2}s*[^+]{0,1}|d{1,2}:d{2}s*-{0,1}s*d{0,2}:d{2}s*\\+{0,1}|^(:{0,1}(:{0,1}[0-1][0-9]|2[0-4])(:{0,1}[1-5][0-9]|0[0-9])s*-s*){2}$)"
+    )});out center;`,
     timeout: 30, // Seconds
     onSuccess(data: { elements: any[] }) {
       for (let i = 0; i < data.elements.length; i++) {

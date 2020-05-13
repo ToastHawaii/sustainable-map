@@ -1,12 +1,26 @@
-// function nwFee(tag: string) {
-//   return `nw${tag}["fee"];
-// nw${tag}["fee:conditional"];`;
+function pub(tag: string[]) {
+  return tag
+    .map(t => [`${t}[!"access"]`, `${t}["access"~"^(yes|permissive)$"]`])
+    .reduce((acc, val) => acc.concat(val), []);
+}
+
+function free(tag: string[]) {
+  return tag
+    .map(t => [
+      `${t}[!"fee"]`,
+      `${t}["fee"~"^(no|donation|interval|free|none|{interval})$"]`,
+      `${t}["fee:conditional"]`
+    ])
+    .reduce((acc, val) => acc.concat(val), []);
+}
+
+// function nw(tag: string[]) {
+//   return tag.map(t => `nw${t};`).join("\n");
 // }
 
-// function nwrFee(tag: string) {
-//   return `nwr${tag}["fee"];
-// nwr${tag}["fee:conditional"];`;
-// }
+function nwr(tag: string[]) {
+  return tag.map(t => `nwr${t};`).join("\n");
+}
 
 export const filters: {
   group: string;
@@ -1101,17 +1115,15 @@ export const filters: {
   //       "natural"
   //     ]
   //   },
-  //   {
-  //     group: "trip",
-  //     value: "maze",
-  //     icon: "/lib/temaki-icons/compass.svg",
-  //     query: `
-  //     nwr["attraction"="maze"];
-  //     nwr["leisure"="maze"];`,
-  //     color: "#197419",
-  //     tags: ["attraction=maze"],
-  //     edit: ["attraction=maze"]
-  //   },
+  {
+    group: "trip",
+    value: "maze",
+    icon: "/lib/temaki-icons/compass.svg",
+    query: `${nwr(free(pub([`["attraction"="maze"]`, `["leisure"="maze"]`])))}`,
+    color: "#197419",
+    tags: ["attraction=maze"],
+    edit: ["attraction=maze"]
+  }
   //   {
   //     group: "trip",
   //     value: "webcam",
