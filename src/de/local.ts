@@ -27,6 +27,8 @@ export const local = {
   freeToTake: "Nur mitnehmen",
   freeToTakeOrGive: "Mitnehmen und bringen",
   borrow: "Nur ausleihen",
+  customersOnly: "Nur für Besucher",
+  fee: "Kaufen",
   indoor: "Drinnen",
   female: "Frau",
   male: "Mann",
@@ -113,8 +115,8 @@ export const local = {
     "tourist-attraction": { name: "Sehenswürdigkeit", description: "" },
     "archaeological-site": { name: "Archäologische Stätte", description: "" },
     trail: { name: "Lehrpfad", description: "" },
-    "book-exchange": {
-      name: "Bücher Tausch",
+    books: {
+      name: "Bücher",
       description: "",
       externalResources: [
         {
@@ -154,6 +156,22 @@ export const local = {
           url: "https://zerowastemap.org/de/"
         }
       ]
+    },
+    "books-get": {
+      name: "Bücher bekommen",
+      description: ""
+    },
+    "books-borrow": {
+      name: "Bücher ausleihen",
+      description: ""
+    },
+    "books-give": {
+      name: "Bücher geben",
+      description: ""
+    },
+    "books-recycle": {
+      name: "Bücher weiterverwerten",
+      description: ""
     },
     kneipp_water_cure: { name: "Kneippanlage", description: "" },
     castle: { name: "Burg", description: "" },

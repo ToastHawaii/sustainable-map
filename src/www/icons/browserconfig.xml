@@ -3,7 +3,7 @@
     <msapplication>
         <tile>
             <square150x150logo src="https://sustainable.zottelig.ch/icons/mstile-150x150.png"/>
-            <TileColor>#da532c</TileColor>
+            <TileColor>#ffffff</TileColor>
         </tile>
     </msapplication>
 </browserconfig>

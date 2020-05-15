@@ -27,6 +27,8 @@ export const local = {
   freeToTake: "Free to take",
   freeToTakeOrGive: "Free to take or give",
   borrow: "Borrow only",
+  customersOnly: "Customers only",
+  fee: "Sale",
   indoor: "Indoor",
   female: "Female",
   male: "Male",
@@ -113,8 +115,8 @@ export const local = {
     "tourist-attraction": { name: "Tourist attraction", description: "" },
     "archaeological-site": { name: "Archaeological site", description: "" },
     trail: { name: "Educational trail", description: "" },
-    "book-exchange": {
-      name: "Book exchange",
+    "books": {
+      name: "Books",
       description: "",
       externalResources: [
         {
@@ -154,6 +156,22 @@ export const local = {
           url: "https://zerowastemap.org/"
         }
       ]
+    },
+    "books-get": {
+      name: "Get books",
+      description: ""
+    },
+    "books-borrow": {
+      name: "Borrow books",
+      description: ""
+    },
+    "books-give": {
+      name: "Give books",
+      description: ""
+    },
+    "books-recycle": {
+      name: "Recycle books",
+      description: ""
     },
     kneipp_water_cure: { name: "Kneipp facility", description: "" },
     castle: { name: "Castle", description: "" },

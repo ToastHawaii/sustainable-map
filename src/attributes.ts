@@ -226,6 +226,14 @@ export const attributes: Attribute<{}>[] = [
     template: local => template(local.light, "far fa-lightbulb")
   },
   {
+    check: tags => (tags.fee && tags.fee !== "no") || !!tags.shop,
+    template: local => template(local.fee, "far fa-money-bill-alt")
+  },
+  {
+    check: tags => tags.access === "customers",
+    template: local => template(local.customersOnly, "fas fa-ticket-alt")
+  },
+  {
     check: tags =>
       /horizontal_bar/.test(tags["fitness_station"]) ||
       tags["fitness_station:horizontal_bar"] === "yes" ||
