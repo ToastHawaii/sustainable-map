@@ -99,7 +99,7 @@ export const filters: {
   },
 
   {
-    group: "object_of_utility",
+    group: "goods",
     value: "bicycle-self-repair-service-missing",
     icon:
       "https://wiki.openstreetmap.org/w/images/0/01/Bicycle_repair_station-14.svg",
@@ -111,7 +111,7 @@ export const filters: {
     edit: ["amenity=bicycle_repair_station"]
   },
   {
-    group: "object_of_utility",
+    group: "goods",
     value: "bicycle-self-repair-tools-missing",
     icon:
       "https://wiki.openstreetmap.org/w/images/0/01/Bicycle_repair_station-14.svg",
@@ -125,7 +125,7 @@ export const filters: {
   },
 
   {
-    group: "object_of_utility",
+    group: "goods",
     value: "bicycle-self-repair-obsolete-tag",
     icon:
       "https://wiki.openstreetmap.org/w/images/0/01/Bicycle_repair_station-14.svg",
@@ -137,7 +137,7 @@ export const filters: {
   },
 
   {
-    group: "object_of_utility",
+    group: "goods",
     value: "goods-exchange-reuse-missing",
     icon: "/lib/maki-icons/gift-15.svg",
     query: `
@@ -147,7 +147,7 @@ export const filters: {
     edit: ["amenity"]
   },
   {
-    group: "object_of_utility",
+    group: "goods",
     value: "goods-exchange-obsolete-tag",
     icon: "/lib/maki-icons/gift-15.svg",
     query: `

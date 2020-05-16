@@ -22,6 +22,7 @@ export function initMap<M>(
   filterOptions: {
     group: string;
     subgroup?: string;
+    order?: number;
     value: string;
     icon: string;
     button?: string;
@@ -272,7 +273,8 @@ export function initMap<M>(
         local.type[a.value].name.localeCompare(local.type[b.value].name)
       )
       .sort((a, b) => local.group[a.group].localeCompare(local.group[b.group]))
-      .sort((a, b) => (a.subgroup || "").localeCompare(b.subgroup || "")),
+      .sort((a, b) => (a.subgroup || "").localeCompare(b.subgroup || ""))
+      .sort((a, b) => (b.order || 1000) - (a.order || 1000)),
     "group"
   );
   let iconColors = "";
@@ -530,10 +532,12 @@ function init<M>(
 }
 
 export function overpassSubs(query: string) {
-  return query.replace(
-    /&part/g,
-    `["access"!~"^(private|no|customers)$"]["fee"!="yes"]`
-  );
+  return query
+    .replace(/&part/g, `["access"!~"^(private|no|customers)$"]["fee"!="yes"]`)
+    .replace(
+      /&free/g,
+      `[~"fee(:conditional){0,1}"~"no|donation|interval|free|none|(PH|SH|\((:{0,1}dusk|sun|dawn)[^)]*(:{0,1}-|\\+)[^)]*\)|(:{0,1}dusk|sun|dawn).*hours|(:{0,1}dusk|sun|dawn|\d{1,2}[.:]\d{2})\+|\d\s*-\s*(mo|tu|we|th|fr|sa|su)\\b|-\s*\d{1,2}[:.]\d{2}\s*\+{0,1}|[^0-9a-z .{0,1}]\s*-{0,1}\s*\d{0,2}:\d{2}\s*[^+]{0,1}|\d{1,2}:\d{2}\s*-{0,1}\s*\d{0,2}:\d{2}\s*\\+{0,1}|^(:{0,1}(:{0,1}[0-1][0-9]|2[0-4])(:{0,1}[1-5][0-9]|0[0-9])\s*-\s*){2}$)"]`
+    );
 }
 
 export function parseOpeningHours(openingHours: string, localCode: string) {
