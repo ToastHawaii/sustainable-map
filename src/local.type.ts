@@ -163,7 +163,7 @@ export const type = {
       }
     ]
   },
-  piano: { name: "Piano", description: "" },
+  musical_instrument: { name: "Instrument", description: "" },
   advertising: {
     name: "Advertising space",
     description: "Here you can hang up posters to advertise your concern."

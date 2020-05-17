@@ -163,7 +163,7 @@ export const type = {
       }
     ]
   },
-  piano: { name: "Klavier", description: "" },
+  musical_instrument: { name: "Instrument", description: "" },
   advertising: {
     name: "Werbefläche",
     description:

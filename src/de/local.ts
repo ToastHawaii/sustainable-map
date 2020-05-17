@@ -76,7 +76,8 @@ export const local = {
     sport: "Sport",
     play: "Spiel",
     trip: "Ausflug",
-    goods: "Gegenstände"
+    goods: "Gegenstände",
+    food: "Nahrung"
   },
   amenity: {
     hunting_stand: "Hochsitz für Jäger"
