@@ -1263,112 +1263,110 @@ node["man_made"="surveillance"]["image"];`,
   //     ],
   //     edit: ["leisure=firepit", "amenity=bbq", "tourism"]
   //   },
-  //   {
-  //     group: "trip",
-  //     value: "map",
-  //     icon: "https://wiki.openstreetmap.org/w/images/c/ca/Map-14.svg",
-  //     query: `
-  //     node["information"="map"];`,
-  //     color: "#FFE4C4",
-  //     tags: ["information=map"],
-  //     edit: ["tourism=information"]
-  //   },
-  //   {
-  //     group: "trip",
-  //     subgroup: "map",
-  //     value: "openstreetmap",
-  //     icon: "https://wiki.openstreetmap.org/w/images/c/ca/Map-14.svg",
-  //     button: "fas fa-heart",
-  //     query: `
-  //     node["information"="map"]["map:source"~"^(OSM|OpenStreetMap)$",i];
-  //     node["information"="map"]["map_source"~"^(OSM|OpenStreetMap)$",i];
-  //     node["information"="map"]["mapsource"~"^(OSM|OpenStreetMap)$",i];`,
-  //     color: "#9fd485",
-  //     tags: ["information=map"],
-  //     edit: ["tourism=information"]
-  //   },
-  //   {
-  //     group: "trip",
-  //     value: "garden",
-  //     icon: "/lib/maki-icons/garden-15.svg",
-  //     query: `
-  // nwr["leisure"="garden"];`,
-  //     color: "#BA55D3",
-  //     tags: ["leisure=garden"],
-  //     edit: ["leisure=garden"]
-  //   },
-  //   {
-  //     group: "trip",
-  //     subgroup: "garden",
-  //     value: "garden-with-name",
-  //     icon: "/lib/maki-icons/garden-15.svg",
-  //     button: "far fa-minus-square",
-  //     query: `
-  // nwr["leisure"="garden"]["name"];`,
-  //     color: "#BA55D3",
-  //     tags: ["leisure=garden"],
-  //     edit: ["leisure=garden"]
-  //   },
-  //   {
-  //     group: "natural",
-  //     value: "nature-park",
-  //     icon: "/lib/maki-icons/natural-15.svg",
-  //     query: `
-  //     nwr["leisure"="nature_reserve"];
-  //     nwr["boundary"="national_park"];
-  //     nwr["boundary"="protected_area"];`,
-  //     color: "#006400",
-  //     tags: [
-  //       "leisure=nature_reserve",
-  //       "boundary=national_park",
-  //       "boundary=protected_area"
-  //     ],
-  //     edit: ["leisure=nature_reserve", "boundary"]
-  //   },
-  //   {
-  //     group: "trip",
-  //     value: "park",
-  //     icon: "/lib/maki-icons/park-15.svg",
-  //     query: `
-  // nwr["leisure"="park"];
-  // nwr["landuse"="recreation_ground"];
-  // nwr["leisure"="recreation_ground"];`,
-  //     color: "#90EE90",
-  //     tags: ["leisure=park", "landuse=recreation_ground"],
-  //     edit: ["leisure=park", "landuse=recreation_ground"]
-  //   },
-  //   {
-  //     group: "trip",
-  //     subgroup: "park",
-  //     value: "park-with-name",
-  //     icon: "/lib/maki-icons/park-15.svg",
-  //     button: "far fa-minus-square",
-  //     query: `
-  // nwr["leisure"="park"]["name"];
-  // nwr["landuse"="recreation_ground"]["name"];
-  // nwr["leisure"="recreation_ground"]["name"];`,
-  //     color: "#90EE90",
-  //     tags: ["leisure=park", "landuse=recreation_ground"],
-  //     edit: ["leisure=park", "landuse=recreation_ground"]
-  //   },
-  //   {
-  //     group: "trip",
-  //     value: "picnic-site",
-  //     icon: "https://wiki.openstreetmap.org/w/images/f/fc/Picnic_site.svg",
-  //     query: `
-  // nwr["tourism"="picnic_site"];
+    {
+      group: "trip",
+      value: "map",
+      icon: "https://wiki.openstreetmap.org/w/images/c/ca/Map-14.svg",
+      query: `
+      node["information"="map"]&part;`,
+      color: "#FFE4C4",
+      tags: ["information=map"],
+      edit: ["tourism=information"]
+    },
+    {
+      group: "trip",
+      subgroup: "map",
+      value: "openstreetmap",
+      icon: "https://wiki.openstreetmap.org/w/images/c/ca/Map-14.svg",
+      button: "fas fa-heart",
+      query: `
+      node["information"="map"][~"map[:_]{0,1}source"~"^(OSM|OpenStreetMap)$",i]&part;`,
+      color: "#9fd485",
+      tags: ["information=map"],
+      edit: ["tourism=information"]
+    },
+    {
+      group: "trip",
+      value: "garden",
+      icon: "/lib/maki-icons/garden-15.svg",
+      query: `
+  nwr["leisure"="garden"]&part;`,
+      color: "#BA55D3",
+      tags: ["leisure=garden"],
+      edit: ["leisure=garden"]
+    },
+    {
+      group: "trip",
+      subgroup: "garden",
+      value: "garden-with-name",
+      icon: "/lib/maki-icons/garden-15.svg",
+      button: "far fa-minus-square",
+      query: `
+  nwr["leisure"="garden"]["name"]&part;`,
+      color: "#BA55D3",
+      tags: ["leisure=garden"],
+      edit: ["leisure=garden"]
+    },
+    {
+      group: "natural",
+      value: "nature-park",
+      icon: "/lib/maki-icons/natural-15.svg",
+      query: `
+      nwr["leisure"="nature_reserve"]&part;
+      nwr["boundary"="national_park"]&part;
+      nwr["boundary"="protected_area"]&part;`,
+      color: "#006400",
+      tags: [
+        "leisure=nature_reserve",
+        "boundary=national_park",
+        "boundary=protected_area"
+      ],
+      edit: ["leisure=nature_reserve", "boundary"]
+    },
+    {
+      group: "trip",
+      value: "park",
+      icon: "/lib/maki-icons/park-15.svg",
+      query: `
+  nwr["leisure"="park"]&part;
+  nwr["landuse"="recreation_ground"]&part;
+  nwr["leisure"="recreation_ground"]&part;`,
+      color: "#90EE90",
+      tags: ["leisure=park", "landuse=recreation_ground"],
+      edit: ["leisure=park", "landuse=recreation_ground"]
+    },
+    {
+      group: "trip",
+      subgroup: "park",
+      value: "park-with-name",
+      icon: "/lib/maki-icons/park-15.svg",
+      button: "far fa-minus-square",
+      query: `
+  nwr["leisure"="park"]["name"]&part;
+  nwr["landuse"="recreation_ground"]["name"]&part;
+  nwr["leisure"="recreation_ground"]["name"]&part;`,
+      color: "#90EE90",
+      tags: ["leisure=park", "landuse=recreation_ground"],
+      edit: ["leisure=park", "landuse=recreation_ground"]
+    },
+    {
+      group: "trip",
+      value: "picnic-site",
+      icon: "https://wiki.openstreetmap.org/w/images/f/fc/Picnic_site.svg",
+      query: `
+  nwr["tourism"="picnic_site"]&part;
 
-  // nw["leisure"="picnic_table"];
+  nw["leisure"="picnic_table"]&part;
 
-  // nw["shelter_type"="picnic_shelter"];`,
-  //     color: "#DEB887",
-  //     tags: [
-  //       "tourism=picnic_site",
-  //       "leisure=picnic_table",
-  //       "shelter_type=picnic_shelter"
-  //     ],
-  //     edit: ["tourism=picnic_site", "leisure=picnic_table", "amenity=shelter"]
-  //   },
+  nw["shelter_type"="picnic_shelter"]&part;`,
+      color: "#DEB887",
+      tags: [
+        "tourism=picnic_site",
+        "leisure=picnic_table",
+        "shelter_type=picnic_shelter"
+      ],
+      edit: ["tourism=picnic_site", "leisure=picnic_table", "amenity=shelter"]
+    },
   {
     group: "trip",
     value: "square",
@@ -1394,31 +1392,31 @@ node["man_made"="surveillance"]["image"];`,
     color: "#666666",
     tags: ["place=square", "highway=pedestrian"],
     edit: ["place=square", "pedestrian"]
-  }
-  //   {
-  //     group: "trip",
-  //     value: "playground",
-  //     icon: "https://wiki.openstreetmap.org/w/images/3/31/Playground-16.svg",
-  //     query: `
-  //     nwr["leisure"="playground"];
-  //     nw["playground"];
-  //     nw[~"^playground:.*$"~".*"];`,
-  //     color: "#32CD32",
-  //     tags: ["leisure=playground", "playground=*"],
-  //     edit: ["leisure=playground", "playground"]
-  //   },
-  //   {
-  //     group: "trip",
-  //     value: "lounger",
-  //     icon: "/lib/maki-icons/beach-15.svg",
-  //     query: `
-  // nw["amenity"="lounger"];
+  },
+    {
+      group: "trip",
+      value: "playground",
+      icon: "https://wiki.openstreetmap.org/w/images/3/31/Playground-16.svg",
+      query: `
+      nwr["leisure"="playground"]&part;
+      nw["playground"]&part;
+      nw[~"^playground:.*$"~".*"]&part;`,
+      color: "#32CD32",
+      tags: ["leisure=playground", "playground=*"],
+      edit: ["leisure=playground", "playground"]
+    },
+    {
+      group: "trip",
+      value: "lounger",
+      icon: "/lib/maki-icons/beach-15.svg",
+      query: `
+  nw["amenity"="lounger"]&part;
 
-  // nw["amenity"="hammock"];`,
-  //     color: "#e6e600",
-  //     tags: ["amenity=lounger", "amenity=hammock"],
-  //     edit: ["amenity"]
-  //   },
+  nw["amenity"="hammock"]&part;`,
+      color: "#e6e600",
+      tags: ["amenity=lounger", "amenity=hammock"],
+      edit: ["amenity"]
+    },
   //   {
   //     group: "goods",
   //     value: "clothes",
