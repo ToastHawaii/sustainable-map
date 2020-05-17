@@ -700,469 +700,472 @@ nw["bicycle_rental"="cargo_bike"]; `,
       tags: ["amenity=coworking_space", "office=coworking"],
       edit: ["amenity=coworking_space", "office=coworking"]
     },
-  //   {
-  //     group: "health",
-  //     value: "public-shower",
-  //     icon: "https://wiki.openstreetmap.org/w/images/5/5a/Shower-14.svg",
-  //     query: `
-  // nw["amenity"="shower"]&part;`,
-  //     color: "#1E90FF",
-  //     tags: ["amenity=shower"],
-  //     edit: ["amenity=shower"]
-  //   },
-  //   {
-  //     group: "mobility",
-  //     value: "pump",
-  //     icon:
-  //       "https://wiki.openstreetmap.org/w/images/0/01/Bicycle_repair_station-14.svg",
-  //     query: `
-  // nw["amenity"="compressed_air"];
+    {
+      group: "health",
+      value: "public-shower",
+      icon: "https://wiki.openstreetmap.org/w/images/5/5a/Shower-14.svg",
+      query: `
+     // Show only showers that are not inside a bath
+  (
+    (
+nw["amenity"="shower"]&part;
+  );
+  -(
+    (
+      wr["amenity"="public_bath"]["fee"!="no"];
+      wr["leisure"~"water_park|sports_centre|stadium"]["fee"!="no"];
+    );
+    map_to_area -> .b;
+    (
+      nw(area.b)["amenity"="shower"]&part;
+    );
+  );
+);`,
+      color: "#1E90FF",
+      tags: ["amenity=shower"],
+      edit: ["amenity=shower"]
+    },
+    {
+      group: "mobility",
+      value: "pump",
+      icon:
+        "https://wiki.openstreetmap.org/w/images/0/01/Bicycle_repair_station-14.svg",
+      query: `
+  nw["amenity"="compressed_air"];
 
-  // nw["compressed_air"="yes"]["compressed_air:fee"!="yes"];
+  nw["compressed_air"="yes"];
 
-  // nw["service:bicycle:pump"="yes"];`,
-  //     color: "#00BFFF",
-  //     tags: [
-  //       "amenity=compressed_air",
-  //       "compressed_air=*",
-  //       "service:bicycle:pump=*"
-  //     ],
-  //     edit: [
-  //       "amenity=compressed_air",
-  //       "amenity=bicycle_repair_station",
-  //       "amenity",
-  //       "shop"
-  //     ]
-  //   },
-  //   {
-  //     group: "health",
-  //     value: "toilet",
-  //     icon: "https://wiki.openstreetmap.org/w/images/f/fa/Toilets-16.svg",
-  //     query: `
-  // // Public toilet
-  // nw["amenity"="toilets"];
+  nw["service:bicycle:pump"="yes"];`,
+      color: "#00BFFF",
+      tags: [
+        "amenity=compressed_air",
+        "compressed_air=*",
+        "service:bicycle:pump=*"
+      ],
+      edit: [
+        "amenity=compressed_air",
+        "amenity=bicycle_repair_station",
+        "amenity",
+        "shop"
+      ]
+    },
+    {
+      group: "health",
+      value: "toilet",
+      icon: "https://wiki.openstreetmap.org/w/images/f/fa/Toilets-16.svg",
+      query: `
+  // Public toilet
+  nw["amenity"="toilets"]&part;
 
-  // // Public toilet (Alternativ)
-  // nw["building"="toilets"];
+  // Public toilet (Alternativ)
+  nw["building"="toilets"]&part;
 
-  // // Toilet in other Feature
-  // nwr["toilets"="yes"];`,
-  //     color: "#8B4513",
-  //     tags: ["amenity=toilets", "building=toilets", "toilets=*"],
-  //     edit: ["amenity=toilets", "building", "amenity"]
-  //   },
-  //   {
-  //     group: "play",
-  //     value: "basketball",
-  //     icon: "/lib/maki-icons/basketball-15.svg",
-  //     query: `
-  // nwr["sport"="basketball"];
+  // Toilet in other Feature
+  nwr["toilets"="yes"]&part;`,
+      color: "#8B4513",
+      tags: ["amenity=toilets", "building=toilets", "toilets=*"],
+      edit: ["amenity=toilets", "building", "amenity"]
+    },
+    {
+      group: "play",
+      value: "basketball",
+      icon: "/lib/maki-icons/basketball-15.svg",
+      query: `
+  nwr["sport"~"basketball|multi"]["leisure"!~"sports_centre|stadium"]["surface"!="grass"]&part;
+  nwr["sport"~"basketball|multi"]["leisure"~"sports_centre|stadium"]&free;`,
+      color: "#FF4500",
+      tags: ["leisure=pitch", "sport=basketball", "sport=multi"],
+      edit: ["leisure=pitch"]
+    },
+    {
+      group: "sport",
+      value: "bath",
+      icon: "https://wiki.openstreetmap.org/w/images/0/01/Public_bath.svg",
+      query: `
+  nwr["amenity"="public_bath"]&free;
+  nwr["leisure"="water_park"]&free;
+  nwr["leisure"="bathing_place"]&part;
 
-  // nwr["leisure"="pitch"]["sport"~"basketball|multi"];`,
-  //     color: "#FF4500",
-  //     tags: ["leisure=pitch", "sport=basketball", "sport=multi"],
-  //     edit: ["leisure=pitch"]
-  //   },
-  //   {
-  //     group: "sport",
-  //     value: "bath",
-  //     icon: "https://wiki.openstreetmap.org/w/images/0/01/Public_bath.svg",
-  //     query: `
-  // ${nwrFee(`["amenity"="public_bath"]`)}
-  // ${nwrFee(`["leisure"="water_park"]`)}
-  // nwr["leisure"="bathing_place"];
+  nwr["sport"="swimming"]["leisure"~"sports_centre|stadium"]&free;
 
-  // ${nwrFee(`["sport"="swimming"][leisure=sports_centre]`)}
+  // Show only swimming pools that are not inside a bath
+  (
+    (
+      nwr["leisure"="swimming_pool"]&part;
+      nwr["leisure"="swimming_area"]&part;
+      nwr["sport"="swimming"]["leisure"!~"sports_centre|stadium"]&part;
+    );
+    -(
+      (
+        wr["amenity"="public_bath"];
+        wr["leisure"~"water_park|sports_centre|stadium"];
+      );
+      map_to_area -> .b;
+      (
+        nwr(area.b)["leisure"="swimming_pool"]&part;
+        nwr(area.b)["leisure"="swimming_area"]&part;
+        nwr(area.b)["sport"="swimming"]["leisure"!~"sports_centre|stadium"]&part;
+      );
+    );
+  );`,
+      color: "#0000CD",
+      tags: [
+        "sport=swimming",
+        "amenity=public_bath",
+        "leisure=water_park",
+        "leisure=swimming_pool",
+        "leisure=swimming_area"
+      ],
+      edit: [
+        "amenity=public_bath",
+        "leisure=sports_centre",
+        "leisure=water_park",
+        "leisure=swimming_pool",
+        "leisure=swimming_area"
+      ]
+    },
+    {
+      group: "sport",
+      value: "bikepark",
+      icon: "/lib/maki-icons/bicycle-15.svg",
+      query: `
+      nwr["sport"~"bmx|cycling"]["leisure"!~"sports_centre|stadium"]&part;
+      nwr["sport"~"bmx|cycling"]["leisure"~"sports_centre|stadium"]&free;`,
+      color: "#A52A2A",
+      tags: ["sport=bmx", "sport=cycling"],
+      edit: ["leisure=track", "landuse=recreation_ground", "leisure=pitch"]
+    },
+    {
+      group: "sport",
+      value: "skatepark",
+      icon: "/lib/temaki-icons/skateboarding.svg",
+      query: `
+      nwr["sport"="skateboard"]["leisure"!~"sports_centre|stadium"]&part;
+      nwr["sport"="skateboard"]["leisure"~"sports_centre|stadium"]&free;`,
+      color: "#E9967A",
+      tags: ["sport=skateboard"],
+      edit: ["leisure=pitch"]
+    },
+    {
+      group: "play",
+      value: "chess",
+      icon:
+        "https://upload.wikimedia.org/wikipedia/commons/d/d4/Chess_pictogram.svg",
+      query: `
+  nw["sport"="chess"]&part;`,
+      color: "#000000",
+      tags: ["sport=chess"],
+      edit: ["leisure=pitch"]
+    },
+    {
+      group: "sport",
+      value: "climbing",
+      icon: "/lib/temaki-icons/abseiling.svg",
+      query: `
+      // climbing and rock_climbing
+  nwr["sport"~"climbing"]["leisure"!~"sports_centre|stadium"]&part;
+  nwr["sport"~"climbing"]["leisure"~"sports_centre|stadium"]&free;
 
-  // // Show only swimming pools that are not inside a bath
-  // (
-  //   (
-  //     nwr["leisure"="swimming_pool"];
-  //     nwr["leisure"="swimming_area"];
-  //     nwr["sport"="swimming"][leisure!=sports_centre];
-  //   );
-  //   -(
-  //     (
-  //       wr["amenity"="public_bath"];
-  //       wr["leisure"="water_park"];
-  //       wr["leisure"="sports_centre"];
-  //     );
-  //     map_to_area -> .b;
-  //     (
-  //       nwr(area.b)["leisure"="swimming_pool"];
-  //       nwr(area.b)["leisure"="swimming_area"];
-  //       nwr(area.b)["sport"="swimming"][leisure!=sports_centre];
-  //     );
-  //   );
-  // );`,
-  //     color: "#0000CD",
-  //     tags: [
-  //       "sport=swimming",
-  //       "amenity=public_bath",
-  //       "leisure=water_park",
-  //       "leisure=swimming_pool",
-  //       "leisure=swimming_area"
-  //     ],
-  //     edit: [
-  //       "amenity=public_bath",
-  //       "leisure=sports_centre",
-  //       "leisure=water_park",
-  //       "leisure=swimming_pool",
-  //       "leisure=swimming_area"
-  //     ]
-  //   },
-  //   {
-  //     group: "sport",
-  //     value: "bikepark",
-  //     icon: "/lib/maki-icons/bicycle-15.svg",
-  //     query: `
-  //     nwr["sport"="bmx"]["leisure"!="sports_centre"];
-  //     nwr["sport"="bmx"]["leisure"="sports_centre"]["fee"];
-  //     nwr["sport"="bmx"]["leisure"="sports_centre"]["fee:conditional"];
+  nwr["playground"="climbingwall"]&part;`,
+      color: "#696969",
+      tags: ["sport=climbing", "playground=climbingwall"],
+      edit: ["natural", "landuse=recreation_ground", "playground"]
+    },
+    {
+      group: "play",
+      value: "boules",
+      icon: "/lib/maki-icons/pitch-15.svg",
+      query: `
+      nwr["sport"~"boules|bowls"]["leisure"!~"sports_centre|stadium"]&part;
+      nwr["sport"~"boules|bowls"]["leisure"~"sports_centre|stadium"]&free;`,
+      color: "#f1c68e",
+      tags: ["sport=boules", "sport=bowls"],
+      edit: ["leisure=pitch"]
+    },
+    {
+      group: "sport",
+      value: "fitness",
+      icon: "/lib/maki-icons/fitness-centre-15.svg",
+      query: `
+  nwr["leisure"="fitness_station"]&part;
 
-  //     nwr["sport"="cycling"]["leisure"!="sports_centre"];
-  //     nwr["sport"="cycling"]["leisure"="sports_centre"]["fee"];
-  //     nwr["sport"="cycling"]["leisure"="sports_centre"]["fee:conditional"];`,
-  //     color: "#A52A2A",
-  //     tags: ["sport=bmx", "sport=cycling"],
-  //     edit: ["leisure=track", "landuse=recreation_ground", "leisure=pitch"]
-  //   },
-  //   {
-  //     group: "sport",
-  //     value: "skatepark",
-  //     icon: "/lib/temaki-icons/skateboarding.svg",
-  //     query: `
-  //     nwr["sport"="skateboard"]["leisure"!="sports_centre"];
-  //     nwr["sport"="skateboard"]["leisure"="sports_centre"]["fee"];
-  //     nwr["sport"="skateboard"]["leisure"="sports_centre"]["fee:conditional"];`,
-  //     color: "#E9967A",
-  //     tags: ["sport=skateboard"],
-  //     edit: ["leisure=pitch"]
-  //   },
-  //   {
-  //     group: "play",
-  //     value: "chess",
-  //     icon:
-  //       "https://upload.wikimedia.org/wikipedia/commons/d/d4/Chess_pictogram.svg",
-  //     query: `
-  // nw["sport"="chess"];`,
-  //     color: "#000000",
-  //     tags: ["sport=chess"],
-  //     edit: ["leisure=pitch"]
-  //   },
-  //   {
-  //     group: "sport",
-  //     value: "climbing",
-  //     icon: "/lib/temaki-icons/abseiling.svg",
-  //     query: `
-  // nwr["sport"="climbing"]["leisure"!="sports_centre"];
-  // nwr["sport"="climbing"]["leisure"="sports_centre"]["fee"];
-  // nwr["sport"="climbing"]["leisure"="sports_centre"]["fee:conditional"];
+  nwr["leisure"="pitch"]["sport"~"fitness|crossfit|exercise|gymnastics|yoga|bodybuilding"]&part;
 
-  // nwr["sport"="rock_climbing"]["leisure"!="sports_centre"];
-  // nwr["sport"="rock_climbing"]["leisure"="sports_centre"]["fee"];
-  // nwr["sport"="rock_climbing"]["leisure"="sports_centre"]["fee:conditional"];
+  nw["playground"~"horizontal_bar|exercise|balance(_)?beam|slackline"]&part;
 
-  // nwr["playground"="climbingwall"];`,
-  //     color: "#696969",
-  //     tags: ["sport=climbing", "playground=climbingwall"],
-  //     edit: ["natural", "landuse=recreation_ground", "playground"]
-  //   },
-  //   {
-  //     group: "play",
-  //     value: "boules",
-  //     icon: "/lib/maki-icons/pitch-15.svg",
-  //     query: `
-  //     nw["leisure"="pitch"]["sport"="boules"];
-  //     nw["leisure"="pitch"]["sport"="bowls"];`,
-  //     color: "#f1c68e",
-  //     tags: ["sport=boules", "sport=bowls"],
-  //     edit: ["leisure=pitch"]
-  //   },
-  //   {
-  //     group: "sport",
-  //     value: "fitness",
-  //     icon: "/lib/maki-icons/fitness-centre-15.svg",
-  //     query: `
-  // nwr["leisure"="fitness_station"];
+  nw["playground:horizontal_bar"="yes"]&part;
+  nw["playground:exercise"="yes"]&part;
+  nw["playground:balancebeam"="yes"]&part;
+  nw["playground:balance_beam"="yes"]&part;
+  nw["playground:slackline"="yes"]&part;`,
+      color: "#0000FF",
+      tags: ["leisure=fitness_station", "sport=*", "playground=*"],
+      edit: ["leisure=fitness_station", "playground"]
+    },
+    {
+      group: "sport",
+      subgroup: "fitness",
+      value: "horizontal_bar",
+      icon: "/lib/maki-icons/fitness-centre-15.svg",
+      button: "fas fa-minus",
+      query: `
+  nwr["fitness_station"~"horizontal_bar"]&part;
+  nwr["fitness_station:horizontal_bar"="yes"]&part;
 
-  // nwr["leisure"="pitch"]["sport"~"fitness|crossfit|exercise|gymnastics|yoga|bodybuilding"];
+  nw["playground"~"horizontal_bar"]&part;
+  nw["playground:horizontal_bar"="yes"]&part;`,
+      color: "#0000FF",
+      tags: ["leisure=fitness_station", "sport=*", "playground=*"],
+      edit: ["leisure=fitness_station", "playground"]
+    },
+    {
+      group: "sport",
+      subgroup: "fitness",
+      value: "parallel_bars",
+      icon: "/lib/maki-icons/fitness-centre-15.svg",
+      button: "fas fa-grip-lines-vertical",
+      query: `
+  nwr["fitness_station"~"parallel_bars"]&part;
+  nwr["fitness_station:parallel_bars"="yes"]&part;`,
+      color: "#0000FF",
+      tags: ["leisure=fitness_station", "sport=*", "playground=*"],
+      edit: ["leisure=fitness_station", "playground"]
+    },
+    {
+      group: "sport",
+      subgroup: "fitness",
+      value: "rings",
+      icon: "/lib/maki-icons/fitness-centre-15.svg",
+      button: "far fa-circle",
+      query: `
+  nwr["fitness_station"~"rings"]&part;
+  nwr["fitness_station:rings"="yes"]&part;`,
+      color: "#0000FF",
+      tags: ["leisure=fitness_station", "sport=*", "playground=*"],
+      edit: ["leisure=fitness_station", "playground"]
+    },
+    {
+      group: "sport",
+      subgroup: "fitness",
+      value: "exercise-machine",
+      icon: "/lib/maki-icons/fitness-centre-15.svg",
+      button: "fas fa-biking",
+      query: `
+  nwr["fitness_station"~"elliptical_trainer|air_walker|exercise_bike|rower"]&part;
 
-  // nw["playground"~"horizontal_bar|exercise|balance(_)?beam|slackline"];
+  nwr["fitness_station:elliptical_trainer"="yes"]&part;
+  nwr["fitness_station:air_walker"="yes"]&part;
+  nwr["fitness_station:exercise_bike"="yes"]&part;
+  nwr["fitness_station:rower"="yes"]&part;
 
-  // nw["playground:horizontal_bar"="yes"];
-  // nw["playground:exercise"="yes"];
-  // nw["playground:balancebeam"="yes"];
-  // nw["playground:balance_beam"="yes"];
-  // nw["playground:slackline"="yes"];`,
-  //     color: "#0000FF",
-  //     tags: ["leisure=fitness_station", "sport=*", "playground=*"],
-  //     edit: ["leisure=fitness_station", "playground"]
-  //   },
-  //   {
-  //     group: "sport",
-  //     subgroup: "fitness",
-  //     value: "horizontal_bar",
-  //     icon: "/lib/maki-icons/fitness-centre-15.svg",
-  //     button: "fas fa-minus",
-  //     query: `
-  // nwr["fitness_station"~"horizontal_bar"];
-  // nwr["fitness_station:horizontal_bar"="yes"];
+  nw["playground"~"exercise"]&part;
+  nw["playground:exercise"="yes"]&part;`,
+      color: "#0000FF",
+      tags: ["leisure=fitness_station", "sport=*", "playground=*"],
+      edit: ["leisure=fitness_station", "playground"]
+    },
+    {
+      group: "sport",
+      subgroup: "fitness",
+      value: "balance",
+      icon: "/lib/maki-icons/fitness-centre-15.svg",
+      button: "fas fa-street-view",
+      query: `
+  nwr["fitness_station"~"slackline|balance(_)?beam"]&part;
 
-  // nw["playground"~"horizontal_bar"];
-  // nw["playground:horizontal_bar"="yes"];`,
-  //     color: "#0000FF",
-  //     tags: ["leisure=fitness_station", "sport=*", "playground=*"],
-  //     edit: ["leisure=fitness_station", "playground"]
-  //   },
-  //   {
-  //     group: "sport",
-  //     subgroup: "fitness",
-  //     value: "parallel_bars",
-  //     icon: "/lib/maki-icons/fitness-centre-15.svg",
-  //     button: "fas fa-grip-lines-vertical",
-  //     query: `
-  // nwr["fitness_station"~"parallel_bars"];
-  // nwr["fitness_station:parallel_bars"="yes"];`,
-  //     color: "#0000FF",
-  //     tags: ["leisure=fitness_station", "sport=*", "playground=*"],
-  //     edit: ["leisure=fitness_station", "playground"]
-  //   },
-  //   {
-  //     group: "sport",
-  //     subgroup: "fitness",
-  //     value: "rings",
-  //     icon: "/lib/maki-icons/fitness-centre-15.svg",
-  //     button: "far fa-circle",
-  //     query: `
-  // nwr["fitness_station"~"rings"];
-  // nwr["fitness_station:rings"="yes"];`,
-  //     color: "#0000FF",
-  //     tags: ["leisure=fitness_station", "sport=*", "playground=*"],
-  //     edit: ["leisure=fitness_station", "playground"]
-  //   },
-  //   {
-  //     group: "sport",
-  //     subgroup: "fitness",
-  //     value: "exercise-machine",
-  //     icon: "/lib/maki-icons/fitness-centre-15.svg",
-  //     button: "fas fa-biking",
-  //     query: `
-  // nwr["fitness_station"~"elliptical_trainer|air_walker|exercise_bike|rower"];
+  nwr["fitness_station:slackline"="yes"]&part;
+  nwr["fitness_station:balance_beam"="yes"]&part;
+  nwr["fitness_station:balancebeam"="yes"]&part;
 
-  // nwr["fitness_station:elliptical_trainer"="yes"];
-  // nwr["fitness_station:air_walker"="yes"];
-  // nwr["fitness_station:exercise_bike"="yes"];
-  // nwr["fitness_station:rower"="yes"];
+  nw["playground"~"slackline|balance(_)?beam"]&part;
 
-  // nw["playground"~"exercise"];
-  // nw["playground:exercise"="yes"];`,
-  //     color: "#0000FF",
-  //     tags: ["leisure=fitness_station", "sport=*", "playground=*"],
-  //     edit: ["leisure=fitness_station", "playground"]
-  //   },
-  //   {
-  //     group: "sport",
-  //     subgroup: "fitness",
-  //     value: "balance",
-  //     icon: "/lib/maki-icons/fitness-centre-15.svg",
-  //     button: "fas fa-street-view",
-  //     query: `
-  // nwr["fitness_station"~"slackline|balance(_)?beam"];
+  nw["playground:slackline"="yes"]&part;
+  nw["playground:balance_beam"="yes"]&part;
+  nw["playground:balancebeam"="yes"]&part;`,
+      color: "#0000FF",
+      tags: ["leisure=fitness_station", "sport=*", "playground=*"],
+      edit: ["leisure=fitness_station", "playground"]
+    },
+    {
+      group: "sport",
+      value: "sledding",
+      icon: "/lib/temaki-icons/sledding.svg",
+      query: `
+  nwr["sport"="toboggan"]&part;
 
-  // nwr["fitness_station:slackline"="yes"];
-  // nwr["fitness_station:balance_beam"="yes"];
-  // nwr["fitness_station:balancebeam"="yes"];
+  nwr["piste:type"="sled"]&part;
 
-  // nw["playground"~"slackline|balance(_)?beam"];
+  nwr["playground"="sledding"]&part;`,
+      color: "#D2691E",
+      tags: ["sport=toboggan", "piste:type=sled", "playground=sledding"],
+      edit: []
+    },
+    {
+      group: "sport",
+      value: "fitness-trail",
+      icon: "/lib/maki-icons/pitch-15.svg",
+      query: `
+  nwr["route"="fitness_trail"]&part;`,
+      color: "#8B008B",
+      tags: ["route=fitness_trail"],
+      edit: ["type=route"]
+    },
+    {
+      group: "sport",
+      value: "running",
+      icon: "/lib/maki-icons/pitch-15.svg",
+      query: `
+  nwr["sport"="running"]["leisure"!~"sports_centre|stadium"]&part;
+  nwr["sport"="running"]["leisure"~"sports_centre|stadium"]&free;
 
-  // nw["playground:slackline"="yes"];
-  // nw["playground:balance_beam"="yes"];
-  // nw["playground:balancebeam"="yes"];`,
-  //     color: "#0000FF",
-  //     tags: ["leisure=fitness_station", "sport=*", "playground=*"],
-  //     edit: ["leisure=fitness_station", "playground"]
-  //   },
-  //   {
-  //     group: "sport",
-  //     value: "sledding",
-  //     icon: "/lib/temaki-icons/sledding.svg",
-  //     query: `
-  // nwr["sport"="toboggan"];
+  nwr["leisure"="track"]["sport"="athletics"]&part;`,
+      color: "#8B0000",
+      tags: ["sport=running", "sport=athletics"],
+      edit: ["sport=running", "sport=athletics"]
+    },
+    {
+      group: "play",
+      value: "soccer",
+      icon: "/lib/maki-icons/soccer-15.svg",
+      query: `
+    // exclude table_soccer
+      nwr["sport"~"(^soccer)|;soccer|multi"]["leisure"!~"sports_centre|stadium"]&part;
+      nwr["sport"~"(^soccer)|;soccer|multi"]["leisure"~"sports_centre|stadium"]&free;`,
+      color: "#ADFF2F",
+      tags: ["leisure=pitch", "sport=soccer", "sport=multi"],
+      edit: ["leisure=pitch"]
+    },
+    {
+      group: "play",
+      value: "table-tennis",
+      icon: "/lib/maki-icons/table-tennis-15.svg",
+      query: `
+  // Table tennis
+  nw["sport"="table_tennis"];
 
-  // nwr["piste:type"="sled"];
+  // Table tennis (obsolete)
+  nw["leisure"="table_tennis_table"];`,
+      color: "#008000",
+      tags: ["sport=table_tennis"],
+      edit: ["leisure=pitch"]
+    },
+    {
+      group: "play",
+      value: "table-soccer",
+      icon: "https://wiki.openstreetmap.org/w/images/c/c8/Kicker02.png",
+      query: `
+      nwr["leisure"="pitch"]["sport"="table_soccer"]["fee"];`,
+      color: "#7CFC00",
+      tags: ["sport=table_soccer"],
+      edit: ["leisure=pitch"]
+    },
+    {
+      group: "play",
+      value: "volleyball",
+      icon: "/lib/maki-icons/volleyball-15.svg",
+      query: `
+      // volleyball and beachvolleyball
+      nwr["sport"~"volleyball"]["leisure"!~"sports_centre|stadium"]&part;
+      nwr["sport"~"volleyball"]["leisure"~"sports_centre|stadium"]&free;`,
+      color: "#F4A460",
+      tags: ["leisure=pitch", "sport=volleyball", "sport=beachvolleyball"],
+      edit: ["leisure=pitch"]
+    },
+    {
+      group: "trip",
+      value: "animal",
+      icon: "/lib/maki-icons/zoo-15.svg",
+      query: `
+  nwr["tourism"="zoo"]&part;
+  nwr["zoo"]&part;
 
-  // nwr["playground"="sledding"];`,
-  //     color: "#D2691E",
-  //     tags: ["sport=toboggan", "piste:type=sled", "playground=sledding"],
-  //     edit: []
-  //   },
-  //   {
-  //     group: "sport",
-  //     value: "fitness-trail",
-  //     icon: "/lib/maki-icons/pitch-15.svg",
-  //     query: `
-  // nwr["route"="fitness_trail"];`,
-  //     color: "#8B008B",
-  //     tags: ["route=fitness_trail"],
-  //     edit: ["type=route"]
-  //   },
-  //   {
-  //     group: "sport",
-  //     value: "running",
-  //     icon: "/lib/maki-icons/pitch-15.svg",
-  //     query: `
-  // nwr["sport"="running"];
+  // Show only animals that are not inside a zoo
+  (
+    nwr["attraction"="animal"]&part;
+    -(
+      wr["tourism"="zoo"]&part;
+      map_to_area -> .z;
+      (
+        nwr(area.z)["attraction"="animal"]&part;
+      );
+    );
+  );
 
-  // nwr["leisure"="track"]["sport"="athletics"];`,
-  //     color: "#8B0000",
-  //     tags: ["sport=running", "sport=athletics"],
-  //     edit: ["sport=running", "sport=athletics"]
-  //   },
-  //   {
-  //     group: "play",
-  //     value: "soccer",
-  //     icon: "/lib/maki-icons/soccer-15.svg",
-  //     query: `
-  // nwr["sport"="soccer"];
+  nwr["tourism"="aquarium"]&part;
 
-  // nwr["leisure"="pitch"]["sport"~"soccer|multi"];`,
-  //     color: "#ADFF2F",
-  //     tags: ["leisure=pitch", "sport=soccer", "sport=multi"],
-  //     edit: ["leisure=pitch"]
-  //   },
-  //   {
-  //     group: "play",
-  //     value: "table-tennis",
-  //     icon: "/lib/maki-icons/table-tennis-15.svg",
-  //     query: `
-  // // Table tennis
-  // nw["sport"="table_tennis"];
+  nw["man_made"="beehive"];
+  nwr["landuse"="apiary"];
 
-  // // Table tennis (obsolete)
-  // nw["leisure"="table_tennis_table"];`,
-  //     color: "#008000",
-  //     tags: ["sport=table_tennis"],
-  //     edit: ["leisure=pitch"]
-  //   },
-  //   {
-  //     group: "play",
-  //     value: "table-soccer",
-  //     icon: "https://wiki.openstreetmap.org/w/images/c/c8/Kicker02.png",
-  //     query: `
-  //     nwr["leisure"="pitch"]["sport"="table_soccer"]["fee"];`,
-  //     color: "#7CFC00",
-  //     tags: ["sport=table_soccer"],
-  //     edit: ["leisure=pitch"]
-  //   },
-  //   {
-  //     group: "play",
-  //     value: "volleyball",
-  //     icon: "/lib/maki-icons/volleyball-15.svg",
-  //     query: `
-  // nwr["sport"="volleyball"];
-  // nwr["sport"="beachvolleyball"];
+  nwr["landuse"="animal_keeping"];
+  nwr["animal_keeping"];
+  way["landuse"="animal_enclosure"];
 
-  // nwr["leisure"="pitch"]["sport"~"volleyball"];`,
-  //     color: "#F4A460",
-  //     tags: ["leisure=pitch", "sport=volleyball", "sport=beachvolleyball"],
-  //     edit: ["leisure=pitch"]
-  //   },
-  //   {
-  //     group: "trip",
-  //     value: "animal",
-  //     icon: "/lib/maki-icons/zoo-15.svg",
-  //     query: `
-  // nwr["tourism"="zoo"];
-  // nwr["zoo"];
+  way["landuse"="meadow"]["animal"];
+  way["landuse"="farmyard"]["animal"];
 
-  // // Show only animals that are not inside a zoo
-  // (
-  //   nwr["attraction"="animal"];
-  //   -(
-  //     wr["tourism"="zoo"];
-  //     map_to_area -> .z;
-  //     (
-  //       nwr(area.z)["attraction"="animal"];
-  //     );
-  //   );
-  // );
+  way["landuse"="meadow"]["livestock"];
+  way["landuse"="farmyard"]["livestock"];
+  nw["landuse"="livestock"];
+  wr["meadow"="pasture"];
 
-  // nwr["tourism"="aquarium"];
+  way["landuse"="meadow"]["species"];
+  way["landuse"="farmyard"]["species"];
 
-  // nw["man_made"="beehive"];
-  // nwr["landuse"="apiary"];
-
-  // nwr["landuse"="animal_keeping"];
-  // nwr["animal_keeping"];
-  // way["landuse"="animal_enclosure"];
-
-  // way["landuse"="meadow"]["animal"];
-  // way["landuse"="farmyard"]["animal"];
-
-  // way["landuse"="meadow"]["livestock"];
-  // way["landuse"="farmyard"]["livestock"];
-  // nw["landuse"="livestock"];
-  // wr["meadow"="pasture"];
-
-  // way["landuse"="meadow"]["species"];
-  // way["landuse"="farmyard"]["species"];
-
-  // way["landuse"="paddock"];
-  // wr["meadow"="paddock"];`,
-  //     color: "#DAA520",
-  //     tags: [
-  //       "tourism=zoo",
-  //       "attraction=animal",
-  //       "tourism=aquarium",
-  //       "man_made=beehive",
-  //       "landuse=apiary",
-  //       "landuse=animal_keeping",
-  //       "landuse=meadow",
-  //       "landuse=farmyard"
-  //     ],
-  //     edit: [
-  //       "tourism=zoo",
-  //       "attraction=animal",
-  //       "tourism=aquarium",
-  //       "man_made=beehive",
-  //       "landuse=meadow",
-  //       "landuse=farmyard",
-  //       "landuse"
-  //     ]
-  //   },
-  //   {
-  //     group: "trip",
-  //     subgroup: "animal",
-  //     value: "observation",
-  //     icon: "/lib/temaki-icons/binoculars.svg",
-  //     button: "fas fa-binoculars",
-  //     query: `
-  // nw["leisure"="bird_hide"];
-  // nw["leisure"="wildlife_hide"];
-  // nw["observation"="wild_animal"];
-  // nw["man_made"="nesting_site"];
-  // nw["man_made"="insect_hotel"];
-  // node["natural"="anthill"];
-  // node["natural"="termite_mound"];`,
-  //     color: "#DAA520",
-  //     tags: [
-  //       "leisure=bird_hide",
-  //       "leisure=wildlife_hide",
-  //       "observation=wild_animal",
-  //       "man_made=nesting_site",
-  //       "man_made=insect_hotel",
-  //       "natural=anthill",
-  //       "natural=termite_mound"
-  //     ],
-  //     edit: [
-  //       "leisure=bird_hide",
-  //       "man_made=tower",
-  //       "leisure",
-  //       "man_made",
-  //       "natural"
-  //     ]
-  //   },
+  way["landuse"="paddock"];
+  wr["meadow"="paddock"];`,
+      color: "#DAA520",
+      tags: [
+        "tourism=zoo",
+        "attraction=animal",
+        "tourism=aquarium",
+        "man_made=beehive",
+        "landuse=apiary",
+        "landuse=animal_keeping",
+        "landuse=meadow",
+        "landuse=farmyard"
+      ],
+      edit: [
+        "tourism=zoo",
+        "attraction=animal",
+        "tourism=aquarium",
+        "man_made=beehive",
+        "landuse=meadow",
+        "landuse=farmyard",
+        "landuse"
+      ]
+    },
+    {
+      group: "trip",
+      subgroup: "animal",
+      value: "observation",
+      icon: "/lib/temaki-icons/binoculars.svg",
+      button: "fas fa-binoculars",
+      query: `
+  nw["leisure"="bird_hide"]&part;
+  nw["leisure"="wildlife_hide"]&part;
+  nw["observation"="wild_animal"]&part;
+  nw["man_made"="nesting_site"];
+  nw["man_made"="insect_hotel"];
+  node["natural"="anthill"];
+  node["natural"="termite_mound"];`,
+      color: "#DAA520",
+      tags: [
+        "leisure=bird_hide",
+        "leisure=wildlife_hide",
+        "observation=wild_animal",
+        "man_made=nesting_site",
+        "man_made=insect_hotel",
+        "natural=anthill",
+        "natural=termite_mound"
+      ],
+      edit: [
+        "leisure=bird_hide",
+        "man_made=tower",
+        "leisure",
+        "man_made",
+        "natural"
+      ]
+    },
   {
     group: "trip",
     value: "maze",
@@ -1211,28 +1214,28 @@ node["man_made"="surveillance"]["image"];`,
   //     ],
   //     edit: ["amenity"]
   //   },
-  //   {
-  //     group: "goods",
-  //     value: "advertising",
-  //     icon: "https://wiki.openstreetmap.org/w/images/2/20/Column-14.svg",
-  //     query: `
-  //     nwr["advertising"]["access"];
-  //     nwr["man_made"="advertising"]["access"];
+    {
+      group: "community",
+      value: "advertising",
+      icon: "https://wiki.openstreetmap.org/w/images/2/20/Column-14.svg",
+      query: `
+      nwr["advertising"]["access"]&part;
+      nwr["man_made"="advertising"]["access"]&part;
 
-  //     node["advertising"][!"access"]["operator:type"="community"];
-  //     node["advertising"][!"access"]["operator:type"="public"];
+      node["advertising"]["operator:type"="community"]&part;
+      node["advertising"]["operator:type"="public"]&part;
 
-  //     nw["board_type"="notice"]["access"];`,
-  //     color: "#e6007a",
-  //     tags: ["man_made=advertising", "board_type=notice"],
-  //     edit: [
-  //       "advertising=board",
-  //       "advertising=column",
-  //       "advertising=poster_box",
-  //       "advertising=billboard",
-  //       "tourism=information"
-  //     ]
-  //   },
+      nw["board_type"="notice"]["access"]&part;`,
+      color: "#e6007a",
+      tags: ["man_made=advertising", "board_type=notice"],
+      edit: [
+        "advertising=board",
+        "advertising=column",
+        "advertising=poster_box",
+        "advertising=billboard",
+        "tourism=information"
+      ]
+    },
   //   {
   //     group: "trip",
   //     value: "fireplace",
@@ -1859,12 +1862,8 @@ node["man_made"="surveillance"]["image"];`,
   //     nw["service:bicycle:pump"="yes"];
 
   //     // Park
-  //     nwr["sport"="bmx"]["leisure"!="sports_centre"];
-  //     nwr["sport"="bmx"]["leisure"="sports_centre"]["fee"];
-  //     nwr["sport"="bmx"]["leisure"="sports_centre"]["fee:conditional"];
-  //     nwr["sport"="cycling"]["leisure"!="sports_centre"];
-  //     nwr["sport"="cycling"]["leisure"="sports_centre"]["fee"];
-  //     nwr["sport"="cycling"]["leisure"="sports_centre"]["fee:conditional"];
+  //     nwr["sport"~"bmx|cycling"]["leisure"!~"sports_centre|stadium"]&part;
+  //    nwr["sport"~"bmx|cycling"]["leisure"~"sports_centre|stadium"]&free;
 
   //     // Charge
   //     (nw["amenity"="charging_station"]["fee"="no"]["bicycle"="yes"]["parking:fee"!="yes"];
@@ -1977,13 +1976,8 @@ node["man_made"="surveillance"]["image"];`,
   //     icon: "/lib/maki-icons/bicycle-15.svg",
   //     button: "fas fa-infinity",
   //     query: `
-  //     nwr["sport"="bmx"]["leisure"!="sports_centre"];
-  //     nwr["sport"="bmx"]["leisure"="sports_centre"]["fee"];
-  //     nwr["sport"="bmx"]["leisure"="sports_centre"]["fee:conditional"];
-
-  //     nwr["sport"="cycling"]["leisure"!="sports_centre"];
-  //     nwr["sport"="cycling"]["leisure"="sports_centre"]["fee"];
-  //     nwr["sport"="cycling"]["leisure"="sports_centre"]["fee:conditional"];`,
+  //     nwr["sport"~"bmx|cycling"]["leisure"!~"sports_centre|stadium"]&part;
+  //    nwr["sport"~"bmx|cycling"]["leisure"~"sports_centre|stadium"]&free;`,
   //     color: "#4682B4",
   //     tags: ["sport=bmx", "sport=cycling"],
   //     edit: ["leisure=track", "landuse=recreation_ground", "leisure=pitch"]
