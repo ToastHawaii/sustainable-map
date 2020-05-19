@@ -1,4 +1,6 @@
 import { Attribute } from "./Generator";
+import { equalsIgnoreCase } from "./utilities/string";
+import { parseOpeningHours } from "./map";
 
 const template = (title: string, icon: string, value?: string) =>
   `<span title="${title}" class="attribut"><i class="${icon}"></i>${
@@ -226,12 +228,42 @@ export const attributes: Attribute<{}>[] = [
     template: local => template(local.light, "far fa-lightbulb")
   },
   {
-    check: tags => (tags.fee && tags.fee !== "no") || !!tags.shop || tags["compressed_air:fee"]=== "yes",
+    check: tags =>
+      tags.fee === "yes" ||
+      (!!tags.shop && tags.fee !== "no") ||
+      tags["compressed_air:fee"] === "yes",
     template: local => template(local.fee, "far fa-money-bill-alt")
   },
   {
-    check: tags => tags.access === "customers",
+    check: tags =>
+      equalsIgnoreCase(tags.fee, "no") ||
+      equalsIgnoreCase(tags.fee, "donation") ||
+      equalsIgnoreCase(tags.fee, "interval") ||
+      equalsIgnoreCase(tags.fee, "free") ||
+      equalsIgnoreCase(tags.fee, "none") ||
+      parseOpeningHours(tags.fee, "en") ||
+      tags["fee:conditional"],
+    template: local => template(local.free, "fas fa-heart")
+  },
+  {
+    check: tags =>
+      equalsIgnoreCase(tags.access, "private") ||
+      equalsIgnoreCase(tags.access, "no"),
+    template: local => template(local.membersOnly, "fas fa-user-lock")
+  },
+  {
+    check: tags =>
+      equalsIgnoreCase(tags.access, "customers") ||
+      equalsIgnoreCase(tags.access, "customer") ||
+      equalsIgnoreCase(tags.access, "permit"),
     template: local => template(local.customersOnly, "fas fa-ticket-alt")
+  },
+  {
+    check: tags =>
+      equalsIgnoreCase(tags.access, "yes") ||
+      equalsIgnoreCase(tags.access, "permissive") ||
+      equalsIgnoreCase(tags.access, "public"),
+    template: local => template(local.public, "fas fa-universal-access")
   },
   {
     check: tags =>

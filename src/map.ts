@@ -533,7 +533,7 @@ function init<M>(
 
 export function overpassSubs(query: string) {
   return query
-  .replace(/&part/g, `["access"!~"^(private|no|customers)$"]["fee"!="yes"]`)
+  .replace(/&part/g, `["access"!~"^(private|no|customers|customer|permit)$"]["fee"!="yes"]`)
   .replace(/&access/g, `["access"!~"^(private|no)$"]`)
     .replace(
       /&free/g,
