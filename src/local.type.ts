@@ -174,6 +174,10 @@ export const type = {
     description:
       "Here is a garden which you can cultivate together with others. You can plant, water and harvest vegetables, herbs, flowers and so on and watch them grow."
   },
+  grow: {
+    name: "Grow",
+    description: ""
+  },
   "diaper-changing-table": { name: "Diaper-changing table", description: "" },
   "drinking-water": { name: "Drinking water", description: "" },
   "food-sharing": {

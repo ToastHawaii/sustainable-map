@@ -506,18 +506,39 @@ nw["bicycle_rental"="cargo_bike"]; `,
     tags: ["amenity=community_centre"],
     edit: ["amenity=community_centre"]
   },
-  //   {
-  //     group: "community",
-  //     value: "community-garden",
-  //     icon: "/lib/maki-icons/garden-centre-15.svg",
-  //     query: `
-  // nwr["garden:type"="community"];
+  {
+    group: "community",
+    value: "community-garden",
+    icon: "/lib/maki-icons/garden-centre-15.svg",
+    query: `
+nwr["garden:type"="community"];
 
-  // nw["landuse"="community_food_growing"];`,
-  //     color: "#228B22",
-  //     tags: ["garden:type=community", "landuse=community_food_growing"],
-  //     edit: ["leisure=garden"]
-  //   },
+nw["landuse"="community_food_growing"];`,
+    color: "#228B22",
+    tags: [
+      "garden:type=community",
+      "landuse=community_food_growing"
+    ],
+    edit: ["leisure=garden"]
+  },
+  {
+    group: "food",
+    value: "grow",
+    icon: "/lib/maki-icons/garden-centre-15.svg",
+    query: `
+nwr["landuse"="allotments"];
+
+nwr["garden:type"="community"];
+
+nw["landuse"="community_food_growing"];`,
+    color: "#228B22",
+    tags: [
+      "landuse=allotments",
+      "garden:type=community",
+      "landuse=community_food_growing"
+    ],
+    edit: ["landuse=allotments", "leisure=garden"]
+  },
   {
     group: "health",
     value: "diaper-changing-table",
@@ -626,19 +647,19 @@ nw["bicycle_rental"="cargo_bike"]; `,
   //       "amenity=toy_library"
   //     ],
   //     edit: ["amenity", "shop=charity", "shop=second_hand", "amenity=toy_library"]
-  //   },
-  //   {
-  //     group: "community",
-  //     value: "hackerspace",
-  //     icon: "/lib/temaki-icons/toolbox.svg",
-  //     query: `
-  //     nw["leisure"="hackerspace"]["repair"!="only"];
+    // },
+    {
+      group: "goods",
+      value: "hackerspace",
+      icon: "/lib/temaki-icons/toolbox.svg",
+      query: `
+      nw["leisure"="hackerspace"]["repair"!="only"];
 
-  //     nw["club"="doityourself"];`,
-  //     color: "#333333",
-  //     tags: ["leisure=hackerspace", "club=doityourself"],
-  //     edit: ["leisure=hackerspace", "club"]
-  //   },
+      nw["club"="doityourself"];`,
+      color: "#333333",
+      tags: ["leisure=hackerspace", "club=doityourself"],
+      edit: ["leisure=hackerspace", "club"]
+    },
   {
     group: "community",
     value: "contribute",
@@ -1242,33 +1263,29 @@ node["man_made"="surveillance"]["image"];`,
       "tourism=information"
     ]
   },
-  //   {
-  //     group: "trip",
-  //     value: "fireplace",
-  //     icon: "https://wiki.openstreetmap.org/w/images/d/df/Firepit.svg",
-  //     query: `
-  // nwr["leisure"="firepit"];
+  {
+    group: "trip",
+    value: "fireplace",
+    icon: "https://wiki.openstreetmap.org/w/images/d/df/Firepit.svg",
+    query: `
+  nwr["leisure"="firepit"]&part;
+  nwr["fireplace"="yes"]&part;
 
-  // nwr["fireplace"="yes"];
+  nwr["openfire"="yes"]["tourism"!="camp_site"]&part;
 
-  // nwr["openfire"="yes"];
-
-  // nwr["amenity"="bbq"];
-
-  // nwr["barbecue_grill"="yes"];
-
-  // nwr["bbq"="yes"];`,
-  //     color: "#B22222",
-  //     tags: [
-  //       "leisure=firepit",
-  //       "fireplace=*",
-  //       "openfire=*",
-  //       "amenity=bbq",
-  //       "barbecue_grill=*",
-  //       "bbq=*"
-  //     ],
-  //     edit: ["leisure=firepit", "amenity=bbq", "tourism"]
-  //   },
+  nwr["amenity"="bbq"]&part;
+  nwr["bbq"="yes"]&part;
+  nwr["barbecue_grill"="yes"]&part;`,
+    color: "#B22222",
+    tags: [
+      "leisure=firepit",
+      "fireplace=*",
+      "openfire=*",
+      "amenity=bbq",
+      "bbq=*"
+    ],
+    edit: ["leisure=firepit", "amenity=bbq", "tourism"]
+  },
   {
     group: "trip",
     value: "map",

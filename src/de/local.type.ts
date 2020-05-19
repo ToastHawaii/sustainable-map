@@ -175,6 +175,10 @@ export const type = {
     description:
       "Hier ist ein Garten, welcher du gemeinsam mit anderen bewirtschaften kannst. Du kannst Gemüse, Kräuter, Blumen etc. anpflanzen, giessen und ernten und beim Wachsen zuschauen."
   },
+  grow: {
+    name: "Anbauen",
+    description: ""
+  },
   "diaper-changing-table": { name: "Wickeltische", description: "" },
   "drinking-water": { name: "Trinkwasser", description: "" },
   "food-sharing": {
