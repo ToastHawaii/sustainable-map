@@ -1,4 +1,4 @@
-import { Attribute } from "./Generator";
+import { Attribute, Tags } from "./Generator";
 import { equalsIgnoreCase } from "./utilities/string";
 import { parseOpeningHours } from "./map";
 
@@ -164,7 +164,14 @@ export const attributes: Attribute<{}>[] = [
   },
   {
     check: tags => hasPropThatStartsWith(tags, "recycling:", "yes"),
-    template: local => template(local.freeToGive, "fas fa-long-arrow-alt-right")
+    template: local => template(local.recycling, "fas fa-recycle")
+  },
+  {
+    check: tags =>
+      tags["shop"] === "second_hand" ||
+      tags["second_hand"] === "yes" ||
+      tags["amenity"] === "give_box",
+    template: local => template(local.reuse, "fas fa-sync-alt")
   },
   {
     check: tags => tags["reuse:policy"] === "free_to_take",
@@ -175,7 +182,8 @@ export const attributes: Attribute<{}>[] = [
       tags["reuse:policy"] === "free_to_take_or_give" ||
       (!tags["reuse:policy"] &&
         (tags["amenity"] === "reuse" ||
-          hasPropThatStartsWith(tags, "reuse:", "yes"))),
+          hasPropThatStartsWith(tags, "reuse:", "yes") ||
+          tags["amenity"] === "give_box")),
     template: local => template(local.freeToTakeOrGive, "fas fa-exchange-alt")
   },
   {
@@ -242,7 +250,8 @@ export const attributes: Attribute<{}>[] = [
       equalsIgnoreCase(tags.fee, "free") ||
       equalsIgnoreCase(tags.fee, "none") ||
       parseOpeningHours(tags.fee, "en") ||
-      tags["fee:conditional"],
+      tags["fee:conditional"] ||
+      tags.social_facility === "soup_kitchen",
     template: local => template(local.free, "fas fa-heart")
   },
   {
@@ -312,60 +321,217 @@ export const attributes: Attribute<{}>[] = [
     template: local => template(local.balance, "fas fa-street-view")
   },
   {
-    check: tags => !!wheelchairAccesIcon(tags),
-    template: (local, tags) =>
-      `<span title="${wheelchairAccesText(
-        tags,
-        local
-      )}" class="attribut"><i class="fab fa-accessible-icon"></i> <i class="fas fa-${wheelchairAccesIcon(
-        tags
-      )}" style="color: ${wheelchairAccesColor(tags)};"></i></span>`
+    check: tags => !!wheelchairAccess(tags, {}),
+    template: (local, tags) => {
+      const access = wheelchairAccess(tags, local);
+      return `<span title="${access?.text}" class="attribut"><i class="fab fa-accessible-icon"></i> <i class="fas fa-${access?.icon}" style="color: ${access?.color};"></i></span>`;
+    }
+  },
+  {
+    check: tags =>
+      /only|yes|limited/.test(tags["zero_waste"] || tags["bulk_purchase"]),
+    template: local => template(local.avoidPackaging, "fas fa-hands")
+  },
+  {
+    check: tags => !!regional(tags, {}),
+    template: (local, tags) => {
+      const r = regional(tags, local);
+      return `<span title="${r?.text}" class="attribut"><i class="fas fa-map-marker-alt"></i> <i class="fas fa-${r?.icon}" style="color: ${r?.color};"></i></span>`;
+    }
+  },
+  {
+    check: tags => !!vegetarian(tags, {}),
+    template: (local, tags) => {
+      const v = vegetarian(tags, local);
+      return `<span title="${v?.text}" class="attribut"><i class="fas fa-cheese"></i> <i class="fas fa-${v?.icon}" style="color: ${v?.color};"></i></span>`;
+    }
+  },
+  {
+    check: tags => !!vegan(tags, {}),
+    template: (local, tags) => {
+      const v = vegan(tags, local);
+      return `<span title="${v?.text}" class="attribut"><i class="fas fa-carrot"></i> <i class="fas fa-${v?.icon}" style="color: ${v?.color};"></i></span>`;
+    }
+  },
+  {
+    check: tags => !!organic(tags, {}),
+    template: (local, tags) => {
+      const o = organic(tags, local);
+      return `<span title="${o?.text}" class="attribut"><i class="fas fa-carrot"></i> <i class="fas fa-${o?.icon}" style="color: ${o?.color};"></i></span>`;
+    }
+  },
+  {
+    check: tags => !!fairTrade(tags, {}),
+    template: (local, tags) => {
+      const f = fairTrade(tags, local);
+      return `<span title="${f?.text}" class="attribut"><i class="fas fa-carrot"></i> <i class="fas fa-${f?.icon}" style="color: ${f?.color};"></i></span>`;
+    }
   }
 ];
 
-function wheelchairAccesText(tags: { wheelchair: string }, local: any) {
-  switch (tags.wheelchair) {
+function wheelchairAccess(tags: Tags, local: any) {
+  switch (tags["wheelchair"]) {
     case "yes":
     case "designated":
-      return local.wheelchairYes;
+      return {
+        text: local.wheelchair?.yes,
+        color: "green",
+        icon: "check-circle"
+      };
     case "limited":
-      return local.wheelchairLimited;
+      return {
+        text: local.wheelchair?.limited,
+        color: "orange",
+        icon: "exclamation-circle"
+      };
     case "no":
-      return local.wheelchairNo;
+      return { text: local.wheelchair?.no, color: "red", icon: "times-circle" };
     default:
       // do not display for others values or undefined
-      return "";
-  }
-}
-
-function wheelchairAccesColor(tags: { wheelchair: string }) {
-  switch (tags.wheelchair) {
-    case "yes":
-    case "designated":
-      return "green";
-    case "limited":
-      return "orange";
-    case "no":
-      return "red";
-    default:
-      // do not display for others values or undefined
-      return "black";
-  }
-}
-
-function wheelchairAccesIcon(tags: { wheelchair: string }) {
-  switch (tags.wheelchair) {
-    case "yes":
-    case "designated":
-      return "check-circle";
-    case "limited":
-      return "exclamation-circle";
-    case "no":
-      return "times-circle";
-    default:
-      // do not display icon for others values or undefined
       return undefined;
   }
+}
+
+function regional(tags: Tags, local: any) {
+  switch (tags["regional"]) {
+    case "only":
+      return {
+        text: local.regional?.only,
+        color: "green",
+        icon: "check-circle"
+      };
+    case "yes":
+    case "limited":
+      return {
+        text: local.regional?.yes,
+        color: "orange",
+        icon: "exclamation-circle"
+      };
+    case "no":
+      return { text: local.regional?.no, color: "red", icon: "times-circle" };
+    default:
+      // do not display for others values or undefined
+      return undefined;
+  }
+}
+
+function vegetarian(tags: Tags, local: any) {
+  const vegetarian =
+    tags["diet:vegetarian"] ||
+    tags["vegetarian"] ||
+    tags["diet:lacto_vegetarian"] ||
+    tags["diet:ovo_vegetarian"];
+
+  if (vegetarian === "only") {
+    return {
+      text: local.vegetarian?.only,
+      color: "green",
+      icon: "check-circle"
+    };
+  } else if (
+    vegetarian === "yes" ||
+    vegetarian === "limited" ||
+    /vegetarian/gi.test(tags["cuisine"])
+  ) {
+    return {
+      text: local.vegetarian?.yes,
+      color: "DodgerBlue",
+      icon: "info-circle"
+    };
+  } else if (vegetarian === "no") {
+    return {
+      text: local.vegetarian?.no,
+      color: "Orange",
+      icon: "exclamation-circle"
+    };
+  }
+
+  // do not display for others values or undefined
+  return undefined;
+}
+
+function vegan(tags: Tags, local: any) {
+  const vegan = tags["diet:vegan"] || tags["vegan"] || tags["diet:fruitarian"];
+
+  if (vegan === "only") {
+    return {
+      text: local.vegan?.only,
+      color: "green",
+      icon: "check-circle"
+    };
+  } else if (
+    vegan === "yes" ||
+    vegan === "limited" ||
+    /vegan/gi.test(tags["cuisine"])
+  ) {
+    return {
+      text: local.vegan?.yes,
+      color: "DodgerBlue",
+      icon: "info-circle"
+    };
+  } else if (vegan === "no") {
+    return {
+      text: local.vegan?.no,
+      color: "Orange",
+      icon: "exclamation-circle"
+    };
+  }
+
+  // do not display for others values or undefined
+  return undefined;
+}
+
+function fairTrade(tags: Tags, local: any) {
+  const fairTrade = tags["fair_trade"];
+
+  if (fairTrade === "only") {
+    return {
+      text: local.fairTrade?.only,
+      color: "green",
+      icon: "check-circle"
+    };
+  } else if (fairTrade === "yes" || fairTrade === "limited") {
+    return {
+      text: local.fairTrade?.yes,
+      color: "DodgerBlue",
+      icon: "info-circle"
+    };
+  } else if (fairTrade === "no") {
+    return {
+      text: local.fairTrade?.no,
+      color: "Orange",
+      icon: "exclamation-circle"
+    };
+  }
+
+  // do not display for others values or undefined
+  return undefined;
+}
+function organic(tags: Tags, local: any) {
+  const organic = tags["organic"];
+
+  if (organic === "only") {
+    return {
+      text: local.organic?.only,
+      color: "green",
+      icon: "check-circle"
+    };
+  } else if (organic === "yes" || organic === "limited") {
+    return {
+      text: local.organic?.yes,
+      color: "DodgerBlue",
+      icon: "info-circle"
+    };
+  } else if (organic === "no") {
+    return {
+      text: local.organic?.no,
+      color: "Orange",
+      icon: "exclamation-circle"
+    };
+  }
+
+  // do not display for others values or undefined
+  return undefined;
 }
 
 function hasPropThatStartsWith(tags: any, name: string, value: string) {

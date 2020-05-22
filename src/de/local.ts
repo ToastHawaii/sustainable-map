@@ -25,6 +25,8 @@ export const local = {
   computer: "Computer",
   toy: "Spielzeug",
   clothes: "Kleider",
+  recycling: "Weiterverwerten",
+  reuse: "Wiederverwenden",
   freeToGive: "Nur bringen",
   freeToTake: "Nur mitnehmen",
   freeToTakeOrGive: "Mitnehmen und bringen",
@@ -39,9 +41,37 @@ export const local = {
   hoops: "Körbe",
   light: "Beleuchtet",
   covered: "Überdacht",
-  wheelchairYes: "Rollstuhlgerecht",
-  wheelchairLimited: "Limitiert Rollstuhlgerecht",
-  wheelchairNo: "Nicht Rollstuhlgerecht",
+  wheelchair: {
+    yes: "Rollstuhlgerecht",
+    limited: "Limitiert Rollstuhlgerecht",
+    no: "Nicht Rollstuhlgerecht"
+  },
+  regional: {
+    only: "Alles regionale Produkte",
+    yes: "Hat regionale Produkte",
+    no: "Keine regionalen Produkte"
+  },
+  avoidPackaging: "Unnötige Verpackung vermeiden",
+  vegetarian: {
+    only: "Alles vegetarische Produkte",
+    yes: "Hat vegetarische Produkte",
+    no: "Keine vegetarische Produkte"
+  },
+  vegan: {
+    only: "Alles vegane Produkte",
+    yes: "Hat vegane Produkte",
+    no: "Keine vegane Produkte"
+  },
+  fair_trade: {
+    only: "Alles fair gehandelte Produkte",
+    yes: "Hat fair gehandelte Produkte",
+    no: "Keine fair gehandelten Produkte"
+  },
+  organic: {
+    only: "Alles bio Produkte",
+    yes: "Hat bio Produkte",
+    no: "Keine bio Produkte"
+  },
   open: "Geöffnet",
   closed: "Geschlossen",
   maybeOpen: "Vielleicht geöffnet",

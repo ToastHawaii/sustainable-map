@@ -25,6 +25,8 @@ export const local = {
   computer: "Computer",
   toy: "Toy",
   clothes: "Clothes",
+  recycling: "Recycling",
+  reuse: "Reuse",
   freeToGive: "Free to give",
   freeToTake: "Free to take",
   freeToTakeOrGive: "Free to take or give",
@@ -39,9 +41,37 @@ export const local = {
   hoops: "Hoops",
   light: "Lit",
   covered: "Covered",
-  wheelchairYes: "Wheelchair accessible",
-  wheelchairLimited: "Limited wheelchair accessible",
-  wheelchairNo: "Not wheelchair accessible",
+  wheelchair: {
+    yes: "Wheelchair accessible",
+    limited: "Limited wheelchair accessible",
+    no: "Not wheelchair accessible"
+  },
+  regional: {
+    only: "Only regional products",
+    yes: "Has regional products",
+    no: "No regional products"
+  },
+  avoidPackaging: "Avoid unnecessary packaging",
+  vegetarian: {
+    only: "Only vegetarian products",
+    yes: "Has vegetarian products",
+    no: "No vegetarian products"
+  },
+  vegan: {
+    only: "Only vegan products",
+    yes: "Has vegan products",
+    no: "No vegan products"
+  },
+  fair_trade: {
+    only: "Only fair trade products",
+    yes: "Has fair trade products",
+    no: "No fair trade products"
+  },
+  organic: {
+    only: "Only organic products",
+    yes: "Has organic products",
+    no: "No organic products"
+  },
   open: "Open",
   closed: "Closed",
   maybeOpen: "Maybe open",
@@ -115,7 +145,7 @@ export const local = {
     pétanque: "Pétanque",
     bocce: "Bocce"
   },
-  type:type,
+  type: type,
   "piste:difficulty": {
     novice: "Novice",
     easy: "Easy",

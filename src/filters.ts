@@ -515,10 +515,7 @@ nwr["garden:type"="community"];
 
 nw["landuse"="community_food_growing"];`,
     color: "#228B22",
-    tags: [
-      "garden:type=community",
-      "landuse=community_food_growing"
-    ],
+    tags: ["garden:type=community", "landuse=community_food_growing"],
     edit: ["leisure=garden"]
   },
   {
@@ -592,74 +589,108 @@ nw["landuse"="community_food_growing"];`,
       "amenity"
     ]
   },
-  //   {
-  //     group: "health",
-  //     value: "food-sharing",
-  //     icon: "https://wiki.openstreetmap.org/w/images/3/3c/Foodbank.svg",
-  //     query: `
-  //     nw["social_facility"="food_bank"];
+  {
+    group: "food",
+    value: "food-sharing",
+    icon: "https://wiki.openstreetmap.org/w/images/3/3c/Foodbank.svg",
+    query: `
+      nw["social_facility"="food_bank"];
 
-  //     nw["social_facility"="soup_kitchen"];
+      nw["social_facility"="soup_kitchen"];
 
-  //     nw["amenity"="food_sharing"];
-  //     nw["social_facility"="food_sharing"];
+      nw["amenity"="food_sharing"];
+      nw["social_facility"="food_sharing"];
 
-  //     nw["recycling:food"="yes"];
+      nw["recycling:food"="yes"];
 
-  //     nw["reuse"="fridge"];
+      nw["reuse"="fridge"];
 
-  //     nw["amenity"="fridge"];`,
-  //     color: "#FFD700",
-  //     tags: ["social_facility=food_bank", "social_facility=soup_kitchen"],
-  //     edit: ["amenity=social_facility"]
-  //   },
-  //   {
-  //     group: "goods",
-  //     value: "goods-exchange",
-  //     icon: "/lib/maki-icons/gift-15.svg",
-  //     query: `
-  //     // Givebox (Preferred tag)
-  //     nw["amenity"="give_box"];
+      nw["amenity"="fridge"];`,
+    color: "#FFD700",
+    tags: ["social_facility=food_bank", "social_facility=soup_kitchen"],
+    edit: ["amenity=social_facility"]
+  },
+  {
+    group: "food",
+    value: "dinner",
+    icon: "https://wiki.openstreetmap.org/w/images/b/bb/Restaurant-14.svg",
+    query: `
+nw["amenity"~"^(restaurant|biergarten|fast_food|ice_cream|pub|bar|canteen|cafe|juice_bar)$"][~"^(regional|fair_trade|organic|(diet:){0,1}(vegetarian|lacto_vegetarian|ovo_vegetarian|vegan|fruitarian)|second_hand)$"~"^(limited|yes|only)$"];
+nw["amenity"~"^(restaurant|biergarten|fast_food|ice_cream|pub|bar|canteen|cafe|juice_bar)$"][~"^(diet|cuisine)$"~"vegetarian|vegan|fruitarian"];
 
-  //     nw["amenity"="givebox"];
+nw["social_facility"="soup_kitchen"];`,
+    color: "#C77400",
+    tags: [
+      "amenity=restaurant",
+      "amenity=biergarten",
+      "amenity=fast_food",
+      "amenity=ice_cream",
+      "amenity=pub",
+      "amenity=bar",
+      "amenity=cafe",
+      "amenity=canteen",
+      "amenity=juice_bar",
+      "social_facility=soup_kitchen"
+    ],
+    edit: [
+      "amenity=restaurant",
+      "amenity=biergarten",
+      "amenity=fast_food",
+      "amenity=ice_cream",
+      "amenity=pub",
+      "amenity=bar",
+      "amenity=cafe",
+      "amenity=social_facility",
+      "amenity"
+    ]
+  },
+  {
+    group: "goods",
+    value: "goods-exchange",
+    icon: "/lib/maki-icons/gift-15.svg",
+    query: `
+      // Givebox (Preferred tag)
+      nw["amenity"="give_box"];
 
-  //     // Reuse
-  //     nw["amenity"="reuse"]["reuse:books"!="only"];
+      nw["amenity"="givebox"];
 
-  //     // Give-away shop
-  //     nw["shop"="charity"]["payment:none"="yes"];
-  //     nw["shop"]["charity"="yes"]["payment:none"="yes"];
-  //     nw["shop"="second_hand"]["payment:none"="yes"];
-  //     nw["shop"]["second_hand"="yes"]["payment:none"="yes"];
+      // Reuse
+      nw["amenity"="reuse"]["reuse:books"!="only"];
 
-  //     nw["shop"="charity"]["fee"="no"];
-  //     nw["shop"]["charity"="yes"]["fee"="no"];
-  //     nw["shop"="second_hand"]["fee"="no"];
-  //     nw["shop"]["second_hand"="yes"]["fee"="no"];
+      // Give-away shop
+      nw["shop"="charity"]["payment:none"="yes"];
+      nw["shop"]["charity"="yes"]["payment:none"="yes"];
+      nw["shop"="second_hand"]["payment:none"="yes"];
+      nw["shop"]["second_hand"="yes"]["payment:none"="yes"];
 
-  //     // Toy library free of charge
-  //     nw["amenity"="toy_library"]["fee"="no"];`,
-  //     color: "#8A2BE2",
-  //     tags: [
-  //       "amenity=give_box",
-  //       "shop=charity",
-  //       "shop=second_hand",
-  //       "amenity=toy_library"
-  //     ],
-  //     edit: ["amenity", "shop=charity", "shop=second_hand", "amenity=toy_library"]
-    // },
-    {
-      group: "goods",
-      value: "hackerspace",
-      icon: "/lib/temaki-icons/toolbox.svg",
-      query: `
+      nw["shop"="charity"]["fee"="no"];
+      nw["shop"]["charity"="yes"]["fee"="no"];
+      nw["shop"="second_hand"]["fee"="no"];
+      nw["shop"]["second_hand"="yes"]["fee"="no"];
+
+      // Toy library free of charge
+      nw["amenity"="toy_library"]["fee"="no"];`,
+    color: "#8A2BE2",
+    tags: [
+      "amenity=give_box",
+      "shop=charity",
+      "shop=second_hand",
+      "amenity=toy_library"
+    ],
+    edit: ["amenity", "shop=charity", "shop=second_hand", "amenity=toy_library"]
+  },
+  {
+    group: "goods",
+    value: "hackerspace",
+    icon: "/lib/temaki-icons/toolbox.svg",
+    query: `
       nw["leisure"="hackerspace"]["repair"!="only"];
 
       nw["club"="doityourself"];`,
-      color: "#333333",
-      tags: ["leisure=hackerspace", "club=doityourself"],
-      edit: ["leisure=hackerspace", "club"]
-    },
+    color: "#333333",
+    tags: ["leisure=hackerspace", "club=doityourself"],
+    edit: ["leisure=hackerspace", "club"]
+  },
   {
     group: "community",
     value: "contribute",

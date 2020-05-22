@@ -230,6 +230,10 @@ export const type = {
       }
     ]
   },
+  dinner: {
+    name: "Essen",
+    description: ""
+  },
   "goods-exchange": {
     name: "Waren Tausch",
     description:
