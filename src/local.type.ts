@@ -178,6 +178,18 @@ export const type = {
     name: "Grow",
     description: ""
   },
+  grocery: {
+    name: "Grocery",
+    description: ""
+  },
+  sweets: {
+    name: "Sweets",
+    description: ""
+  },
+  "baked-goods": {
+    name: "Baked goods",
+    description: ""
+  },
   "diaper-changing-table": { name: "Diaper-changing table", description: "" },
   "drinking-water": { name: "Drinking water", description: "" },
   "food-sharing": {

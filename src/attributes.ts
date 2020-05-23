@@ -241,7 +241,7 @@ export const attributes: Attribute<{}>[] = [
   {
     check: tags =>
       tags.fee === "yes" ||
-      (!!tags.shop && tags.fee !== "no") ||
+      // (!!tags.shop && tags.fee !== "no") ||
       tags["compressed_air:fee"] === "yes",
     template: local => template(local.fee, "far fa-money-bill-alt")
   },
@@ -411,25 +411,32 @@ function wheelchairAccess(tags: Tags, local: any) {
 }
 
 function regional(tags: Tags, local: any) {
-  switch (tags["regional"]) {
-    case "only":
-      return {
-        text: local.regional?.only,
-        color: "green",
-        icon: "check-circle"
-      };
-    case "yes":
-    case "limited":
-      return {
-        text: local.regional?.yes,
-        color: "orange",
-        icon: "exclamation-circle"
-      };
-    case "no":
-      return { text: local.regional?.no, color: "red", icon: "times-circle" };
-    default:
-      // do not display for others values or undefined
-      return undefined;
+  const regional = tags["regional"];
+
+  if (regional === "only") {
+    return {
+      text: local.regional?.only,
+      color: "green",
+      icon: "check-circle"
+    };
+  } else if (
+    regional === "yes" ||
+    regional === "limited" ||
+    tags.shop === "farm" ||
+    tags.amenity === "marketplace" ||
+    tags.craft === "beekeeper" ||
+    tags.craft === "honey"
+  ) {
+    return {
+      text: local.regional?.yes,
+      color: "DodgerBlue",
+      icon: "info-circle"
+    };
+  } else if (regional === "no") {
+    return { text: local.regional?.no, color: "red", icon: "times-circle" };
+  } else {
+    // do not display for others values or undefined
+    return undefined;
   }
 }
 
@@ -449,7 +456,12 @@ function vegetarian(tags: Tags, local: any) {
   } else if (
     vegetarian === "yes" ||
     vegetarian === "limited" ||
-    /vegetarian/gi.test(tags["cuisine"])
+    /vegetarian/gi.test(tags["cuisine"]) ||
+    tags.shop === "greengrocer" ||
+    tags.shop === "pasta" ||
+    tags.craft === "pasta" ||
+    tags.amenity === "marketplace" ||
+    tags.shop === "dairy"
   ) {
     return {
       text: local.vegetarian?.yes,
@@ -462,10 +474,10 @@ function vegetarian(tags: Tags, local: any) {
       color: "Orange",
       icon: "exclamation-circle"
     };
+  } else {
+    // do not display for others values or undefined
+    return undefined;
   }
-
-  // do not display for others values or undefined
-  return undefined;
 }
 
 function vegan(tags: Tags, local: any) {
@@ -480,7 +492,11 @@ function vegan(tags: Tags, local: any) {
   } else if (
     vegan === "yes" ||
     vegan === "limited" ||
-    /vegan/gi.test(tags["cuisine"])
+    /vegan/gi.test(tags["cuisine"]) ||
+    tags.shop === "greengrocer" ||
+    tags.shop === "pasta" ||
+    tags.craft === "pasta" ||
+    tags.amenity === "marketplace"
   ) {
     return {
       text: local.vegan?.yes,

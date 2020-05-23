@@ -179,6 +179,18 @@ export const type = {
     name: "Anbauen",
     description: ""
   },
+  grocery: {
+    name: "Lebensmittel",
+    description: ""
+  },
+  sweets: {
+    name: "Süssigkeiten",
+    description: ""
+  },
+  "baked-goods": {
+    name: "Backwaren",
+    description: ""
+  },
   "diaper-changing-table": { name: "Wickeltische", description: "" },
   "drinking-water": { name: "Trinkwasser", description: "" },
   "food-sharing": {

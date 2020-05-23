@@ -431,7 +431,7 @@ nw["recycling:books"="yes"];`,
   {
     group: "goods",
     value: "baking-oven",
-    icon: "/lib/maki-icons/bakery-15.svg",
+    icon: "https://wiki.openstreetmap.org/w/images/f/fe/Bakery-16.svg",
     query: `
       nw["amenity"="baking_oven"][!"historic"]&part;
 
@@ -535,6 +535,64 @@ nw["landuse"="community_food_growing"];`,
       "landuse=community_food_growing"
     ],
     edit: ["landuse=allotments", "leisure=garden"]
+  },
+  {
+    group: "food",
+    value: "grocery",
+    icon: "https://wiki.openstreetmap.org/w/images/9/96/Convenience-14.svg",
+    query: `
+    nw["shop"~"^(supermarket|convenience|health_food|pasta|deli|wholesale|grocery|food|frozen_food|spices)$"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
+    nw["shop"="farm"];
+    nw["shop"="greengrocer"];
+    nw["amenity"="vending_machine"]["vending"~"food|eggs"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
+    nw["shop"="organic"];
+    nw["amenity"="marketplace"];
+    nw["shop"="dairy"];
+    nw["craft"="pasta"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"]; 
+    nw["shop"="yes"]["organic"~"^(limited|yes|only)$"];`,
+    color: "#ac39ac",
+    tags: [
+      "shop=supermarket",
+      "shop=convenience",
+      "shop=farm",
+      "amenity=marketplace"
+    ],
+    edit: [
+      "shop=supermarket",
+      "shop=convenience",
+      "shop=farm",
+      "amenity=marketplace"
+    ]
+  },
+  {
+    group: "food",
+    value: "sweets",
+    icon: "https://wiki.openstreetmap.org/w/images/c/cc/Confectionery-14.svg",
+    query: `
+nw["shop"~"^(confectionery|chocolate|honey|ice_cream|pastry)$"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
+nw["amenity"="vending_machine"]["vending"~"sweets|ice_cream"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
+nw["craft"~"^(beekeeper|honey)$"];
+nw["craft"="confectionery"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];`,
+    color: "#FFD700",
+    tags: [
+      "shop=confectionery",
+      "shop=chocolate",
+      "shop=ice_cream",
+      "shop=pastry",
+      "craft=beekeeper"
+    ],
+    edit: ["shop=confectionery", "shop=pastry", "craft=beekeeper"]
+  },
+  {
+    group: "food",
+    value: "baked-goods",
+    icon: "/lib/maki-icons/bakery-15.svg",
+    query: `
+nw["shop"="bakery"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
+nw["amenity"="vending_machine"]["vending"~"bread|pizza"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];`,
+    color: "#D2B48C",
+    tags: ["shop=bakery"],
+    edit: ["shop=bakery"]
   },
   {
     group: "health",
@@ -696,7 +754,7 @@ nw["social_facility"="soup_kitchen"];`,
       nw["shop"~"^(second_hand|charity|antiques|fair_trade)$"];
       nw["shop"~"^(variety_store|convenience|yes|general|department_store|gift|kiosk|mall|trade|houseware)$"][~"^(second_hand|charity|fair_trade)$"~"^(yes|only)$"];
       nw["amenity"="marketplace"][~"^(second_hand|charity)$"~"^(yes|only)$"];`,
-    color: "#8A2BE2",
+    color: "#F08080",
     tags: [
       "shop=second_hand",
       "shop=antiques",
