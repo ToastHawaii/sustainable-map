@@ -24,3 +24,18 @@ else
   );
 
 import "details-element-polyfill";
+
+document.addEventListener("click", function (e) {
+  const target = (e.target as HTMLElement).parentElement;
+
+  if (target && target.classList.contains("attribut")) {
+    const titleElement = document.createElement("span");
+    titleElement.className = "title";
+    titleElement.innerHTML = target.title;
+    target.append(titleElement);
+
+    setTimeout(() => {
+      titleElement.remove();
+    }, 2000);
+  }
+});
