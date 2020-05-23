@@ -681,6 +681,35 @@ nw["social_facility"="soup_kitchen"];`,
   },
   {
     group: "goods",
+    value: "goods-get",
+    icon: "https://wiki.openstreetmap.org/w/images/8/85/Charity-14.svg",
+    query: `
+      // Givebox 
+      nw["amenity"="give_box"];
+
+      nw["amenity"="givebox"];
+
+      // Reuse
+      nw["amenity"="reuse"]["reuse:books"!="only"];
+
+      // Shop
+      nw["shop"~"^(second_hand|charity|antiques|fair_trade)$"];
+      nw["shop"~"^(variety_store|convenience|yes|general|department_store|gift|kiosk|mall|trade|houseware)$"][~"^(second_hand|charity|fair_trade)$"~"^(yes|only)$"];
+      nw["amenity"="marketplace"][~"^(second_hand|charity)$"~"^(yes|only)$"];`,
+    color: "#8A2BE2",
+    tags: [
+      "shop=second_hand",
+      "shop=antiques",
+      "second_hand=*",
+      "shop=charity",
+      "charity=*",
+      "amenity=give_box",
+      "fair_trade=*"
+    ],
+    edit: ["shop=second_hand", "shop=charity", "amenity"]
+  },
+  {
+    group: "goods",
     value: "hackerspace",
     icon: "/lib/temaki-icons/toolbox.svg",
     query: `

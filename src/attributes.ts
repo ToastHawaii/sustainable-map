@@ -170,7 +170,10 @@ export const attributes: Attribute<{}>[] = [
     check: tags =>
       tags["shop"] === "second_hand" ||
       tags["second_hand"] === "yes" ||
-      tags["amenity"] === "give_box",
+      tags["second_hand"] === "only" ||
+      tags["shop"] === "antiques" ||
+      tags["amenity"] === "give_box" ||
+      tags["amenity"] === "public_bookcase",
     template: local => template(local.reuse, "fas fa-sync-alt")
   },
   {
@@ -244,14 +247,15 @@ export const attributes: Attribute<{}>[] = [
   },
   {
     check: tags =>
-      equalsIgnoreCase(tags.fee, "no") ||
-      equalsIgnoreCase(tags.fee, "donation") ||
-      equalsIgnoreCase(tags.fee, "interval") ||
-      equalsIgnoreCase(tags.fee, "free") ||
-      equalsIgnoreCase(tags.fee, "none") ||
-      parseOpeningHours(tags.fee, "en") ||
-      tags["fee:conditional"] ||
-      tags.social_facility === "soup_kitchen",
+      !isFree(tags) &&
+      (tags.social_facility === "soup_kitchen" ||
+        tags.shop === "charity" ||
+        tags.charity === "yes"),
+
+    template: local => template(local.veryCheap, "fas fa-heart")
+  },
+  {
+    check: tags => isFree(tags),
     template: local => template(local.free, "fas fa-heart")
   },
   {
@@ -369,6 +373,20 @@ export const attributes: Attribute<{}>[] = [
   }
 ];
 
+function isFree(tags: Tags): boolean {
+  return (
+    equalsIgnoreCase(tags.fee, "no") ||
+    equalsIgnoreCase(tags.fee, "donation") ||
+    equalsIgnoreCase(tags.fee, "interval") ||
+    equalsIgnoreCase(tags.fee, "free") ||
+    equalsIgnoreCase(tags.fee, "none") ||
+    parseOpeningHours(tags.fee, "en") ||
+    tags["fee:conditional"] ||
+    tags.amenity === "give_box" ||
+    tags["amenity"] === "public_bookcase"
+  );
+}
+
 function wheelchairAccess(tags: Tags, local: any) {
   switch (tags["wheelchair"]) {
     case "yes":
@@ -484,7 +502,7 @@ function vegan(tags: Tags, local: any) {
 function fairTrade(tags: Tags, local: any) {
   const fairTrade = tags["fair_trade"];
 
-  if (fairTrade === "only") {
+  if (fairTrade === "only" || tags.shop === "fair_trade") {
     return {
       text: local.fairTrade?.only,
       color: "green",

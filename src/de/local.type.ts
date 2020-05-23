@@ -234,6 +234,10 @@ export const type = {
     name: "Essen",
     description: ""
   },
+  "goods-get": {
+    name: "Waren bekommen",
+    description: ""
+  },
   "goods-exchange": {
     name: "Waren Tausch",
     description:

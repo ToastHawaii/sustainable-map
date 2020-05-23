@@ -81,6 +81,7 @@ export const local = {
   closes: "Schliesst",
   thatDependsOn: "Das hängt ab von",
   free: "Kostenlos",
+  veryCheap: "Kostenlos oder sehr günstig",
   conditionalFee: "Nur zu bestimmten Zeiten kostenlos.",
   horizontalBar: "Reck",
   parallelBars: "Parallelbarren",

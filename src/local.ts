@@ -82,6 +82,7 @@ export const local = {
   thatDependsOn: "That depends on",
   conditionalFee: "Only free at certain times.",
   free: "Free",
+  veryCheap: "Free of charge or very cheap",
   horizontalBar: "Horizontal bar",
   parallelBars: "Parallel bars",
   rings: "Rings",

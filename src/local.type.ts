@@ -233,6 +233,10 @@ export const type = {
     name: "Dinner",
     description: ""
   },
+  "goods-get": {
+    name: "Get goods",
+    description: ""
+  },
   "goods-exchange": {
     name: "Goods exchange",
     description:
