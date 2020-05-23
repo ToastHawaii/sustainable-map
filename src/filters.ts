@@ -818,7 +818,7 @@ nw["amenity"="shower"]&part;
     edit: ["amenity=toilets", "building", "amenity"]
   },
   {
-    group: "play",
+    group: "communitySport",
     value: "basketball",
     icon: "/lib/maki-icons/basketball-15.svg",
     query: `
@@ -898,7 +898,7 @@ nw["amenity"="shower"]&part;
     edit: ["leisure=pitch"]
   },
   {
-    group: "play",
+    group: "communitySport",
     value: "chess",
     icon:
       "https://upload.wikimedia.org/wikipedia/commons/d/d4/Chess_pictogram.svg",
@@ -923,7 +923,7 @@ nw["amenity"="shower"]&part;
     edit: ["natural", "landuse=recreation_ground", "playground"]
   },
   {
-    group: "play",
+    group: "communitySport",
     value: "boules",
     icon: "/lib/maki-icons/pitch-15.svg",
     query: `
@@ -1075,7 +1075,7 @@ nw["amenity"="shower"]&part;
     edit: ["sport=running", "sport=athletics"]
   },
   {
-    group: "play",
+    group: "communitySport",
     value: "soccer",
     icon: "/lib/maki-icons/soccer-15.svg",
     query: `
@@ -1087,7 +1087,7 @@ nw["amenity"="shower"]&part;
     edit: ["leisure=pitch"]
   },
   {
-    group: "play",
+    group: "communitySport",
     value: "table-tennis",
     icon: "/lib/maki-icons/table-tennis-15.svg",
     query: `
@@ -1101,7 +1101,7 @@ nw["amenity"="shower"]&part;
     edit: ["leisure=pitch"]
   },
   {
-    group: "play",
+    group: "communitySport",
     value: "table-soccer",
     icon: "https://wiki.openstreetmap.org/w/images/c/c8/Kicker02.png",
     query: `
@@ -1111,7 +1111,7 @@ nw["amenity"="shower"]&part;
     edit: ["leisure=pitch"]
   },
   {
-    group: "play",
+    group: "communitySport",
     value: "volleyball",
     icon: "/lib/maki-icons/volleyball-15.svg",
     query: `

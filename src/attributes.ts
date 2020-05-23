@@ -357,14 +357,14 @@ export const attributes: Attribute<{}>[] = [
     check: tags => !!organic(tags, {}),
     template: (local, tags) => {
       const o = organic(tags, local);
-      return `<span title="${o?.text}" class="attribut"><i class="fas fa-carrot"></i> <i class="fas fa-${o?.icon}" style="color: ${o?.color};"></i></span>`;
+      return `<span title="${o?.text}" class="attribut"><i class="fas fa-seedling"></i> <i class="fas fa-${o?.icon}" style="color: ${o?.color};"></i></span>`;
     }
   },
   {
     check: tags => !!fairTrade(tags, {}),
     template: (local, tags) => {
       const f = fairTrade(tags, local);
-      return `<span title="${f?.text}" class="attribut"><i class="fas fa-carrot"></i> <i class="fas fa-${f?.icon}" style="color: ${f?.color};"></i></span>`;
+      return `<span title="${f?.text}" class="attribut"><i class="fas fa-handshake"></i> <i class="fas fa-${f?.icon}" style="color: ${f?.color};"></i></span>`;
     }
   }
 ];

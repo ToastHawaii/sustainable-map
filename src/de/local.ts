@@ -62,7 +62,7 @@ export const local = {
     yes: "Hat vegane Produkte",
     no: "Keine vegane Produkte"
   },
-  fair_trade: {
+  fairTrade: {
     only: "Alles fair gehandelte Produkte",
     yes: "Hat fair gehandelte Produkte",
     no: "Keine fair gehandelten Produkte"
@@ -107,7 +107,7 @@ export const local = {
     mobility: "Mobilität",
     community: "Gemeinschaft",
     sport: "Sport",
-    play: "Spiel",
+    communitySport: "Gemeinschaftssport",
     trip: "Ausflug",
     goods: "Gegenstände",
     food: "Nahrung"
