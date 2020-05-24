@@ -280,45 +280,45 @@ export const attributes: Attribute<{}>[] = [
   },
   {
     check: tags =>
-      /horizontal_bar/.test(tags["fitness_station"]) ||
+      /horizontal_bar/gi.test(tags["fitness_station"]) ||
       tags["fitness_station:horizontal_bar"] === "yes" ||
-      /horizontal_bar/.test(tags["playground"]) ||
+      /horizontal_bar/gi.test(tags["playground"]) ||
       tags["playground:horizontal_bar"] === "yes",
     template: local => template(local.horizontalBar, "fas fa-minus")
   },
   {
     check: tags =>
-      /parallel_bars/.test(tags["fitness_station"]) ||
+      /parallel_bars/gi.test(tags["fitness_station"]) ||
       tags["fitness_station:parallel_bars"] === "yes",
     template: local =>
       template(local.parallelBars, "fas fa-grip-lines-vertical")
   },
   {
     check: tags =>
-      /rings/.test(tags["fitness_station"]) ||
+      /rings/gi.test(tags["fitness_station"]) ||
       tags["fitness_station:rings"] === "yes",
     template: local => template(local.rings, "far fa-circle")
   },
   {
     check: tags =>
-      /elliptical_trainer|air_walker|exercise_bike|rower/.test(
+      /elliptical_trainer|air_walker|exercise_bike|rower/gi.test(
         tags["fitness_station"]
       ) ||
       tags["fitness_station:elliptical_trainer"] === "yes" ||
       tags["fitness_station:air_walker"] === "yes" ||
       tags["fitness_station:exercise_bike"] === "yes" ||
       tags["fitness_station:rower"] === "yes" ||
-      /exercise/.test(tags["playground"]) ||
+      /exercise/gi.test(tags["playground"]) ||
       tags["playground:exercise"] === "yes",
     template: local => template(local.exerciseMachine, "fas fa-biking")
   },
   {
     check: tags =>
-      /slackline|balance(_)?beam/.test(tags["fitness_station"]) ||
+      /slackline|balance(_)?beam/gi.test(tags["fitness_station"]) ||
       tags["fitness_station:slackline"] === "yes" ||
       tags["fitness_station:balance_beam"] === "yes" ||
       tags["fitness_station:balancebeam"] === "yes" ||
-      /slackline|balance(_)?beam/.test(tags["playground"]) ||
+      /slackline|balance(_)?beam/gi.test(tags["playground"]) ||
       tags["playground:slackline"] === "yes" ||
       tags["playground:balance_beam"] === "yes" ||
       tags["playground:balancebeam"] === "yes",
@@ -333,7 +333,8 @@ export const attributes: Attribute<{}>[] = [
   },
   {
     check: tags =>
-      /only|yes|limited/.test(tags["zero_waste"] || tags["bulk_purchase"]),
+      /only|yes|limited/gi.test(tags["zero_waste"] || tags["bulk_purchase"]) ||
+      /milk/gi.test(tags.vending),
     template: local => template(local.avoidPackaging, "fas fa-hands")
   },
   {
@@ -425,7 +426,8 @@ function regional(tags: Tags, local: any) {
     tags.shop === "farm" ||
     tags.amenity === "marketplace" ||
     tags.craft === "beekeeper" ||
-    tags.craft === "honey"
+    tags.craft === "honey" ||
+    tags.craft === "cheese_maker"
   ) {
     return {
       text: local.regional?.yes,
@@ -461,7 +463,9 @@ function vegetarian(tags: Tags, local: any) {
     tags.shop === "pasta" ||
     tags.craft === "pasta" ||
     tags.amenity === "marketplace" ||
-    tags.shop === "dairy"
+    tags.shop === "dairy" ||
+    tags.shop === "cheese" ||
+    /milk/gi.test(tags.vending)
   ) {
     return {
       text: local.vegetarian?.yes,

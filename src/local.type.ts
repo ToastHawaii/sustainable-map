@@ -190,6 +190,22 @@ export const type = {
     name: "Baked goods",
     description: ""
   },
+  dairy: {
+    name: "Dairy products",
+    description: ""
+  },
+  meat: {
+    name: "Meat products",
+    description: ""
+  },
+  vegetable: {
+    name: "Fruit / vegetables",
+    description: ""
+  },
+  beverages: {
+    name: "Beverages",
+    description: ""
+  },
   "diaper-changing-table": { name: "Diaper-changing table", description: "" },
   "drinking-water": { name: "Drinking water", description: "" },
   "food-sharing": {

@@ -191,6 +191,22 @@ export const type = {
     name: "Backwaren",
     description: ""
   },
+  dairy: {
+    name: "Milchprodukte",
+    description: ""
+  },
+  meat: {
+    name: "Fleischprodukte",
+    description: ""
+  },
+  vegetable: {
+    name: "Obst / Gemüse",
+    description: ""
+  },
+  beverages: {
+    name: "Getränke",
+    description: ""
+  },
   "diaper-changing-table": { name: "Wickeltische", description: "" },
   "drinking-water": { name: "Trinkwasser", description: "" },
   "food-sharing": {

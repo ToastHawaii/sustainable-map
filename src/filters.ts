@@ -544,7 +544,8 @@ nw["landuse"="community_food_growing"];`,
     nw["shop"~"^(supermarket|convenience|health_food|pasta|deli|wholesale|grocery|food|frozen_food|spices)$"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
     nw["shop"="farm"];
     nw["shop"="greengrocer"];
-    nw["amenity"="vending_machine"]["vending"~"food|eggs"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
+    nw["amenity"="vending_machine"]["vending"~"food"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
+    nw["amenity"="vending_machine"]["vending"~"eggs"];
     nw["shop"="organic"];
     nw["amenity"="marketplace"];
     nw["shop"="dairy"];
@@ -573,7 +574,7 @@ nw["shop"~"^(confectionery|chocolate|honey|ice_cream|pastry)$"][~"^(regional|fai
 nw["amenity"="vending_machine"]["vending"~"sweets|ice_cream"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
 nw["craft"~"^(beekeeper|honey)$"];
 nw["craft"="confectionery"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];`,
-    color: "#FFD700",
+    color: "#FFC0CB",
     tags: [
       "shop=confectionery",
       "shop=chocolate",
@@ -589,10 +590,74 @@ nw["craft"="confectionery"][~"^(regional|fair_trade|organic|second_hand)$"~"^(li
     icon: "/lib/maki-icons/bakery-15.svg",
     query: `
 nw["shop"="bakery"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
-nw["amenity"="vending_machine"]["vending"~"bread|pizza"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];`,
+nw["amenity"="vending_machine"]["vending"~"bread|pizza"];`,
     color: "#D2B48C",
     tags: ["shop=bakery"],
     edit: ["shop=bakery"]
+  },
+  {
+    group: "food",
+    value: "dairy",
+    icon: "https://wiki.openstreetmap.org/w/images/0/0e/Dairy.svg",
+    query: `
+nw["shop"~"^(cheese|dairy)$"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
+nw["craft"="cheese_maker"];
+nw["amenity"="vending_machine"]["vending"~"milk"];`,
+    color: "#ffdb4d",
+    tags: ["shop=cheese", "shop=dairy", "craft=cheese_maker", "vending=milk"],
+    edit: ["shop=cheese", "shop=dairy", "craft", "amenity=vending_machine"]
+  },
+  {
+    group: "food",
+    value: "meat",
+    icon: "https://wiki.openstreetmap.org/w/images/b/b8/Butcher.svg",
+    query: `
+nw["shop"~"^(butcher|seafood)$"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];`,
+    color: "#DC143C",
+    tags: ["shop=butcher", "shop=seafood"],
+    edit: ["shop=butcher", "shop=seafood"]
+  },
+  {
+    group: "food",
+    value: "vegetable",
+    icon: "https://wiki.openstreetmap.org/w/images/d/d8/Greengrocer-14.svg",
+    query: `
+    nw["shop"="greengrocer"][!"origin"];
+    nw["shop"="greengrocer"]["origin"="regional"];`,
+    color: "#32CD32",
+    tags: ["shop=greengrocer"],
+    edit: ["shop=greengrocer"]
+  },
+  {
+    group: "food",
+    value: "beverages",
+    icon: "https://wiki.openstreetmap.org/w/images/e/eb/Alcohol-16.svg",
+    query: `
+nw["shop"~"^(beverages|wine|alcohol|tea|drinks)$"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
+nw["craft"~"^(winery|distillery|brewery)$"];
+nw["amenity"="vending_machine"]["vending"~"milk"];
+nw["amenity"="vending_machine"]["vending"~"drinks"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];`,
+    color: "#cc0000",
+    tags: [
+      "shop=beverages",
+      "shop=wine",
+      "shop=alcohol",
+      "shop=tea",
+      "craft=winery",
+      "craft=distillery",
+      "craft=brewery",
+      "vending=milk"
+    ],
+    edit: [
+      "shop=beverages",
+      "shop=wine",
+      "shop=alcohol",
+      "shop=tea",
+      "craft=winery",
+      "craft=distillery",
+      "craft=brewery",
+      "amenity=vending_machine"
+    ]
   },
   {
     group: "health",
