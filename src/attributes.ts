@@ -75,8 +75,7 @@ export const attributes: Attribute<{}>[] = [
   {
     check: tags =>
       tags["service:bicycle:tools"] === "yes" ||
-      tags["service:bicycle:diy"] === "yes" ||
-      hasPropThatEndsWith(tags, ":repair", "yes"),
+      tags["service:bicycle:diy"] === "yes",
     template: local => template(local.tools, "fas fa-tools")
   },
   {
