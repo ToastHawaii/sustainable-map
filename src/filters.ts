@@ -1622,82 +1622,161 @@ node["man_made"="surveillance"]["image"];`,
     color: "#e6e600",
     tags: ["amenity=lounger", "amenity=hammock"],
     edit: ["amenity"]
+  },
+  {
+    group: "goods",
+    value: "clothes",
+    icon: "/lib/maki-icons/clothing-store-15.svg",
+    query: `
+      // Give
+      nw["recycling:belts"="yes"];
+      nw["recycling:clothes"="yes"];
+      nw["recycling:shoes"="yes"]; 
+      nw["recycling:textiles"="yes"];
+
+      // Reuse
+      nw["social_facility"="clothing_bank"];
+      nw["amenity"="give_box"]["clothes"!="no"];
+
+      // Shop
+      nw["shop"~"^(clothes|boutique|fashion|shoes|bag|sewing|tailor|fabric)$"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
+      nw["shop"="second_hand"]["clothes"]["clothes"!="no"];
+
+      nw["craft"="shoemaker"];
+
+      // Repair
+      nw[~"^(service:){0,1}(clothes|shoes|fabrik):repair$"~"^yes$"];
+      nw["shoe_repair"~"^(yes|only)$"]; 
+      nw["repair"="shoes"]; 
+      nw["shop"="shoe_repair"]; 
+      nw["craft"~"^(bag_repair|shoe_repair)$"]; 
+      nw["tailor:alteration_service"="yes"]; 
+      nw["shop"~"^(shoes|clothes|tailor|bag|sewing|leather)$"]["repair"~"^(yes|only)$"]; 
+      nw["craft"~"^(shoemaker|dressmaker|tailor)$"]["repair"~"^(yes|only)$"];`,
+    color: "#FF7F50",
+    tags: [
+      "shop=clothes",
+      "shop=boutique",
+      "shop=fashion",
+      "shop=shoes",
+      "shop=bag",
+      "shop=sewing",
+      "shop=tailor",
+      "shop=fabric",
+      "shop=shoe_repair",
+      "craft=shoemaker",
+      "craft=dressmaker",
+      "craft=tailor",
+      "recycling:clothes=yes",
+      "recycling:shoes=yes",
+      "social_facility=clothing_bank",
+      "amenity=give_box"
+    ],
+    edit: [
+      "shop=clothes",
+      "shop=boutique",
+      "shop=fashion",
+      "shop=shoes",
+      "shop=bag",
+      "shop=sewing",
+      "shop=tailor",
+      "shop=fabric",
+      "craft",
+      "amenity=recycling",
+      "amenity=social_facility",
+      "amenity"
+    ]
+  },
+  {
+    group: "goods",
+    subgroup: "clothes",
+    value: "clothes-give",
+    icon: "/lib/maki-icons/clothing-store-15.svg",
+    button: "fas fa-sync-alt",
+    query: `
+      nw["recycling:belts"="yes"];
+      nw["recycling:clothes"="yes"];
+      nw["recycling:shoes"="yes"]; 
+      nw["recycling:textiles"="yes"];
+
+      nw["social_facility"="clothing_bank"];
+
+      nw["amenity"="give_box"]["clothes"!="no"]["give_box:policy"!="free_to_take"];`,
+    color: "#FF7F50",
+    tags: [
+      "recycling:clothes=yes",
+      "recycling:shoes=yes",
+      "social_facility=clothing_bank",
+      "amenity=give_box"
+    ],
+    edit: ["amenity=recycling", "amenity=social_facility", "amenity"]
+  },
+  {
+    group: "goods",
+    subgroup: "clothes",
+    value: "clothes-take",
+    icon: "/lib/maki-icons/clothing-store-15.svg",
+    button: "fas fa-long-arrow-alt-right",
+    query: `
+      nw["social_facility"="clothing_bank"];
+
+      nw["amenity"="give_box"]["clothes"!="no"];
+
+      // Shop
+      nw["shop"~"^(clothes|boutique|fashion|shoes|bag|sewing|tailor|fabric)$"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
+      nw["shop"="second_hand"]["clothes"]["clothes"!="no"];
+
+      nw["craft"="shoemaker"];`,
+    color: "#FF7F50",
+    tags: [
+      "shop=clothes",
+      "shop=boutique",
+      "shop=fashion",
+      "shop=shoes",
+      "shop=bag",
+      "shop=sewing",
+      "shop=tailor",
+      "shop=fabric",
+      "social_facility=clothing_bank",
+      "amenity=give_box"
+    ],
+    edit: [
+      "shop=clothes",
+      "shop=boutique",
+      "shop=fashion",
+      "shop=shoes",
+      "shop=bag",
+      "shop=sewing",
+      "shop=tailor",
+      "shop=fabric",
+      "amenity=social_facility",
+      "amenity"
+    ]
+  },
+  {
+    group: "goods",
+    subgroup: "clothes",
+    value: "clothes-repair",
+    icon: "/lib/maki-icons/clothing-store-15.svg",
+    button: "fas fa-tools",
+    query: `
+      nw[~"^(service:){0,1}(clothes|shoes|fabrik):repair$"~"^yes$"];
+      nw["shoe_repair"~"^(yes|only)$"]; 
+      nw["repair"="shoes"]; 
+      nw["shop"="shoe_repair"]; 
+      nw["craft"~"^(bag_repair|shoe_repair)$"]; 
+      nw["tailor:alteration_service"="yes"]; 
+      nw["shop"~"^(shoes|clothes|tailor|bag|sewing|leather)$"]["repair"~"^(yes|only)$"]; 
+      nw["craft"~"^(shoemaker|dressmaker|tailor)$"]["repair"~"^(yes|only)$"];`,
+    color: "#FF7F50",
+    tags: [
+      "shop=shoe_repair",
+      "craft=shoemaker",
+      "craft=dressmaker",
+      "craft=tailor"
+    ],
+    edit: ["shop", "craft"]
   }
-  //   {
-  //     group: "goods",
-  //     value: "clothes",
-  //     icon: "/lib/maki-icons/clothing-store-15.svg",
-  //     query: `
-  //     // Give
-  //     nw["recycling:clothes"="yes"];
-
-  //     // Give and take
-  //     nw["social_facility"="clothing_bank"];
-  //     nw["amenity"="give_box"]["clothes"!="no"];
-
-  //     // Repair
-  //     node["repair"="assisted_self_service"]["service:clothes:repair"="yes"];
-  //     node["repair"="assisted_self_service"]["clothes:repair"="yes"];
-  //     node["repair"="assisted_self_service"]["service:fabrik:repair"="yes"];
-  //     node["repair"="assisted_self_service"]["fabrik:repair"="yes"];`,
-  //     color: "#FF7F50",
-  //     tags: [
-  //       "amenity=recycling",
-  //       "amenity=give_box",
-  //       "repair=assisted_self_service",
-  //       "repair=*"
-  //     ],
-  //     edit: ["amenity=recycling", "amenity=social_facility", "amenity"]
-  //   },
-  //   {
-  //     group: "goods",
-  //     subgroup: "clothes",
-  //     value: "clothes-give",
-  //     icon: "/lib/maki-icons/clothing-store-15.svg",
-  //     button: "fas fa-long-arrow-alt-right",
-  //     query: `
-  //     nw["recycling:clothes"="yes"];
-
-  //     nw["social_facility"="clothing_bank"];
-
-  //     nw["amenity"="give_box"]["clothes"!="no"]["give_box:policy"!="free_to_take"];`,
-  //     color: "#FF7F50",
-  //     tags: [
-  //       "amenity=recycling",
-  //       "social_facility=clothing_bank",
-  //       "amenity=give_box"
-  //     ],
-  //     edit: ["amenity=recycling", "amenity=social_facility", "amenity"]
-  //   },
-  //   {
-  //     group: "goods",
-  //     subgroup: "clothes",
-  //     value: "clothes-take",
-  //     icon: "/lib/maki-icons/clothing-store-15.svg",
-  //     button: "fas fa-long-arrow-alt-left",
-  //     query: `
-  //     nw["social_facility"="clothing_bank"];
-
-  //     nw["amenity"="give_box"]["clothes"!="no"];`,
-  //     color: "#FF7F50",
-  //     tags: ["social_facility=clothing_bank", "amenity=give_box"],
-  //     edit: ["amenity=social_facility", "amenity"]
-  //   },
-  //   {
-  //     group: "goods",
-  //     subgroup: "clothes",
-  //     value: "clothes-repair",
-  //     icon: "/lib/maki-icons/clothing-store-15.svg",
-  //     button: "fas fa-tools",
-  //     query: `
-  //     node["repair"="assisted_self_service"]["service:clothes:repair"="yes"];
-  //     node["repair"="assisted_self_service"]["clothes:repair"="yes"];
-  //     node["repair"="assisted_self_service"]["service:fabrik:repair"="yes"];
-  //     node["repair"="assisted_self_service"]["fabrik:repair"="yes"];`,
-  //     color: "#FF7F50",
-  //     tags: ["repair=assisted_self_service", "repair=*"],
-  //     edit: ["amenity"]
-  //   },
   //   {
   //     group: "goods",
   //     value: "mobile-phones",

@@ -10,6 +10,7 @@ export const local = {
   bottle: "Nachfüllen ist möglich",
   pump: "Pumpe",
   tools: "Werkzeuge",
+  repair: "Reparieren",
   chainTool: "Kettennietdrücker",
   internet: "Internet",
   water: "Trinkwasser",

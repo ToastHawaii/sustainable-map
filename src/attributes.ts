@@ -74,12 +74,22 @@ export const attributes: Attribute<{}>[] = [
   },
   {
     check: tags =>
-      tags["service:bicycle:repair"] === "yes" ||
-      tags["bicycle:repair"] === "yes" ||
       tags["service:bicycle:tools"] === "yes" ||
       tags["service:bicycle:diy"] === "yes" ||
       hasPropThatEndsWith(tags, ":repair", "yes"),
     template: local => template(local.tools, "fas fa-tools")
+  },
+  {
+    check: tags =>
+      tags["service:bicycle:tools"] === "yes" ||
+      tags["service:bicycle:diy"] === "yes" ||
+      tags["service:bicycle:chain_tool"] === "yes" ||
+      tags["service:bicycle:chaintool"] === "yes" ||
+      tags["shop"] === "shoe_repair" ||
+      tags["craft"] === "bag_repair" ||
+      tags["craft"] === "shoe_repair" ||
+      hasPropThatEndsWith(tags, "repair", "yes"),
+    template: local => template(local.repair, "fas fa-tools")
   },
   {
     check: tags =>
@@ -107,7 +117,12 @@ export const attributes: Attribute<{}>[] = [
       tags["service:fabrik:repair"] === "yes" ||
       tags["fabrik:repair"] === "yes" ||
       tags["reuse:clothes"] === "yes" ||
-      tags["recycling:clothes"] === "yes",
+      tags["recycling:clothes"] === "yes" ||
+      /^(yes|only)$/gi.test(tags.shoe_repair) ||
+      tags["repair"] === "shoes" ||
+      tags["shop"] === "shoe_repair" ||
+      tags["craft"] === "bag_repair" ||
+      tags["craft"] === "shoe_repair",
     template: local => template(local.clothes, "fas fa-tshirt")
   },
   {
@@ -420,22 +435,20 @@ function regional(tags: Tags, local: any) {
       color: "green",
       icon: "check-circle"
     };
+  } else if (regional === "no") {
+    return { text: local.regional?.no, color: "red", icon: "times-circle" };
   } else if (
     regional === "yes" ||
     regional === "limited" ||
     tags.shop === "farm" ||
     tags.amenity === "marketplace" ||
-    tags.craft === "beekeeper" ||
-    tags.craft === "honey" ||
-    tags.craft === "cheese_maker"
+    tags.craft
   ) {
     return {
       text: local.regional?.yes,
       color: "DodgerBlue",
       icon: "info-circle"
     };
-  } else if (regional === "no") {
-    return { text: local.regional?.no, color: "red", icon: "times-circle" };
   } else {
     // do not display for others values or undefined
     return undefined;
@@ -455,6 +468,12 @@ function vegetarian(tags: Tags, local: any) {
       color: "green",
       icon: "check-circle"
     };
+  } else if (vegetarian === "no") {
+    return {
+      text: local.vegetarian?.no,
+      color: "Orange",
+      icon: "exclamation-circle"
+    };
   } else if (
     vegetarian === "yes" ||
     vegetarian === "limited" ||
@@ -472,12 +491,6 @@ function vegetarian(tags: Tags, local: any) {
       color: "DodgerBlue",
       icon: "info-circle"
     };
-  } else if (vegetarian === "no") {
-    return {
-      text: local.vegetarian?.no,
-      color: "Orange",
-      icon: "exclamation-circle"
-    };
   } else {
     // do not display for others values or undefined
     return undefined;
@@ -493,6 +506,12 @@ function vegan(tags: Tags, local: any) {
       color: "green",
       icon: "check-circle"
     };
+  } else if (vegan === "no") {
+    return {
+      text: local.vegan?.no,
+      color: "Orange",
+      icon: "exclamation-circle"
+    };
   } else if (
     vegan === "yes" ||
     vegan === "limited" ||
@@ -506,12 +525,6 @@ function vegan(tags: Tags, local: any) {
       text: local.vegan?.yes,
       color: "DodgerBlue",
       icon: "info-circle"
-    };
-  } else if (vegan === "no") {
-    return {
-      text: local.vegan?.no,
-      color: "Orange",
-      icon: "exclamation-circle"
     };
   }
 
