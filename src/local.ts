@@ -26,6 +26,7 @@ export const local = {
   computer: "Computer",
   toy: "Toy",
   clothes: "Clothes",
+  shoes: "Shoes",
   recycling: "Recycling",
   reuse: "Reuse",
   freeToGive: "Free to give",

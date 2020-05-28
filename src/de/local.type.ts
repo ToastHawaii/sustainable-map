@@ -128,6 +128,11 @@ export const type = {
     description: "",
     externalResources: [
       {
+        name: "geo.admin.ch - Bikesharing- und Veloverleihsysteme",
+        url: "  https://map.geo.admin.ch/?lang=de&layers=ch.bfe.bikesharing",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      },
+      {
         name: "Pumpipumpe",
         url: "https://map.pumpipumpe.ch/"
       }
@@ -163,7 +168,18 @@ export const type = {
       }
     ]
   },
-  musical_instrument: { name: "Instrument", description: "" },
+  musical_instrument: {
+    name: "Instrument",
+    description: "",
+    externalResources: [
+      {
+        name: "Instrumenten-Börse",
+        url:
+          "https://www.stadt-zuerich.ch/ssd/de/index/mkz/themen/instrumenten-boerse1.html",
+        bounds: [47.159438, 8.35768, 47.694472, 8.984941]
+      }
+    ]
+  },
   advertising: {
     name: "Werbefläche",
     description:

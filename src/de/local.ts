@@ -26,6 +26,7 @@ export const local = {
   computer: "Computer",
   toy: "Spielzeug",
   clothes: "Kleider",
+  shoes: "Schuhe",
   recycling: "Weiterverwerten",
   reuse: "Wiederverwenden",
   freeToGive: "Nur bringen",

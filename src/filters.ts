@@ -445,16 +445,16 @@ nw["recycling:books"="yes"];`,
     value: "bicycle-rental",
     icon: "https://wiki.openstreetmap.org/w/images/d/d5/Rental-bicycle-16.svg",
     query: `
-      nw["service:bicycle:rental"~"^(yes|only)$"];
-nw["bicycle:rental"~"^(yes|only)$"];
-nw["bicycle_rental"~"^(yes|only)$"]; 
-nw["rental:bicycle"~"^(yes|only)$"]; 
-nw["rental"~"bicycle|bike"]; 
-nw["amenity"="bicycle_rental"];
-nw["shop"="bicycle_rental"];  
-nw["shop"="bicycle"]["rental"~"^(yes|only)$"]; 
-nw["amenity"="bicycle_sharing"]; 
-nw["bicycle_rental"="cargo_bike"]; `,
+    nw["service:bicycle:rental"~"^(yes|only)$"];
+    nw["bicycle:rental"~"^(yes|only)$"];
+    nw["bicycle_rental"~"^(yes|only)$"]; 
+    nw["rental:bicycle"~"^(yes|only)$"]; 
+    nw["rental"~"bicycle|bike"]; 
+    nw["amenity"="bicycle_rental"];
+    nw["shop"="bicycle_rental"];  
+    nw["shop"="bicycle"]["rental"~"^(yes|only)$"]; 
+    nw["amenity"="bicycle_sharing"]; 
+    nw["bicycle_rental"="cargo_bike"];`,
     color: "#2E8B57",
     tags: ["amenity=bicycle_rental"],
     edit: ["amenity=bicycle_rental"]
@@ -1406,6 +1406,10 @@ node["man_made"="surveillance"]["image"];`,
     value: "musical_instrument",
     icon: "/lib/maki-icons/music-15.svg",
     query: `
+    // Get
+  nw["shop"="musical_instrument"]["second_hand"~"^(yes|only)$"]; 
+
+  // Rent / Share
   nw["amenity"="piano"][!"craft"][!"shop"]&access;
 
   nw["playground"="musical_instrument"]&access; 
@@ -1415,14 +1419,21 @@ node["man_made"="surveillance"]["image"];`,
   
   nw["musical_instrument:rental"~"^(yes|only)$"];
   nw["shop"="musical_instrument"]["rental"~"^(yes|only)$"];
-  nw["craft"="musical_instrument"]["rental"~"^(yes|only)$"];`,
+  nw["craft"="musical_instrument"]["rental"~"^(yes|only)$"];
+
+  // Repair
+  nw["musical_instrument:repair"~"^(yes|only)$"];
+  nw["shop"="musical_instrument"]["repair"~"^(yes|only)$"]; 
+  nw["craft"="musical_instrument"]["repair"~"^(yes|only)$"]; 
+  nw["craft"="luthier"]["repair"~"^(yes|only)$"];`,
     color: "#008B8B",
     tags: [
+      "shop=musical_instrument",
       "musical_instrument:rental=*",
       "musical_instrument=*",
       "amenity=piano"
     ],
-    edit: ["amenity", "shop=musical_instrument"]
+    edit: [ "shop=musical_instrument", "amenity" ]
   },
   {
     group: "community",

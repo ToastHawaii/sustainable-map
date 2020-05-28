@@ -117,12 +117,21 @@ export const attributes: Attribute<{}>[] = [
       tags["fabrik:repair"] === "yes" ||
       tags["reuse:clothes"] === "yes" ||
       tags["recycling:clothes"] === "yes" ||
+      tags["recycling:textiles"] === "yes" ||
+      tags["recycling:belts"] === "yes" ||
+      tags["craft"] === "bag_repair" ||
+      tags["shop"] === "clothes",
+    template: local => template(local.clothes, "fas fa-tshirt")
+  },
+  {
+    check: tags =>
       /^(yes|only)$/gi.test(tags.shoe_repair) ||
       tags["repair"] === "shoes" ||
       tags["shop"] === "shoe_repair" ||
-      tags["craft"] === "bag_repair" ||
-      tags["craft"] === "shoe_repair",
-    template: local => template(local.clothes, "fas fa-tshirt")
+      tags["craft"] === "shoe_repair" ||
+      tags["recycling:shoes"] === "yes" ||
+      tags["shop"] === "shoes",
+    template: local => template(local.shoes, "fas fa-shoe-prints")
   },
   {
     check: tags =>
@@ -207,7 +216,12 @@ export const attributes: Attribute<{}>[] = [
     check: tags =>
       (tags.amenity === "library" && tags.library !== "booksharing") ||
       tags.amenity === "toy_library" ||
-      tags.amenity === "bicycle_rental",
+      tags.amenity === "bicycle_rental" ||
+      tags.shop === "bicycle_rental" ||
+      tags.amenity === "bicycle_sharing" ||
+      hasPropThatEndsWith(tags, "rental", "yes") ||
+      hasPropThatEndsWith(tags, "rental", "only") ||
+      tags.amenity === "piano",
     template: local => template(local.borrow, "fas fa-redo-alt")
   },
   {
