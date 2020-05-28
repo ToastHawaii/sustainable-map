@@ -542,13 +542,10 @@ nw["landuse"="community_food_growing"];`,
     icon: "https://wiki.openstreetmap.org/w/images/9/96/Convenience-14.svg",
     query: `
     nw["shop"~"^(supermarket|convenience|health_food|pasta|deli|wholesale|grocery|food|frozen_food|spices)$"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
-    nw["shop"="farm"];
-    nw["shop"="greengrocer"];
+    nw["shop"~"^(farm|greengrocer|organic|dairy)$"];
     nw["amenity"="vending_machine"]["vending"~"food"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
     nw["amenity"="vending_machine"]["vending"~"eggs"];
-    nw["shop"="organic"];
     nw["amenity"="marketplace"];
-    nw["shop"="dairy"];
     nw["craft"="pasta"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"]; 
     nw["shop"="yes"]["organic"~"^(limited|yes|only)$"];`,
     color: "#ac39ac",
@@ -670,6 +667,42 @@ nw["amenity"="vending_machine"]["vending"~"drinks"][~"^(regional|fair_trade|orga
     color: "#F4A460",
     tags: ["changing_table=*"],
     edit: ["amenity=toilets", "amenity", "shop"]
+  },
+  {
+    group: "health",
+    value: "health-products",
+    icon: "https://wiki.openstreetmap.org/w/images/3/36/Chemist-14.svg",
+    query: `
+    nw["shop"~"^(chemist|health_food|hairdresser|cosmetics|herbalist|beauty|perfumery|nutrition_supplements)$"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
+    nw["amenity"="pharmacy"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"]; 
+    nw["craft"="soap"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"]; 
+    nw["amenity"="vending_machine"]["vending"="chemist"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];`,
+    color: "#BF0000",
+    tags: [
+      "shop=chemist",
+      "shop=health_food",
+      "shop=hairdresser",
+      "shop=cosmetics",
+      "shop=herbalist",
+      "shop=beauty",
+      "shop=perfumery",
+      "shop=nutrition_supplements",
+      "amenity=pharmacy",
+      "craft=soap",
+      "vending=chemist"
+    ],
+    edit: [
+      "shop=chemist",
+      "shop=health_food",
+      "shop=hairdresser",
+      "shop=cosmetics",
+      "shop=herbalist",
+      "shop=beauty",
+      "shop=perfumery",
+      "shop=nutrition_supplements",
+      "amenity=pharmacy",
+      "amenity=vending_machine"
+    ]
   },
   {
     group: "health",
@@ -1433,7 +1466,7 @@ node["man_made"="surveillance"]["image"];`,
       "musical_instrument=*",
       "amenity=piano"
     ],
-    edit: [ "shop=musical_instrument", "amenity" ]
+    edit: ["shop=musical_instrument", "amenity"]
   },
   {
     group: "community",

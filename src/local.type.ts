@@ -123,6 +123,11 @@ export const type = {
     ]
   },
   "baking-oven": { name: "Baking oven", description: "" },
+  "health-products": {
+    name: "Health products",
+    description:
+      "A shop selling personal care, cosmetics, household cleaning or medical products."
+  },
   "bicycle-rental": {
     name: "Bicycle rental",
     description: "",
