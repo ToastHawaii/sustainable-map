@@ -117,9 +117,20 @@ export function initMap<M>(
   });
 
   function partAreaVisible() {
-    const visibles = getHtmlElements(`.part-area-visible`);
+    const visibles = getHtmlElements(`.external-link`);
     let hasPrev = false;
     for (const e of visibles) {
+      if (!e.classList.contains("part-area-visible")) {
+        if (
+          e.previousElementSibling?.className === "external-separator" &&
+          hasPrev
+        )
+          (e.previousElementSibling as HTMLElement).style.display = "";
+
+        hasPrev = true;
+        continue;
+      }
+
       const c = (e.getAttribute("part-area-visible") || "")
         .split(",")
         .map(n => parseFloat(n));
@@ -533,8 +544,11 @@ function init<M>(
 
 export function overpassSubs(query: string) {
   return query
-  .replace(/&part/g, `["access"!~"^(private|no|customers|customer|permit)$"]["fee"!="yes"]`)
-  .replace(/&access/g, `["access"!~"^(private|no)$"]`)
+    .replace(
+      /&part/g,
+      `["access"!~"^(private|no|customers|customer|permit)$"]["fee"!="yes"]`
+    )
+    .replace(/&access/g, `["access"!~"^(private|no)$"]`)
     .replace(
       /&free/g,
       `[~"fee(:conditional){0,1}"~"no|donation|interval|free|none|(PH|SH|\((:{0,1}dusk|sun|dawn)[^)]*(:{0,1}-|\\+)[^)]*\)|(:{0,1}dusk|sun|dawn).*hours|(:{0,1}dusk|sun|dawn|\d{1,2}[.:]\d{2})\+|\d\s*-\s*(mo|tu|we|th|fr|sa|su)\\b|-\s*\d{1,2}[:.]\d{2}\s*\+{0,1}|[^0-9a-z .{0,1}]\s*-{0,1}\s*\d{0,2}:\d{2}\s*[^+]{0,1}|\d{1,2}:\d{2}\s*-{0,1}\s*\d{0,2}:\d{2}\s*\\+{0,1}|^(:{0,1}(:{0,1}[0-1][0-9]|2[0-4])(:{0,1}[1-5][0-9]|0[0-9])\s*-\s*){2}$)"]`
