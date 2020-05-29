@@ -90,7 +90,21 @@ Der Code kann auch als Basis für eine eigene Themenkarte verwendet werden.
 
 ## Weiteres
 
+Cargo Velo, Fashion, Freizeit & Beauty und Essen & Kafi. [Dein nachhaltiges Zürich](https://www.wwf.ch/de/dein-nachhaltiges-zuerich)
+
+Öffentliche und gratis Angebote, Events und Einrichtungen in Zürich. [Zürich unbezahlbar](https://www.zuerichunbezahlbar.ch/map/)
+
+Diverse Einrichtungen z.B. Pumpen, Sportplätze, etc. [Züriplan](https://www.maps.stadt-zuerich.ch/zueriplan3/Stadtplan.aspx)
+
+Orte, an denen Du auch ohne Papiere und/oder Geld an dem Leben in der Stadt teilhaben kannst. [SolidaryCityMap](https://solidary.city/)
+
+Berlin, gratis und ganz einfach für alle erlebbar. [gratis-in-berlin](https://www.gratis-in-berlin.de/)
+
 Besuche öffentliche Bücherschränke und trage diese ein. Schau dir dazu [die schöne Karte von Binnette](https://umap.openstreetmap.fr/fr/map/osm-bookcases-and-boite-a-lire_362287#15/45.2010/5.7389) an, welche auf den Daten von [boite-a-lire](https://www.boite-a-lire.com/) basiert. [Hier geht es zur Projekt Webseite von Binnette's bookcases-to-check](https://github.com/Binnette/bookcases-to-check).
+
+Eine Karte mit öffentlichen und kostenlosen Einrichtungen und Angebote. [Unbezahlbar](https://priceless.zottelig.ch/de)
+
+Eine Karte mit öffentlichen Bücherschränken. [Öffentlichen Bücherschränke](https://book-exchange.zottelig.ch/de)
 
 ---
 

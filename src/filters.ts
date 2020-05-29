@@ -1472,6 +1472,53 @@ node["man_made"="surveillance"]["image"];`,
     edit: ["shop=musical_instrument", "amenity"]
   },
   {
+    group: "goods",
+    value: "sport",
+    icon: "https://wiki.openstreetmap.org/w/images/7/76/Outdoor-14.svg",
+    query: `
+    // Get
+    nw["shop"="sport"]["second_hand"~"^(yes|only)$"]; 
+    nw["shop"="ski"]["second_hand"~"^(yes|only)$"]; 
+
+    // Rent / Share
+    nw["ski:rental"~"^(yes|only)$"];
+    nw["snowboard:rental"~"^(yes|only)$"]; 
+    nw["scuba_diving:rental"~"^(yes|only)$"];
+    nw["standup_paddleboard_rental"~"^(yes|only)$"];
+    nw["board_rental"~"^(yes|only)$"];
+    nw["rental"~"ski|sled|skates|snowboard|surf|sailboard"];
+    nw["amenity"="ski_rental"];
+    nw["shop"="ski_rental"]; 
+    nw["ski"="rental"];
+    nw["shop"~"^(sports|ski|surf|outdoor|scuba_diving)$"]["rental"~"^(yes|only)$"];
+    nw["amenity"="ski_school"]["rental"~"^(yes|only)$"];
+
+    // Repair
+    nw["scuba_diving:repair"~"^(yes|only)$"];
+    nw["ski:repair"~"^(yes|only)$"]; 
+    nw["repair"="ski"]; 
+    nw["shop"~"^(sports|outdoor|ski)$"]["repair"~"^(yes|only)$"]; 
+    nw["amenity"~"^(ski_rental|dive_centre)$"]["repair"~"^(yes|only)$"];`,
+    color: "#DC143C",
+    tags: [
+      "shop=sports",
+      "shop=outdoor",
+      "shop=scuba_diving",
+      "amenity=dive_centre",
+      "shop=ski",
+      "shop=surf",
+      "amenity=ski_rental"
+    ],
+    edit: [
+      "shop=sports",
+      "shop=outdoor",
+      "shop=scuba_diving",
+      "amenity=dive_centre",
+      "shop",
+      "amenity"
+    ]
+  },
+  {
     group: "community",
     value: "advertising",
     icon: "https://wiki.openstreetmap.org/w/images/2/20/Column-14.svg",

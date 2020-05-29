@@ -91,7 +91,21 @@ The code can also be used as a basis for your own theme map.
 
 ## More
 
+Cargo Velo, fashion, leisure & beauty and food & coffee. [Dein nachhaltiges Zürich](https://www.wwf.ch/de/dein-nachhaltiges-zuerich)
+
+Public and free offers, events and facilities in Zürich. [Zürich unbezahlbar](https://www.zuerichunbezahlbar.ch/map/)
+
+Various equipment e.g. pumps, sports fields, etc. [Züriplan](https://www.maps.stadt-zuerich.ch/zueriplan3/Stadtplan.aspx)
+
+Places where you can participate in city life without papers and / or money. [SolidaryCityMap](https://solidary.city/)
+
+Berlin, free of charge and easy for everyone to experience. [gratis-in-berlin](https://www.gratis-in-berlin.de/)
+
 Visit public bookcases and register them. Look at [the beautiful map from Binnette](https://umap.openstreetmap.fr/fr/map/osm-bookcases-and-boite-a-lire_362287#15/45.2010/5.7389), which is based on the data of [boite-a-lire](https://www.boite-a-lire.com/). [Click here for the project website from Binnette's bookcases-to-check](https://github.com/Binnette/bookcases-to-check).
+
+A map with public and free facilities and offers. [Priceless](https://priceless.zottelig.ch/)
+
+A map with public bookcases. [Public bookcase](https://book-exchange.zottelig.ch/)
 
 ---
 

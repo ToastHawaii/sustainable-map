@@ -87,6 +87,7 @@ export const attributes: Attribute<{}>[] = [
       tags["shop"] === "shoe_repair" ||
       tags["craft"] === "bag_repair" ||
       tags["craft"] === "shoe_repair" ||
+      tags["repair"] === "ski" ||
       hasPropThatEndsWith(tags, "repair", "yes"),
     template: local => template(local.repair, "fas fa-tools")
   },
@@ -219,6 +220,9 @@ export const attributes: Attribute<{}>[] = [
       tags.amenity === "bicycle_rental" ||
       tags.shop === "bicycle_rental" ||
       tags.amenity === "bicycle_sharing" ||
+      tags.amenity === "ski_rental" ||
+      tags.shop === "ski_rental" ||
+      tags.ski === "rental" ||
       hasPropThatEndsWith(tags, "rental", "yes") ||
       hasPropThatEndsWith(tags, "rental", "only") ||
       tags.amenity === "piano",
