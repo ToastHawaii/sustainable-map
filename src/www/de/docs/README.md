@@ -1,10 +1,25 @@
 # Nachhaltig
 
-Erlebe die Welt. Gratis.
+Erlebe die Welt nachhaltig.
 
 [Hier geht es zur Karte](https://sustainable.zottelig.ch/de)
 
-Dies ist eine einfache Karte, welche öffentliche und kostenlose Einrichtungen und Angebote in deiner Nähe anzeigt. Die Informationen werden von [OpenStreetMap](https://www.openstreetmap.org) geladen.
+Dies ist eine Karte, welche Einrichtungen und Angebote in deiner Nähe anzeigt, die ökologisch-, sozial- und wirtschaftlich nachhaltig sind.
+
+Die Karte unterstützt dabei die Aufmerksamkeit auf nachhaltige Strategien zu lenken wie z.B.
+* Öffentlich zugänglich, Niedrigschwellig
+* Kostenlos, Sozial
+* Umwelt schonend hergestellt, Biologisch, Saisonal, Vegetarisch
+* Umwelt schonend verpackt, Unverpackt
+* Fairer Handel, Fair Hergestellt
+* Kurze Transportwege, Regional
+* Teilen, Gemeinsam Nutzen, Ausleihen
+* Reparieren 
+* Weitergeben, Weiterverwenden
+* Weiterverwertung, Wiederaufbereitung
+* Gemeinschaft, Partizipation
+
+Die Informationen werden von [OpenStreetMap](https://www.openstreetmap.org) geladen.
 
 ## Gibt es diese Karte auch als App?
 
@@ -48,7 +63,7 @@ Ergänze die Beschreibung der Einrichtungen im [OpenStreetMap Wiki](https://wiki
 
 ### Kannst du Programmieren?
 
-Dann erweitere diese Karte und sende mir Pull Requests. [Hier geht es zur Projekt Webseite von unbezahlbar](https://github.com/ToastHawaii/sustainable-map)
+Dann erweitere diese Karte und sende mir Pull Requests. [Hier geht es zur Projekt Webseite von der Nachhaltig Karte](https://github.com/ToastHawaii/sustainable-map)
 
 Oder erweitere die Unterstützung für die Tags und Keys in den Tools der OpenStreetMap. [iD (Browser)](https://wiki.openstreetmap.org/wiki/ID), [JOSM (PC)](https://wiki.openstreetmap.org/wiki/JOSM), [Vespucci (Android)](https://wiki.openstreetmap.org/wiki/Vespucci), [Go Map!! (iOS)](https://wiki.openstreetmap.org/wiki/Go_Map!!)
 
@@ -59,9 +74,9 @@ Oder erweitere die Unterstützung für die Tags und Keys in den Tools der OpenSt
 - Unterstütze [mich](https://it.zottelig.ch/kontakt) mit Kaffee und Kuchen.
 - Geniesse das Leben. ;)
 
-### Bekannte öffentliche und kostenlose Einrichtungen und Angebote
+### Bekannte nachhaltige Einrichtungen und Angebote
 
-Es gibt viele Webseiten für kostenlose Einrichtungen und Angebote. Finde etwas was du magst und unterstützenswert findest und trage die Standorte dazu in [OpenStreetMap](https://www.openstreetmap.org) ein.
+Es gibt viele Webseiten nachhaltige Einrichtungen und Angebote. Finde etwas was du magst und unterstützenswert findest und trage die Standorte dazu in [OpenStreetMap](https://www.openstreetmap.org) ein.
 
 Links zu externen Ressourcen findest du auf der Karte neben der Auswahl der Einrichtung über den Info Knopf <i class="fas fa-info-circle"></i>.
 

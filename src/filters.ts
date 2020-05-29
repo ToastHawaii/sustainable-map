@@ -750,9 +750,7 @@ nw["amenity"="vending_machine"]["vending"~"drinks"][~"^(regional|fair_trade|orga
     value: "food-sharing",
     icon: "https://wiki.openstreetmap.org/w/images/3/3c/Foodbank.svg",
     query: `
-      nw["social_facility"="food_bank"];
-
-      nw["social_facility"="soup_kitchen"];
+      nw["social_facility"~"^(food_bank|soup_kitchen|dairy_kitchen)$"];
 
       nw["amenity"="food_sharing"];
       nw["social_facility"="food_sharing"];
@@ -763,7 +761,12 @@ nw["amenity"="vending_machine"]["vending"~"drinks"][~"^(regional|fair_trade|orga
 
       nw["amenity"="fridge"];`,
     color: "#FFD700",
-    tags: ["social_facility=food_bank", "social_facility=soup_kitchen"],
+    tags: [
+      "amenity=food_sharing",
+      "social_facility=food_bank",
+      "social_facility=soup_kitchen",
+      "social_facility=dairy_kitchen"
+    ],
     edit: ["amenity=social_facility"]
   },
   {

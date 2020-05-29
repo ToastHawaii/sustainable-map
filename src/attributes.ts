@@ -277,6 +277,9 @@ export const attributes: Attribute<{}>[] = [
     check: tags =>
       !isFree(tags) &&
       (tags.social_facility === "soup_kitchen" ||
+        tags.social_facility === "food_bank" ||
+        tags.social_facility === "dairy_kitchen" ||
+        tags.social_facility === "clothing_bank" ||
         tags.shop === "charity" ||
         tags.charity === "yes"),
 

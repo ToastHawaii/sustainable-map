@@ -5,11 +5,11 @@ defaults:
       permalink: ""
       lang: "en"
       title: "Sustainable"
-      description: "Experience the world. Free of charge."
+      description: "Experience the world sustainably."
   - scope:
       path: "de/README.md"
     values:
       permalink: "de"
       lang: "de"
       title: "Nachhaltig"
-      description: "Erlebe die Welt. Gratis."
+      description: "Erlebe die Welt nachhaltig."

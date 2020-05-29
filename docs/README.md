@@ -1,10 +1,26 @@
 # Sustainable
 
-Experience the world. Free of charge.
+Experience the world sustainably.
 
 [Click here for the map](https://sustainable.zottelig.ch)
 
-This is a simple map showing public and free facilities and offers near you. The information is loaded from [OpenStreetMap](https://www.openstreetmap.org).
+This is a map that shows facilities and services in your area that are environmentally, socially and economically sustainable.
+
+The map helps to draw attention to sustainable strategies such as
+
+- Publicly accessible
+- Free of charge, Social
+- Environmentally friendly production, Organic, Seasonal, Vegetarian
+- Environmentally friendly packed, Unpacked, Zero waste
+- Fair Trade
+- Short transport distances, Regional
+- Sharing, Lending
+- Repair
+- Reuse
+- Recycling
+- Community, Participation
+
+The information is loaded from [OpenStreetMap](https://www.openstreetmap.org).
 
 ## Is this map also available as an app?
 
@@ -48,7 +64,7 @@ Complete the description of the facilities in the [OpenStreetMap Wiki](https://w
 
 ### Can you program?
 
-Then improve this map and send me a Pull Requests. [Click here to go to the project website of unbezahlbar](https://github.com/ToastHawaii/sustainable-map)
+Then improve this map and send me a Pull Requests. [Click here to go to the project website of the sustainable map](https://github.com/ToastHawaii/sustainable-map)
 
 Or extend the support for tags and keys in the OpenStreetMap tools. [iD (Browser)](https://wiki.openstreetmap.org/wiki/ID), [JOSM (PC)](https://wiki.openstreetmap.org/wiki/JOSM), [Vespucci (Android)](https://wiki.openstreetmap.org/wiki/Vespucci), [Go Map!!! (iOS)](https://wiki.openstreetmap.org/wiki/Go_Map!!)
 
@@ -59,9 +75,9 @@ Or extend the support for tags and keys in the OpenStreetMap tools. [iD (Browser
 - Support [me](https://it.zottelig.ch/kontakt) with coffee and cake.
 - Enjoy your life. ;)
 
-### Known public and free facilitie or offer
+### Known sustainable facilitie or offer
 
-There are many websites for free facilities and offers. Find something you like and worth to support and add them to [OpenStreetMap](https://www.openstreetmap.org).
+There are many websites for sustainable facilities and offers. Find something you like and worth to support and add them to [OpenStreetMap](https://www.openstreetmap.org).
 
 You can find links to external resources on the map next to the selection of the facilities via the info button <i class="fas fa-info-circle"></i>.
 
