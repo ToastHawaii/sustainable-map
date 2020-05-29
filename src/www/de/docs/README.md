@@ -7,16 +7,16 @@ Erlebe die Welt nachhaltig.
 Dies ist eine Karte, welche Einrichtungen und Angebote in deiner Nähe anzeigt, die ökologisch-, sozial- und wirtschaftlich nachhaltig sind.
 
 Die Karte unterstützt dabei die Aufmerksamkeit auf nachhaltige Strategien zu lenken wie z.B.
-* Öffentlich zugänglich, Niedrigschwellig
-* Kostenlos, Sozial
-* Umwelt schonend hergestellt, Biologisch, Saisonal, Vegetarisch
-* Umwelt schonend verpackt, Unverpackt
-* Fairer Handel, Fair Hergestellt
-* Kurze Transportwege, Regional
-* Teilen, Gemeinsam Nutzen, Ausleihen
-* Reparieren 
-* Weitergeben, Weiterverwenden
-* Weiterverwertung, Wiederaufbereitung
+* <i class="fas fa-universal-access"></i> Öffentlich zugänglich, Niedrigschwellig
+* <i class="fas fa-heart"></i> Kostenlos, Sozial
+* Umwelt schonend hergestellt, <i class="fas fa-seedling"></i> Biologisch, Saisonal, <i class="fas fa-cheese"></i> <i class="fas fa-carrot"></i> Vegetarisch
+* <i class="fas fa-hands"></i> Umwelt schonend verpackt, Unverpackt
+* <i class="fas fa-handshake"></i> Fairer Handel, Fair Hergestellt
+* <i class="fas fa-map-marker-alt"></i> Kurze Transportwege, Regional
+* <i class="fas fa-redo-alt"></i> Ausleihen, Teilen, Gemeinsam Nutzen
+* <i class="fas fa-tools"></i> Reparieren 
+* <i class="fas fa-exchange-alt"></i> Weitergeben, Weiterverwenden
+* <i class="fas fa-recycle"></i> Weiterverwertung, Wiederaufbereitung
 * Gemeinschaft, Partizipation
 
 Die Informationen werden von [OpenStreetMap](https://www.openstreetmap.org) geladen.

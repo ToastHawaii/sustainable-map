@@ -8,16 +8,16 @@ This is a map that shows facilities and services in your area that are environme
 
 The map helps to draw attention to sustainable strategies such as
 
-- Publicly accessible
-- Free of charge, Social
-- Environmentally friendly production, Organic, Seasonal, Vegetarian
-- Environmentally friendly packed, Unpacked, Zero waste
-- Fair Trade
-- Short transport distances, Regional
-- Sharing, Lending
-- Repair
-- Reuse
-- Recycling
+- <i class="fas fa-universal-access"></i> Publicly accessible
+- <i class="fas fa-heart"></i> Free of charge, Social
+- Environmentally friendly production, <i class="fas fa-seedling"></i> Organic, Seasonal, <i class="fas fa-cheese"></i> <i class="fas fa-carrot"></i> Vegetarian
+- <i class="fas fa-hands"></i> Environmentally friendly packed, Unpacked, Zero waste
+- <i class="fas fa-handshake"></i> Fair trade
+- <i class="fas fa-map-marker-alt"></i> Short transport distances, Regional
+- <i class="fas fa-redo-alt"></i> Sharing, Lending
+- <i class="fas fa-tools"></i> Repair
+- <i class="fas fa-exchange-alt"></i> Reuse
+- <i class="fas fa-recycle"></i> Recycling
 - Community, Participation
 
 The information is loaded from [OpenStreetMap](https://www.openstreetmap.org).
