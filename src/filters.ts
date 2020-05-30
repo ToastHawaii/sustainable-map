@@ -1683,12 +1683,19 @@ node["man_made"="surveillance"]["image"];`,
     value: "square",
     icon: "/lib/temaki-icons/pedestrian.svg",
     query: `
-  nw["place"="square"]&part;
+nw["place"="square"]&part;
+nw["leisure"="common"]&part;
 
-  way["highway"="pedestrian"]["area"="yes"]&part;`,
+way["highway"="pedestrian"]["area"="yes"]&part;
+way["highway"="footway"]["area"="yes"]&part;`,
     color: "#666666",
-    tags: ["place=square", "highway=pedestrian"],
-    edit: ["place=square", "pedestrian"]
+    tags: [
+      "place=square",
+      "leisure=common",
+      "highway=pedestrian",
+      "highway=footway"
+    ],
+    edit: ["place=square", "leisure=common", "highway"]
   },
   {
     group: "trip",
@@ -1697,12 +1704,19 @@ node["man_made"="surveillance"]["image"];`,
     icon: "/lib/temaki-icons/pedestrian.svg",
     button: "far fa-minus-square",
     query: `
-  nw["place"="square"]["name"]&part;
+nw["place"="square"]["name"]&part;
+nw["leisure"="common"]["name"]&part;
 
-  way["highway"="pedestrian"]["area"="yes"]["name"]&part;`,
+way["highway"="pedestrian"]["area"="yes"]["name"]&part;
+way["highway"="footway"]["area"="yes"]["name"]&part;`,
     color: "#666666",
-    tags: ["place=square", "highway=pedestrian"],
-    edit: ["place=square", "pedestrian"]
+    tags: [
+      "place=square",
+      "leisure=common",
+      "highway=pedestrian",
+      "highway=footway"
+    ],
+    edit: ["place=square", "leisure=common", "highway"]
   },
   {
     group: "trip",
