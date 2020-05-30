@@ -541,12 +541,12 @@ nw["landuse"="community_food_growing"];`,
     value: "grocery",
     icon: "https://wiki.openstreetmap.org/w/images/9/96/Convenience-14.svg",
     query: `
-    nw["shop"~"^(supermarket|convenience|health_food|pasta|deli|wholesale|grocery|food|frozen_food|spices)$"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
+    nw["shop"~"^(supermarket|convenience|health_food|pasta|deli|wholesale|grocery|food|frozen_food|spices)$"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"];
     nw["shop"~"^(farm|greengrocer|organic|dairy)$"];
-    nw["amenity"="vending_machine"]["vending"~"food"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
+    nw["amenity"="vending_machine"]["vending"~"food"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"];
     nw["amenity"="vending_machine"]["vending"~"eggs"];
     nw["amenity"="marketplace"];
-    nw["craft"="pasta"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"]; 
+    nw["craft"="pasta"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"]; 
     nw["shop"="yes"]["organic"~"^(limited|yes|only)$"];`,
     color: "#ac39ac",
     tags: [
@@ -567,10 +567,10 @@ nw["landuse"="community_food_growing"];`,
     value: "sweets",
     icon: "https://wiki.openstreetmap.org/w/images/c/cc/Confectionery-14.svg",
     query: `
-nw["shop"~"^(confectionery|chocolate|honey|ice_cream|pastry)$"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
-nw["amenity"="vending_machine"]["vending"~"sweets|ice_cream"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
+nw["shop"~"^(confectionery|chocolate|honey|ice_cream|pastry)$"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"];
+nw["amenity"="vending_machine"]["vending"~"sweets|ice_cream"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"];
 nw["craft"~"^(beekeeper|honey)$"];
-nw["craft"="confectionery"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];`,
+nw["craft"="confectionery"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"];`,
     color: "#FFC0CB",
     tags: [
       "shop=confectionery",
@@ -586,7 +586,7 @@ nw["craft"="confectionery"][~"^(regional|fair_trade|organic|second_hand)$"~"^(li
     value: "baked-goods",
     icon: "/lib/maki-icons/bakery-15.svg",
     query: `
-nw["shop"="bakery"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
+nw["shop"="bakery"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"];
 nw["amenity"="vending_machine"]["vending"~"bread|pizza"];`,
     color: "#D2B48C",
     tags: ["shop=bakery"],
@@ -597,7 +597,7 @@ nw["amenity"="vending_machine"]["vending"~"bread|pizza"];`,
     value: "dairy",
     icon: "https://wiki.openstreetmap.org/w/images/0/0e/Dairy.svg",
     query: `
-nw["shop"~"^(cheese|dairy)$"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
+nw["shop"~"^(cheese|dairy)$"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"];
 nw["craft"="cheese_maker"];
 nw["amenity"="vending_machine"]["vending"~"milk"];`,
     color: "#ffdb4d",
@@ -609,7 +609,7 @@ nw["amenity"="vending_machine"]["vending"~"milk"];`,
     value: "meat",
     icon: "https://wiki.openstreetmap.org/w/images/b/b8/Butcher.svg",
     query: `
-nw["shop"~"^(butcher|seafood)$"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];`,
+nw["shop"~"^(butcher|seafood)$"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"];`,
     color: "#DC143C",
     tags: ["shop=butcher", "shop=seafood"],
     edit: ["shop=butcher", "shop=seafood"]
@@ -630,10 +630,10 @@ nw["shop"~"^(butcher|seafood)$"][~"^(regional|fair_trade|organic|second_hand)$"~
     value: "beverages",
     icon: "https://wiki.openstreetmap.org/w/images/e/eb/Alcohol-16.svg",
     query: `
-nw["shop"~"^(beverages|wine|alcohol|tea|drinks)$"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
+nw["shop"~"^(beverages|wine|alcohol|tea|drinks)$"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"];
 nw["craft"~"^(winery|distillery|brewery)$"];
 nw["amenity"="vending_machine"]["vending"~"milk"];
-nw["amenity"="vending_machine"]["vending"~"drinks"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];`,
+nw["amenity"="vending_machine"]["vending"~"drinks"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"];`,
     color: "#cc0000",
     tags: [
       "shop=beverages",
@@ -673,10 +673,10 @@ nw["amenity"="vending_machine"]["vending"~"drinks"][~"^(regional|fair_trade|orga
     value: "health-products",
     icon: "https://wiki.openstreetmap.org/w/images/3/36/Chemist-14.svg",
     query: `
-    nw["shop"~"^(chemist|health_food|hairdresser|cosmetics|herbalist|beauty|perfumery|nutrition_supplements)$"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
-    nw["amenity"="pharmacy"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"]; 
-    nw["craft"="soap"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"]; 
-    nw["amenity"="vending_machine"]["vending"="chemist"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];`,
+    nw["shop"~"^(chemist|health_food|hairdresser|cosmetics|herbalist|beauty|perfumery|nutrition_supplements)$"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"];
+    nw["amenity"="pharmacy"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"]; 
+    nw["craft"="soap"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"]; 
+    nw["amenity"="vending_machine"]["vending"="chemist"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"];`,
     color: "#BF0000",
     tags: [
       "shop=chemist",
@@ -853,7 +853,7 @@ nw["social_facility"="soup_kitchen"];`,
 
       // Shop
       nw["shop"~"^(second_hand|charity|antiques|fair_trade)$"];
-      nw["shop"~"^(variety_store|convenience|yes|general|department_store|gift|kiosk|mall|trade|houseware)$"][~"^(second_hand|charity|fair_trade)$"~"^(yes|only)$"];
+      nw["shop"~"^(variety_store|convenience|yes|general|department_store|gift|kiosk|mall|trade|houseware)$"][~"^(charity|regional|fair_trade|second_hand)$"~"^(yes|only)$"];
       nw["amenity"="marketplace"][~"^(second_hand|charity)$"~"^(yes|only)$"];`,
     color: "#F08080",
     tags: [
