@@ -126,6 +126,16 @@ export const attributes: Attribute<{}>[] = [
   },
   {
     check: tags =>
+      tags["recycling:batteries"] === "yes" ,
+    template: local => template(local.battery, "fas fa-battery-full")
+  },
+  {
+    check: tags =>
+      tags["recycling:car_batteries"] === "yes",
+    template: local => template(local.carBattery, "fas fa-car-battery")
+  },
+  {
+    check: tags =>
       /^(yes|only)$/gi.test(tags.shoe_repair) ||
       tags["repair"] === "shoes" ||
       tags["shop"] === "shoe_repair" ||

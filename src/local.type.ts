@@ -4,6 +4,7 @@ export const type = {
   "tourist-attraction": { name: "Tourist attraction", description: "" },
   "archaeological-site": { name: "Archaeological site", description: "" },
   trail: { name: "Educational trail", description: "" },
+  "battery-recycling":{ name: "Battery recycling", description: "" },
   sport: { name: "Sport", description: "" },
   books: {
     name: "Books",

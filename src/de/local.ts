@@ -26,6 +26,8 @@ export const local = {
   computer: "Computer",
   toy: "Spielzeug",
   clothes: "Kleider",
+  battery: "Batterie",
+  carBattery: "Autobatterie",
   shoes: "Schuhe",
   recycling: "Weiterverwerten",
   reuse: "Wiederverwenden",
@@ -113,7 +115,8 @@ export const local = {
     communitySport: "Gemeinschaftssport",
     trip: "Ausflug",
     goods: "Gegenstände",
-    food: "Nahrung"
+    food: "Nahrung",
+    material: "Material"
   },
   amenity: {
     hunting_stand: "Hochsitz für Jäger"

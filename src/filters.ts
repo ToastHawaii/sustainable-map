@@ -1650,6 +1650,17 @@ node["man_made"="surveillance"]["image"];`,
     edit: ["leisure=park", "landuse=recreation_ground"]
   },
   {
+    group: "material",
+    value: "battery-recycling",
+    icon: "/lib/temaki-icons/power.svg",
+    query: `
+    nw["recycling:batteries"="yes"];
+    nw["recycling:car_batteries"="yes"]; `,
+    color: "#ffe000",
+    tags: ["recycling:batteries=yes", "recycling:car_batteries=yes"],
+    edit: ["recycling:batteries=yes", "recycling:car_batteries=yes"]
+  },
+  {
     group: "trip",
     value: "picnic-site",
     icon: "https://wiki.openstreetmap.org/w/images/f/fc/Picnic_site.svg",
