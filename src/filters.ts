@@ -885,21 +885,12 @@ nw["social_facility"="soup_kitchen"];`,
     icon: "/lib/maki-icons/heart-15.svg",
     query: `
       nw["shop"="charity"];
-      nw["office"="charity"];
+      nw["office"~"^(charity|ngo|foundation|association)$"];
       nw["club"="charity"];
       nw["charity"]["charity"!="no"];
-      nw["operator:type"="charitable"];
-
-      nw["operator:type"="community"]["amenity"!="parking"];
-
-      nw["operator:type"="private_non_profit"];
-
-      nw["office"="ngo"];
-      nw["operator:type"="ngo"];
-
-      nw["office"="foundation"];
-
-      nw["office"="association"];
+      nw["operator:type"~"^(charitable|community|private_non_profit|ngo|association|cooperative)$",i]["amenity"!="parking"];
+      nw["operator_type"~"^(charitable|community|private_non_profit|ngo|association|cooperative)$",i]["amenity"!="parking"];
+      nw["operator"="community"]["amenity"!="parking"];
 
       nwr["healthcare"="blood_donation"];`,
     color: "#FF69B4",

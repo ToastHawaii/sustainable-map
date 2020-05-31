@@ -8,17 +8,17 @@ This is a map that shows facilities and services in your area that are environme
 
 The map helps to draw attention to sustainable strategies such as
 
-- <i class="fas fa-universal-access"></i> Publicly accessible
-- <i class="fas fa-heart"></i> Free of charge, Social
-- Environmentally friendly production, <i class="fas fa-seedling"></i> Organic, Seasonal, <i class="fas fa-cheese"></i> <i class="fas fa-carrot"></i> Vegetarian
-- <i class="fas fa-hands"></i> Environmentally friendly packed, Unpacked, Zero waste
-- <i class="fas fa-handshake"></i> Fair trade
+- <i class="fas fa-universal-access"></i> [Publicly accessible](https://wiki.openstreetmap.org/wiki/DE:Key:access)
+- <i class="fas fa-heart"></i> [Free of charge](https://wiki.openstreetmap.org/wiki/DE:Key:fee), [Social](https://wiki.openstreetmap.org/wiki/DE:Key:social_facility)
+- Environmentally friendly production, <i class="fas fa-seedling"></i> [Organic](https://wiki.openstreetmap.org/wiki/DE:Key:organic), Seasonal, <i class="fas fa-cheese"></i> <i class="fas fa-carrot"></i> [Vegetarian](https://wiki.openstreetmap.org/wiki/DE:Key:diet)
+- <i class="fas fa-hands"></i> Environmentally friendly packed, [Unpacked](https://wiki.openstreetmap.org/wiki/DE:Key:bulk_purchase), [Zero waste](https://wiki.openstreetmap.org/wiki/DE:Key:zero_waste)
+- <i class="fas fa-handshake"></i> [Fair trade](https://wiki.openstreetmap.org/wiki/DE:Key:fair_trade)
 - <i class="fas fa-map-marker-alt"></i> Short transport distances, Regional
 - <i class="fas fa-redo-alt"></i> Sharing, Lending
 - <i class="fas fa-tools"></i> Repair
 - <i class="fas fa-exchange-alt"></i> Reuse
-- <i class="fas fa-recycle"></i> Recycling
-- Community, Participation
+- <i class="fas fa-recycle"></i> [Recycling](https://wiki.openstreetmap.org/wiki/DE:Tag:amenity%3Drecycling)
+- [Community](https://wiki.openstreetmap.org/wiki/DE:Tag:amenity%3Dcommunity_centre), [Participation](https://wiki.openstreetmap.org/wiki/DE:Key:operator:type)
 
 The information is loaded from [OpenStreetMap](https://www.openstreetmap.org).
 

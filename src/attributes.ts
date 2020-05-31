@@ -320,6 +320,7 @@ export const attributes: Attribute<{}>[] = [
     check: tags =>
       equalsIgnoreCase(tags.access, "yes") ||
       equalsIgnoreCase(tags.access, "permissive") ||
+      equalsIgnoreCase(tags.access, "community") ||
       equalsIgnoreCase(tags.access, "public"),
     template: local => template(local.public, "fas fa-universal-access")
   },
