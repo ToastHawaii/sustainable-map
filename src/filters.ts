@@ -1886,135 +1886,155 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
       "craft=tailor"
     ],
     edit: ["shop", "craft"]
-  }
-  //   {
-  //     group: "goods",
-  //     value: "mobile-phones",
-  //     icon: "/lib/maki-icons/mobile-phone-15.svg",
-  //     query: `
-  //     // Give
-  //     nw["recycling:mobile_phones"="yes"];
+  },
+  {
+    group: "goods",
+    value: "mobile-phones",
+    icon: "/lib/maki-icons/mobile-phone-15.svg",
+    query: `
+      // Give
+      nw["recycling:mobile_phones"="yes"];
 
-  //     // Give and take
-  //     nw["amenity"="give_box"]["electronics"!="no"];
+      // Give and take
+      nw["shop"="mobile_phone"]["second_hand"~"^(yes|only)$"]; 
+      nw["amenity"="give_box"]["electronics"!="no"];
 
-  //     // Repair
-  //     node["repair"="assisted_self_service"]["service:mobile_phone:repair"="yes"];
-  //     node["repair"="assisted_self_service"]["mobile_phone:repair"="yes"];
+      // Repair
+      nw["mobile_phone:repair"~"^(yes|only)$"];
+      nw["service:mobile_phone:repair"~"^(yes|only)$"]; 
+      nw["repair"="phone"]; 
+      nw["repair"="mobilephone"]; 
+      nw["repair"="mobile_phone"]; 
+      nw["shop"="mobile_phone"]["repair"~"^(yes|only)$"]; 
 
-  //     // Charge
-  //     node["amenity"="device_charging_station"]["fee"!="yes"];`,
-  //     color: "#191970",
-  //     tags: [
-  //       "amenity=recycling",
-  //       "amenity=give_box",
-  //       "repair=assisted_self_service",
-  //       "repair=*",
-  //       "amenity=device_charging_station"
-  //     ],
-  //     edit: ["amenity=recycling", "amenity"]
-  //   },
-  //   {
-  //     group: "goods",
-  //     subgroup: "mobile-phones",
-  //     value: "mobile-phones-give",
-  //     icon: "/lib/maki-icons/mobile-phone-15.svg",
-  //     button: "fas fa-long-arrow-alt-right",
-  //     query: `
-  //     nw["recycling:mobile_phones"="yes"];
+      // Charge
+      node["amenity"="device_charging_station"]["fee"!="yes"];`,
+    color: "#191970",
+    tags: [
+      "shop=mobile_phone",
+      "recycling:mobile_phones=yes",
+      "amenity=give_box",
+      "repair=assisted_self_service",
+      "repair=*",
+      "amenity=device_charging_station"
+    ],
+    edit: ["shop=mobile_phone", "amenity=recycling", "amenity"]
+  },
+  {
+    group: "goods",
+    subgroup: "mobile-phones",
+    value: "mobile-phones-give",
+    icon: "/lib/maki-icons/mobile-phone-15.svg",
+    button: "fas fa-sync-alt",
+    query: `
+      nw["recycling:mobile_phones"="yes"];
 
-  //     nw["amenity"="give_box"]["electronics"!="no"]["give_box:policy"!="free_to_take"];`,
-  //     color: "#191970",
-  //     tags: ["amenity=recycling", "amenity=give_box"],
-  //     edit: ["amenity=recycling", "amenity"]
-  //   },
-  //   {
-  //     group: "goods",
-  //     subgroup: "mobile-phones",
-  //     value: "mobile-phones-take",
-  //     icon: "/lib/maki-icons/mobile-phone-15.svg",
-  //     button: "fas fa-long-arrow-alt-left",
-  //     query: `
-  //     nw["amenity"="give_box"]["electronics"!="no"];`,
-  //     color: "#191970",
-  //     tags: ["amenity=give_box"],
-  //     edit: ["amenity"]
-  //   },
-  //   {
-  //     group: "goods",
-  //     subgroup: "mobile-phones",
-  //     value: "mobile-phones-repair",
-  //     icon: "/lib/maki-icons/mobile-phone-15.svg",
-  //     button: "fas fa-tools",
-  //     query: `
-  //     node["repair"="assisted_self_service"]["service:mobile_phone:repair"="yes"];
-  //     node["repair"="assisted_self_service"]["mobile_phone:repair"="yes"];`,
-  //     color: "#191970",
-  //     tags: ["repair=assisted_self_service", "repair=*"],
-  //     edit: ["amenity"]
-  //   },
-  //   {
-  //     group: "goods",
-  //     value: "computers",
-  //     icon: "https://wiki.openstreetmap.org/w/images/b/bb/Computer-14.svg",
-  //     query: `
-  //     // Give
-  //     nw["recycling:computers"="yes"];
+      nw["amenity"="give_box"]["electronics"!="no"]["give_box:policy"!="free_to_take"];`,
+    color: "#191970",
+    tags: ["amenity=recycling", "amenity=give_box"],
+    edit: ["amenity=recycling", "amenity"]
+  },
+  {
+    group: "goods",
+    subgroup: "mobile-phones",
+    value: "mobile-phones-take",
+    icon: "/lib/maki-icons/mobile-phone-15.svg",
+    button: "fas fa-long-arrow-alt-left",
+    query: `
+      nw["shop"="mobile_phone"]["second_hand"~"^(yes|only)$"]; 
+      nw["amenity"="give_box"]["electronics"!="no"];`,
+    color: "#191970",
+    tags: ["shop=mobile_phone", "amenity=give_box"],
+    edit: ["shop=mobile_phone", "amenity"]
+  },
+  {
+    group: "goods",
+    subgroup: "mobile-phones",
+    value: "mobile-phones-repair",
+    icon: "/lib/maki-icons/mobile-phone-15.svg",
+    button: "fas fa-tools",
+    query: `
+      nw["mobile_phone:repair"~"^(yes|only)$"];
+      nw["service:mobile_phone:repair"~"^(yes|only)$"]; 
+      nw["repair"="phone"]; 
+      nw["repair"="mobilephone"]; 
+      nw["repair"="mobile_phone"]; 
+      nw["shop"="mobile_phone"]["repair"~"^(yes|only)$"]; `,
+    color: "#191970",
+    tags: ["shop=mobile_phone", "repair=assisted_self_service", "repair=*"],
+    edit: ["shop=mobile_phone", "amenity"]
+  },
+  {
+    group: "goods",
+    value: "computers",
+    icon: "https://wiki.openstreetmap.org/w/images/b/bb/Computer-14.svg",
+    query: `
+      // Give
+      nw["recycling:computers"="yes"];
 
-  //     // Give and take
-  //     nw["amenity"="give_box"]["electronics"!="no"];
+      // Give and take
+      nw["shop"="computer"]["second_hand"~"^(yes|only)$"]; 
+      nw["amenity"="give_box"]["electronics"!="no"];
 
-  //     // Repair
-  //     node["repair"="assisted_self_service"]["service:computer:repair"="yes"];
-  //     node["repair"="assisted_self_service"]["computer:repair"="yes"];`,
-  //     color: "#ABAB9A",
-  //     tags: [
-  //       "amenity=recycling",
-  //       "amenity=give_box",
-  //       "repair=assisted_self_service",
-  //       "repair=*"
-  //     ],
-  //     edit: ["amenity=recycling", "amenity"]
-  //   },
-  //   {
-  //     group: "goods",
-  //     subgroup: "computers",
-  //     value: "computers-give",
-  //     icon: "https://wiki.openstreetmap.org/w/images/b/bb/Computer-14.svg",
-  //     button: "fas fa-long-arrow-alt-right",
-  //     query: `
-  //     nw["recycling:computers"="yes"];
+      // Repair
+      nw["computer:repair"~"^(yes|only)$"];
+      nw["service:computer:repair"~"^(yes|only)$"]; 
+      nw["repair"="computer"]; 
+      nw["shop"="computer_repair"]; 
+      nw["shop"="computer"]["repair"~"^(yes|only)$"];`,
+    color: "#ABAB9A",
+    tags: [
+      "shop=computer",
+      "amenity=recycling",
+      "amenity=give_box",
+      "repair=assisted_self_service",
+      "repair=*"
+    ],
+    edit: ["shop=computer", "amenity=recycling", "amenity"]
+  },
+  {
+    group: "goods",
+    subgroup: "computers",
+    value: "computers-give",
+    icon: "https://wiki.openstreetmap.org/w/images/b/bb/Computer-14.svg",
+    button: "fas fa-sync-alt",
+    query: `
+      nw["recycling:computers"="yes"];
 
-  //     nw["amenity"="give_box"]["electronics"!="no"]["give_box:policy"!="free_to_take"];`,
-  //     color: "#ABAB9A",
-  //     tags: ["amenity=recycling", "amenity=give_box"],
-  //     edit: ["amenity=recycling"]
-  //   },
-  //   {
-  //     group: "goods",
-  //     subgroup: "computers",
-  //     value: "computers-take",
-  //     icon: "https://wiki.openstreetmap.org/w/images/b/bb/Computer-14.svg",
-  //     button: "fas fa-long-arrow-alt-left",
-  //     query: `
-  //     nw["amenity"="give_box"]["electronics"!="no"];`,
-  //     color: "#ABAB9A",
-  //     tags: ["amenity=give_box"],
-  //     edit: ["amenity"]
-  //   },
-  //   {
-  //     group: "goods",
-  //     subgroup: "computers",
-  //     value: "computers-repair",
-  //     icon: "https://wiki.openstreetmap.org/w/images/b/bb/Computer-14.svg",
-  //     button: "fas fa-tools",
-  //     query: `
-  //     node["repair"="assisted_self_service"]["service:computer:repair"="yes"];
-  //     node["repair"="assisted_self_service"]["computer:repair"="yes"];`,
-  //     color: "#ABAB9A",
-  //     tags: ["repair=assisted_self_service", "repair=*"],
-  //     edit: ["amenity"]
-  //   },
+      nw["amenity"="give_box"]["electronics"!="no"]["give_box:policy"!="free_to_take"];`,
+    color: "#ABAB9A",
+    tags: ["amenity=recycling", "amenity=give_box"],
+    edit: ["amenity=recycling"]
+  },
+  {
+    group: "goods",
+    subgroup: "computers",
+    value: "computers-take",
+    icon: "https://wiki.openstreetmap.org/w/images/b/bb/Computer-14.svg",
+    button: "fas fa-long-arrow-alt-left",
+    query: `
+      nw["shop"="computer"]["second_hand"~"^(yes|only)$"]; 
+      nw["amenity"="give_box"]["electronics"!="no"];`,
+    color: "#ABAB9A",
+    tags: ["shop=computer", "amenity=give_box"],
+    edit: ["shop=computer", "amenity"]
+  },
+  {
+    group: "goods",
+    subgroup: "computers",
+    value: "computers-repair",
+    icon: "https://wiki.openstreetmap.org/w/images/b/bb/Computer-14.svg",
+    button: "fas fa-tools",
+    query: `
+      nw["computer:repair"~"^(yes|only)$"];
+      nw["service:computer:repair"~"^(yes|only)$"]; 
+      nw["repair"="computer"]; 
+      nw["shop"="computer_repair"]; 
+      nw["shop"="computer"]["repair"~"^(yes|only)$"];`,
+    color: "#ABAB9A",
+    tags: ["shop=computer", "repair=assisted_self_service", "repair=*"],
+    edit: ["shop=computer", "amenity"]
+  },
   //   {
   //     group: "goods",
   //     value: "toys",
@@ -2093,82 +2113,159 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
   //     tags: ["repair=assisted_self_service", "repair=*"],
   //     edit: ["amenity"]
   //   },
-  //   {
-  //     group: "goods",
-  //     value: "electronics",
-  //     icon: "/lib/temaki-icons/electronic.svg",
-  //     query: `
-  //     // Give
-  //     nw["recycling:small_electrical_appliances"="yes"];
-  //     nw["recycling:small_appliances"="yes"];
-  //     nw["recycling:electrical_items"="yes"];
-  //     nw["recycling:electrical_appliances"="yes"];
-  //     nw["recycling:electronic"="yes"];
-  //     nw["recycling:electronics"="yes"];
+  {
+    group: "goods",
+    value: "electronics",
+    icon: "/lib/temaki-icons/electronic.svg",
+    query: `
+      // Give
+      nw["recycling:chipboard"="yes"];
+      nw["recycling:electrical_appliances"="yes"];
+      nw["recycling:electrical_items"="yes"];
+      nw["recycling:electronic"="yes"];
+      nw["recycling:electronics"="yes"]; 
+      nw["recycling:fridge_and_freezer"="yes"];
+      nw["recycling:small_appliances"="yes"];
+      nw["recycling:small_electrical_appliances"="yes"];
+      nw["recycling:white_goods"="yes"];
+      nw["recycling:tv_monitor"="yes"];  
 
-  //     // Give and take
-  //     nw["amenity"="give_box"]["electronics"!="no"];
+      // Give and take
+      nw["shop"~"^(electronics|hifi|appliance|camera|kitchen)$"]["second_hand"~"^(yes|only)$"]; 
 
-  //     // Repair
-  //     node["repair"="assisted_self_service"]["service:small_electronics_device:repair"="yes"];
-  //     node["repair"="assisted_self_service"]["small_electronics_device:repair"="yes"];
-  //     node["repair"="assisted_self_service"]["service:electronics:repair"="yes"];
-  //     node["repair"="assisted_self_service"]["electronics:repair"="yes"];`,
-  //     color: "#800080",
-  //     tags: [
-  //       "amenity=recycling",
-  //       "amenity=give_box",
-  //       "repair=assisted_self_service",
-  //       "repair=*"
-  //     ],
-  //     edit: ["amenity=recycling", "amenity"]
-  //   },
-  //   {
-  //     group: "goods",
-  //     subgroup: "electronics",
-  //     value: "electronics-give",
-  //     icon: "/lib/temaki-icons/electronic.svg",
-  //     button: "fas fa-long-arrow-alt-right",
-  //     query: `
-  //     nw["recycling:small_electrical_appliances"="yes"];
-  //     nw["recycling:small_appliances"="yes"];
-  //     nw["recycling:electrical_items"="yes"];
-  //     nw["recycling:electrical_appliances"="yes"];
-  //     nw["recycling:electronic"="yes"];
-  //     nw["recycling:electronics"="yes"];
+      nw["amenity"="give_box"]["electronics"!="no"];
 
-  //     nw["amenity"="give_box"]["electronics"!="no"]["give_box:policy"!="free_to_take"];`,
-  //     color: "#800080",
-  //     tags: ["amenity=recycling", "amenity=give_box"],
-  //     edit: ["amenity=recycling", "amenity"]
-  //   },
-  //   {
-  //     group: "goods",
-  //     subgroup: "electronics",
-  //     value: "electronics-take",
-  //     icon: "/lib/temaki-icons/electronic.svg",
-  //     button: "fas fa-long-arrow-alt-left",
-  //     query: `
-  //     nw["amenity"="give_box"]["electronics"!="no"];`,
-  //     color: "#800080",
-  //     tags: ["amenity=give_box"],
-  //     edit: ["amenity"]
-  //   },
-  //   {
-  //     group: "goods",
-  //     subgroup: "electronics",
-  //     value: "electronics-repair",
-  //     icon: "/lib/temaki-icons/electronic.svg",
-  //     button: "fas fa-tools",
-  //     query: `
-  //     node["repair"="assisted_self_service"]["service:small_electronics_device:repair"="yes"];
-  //     node["repair"="assisted_self_service"]["small_electronics_device:repair"="yes"];
-  //     node["repair"="assisted_self_service"]["service:electronics:repair"="yes"];
-  //     node["repair"="assisted_self_service"]["electronics:repair"="yes"];`,
-  //     color: "#800080",
-  //     tags: ["repair=assisted_self_service", "repair=*"],
-  //     edit: ["amenity"]
-  //   },
+      // Rental
+      nw["rental"~"camera_equipment"];
+      nw["shop"~"^(electronics|printer|appliance)$"]["rental"~"^(yes|only)$"]; 
+
+      // Repair
+      nw["electronics_repair"~"^(yes|only)$"];
+      nw["service:small_electronics_device:repair"~"^(yes|only)$"]; 
+      nw["camera:repair"~"^(yes|only)$"]; 
+      nw["service:camera:repair"~"^(yes|only)$"]; 
+      nw["hifi:repair"~"^(yes|only)$"]; 
+      nw["repair"~"^(electronics|tv|electricity)$"]; 
+      nw["craft"="electronics_repair"]; 
+      nw["shop"~"^(electronics|hifi|camera|radiotechnics|electrical|vacuum_cleaner|appliance|white_goods)$"]["repair"~"^(yes|only)$"]; 
+      nw["craft"~"^(headphones|electronics|electrician)$"]["repair"~"^(yes|only)$"];`,
+    color: "#800080",
+    tags: [
+      "shop=electronics",
+      "shop=hifi",
+      "shop=appliance",
+      "shop=camera",
+      "shop=kitchen",
+      "shop=radiotechnics",
+      "shop=electrical",
+      "shop=vacuum_cleaner",
+      "shop=appliance",
+      "craft=electronics_repair",
+      "amenity=recycling",
+      "amenity=give_box",
+      "repair=assisted_self_service",
+      "repair=*"
+    ],
+    edit: [
+      "shop=electronics",
+      "shop=hifi",
+      "shop=appliance",
+      "shop=camera",
+      "shop=kitchen",
+      "shop=radiotechnics",
+      "shop=electrical",
+      "shop=vacuum_cleaner",
+      "shop=appliance",
+      "craft=electronics_repair",
+      "amenity=recycling",
+      "amenity"
+    ]
+  },
+  {
+    group: "goods",
+    subgroup: "electronics",
+    value: "electronics-give",
+    icon: "/lib/temaki-icons/electronic.svg",
+    button: "fas fa-sync-alt",
+    query: `
+      nw["recycling:chipboard"="yes"];
+      nw["recycling:electrical_appliances"="yes"];
+      nw["recycling:electrical_items"="yes"];
+      nw["recycling:electronic"="yes"];
+      nw["recycling:electronics"="yes"]; 
+      nw["recycling:fridge_and_freezer"="yes"];
+      nw["recycling:small_appliances"="yes"];
+      nw["recycling:small_electrical_appliances"="yes"];
+      nw["recycling:white_goods"="yes"];
+      nw["recycling:tv_monitor"="yes"];  
+
+      nw["amenity"="give_box"]["electronics"!="no"]["give_box:policy"!="free_to_take"];`,
+    color: "#800080",
+    tags: ["amenity=recycling", "amenity=give_box"],
+    edit: ["amenity=recycling", "amenity"]
+  },
+  {
+    group: "goods",
+    subgroup: "electronics",
+    value: "electronics-take",
+    icon: "/lib/temaki-icons/electronic.svg",
+    button: "fas fa-long-arrow-alt-left",
+    query: `
+      nw["shop"~"^(electronics|hifi|appliance|camera|kitchen)$"]["second_hand"~"^(yes|only)$"]; 
+
+      nw["amenity"="give_box"]["electronics"!="no"];
+      
+      nw["rental"~"camera_equipment"];
+      nw["shop"~"^(electronics|printer|appliance)$"]["rental"~"^(yes|only)$"];`,
+    color: "#800080",
+    tags: ["amenity=give_box"],
+    edit: ["amenity"]
+  },
+  {
+    group: "goods",
+    subgroup: "electronics",
+    value: "electronics-repair",
+    icon: "/lib/temaki-icons/electronic.svg",
+    button: "fas fa-tools",
+    query: `
+      nw["electronics_repair"~"^(yes|only)$"];
+      nw["service:small_electronics_device:repair"~"^(yes|only)$"]; 
+      nw["camera:repair"~"^(yes|only)$"]; 
+      nw["service:camera:repair"~"^(yes|only)$"]; 
+      nw["hifi:repair"~"^(yes|only)$"]; 
+      nw["repair"~"^(electronics|tv|electricity)$"]; 
+      nw["craft"="electronics_repair"]; 
+      nw["shop"~"^(electronics|hifi|camera|radiotechnics|electrical|vacuum_cleaner|appliance|white_goods)$"]["repair"~"^(yes|only)$"]; 
+      nw["craft"~"^(headphones|electronics|electrician)$"]["repair"~"^(yes|only)$"];`,
+    color: "#800080",
+    tags: [
+      "shop=electronics",
+      "shop=hifi",
+      "shop=appliance",
+      "shop=camera",
+      "shop=kitchen",
+      "shop=radiotechnics",
+      "shop=electrical",
+      "shop=vacuum_cleaner",
+      "shop=appliance",
+      "craft=electronics_repair",
+      "repair=assisted_self_service",
+      "repair=*"
+    ],
+    edit: [
+      "shop=electronics",
+      "shop=hifi",
+      "shop=appliance",
+      "shop=camera",
+      "shop=kitchen",
+      "shop=radiotechnics",
+      "shop=electrical",
+      "shop=vacuum_cleaner",
+      "shop=appliance",
+      "craft=electronics_repair",
+      "amenity"
+    ]
+  }
   //   {
   //     group: "goods",
   //     value: "furniture",
