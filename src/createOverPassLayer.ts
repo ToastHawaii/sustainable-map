@@ -40,6 +40,8 @@ export function createOverPassLayer<M>(
     minZoom: 14,
     query: `(${overpassSubs(query)});out center;`,
     timeout: 30, // Seconds
+    cacheEnabled: true,
+    cacheTTL: 86400, // 24h
     onSuccess(data: { elements: any[] }) {
       for (let i = 0; i < data.elements.length; i++) {
         let pos: {
@@ -149,9 +151,9 @@ export function createOverPassLayer<M>(
           model
         )}">${toTitle(model)}</strong>
         <div class="adr">
-        
+
         ${attributesGenerator.render(local, e.tags, value, {} as M)}
-        
+
          <div class="street-address">${model.address.street} ${
           model.address.houseNumber
         } ${toLevel(parseFloat(model.address.level), local)}</div>
@@ -183,9 +185,9 @@ export function createOverPassLayer<M>(
           <br />
           <img class="img" dynamic-src="${model.img}"/>`
             : ``
-        }   
+        }
         </div>
-        <div class="description">    
+        <div class="description">
         ${
           model.description
             ? `
@@ -194,9 +196,9 @@ export function createOverPassLayer<M>(
             ${model.description}
           </small>`
             : ``
-        }    
+        }
         </div>
-        <div> 
+        <div>
           ${
             !attributDescriptionGenerator.empty(e.tags, value, {}, local)
               ? `
@@ -211,7 +213,7 @@ export function createOverPassLayer<M>(
             )}
           </small>`
               : ``
-          }   
+          }
         </div>
         <div class="contact">
           ${
@@ -220,7 +222,7 @@ export function createOverPassLayer<M>(
           <br />
           ${linksGenerator.render(local, e.tags, value, {})}`
               : ``
-          }     
+          }
         </div>
         </div>`;
         const popup = L.popup({
