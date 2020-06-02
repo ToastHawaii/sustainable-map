@@ -5,6 +5,7 @@ export const type = {
   "archaeological-site": { name: "Archäologische Stätte", description: "" },
   trail: { name: "Lehrpfad", description: "" },
   "battery-recycling": { name: "Batterie weiterverwerten", description: "" },
+  "oil-recycling":{ name: "Öl weiterverwerten", description: "" },
   sport: { name: "Sport", description: "" },
   books: {
     name: "Bücher",

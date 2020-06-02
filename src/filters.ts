@@ -1646,10 +1646,28 @@ node["man_made"="surveillance"]["image"];`,
     icon: "/lib/temaki-icons/power.svg",
     query: `
     nw["recycling:batteries"="yes"];
-    nw["recycling:car_batteries"="yes"]; `,
+    nw["recycling:car_batteries"="yes"];`,
     color: "#ffe000",
     tags: ["recycling:batteries=yes", "recycling:car_batteries=yes"],
-    edit: ["recycling:batteries=yes", "recycling:car_batteries=yes"]
+    edit: ["amenity=recycling"]
+  },
+  {
+    group: "material",
+    value: "oil-recycling",
+    icon: "/lib/maki-icons/water-15.svg",
+    query: `
+    nw["recycling:cooking_oil"="yes"];
+    nw["recycling:engine_oil"="yes"];
+    nw["recycling:oil"="yes"];
+    nw["recycling:waste_oil"="yes"];`,
+    color: "#582d19",
+    tags: [
+      "recycling:cooking_oil=yes",
+      "recycling:engine_oil=yes",
+      "recycling:oil=yes",
+      "recycling:waste_oil=yes"
+    ],
+    edit: ["amenity=recycling"]
   },
   {
     group: "trip",
