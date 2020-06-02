@@ -28,6 +28,7 @@ export const local = {
   clothes: "Clothes",
   battery: "Battery",
   carBattery: "Car battery",
+  beekeeper: "Beekeeper",
   shoes: "Shoes",
   recycling: "Recycling",
   reuse: "Reuse",

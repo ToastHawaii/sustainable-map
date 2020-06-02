@@ -125,13 +125,11 @@ export const attributes: Attribute<{}>[] = [
     template: local => template(local.clothes, "fas fa-tshirt")
   },
   {
-    check: tags =>
-      tags["recycling:batteries"] === "yes" ,
+    check: tags => tags["recycling:batteries"] === "yes",
     template: local => template(local.battery, "fas fa-battery-full")
   },
   {
-    check: tags =>
-      tags["recycling:car_batteries"] === "yes",
+    check: tags => tags["recycling:car_batteries"] === "yes",
     template: local => template(local.carBattery, "fas fa-car-battery")
   },
   {
@@ -222,6 +220,10 @@ export const attributes: Attribute<{}>[] = [
           hasPropThatStartsWith(tags, "reuse:", "yes") ||
           tags["amenity"] === "give_box")),
     template: local => template(local.freeToTakeOrGive, "fas fa-exchange-alt")
+  },
+  {
+    check: tags => tags.craft === "beekeeper" || tags.craft === "honey",
+    template: local => template(local.beekeeper, "fas fa-archive")
   },
   {
     check: tags =>

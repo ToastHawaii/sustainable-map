@@ -101,8 +101,8 @@ nwr["playground"="splash_pad"]&part;`,
     icon: "https://wiki.openstreetmap.org/w/images/1/18/Books-16.svg",
     query: `
 // Get
-nw["shop"="books"]["second_hand"~"^(yes|only)$"]; 
-nw["shop"="books"]["books"="antiquarian"]; 
+nw["shop"="books"]["second_hand"~"^(yes|only)$"];
+nw["shop"="books"]["books"="antiquarian"];
 nw["amenity"="public_bookcase"]; // Get, Borrow, Give
 
 // Borrow
@@ -134,8 +134,8 @@ nw["recycling:books"="yes"];`,
     icon: "https://wiki.openstreetmap.org/w/images/1/18/Books-16.svg",
     button: "fas fa-long-arrow-alt-right",
     query: `
-nw["shop"="books"]["second_hand"~"^(yes|only)$"]; 
-nw["shop"="books"]["books"="antiquarian"]; 
+nw["shop"="books"]["second_hand"~"^(yes|only)$"];
+nw["shop"="books"]["books"="antiquarian"];
 nw["amenity"="public_bookcase"];`,
     color: "#A0522D",
     tags: ["shop=books", "amenity=public_bookcase"],
@@ -447,13 +447,13 @@ nw["recycling:books"="yes"];`,
     query: `
     nw["service:bicycle:rental"~"^(yes|only)$"];
     nw["bicycle:rental"~"^(yes|only)$"];
-    nw["bicycle_rental"~"^(yes|only)$"]; 
-    nw["rental:bicycle"~"^(yes|only)$"]; 
-    nw["rental"~"bicycle|bike"]; 
+    nw["bicycle_rental"~"^(yes|only)$"];
+    nw["rental:bicycle"~"^(yes|only)$"];
+    nw["rental"~"bicycle|bike"];
     nw["amenity"="bicycle_rental"];
-    nw["shop"="bicycle_rental"];  
-    nw["shop"="bicycle"]["rental"~"^(yes|only)$"]; 
-    nw["amenity"="bicycle_sharing"]; 
+    nw["shop"="bicycle_rental"];
+    nw["shop"="bicycle"]["rental"~"^(yes|only)$"];
+    nw["amenity"="bicycle_sharing"];
     nw["bicycle_rental"="cargo_bike"];`,
     color: "#2E8B57",
     tags: ["amenity=bicycle_rental"],
@@ -541,13 +541,13 @@ nw["landuse"="community_food_growing"];`,
     value: "grocery",
     icon: "https://wiki.openstreetmap.org/w/images/9/96/Convenience-14.svg",
     query: `
-    nw["shop"~"^(supermarket|convenience|health_food|pasta|deli|wholesale|grocery|food|frozen_food|spices)$"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"];
+    nw["shop"~"^(supermarket|convenience|health_food|pasta|deli|wholesale|grocery|food|frozen_food|spices)$"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
     nw["shop"~"^(farm|greengrocer|organic|dairy)$"];
-    nw["amenity"="vending_machine"]["vending"~"food"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"];
+    nw["amenity"="vending_machine"]["vending"~"food"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
     nw["amenity"="vending_machine"]["vending"~"eggs"];
     nw["amenity"="marketplace"];
-    nw["craft"="pasta"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"]; 
-    nw["shop"="yes"]["organic"~"^(limited|yes|only)$"];`,
+    nw["craft"="pasta"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
+    nw["shop"="yes"]["organic"~"^(yes|only)$"];`,
     color: "#ac39ac",
     tags: [
       "shop=supermarket",
@@ -567,10 +567,10 @@ nw["landuse"="community_food_growing"];`,
     value: "sweets",
     icon: "https://wiki.openstreetmap.org/w/images/c/cc/Confectionery-14.svg",
     query: `
-nw["shop"~"^(confectionery|chocolate|honey|ice_cream|pastry)$"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"];
-nw["amenity"="vending_machine"]["vending"~"sweets|ice_cream"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"];
+nw["shop"~"^(confectionery|chocolate|honey|ice_cream|pastry)$"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
+nw["amenity"="vending_machine"]["vending"~"sweets|ice_cream"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
 nw["craft"~"^(beekeeper|honey)$"];
-nw["craft"="confectionery"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"];`,
+nw["craft"="confectionery"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];`,
     color: "#FFC0CB",
     tags: [
       "shop=confectionery",
@@ -586,7 +586,7 @@ nw["craft"="confectionery"][~"^(regional|fair_trade|organic|second_hand|zero_was
     value: "baked-goods",
     icon: "/lib/maki-icons/bakery-15.svg",
     query: `
-nw["shop"="bakery"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"];
+nw["shop"="bakery"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
 nw["amenity"="vending_machine"]["vending"~"bread|pizza"];`,
     color: "#D2B48C",
     tags: ["shop=bakery"],
@@ -597,7 +597,7 @@ nw["amenity"="vending_machine"]["vending"~"bread|pizza"];`,
     value: "dairy",
     icon: "https://wiki.openstreetmap.org/w/images/0/0e/Dairy.svg",
     query: `
-nw["shop"~"^(cheese|dairy)$"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"];
+nw["shop"~"^(cheese|dairy)$"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
 nw["craft"="cheese_maker"];
 nw["amenity"="vending_machine"]["vending"~"milk"];`,
     color: "#ffdb4d",
@@ -609,7 +609,7 @@ nw["amenity"="vending_machine"]["vending"~"milk"];`,
     value: "meat",
     icon: "https://wiki.openstreetmap.org/w/images/b/b8/Butcher.svg",
     query: `
-nw["shop"~"^(butcher|seafood)$"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"];`,
+nw["shop"~"^(butcher|seafood)$"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];`,
     color: "#DC143C",
     tags: ["shop=butcher", "shop=seafood"],
     edit: ["shop=butcher", "shop=seafood"]
@@ -630,10 +630,10 @@ nw["shop"~"^(butcher|seafood)$"][~"^(regional|fair_trade|organic|second_hand|zer
     value: "beverages",
     icon: "https://wiki.openstreetmap.org/w/images/e/eb/Alcohol-16.svg",
     query: `
-nw["shop"~"^(beverages|wine|alcohol|tea|drinks)$"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"];
+nw["shop"~"^(beverages|wine|alcohol|tea|drinks)$"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
 nw["craft"~"^(winery|distillery|brewery)$"];
 nw["amenity"="vending_machine"]["vending"~"milk"];
-nw["amenity"="vending_machine"]["vending"~"drinks"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"];`,
+nw["amenity"="vending_machine"]["vending"~"drinks"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];`,
     color: "#cc0000",
     tags: [
       "shop=beverages",
@@ -673,10 +673,10 @@ nw["amenity"="vending_machine"]["vending"~"drinks"][~"^(regional|fair_trade|orga
     value: "health-products",
     icon: "https://wiki.openstreetmap.org/w/images/3/36/Chemist-14.svg",
     query: `
-    nw["shop"~"^(chemist|health_food|hairdresser|cosmetics|herbalist|beauty|perfumery|nutrition_supplements)$"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"];
-    nw["amenity"="pharmacy"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"]; 
-    nw["craft"="soap"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"]; 
-    nw["amenity"="vending_machine"]["vending"="chemist"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(limited|yes|only)$"];`,
+    nw["shop"~"^(chemist|health_food|hairdresser|cosmetics|herbalist|beauty|perfumery|nutrition_supplements)$"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
+    nw["amenity"="pharmacy"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
+    nw["craft"="soap"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
+    nw["amenity"="vending_machine"]["vending"="chemist"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];`,
     color: "#BF0000",
     tags: [
       "shop=chemist",
@@ -774,7 +774,7 @@ nw["amenity"="vending_machine"]["vending"~"drinks"][~"^(regional|fair_trade|orga
     value: "dinner",
     icon: "https://wiki.openstreetmap.org/w/images/b/bb/Restaurant-14.svg",
     query: `
-nw["amenity"~"^(restaurant|biergarten|fast_food|ice_cream|pub|bar|canteen|cafe|juice_bar)$"][~"^(regional|fair_trade|organic|(diet:){0,1}(vegetarian|lacto_vegetarian|ovo_vegetarian|vegan|fruitarian)|second_hand)$"~"^(limited|yes|only)$"];
+nw["amenity"~"^(restaurant|biergarten|fast_food|ice_cream|pub|bar|canteen|cafe|juice_bar)$"][~"^(regional|fair_trade|organic|(diet:){0,1}(vegetarian|lacto_vegetarian|ovo_vegetarian|vegan|fruitarian)|second_hand)$"~"^(yes|only)$"];
 nw["amenity"~"^(restaurant|biergarten|fast_food|ice_cream|pub|bar|canteen|cafe|juice_bar)$"][~"^(diet|cuisine)$"~"vegetarian|vegan|fruitarian"];
 
 nw["social_facility"="soup_kitchen"];`,
@@ -843,7 +843,7 @@ nw["social_facility"="soup_kitchen"];`,
     value: "goods-get",
     icon: "https://wiki.openstreetmap.org/w/images/8/85/Charity-14.svg",
     query: `
-      // Givebox 
+      // Givebox
       nw["amenity"="give_box"];
 
       nw["amenity"="givebox"];
@@ -1434,24 +1434,24 @@ node["man_made"="surveillance"]["image"];`,
     icon: "/lib/maki-icons/music-15.svg",
     query: `
     // Get
-  nw["shop"="musical_instrument"]["second_hand"~"^(yes|only)$"]; 
+  nw["shop"="musical_instrument"]["second_hand"~"^(yes|only)$"];
 
   // Rent / Share
   nw["amenity"="piano"][!"craft"][!"shop"]&access;
 
-  nw["playground"="musical_instrument"]&access; 
+  nw["playground"="musical_instrument"]&access;
   nw["amenity"="musical_instrument"]&access;
   nw["musical_instrument"][!"craft"][!"shop"]&access;
   nw[~"^musical_instrument:.*$"~"yes"][!"craft"][!"shop"]&access;
-  
+
   nw["musical_instrument:rental"~"^(yes|only)$"];
   nw["shop"="musical_instrument"]["rental"~"^(yes|only)$"];
   nw["craft"="musical_instrument"]["rental"~"^(yes|only)$"];
 
   // Repair
   nw["musical_instrument:repair"~"^(yes|only)$"];
-  nw["shop"="musical_instrument"]["repair"~"^(yes|only)$"]; 
-  nw["craft"="musical_instrument"]["repair"~"^(yes|only)$"]; 
+  nw["shop"="musical_instrument"]["repair"~"^(yes|only)$"];
+  nw["craft"="musical_instrument"]["repair"~"^(yes|only)$"];
   nw["craft"="luthier"]["repair"~"^(yes|only)$"];`,
     color: "#008B8B",
     tags: [
@@ -1468,27 +1468,27 @@ node["man_made"="surveillance"]["image"];`,
     icon: "https://wiki.openstreetmap.org/w/images/7/76/Outdoor-14.svg",
     query: `
     // Get
-    nw["shop"="sport"]["second_hand"~"^(yes|only)$"]; 
-    nw["shop"="ski"]["second_hand"~"^(yes|only)$"]; 
+    nw["shop"="sport"]["second_hand"~"^(yes|only)$"];
+    nw["shop"="ski"]["second_hand"~"^(yes|only)$"];
 
     // Rent / Share
     nw["ski:rental"~"^(yes|only)$"];
-    nw["snowboard:rental"~"^(yes|only)$"]; 
+    nw["snowboard:rental"~"^(yes|only)$"];
     nw["scuba_diving:rental"~"^(yes|only)$"];
     nw["standup_paddleboard_rental"~"^(yes|only)$"];
     nw["board_rental"~"^(yes|only)$"];
     nw["rental"~"ski|sled|skates|snowboard|surf|sailboard"];
     nw["amenity"="ski_rental"];
-    nw["shop"="ski_rental"]; 
+    nw["shop"="ski_rental"];
     nw["ski"="rental"];
     nw["shop"~"^(sports|ski|surf|outdoor|scuba_diving)$"]["rental"~"^(yes|only)$"];
     nw["amenity"="ski_school"]["rental"~"^(yes|only)$"];
 
     // Repair
     nw["scuba_diving:repair"~"^(yes|only)$"];
-    nw["ski:repair"~"^(yes|only)$"]; 
-    nw["repair"="ski"]; 
-    nw["shop"~"^(sports|outdoor|ski)$"]["repair"~"^(yes|only)$"]; 
+    nw["ski:repair"~"^(yes|only)$"];
+    nw["repair"="ski"];
+    nw["shop"~"^(sports|outdoor|ski)$"]["repair"~"^(yes|only)$"];
     nw["amenity"~"^(ski_rental|dive_centre)$"]["repair"~"^(yes|only)$"];`,
     color: "#DC143C",
     tags: [
@@ -1741,7 +1741,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
       // Give
       nw["recycling:belts"="yes"];
       nw["recycling:clothes"="yes"];
-      nw["recycling:shoes"="yes"]; 
+      nw["recycling:shoes"="yes"];
       nw["recycling:textiles"="yes"];
 
       // Reuse
@@ -1749,19 +1749,19 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
       nw["amenity"="give_box"]["clothes"!="no"];
 
       // Shop
-      nw["shop"~"^(clothes|boutique|fashion|shoes|bag|sewing|tailor|fabric)$"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
+      nw["shop"~"^(clothes|boutique|fashion|shoes|bag|sewing|tailor|fabric)$"][~"^(regional|fair_trade|organic|second_hand)$"~"^(yes|only)$"];
       nw["shop"="second_hand"]["clothes"]["clothes"!="no"];
 
       nw["craft"="shoemaker"];
 
       // Repair
       nw[~"^(service:){0,1}(clothes|shoes|fabrik):repair$"~"^yes$"];
-      nw["shoe_repair"~"^(yes|only)$"]; 
-      nw["repair"="shoes"]; 
-      nw["shop"="shoe_repair"]; 
-      nw["craft"~"^(bag_repair|shoe_repair)$"]; 
-      nw["tailor:alteration_service"="yes"]; 
-      nw["shop"~"^(shoes|clothes|tailor|bag|sewing|leather)$"]["repair"~"^(yes|only)$"]; 
+      nw["shoe_repair"~"^(yes|only)$"];
+      nw["repair"="shoes"];
+      nw["shop"="shoe_repair"];
+      nw["craft"~"^(bag_repair|shoe_repair)$"];
+      nw["tailor:alteration_service"="yes"];
+      nw["shop"~"^(shoes|clothes|tailor|bag|sewing|leather)$"]["repair"~"^(yes|only)$"];
       nw["craft"~"^(shoemaker|dressmaker|tailor)$"]["repair"~"^(yes|only)$"];`,
     color: "#FF7F50",
     tags: [
@@ -1806,7 +1806,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     query: `
       nw["recycling:belts"="yes"];
       nw["recycling:clothes"="yes"];
-      nw["recycling:shoes"="yes"]; 
+      nw["recycling:shoes"="yes"];
       nw["recycling:textiles"="yes"];
 
       nw["social_facility"="clothing_bank"];
@@ -1833,7 +1833,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
       nw["amenity"="give_box"]["clothes"!="no"];
 
       // Shop
-      nw["shop"~"^(clothes|boutique|fashion|shoes|bag|sewing|tailor|fabric)$"][~"^(regional|fair_trade|organic|second_hand)$"~"^(limited|yes|only)$"];
+      nw["shop"~"^(clothes|boutique|fashion|shoes|bag|sewing|tailor|fabric)$"][~"^(regional|fair_trade|organic|second_hand)$"~"^(yes|only)$"];
       nw["shop"="second_hand"]["clothes"]["clothes"!="no"];
 
       nw["craft"="shoemaker"];`,
@@ -1871,12 +1871,12 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     button: "fas fa-tools",
     query: `
       nw[~"^(service:){0,1}(clothes|shoes|fabrik):repair$"~"^yes$"];
-      nw["shoe_repair"~"^(yes|only)$"]; 
-      nw["repair"="shoes"]; 
-      nw["shop"="shoe_repair"]; 
-      nw["craft"~"^(bag_repair|shoe_repair)$"]; 
-      nw["tailor:alteration_service"="yes"]; 
-      nw["shop"~"^(shoes|clothes|tailor|bag|sewing|leather)$"]["repair"~"^(yes|only)$"]; 
+      nw["shoe_repair"~"^(yes|only)$"];
+      nw["repair"="shoes"];
+      nw["shop"="shoe_repair"];
+      nw["craft"~"^(bag_repair|shoe_repair)$"];
+      nw["tailor:alteration_service"="yes"];
+      nw["shop"~"^(shoes|clothes|tailor|bag|sewing|leather)$"]["repair"~"^(yes|only)$"];
       nw["craft"~"^(shoemaker|dressmaker|tailor)$"]["repair"~"^(yes|only)$"];`,
     color: "#FF7F50",
     tags: [
@@ -1896,16 +1896,16 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
       nw["recycling:mobile_phones"="yes"];
 
       // Give and take
-      nw["shop"="mobile_phone"]["second_hand"~"^(yes|only)$"]; 
+      nw["shop"="mobile_phone"]["second_hand"~"^(yes|only)$"];
       nw["amenity"="give_box"]["electronics"!="no"];
 
       // Repair
       nw["mobile_phone:repair"~"^(yes|only)$"];
-      nw["service:mobile_phone:repair"~"^(yes|only)$"]; 
-      nw["repair"="phone"]; 
-      nw["repair"="mobilephone"]; 
-      nw["repair"="mobile_phone"]; 
-      nw["shop"="mobile_phone"]["repair"~"^(yes|only)$"]; 
+      nw["service:mobile_phone:repair"~"^(yes|only)$"];
+      nw["repair"="phone"];
+      nw["repair"="mobilephone"];
+      nw["repair"="mobile_phone"];
+      nw["shop"="mobile_phone"]["repair"~"^(yes|only)$"];
 
       // Charge
       node["amenity"="device_charging_station"]["fee"!="yes"];`,
@@ -1941,7 +1941,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     icon: "/lib/maki-icons/mobile-phone-15.svg",
     button: "fas fa-long-arrow-alt-left",
     query: `
-      nw["shop"="mobile_phone"]["second_hand"~"^(yes|only)$"]; 
+      nw["shop"="mobile_phone"]["second_hand"~"^(yes|only)$"];
       nw["amenity"="give_box"]["electronics"!="no"];`,
     color: "#191970",
     tags: ["shop=mobile_phone", "amenity=give_box"],
@@ -1955,10 +1955,10 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     button: "fas fa-tools",
     query: `
       nw["mobile_phone:repair"~"^(yes|only)$"];
-      nw["service:mobile_phone:repair"~"^(yes|only)$"]; 
-      nw["repair"="phone"]; 
-      nw["repair"="mobilephone"]; 
-      nw["repair"="mobile_phone"]; 
+      nw["service:mobile_phone:repair"~"^(yes|only)$"];
+      nw["repair"="phone"];
+      nw["repair"="mobilephone"];
+      nw["repair"="mobile_phone"];
       nw["shop"="mobile_phone"]["repair"~"^(yes|only)$"]; `,
     color: "#191970",
     tags: ["shop=mobile_phone", "repair=assisted_self_service", "repair=*"],
@@ -1973,14 +1973,14 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
       nw["recycling:computers"="yes"];
 
       // Give and take
-      nw["shop"="computer"]["second_hand"~"^(yes|only)$"]; 
+      nw["shop"="computer"]["second_hand"~"^(yes|only)$"];
       nw["amenity"="give_box"]["electronics"!="no"];
 
       // Repair
       nw["computer:repair"~"^(yes|only)$"];
-      nw["service:computer:repair"~"^(yes|only)$"]; 
-      nw["repair"="computer"]; 
-      nw["shop"="computer_repair"]; 
+      nw["service:computer:repair"~"^(yes|only)$"];
+      nw["repair"="computer"];
+      nw["shop"="computer_repair"];
       nw["shop"="computer"]["repair"~"^(yes|only)$"];`,
     color: "#ABAB9A",
     tags: [
@@ -2013,7 +2013,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     icon: "https://wiki.openstreetmap.org/w/images/b/bb/Computer-14.svg",
     button: "fas fa-long-arrow-alt-left",
     query: `
-      nw["shop"="computer"]["second_hand"~"^(yes|only)$"]; 
+      nw["shop"="computer"]["second_hand"~"^(yes|only)$"];
       nw["amenity"="give_box"]["electronics"!="no"];`,
     color: "#ABAB9A",
     tags: ["shop=computer", "amenity=give_box"],
@@ -2027,9 +2027,9 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     button: "fas fa-tools",
     query: `
       nw["computer:repair"~"^(yes|only)$"];
-      nw["service:computer:repair"~"^(yes|only)$"]; 
-      nw["repair"="computer"]; 
-      nw["shop"="computer_repair"]; 
+      nw["service:computer:repair"~"^(yes|only)$"];
+      nw["repair"="computer"];
+      nw["shop"="computer_repair"];
       nw["shop"="computer"]["repair"~"^(yes|only)$"];`,
     color: "#ABAB9A",
     tags: ["shop=computer", "repair=assisted_self_service", "repair=*"],
@@ -2123,31 +2123,31 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
       nw["recycling:electrical_appliances"="yes"];
       nw["recycling:electrical_items"="yes"];
       nw["recycling:electronic"="yes"];
-      nw["recycling:electronics"="yes"]; 
+      nw["recycling:electronics"="yes"];
       nw["recycling:fridge_and_freezer"="yes"];
       nw["recycling:small_appliances"="yes"];
       nw["recycling:small_electrical_appliances"="yes"];
       nw["recycling:white_goods"="yes"];
-      nw["recycling:tv_monitor"="yes"];  
+      nw["recycling:tv_monitor"="yes"];
 
       // Give and take
-      nw["shop"~"^(electronics|hifi|appliance|camera|kitchen)$"]["second_hand"~"^(yes|only)$"]; 
+      nw["shop"~"^(electronics|hifi|appliance|camera|kitchen)$"]["second_hand"~"^(yes|only)$"];
 
       nw["amenity"="give_box"]["electronics"!="no"];
 
       // Rental
       nw["rental"~"camera_equipment"];
-      nw["shop"~"^(electronics|printer|appliance)$"]["rental"~"^(yes|only)$"]; 
+      nw["shop"~"^(electronics|printer|appliance)$"]["rental"~"^(yes|only)$"];
 
       // Repair
       nw["electronics_repair"~"^(yes|only)$"];
-      nw["service:small_electronics_device:repair"~"^(yes|only)$"]; 
-      nw["camera:repair"~"^(yes|only)$"]; 
-      nw["service:camera:repair"~"^(yes|only)$"]; 
-      nw["hifi:repair"~"^(yes|only)$"]; 
-      nw["repair"~"^(electronics|tv|electricity)$"]; 
-      nw["craft"="electronics_repair"]; 
-      nw["shop"~"^(electronics|hifi|camera|radiotechnics|electrical|vacuum_cleaner|appliance|white_goods)$"]["repair"~"^(yes|only)$"]; 
+      nw["service:small_electronics_device:repair"~"^(yes|only)$"];
+      nw["camera:repair"~"^(yes|only)$"];
+      nw["service:camera:repair"~"^(yes|only)$"];
+      nw["hifi:repair"~"^(yes|only)$"];
+      nw["repair"~"^(electronics|tv|electricity)$"];
+      nw["craft"="electronics_repair"];
+      nw["shop"~"^(electronics|hifi|camera|radiotechnics|electrical|vacuum_cleaner|appliance|white_goods)$"]["repair"~"^(yes|only)$"];
       nw["craft"~"^(headphones|electronics|electrician)$"]["repair"~"^(yes|only)$"];`,
     color: "#800080",
     tags: [
@@ -2192,12 +2192,12 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
       nw["recycling:electrical_appliances"="yes"];
       nw["recycling:electrical_items"="yes"];
       nw["recycling:electronic"="yes"];
-      nw["recycling:electronics"="yes"]; 
+      nw["recycling:electronics"="yes"];
       nw["recycling:fridge_and_freezer"="yes"];
       nw["recycling:small_appliances"="yes"];
       nw["recycling:small_electrical_appliances"="yes"];
       nw["recycling:white_goods"="yes"];
-      nw["recycling:tv_monitor"="yes"];  
+      nw["recycling:tv_monitor"="yes"];
 
       nw["amenity"="give_box"]["electronics"!="no"]["give_box:policy"!="free_to_take"];`,
     color: "#800080",
@@ -2211,10 +2211,10 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     icon: "/lib/temaki-icons/electronic.svg",
     button: "fas fa-long-arrow-alt-left",
     query: `
-      nw["shop"~"^(electronics|hifi|appliance|camera|kitchen)$"]["second_hand"~"^(yes|only)$"]; 
+      nw["shop"~"^(electronics|hifi|appliance|camera|kitchen)$"]["second_hand"~"^(yes|only)$"];
 
       nw["amenity"="give_box"]["electronics"!="no"];
-      
+
       nw["rental"~"camera_equipment"];
       nw["shop"~"^(electronics|printer|appliance)$"]["rental"~"^(yes|only)$"];`,
     color: "#800080",
@@ -2229,13 +2229,13 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     button: "fas fa-tools",
     query: `
       nw["electronics_repair"~"^(yes|only)$"];
-      nw["service:small_electronics_device:repair"~"^(yes|only)$"]; 
-      nw["camera:repair"~"^(yes|only)$"]; 
-      nw["service:camera:repair"~"^(yes|only)$"]; 
-      nw["hifi:repair"~"^(yes|only)$"]; 
-      nw["repair"~"^(electronics|tv|electricity)$"]; 
-      nw["craft"="electronics_repair"]; 
-      nw["shop"~"^(electronics|hifi|camera|radiotechnics|electrical|vacuum_cleaner|appliance|white_goods)$"]["repair"~"^(yes|only)$"]; 
+      nw["service:small_electronics_device:repair"~"^(yes|only)$"];
+      nw["camera:repair"~"^(yes|only)$"];
+      nw["service:camera:repair"~"^(yes|only)$"];
+      nw["hifi:repair"~"^(yes|only)$"];
+      nw["repair"~"^(electronics|tv|electricity)$"];
+      nw["craft"="electronics_repair"];
+      nw["shop"~"^(electronics|hifi|camera|radiotechnics|electrical|vacuum_cleaner|appliance|white_goods)$"]["repair"~"^(yes|only)$"];
       nw["craft"~"^(headphones|electronics|electrician)$"]["repair"~"^(yes|only)$"];`,
     color: "#800080",
     tags: [
