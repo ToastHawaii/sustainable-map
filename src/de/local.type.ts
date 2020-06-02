@@ -4,8 +4,39 @@ export const type = {
   "tourist-attraction": { name: "Sehenswürdigkeit", description: "" },
   "archaeological-site": { name: "Archäologische Stätte", description: "" },
   trail: { name: "Lehrpfad", description: "" },
-  "battery-recycling": { name: "Batterie weiterverwerten", description: "" },
-  "oil-recycling":{ name: "Öl weiterverwerten", description: "" },
+  "battery-recycling": {
+    name: "Batterie",
+    description: "",
+    externalResources: [
+      {
+        name: "Recycling Map",
+        url: "https://recycling-map.ch/de/karte/?pos/{lat}/{lng}/{zoom}",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      }
+    ]
+  },
+  "oil-recycling": {
+    name: "Öl",
+    description: "",
+    externalResources: [
+      {
+        name: "Recycling Map",
+        url: "https://recycling-map.ch/de/karte/?pos/{lat}/{lng}/{zoom}",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      }
+    ]
+  },
+  "hazardous-recycling": {
+    name: "Sondermüll",
+    description: "",
+    externalResources: [
+      {
+        name: "Recycling Map",
+        url: "https://recycling-map.ch/de/karte/?pos/{lat}/{lng}/{zoom}",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      }
+    ]
+  },
   sport: { name: "Sport", description: "" },
   books: {
     name: "Bücher",

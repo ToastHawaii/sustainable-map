@@ -1670,6 +1670,38 @@ node["man_made"="surveillance"]["image"];`,
     edit: ["amenity=recycling"]
   },
   {
+    group: "material",
+    value: "hazardous-recycling",
+    icon: "/lib/maki-icons/danger-15.svg",
+    query: `
+    nw["recycling:hazardous_waste"="yes"];
+    nw["recycling:hydrargyrum"="yes"];
+    nw["recycling:paint"="yes"];`,
+    color: "#000000",
+    tags: [
+      "recycling:hazardous_waste=yes",
+      "recycling:hydrargyrum=yes",
+      "recycling:paint=yes",
+    ],
+    edit: ["amenity=recycling"]
+  },
+  {
+    group: "material",
+    value: "hazardous-recycling",
+    icon: "/lib/maki-icons/danger-15.svg",
+    query: `
+    nw["recycling:hazardous_waste"="yes"];
+    nw["recycling:hydrargyrum"="yes"];
+    nw["recycling:paint"="yes"];`,
+    color: "#000000",
+    tags: [
+      "recycling:hazardous_waste=yes",
+      "recycling:hydrargyrum=yes",
+      "recycling:paint=yes",
+    ],
+    edit: ["amenity=recycling"]
+  },
+  {
     group: "trip",
     value: "picnic-site",
     icon: "https://wiki.openstreetmap.org/w/images/f/fc/Picnic_site.svg",

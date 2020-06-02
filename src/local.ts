@@ -31,6 +31,9 @@ export const local = {
   cookingOil: "Cooking oil",
   engineOil: "Engine oil",
   oil: "Waste oil",
+  paint: "Paint",
+  hazardous: "Hazardous waste",
+  hydrargyrum: "Quicksilver",
   beekeeper: "Beekeeper",
   shoes: "Shoes",
   recycling: "Recycling",
@@ -120,7 +123,7 @@ export const local = {
     trip: "Trip",
     goods: "Goods",
     food: "Food",
-    material: "Material"
+    material: "Material recycling"
   },
   amenity: {
     hunting_stand: "Hunting stand"

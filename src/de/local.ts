@@ -31,6 +31,9 @@ export const local = {
   cookingOil: "Speiseöl",
   engineOil: "Maschinenöl",
   oil: "Altöl",
+  paint: "Farbe",
+  hazardous: "Sondermüll",
+  hydrargyrum: "Quecksilber",
   beekeeper: "Imker",
   shoes: "Schuhe",
   recycling: "Weiterverwerten",
@@ -120,7 +123,7 @@ export const local = {
     trip: "Ausflug",
     goods: "Gegenstände",
     food: "Nahrung",
-    material: "Material"
+    material: "Material weiterverwerten"
   },
   amenity: {
     hunting_stand: "Hochsitz für Jäger"
