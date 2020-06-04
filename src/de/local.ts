@@ -35,6 +35,8 @@ export const local = {
   hazardous: "Sondermüll",
   hydrargyrum: "Quecksilber",
   beekeeper: "Imker",
+  marketplace: "Markt",
+  milkFillingStation: "Milch-Tankstelle",
   shoes: "Schuhe",
   recycling: "Weiterverwerten",
   reuse: "Wiederverwenden",

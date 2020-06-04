@@ -235,7 +235,15 @@ export const type = {
   },
   grocery: {
     name: "Grocery",
-    description: ""
+    description: "",
+    externalResources: [
+      {
+        name: "Vom Milchbuur",
+        url:
+          "https://www.swissmilk.ch/de/schweizer-milch/vommilchbuur/karte/?certificate=&product=&offer=&main=&mapbounds={bbox}",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      }
+    ]
   },
   sweets: {
     name: "Sweets",

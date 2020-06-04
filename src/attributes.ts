@@ -251,6 +251,14 @@ export const attributes: Attribute<{}>[] = [
     template: local => template(local.beekeeper, "fas fa-archive")
   },
   {
+    check: tags => tags.amenity === "marketplace",
+    template: local => template(local.marketplace, "fas fa-store")
+  },
+  {
+    check: tags => /milk/gi.test(tags.vending),
+    template: local => template(local.milkFillingStation, "fas fa-wine-bottle")
+  },
+  {
     check: tags =>
       (tags.amenity === "library" && tags.library !== "booksharing") ||
       tags.amenity === "toy_library" ||
@@ -539,7 +547,6 @@ function vegetarian(tags: Tags, local: any) {
     tags.shop === "greengrocer" ||
     tags.shop === "pasta" ||
     tags.craft === "pasta" ||
-    tags.amenity === "marketplace" ||
     tags.shop === "dairy" ||
     tags.shop === "cheese" ||
     /milk/gi.test(tags.vending)
@@ -576,8 +583,7 @@ function vegan(tags: Tags, local: any) {
     /vegan/gi.test(tags["cuisine"]) ||
     tags.shop === "greengrocer" ||
     tags.shop === "pasta" ||
-    tags.craft === "pasta" ||
-    tags.amenity === "marketplace"
+    tags.craft === "pasta"
   ) {
     return {
       text: local.vegan?.yes,

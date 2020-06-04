@@ -453,12 +453,19 @@ out center;`
             a.addEventListener("click", () => {
               const latlng = map.getCenter();
               const zoom = map.getZoom();
+              const bounds = map.getBounds();
 
               window.open(
                 (a as HTMLAnchorElement).href
                   .replace(/\{lat\}/i, latlng.lat + "")
                   .replace(/\{lng\}/i, latlng.lng + "")
-                  .replace(/\{zoom\}/i, zoom + ""),
+                  .replace(/\{zoom\}/i, zoom + "")
+                  .replace(
+                    /\{bbox\}/i,
+                    `${bounds.getNorthWest().lat},${
+                      bounds.getNorthWest().lng
+                    },${bounds.getSouthEast().lat},${bounds.getSouthEast().lng}`
+                  ),
                 "_blank"
               );
               return false;

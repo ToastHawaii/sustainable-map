@@ -35,6 +35,8 @@ export const local = {
   hazardous: "Hazardous waste",
   hydrargyrum: "Quicksilver",
   beekeeper: "Beekeeper",
+  marketplace: "Market",
+  milkFillingStation: "Milk filling station",
   shoes: "Shoes",
   recycling: "Recycling",
   reuse: "Reuse",
