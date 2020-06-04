@@ -1681,7 +1681,7 @@ node["man_made"="surveillance"]["image"];`,
     tags: [
       "recycling:hazardous_waste=yes",
       "recycling:hydrargyrum=yes",
-      "recycling:paint=yes",
+      "recycling:paint=yes"
     ],
     edit: ["amenity=recycling"]
   },
@@ -1697,7 +1697,7 @@ node["man_made"="surveillance"]["image"];`,
     tags: [
       "recycling:hazardous_waste=yes",
       "recycling:hydrargyrum=yes",
-      "recycling:paint=yes",
+      "recycling:paint=yes"
     ],
     edit: ["amenity=recycling"]
   },
@@ -1989,7 +1989,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     subgroup: "mobile-phones",
     value: "mobile-phones-take",
     icon: "/lib/maki-icons/mobile-phone-15.svg",
-    button: "fas fa-long-arrow-alt-left",
+    button: "fas fa-long-arrow-alt-right",
     query: `
       nw["shop"="mobile_phone"]["second_hand"~"^(yes|only)$"];
       nw["amenity"="give_box"]["electronics"!="no"];`,
@@ -2061,7 +2061,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     subgroup: "computers",
     value: "computers-take",
     icon: "https://wiki.openstreetmap.org/w/images/b/bb/Computer-14.svg",
-    button: "fas fa-long-arrow-alt-left",
+    button: "fas fa-long-arrow-alt-right",
     query: `
       nw["shop"="computer"]["second_hand"~"^(yes|only)$"];
       nw["amenity"="give_box"]["electronics"!="no"];`,
@@ -2085,84 +2085,90 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     tags: ["shop=computer", "repair=assisted_self_service", "repair=*"],
     edit: ["shop=computer", "amenity"]
   },
-  //   {
-  //     group: "goods",
-  //     value: "toys",
-  //     icon: "https://wiki.openstreetmap.org/w/images/6/62/Toys-14.svg",
-  //     query: `
-  //     // Give
-  //     nw["recycling:toys"="yes"];
+  {
+    group: "goods",
+    value: "toys",
+    icon: "https://wiki.openstreetmap.org/w/images/6/62/Toys-14.svg",
+    query: `
+      // Give
+      nw["recycling:toys"="yes"];
 
-  //     // Give and take
-  //     nw["amenity"="give_box"];
+      // Give and take
+      nw["shop"="toys"][~"^(regional|fair_trade|second_hand)$"~"^(yes|only)$"];
+      nw["amenity"="give_box"];
 
-  //     // Rent
-  //     nw["amenity"="toy_library"]["fee"="no"];
+      // Rent
+      nw["amenity"="toy_library"];
+      nw["rental"~"toys"];
 
-  //     // Repair
-  //     node["repair"="assisted_self_service"]["service:toy:repair"="yes"];
-  //     node["repair"="assisted_self_service"]["toy:repair"="yes"];`,
-  //     color: "#800000",
-  //     tags: [
-  //       "amenity=recycling",
-  //       "amenity=give_box",
-  //       "amenity=toy_library",
-  //       "repair=assisted_self_service",
-  //       "repair=*"
-  //     ],
-  //     edit: ["amenity=recycling", "amenity=toy_library", "amenity"]
-  //   },
-  //   {
-  //     group: "goods",
-  //     subgroup: "toys",
-  //     value: "toys-give",
-  //     icon: "https://wiki.openstreetmap.org/w/images/6/62/Toys-14.svg",
-  //     button: "fas fa-long-arrow-alt-right",
-  //     query: `
-  //     nw["recycling:toys"="yes"];
+      // Repair
+      nw["service:toy:repair"="yes"];
+      nw["toy:repair"="yes"];`,
+    color: "#800000",
+    tags: [
+      "recycling:toys=yes",
+      "shop=toys",
+      "amenity=give_box",
+      "amenity=toy_library",
+      "repair=assisted_self_service",
+      "repair=*"
+    ],
+    edit: ["amenity=recycling", "shop=toys", "amenity=toy_library", "amenity"]
+  },
+  {
+    group: "goods",
+    subgroup: "toys",
+    value: "toys-give",
+    icon: "https://wiki.openstreetmap.org/w/images/6/62/Toys-14.svg",
+    button: "fas fa-sync-alt",
+    query: `
+      nw["recycling:toys"="yes"];
 
-  //     nw["amenity"="give_box"]["give_box:policy"!="free_to_take"];`,
-  //     color: "#800000",
-  //     tags: ["amenity=recycling", "amenity=give_box"],
-  //     edit: ["amenity=recycling", "amenity"]
-  //   },
-  //   {
-  //     group: "goods",
-  //     subgroup: "toys",
-  //     value: "toys-take",
-  //     icon: "https://wiki.openstreetmap.org/w/images/6/62/Toys-14.svg",
-  //     button: "fas fa-long-arrow-alt-left",
-  //     query: `
-  //     nw["amenity"="give_box"];`,
-  //     color: "#800000",
-  //     tags: ["amenity=give_box"],
-  //     edit: ["amenity"]
-  //   },
-  //   // {
-  //   //   group: "goods",
-  //   //   subgroup: "toys",
-  //   //   value: "toys-rent",
-  //   //   icon: "https://wiki.openstreetmap.org/w/images/6/62/Toys-14.svg",
-  //   //   button: "fas fa-redo-alt",
-  //   //   query: `
-  //   //   nw["amenity"="toy_library"]["fee"="no"];`,
-  //   //   color: "#800000",
-  //   //   tags: ["amenity=toy_library"],
-  //   //   edit: ["amenity=toy_library"]
-  //   // },
-  //   {
-  //     group: "goods",
-  //     subgroup: "toys",
-  //     value: "toys-repair",
-  //     icon: "https://wiki.openstreetmap.org/w/images/6/62/Toys-14.svg",
-  //     button: "fas fa-tools",
-  //     query: `
-  //     node["repair"="assisted_self_service"]["service:toy:repair"="yes"];
-  //     node["repair"="assisted_self_service"]["toy:repair"="yes"];`,
-  //     color: "#800000",
-  //     tags: ["repair=assisted_self_service", "repair=*"],
-  //     edit: ["amenity"]
-  //   },
+      nw["amenity"="give_box"]["give_box:policy"!="free_to_take"];`,
+    color: "#800000",
+    tags: ["recycling:toys=yes", "amenity=give_box"],
+    edit: ["amenity=recycling", "amenity"]
+  },
+  {
+    group: "goods",
+    subgroup: "toys",
+    value: "toys-take",
+    icon: "https://wiki.openstreetmap.org/w/images/6/62/Toys-14.svg",
+    button: "fas fa-long-arrow-alt-right",
+    query: `
+      nw["shop"="toys"][~"^(regional|fair_trade|second_hand)$"~"^(yes|only)$"];
+
+      nw["amenity"="give_box"];`,
+    color: "#800000",
+    tags: ["shop=toys", "amenity=give_box"],
+    edit: ["shop=toys", "amenity"]
+  },
+  {
+    group: "goods",
+    subgroup: "toys",
+    value: "toys-rent",
+    icon: "https://wiki.openstreetmap.org/w/images/6/62/Toys-14.svg",
+    button: "fas fa-redo-alt",
+    query: `
+      nw["amenity"="toy_library"];
+      nw["amenity"="give_box"];`,
+    color: "#800000",
+    tags: ["amenity=toy_library"],
+    edit: ["amenity=toy_library"]
+  },
+  {
+    group: "goods",
+    subgroup: "toys",
+    value: "toys-repair",
+    icon: "https://wiki.openstreetmap.org/w/images/6/62/Toys-14.svg",
+    button: "fas fa-tools",
+    query: `
+      nw["service:toy:repair"="yes"];
+      nw["toy:repair"="yes"];`,
+    color: "#800000",
+    tags: ["repair=assisted_self_service", "repair=*"],
+    edit: ["amenity"]
+  },
   {
     group: "goods",
     value: "electronics",
@@ -2259,7 +2265,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     subgroup: "electronics",
     value: "electronics-take",
     icon: "/lib/temaki-icons/electronic.svg",
-    button: "fas fa-long-arrow-alt-left",
+    button: "fas fa-long-arrow-alt-right",
     query: `
       nw["shop"~"^(electronics|hifi|appliance|camera|kitchen)$"]["second_hand"~"^(yes|only)$"];
 
@@ -2315,69 +2321,82 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
       "craft=electronics_repair",
       "amenity"
     ]
+  },
+  {
+    group: "goods",
+    value: "furniture",
+    icon: "/lib/temaki-icons/furniture.svg",
+    query: `
+      // Give
+      nw["recycling:furniture"="yes"];
+
+      // Give and take
+      nw["shop"="^(interior_decoration|furniture)$"][~"^(rental|regional|fair_trade|second_hand)$"~"^(yes|only)$"];
+      nw["amenity"="give_box"];
+
+      nw["rental"~"tableware|furniture"];
+
+      // Repair
+      nw["service:furniture:repair"="yes"];
+      nw["furniture:repair"="yes"];`,
+    color: "#B8860B",
+    tags: [
+      "recycling:furniture=yes",
+      "shop=interior_decoration",
+      "shop=furniture",
+      "amenity=give_box",
+      "repair=assisted_self_service",
+      "repair=*"
+    ],
+    edit: [
+      "amenity=recycling",
+      "shop=interior_decoration",
+      "shop=furniture",
+      "amenity"
+    ]
+  },
+  {
+    group: "goods",
+    subgroup: "furniture",
+    value: "furniture-give",
+    icon: "/lib/temaki-icons/furniture.svg",
+    button: "fas fa-sync-alt",
+    query: `
+      nw["recycling:furniture"="yes"];
+
+      nw["amenity"="give_box"]["give_box:policy"!="free_to_take"];`,
+    color: "#B8860B",
+    tags: ["recycling:furniture=yes", "amenity=give_box"],
+    edit: ["amenity=recycling", "amenity"]
+  },
+  {
+    group: "goods",
+    subgroup: "furniture",
+    value: "furniture-take",
+    icon: "/lib/temaki-icons/furniture.svg",
+    button: "fas fa-long-arrow-alt-right",
+    query: `
+      nw["shop"="^(interior_decoration|furniture)$"][~"^(rental|regional|fair_trade|second_hand)$"~"^(yes|only)$"];
+      nw["amenity"="give_box"];
+
+      nw["rental"~"tableware|furniture"];`,
+    color: "#B8860B",
+    tags: ["shop=interior_decoration", "shop=furniture", "amenity=give_box"],
+    edit: ["shop=interior_decoration", "shop=furniture", "amenity"]
+  },
+  {
+    group: "goods",
+    subgroup: "furniture",
+    value: "furniture-repair",
+    icon: "/lib/temaki-icons/furniture.svg",
+    button: "fas fa-tools",
+    query: `
+      nw["service:furniture:repair"="yes"];
+      nw["furniture:repair"="yes"];`,
+    color: "#B8860B",
+    tags: ["repair=assisted_self_service", "repair=*"],
+    edit: ["amenity"]
   }
-  //   {
-  //     group: "goods",
-  //     value: "furniture",
-  //     icon: "/lib/temaki-icons/furniture.svg",
-  //     query: `
-  //     // Give
-  //     nw["recycling:furniture"="yes"];
-
-  //     // Give and take
-  //     nw["amenity"="give_box"];
-
-  //     // Repair
-  //     node["repair"="assisted_self_service"]["service:furniture:repair"="yes"];
-  //     node["repair"="assisted_self_service"]["furniture:repair"="yes"];`,
-  //     color: "#B8860B",
-  //     tags: [
-  //       "amenity=recycling",
-  //       "amenity=give_box",
-  //       "repair=assisted_self_service",
-  //       "repair=*"
-  //     ],
-  //     edit: ["amenity=recycling", "amenity"]
-  //   },
-  //   {
-  //     group: "goods",
-  //     subgroup: "furniture",
-  //     value: "furniture-give",
-  //     icon: "/lib/temaki-icons/furniture.svg",
-  //     button: "fas fa-long-arrow-alt-right",
-  //     query: `
-  //     nw["recycling:furniture"="yes"];
-
-  //     nw["amenity"="give_box"]["give_box:policy"!="free_to_take"];`,
-  //     color: "#B8860B",
-  //     tags: ["amenity=recycling", "amenity=give_box"],
-  //     edit: ["amenity=recycling", "amenity"]
-  //   },
-  //   {
-  //     group: "goods",
-  //     subgroup: "furniture",
-  //     value: "furniture-take",
-  //     icon: "/lib/temaki-icons/furniture.svg",
-  //     button: "fas fa-long-arrow-alt-left",
-  //     query: `
-  //     nw["amenity"="give_box"];`,
-  //     color: "#B8860B",
-  //     tags: ["amenity=give_box"],
-  //     edit: ["amenity"]
-  //   },
-  //   {
-  //     group: "goods",
-  //     subgroup: "furniture",
-  //     value: "furniture-repair",
-  //     icon: "/lib/temaki-icons/furniture.svg",
-  //     button: "fas fa-tools",
-  //     query: `
-  //     node["repair"="assisted_self_service"]["service:furniture:repair"="yes"];
-  //     node["repair"="assisted_self_service"]["furniture:repair"="yes"];`,
-  //     color: "#B8860B",
-  //     tags: ["repair=assisted_self_service", "repair=*"],
-  //     edit: ["amenity"]
-  //   },
 
   //   {
   //     group: "goods",
@@ -2442,7 +2461,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
   //     subgroup: "bicycle",
   //     value: "bicycle-give",
   //     icon: "/lib/maki-icons/bicycle-15.svg",
-  //     button: "fas fa-long-arrow-alt-right",
+  //     button: "fas fa-sync-alt",
   //     query: `
   //     nw["recycling:bicycles"="yes"];`,
   //     color: "#4682B4",
