@@ -240,8 +240,15 @@ export const type = {
     externalResources: [
       {
         name: "Vom Milchbuur",
-        url: "https://www.swissmilk.ch/de/schweizer-milch/vommilchbuur/karte/?certificate=&product=&offer=&main=&mapbounds={bbox}",
+        url:
+          "https://www.swissmilk.ch/de/schweizer-milch/vommilchbuur/karte/?certificate=&product=&offer=&main=&mapbounds={bbox}",
         bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      },
+      {
+        name: "Fairtrade Deutschland",
+        url:
+          "https://www.fairtrade-deutschland.de/einkaufen/einkaufs-finder.html",
+        bounds: [47.27, 5.87, 55.1, 15.04]
       }
     ]
   },
@@ -322,11 +329,27 @@ export const type = {
   },
   dinner: {
     name: "Essen",
-    description: ""
+    description: "",
+    externalResources: [
+      {
+        name: "Fairtrade Deutschland",
+        url:
+          "https://www.fairtrade-deutschland.de/einkaufen/einkaufs-finder.html",
+        bounds: [47.27, 5.87, 55.1, 15.04]
+      }
+    ]
   },
   "goods-get": {
     name: "Waren bekommen",
-    description: ""
+    description: "",
+    externalResources: [
+      {
+        name: "Fairtrade Deutschland",
+        url:
+          "https://www.fairtrade-deutschland.de/einkaufen/einkaufs-finder.html",
+        bounds: [47.27, 5.87, 55.1, 15.04]
+      }
+    ]
   },
   "goods-exchange": {
     name: "Waren Tausch",
@@ -545,6 +568,12 @@ export const type = {
     name: "Kleider",
     description: "",
     externalResources: [
+      {
+        name: "GET CHANGED!",
+        url:
+          "https://getchanged.net/brands-n132-sD.html?suchauswahl=storesanzeigen&standards=&brand=&ort={lat}%2C{lng}",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      },
       {
         name: "Pumpipumpe",
         url: "https://map.pumpipumpe.ch/"

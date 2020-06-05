@@ -101,6 +101,8 @@ Orte, an denen Du auch ohne Papiere und/oder Geld an dem Leben in der Stadt teil
 
 Berlin, gratis und ganz einfach für alle erlebbar. [gratis-in-berlin](https://www.gratis-in-berlin.de/)
 
+Wir verschieben den Overshoot Day auf Ende Jahr [#MoveTheDate Schweiz](https://www.movethedate.ch/map)
+
 Besuche öffentliche Bücherschränke und trage diese ein. Schau dir dazu [die schöne Karte von Binnette](https://umap.openstreetmap.fr/fr/map/osm-bookcases-and-boite-a-lire_362287#15/45.2010/5.7389) an, welche auf den Daten von [boite-a-lire](https://www.boite-a-lire.com/) basiert. [Hier geht es zur Projekt Webseite von Binnette's bookcases-to-check](https://github.com/Binnette/bookcases-to-check).
 
 Eine Karte mit öffentlichen und kostenlosen Einrichtungen und Angebote. [Unbezahlbar](https://priceless.zottelig.ch/de)
