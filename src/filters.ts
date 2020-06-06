@@ -2313,21 +2313,29 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     query: `
       // Give
       nw["recycling:furniture"="yes"];
+      nw["recycling:interior_decoration"="yes"];
+      nw["recycling:wood"="yes"];
+      nw["recycling:pallets"="yes"];
 
       // Give and take
       nw["shop"="^(interior_decoration|furniture)$"][~"^(rental|regional|fair_trade|second_hand)$"~"^(yes|only)$"];
       nw["amenity"="give_box"];
 
       nw["rental"~"tableware|furniture"];
+      nw["shop"="furniture"]["rental"~"^(yes|only)$"];
 
       // Repair
       nw["service:furniture:repair"="yes"];
-      nw["furniture:repair"="yes"];`,
+      nw["furniture:repair"~"^(yes|only)$"];
+      nw["shop"="furniture"]["repair"~"^(yes|only)$"];
+      nw["craft"="cabinet_maker"]["repair"~"^(yes|only)$"];`,
     color: "#B8860B",
     tags: [
       "recycling:furniture=yes",
+      "recycling:wood=yes",
       "shop=interior_decoration",
       "shop=furniture",
+      "craft=cabinet_maker",
       "amenity=give_box",
       "repair=assisted_self_service",
       "repair=*"
@@ -2336,6 +2344,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
       "amenity=recycling",
       "shop=interior_decoration",
       "shop=furniture",
+      "craft=cabinet_maker",
       "amenity"
     ]
   },
@@ -2347,10 +2356,13 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     button: "fas fa-sync-alt",
     query: `
       nw["recycling:furniture"="yes"];
+      nw["recycling:interior_decoration"="yes"];
+      nw["recycling:wood"="yes"];
+      nw["recycling:pallets"="yes"];
 
       nw["amenity"="give_box"]["give_box:policy"!="free_to_take"];`,
     color: "#B8860B",
-    tags: ["recycling:furniture=yes", "amenity=give_box"],
+    tags: ["recycling:furniture=yes", "recycling:wood=yes", "amenity=give_box"],
     edit: ["amenity=recycling", "amenity"]
   },
   {
@@ -2363,10 +2375,11 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
       nw["shop"="^(interior_decoration|furniture)$"][~"^(rental|regional|fair_trade|second_hand)$"~"^(yes|only)$"];
       nw["amenity"="give_box"];
 
-      nw["rental"~"tableware|furniture"];`,
+      nw["rental"~"tableware|furniture"];
+      nw["shop"="furniture"]["rental"~"^(yes|only)$"];`,
     color: "#B8860B",
     tags: ["shop=interior_decoration", "shop=furniture", "amenity=give_box"],
-    edit: ["shop=interior_decoration", "shop=furniture", "amenity"]
+    edit: ["shop=interior_decoration", "craft=cabinet_maker", "amenity"]
   },
   {
     group: "goods",
@@ -2375,11 +2388,17 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     icon: "/lib/temaki-icons/furniture.svg",
     button: "fas fa-tools",
     query: `
-      nw["service:furniture:repair"="yes"];
-      nw["furniture:repair"="yes"];`,
+    nw["service:furniture:repair"="yes"];
+    nw["furniture:repair"~"^(yes|only)$"];
+    nw["shop"="furniture"]["repair"~"^(yes|only)$"];
+    nw["craft"="cabinet_maker"]["repair"~"^(yes|only)$"];`,
     color: "#B8860B",
-    tags: ["repair=assisted_self_service", "repair=*"],
-    edit: ["amenity"]
+    tags: [
+      "repair=assisted_self_service",
+      "repair=*",
+      "craft=cabinet_maker"
+    ],
+    edit: ["shop=furniture", "craft=cabinet_maker", "amenity"]
   }
 
   //   {
