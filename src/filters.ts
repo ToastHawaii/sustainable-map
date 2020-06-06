@@ -2318,7 +2318,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
       nw["recycling:pallets"="yes"];
 
       // Give and take
-      nw["shop"="^(interior_decoration|furniture)$"][~"^(rental|regional|fair_trade|second_hand)$"~"^(yes|only)$"];
+      nw["shop"="^(interior_decoration|furniture|bed)$"][~"^(rental|regional|fair_trade|second_hand)$"~"^(yes|only)$"];
       nw["amenity"="give_box"];
 
       nw["rental"~"tableware|furniture"];
@@ -2372,7 +2372,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     icon: "/lib/temaki-icons/furniture.svg",
     button: "fas fa-long-arrow-alt-right",
     query: `
-      nw["shop"="^(interior_decoration|furniture)$"][~"^(rental|regional|fair_trade|second_hand)$"~"^(yes|only)$"];
+      nw["shop"="^(interior_decoration|furniture|bed)$"][~"^(rental|regional|fair_trade|second_hand)$"~"^(yes|only)$"];
       nw["amenity"="give_box"];
 
       nw["rental"~"tableware|furniture"];
