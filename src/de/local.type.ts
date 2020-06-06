@@ -684,9 +684,10 @@ export const type = {
     ]
   },
   "bicycle-give": { name: "Velo (Geben)", description: "" },
+  "bicycle-get": {
+    name: "Bicycle (Bekommen)",
+    description: ""
+  },
   "bicycle-rent": { name: "Velo (Ausleihen)", description: "" },
-  "bicycle-repair": { name: "Velo (Reparieren)", description: "" },
-  "bicycle-pump": { name: "Velo (Aufpumpen)", description: "" },
-  "bicycle-park": { name: "Velo (Park)", description: "" },
-  "bicycle-charge": { name: "Velo (Aufladen)", description: "" }
+  "bicycle-repair": { name: "Velo (Reparieren)", description: "" }
 };

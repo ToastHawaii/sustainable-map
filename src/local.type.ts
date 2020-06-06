@@ -680,9 +680,10 @@ export const type = {
     ]
   },
   "bicycle-give": { name: "Bicycle (Give)", description: "" },
+  "bicycle-get": {
+    name: "Bicycle (Get)",
+    description: ""
+  },
   "bicycle-rent": { name: "Bicycle (Rent)", description: "" },
-  "bicycle-repair": { name: "Bicycle (Repair)", description: "" },
-  "bicycle-pump": { name: "Bicycle (Pump)", description: "" },
-  "bicycle-park": { name: "Bicycle (Park)", description: "" },
-  "bicycle-charge": { name: "Bicycle (Charge)", description: "" }
+  "bicycle-repair": { name: "Bicycle (Repair)", description: "" }
 };

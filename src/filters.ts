@@ -442,25 +442,6 @@ nw["recycling:books"="yes"];`,
   },
   {
     group: "mobility",
-    value: "bicycle-rental",
-    icon: "https://wiki.openstreetmap.org/w/images/d/d5/Rental-bicycle-16.svg",
-    query: `
-    nw["service:bicycle:rental"~"^(yes|only)$"];
-    nw["bicycle:rental"~"^(yes|only)$"];
-    nw["bicycle_rental"~"^(yes|only)$"];
-    nw["rental:bicycle"~"^(yes|only)$"];
-    nw["rental"~"bicycle|bike"];
-    nw["amenity"="bicycle_rental"];
-    nw["shop"="bicycle_rental"];
-    nw["shop"="bicycle"]["rental"~"^(yes|only)$"];
-    nw["amenity"="bicycle_sharing"];
-    nw["bicycle_rental"="cargo_bike"];`,
-    color: "#2E8B57",
-    tags: ["amenity=bicycle_rental"],
-    edit: ["amenity=bicycle_rental"]
-  },
-  {
-    group: "mobility",
     value: "bicycle-self-repair",
     icon:
       "https://wiki.openstreetmap.org/w/images/0/01/Bicycle_repair_station-14.svg",
@@ -488,9 +469,7 @@ nw["recycling:books"="yes"];`,
     icon:
       "https://wiki.openstreetmap.org/w/images/a/af/Charging_station.16.svg",
     query: `
-      (nw["amenity"="charging_station"]["fee"="no"]["parking:fee"!="yes"];
-        - nw["amenity"="charging_station"]["fee"="no"]["parking:fee"!="yes"][~"^authentication:.*$"~"^yes$"];);
-        nw["amenity"="charging_station"]["fee"="no"]["parking:fee"!="yes"]["authentication:none"="yes"];`,
+      nw["amenity"="charging_station"];`,
     color: "#0092da",
     tags: ["amenity=charging_station"],
     edit: ["amenity=charging_station"]
@@ -2393,169 +2372,118 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     nw["shop"="furniture"]["repair"~"^(yes|only)$"];
     nw["craft"="cabinet_maker"]["repair"~"^(yes|only)$"];`,
     color: "#B8860B",
+    tags: ["repair=assisted_self_service", "repair=*", "craft=cabinet_maker"],
+    edit: ["shop=furniture", "craft=cabinet_maker", "amenity"]
+  },
+  {
+    group: "mobility",
+    value: "bicycle",
+    icon: "/lib/maki-icons/bicycle-15.svg",
+    query: `
+      // Give
+      nw["recycling:bicycles"="yes"];
+
+      // Get
+      nw["shop"="bicycle"]["second_hand"~"^(yes|only)$"];
+
+      // Rent
+      nw["service:bicycle:rental"~"^(yes|only)$"];
+    nw["bicycle:rental"~"^(yes|only)$"];
+    nw["bicycle_rental"~"^(yes|only|cargo_bike)$"];
+    nw["rental:bicycle"~"^(yes|only)$"];
+    nw["rental"~"bicycle|bike"];
+    nw["amenity"="^(bicycle_rental|bicycle_sharing)$"];
+    nw["shop"="bicycle_rental"];
+    nw["shop"="bicycle"]["rental"~"^(yes|only)$"];
+
+      // Repair
+      nw["service:bicycle:repair"~"^(yes|only)$"];
+      nw["bicycle:repair"~"^(yes|only)$"];
+      nw["amenity"="bicycle_repair_station"];
+      nw["shop"="bicycle"]["repair"~"^(yes|only)$"];
+      nw["service:bicycle:diy"="yes"];`,
+    color: "#4682B4",
     tags: [
+      "amenity=recycling",
+      "shop=bicycle",
+      "amenity=bicycle_rental",
+      "amenity=bicycle_repair_station",
       "repair=assisted_self_service",
       "repair=*",
-      "craft=cabinet_maker"
+      "service:bicycle:repair=*",
+      "service:bicycle:diy=*"
     ],
-    edit: ["shop=furniture", "craft=cabinet_maker", "amenity"]
+    edit: [
+      "amenity=recycling",
+      "shop=bicycle",
+      "amenity=bicycle_rental",
+      "amenity=bicycle_repair_station",
+      "amenity"
+    ]
+  },
+  {
+    group: "mobility",
+    subgroup: "bicycle",
+    value: "bicycle-give",
+    icon: "/lib/maki-icons/bicycle-15.svg",
+    button: "fas fa-sync-alt",
+    query: `
+      nw["recycling:bicycles"="yes"];`,
+    color: "#4682B4",
+    tags: ["amenity=recycling"],
+    edit: ["amenity=recycling"]
+  },
+  {
+    group: "mobility",
+    subgroup: "bicycle",
+    value: "bicycle-get",
+    icon: "/lib/maki-icons/bicycle-15.svg",
+    button: "fas fa-long-arrow-alt-right",
+    query: `
+    nw["shop"="bicycle"]["second_hand"~"^(yes|only)$"];`,
+    color: "#4682B4",
+    tags: ["shop=bicycle"],
+    edit: ["shop=bicycle"]
+  },
+  {
+    group: "mobility",
+    subgroup: "bicycle",
+    value: "bicycle-rent",
+    icon: "/lib/maki-icons/bicycle-15.svg",
+    button: "fas fa-redo-alt",
+    query: `
+    nw["service:bicycle:rental"~"^(yes|only)$"];
+    nw["bicycle:rental"~"^(yes|only)$"];
+    nw["bicycle_rental"~"^(yes|only|cargo_bike)$"];
+    nw["rental:bicycle"~"^(yes|only)$"];
+    nw["rental"~"bicycle|bike"];
+    nw["amenity"="^(bicycle_rental|bicycle_sharing)$"];
+    nw["shop"="bicycle_rental"];
+    nw["shop"="bicycle"]["rental"~"^(yes|only)$"];`,
+    color: "#4682B4",
+    tags: ["amenity=bicycle_rental"],
+    edit: ["amenity=bicycle_rental"]
+  },
+  {
+    group: "mobility",
+    subgroup: "bicycle",
+    value: "bicycle-repair",
+    icon: "/lib/maki-icons/bicycle-15.svg",
+    button: "fas fa-tools",
+    query: `
+    nw["service:bicycle:repair"~"^(yes|only)$"];
+    nw["bicycle:repair"~"^(yes|only)$"];
+    nw["amenity"="bicycle_repair_station"];
+    nw["shop"="bicycle"]["repair"~"^(yes|only)$"];
+    nw["service:bicycle:diy"="yes"];`,
+    color: "#4682B4",
+    tags: [
+      "amenity=bicycle_repair_station",
+      "repair=assisted_self_service",
+      "repair=*",
+      "service:bicycle:repair=*",
+      "service:bicycle:diy=*"
+    ],
+    edit: ["amenity=bicycle_repair_station", "amenity", "shop"]
   }
-
-  //   {
-  //     group: "goods",
-  //     value: "bicycle",
-  //     icon: "/lib/maki-icons/bicycle-15.svg",
-  //     query: `
-  //     // Give
-  //     nw["recycling:bicycles"="yes"];
-
-  //     // Rent
-  //     ${nwFee(`["amenity"="bicycle_rental"]`)}
-
-  //     // Repair
-  //     nw["amenity"="bicycle_repair_station"];
-  //     node["repair"="assisted_self_service"]["service:bicycle:repair"="yes"];
-  //     node["repair"="assisted_self_service"]["bicycle:repair"="yes"];
-  //     nw["service:bicycle:diy"="yes"];
-
-  //     // Pump
-  //     nw["amenity"="compressed_air"];
-  //     nw["compressed_air"="yes"];
-  //     nw["service:bicycle:pump"="yes"];
-
-  //     // Park
-  //     nwr["sport"~"bmx|cycling"]["leisure"!~"sports_centre|stadium"]&part;
-  //    nwr["sport"~"bmx|cycling"]["leisure"~"sports_centre|stadium"]&free;
-
-  //     // Charge
-  //     (nw["amenity"="charging_station"]["fee"="no"]["bicycle"="yes"]["parking:fee"!="yes"];
-  //     - nw["amenity"="charging_station"]["fee"="no"]["bicycle"="yes"]["parking:fee"!="yes"][~"^authentication:.*$"~"^yes$"];);
-  //     nw["amenity"="charging_station"]["fee"="no"]["bicycle"="yes"]["parking:fee"!="yes"]["authentication:none"="yes"];`,
-  //     color: "#4682B4",
-  //     tags: [
-  //       "amenity=recycling",
-  //       "amenity=bicycle_rental",
-  //       "amenity=bicycle_repair_station",
-  //       "repair=assisted_self_service",
-  //       "repair=*",
-  //       "service:bicycle:repair=*",
-  //       "service:bicycle:diy=*",
-  //       "amenity=compressed_air",
-  //       "compressed_air=*",
-  //       "service:bicycle:pump=*",
-  //       "sport=bmx",
-  //       "sport=cycling",
-  //       "amenity=charging_station"
-  //     ],
-  //     edit: [
-  //       "amenity=recycling",
-  //       "amenity=bicycle_rental",
-  //       "amenity=bicycle_repair_station",
-  //       "amenity",
-  //       "shop",
-  //       "leisure=track",
-  //       "landuse=recreation_ground",
-  //       "leisure=pitch",
-  //       "amenity=charging_station"
-  //     ]
-  //   },
-  //   {
-  //     group: "goods",
-  //     subgroup: "bicycle",
-  //     value: "bicycle-give",
-  //     icon: "/lib/maki-icons/bicycle-15.svg",
-  //     button: "fas fa-sync-alt",
-  //     query: `
-  //     nw["recycling:bicycles"="yes"];`,
-  //     color: "#4682B4",
-  //     tags: ["amenity=recycling"],
-  //     edit: ["amenity=recycling"]
-  //   },
-  //   {
-  //     group: "goods",
-  //     subgroup: "bicycle",
-  //     value: "bicycle-rent",
-  //     icon: "/lib/maki-icons/bicycle-15.svg",
-  //     button: "fas fa-redo-alt",
-  //     query: `
-  //     ${nwFee(`["amenity"="bicycle_rental"]`)}`,
-  //     color: "#4682B4",
-  //     tags: ["amenity=bicycle_rental"],
-  //     edit: ["amenity=bicycle_rental"]
-  //   },
-  //   {
-  //     group: "goods",
-  //     subgroup: "bicycle",
-  //     value: "bicycle-repair",
-  //     icon: "/lib/maki-icons/bicycle-15.svg",
-  //     button: "fas fa-tools",
-  //     query: `
-  //     nw["amenity"="bicycle_repair_station"]["service:bicycle:tools"!="no"];
-
-  //     node["repair"="assisted_self_service"]["service:bicycle:repair"="yes"];
-  //     node["repair"="assisted_self_service"]["bicycle:repair"="yes"];
-
-  //     nw["service:bicycle:diy"="yes"];`,
-  //     color: "#4682B4",
-  //     tags: [
-  //       "amenity=bicycle_repair_station",
-  //       "repair=assisted_self_service",
-  //       "repair=*",
-  //       "service:bicycle:repair=*",
-  //       "service:bicycle:diy=*"
-  //     ],
-  //     edit: ["amenity=bicycle_repair_station", "amenity", "shop"]
-  //   },
-  //   {
-  //     group: "goods",
-  //     subgroup: "bicycle",
-  //     value: "bicycle-pump",
-  //     icon: "/lib/maki-icons/bicycle-15.svg",
-  //     button: "fas fa-tachometer-alt",
-  //     query: `
-  //     nw["amenity"="compressed_air"];
-
-  //     nw["compressed_air"="yes"];
-
-  //     nw["service:bicycle:pump"="yes"];`,
-  //     color: "#4682B4",
-  //     tags: [
-  //       "amenity=compressed_air",
-  //       "compressed_air=*",
-  //       "service:bicycle:pump=*"
-  //     ],
-  //     edit: [
-  //       "amenity=compressed_air",
-  //       "amenity=bicycle_repair_station",
-  //       "amenity",
-  //       "shop"
-  //     ]
-  //   },
-  //   {
-  //     group: "goods",
-  //     subgroup: "bicycle",
-  //     value: "bicycle-park",
-  //     icon: "/lib/maki-icons/bicycle-15.svg",
-  //     button: "fas fa-infinity",
-  //     query: `
-  //     nwr["sport"~"bmx|cycling"]["leisure"!~"sports_centre|stadium"]&part;
-  //    nwr["sport"~"bmx|cycling"]["leisure"~"sports_centre|stadium"]&free;`,
-  //     color: "#4682B4",
-  //     tags: ["sport=bmx", "sport=cycling"],
-  //     edit: ["leisure=track", "landuse=recreation_ground", "leisure=pitch"]
-  //   },
-  //   {
-  //     group: "goods",
-  //     subgroup: "bicycle",
-  //     value: "bicycle-charge",
-  //     icon: "/lib/maki-icons/bicycle-15.svg",
-  //     button: "fas fa-charging-station",
-  //     query: `
-  //     (nw["amenity"="charging_station"]["fee"="no"]["bicycle"="yes"]["parking:fee"!="yes"];
-  //     - nw["amenity"="charging_station"]["fee"="no"]["bicycle"="yes"]["parking:fee"!="yes"][~"^authentication:.*$"~"^yes$"];);
-  //     nw["amenity"="charging_station"]["fee"="no"]["bicycle"="yes"]["parking:fee"!="yes"]["authentication:none"="yes"];`,
-  //     color: "#4682B4",
-  //     tags: ["amenity=charging_station"],
-  //     edit: ["amenity=charging_station"]
-  //   }
 ];
