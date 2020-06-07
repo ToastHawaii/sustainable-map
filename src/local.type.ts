@@ -26,6 +26,17 @@ export const type = {
       }
     ]
   },
+  "reusable-bottle-reuse": {
+    name: "Reusable bottle",
+    description: "",
+    externalResources: [
+      {
+        name: "Recycling Map",
+        url: "https://recycling-map.ch/en/map/?pos/{lat}/{lng}/{zoom}",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      }
+    ]
+  },
   "hazardous-recycling": {
     name: "Hazardous waste",
     description: "",

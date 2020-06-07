@@ -1632,6 +1632,17 @@ node["man_made"="surveillance"]["image"];`,
   },
   {
     group: "material",
+    value: "reusable-bottle-reuse",
+    icon: "https://wiki.openstreetmap.org/w/images/e/eb/Alcohol-16.svg",
+    query: `
+    nw["vending"="bottle_return"];
+    nw["recycling:refund_bottles"="yes"];`,
+    color: "#267b26",
+    tags: ["vending=bottle_return"],
+    edit: ["vending=bottle_return"]
+  },
+  {
+    group: "material",
     value: "oil-recycling",
     icon: "/lib/maki-icons/water-15.svg",
     query: `
