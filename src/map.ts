@@ -111,10 +111,33 @@ export function initMap<M>(
   let currentAccuracy: L.Layer | L.Circle<any>;
 
   map.on("moveend", () => {
+    //  updateCount(map);
     const center = map.getCenter();
     const state = { lat: center.lat, lng: center.lng, zoom: map.getZoom() };
     set<State>("position", state);
   });
+
+  // function updateCount(map: L.Map) {
+  //   if (countMarkersInView(map) === 0) {
+  //     const e = document.createElement("div");
+  //     e.className = "leaflet-bottom leaflet-left";
+  //     e.innerHTML = `<div class="leaflet-control-emptyIndicator leaflet-control">Keine Elemente gefunden.</div>`;
+  //     getHtmlElement(".leaflet-control-container").appendChild(e);
+  //   }
+  // }
+
+  // function countMarkersInView(map: L.Map) {
+  //   let count = 0;
+  //   const mapBounds = map.getBounds();
+  //   map.eachLayer(layer => {
+  //     if (layer instanceof L.Marker) {
+  //       if (mapBounds.contains(layer.getLatLng())) {
+  //         count++;
+  //       }
+  //     }
+  //   });
+  //   return count;
+  // }
 
   function partAreaVisible() {
     const visibles = getHtmlElements(`.external-link`);
