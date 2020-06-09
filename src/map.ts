@@ -11,6 +11,7 @@ import { get, set } from "./utilities/storage";
 import { groupBy } from "./utilities/data";
 import { getHtmlElement, getHtmlElements } from "./utilities/html";
 import { createOverPassLayer } from "./createOverPassLayer";
+import { funding } from "./funding";
 
 declare var taginfo_taglist: any;
 
@@ -51,6 +52,10 @@ export function initMap<M>(
     window.location.href = `https://sustainable.zottelig.ch${
       local.code ? `/${local.code}` : ""
     }/docs`;
+  });
+
+  getHtmlElement(".donate").addEventListener("click", () => {
+    window.open(funding[local.code] || funding.en);
   });
 
   getHtmlElement(".note").addEventListener("click", () => {
