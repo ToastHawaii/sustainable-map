@@ -262,6 +262,10 @@ export const type = {
       }
     ]
   },
+  plant: {
+    name: "Plant",
+    description: ""
+  },
   sweets: {
     name: "Sweets",
     description: ""

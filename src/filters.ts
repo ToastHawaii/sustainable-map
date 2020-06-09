@@ -543,6 +543,30 @@ nw["landuse"="community_food_growing"];`,
   },
   {
     group: "food",
+    value: "plant",
+    icon: "https://wiki.openstreetmap.org/w/images/6/69/Florist-16.svg",
+    query: `
+    nw["shop"~"^(florist|garden_centre|agrarian)$"][~"^(regional|fair_trade|organic|second_hand)$"~"^(yes|only)$"];
+    nw["amenity"="vending_machine"]["vending"~"flowers"][~"^(regional|fair_trade|organic|second_hand)$"~"^(yes|only)$"];
+    nw["craft"="gardener"][~"^(regional|fair_trade|organic|second_hand)$"~"^(yes|only)$"];`,
+    color: "#DAC01A",
+    tags: [
+      "shop=florist",
+      "shop=garden_centre",
+      "shop=agrarian",
+      "amenity=vending_machine",
+      "craft=gardener"
+    ],
+    edit: [
+      "shop=florist",
+      "shop=garden_centre",
+      "shop=agrarian",
+      "amenity=vending_machine",
+      "craft=gardener"
+    ]
+  },
+  {
+    group: "food",
     value: "sweets",
     icon: "https://wiki.openstreetmap.org/w/images/c/cc/Confectionery-14.svg",
     query: `

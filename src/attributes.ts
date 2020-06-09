@@ -220,7 +220,7 @@ export const attributes: Attribute<{}>[] = [
     template: local => template(local.toy, "fas fa-horse")
   },
   {
-    check: tags => hasPropThatStartsWith(tags, "recycling:", "yes"),
+    check: tags => hasPropThatStartsWith(tags, "recycling:", "yes") || tags.composting === "yes",
     template: local => template(local.recycling, "fas fa-recycle")
   },
   {
