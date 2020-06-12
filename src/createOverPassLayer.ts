@@ -470,25 +470,26 @@ export function createOverPassLayer<M>(
                   }
                 );
 
-              loadWikipediaSummary(
-                e.tags.wikipedia,
-                local.code || "en",
-                summary => {
-                  model.wikipediaDescription = summary;
+              if (e.tags.wikipedia)
+                loadWikipediaSummary(
+                  e.tags.wikipedia,
+                  local.code || "en",
+                  summary => {
+                    model.wikipediaDescription = summary;
 
-                  getHtmlElement(".description", contentElement).innerHTML =
-                    model.description ||
-                    model.wikipediaDescription ||
-                    model.wikimediaDescription
-                      ? `${!model.img ? `<br />` : ``}<small>${
-                          model.description ||
-                          model.wikipediaDescription ||
-                          model.wikimediaDescription
-                        }</small>`
-                      : ``;
-                  popup.update();
-                }
-              );
+                    getHtmlElement(".description", contentElement).innerHTML =
+                      model.description ||
+                      model.wikipediaDescription ||
+                      model.wikimediaDescription
+                        ? `${!model.img ? `<br />` : ``}<small>${
+                            model.description ||
+                            model.wikipediaDescription ||
+                            model.wikimediaDescription
+                          }</small>`
+                        : ``;
+                    popup.update();
+                  }
+                );
             }
             if (model.img) {
               onImageLoaded(model.img, (loaded: boolean) => {
@@ -534,7 +535,7 @@ export function createOverPassLayer<M>(
   }
 }
 
- function loadWikipediaSummary(
+function loadWikipediaSummary(
   siteTitle: string,
   language: string,
   handler: (summary: string) => void
