@@ -9,7 +9,7 @@ import {
 import { toTitle, toLevel, toOpenOrClose } from "./view";
 import { getJson } from "./utilities/jsonRequest";
 import { getHtmlElement } from "./utilities/html";
-import { parseOpeningHours, overpassSubs } from "./map";
+import { parseOpeningHours, overpassSubs, updateCount } from "./map";
 import * as L from "leaflet";
 import { attributeDescriptions } from "./attributeDescriptions";
 
@@ -448,6 +448,7 @@ export function createOverPassLayer<M>(
         marker.bindPopup(popup);
         this._markers.addLayer(marker);
       }
+      updateCount();
     }
   });
 
