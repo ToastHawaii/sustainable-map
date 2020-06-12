@@ -12,7 +12,6 @@ import { groupBy } from "./utilities/data";
 import { getHtmlElement, getHtmlElements } from "./utilities/html";
 import { createOverPassLayer } from "./createOverPassLayer";
 import { funding } from "./funding";
-import { local } from "./local";
 
 declare var taginfo_taglist: any;
 
@@ -117,7 +116,7 @@ export function initMap<M>(
   let currentAccuracy: L.Layer | L.Circle<any>;
 
   map.on("moveend zoomend", () => {
-    updateCount();
+    updateCount(local);
     const center = map.getCenter();
     const state = { lat: center.lat, lng: center.lng, zoom: map.getZoom() };
     set<State>("position", state);
@@ -526,7 +525,7 @@ out center;`
           params["offers"] = offers.toString();
           setHashParams(params, hashchange);
 
-          updateCount();
+          updateCount(local);
         }
       );
     }
@@ -585,7 +584,7 @@ export function parseOpeningHours(openingHours: string, localCode: string) {
 
 let emptyIndicatorElement: HTMLDivElement | undefined;
 
-export function updateCount() {
+export function updateCount(local: any) {
   const visible =
     countMarkersInView(map) === 0 && offers.length > 0 && map.getZoom() >= 14;
   if (visible && !emptyIndicatorElement) {

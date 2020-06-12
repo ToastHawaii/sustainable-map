@@ -448,7 +448,7 @@ export function createOverPassLayer<M>(
         marker.bindPopup(popup);
         this._markers.addLayer(marker);
       }
-      updateCount();
+      updateCount(local);
     }
   });
 
