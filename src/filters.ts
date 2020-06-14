@@ -1700,6 +1700,45 @@ node["man_made"="surveillance"]["image"];`,
     edit: ["amenity=recycling"]
   },
   {
+    group: "material",
+    value: "rubble-recycling",
+    icon: "/lib/temaki-icons/ruins.svg",
+    query: `
+    nw["recycling:hardcore"="yes"];
+    nw["recycling:rubble"="yes"]; `,
+    color: "#d39476",
+    tags: ["recycling:hardcore=yes", "recycling:rubble=yes"],
+    edit: ["amenity=recycling"]
+  },
+  {
+    group: "material",
+    value: "plastic-recycling",
+    icon: "https://wiki.openstreetmap.org/w/images/9/98/Beverages-14.svg",
+    query: `
+    nw["recycling:plastic"="yes"];
+    nw["recycling:plastic_bottles"="yes"];
+    nw["recycling:plastic_packaging"="yes"];
+    nw["recycling:PET"="yes"];
+    nw["recycling:plastic_bags"="yes"];
+    nw["recycling:polystyrene_foam"="yes"];
+    nw["recycling:polyester"="yes"];
+    nw["recycling:styrofoam"="yes"];
+    nw["recycling:foil"="yes"];`,
+    color: "#5F9EA0",
+    tags: [
+      "recycling:plastic=yes",
+      "recycling:plastic_bottles=yes",
+      "recycling:plastic_packaging=yes",
+      "recycling:PET=yes",
+      "recycling:plastic_bags=yes",
+      "recycling:polystyrene_foam=yes",
+      "recycling:polyester=yes",
+      "recycling:styrofoam=yes",
+      "recycling:foil=yes"
+    ],
+    edit: ["amenity=recycling"]
+  },
+  {
     group: "trip",
     value: "picnic-site",
     icon: "https://wiki.openstreetmap.org/w/images/f/fc/Picnic_site.svg",

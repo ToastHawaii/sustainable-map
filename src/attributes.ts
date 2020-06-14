@@ -158,6 +158,42 @@ export const attributes: Attribute<{}>[] = [
     template: local => template(local.hydrargyrum, "fas fa-thermometer-full")
   },
   {
+    check: tags => tags["recycling:plastic"] === "yes",
+    template: local => template(local.plastic, "fas fa-cube")
+  },
+  {
+    check: tags => tags["recycling:plastic_bottles"] === "yes",
+    template: local => template(local.plastic_bottles, "fas fa-wine-bottle")
+  },
+  {
+    check: tags => tags["recycling:plastic_packaging"] === "yes",
+    template: local => template(local.plastic_packaging, "fas fa-cube")
+  },
+  {
+    check: tags => tags["recycling:PET"] === "yes",
+    template: local => template(local.PET, "fas fa-wine-bottle")
+  },
+  {
+    check: tags => tags["recycling:plastic_bags"] === "yes",
+    template: local => template(local.plastic_bags, "fas fa-shopping-bag")
+  },
+  {
+    check: tags => tags["recycling:polyester"] === "yes",
+    template: local => template(local.polyester, "fas fa-tshirt")
+  },
+  {
+    check: tags =>
+      tags["recycling:polystyrene_foam"] === "yes" ||
+      tags["recycling:styrofoam"] === "yes",
+    template: local => template(local.polystyrene_foam, "fas fa-box")
+  },
+  {
+    check: tags =>
+      tags["recycling:rubble"] === "yes" ||
+      tags["recycling:hardcore"] === "yes",
+    template: local => template(local.rubble, "fas fa-shapes")
+  },
+  {
     check: tags =>
       /^(yes|only)$/gi.test(tags.shoe_repair) ||
       tags["repair"] === "shoes" ||
@@ -220,7 +256,9 @@ export const attributes: Attribute<{}>[] = [
     template: local => template(local.toy, "fas fa-horse")
   },
   {
-    check: tags => hasPropThatStartsWith(tags, "recycling:", "yes") || tags.composting === "yes",
+    check: tags =>
+      hasPropThatStartsWith(tags, "recycling:", "yes") ||
+      tags.composting === "yes",
     template: local => template(local.recycling, "fas fa-recycle")
   },
   {
