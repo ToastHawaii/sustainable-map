@@ -8,5 +8,5 @@ export async function getJson(url: string, params: any) {
     }
   });
 
-  return response.json();
+  return await response.json();
 }

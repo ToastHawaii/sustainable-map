@@ -1,17 +1,14 @@
-import { toUrl, utilQsString } from "./utilities/url";
+import { utilQsString } from "./utilities/url";
 import { Generator, Attribute } from "./Generator";
 import { links } from "./links";
-import {
-  onImageLoaded,
-  toWikimediaCommonsUrl,
-  toMapillaryUrl
-} from "./utilities/image";
+import { isImage } from "./utilities/image";
 import { toTitle, toLevel, toOpenOrClose } from "./view";
 import { getJson } from "./utilities/jsonRequest";
-import { getHtmlElement } from "./utilities/html";
+import { getHtmlElement, createElement } from "./utilities/html";
 import { parseOpeningHours, overpassSubs, updateCount } from "./map";
 import * as L from "leaflet";
 import { attributeDescriptions } from "./attributeDescriptions";
+import { getName, getType, getOperator, getImage } from "./data";
 
 export function createOverPassLayer<M>(
   value: string,
@@ -69,33 +66,9 @@ export function createOverPassLayer<M>(
           });
         }
         const model = {
-          name: extractName(e.tags, local.code || "en") || e.tags["piste:name"],
-          type:
-            local["public_bookcase:type"][e.tags["public_bookcase:type"]] ||
-            local["garden:type"][e.tags["garden:type"]] ||
-            local["garden:style"][e.tags["garden:style"]] ||
-            local["castle_type"][e.tags["castle_type"]] ||
-            local["historic"][e.tags["historic"]] ||
-            local["fitness_station"][e.tags["fitness_station"]] ||
-            local["site_type"][e.tags["site_type"]] ||
-            e.tags["species:" + (local.code || "en")] ||
-            e.tags.species ||
-            e.tags["genus:" + (local.code || "en")] ||
-            e.tags.genus ||
-            e.tags.protection_title ||
-            local.boules[e.tags.boules] ||
-            local.sport[e.tags.sport] ||
-            local.amenity[e.tags.amenity] ||
-            local.leisure[e.tags.leisure] ||
-            local.man_made[e.tags.man_made] ||
-            local.landuse[e.tags.landuse] ||
-            local.natural[e.tags.natural] ||
-            local.type[value].name,
-          operator:
-            e.tags.operator ||
-            e.tags["heritage:operator"] ||
-            e.tags.brand ||
-            e.tags.network,
+          name: getName(e.tags, local.code || "en") || e.tags["piste:name"],
+          type: getType(local, e.tags, value),
+          operator: getOperator(e.tags),
           address: {
             name: "",
             postcode: e.tags["addr:postcode"] || "",
@@ -118,19 +91,7 @@ export function createOverPassLayer<M>(
           wikimediaDescription: "",
           wikipediaDescription: ""
         };
-        model.img =
-          model.img ||
-          toWikimediaCommonsUrl(e.tags.wikimedia_commons) ||
-          toMapillaryUrl(e.tags.mapillary) ||
-          toUrl(e.tags.flickr) ||
-          toWikimediaCommonsUrl(e.tags.image) ||
-          toUrl(e.tags.picture) ||
-          toUrl(e.tags["website:webcam"]) ||
-          toUrl(e.tags["webcam"]) ||
-          toUrl(e.tags["contact:webcam"]) ||
-          toUrl(e.tags["webcam:url"]) ||
-          toUrl(e.tags["url:webcam"]) ||
-          "";
+        model.img = model.img || getImage(e.tags) || "";
         model.description =
           e.tags[`description:${local.code || "en"}`] || e.tags.description;
         const attributesGenerator = new Generator<M>(attributes);
@@ -139,22 +100,23 @@ export function createOverPassLayer<M>(
           attributeDescriptions
         );
         let isLoaded = false;
-        const contentElement = document.createElement("div");
-        contentElement.innerHTML = `<div id="hcard-Name" class="vcard">
+        const contentElement = createElement(
+          "div",
+          `<div id="hcard-Name" class="vcard">
           <a style="float:right;" href="https://www.openstreetmap.org/edit?${
             e.type
           }=${
-          e.id
-        }"><i class="fas fa-pencil-alt"></i></a><strong class="name" title="${toTitle(
-          model
-        )}">${toTitle(model)}</strong>
+            e.id
+          }"><i class="fas fa-pencil-alt"></i></a><strong class="name" title="${toTitle(
+            model
+          )}">${toTitle(model)}</strong>
         <div class="adr">
 
         ${attributesGenerator.render(local, e.tags, value, {} as M)}
 
          <div class="street-address">${model.address.street} ${
-          model.address.houseNumber
-        } ${toLevel(parseFloat(model.address.level), local)}</div>
+            model.address.houseNumber
+          } ${toLevel(parseFloat(model.address.level), local)}</div>
             <span class="postal-code">${model.address.postcode}</span>
          <span class="region">${model.address.locality}</span>
         </div>
@@ -228,7 +190,8 @@ export function createOverPassLayer<M>(
               : ``
           }
         </div>
-        </div>`;
+        </div>`
+        );
         const popup = L.popup({
           minWidth: 200,
           autoPanPaddingTopLeft: [10, 85],
@@ -249,7 +212,7 @@ export function createOverPassLayer<M>(
                 lat: pos.lat,
                 lon: pos.lng
               }).then(result => {
-                model.address.name = extractName(
+                model.address.name = getName(
                   result.namedetails,
                   local.code || "en"
                 );
@@ -274,7 +237,7 @@ export function createOverPassLayer<M>(
                     result.address.pedestrian ||
                     result.address.farmyard ||
                     result.address.construction ||
-                    extractName(result.namedetails, local.code || "en");
+                    getName(result.namedetails, local.code || "en");
                   result.address.neighbourhood || "";
                   model.address.houseNumber =
                     model.address.houseNumber ||
@@ -312,7 +275,7 @@ export function createOverPassLayer<M>(
                   languages: local.code || "en",
                   languagefallback: "0",
                   origin: "*"
-                }).then(r => {
+                }).then(async r => {
                   if (r && r.error) return;
                   if (!r.entities[qid]) return;
                   const entity = r.entities[qid];
@@ -442,18 +405,17 @@ export function createOverPassLayer<M>(
       website: result.wiki ? result.wiki.url : undefined
     })}`
                     : ``;
-                  if (model.img) {
-                    onImageLoaded(model.img).then((loaded: boolean) => {
-                      if (!loaded) {
-                        getHtmlElement(
-                          ".img",
-                          contentElement
-                        ).outerHTML = `<a class="img" href="${model.img}" target="_blank"><i class="far fa-image fa-2x"></i></a>`;
-                      }
-                      popup.update();
-                    });
-                  }
+
                   popup.update();
+                  if (model.img) {
+                    if (!(await isImage(model.img))) {
+                      getHtmlElement(
+                        ".img",
+                        contentElement
+                      ).outerHTML = `<a class="img" href="${model.img}" target="_blank"><i class="far fa-image fa-2x"></i></a>`;
+                    }
+                    popup.update();
+                  }
                 });
 
               if (e.tags.wikipedia)
@@ -476,7 +438,7 @@ export function createOverPassLayer<M>(
                 );
             }
             if (model.img) {
-              onImageLoaded(model.img).then((loaded: boolean) => {
+              isImage(model.img).then((loaded: boolean) => {
                 if (!loaded)
                   getHtmlElement(
                     ".img",
@@ -494,29 +456,6 @@ export function createOverPassLayer<M>(
       updateCount(local);
     }
   });
-
-  function extractName(tags: any, langCode: string) {
-    return (
-      tags[`name:${langCode}`] ||
-      tags[`short_name:${langCode}`] ||
-      tags[`official_name:${langCode}`] ||
-      tags[`int_name:${langCode}`] ||
-      tags[`nat_name:${langCode}`] ||
-      tags[`reg_name:${langCode}`] ||
-      tags[`loc_name:${langCode}`] ||
-      tags[`old_name:${langCode}`] ||
-      tags[`alt_name:${langCode}`] ||
-      tags.name ||
-      tags.short_name ||
-      tags.official_name ||
-      tags.int_name ||
-      tags.nat_name ||
-      tags.reg_name ||
-      tags.loc_name ||
-      tags.old_name ||
-      tags.alt_name
-    );
-  }
 }
 
 async function loadWikipediaSummary(siteTitle: string, language: string) {

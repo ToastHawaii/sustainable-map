@@ -1,7 +1,8 @@
 import md5 = require("md5");
 import { httpRegex } from "./url";
+import { startsWithIgnoreCase } from "./string";
 
-export async function onImageLoaded(src: string) {
+export async function isImage(src: string) {
   return new Promise<boolean>(resolve => {
     const img = new Image();
     img.addEventListener("load", () => {
@@ -65,12 +66,4 @@ export function toMapillaryUrl(mapillary: string) {
   if (httpRegex.test(mapillary)) return mapillary;
 
   return `https://d1cuyjsrcm0gby.cloudfront.net/${mapillary}/thumb-320.jpg`;
-}
-
-function startsWithIgnoreCase(
-  s: string,
-  searchString: string,
-  position?: number
-) {
-  return s.toUpperCase().startsWith(searchString.toUpperCase(), position);
 }

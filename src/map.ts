@@ -9,7 +9,11 @@ import { Attribute } from "./Generator";
 import { getJson } from "./utilities/jsonRequest";
 import { get, set } from "./utilities/storage";
 import { groupBy } from "./utilities/data";
-import { getHtmlElement, getHtmlElements } from "./utilities/html";
+import {
+  getHtmlElement,
+  getHtmlElements,
+  createElement
+} from "./utilities/html";
 import { createOverPassLayer } from "./createOverPassLayer";
 import { funding } from "./funding";
 
@@ -292,9 +296,11 @@ export function initMap<M>(
   let iconColors = "";
   for (const k in groups) {
     const group = groups[k];
-    const detailsElement = document.createElement("details");
-    const summaryElement = document.createElement("summary");
-    summaryElement.innerHTML = `<span>${local.group[k]}</span>`;
+    const detailsElement = createElement("details");
+    const summaryElement = createElement(
+      "summary",
+      `<span>${local.group[k]}</span>`
+    );
     detailsElement.appendChild(summaryElement);
 
     for (const f of group) {
@@ -312,20 +318,23 @@ export function initMap<M>(
       }
 
       if (!f.subgroup) {
-        contentElement = document.createElement("label");
-        contentElement.classList.add("filter");
-        contentElement.classList.add("filter-" + k + "-" + f.value);
-        contentElement.innerHTML = `
-    <input value="${k + "/" + f.value}" type="checkbox" />
-    <div class="filter-label">
-      <img class="${f.value}-icon"
-        src="${f.icon}"
-      />
-      <span>${local.type[f.value].name}</span>
-    </div>`;
+        contentElement = createElement(
+          "label",
+          `
+          <input value="${k + "/" + f.value}" type="checkbox" />
+          <div class="filter-label">
+            <img class="${f.value}-icon"
+              src="${f.icon}"
+            />
+            <span>${local.type[f.value].name}</span>
+          </div>`,
+          ["filter", "filter-" + k + "-" + f.value]
+        );
 
-        const aElement = document.createElement("a");
-        aElement.innerHTML = `<i class="fas fa-info-circle"></i>`;
+        const aElement = createElement(
+          "a",
+          `<i class="fas fa-info-circle"></i>`
+        );
 
         aElement.addEventListener("click", () => {
           getHtmlElement(".info-container").style.display = "block";
@@ -488,15 +497,14 @@ out center;`
           detailsElement
         );
 
-        contentElement = document.createElement("label");
-        contentElement.classList.add("filter");
-        contentElement.classList.add("filter-sub");
-        contentElement.classList.add("filter-" + k + "-" + f.value);
-        contentElement.innerHTML = `
-    <input value="${k + "/" + f.value}" type="checkbox" />
-    <i class="${f.button}" style="color: ${f.color}" title="${
-          local.type[f.value].name
-        }"></i>`;
+        contentElement = createElement(
+          "label",
+          `<input value="${k + "/" + f.value}" type="checkbox" />
+           <i class="${f.button}" style="color: ${f.color}" title="${
+            local.type[f.value].name
+          }"></i>`,
+          ["filter", "filter-sub", "filter-" + k + "-" + f.value]
+        );
 
         detailsElement.insertBefore(contentElement, group);
       }
@@ -524,8 +532,7 @@ out center;`
     getHtmlElement("#filters").appendChild(detailsElement);
   }
 
-  const style = document.createElement("style");
-  style.innerHTML = iconColors;
+  const style = createElement("style", iconColors);
   document.head.appendChild(style);
 }
 
@@ -580,9 +587,12 @@ export function updateCount(local: any) {
   const visible =
     countMarkersInView(map) === 0 && offers.length > 0 && map.getZoom() >= 14;
   if (visible && !emptyIndicatorElement) {
-    emptyIndicatorElement = document.createElement("div");
-    emptyIndicatorElement.className = "leaflet-bottom leaflet-left";
-    emptyIndicatorElement.innerHTML = `<div class="leaflet-control-emptyIndicator leaflet-control">${local.emptyIndicator}</div>`;
+    emptyIndicatorElement = createElement(
+      "div",
+      `<div class="leaflet-control-emptyIndicator leaflet-control">${local.emptyIndicator}</div>`,
+      ["leaflet-bottom", "leaflet-left"]
+    );
+
     getHtmlElement(".leaflet-control-container").appendChild(
       emptyIndicatorElement
     );

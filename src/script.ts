@@ -24,6 +24,7 @@ else
   );
 
 import "details-element-polyfill";
+import { createElement } from "./utilities/html";
 
 document.addEventListener("click", e => {
   const target = (e.target as HTMLElement).parentElement;
@@ -32,9 +33,8 @@ document.addEventListener("click", e => {
   if (titleElement) titleElement.remove();
 
   if (target && target.classList.contains("attribut")) {
-    const titleElement = document.createElement("span");
-    titleElement.className = "title";
-    titleElement.innerHTML = target.title;
+    const titleElement = createElement("span", target.title, ["title"]);
+
     target.append(titleElement);
 
     setTimeout(() => {
