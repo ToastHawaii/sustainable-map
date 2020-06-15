@@ -25,7 +25,7 @@ else
 
 import "details-element-polyfill";
 
-document.addEventListener("click", function (e) {
+document.addEventListener("click", e => {
   const target = (e.target as HTMLElement).parentElement;
 
   const titleElement = document.querySelector(".attribut .title");

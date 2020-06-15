@@ -62,7 +62,7 @@ export function getHashParams() {
   return result;
 }
 
-export function setHashParams(
+export async function setHashParams(
   params: { [p: string]: string | number | boolean | undefined },
   hashChangeEventListener: {
     (this: Window, ev: HashChangeEvent): any;

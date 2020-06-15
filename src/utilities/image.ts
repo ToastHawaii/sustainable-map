@@ -1,25 +1,18 @@
 import md5 = require("md5");
 import { httpRegex } from "./url";
 
-export function onImageLoaded(
-  src: string,
-  handler: {
-    (loaded: boolean): void;
-    (loaded: boolean): void;
-    (arg0: boolean): void;
-    (arg0: boolean): void;
-    (arg0: boolean): void;
-  }
-) {
-  const img = new Image();
-  img.addEventListener("load", () => {
-    handler(true);
+export async function onImageLoaded(src: string) {
+  return new Promise<boolean>(resolve => {
+    const img = new Image();
+    img.addEventListener("load", () => {
+      resolve(true);
+    });
+    img.addEventListener("error", () => {
+      resolve(false);
+    });
+    img.src = src;
+    if (img.complete) resolve(true);
   });
-  img.addEventListener("error", () => {
-    handler(false);
-  });
-  img.src = src;
-  if (img.complete) handler(true);
 }
 
 export function toWikimediaCommonsUrl(source: string) {

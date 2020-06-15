@@ -209,22 +209,18 @@ export function initMap<M>(
       hashchange
     );
 
-    getJson<{ boundingbox: number[] }[]>(
-      "https://nominatim.openstreetmap.org/search",
-      {
-        format: "json",
-        q: value,
-        limit: 1
-      },
-      r => {
-        const result = r[0];
-        if (!result) return;
-        map.flyToBounds([
-          [result.boundingbox[0], result.boundingbox[2]],
-          [result.boundingbox[1], result.boundingbox[3]]
-        ]);
-      }
-    );
+    getJson("https://nominatim.openstreetmap.org/search", {
+      format: "json",
+      q: value,
+      limit: 1
+    }).then(r => {
+      const result = r[0];
+      if (!result) return;
+      map.flyToBounds([
+        [result.boundingbox[0], result.boundingbox[2]],
+        [result.boundingbox[1], result.boundingbox[3]]
+      ]);
+    });
   }
 
   function hashchange() {
@@ -273,7 +269,7 @@ export function initMap<M>(
     map.locate({ setView: false, maxZoom: 16 });
   } else map.locate({ setView: true, maxZoom: 16 });
 
-  map.on("popupopen", function (e) {
+  map.on("popupopen", e => {
     const marker = (e as L.PopupEvent & { popup: { _source: L.Marker } }).popup
       ._source;
     const latLng = marker.getLatLng();
@@ -384,45 +380,41 @@ out center;`
                   keys.push(`Key:${t.split(/=/gi)[0]}`);
                 } else keys.push("Key:" + t);
               }
-              getJson<{ error: any; entities: any[] }>(
-                "https://wiki.openstreetmap.org/w/api.php",
-                {
-                  format: "json",
-                  action: "wbgetentities",
-                  languages: local.code || "en",
-                  languagefallback: "0",
-                  props: "descriptions",
-                  origin: "*",
-                  sites: "wiki",
-                  titles: [tags.join("|"), keys.join("|")]
-                    .filter(t => t)
-                    .join("|")
-                },
-                r => {
-                  if (r && r.error) return;
+              getJson("https://wiki.openstreetmap.org/w/api.php", {
+                format: "json",
+                action: "wbgetentities",
+                languages: local.code || "en",
+                languagefallback: "0",
+                props: "descriptions",
+                origin: "*",
+                sites: "wiki",
+                titles: [tags.join("|"), keys.join("|")]
+                  .filter(t => t)
+                  .join("|")
+              }).then(r => {
+                if (r && r.error) return;
 
-                  let description = "";
-                  for (const prop in r.entities) {
-                    if (!r.entities.hasOwnProperty(prop)) continue;
+                let description = "";
+                for (const prop in r.entities) {
+                  if (!r.entities.hasOwnProperty(prop)) continue;
 
-                    const entity = r.entities[prop];
+                  const entity = r.entities[prop];
 
-                    if (
-                      entity.descriptions &&
-                      Object.keys(entity.descriptions).length > 0
-                    ) {
-                      description =
-                        entity.descriptions[Object.keys(entity.descriptions)[0]]
-                          .value;
+                  if (
+                    entity.descriptions &&
+                    Object.keys(entity.descriptions).length > 0
+                  ) {
+                    description =
+                      entity.descriptions[Object.keys(entity.descriptions)[0]]
+                        .value;
 
-                      break;
-                    }
+                    break;
                   }
-                  getHtmlElement(
-                    ".info-container .info .text"
-                  ).innerText = description;
                 }
-              );
+                getHtmlElement(
+                  ".info-container .info .text"
+                ).innerText = description;
+              });
             }
           }
 
