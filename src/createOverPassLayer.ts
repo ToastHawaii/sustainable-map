@@ -8,7 +8,14 @@ import { getHtmlElement, createElement } from "./utilities/html";
 import { parseOpeningHours, overpassSubs, updateCount } from "./map";
 import * as L from "leaflet";
 import { attributeDescriptions } from "./attributeDescriptions";
-import { getName, getType, getOperator, getImage } from "./data";
+import {
+  extractName,
+  extractType,
+  extractOperator,
+  extractImage,
+  extractLocality,
+  extractStreet
+} from "./data";
 
 export function createOverPassLayer<M>(
   value: string,
@@ -66,9 +73,9 @@ export function createOverPassLayer<M>(
           });
         }
         const model = {
-          name: getName(e.tags, local.code || "en") || e.tags["piste:name"],
-          type: getType(local, e.tags, value),
-          operator: getOperator(e.tags),
+          name: extractName(e.tags, local.code || "en") || e.tags["piste:name"],
+          type: extractType(local, e.tags, value),
+          operator: extractOperator(e.tags),
           address: {
             name: "",
             postcode: e.tags["addr:postcode"] || "",
@@ -91,7 +98,7 @@ export function createOverPassLayer<M>(
           wikimediaDescription: "",
           wikipediaDescription: ""
         };
-        model.img = model.img || getImage(e.tags) || "";
+        model.img = model.img || extractImage(e.tags) || "";
         model.description =
           e.tags[`description:${local.code || "en"}`] || e.tags.description;
         const attributesGenerator = new Generator<M>(attributes);
@@ -212,7 +219,7 @@ export function createOverPassLayer<M>(
                 lat: pos.lat,
                 lon: pos.lng
               }).then(result => {
-                model.address.name = getName(
+                model.address.name = extractName(
                   result.namedetails,
                   local.code || "en"
                 );
@@ -220,25 +227,10 @@ export function createOverPassLayer<M>(
                   model.address.postcode || result.address.postcode || "";
                 model.address.locality =
                   model.address.locality ||
-                  result.address.city ||
-                  result.address.town ||
-                  result.address.village ||
-                  result.address.suburb ||
-                  result.address.neighbourhood ||
-                  result.address.state ||
-                  result.address.county ||
+                  extractLocality(result.address) ||
                   "";
                 if (!model.address.street) {
-                  model.address.street =
-                    result.address.path ||
-                    result.address.footway ||
-                    result.address.road ||
-                    result.address.cycleway ||
-                    result.address.pedestrian ||
-                    result.address.farmyard ||
-                    result.address.construction ||
-                    getName(result.namedetails, local.code || "en");
-                  result.address.neighbourhood || "";
+                  model.address.street = extractStreet(result, local) || "";
                   model.address.houseNumber =
                     model.address.houseNumber ||
                     result.address.house_number ||

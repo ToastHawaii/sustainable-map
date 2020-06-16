@@ -1,7 +1,7 @@
 import { toWikimediaCommonsUrl, toMapillaryUrl } from "./utilities/image";
 import { toUrl } from "./utilities/url";
 
-export function getName(tags: any, langCode: string) {
+export function extractName(tags: any, langCode: string) {
   return (
     tags[`name:${langCode}`] ||
     tags[`short_name:${langCode}`] ||
@@ -24,7 +24,7 @@ export function getName(tags: any, langCode: string) {
   );
 }
 
-export function getType(local: any, tags: any, value: string) {
+export function extractType(local: any, tags: any, value: string) {
   return (
     local["public_bookcase:type"][tags["public_bookcase:type"]] ||
     local["garden:type"][tags["garden:type"]] ||
@@ -49,13 +49,13 @@ export function getType(local: any, tags: any, value: string) {
   );
 }
 
-export function getOperator(tags: any) {
+export function extractOperator(tags: any) {
   return (
     tags.operator || tags["heritage:operator"] || tags.brand || tags.network
   );
 }
 
-export function getImage(tags: any): string | undefined {
+export function extractImage(tags: any): string | undefined {
   return (
     toWikimediaCommonsUrl(tags.wikimedia_commons) ||
     toMapillaryUrl(tags.mapillary) ||
@@ -67,5 +67,31 @@ export function getImage(tags: any): string | undefined {
     toUrl(tags["contact:webcam"]) ||
     toUrl(tags["webcam:url"]) ||
     toUrl(tags["url:webcam"])
+  );
+}
+
+export function extractLocality(address: any): any {
+  return (
+    address.city ||
+    address.town ||
+    address.village ||
+    address.suburb ||
+    address.neighbourhood ||
+    address.state ||
+    address.county
+  );
+}
+
+export function extractStreet(result: any, local: { code: string }): any {
+  return (
+    result.address.path ||
+    result.address.footway ||
+    result.address.road ||
+    result.address.cycleway ||
+    result.address.pedestrian ||
+    result.address.farmyard ||
+    result.address.construction ||
+    extractName(result.namedetails, local.code || "en") ||
+    result.address.neighbourhood
   );
 }
