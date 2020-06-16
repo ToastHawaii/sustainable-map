@@ -211,9 +211,10 @@ export function createOverPassLayer<M>(
               model.wikimediaDescription
           };
           if (
-            (navigator as any).canShare &&
-            (navigator as any).canShare(data) &&
-            (navigator as any).share
+            (navigator as any).share &&
+            (((navigator as any).canShare &&
+              (navigator as any).canShare(data)) ||
+              !(navigator as any).canShare)
           ) {
             (navigator as any)
               .share(data)
