@@ -265,7 +265,14 @@ export const type = {
   },
   grow: {
     name: "Anbauen",
-    description: ""
+    description: "",
+    externalResources: [
+      {
+        name: "Pflanzplatz Dunkelhölzli Gemüseabo",
+        url: "https://www.dunkelhoelzli.ch/",
+        bounds: [47.159438, 8.35768, 47.694472, 8.984941]
+      }
+    ]
   },
   grocery: {
     name: "Lebensmittel",
@@ -299,7 +306,50 @@ export const type = {
   },
   dairy: {
     name: "Milchprodukte",
-    description: ""
+    description: "",
+    externalResources: [
+      {
+        name: "Die Faire Milch",
+        url: "https://www.faireswiss.ch/de/points-de-vente/liste-der-geschafte",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      },
+      {
+        name: "Vom Milchbuur",
+        url:
+          "https://www.swissmilk.ch/de/schweizer-milch/vommilchbuur/karte/?certificate=&product=&offer=&main=&mapbounds={bbox}",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      },
+      {
+        name: "Die faire Milch",
+        url: "https://diefairemilch.de/",
+        bounds: [47.27, 5.87, 55.1, 15.04]
+      },
+      {
+        name: "fairebel - Die faire Milch",
+        url: "https://www.fairebel.be/einkaufen/",
+        bounds: [49.497, 2.3889, 51.5517, 6.4081]
+      },
+      {
+        name: "D’fair Mëllech",
+        url: "http://www.fairmellech.lu/de/unsere-vertriebsstellen/",
+        bounds: [49.4479, 5.7357, 50.1828, 6.5312]
+      },
+      {
+        name: "Le lait équitable - FaireFrance",
+        url: "https://fairefrance.fr/produits/",
+        bounds: [41.26, -5.45, 51.27, 9.87]
+      },
+      {
+        name: "Il latte onesto",
+        url: "https://www.buonoeonesto.it/en/pointsof-sale-eng/",
+        bounds: [35.29, 6.63, 47.09, 18.78]
+      },
+      {
+        name: "Di fair Milch Säuliamt",
+        url: "http://www.di-fair-milch.ch/verkauf/",
+        bounds: [47.208448, 8.388635, 47.35472, 8.58016]
+      }
+    ]
   },
   meat: {
     name: "Fleischprodukte",
@@ -307,7 +357,14 @@ export const type = {
   },
   vegetable: {
     name: "Obst / Gemüse",
-    description: ""
+    description: "",
+    externalResources: [
+      {
+        name: "Pflanzplatz Dunkelhölzli Gemüseabo",
+        url: "https://www.dunkelhoelzli.ch/",
+        bounds: [47.159438, 8.35768, 47.694472, 8.984941]
+      }
+    ]
   },
   beverages: {
     name: "Getränke",
