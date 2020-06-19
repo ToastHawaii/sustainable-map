@@ -89,6 +89,18 @@ Der Code kann auch als Basis für eine eigene Themenkarte verwendet werden.
 
 [Quellcode dieser Karte auf GitHub anzeigen](https://github.com/ToastHawaii/sustainable-map)
 
+### Ich kann nicht Programmieren, wie kann ich eine eigene Themenkarte erstellen?
+
+Probiere einen der folgenden Services aus:
+
+[MapContrib](https://www.mapcontrib.xyz/) ([Wiki](https://wiki.openstreetmap.org/wiki/MapContrib))
+
+[uMap](https://umap.openstreetmap.fr/de/) ([Wiki](https://wiki.openstreetmap.org/wiki/DE:UMap))
+
+[overpass turbo](https://overpass-turbo.eu/) ([Wiki](https://wiki.openstreetmap.org/wiki/DE:Overpass_turbo)) Du kannst den "Wizard" verwenden um eine Abfrage zu erstellen, dieser versteht auch deutsche Wörter wie z.B. "See", "Bäckerei", etc.
+
+[Weitere Karten basierend aus OpenStreetMap](https://wiki.openstreetmap.org/wiki/DE:List_of_OSM-based_services)
+
 ## Weiteres
 
 Cargo Velo, Fashion, Freizeit & Beauty und Essen & Kafi. [Dein nachhaltiges Zürich](https://www.wwf.ch/de/dein-nachhaltiges-zuerich)
@@ -110,6 +122,7 @@ Eine Karte mit öffentlichen und kostenlosen Einrichtungen und Angebote. [Unbeza
 Eine Karte mit öffentlichen Bücherschränken. [Öffentlichen Bücherschränke](https://book-exchange.zottelig.ch/de)
 
 Unterstütze mich mit Kaffee und Kuchen:
+
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick" />
 <input type="hidden" name="hosted_button_id" value="LZB5LRD2MBQUS" />

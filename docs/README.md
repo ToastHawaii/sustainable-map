@@ -89,6 +89,18 @@ The code can also be used as a basis for your own theme map.
 
 [View source code of this map on GitHub](https://github.com/ToastHawaii/sustainable-map)
 
+### I cannot program, how can I create my own theme map?
+
+Try one of the following services:
+
+[MapContrib](https://www.mapcontrib.xyz/) ([Wiki](https://wiki.openstreetmap.org/wiki/MapContrib))
+
+[uMap](https://umap.openstreetmap.fr/en/) ([Wiki](https://wiki.openstreetmap.org/wiki/UMap))
+
+[overpass turbo](https://overpass-turbo.eu/) ([Wiki](https://wiki.openstreetmap.org/wiki/Overpass_turbo)) Du kannst den "Wizard" verwenden um eine Abfrage zu erstellen, dieser versteht auch deutsche Wörter wie z.B. "See", "Bäckerei", etc.
+
+[Weitere Karten basierend aus OpenStreetMap](https://wiki.openstreetmap.org/wiki/List_of_OSM-based_services)
+
 ## More
 
 Cargo Velo, fashion, leisure & beauty and food & coffee. [Dein nachhaltiges Zürich](https://www.wwf.ch/de/dein-nachhaltiges-zuerich)
