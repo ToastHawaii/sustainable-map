@@ -1523,6 +1523,7 @@ node["man_made"="surveillance"]["image"];`,
 
   // Rent / Share
   nw["amenity"="piano"][!"craft"][!"shop"]&access;
+  nw["piano"="yes"][!"craft"][!"shop"]&access;
 
   nw["playground"="musical_instrument"]&access;
   nw["amenity"="musical_instrument"]&access;
