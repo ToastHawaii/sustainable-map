@@ -518,6 +518,7 @@ export const type = {
       }
     ]
   },
+  printer: { name: "Coping & printing", description: "" },
   toilet: { name: "Public toilet", description: "" },
   basketball: { name: "Basketball", description: "" },
   bath: { name: "Bath", description: "" },

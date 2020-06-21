@@ -519,6 +519,7 @@ export const type = {
       }
     ]
   },
+  printer: { name: "Kopieren & Drucken", description: "" },
   toilet: { name: "Öffentliche Toilette", description: "" },
   basketball: { name: "Basketball", description: "" },
   bath: { name: "Bad", description: "" },

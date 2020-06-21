@@ -1549,6 +1549,19 @@ node["man_made"="surveillance"]["image"];`,
     edit: ["shop=musical_instrument", "amenity"]
   },
   {
+    id: 135,
+    group: "goods",
+    value: "printer",
+    icon: "https://wiki.openstreetmap.org/w/images/2/2c/Copyshop-14.svg",
+    query: `
+    nw["amenity"="printer"]&access;
+    nw["shop"="copyshop"];
+    nw["shop"="printing"];`,
+    color: "#222222",
+    tags: ["amenity=printer", "shop=copyshop", "shop=printing"],
+    edit: ["shop=copyshop", "shop", "amenity"]
+  },
+  {
     id: 81,
     group: "goods",
     value: "sport",
