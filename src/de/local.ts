@@ -2,6 +2,8 @@ import { type } from "./local.type";
 
 export const local = {
   code: "de",
+  title: "Nachhaltig Karte",
+  description: "Erlebe die Welt nachhaltig.",
   minZoomMessageNoLayer: "Keine Ebene zugewiesen",
   minZoomMessage: "Vergrössern, um Standorte zu laden",
   emptyIndicator: "Keine Orte gefunden",

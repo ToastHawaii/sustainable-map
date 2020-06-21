@@ -1,4 +1,5 @@
 export const filters: {
+  id: number;
   group: string;
   subgroup?: string;
   order?: number;
@@ -11,6 +12,7 @@ export const filters: {
   tags: string[];
 }[] = [
   {
+    id: 0,
     group: "culture",
     value: "artwork",
     icon: "https://wiki.openstreetmap.org/w/images/1/12/Artwork-14.svg",
@@ -21,6 +23,7 @@ nwr["tourism"="artwork"]&part;`,
     edit: ["tourism=artwork"]
   },
   {
+    id: 1,
     group: "culture",
     value: "fountain",
     icon: "https://wiki.openstreetmap.org/w/images/a/a1/Fountain-14.svg",
@@ -32,6 +35,7 @@ nwr["playground"="splash_pad"]&part;`,
     edit: ["amenity=fountain", "playground"]
   },
   {
+    id: 2,
     group: "culture",
     value: "tourist-attraction",
     icon: "/lib/maki-icons/attraction-15.svg",
@@ -52,6 +56,7 @@ nwr["playground"="splash_pad"]&part;`,
     ]
   },
   {
+    id: 3,
     group: "culture",
     value: "archaeological-site",
     icon:
@@ -64,6 +69,7 @@ nwr["playground"="splash_pad"]&part;`,
     edit: ["historic=archaeological_site"]
   },
   {
+    id: 4,
     group: "education",
     value: "trail",
     icon: "https://wiki.openstreetmap.org/w/images/7/77/Board-14.svg",
@@ -96,6 +102,7 @@ nwr["playground"="splash_pad"]&part;`,
     edit: ["tourism=information", "type=route"]
   },
   {
+    id: 5,
     group: "education",
     value: "books",
     icon: "https://wiki.openstreetmap.org/w/images/1/18/Books-16.svg",
@@ -127,6 +134,7 @@ nw["recycling:books"="yes"];`,
     ]
   },
   {
+    id: 6,
     group: "education",
     subgroup: "books",
     order: 1,
@@ -142,6 +150,7 @@ nw["amenity"="public_bookcase"];`,
     edit: ["shop=books", "amenity=public_bookcase"]
   },
   {
+    id: 7,
     group: "education",
     subgroup: "books",
     order: 2,
@@ -162,6 +171,7 @@ nw["amenity"="public_bookcase"];`,
     edit: ["amenity=library", "amenity=public_bookcase"]
   },
   {
+    id: 8,
     group: "education",
     subgroup: "books",
     order: 3,
@@ -175,6 +185,7 @@ nw["amenity"="public_bookcase"];`,
     edit: ["amenity=public_bookcase"]
   },
   {
+    id: 9,
     group: "education",
     subgroup: "books",
     order: 4,
@@ -188,6 +199,7 @@ nw["recycling:books"="yes"];`,
     edit: ["amenity=recycling"]
   },
   {
+    id: 10,
     group: "education",
     value: "internet",
     icon: "https://wiki.openstreetmap.org/w/images/8/89/Internet_cafe-14.svg",
@@ -200,6 +212,7 @@ nw["recycling:books"="yes"];`,
     edit: ["amenity", "shop"]
   },
   {
+    id: 11,
     group: "culture",
     value: "castle",
     icon: "https://wiki.openstreetmap.org/w/images/3/31/Fortress-14.svg",
@@ -217,6 +230,7 @@ nw["recycling:books"="yes"];`,
     edit: ["historic=castle", "historic=fort", "historic"]
   },
   {
+    id: 12,
     group: "culture",
     value: "mill",
     icon: "https://wiki.openstreetmap.org/w/images/0/0b/Windmill-16.svg",
@@ -231,6 +245,7 @@ nw["recycling:books"="yes"];`,
     edit: ["man_made=watermill", "man_made=windmill"]
   },
   {
+    id: 13,
     group: "culture",
     value: "history",
     icon: "https://wiki.openstreetmap.org/w/images/c/c8/Acheological.png",
@@ -244,6 +259,7 @@ nw["recycling:books"="yes"];`,
     edit: ["historic", "tourism=information"]
   },
   {
+    id: 14,
     group: "culture",
     value: "memorial",
     icon: "https://wiki.openstreetmap.org/w/images/6/6e/Memorial-16.svg",
@@ -254,6 +270,7 @@ nw["recycling:books"="yes"];`,
     edit: ["historic=memorial"]
   },
   {
+    id: 15,
     group: "culture",
     value: "monument",
     icon: "https://wiki.openstreetmap.org/w/images/9/94/Monument-16.svg",
@@ -264,6 +281,7 @@ nw["recycling:books"="yes"];`,
     edit: ["historic=monument"]
   },
   {
+    id: 16,
     group: "education",
     value: "museum",
     icon: "https://wiki.openstreetmap.org/w/images/a/a9/Museum-16.svg",
@@ -276,6 +294,7 @@ nw["recycling:books"="yes"];`,
     edit: ["tourism=museum", "tourism=gallery", "amenity=arts_centre"]
   },
   {
+    id: 17,
     group: "education",
     value: "observatory",
     icon: "https://wiki.openstreetmap.org/w/images/e/e0/Telescope_dome-14.svg",
@@ -288,6 +307,7 @@ nw["recycling:books"="yes"];`,
     edit: ["man_made=observatory", "landuse"]
   },
   {
+    id: 18,
     group: "culture",
     value: "ruins",
     icon:
@@ -303,6 +323,7 @@ nw["recycling:books"="yes"];`,
     edit: ["historic=ruins", "building=ruins", "historic", "building"]
   },
   {
+    id: 19,
     group: "natural",
     value: "cave",
     icon: "https://wiki.openstreetmap.org/w/images/b/b1/Cave.14.svg",
@@ -313,6 +334,7 @@ nw["recycling:books"="yes"];`,
     edit: ["natural=cave_entrance"]
   },
   {
+    id: 20,
     group: "natural",
     value: "natural_monument",
     icon: "/lib/maki-icons/park-15.svg",
@@ -329,6 +351,7 @@ nw["recycling:books"="yes"];`,
     edit: ["natural=tree", "natural=tree_row", "natural"]
   },
   {
+    id: 21,
     group: "natural",
     value: "pond",
     icon: "/lib/maki-icons/water-15.svg",
@@ -345,6 +368,7 @@ nw["recycling:books"="yes"];`,
     edit: ["natural=water"]
   },
   {
+    id: 22,
     group: "natural",
     value: "rock",
     icon: "/lib/maki-icons/circle-15.svg",
@@ -355,6 +379,7 @@ nw["recycling:books"="yes"];`,
     edit: ["natural=rock", "natural=stone"]
   },
   {
+    id: 23,
     group: "natural",
     value: "viewpoint",
     icon: "https://wiki.openstreetmap.org/w/images/c/c2/Viewpoint-16.svg",
@@ -368,6 +393,7 @@ nw["recycling:books"="yes"];`,
     edit: ["tourism=viewpoint", "man_made=tower", "man_made", "natural"]
   },
   {
+    id: 24,
     group: "natural",
     value: "waterfall",
     icon: "https://wiki.openstreetmap.org/w/images/7/72/Waterfall-14.svg",
@@ -378,6 +404,7 @@ nw["recycling:books"="yes"];`,
     edit: ["waterway=waterfall", "waterway=dam", "waterway=weir"]
   },
   {
+    id: 25,
     group: "community",
     value: "assistance",
     icon:
@@ -401,6 +428,7 @@ nw["recycling:books"="yes"];`,
     ]
   },
   {
+    id: 26,
     group: "community",
     value: "assisted-repair",
     icon: "/lib/temaki-icons/tools.svg",
@@ -417,6 +445,7 @@ nw["recycling:books"="yes"];`,
     edit: ["amenity", "leisure=hackerspace"]
   },
   {
+    id: 27,
     group: "goods",
     value: "barbecue",
     icon: "https://wiki.openstreetmap.org/w/images/5/50/Bbq-14.svg",
@@ -429,6 +458,7 @@ nw["recycling:books"="yes"];`,
     edit: ["amenity=bbq", "tourism"]
   },
   {
+    id: 28,
     group: "goods",
     value: "baking-oven",
     icon: "https://wiki.openstreetmap.org/w/images/f/fe/Bakery-16.svg",
@@ -441,6 +471,7 @@ nw["recycling:books"="yes"];`,
     edit: ["amenity", "building"]
   },
   {
+    id: 29,
     group: "mobility",
     value: "bicycle-self-repair",
     icon:
@@ -464,6 +495,7 @@ nw["recycling:books"="yes"];`,
     edit: ["amenity=bicycle_repair_station", "amenity", "shop"]
   },
   {
+    id: 30,
     group: "mobility",
     value: "charging-station",
     icon:
@@ -475,6 +507,7 @@ nw["recycling:books"="yes"];`,
     edit: ["amenity=charging_station"]
   },
   {
+    id: 31,
     group: "community",
     value: "community-centre",
     icon:
@@ -486,6 +519,7 @@ nw["recycling:books"="yes"];`,
     edit: ["amenity=community_centre"]
   },
   {
+    id: 32,
     group: "community",
     value: "community-garden",
     icon: "/lib/maki-icons/garden-centre-15.svg",
@@ -498,6 +532,7 @@ nw["landuse"="community_food_growing"];`,
     edit: ["leisure=garden"]
   },
   {
+    id: 33,
     group: "food",
     value: "grow",
     icon: "/lib/maki-icons/garden-centre-15.svg",
@@ -516,6 +551,7 @@ nw["landuse"="community_food_growing"];`,
     edit: ["landuse=allotments", "leisure=garden"]
   },
   {
+    id: 34,
     group: "food",
     value: "grocery",
     icon: "https://wiki.openstreetmap.org/w/images/9/96/Convenience-14.svg",
@@ -542,6 +578,7 @@ nw["landuse"="community_food_growing"];`,
     ]
   },
   {
+    id: 35,
     group: "food",
     value: "plant",
     icon: "https://wiki.openstreetmap.org/w/images/6/69/Florist-16.svg",
@@ -566,6 +603,7 @@ nw["landuse"="community_food_growing"];`,
     ]
   },
   {
+    id: 36,
     group: "food",
     value: "sweets",
     icon: "https://wiki.openstreetmap.org/w/images/c/cc/Confectionery-14.svg",
@@ -585,6 +623,7 @@ nw["craft"="confectionery"][~"^(regional|fair_trade|organic|second_hand|zero_was
     edit: ["shop=confectionery", "shop=pastry", "craft=beekeeper"]
   },
   {
+    id: 37,
     group: "food",
     value: "baked-goods",
     icon: "/lib/maki-icons/bakery-15.svg",
@@ -596,6 +635,7 @@ nw["amenity"="vending_machine"]["vending"~"bread|pizza"];`,
     edit: ["shop=bakery"]
   },
   {
+    id: 38,
     group: "food",
     value: "dairy",
     icon: "https://wiki.openstreetmap.org/w/images/0/0e/Dairy.svg",
@@ -608,6 +648,7 @@ nw["amenity"="vending_machine"]["vending"~"milk"];`,
     edit: ["shop=cheese", "shop=dairy", "craft", "amenity=vending_machine"]
   },
   {
+    id: 39,
     group: "food",
     value: "meat",
     icon: "https://wiki.openstreetmap.org/w/images/b/b8/Butcher.svg",
@@ -618,6 +659,7 @@ nw["shop"~"^(butcher|seafood)$"][~"^(regional|fair_trade|organic|second_hand|zer
     edit: ["shop=butcher", "shop=seafood"]
   },
   {
+    id: 40,
     group: "food",
     value: "vegetable",
     icon: "https://wiki.openstreetmap.org/w/images/d/d8/Greengrocer-14.svg",
@@ -629,6 +671,7 @@ nw["shop"~"^(butcher|seafood)$"][~"^(regional|fair_trade|organic|second_hand|zer
     edit: ["shop=greengrocer"]
   },
   {
+    id: 41,
     group: "food",
     value: "beverages",
     icon: "https://wiki.openstreetmap.org/w/images/e/eb/Alcohol-16.svg",
@@ -660,6 +703,7 @@ nw["amenity"="vending_machine"]["vending"~"drinks"][~"^(regional|fair_trade|orga
     ]
   },
   {
+    id: 42,
     group: "health",
     value: "diaper-changing-table",
     icon: "https://wiki.openstreetmap.org/w/images/f/ff/Babycare_01.png",
@@ -672,6 +716,7 @@ nw["amenity"="vending_machine"]["vending"~"drinks"][~"^(regional|fair_trade|orga
     edit: ["amenity=toilets", "amenity", "shop"]
   },
   {
+    id: 43,
     group: "health",
     value: "health-products",
     icon: "https://wiki.openstreetmap.org/w/images/3/36/Chemist-14.svg",
@@ -708,6 +753,7 @@ nw["amenity"="vending_machine"]["vending"~"drinks"][~"^(regional|fair_trade|orga
     ]
   },
   {
+    id: 44,
     group: "health",
     value: "kneipp_water_cure",
     icon: "https://wiki.openstreetmap.org/w/images/c/c1/Kneipp_water_cure.svg",
@@ -718,6 +764,7 @@ nw["amenity"="vending_machine"]["vending"~"drinks"][~"^(regional|fair_trade|orga
     edit: ["amenity=kneipp_water_cure"]
   },
   {
+    id: 45,
     group: "food",
     value: "drinking-water",
     icon: "https://wiki.openstreetmap.org/w/images/0/08/Drinking-water-16.svg",
@@ -749,6 +796,7 @@ nw["amenity"="vending_machine"]["vending"~"drinks"][~"^(regional|fair_trade|orga
     ]
   },
   {
+    id: 46,
     group: "food",
     value: "food-sharing",
     icon: "https://wiki.openstreetmap.org/w/images/3/3c/Foodbank.svg",
@@ -773,6 +821,7 @@ nw["amenity"="vending_machine"]["vending"~"drinks"][~"^(regional|fair_trade|orga
     edit: ["amenity=social_facility"]
   },
   {
+    id: 47,
     group: "food",
     value: "dinner",
     icon: "https://wiki.openstreetmap.org/w/images/b/bb/Restaurant-14.svg",
@@ -807,6 +856,7 @@ nw["social_facility"="soup_kitchen"];`,
     ]
   },
   {
+    id: 48,
     group: "goods",
     value: "goods-exchange",
     icon: "/lib/maki-icons/gift-15.svg",
@@ -842,6 +892,7 @@ nw["social_facility"="soup_kitchen"];`,
     edit: ["amenity", "shop=charity", "shop=second_hand", "amenity=toy_library"]
   },
   {
+    id: 49,
     group: "goods",
     value: "goods-get",
     icon: "https://wiki.openstreetmap.org/w/images/8/85/Charity-14.svg",
@@ -871,6 +922,7 @@ nw["social_facility"="soup_kitchen"];`,
     edit: ["shop=second_hand", "shop=charity", "amenity"]
   },
   {
+    id: 50,
     group: "goods",
     value: "hackerspace",
     icon: "/lib/temaki-icons/toolbox.svg",
@@ -883,6 +935,7 @@ nw["social_facility"="soup_kitchen"];`,
     edit: ["leisure=hackerspace", "club"]
   },
   {
+    id: 51,
     group: "community",
     value: "contribute",
     icon: "/lib/maki-icons/heart-15.svg",
@@ -922,6 +975,7 @@ nw["social_facility"="soup_kitchen"];`,
     ]
   },
   {
+    id: 52,
     group: "community",
     value: "coworking",
     icon: "/lib/maki-icons/building-15.svg",
@@ -934,6 +988,7 @@ nw["social_facility"="soup_kitchen"];`,
     edit: ["amenity=coworking_space", "office=coworking"]
   },
   {
+    id: 53,
     group: "health",
     value: "public-shower",
     icon: "https://wiki.openstreetmap.org/w/images/5/5a/Shower-14.svg",
@@ -959,6 +1014,7 @@ nw["amenity"="shower"]&part;
     edit: ["amenity=shower"]
   },
   {
+    id: 54,
     group: "mobility",
     value: "pump",
     icon:
@@ -983,6 +1039,7 @@ nw["amenity"="shower"]&part;
     ]
   },
   {
+    id: 55,
     group: "health",
     value: "toilet",
     icon: "https://wiki.openstreetmap.org/w/images/f/fa/Toilets-16.svg",
@@ -1000,6 +1057,7 @@ nw["amenity"="shower"]&part;
     edit: ["amenity=toilets", "building", "amenity"]
   },
   {
+    id: 56,
     group: "communitySport",
     value: "basketball",
     icon: "/lib/maki-icons/basketball-15.svg",
@@ -1011,6 +1069,7 @@ nw["amenity"="shower"]&part;
     edit: ["leisure=pitch"]
   },
   {
+    id: 57,
     group: "sport",
     value: "bath",
     icon: "https://wiki.openstreetmap.org/w/images/0/01/Public_bath.svg",
@@ -1058,6 +1117,7 @@ nw["amenity"="shower"]&part;
     ]
   },
   {
+    id: 58,
     group: "sport",
     value: "bikepark",
     icon: "/lib/maki-icons/bicycle-15.svg",
@@ -1069,6 +1129,7 @@ nw["amenity"="shower"]&part;
     edit: ["leisure=track", "landuse=recreation_ground", "leisure=pitch"]
   },
   {
+    id: 59,
     group: "sport",
     value: "skatepark",
     icon: "/lib/temaki-icons/skateboarding.svg",
@@ -1080,6 +1141,7 @@ nw["amenity"="shower"]&part;
     edit: ["leisure=pitch"]
   },
   {
+    id: 60,
     group: "communitySport",
     value: "chess",
     icon:
@@ -1091,6 +1153,7 @@ nw["amenity"="shower"]&part;
     edit: ["leisure=pitch"]
   },
   {
+    id: 61,
     group: "sport",
     value: "climbing",
     icon: "/lib/temaki-icons/abseiling.svg",
@@ -1105,6 +1168,7 @@ nw["amenity"="shower"]&part;
     edit: ["natural", "landuse=recreation_ground", "playground"]
   },
   {
+    id: 62,
     group: "communitySport",
     value: "boules",
     icon: "/lib/maki-icons/pitch-15.svg",
@@ -1116,6 +1180,7 @@ nw["amenity"="shower"]&part;
     edit: ["leisure=pitch"]
   },
   {
+    id: 63,
     group: "sport",
     value: "fitness",
     icon: "/lib/maki-icons/fitness-centre-15.svg",
@@ -1136,6 +1201,7 @@ nw["amenity"="shower"]&part;
     edit: ["leisure=fitness_station", "playground"]
   },
   {
+    id: 64,
     group: "sport",
     subgroup: "fitness",
     value: "horizontal_bar",
@@ -1152,6 +1218,7 @@ nw["amenity"="shower"]&part;
     edit: ["leisure=fitness_station", "playground"]
   },
   {
+    id: 65,
     group: "sport",
     subgroup: "fitness",
     value: "parallel_bars",
@@ -1165,6 +1232,7 @@ nw["amenity"="shower"]&part;
     edit: ["leisure=fitness_station", "playground"]
   },
   {
+    id: 66,
     group: "sport",
     subgroup: "fitness",
     value: "rings",
@@ -1178,6 +1246,7 @@ nw["amenity"="shower"]&part;
     edit: ["leisure=fitness_station", "playground"]
   },
   {
+    id: 67,
     group: "sport",
     subgroup: "fitness",
     value: "exercise-machine",
@@ -1198,6 +1267,7 @@ nw["amenity"="shower"]&part;
     edit: ["leisure=fitness_station", "playground"]
   },
   {
+    id: 68,
     group: "sport",
     subgroup: "fitness",
     value: "balance",
@@ -1220,6 +1290,7 @@ nw["amenity"="shower"]&part;
     edit: ["leisure=fitness_station", "playground"]
   },
   {
+    id: 69,
     group: "sport",
     value: "sledding",
     icon: "/lib/temaki-icons/sledding.svg",
@@ -1234,6 +1305,7 @@ nw["amenity"="shower"]&part;
     edit: []
   },
   {
+    id: 70,
     group: "sport",
     value: "fitness-trail",
     icon: "/lib/maki-icons/pitch-15.svg",
@@ -1244,6 +1316,7 @@ nw["amenity"="shower"]&part;
     edit: ["type=route"]
   },
   {
+    id: 71,
     group: "sport",
     value: "running",
     icon: "/lib/maki-icons/pitch-15.svg",
@@ -1257,6 +1330,7 @@ nw["amenity"="shower"]&part;
     edit: ["sport=running", "sport=athletics"]
   },
   {
+    id: 72,
     group: "communitySport",
     value: "soccer",
     icon: "/lib/maki-icons/soccer-15.svg",
@@ -1269,6 +1343,7 @@ nw["amenity"="shower"]&part;
     edit: ["leisure=pitch"]
   },
   {
+    id: 73,
     group: "communitySport",
     value: "table-tennis",
     icon: "/lib/maki-icons/table-tennis-15.svg",
@@ -1283,6 +1358,7 @@ nw["amenity"="shower"]&part;
     edit: ["leisure=pitch"]
   },
   {
+    id: 74,
     group: "communitySport",
     value: "table-soccer",
     icon: "https://wiki.openstreetmap.org/w/images/c/c8/Kicker02.png",
@@ -1293,6 +1369,7 @@ nw["amenity"="shower"]&part;
     edit: ["leisure=pitch"]
   },
   {
+    id: 75,
     group: "communitySport",
     value: "volleyball",
     icon: "/lib/maki-icons/volleyball-15.svg",
@@ -1305,6 +1382,7 @@ nw["amenity"="shower"]&part;
     edit: ["leisure=pitch"]
   },
   {
+    id: 76,
     group: "trip",
     value: "animal",
     icon: "/lib/maki-icons/zoo-15.svg",
@@ -1368,6 +1446,7 @@ nw["amenity"="shower"]&part;
     ]
   },
   {
+    id: 77,
     group: "trip",
     subgroup: "animal",
     value: "observation",
@@ -1400,6 +1479,7 @@ nw["amenity"="shower"]&part;
     ]
   },
   {
+    id: 78,
     group: "trip",
     value: "maze",
     icon: "/lib/temaki-icons/compass.svg",
@@ -1411,6 +1491,7 @@ nwr["leisure"="maze"]&part;`,
     edit: ["attraction=maze"]
   },
   {
+    id: 79,
     group: "trip",
     value: "webcam",
     icon: "/lib/temaki-icons/security_camera.svg",
@@ -1432,6 +1513,7 @@ node["man_made"="surveillance"]["image"];`,
     edit: ["man_made=surveillance"]
   },
   {
+    id: 80,
     group: "goods",
     value: "musical_instrument",
     icon: "/lib/maki-icons/music-15.svg",
@@ -1466,6 +1548,7 @@ node["man_made"="surveillance"]["image"];`,
     edit: ["shop=musical_instrument", "amenity"]
   },
   {
+    id: 81,
     group: "goods",
     value: "sport",
     icon: "https://wiki.openstreetmap.org/w/images/7/76/Outdoor-14.svg",
@@ -1513,6 +1596,7 @@ node["man_made"="surveillance"]["image"];`,
     ]
   },
   {
+    id: 82,
     group: "community",
     value: "advertising",
     icon: "https://wiki.openstreetmap.org/w/images/2/20/Column-14.svg",
@@ -1535,6 +1619,7 @@ node["man_made"="surveillance"]["image"];`,
     ]
   },
   {
+    id: 83,
     group: "trip",
     value: "fireplace",
     icon: "https://wiki.openstreetmap.org/w/images/d/df/Firepit.svg",
@@ -1558,6 +1643,7 @@ node["man_made"="surveillance"]["image"];`,
     edit: ["leisure=firepit", "amenity=bbq", "tourism"]
   },
   {
+    id: 84,
     group: "trip",
     value: "map",
     icon: "https://wiki.openstreetmap.org/w/images/c/ca/Map-14.svg",
@@ -1568,6 +1654,7 @@ node["man_made"="surveillance"]["image"];`,
     edit: ["tourism=information"]
   },
   {
+    id: 85,
     group: "trip",
     subgroup: "map",
     value: "openstreetmap",
@@ -1580,6 +1667,7 @@ node["man_made"="surveillance"]["image"];`,
     edit: ["tourism=information"]
   },
   {
+    id: 86,
     group: "trip",
     value: "garden",
     icon: "/lib/maki-icons/garden-15.svg",
@@ -1590,6 +1678,7 @@ node["man_made"="surveillance"]["image"];`,
     edit: ["leisure=garden"]
   },
   {
+    id: 87,
     group: "trip",
     subgroup: "garden",
     value: "garden-with-name",
@@ -1602,6 +1691,7 @@ node["man_made"="surveillance"]["image"];`,
     edit: ["leisure=garden"]
   },
   {
+    id: 88,
     group: "natural",
     value: "nature-park",
     icon: "/lib/maki-icons/natural-15.svg",
@@ -1618,6 +1708,7 @@ node["man_made"="surveillance"]["image"];`,
     edit: ["leisure=nature_reserve", "boundary"]
   },
   {
+    id: 89,
     group: "trip",
     value: "park",
     icon: "/lib/maki-icons/park-15.svg",
@@ -1630,6 +1721,7 @@ node["man_made"="surveillance"]["image"];`,
     edit: ["leisure=park", "landuse=recreation_ground"]
   },
   {
+    id: 90,
     group: "trip",
     subgroup: "park",
     value: "park-with-name",
@@ -1644,6 +1736,7 @@ node["man_made"="surveillance"]["image"];`,
     edit: ["leisure=park", "landuse=recreation_ground"]
   },
   {
+    id: 91,
     group: "material",
     value: "battery-recycling",
     icon: "/lib/temaki-icons/power.svg",
@@ -1655,6 +1748,7 @@ node["man_made"="surveillance"]["image"];`,
     edit: ["amenity=recycling"]
   },
   {
+    id: 92,
     group: "material",
     value: "reusable-bottle-reuse",
     icon: "https://wiki.openstreetmap.org/w/images/e/eb/Alcohol-16.svg",
@@ -1666,6 +1760,7 @@ node["man_made"="surveillance"]["image"];`,
     edit: ["vending=bottle_return"]
   },
   {
+    id: 93,
     group: "material",
     value: "oil-recycling",
     icon: "/lib/maki-icons/water-15.svg",
@@ -1684,6 +1779,7 @@ node["man_made"="surveillance"]["image"];`,
     edit: ["amenity=recycling"]
   },
   {
+    id: 94,
     group: "material",
     value: "hazardous-recycling",
     icon: "/lib/maki-icons/danger-15.svg",
@@ -1700,6 +1796,7 @@ node["man_made"="surveillance"]["image"];`,
     edit: ["amenity=recycling"]
   },
   {
+    id: 95,
     group: "material",
     value: "rubble-recycling",
     icon: "/lib/temaki-icons/ruins.svg",
@@ -1711,6 +1808,7 @@ node["man_made"="surveillance"]["image"];`,
     edit: ["amenity=recycling"]
   },
   {
+    id: 96,
     group: "material",
     value: "plastic-recycling",
     icon: "https://wiki.openstreetmap.org/w/images/9/98/Beverages-14.svg",
@@ -1739,6 +1837,7 @@ node["man_made"="surveillance"]["image"];`,
     edit: ["amenity=recycling"]
   },
   {
+    id: 97,
     group: "trip",
     value: "picnic-site",
     icon: "https://wiki.openstreetmap.org/w/images/f/fc/Picnic_site.svg",
@@ -1757,6 +1856,7 @@ node["man_made"="surveillance"]["image"];`,
     edit: ["tourism=picnic_site", "leisure=picnic_table", "amenity=shelter"]
   },
   {
+    id: 98,
     group: "trip",
     value: "square",
     icon: "/lib/temaki-icons/pedestrian.svg",
@@ -1776,6 +1876,7 @@ way["highway"="footway"]["area"="yes"]&part;`,
     edit: ["place=square", "leisure=common", "highway"]
   },
   {
+    id: 99,
     group: "trip",
     subgroup: "square",
     value: "square-with-name",
@@ -1797,6 +1898,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["place=square", "leisure=common", "highway"]
   },
   {
+    id: 100,
     group: "trip",
     value: "playground",
     icon: "https://wiki.openstreetmap.org/w/images/3/31/Playground-16.svg",
@@ -1809,6 +1911,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["leisure=playground", "playground"]
   },
   {
+    id: 101,
     group: "trip",
     value: "lounger",
     icon: "/lib/maki-icons/beach-15.svg",
@@ -1821,6 +1924,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["amenity"]
   },
   {
+    id: 102,
     group: "goods",
     value: "clothes",
     icon: "/lib/maki-icons/clothing-store-15.svg",
@@ -1885,6 +1989,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     ]
   },
   {
+    id: 103,
     group: "goods",
     subgroup: "clothes",
     value: "clothes-give",
@@ -1909,6 +2014,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["amenity=recycling", "amenity=social_facility", "amenity"]
   },
   {
+    id: 104,
     group: "goods",
     subgroup: "clothes",
     value: "clothes-take",
@@ -1951,6 +2057,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     ]
   },
   {
+    id: 105,
     group: "goods",
     subgroup: "clothes",
     value: "clothes-repair",
@@ -1975,6 +2082,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["shop", "craft"]
   },
   {
+    id: 106,
     group: "goods",
     value: "mobile-phones",
     icon: "/lib/maki-icons/mobile-phone-15.svg",
@@ -2008,6 +2116,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["shop=mobile_phone", "amenity=recycling", "amenity"]
   },
   {
+    id: 107,
     group: "goods",
     subgroup: "mobile-phones",
     value: "mobile-phones-give",
@@ -2022,6 +2131,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["amenity=recycling", "amenity"]
   },
   {
+    id: 108,
     group: "goods",
     subgroup: "mobile-phones",
     value: "mobile-phones-take",
@@ -2035,6 +2145,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["shop=mobile_phone", "amenity"]
   },
   {
+    id: 109,
     group: "goods",
     subgroup: "mobile-phones",
     value: "mobile-phones-repair",
@@ -2052,6 +2163,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["shop=mobile_phone", "amenity"]
   },
   {
+    id: 110,
     group: "goods",
     value: "computers",
     icon: "https://wiki.openstreetmap.org/w/images/b/bb/Computer-14.svg",
@@ -2080,6 +2192,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["shop=computer", "amenity=recycling", "amenity"]
   },
   {
+    id: 111,
     group: "goods",
     subgroup: "computers",
     value: "computers-give",
@@ -2094,6 +2207,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["amenity=recycling"]
   },
   {
+    id: 112,
     group: "goods",
     subgroup: "computers",
     value: "computers-take",
@@ -2107,6 +2221,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["shop=computer", "amenity"]
   },
   {
+    id: 113,
     group: "goods",
     subgroup: "computers",
     value: "computers-repair",
@@ -2123,6 +2238,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["shop=computer", "amenity"]
   },
   {
+    id: 114,
     group: "goods",
     value: "toys",
     icon: "https://wiki.openstreetmap.org/w/images/6/62/Toys-14.svg",
@@ -2153,6 +2269,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["amenity=recycling", "shop=toys", "amenity=toy_library", "amenity"]
   },
   {
+    id: 115,
     group: "goods",
     subgroup: "toys",
     value: "toys-give",
@@ -2167,6 +2284,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["amenity=recycling", "amenity"]
   },
   {
+    id: 116,
     group: "goods",
     subgroup: "toys",
     value: "toys-take",
@@ -2181,6 +2299,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["shop=toys", "amenity"]
   },
   {
+    id: 117,
     group: "goods",
     subgroup: "toys",
     value: "toys-rent",
@@ -2194,6 +2313,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["amenity=toy_library"]
   },
   {
+    id: 118,
     group: "goods",
     subgroup: "toys",
     value: "toys-repair",
@@ -2207,6 +2327,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["amenity"]
   },
   {
+    id: 119,
     group: "goods",
     value: "electronics",
     icon: "/lib/temaki-icons/electronic.svg",
@@ -2275,6 +2396,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     ]
   },
   {
+    id: 120,
     group: "goods",
     subgroup: "electronics",
     value: "electronics-give",
@@ -2298,6 +2420,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["amenity=recycling", "amenity"]
   },
   {
+    id: 121,
     group: "goods",
     subgroup: "electronics",
     value: "electronics-take",
@@ -2315,6 +2438,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["amenity"]
   },
   {
+    id: 122,
     group: "goods",
     subgroup: "electronics",
     value: "electronics-repair",
@@ -2360,6 +2484,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     ]
   },
   {
+    id: 123,
     group: "goods",
     value: "furniture",
     icon: "/lib/temaki-icons/furniture.svg",
@@ -2402,6 +2527,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     ]
   },
   {
+    id: 124,
     group: "goods",
     subgroup: "furniture",
     value: "furniture-give",
@@ -2419,6 +2545,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["amenity=recycling", "amenity"]
   },
   {
+    id: 125,
     group: "goods",
     subgroup: "furniture",
     value: "furniture-take",
@@ -2435,6 +2562,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["shop=interior_decoration", "craft=cabinet_maker", "amenity"]
   },
   {
+    id: 126,
     group: "goods",
     subgroup: "furniture",
     value: "furniture-repair",
@@ -2450,6 +2578,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["shop=furniture", "craft=cabinet_maker", "amenity"]
   },
   {
+    id: 127,
     group: "mobility",
     value: "bicycle",
     icon: "/lib/maki-icons/bicycle-15.svg",
@@ -2496,6 +2625,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     ]
   },
   {
+    id: 128,
     group: "mobility",
     subgroup: "bicycle",
     value: "bicycle-give",
@@ -2508,6 +2638,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["amenity=recycling"]
   },
   {
+    id: 129,
     group: "mobility",
     subgroup: "bicycle",
     value: "bicycle-get",
@@ -2520,6 +2651,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["shop=bicycle"]
   },
   {
+    id: 130,
     group: "mobility",
     subgroup: "bicycle",
     value: "bicycle-rent",
@@ -2539,6 +2671,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: ["amenity=bicycle_rental"]
   },
   {
+    id: 131,
     group: "mobility",
     subgroup: "bicycle",
     value: "bicycle-repair",

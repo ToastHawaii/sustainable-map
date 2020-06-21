@@ -2,6 +2,8 @@ import { type } from "./local.type";
 
 export const local = {
   code: "",
+  title: "Sustainable map",
+  description: "Experience the world sustainably.",
   minZoomMessageNoLayer: "No layer assigned",
   minZoomMessage: "Zoom in to load locations",
   emptyIndicator: "No locations found",
