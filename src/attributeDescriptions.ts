@@ -84,5 +84,9 @@ export const attributeDescriptions: Attribute<{ website?: string }>[] = [
         tags[`wheelchair:description:${local.code || "en"}`] ||
           tags["wheelchair:description"]
       )
+  },
+  {
+    check: tags => !!tags.fee && !!tags["charge"],
+    template: (_local, tags) => template("far fa-money-bill-alt", tags.charge)
   }
 ];
