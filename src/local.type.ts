@@ -169,6 +169,11 @@ export const type = {
         bounds: [45.818, 5.9559, 47.8085, 10.4923]
       },
       {
+        name: "Reparaturführer",
+        url: "https://reparaturfuehrer.ch/kategorien/",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      },
+      {
         name: "Reparatur-Initiativen",
         url: "https://www.reparatur-initiativen.de/orte",
         bounds: [45.82, 5.8, 55.26, 17.31]
@@ -223,6 +228,11 @@ export const type = {
         url:
           "https://fahrrad.fandom.com/de/wiki/Fahrradselbsthilfewerkst%C3%A4tten_in_Berlin",
         bounds: [52.33826, 13.08835, 52.67551, 13.76116]
+      },
+      {
+        name: "Reparaturführer",
+        url: "https://reparaturfuehrer.ch/kategorien/fahrraeder-ebikes/",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
       },
       {
         name: "Pumpipumpe",
@@ -394,6 +404,11 @@ export const type = {
       {
         name: "foodwaste.ch",
         url: "https://foodwaste.ch/lokale-initiativen/",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      },
+      {
+        name: "Save food",
+        url: "https://savefood.ch/",
         bounds: [45.818, 5.9559, 47.8085, 10.4923]
       },
       {
@@ -671,12 +686,27 @@ export const type = {
       {
         name: "Pumpipumpe",
         url: "https://map.pumpipumpe.ch/"
+      },
+      {
+        name: "Reparaturführer",
+        url: "https://reparaturfuehrer.ch/kategorien/kleider/",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
       }
     ]
   },
   "clothes-give": { name: "Clothes (Give)", description: "" },
   "clothes-take": { name: "Clothes (Take)", description: "" },
-  "clothes-repair": { name: "Clothes (Repair)", description: "" },
+  "clothes-repair": {
+    name: "Clothes (Repair)",
+    description: "",
+    externalResources: [
+      {
+        name: "Reparaturführer",
+        url: "https://reparaturfuehrer.ch/kategorien/kleider/",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      }
+    ]
+  },
   "mobile-phones": {
     name: "Phone",
     description: "",
@@ -690,12 +720,27 @@ export const type = {
       {
         name: "Labdoo",
         url: "https://www.labdoo.org/content/dootronics-dashboard"
+      },
+      {
+        name: "Reparaturführer",
+        url: "https://reparaturfuehrer.ch/kategorien/handy-telefon-mp3player/",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
       }
     ]
   },
   "mobile-phones-give": { name: "Phone (Give)", description: "" },
   "mobile-phones-take": { name: "Phone (Take)", description: "" },
-  "mobile-phones-repair": { name: "Phone (Repair)", description: "" },
+  "mobile-phones-repair": {
+    name: "Phone (Repair)",
+    description: "",
+    externalResources: [
+      {
+        name: "Reparaturführer",
+        url: "https://reparaturfuehrer.ch/kategorien/handy-telefon-mp3player/",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      }
+    ]
+  },
   computers: {
     name: "Computer",
     description: "",
@@ -703,12 +748,29 @@ export const type = {
       {
         name: "Labdoo",
         url: "https://www.labdoo.org/content/dootronics-dashboard"
+      },
+      {
+        name: "Reparaturführer",
+        url:
+          "https://reparaturfuehrer.ch/kategorien/computer-drucker-netzwerk/",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
       }
     ]
   },
   "computers-give": { name: "Computer (Give)", description: "" },
   "computers-take": { name: "Computer (Take)", description: "" },
-  "computers-repair": { name: "Computer (Repair)", description: "" },
+  "computers-repair": {
+    name: "Computer (Repair)",
+    description: "",
+    externalResources: [
+      {
+        name: "Reparaturführer",
+        url:
+          "https://reparaturfuehrer.ch/kategorien/computer-drucker-netzwerk/",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      }
+    ]
+  },
   toys: {
     name: "Toy",
     description: "",
@@ -716,13 +778,28 @@ export const type = {
       {
         name: "Pumpipumpe",
         url: "https://map.pumpipumpe.ch/"
+      },
+      {
+        name: "Reparaturführer",
+        url: "https://reparaturfuehrer.ch/kategorien/spielzeug-modellbau/",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
       }
     ]
   },
   "toys-give": { name: "Toy (Give)", description: "" },
   "toys-take": { name: "Toy (Take)", description: "" },
   "toys-rent": { name: "Toy (Rent)", description: "" },
-  "toys-repair": { name: "Toy (Repair)", description: "" },
+  "toys-repair": {
+    name: "Toy (Repair)",
+    description: "",
+    externalResources: [
+      {
+        name: "Reparaturführer",
+        url: "https://reparaturfuehrer.ch/kategorien/spielzeug-modellbau/",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      }
+    ]
+  },
   electronics: {
     name: "Electronic",
     description: "",
@@ -730,12 +807,27 @@ export const type = {
       {
         name: "Pumpipumpe",
         url: "https://map.pumpipumpe.ch/"
+      },
+      {
+        name: "Reparaturführer",
+        url: "https://reparaturfuehrer.ch/kategorien/haushalts-Gartengeraete/",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
       }
     ]
   },
   "electronics-give": { name: "Electronic (Give)", description: "" },
   "electronics-take": { name: "Electronic (Take)", description: "" },
-  "electronics-repair": { name: "Electronic (Repair)", description: "" },
+  "electronics-repair": {
+    name: "Electronic (Repair)",
+    description: "",
+    externalResources: [
+      {
+        name: "Reparaturführer",
+        url: "https://reparaturfuehrer.ch/kategorien/haushalts-Gartengeraete/",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      }
+    ]
+  },
   furniture: {
     name: "Furniture",
     description: "",
@@ -743,12 +835,27 @@ export const type = {
       {
         name: "Pumpipumpe",
         url: "https://map.pumpipumpe.ch/"
+      },
+      {
+        name: "Reparaturführer",
+        url: "https://reparaturfuehrer.ch/kategorien/moebel/",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
       }
     ]
   },
   "furniture-give": { name: "Furniture (Give)", description: "" },
   "furniture-take": { name: "Furniture (Take)", description: "" },
-  "furniture-repair": { name: "Furniture (Repair)", description: "" },
+  "furniture-repair": {
+    name: "Furniture (Repair)",
+    description: "",
+    externalResources: [
+      {
+        name: "Reparaturführer",
+        url: "https://reparaturfuehrer.ch/kategorien/moebel/",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      }
+    ]
+  },
   bicycle: {
     name: "Bicycle",
     description: "",
@@ -769,6 +876,11 @@ export const type = {
         bounds: [52.33826, 13.08835, 52.67551, 13.76116]
       },
       {
+        name: "Reparaturführer",
+        url: "https://reparaturfuehrer.ch/kategorien/fahrraeder-ebikes/",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      },
+      {
         name: "Pumpipumpe",
         url: "https://map.pumpipumpe.ch/"
       }
@@ -780,5 +892,15 @@ export const type = {
     description: ""
   },
   "bicycle-rent": { name: "Bicycle (Rent)", description: "" },
-  "bicycle-repair": { name: "Bicycle (Repair)", description: "" }
+  "bicycle-repair": {
+    name: "Bicycle (Repair)",
+    description: "",
+    externalResources: [
+      {
+        name: "Reparaturführer",
+        url: "https://reparaturfuehrer.ch/kategorien/fahrraeder-ebikes/",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      }
+    ]
+  }
 };
