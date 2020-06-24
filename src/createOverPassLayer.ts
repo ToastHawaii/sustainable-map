@@ -18,7 +18,7 @@ import {
 } from "./data";
 
 export function createOverPassLayer<M>(
-  group:string,
+  group: string,
   value: string,
   icon: string,
   query: string,
@@ -204,7 +204,7 @@ export function createOverPassLayer<M>(
         share.addEventListener("click", function (e) {
           e.preventDefault();
           shareLink(
-            `${window.location.origin}${window.location.pathname}#offers=${group}/${value}&location=${model.address.latitude},${model.address.longitude}` ,
+            `${window.location.origin}${window.location.pathname}#offers=${group}/${value}&location=${model.address.latitude},${model.address.longitude}`,
             share,
             local,
             toTitle(model),

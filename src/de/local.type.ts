@@ -373,6 +373,14 @@ export const type = {
         name: "Pflanzplatz Dunkelhölzli Gemüseabo",
         url: "https://www.dunkelhoelzli.ch/",
         bounds: [47.159438, 8.35768, 47.694472, 8.984941]
+      },
+      {
+        name: "mundraub",
+        url: "https://mundraub.org/map#z={zoom}&lat={lat}&lng={lng}"
+      },
+      {
+        name: "falling fruit",
+        url: "http://fallingfruit.org/?z={zoom}&y={lng}&x={lat}&locale=de"
       }
     ]
   },
@@ -429,6 +437,10 @@ export const type = {
       {
         name: "mundraub",
         url: "https://mundraub.org/map#z={zoom}&lat={lat}&lng={lng}"
+      },
+      {
+        name: "falling fruit",
+        url: "http://fallingfruit.org/?z={zoom}&y={lng}&x={lat}&locale=de"
       },
       {
         name: "Zero Waste Map",
