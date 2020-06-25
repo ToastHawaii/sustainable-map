@@ -380,7 +380,7 @@ export const type = {
       },
       {
         name: "falling fruit",
-        url: "http://fallingfruit.org/?z={zoom}&y={lat}&x={lng}&locale=de"
+        url: "http://fallingfruit.org/?z={zoom}&y={lat}&x={lng}&t=OSM&locale=de"
       }
     ]
   },
