@@ -108,6 +108,7 @@ More maps for inspiration:
 - Various equipment e.g. pumps, sports fields, etc. [Züriplan](https://www.maps.stadt-zuerich.ch/zueriplan3/Stadtplan.aspx)
 - Places where you can participate in city life without papers and / or money. [SolidaryCityMap](https://solidary.city/)
 - Berlin, free of charge and easy for everyone to experience. [gratis-in-berlin](https://www.gratis-in-berlin.de/)
+- MYBLUEPLANET develops innovative projects that companies, schools and organizations can implement to make a contribution to climate protection. [My Blue Planet](https://www.myblueplanet.ch/en/)
 - We are postponing Overshoot Day until the end of the year. [#MoveTheDate Switzerland](https://www.movethedate.ch/map)
 - Visit public bookcases and register them. Look at [the beautiful map from Binnette](https://umap.openstreetmap.fr/fr/map/osm-bookcases-and-boite-a-lire_362287#15/45.2010/5.7389), which is based on the data of [boite-a-lire](https://www.boite-a-lire.com/). [Click here for the project website from Binnette's bookcases-to-check](https://github.com/Binnette/bookcases-to-check).
 - A map with public and free facilities and offers. [Priceless](https://priceless.zottelig.ch/)

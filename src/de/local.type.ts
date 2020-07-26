@@ -389,7 +389,17 @@ export const type = {
     description: ""
   },
   "diaper-changing-table": { name: "Wickeltische", description: "" },
-  "drinking-water": { name: "Trinkwasser", description: "" },
+  "drinking-water": {
+    name: "Trinkwasser",
+    description: "",
+    externalResources: [
+      {
+        name: "Wasser für Wasser",
+        url: "https://wfw.ch/partner/gastro",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      }
+    ]
+  },
   "food-sharing": {
     name: "Lebensmittel teilen",
     description:

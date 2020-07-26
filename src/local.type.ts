@@ -388,7 +388,14 @@ export const type = {
     description: ""
   },
   "diaper-changing-table": { name: "Diaper-changing table", description: "" },
-  "drinking-water": { name: "Drinking water", description: "" },
+  "drinking-water": { name: "Drinking water", description: "",
+  externalResources: [
+    {
+      name: "Wasser für Wasser",
+      url: "https://wfw.ch/en/partners/wfw-gastro",
+      bounds: [45.818, 5.9559, 47.8085, 10.4923]
+    }
+  ] },
   "food-sharing": {
     name: "Food sharing",
     description:

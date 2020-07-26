@@ -108,6 +108,7 @@ Weitere Karten und Verzeichnisse als Inspiration:
 - Diverse Einrichtungen z.B. Pumpen, Sportplätze, etc. [Züriplan](https://www.maps.stadt-zuerich.ch/zueriplan3/Stadtplan.aspx)
 - Orte, an denen Du auch ohne Papiere und/oder Geld an dem Leben in der Stadt teilhaben kannst. [SolidaryCityMap](https://solidary.city/)
 - Berlin, gratis und ganz einfach für alle erlebbar. [gratis-in-berlin](https://www.gratis-in-berlin.de/)
+- Mit innovativen Lösungen bewegen wir die Menschen in der Schweiz, klimaschonend zu leben. [My Blue Planet](https://www.myblueplanet.ch/)
 - Wir verschieben den Overshoot Day auf Ende Jahr [#MoveTheDate Schweiz](https://www.movethedate.ch/map)
 - Besuche öffentliche Bücherschränke und trage diese ein. Schau dir dazu [die schöne Karte von Binnette](https://umap.openstreetmap.fr/fr/map/osm-bookcases-and-boite-a-lire_362287#15/45.2010/5.7389) an, welche auf den Daten von [boite-a-lire](https://www.boite-a-lire.com/) basiert. [Hier geht es zur Projekt Webseite von Binnette's bookcases-to-check](https://github.com/Binnette/bookcases-to-check).
 - Eine Karte mit öffentlichen und kostenlosen Einrichtungen und Angebote. [Unbezahlbar](https://priceless.zottelig.ch/de)
