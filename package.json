@@ -17,14 +17,14 @@
   },
   "homepage": "https://github.com/ToastHawaii/sustainable-map#readme",
   "dependencies": {
-    "@types/leaflet": "1.5.5",
-    "@types/md5": "2.1.33",
+    "@types/leaflet": "1.5.17",
+    "@types/md5": "2.2.0",
     "@types/moment": "2.13.0",
     "details-element-polyfill": "2.4.0",
     "i18next-client": "1.11.4",
     "leaflet-overpass-layer": "github:ToastHawaii/leaflet-overpass-layer",
     "md5": "2.2.1",
-    "moment": "2.24.0",
+    "moment": "2.27.0",
     "opening_hours": "3.5.0",
     "bignumber.js": "9.0.0"
   },
