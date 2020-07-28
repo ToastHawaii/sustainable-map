@@ -4,14 +4,15 @@ import { toUrl, toFacebookUrl, toWikipediaUrl } from "./utilities/url";
 const template = (url: string, icon: string) =>
   `<a href="${url}" target="_blank"><i class="${icon} fa-lg"></i></a>&ensp;`;
 
-export const links: Attribute<{ website?: string }>[] = [
+export const links: Attribute<{
+  website?: string;
+}>[] = [
   {
-    check: (tags, _value, model) =>
+    check: (tags, _value, model, local) =>
       !!(
         tags.website ||
-        (tags.wikipedia
-          ? `https://wikipedia.org/wiki/${tags.wikipedia}`
-          : ``) ||
+        tags[`${local.code || "en"}:wikipedia`] ||
+        tags.wikipedia ||
         model.website ||
         tags.url ||
         tags["contact:website"] ||
@@ -19,10 +20,12 @@ export const links: Attribute<{ website?: string }>[] = [
         tags["contact:facebook"] ||
         tags["opening_hours:url"]
       ),
-    template: (_local, tags, _value, model) =>
+    template: (local, tags, _value, model) =>
       template(
         toUrl(tags.website) ||
-          toWikipediaUrl(tags.wikipedia) ||
+          toWikipediaUrl(
+            tags[`${local.code || "en"}:wikipedia`] || tags.wikipedia
+          ) ||
           toUrl(model.website) ||
           toUrl(tags.url) ||
           toUrl(tags["contact:website"]) ||
