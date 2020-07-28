@@ -410,19 +410,27 @@ export function createOverPassLayer<M>(
                   }
                 });
 
-              if (e.tags[`${local.code || "en"}:wikipedia`] || e.tags.wikipedia)
-                loadWikipediaSummary(
-                  e.tags[`${local.code || "en"}:wikipedia`] || e.tags.wikipedia,
-                  local.code || "en"
-                ).then(wikipedia => {
-                  model.wikipedia = wikipedia;
+              const wikipediaUrl =
+                e.tags[`wikipedia:${local.code || "en"}`] ||
+                e.tags.wikipedia ||
+                e.tags[`brand:wikipedia:${local.code || "en"}`] ||
+                e.tags["brand:wikipedia"] ||
+                e.tags[`network:wikipedia:${local.code || "en"}`] ||
+                e.tags["network:wikipedia"] ||
+                e.tags[`operator:wikipedia:${local.code || "en"}`] ||
+                e.tags["operator:wikipedia"];
+              if (wikipediaUrl)
+                loadWikipediaSummary(wikipediaUrl, local.code || "en").then(
+                  wikipedia => {
+                    model.wikipedia = wikipedia;
 
-                  getHtmlElement(
-                    ".description",
-                    contentElement
-                  ).innerHTML = generateHtmlDescription(model);
-                  popup.update();
-                });
+                    getHtmlElement(
+                      ".description",
+                      contentElement
+                    ).innerHTML = generateHtmlDescription(model);
+                    popup.update();
+                  }
+                );
             }
             if (model.img || model.wikipedia.image) {
               isImage(model.img || model.wikipedia.image).then(

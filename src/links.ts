@@ -18,6 +18,15 @@ export const links: Attribute<{
         tags["contact:website"] ||
         tags["facebook"] ||
         tags["contact:facebook"] ||
+        tags["brand:website"] ||
+        tags[`brand:wikipedia:${local.code || "en"}`] ||
+        tags["brand:wikipedia"] ||
+        tags["network:website"] ||
+        tags[`network:wikipedia:${local.code || "en"}`] ||
+        tags["network:wikipedia"] ||
+        tags["operator:website"] ||
+        tags[`operator:wikipedia:${local.code || "en"}`] ||
+        tags["operator:wikipedia"] ||
         tags["opening_hours:url"]
       ),
     template: (local, tags, _value, model) =>
@@ -31,6 +40,15 @@ export const links: Attribute<{
           toUrl(tags["contact:website"]) ||
           toFacebookUrl(tags["facebook"]) ||
           toFacebookUrl(tags["contact:facebook"]) ||
+          tags["brand:website"] ||
+          tags[`brand:wikipedia:${local.code || "en"}`] ||
+          tags["brand:wikipedia"] ||
+          tags["network:website"] ||
+          tags[`network:wikipedia:${local.code || "en"}`] ||
+          tags["network:wikipedia"] ||
+          tags["operator:website"] ||
+          tags[`operator:wikipedia:${local.code || "en"}`] ||
+          tags["operator:wikipedia"] ||
           toUrl(tags["opening_hours:url"]) ||
           "",
         "fas fa-globe"
