@@ -519,6 +519,18 @@ nw["recycling:books"="yes"];`,
     edit: ["amenity=community_centre"]
   },
   {
+    id: 136,
+    group: "community",
+    value: "scout",
+    icon: "https://wiki.openstreetmap.org/w/images/e/e4/Camping.16.svg",
+    query: `
+    nwr["club"="scout"];
+    nwr["scout"="yes"];`,
+    color: "#CD853F",
+    tags: ["club=scout", "scout=yes"],
+    edit: ["club=scout", "tourism=camp_site"]
+  },
+  {
     id: 32,
     group: "community",
     value: "community-garden",

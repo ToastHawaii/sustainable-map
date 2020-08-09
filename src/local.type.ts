@@ -181,6 +181,10 @@ export const type = {
       {
         name: "Zero Waste Map",
         url: "https://zerowastemap.org/"
+      },
+      {
+        name: "iFixit",
+        url: "https://www.ifixit.com/Guide"
       }
     ]
   },
@@ -267,6 +271,17 @@ export const type = {
     description: "Here you can hang up posters to advertise your concern."
   },
   "community-centre": { name: "Community centre", description: "" },
+  scout: {
+    name: "Scout Group",
+    description: "",
+    externalResources: [
+      {
+        name: "Scout Movement Switzerland",
+        url: "https://pfadi.swiss/en/go/joining-scouts/?q={lat},{lng}#finder",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      }
+    ]
+  },
   "community-garden": {
     name: "Community garden",
     description:
@@ -388,14 +403,17 @@ export const type = {
     description: ""
   },
   "diaper-changing-table": { name: "Diaper-changing table", description: "" },
-  "drinking-water": { name: "Drinking water", description: "",
-  externalResources: [
-    {
-      name: "Wasser für Wasser",
-      url: "https://wfw.ch/en/partners/wfw-gastro",
-      bounds: [45.818, 5.9559, 47.8085, 10.4923]
-    }
-  ] },
+  "drinking-water": {
+    name: "Drinking water",
+    description: "",
+    externalResources: [
+      {
+        name: "Wasser für Wasser",
+        url: "https://wfw.ch/en/partners/wfw-gastro",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      }
+    ]
+  },
   "food-sharing": {
     name: "Food sharing",
     description:

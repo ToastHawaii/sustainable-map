@@ -181,6 +181,10 @@ export const type = {
       {
         name: "Zero Waste Map",
         url: "https://zerowastemap.org/de/"
+      },
+      {
+        name: "iFixit",
+        url: "https://de.ifixit.com/Anleitung"
       }
     ]
   },
@@ -268,6 +272,17 @@ export const type = {
       "Hier kannst du Plakate anbringen um für deine Sache zu werben."
   },
   "community-centre": { name: "Gemeinschaftscenter", description: "" },
+  scout: {
+    name: "Scout Group",
+    description: "",
+    externalResources: [
+      {
+        name: "Pfadibewegung Schweiz",
+        url: "https://pfadi.swiss/de/go/mitmachen/?q={lat},{lng}#finder",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      }
+    ]
+  },
   "community-garden": {
     name: "Gemeinschaftsgarten",
     description:
