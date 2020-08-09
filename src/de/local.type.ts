@@ -273,7 +273,7 @@ export const type = {
   },
   "community-centre": { name: "Gemeinschaftscenter", description: "" },
   scout: {
-    name: "Scout Group",
+    name: "Pfadfinder",
     description: "",
     externalResources: [
       {
