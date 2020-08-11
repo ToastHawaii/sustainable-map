@@ -422,6 +422,7 @@ export const type = {
       }
     ]
   },
+  defibrillator: { name: "Defibrillator", description: "" },
   "food-sharing": {
     name: "Lebensmittel teilen",
     description:

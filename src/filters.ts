@@ -900,6 +900,17 @@ nw["amenity"="vending_machine"]["vending"~"drinks"][~"^(regional|fair_trade|orga
     ]
   },
   {
+    id: 144,
+    group: "health",
+    value: "defibrillator",
+    icon: "/lib/maki-icons/defibrillator-15.svg",
+    query: `
+nw["emergency"="defibrillator"];`,
+    color: "#008855",
+    tags: ["emergency=defibrillator"],
+    edit: ["emergency=defibrillator"]
+  },
+  {
     id: 46,
     group: "food",
     value: "food-sharing",
