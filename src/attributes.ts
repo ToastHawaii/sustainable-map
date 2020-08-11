@@ -61,7 +61,10 @@ export const attributes: Attribute<{}>[] = [
       tags.swimming_pool === "children's_pool" ||
       tags.children === "designated" ||
       tags.children === "yes" ||
-      (tags.kids_area === "yes" && tags["kids_area:fee"] !== "yes"),
+      (tags.kids_area === "yes" && tags["kids_area:fee"] !== "yes") ||
+      /child|juvenile|orphan|children|youth/gi.test(
+        tags["social_facility:for"]
+      ),
     template: local => template(local.playground, "fas fa-child")
   },
   {
@@ -330,12 +333,43 @@ export const attributes: Attribute<{}>[] = [
       `<span title="${local.hoops}" class="attribut"><img style="height: 13px;vertical-align: text-top;" src="/lib/maki-icons/basketball-15.svg"> ${tags.hoops}</span>`
   },
   {
-    check: tags => tags.female === "yes" || tags.unisex === "yes",
+    check: tags =>
+      tags.female === "yes" ||
+      /woman|women/gi.test(tags["social_facility:for"]) ||
+      tags.unisex === "yes",
     template: local => template(local.female, "fas fa-female")
   },
   {
-    check: tags => tags.male === "yes" || tags.unisex === "yes",
+    check: tags =>
+      tags.male === "yes" ||
+      /men/gi.test(tags["social_facility:for"]) ||
+      tags.unisex === "yes",
     template: local => template(local.male, "fas fa-male")
+  },
+  {
+    check: tags => /senior|elderly/gi.test(tags["social_facility:for"]),
+    template: local => template(local.senior, "fas fa-blind")
+  },
+  {
+    check: tags =>
+      /disabled|mental_health|diseased/gi.test(tags["social_facility:for"]),
+    template: local => template(local.disabled, "fab fa-accessible-icon")
+  },
+  {
+    check: tags =>
+      /homeless|underprivileged|drug_addicted|unemployed/gi.test(
+        tags["social_facility:for"]
+      ),
+    template: local => template(local.homeless, "fas fa-angle-up")
+  },
+  {
+    check: tags =>
+    /migrant|refugees|refugee|displaced|migrants/gi.test(
+      tags["social_facility:for"]
+    )|| /displaced/gi.test(
+      tags["emergency:social_facility:for"]
+    ),
+    template: local => template(local.migrant, "fas fa-running")
   },
   {
     check: tags =>

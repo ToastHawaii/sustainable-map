@@ -154,6 +154,13 @@ export const type = {
       }
     ]
   },
+  "assistance-female": { name: "For women", description: "" },
+  "assistance-male": { name: "For men", description: "" },
+  "assistance-senior": { name: "For elderly", description: "" },
+  "assistance-disabled": { name: "For disabled", description: "" },
+  "assistance-homeless": { name: "For underprivileged", description: "" },
+  "assistance-migrant": { name: "For refugees", description: "" },
+  "assistance-children": { name: "For children", description: "" },
   "assisted-repair": {
     name: "Assisted repair",
     description:
