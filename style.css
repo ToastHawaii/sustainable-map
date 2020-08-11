@@ -201,6 +201,7 @@ button {
   padding-bottom: 7px;
   font-size: 14px;
   text-align: center;
+  min-width: 10px;
   display: inline-block;
 }
 
@@ -263,6 +264,7 @@ button {
 #filters .filter .filter-label {
   z-index: -1;
   padding: 6px;
+  padding-right: 2px;
   padding-left: 1px;
   margin-left: 5px;
 }
