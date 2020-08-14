@@ -20,7 +20,8 @@ module.exports = {
       filename: "de/index.html"
     }),
     new webpack.NamedModulesPlugin(),
-    new CopyWebpackPlugin([
+    new CopyWebpackPlugin({
+      patterns: [
       { from: "src/www" },
       {
         from: "*.css*",
@@ -37,7 +38,7 @@ module.exports = {
         to: "lib/",
         context: "node_modules/leaflet-overpass-layer/dist/"
       }
-    ])
+    ]})
   ],
   mode: "development",
   // Enable sourcemaps for debugging webpack's output.

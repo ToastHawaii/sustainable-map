@@ -29,7 +29,8 @@ module.exports = {
         drop_console: true
       }
     }),
-    new CopyWebpackPlugin([
+    new CopyWebpackPlugin({
+      patterns: [
       { from: "src/www" },
       {
         from: "*.css*",
@@ -46,7 +47,7 @@ module.exports = {
         to: "lib/",
         context: "node_modules/leaflet-overpass-layer/dist/"
       }
-    ])
+    ]})
   ],
   mode: "production",
 
