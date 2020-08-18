@@ -22,23 +22,24 @@ module.exports = {
     new webpack.NamedModulesPlugin(),
     new CopyWebpackPlugin({
       patterns: [
-      { from: "src/www" },
-      {
-        from: "*.css*",
-        to: "lib/",
-        context: "node_modules/leaflet/dist/"
-      },
-      {
-        from: "**/*.png",
-        to: "lib/",
-        context: "node_modules/leaflet/dist/"
-      },
-      {
-        from: "*.css*",
-        to: "lib/",
-        context: "node_modules/leaflet-overpass-layer/dist/"
-      }
-    ]})
+        { from: "src/www" },
+        {
+          from: "*.css*",
+          to: "lib/",
+          context: "node_modules/leaflet/dist/"
+        },
+        {
+          from: "**/*.png",
+          to: "lib/",
+          context: "node_modules/leaflet/dist/"
+        },
+        {
+          from: "*.css*",
+          to: "lib/",
+          context: "node_modules/leaflet-overpass-layer/dist/"
+        }
+      ]
+    })
   ],
   mode: "development",
   // Enable sourcemaps for debugging webpack's output.

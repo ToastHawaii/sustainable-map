@@ -373,7 +373,7 @@ nw["recycling:books"="yes"];`,
     value: "rock",
     icon: "/lib/maki-icons/circle-15.svg",
     query: `
-  nwr["natural"="^(rock|stone)$"]&part;`,
+  nwr["natural"~"^(rock|stone)$"]&part;`,
     color: "#D3D3D3",
     tags: ["natural=rock", "natural=stone"],
     edit: ["natural=rock", "natural=stone"]
@@ -398,7 +398,7 @@ nw["recycling:books"="yes"];`,
     value: "waterfall",
     icon: "https://wiki.openstreetmap.org/w/images/7/72/Waterfall-14.svg",
     query: `
-  nwr["waterway"="^(waterfall|dam|weir)$"]&part;`,
+  nwr["waterway"~"^(waterfall|dam|weir)$"]&part;`,
     color: "#20B2AA",
     tags: ["waterway=waterfall", "waterway=dam", "waterway=weir"],
     edit: ["waterway=waterfall", "waterway=dam", "waterway=weir"]
@@ -2625,7 +2625,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
       nw["recycling:pallets"="yes"];
 
       // Give and take
-      nw["shop"="^(interior_decoration|furniture|bed)$"][~"^(rental|regional|fair_trade|second_hand)$"~"^(yes|only)$"];
+      nw["shop"~"^(interior_decoration|furniture|bed)$"][~"^(rental|regional|fair_trade|second_hand)$"~"^(yes|only)$"];
       nw["amenity"="give_box"];
 
       nw["rental"~"tableware|furniture"];
@@ -2681,7 +2681,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     icon: "/lib/temaki-icons/furniture.svg",
     button: "fas fa-long-arrow-alt-right",
     query: `
-      nw["shop"="^(interior_decoration|furniture|bed)$"][~"^(rental|regional|fair_trade|second_hand)$"~"^(yes|only)$"];
+      nw["shop"~"^(interior_decoration|furniture|bed)$"][~"^(rental|regional|fair_trade|second_hand)$"~"^(yes|only)$"];
       nw["amenity"="give_box"];
 
       nw["rental"~"tableware|furniture"];
@@ -2724,7 +2724,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     nw["bicycle_rental"~"^(yes|only|cargo_bike)$"];
     nw["rental:bicycle"~"^(yes|only)$"];
     nw["rental"~"bicycle|bike"];
-    nw["amenity"="^(bicycle_rental|bicycle_sharing)$"];
+    nw["amenity"~"^(bicycle_rental|bicycle_sharing)$"];
     nw["shop"="bicycle_rental"];
     nw["shop"="bicycle"]["rental"~"^(yes|only)$"];
 
@@ -2792,7 +2792,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     nw["bicycle_rental"~"^(yes|only|cargo_bike)$"];
     nw["rental:bicycle"~"^(yes|only)$"];
     nw["rental"~"bicycle|bike"];
-    nw["amenity"="^(bicycle_rental|bicycle_sharing)$"];
+    nw["amenity"~"^(bicycle_rental|bicycle_sharing)$"];
     nw["shop"="bicycle_rental"];
     nw["shop"="bicycle"]["rental"~"^(yes|only)$"];`,
     color: "#4682B4",
