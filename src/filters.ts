@@ -250,7 +250,7 @@ nw["recycling:books"="yes"];`,
     value: "history",
     icon: "https://wiki.openstreetmap.org/w/images/c/c8/Acheological.png",
     query: `
-  nwr["historic"!~"^(castle|tower|fort|ruins|memorial|monument|archaeological_site)$"]["building"!="bunker"]["military"!="bunker"]&part;
+  nwr["historic"]["historic"!~"^(castle|tower|fort|ruins|memorial|monument|archaeological_site)$"]["building"!="bunker"]["military"!="bunker"]&part;
 
   nw["board_type"="history"]&part;
   nw["information"="history"]&part;`,
