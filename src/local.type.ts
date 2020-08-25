@@ -292,7 +292,19 @@ export const type = {
   "community-garden": {
     name: "Community garden",
     description:
-      "Here is a garden which you can cultivate together with others. You can plant, water and harvest vegetables, herbs, flowers and so on and watch them grow."
+      "Here is a garden which you can cultivate together with others. You can plant, water and harvest vegetables, herbs, flowers and so on and watch them grow.",
+    externalResources: [
+      {
+        name: "Pflanzplatz Dunkelhölzli Gemüseabo",
+        url: "https://www.dunkelhoelzli.ch/",
+        bounds: [47.159438, 8.35768, 47.694472, 8.984941]
+      },
+      {
+        name: "Kooperationsstelle für solidarische Landwirtschaft",
+        url: "https://www.solawi.ch/vernetzungsplattform/",
+        bounds: [45.64, 2.12, 55.07, 19.03]
+      }
+    ]
   },
   grow: {
     name: "Grow",

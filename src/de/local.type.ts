@@ -293,7 +293,19 @@ export const type = {
   "community-garden": {
     name: "Gemeinschaftsgarten",
     description:
-      "Hier ist ein Garten, welcher du gemeinsam mit anderen bewirtschaften kannst. Du kannst Gemüse, Kräuter, Blumen etc. anpflanzen, giessen und ernten und beim Wachsen zuschauen."
+      "Hier ist ein Garten, welcher du gemeinsam mit anderen bewirtschaften kannst. Du kannst Gemüse, Kräuter, Blumen etc. anpflanzen, giessen und ernten und beim Wachsen zuschauen.",
+    externalResources: [
+      {
+        name: "Pflanzplatz Dunkelhölzli Gemüseabo",
+        url: "https://www.dunkelhoelzli.ch/",
+        bounds: [47.159438, 8.35768, 47.694472, 8.984941]
+      },
+      {
+        name: "Kooperationsstelle für solidarische Landwirtschaft",
+        url: "https://www.solawi.ch/vernetzungsplattform/",
+        bounds: [45.64, 2.12, 55.07, 19.03]
+      }
+    ]
   },
   grow: {
     name: "Anbauen",
