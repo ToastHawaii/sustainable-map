@@ -1,15 +1,15 @@
 defaults:
   - scope:
-      path: "README.md"
+      path: "docs/README.md"
     values:
-      permalink: ""
       lang: "en"
       title: "Sustainable"
       description: "Experience the world sustainably."
+      base: "/"
   - scope:
-      path: "de/README.md"
+      path: "de/docs/README.md"
     values:
-      permalink: "de"
       lang: "de"
       title: "Nachhaltig"
       description: "Erlebe die Welt nachhaltig."
+      base: "/de/"
