@@ -103,6 +103,9 @@ Probiere einen der folgenden Services aus:
 
 Weitere Karten und Verzeichnisse als Inspiration:
 
+- Die Webseite wurde inspiriert von einer Karte von [Transition Zürich](http://www.transition-zuerich.ch/), welche nachhaltige Angebote, Events und Einrichtungen in Zürich anzeigt. Ein Dank an dieser Stelle an die Entwickler, Veröffentlicher und Unterstützer von Transition Zürich, für die Inspiration und Arbeit.
+- Nachhaltige Angebote, Events und Einrichtungen. [Karte von Morgen](https://kartevonmorgen.org/)
+- Nachhaltige Angebote, Events und Einrichtungen in Zürich. [zürich nachhaltig](https://www.zuerich-nachhaltig.ch/de/map)
 - Cargo Velo, Fashion, Freizeit & Beauty und Essen & Kafi. [Dein nachhaltiges Zürich](https://www.wwf.ch/de/dein-nachhaltiges-zuerich)
 - Öffentliche und gratis Angebote, Events und Einrichtungen in Zürich. [Zürich unbezahlbar](https://www.zuerichunbezahlbar.ch/map/)
 - Diverse Einrichtungen z.B. Pumpen, Sportplätze, etc. [Züriplan](https://www.maps.stadt-zuerich.ch/zueriplan3/Stadtplan.aspx)
