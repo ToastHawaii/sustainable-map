@@ -2286,7 +2286,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
       nw["repair"="phone"];
       nw["repair"="mobilephone"];
       nw["repair"="mobile_phone"];
-      nw["shop"="mobile_phone"]["repair"~"^(yes|only)$"]; `,
+      nw["shop"="mobile_phone"]["repair"~"^(yes|only)$"];`,
     color: "#191970",
     tags: ["shop=mobile_phone", "repair=assisted_self_service", "repair=*"],
     edit: ["shop=mobile_phone", "amenity"]
