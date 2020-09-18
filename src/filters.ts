@@ -696,7 +696,8 @@ nw["landuse"="community_food_growing"];`,
       "shop=supermarket",
       "shop=convenience",
       "shop=farm",
-      "amenity=marketplace"
+      "amenity=marketplace",
+      "landuse=farmland"
     ]
   },
   {
@@ -722,7 +723,8 @@ nw["landuse"="community_food_growing"];`,
       "shop=garden_centre",
       "shop=agrarian",
       "amenity=vending_machine",
-      "craft=gardener"
+      "craft=gardener",
+      "landuse=farmland"
     ]
   },
   {
