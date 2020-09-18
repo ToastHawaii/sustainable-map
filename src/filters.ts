@@ -1,3 +1,20 @@
+// Copyright (C) 2020 Markus Peloso
+// 
+// This file is part of Sustainable map.
+// 
+// Sustainable map is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+// 
+// Sustainable map is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU Affero General Public License for more details.
+// 
+// You should have received a copy of the GNU Affero General Public License
+// along with Sustainable map.  If not, see <http://www.gnu.org/licenses/>.
+
 export const filters: {
   id: number;
   group: string;
@@ -873,12 +890,12 @@ nw["amenity"="vending_machine"]["vending"~"drinks"][~"^(regional|fair_trade|orga
     value: "drinking-water",
     icon: "https://wiki.openstreetmap.org/w/images/0/08/Drinking-water-16.svg",
     query: `
-  nwr["amenity"="drinking_water"]&part;
-  nwr["drinking_water"="yes"]&part;
+  nwr["amenity"="drinking_water"]["drinking_water:legal"!="no"]&part;
+  nwr["drinking_water"="yes"]["drinking_water:legal"!="no"]&part;
 
-  node["amenity"="water_point"]&part;
+  node["amenity"="water_point"]["drinking_water:legal"!="no"]&part;
 
-  nw["drinking_water:refill"="yes"]&part;`,
+  nw["drinking_water:refill"="yes"]["drinking_water:legal"!="no"]&part;`,
     color: "#4169E1",
     tags: [
       "amenity=drinking_water",
