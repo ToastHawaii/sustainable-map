@@ -1,17 +1,17 @@
 // Copyright (C) 2020 Markus Peloso
-// 
+//
 // This file is part of Sustainable map.
-// 
+//
 // Sustainable map is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as
 // published by the Free Software Foundation, either version 3 of the
 // License, or (at your option) any later version.
-// 
+//
 // Sustainable map is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU Affero General Public License for more details.
-// 
+//
 // You should have received a copy of the GNU Affero General Public License
 // along with Sustainable map.  If not, see <http://www.gnu.org/licenses/>.
 
@@ -381,11 +381,9 @@ export const attributes: Attribute<{}>[] = [
   },
   {
     check: tags =>
-    /migrant|refugees|refugee|displaced|migrants/gi.test(
-      tags["social_facility:for"]
-    )|| /displaced/gi.test(
-      tags["emergency:social_facility:for"]
-    ),
+      /migrant|refugees|refugee|displaced|migrants/gi.test(
+        tags["social_facility:for"]
+      ) || /displaced/gi.test(tags["emergency:social_facility:for"]),
     template: local => template(local.migrant, "fas fa-running")
   },
   {
@@ -598,7 +596,9 @@ function regional(tags: Tags, local: any) {
     regional === "limited" ||
     tags.shop === "farm" ||
     tags.amenity === "marketplace" ||
-    tags.craft
+    tags.craft ||
+    /^(yes|only)$/gi.test(tags["self_harvesting"]) ||
+    /^(yes|only)$/gi.test(tags["self_service"])
   ) {
     return {
       text: local.regional?.yes,

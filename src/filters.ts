@@ -1,17 +1,17 @@
 // Copyright (C) 2020 Markus Peloso
-// 
+//
 // This file is part of Sustainable map.
-// 
+//
 // Sustainable map is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as
 // published by the Free Software Foundation, either version 3 of the
 // License, or (at your option) any later version.
-// 
+//
 // Sustainable map is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU Affero General Public License for more details.
-// 
+//
 // You should have received a copy of the GNU Affero General Public License
 // along with Sustainable map.  If not, see <http://www.gnu.org/licenses/>.
 
@@ -683,7 +683,8 @@ nw["landuse"="community_food_growing"];`,
     nw["amenity"="vending_machine"]["vending"~"eggs"];
     nw["amenity"="marketplace"];
     nw["craft"="pasta"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
-    nw["shop"="yes"]["organic"~"^(yes|only)$"];`,
+    nw["shop"="yes"]["organic"~"^(yes|only)$"];
+    nwr[~"^(crop|produce)$"~".*"]["crop"!~"^(sun)?flowers?$"]["produce"!~"^(sun)?flowers?$"][~"^(self\_harvesting|self\_service)$"~"^(yes|only)$"];`,
     color: "#ac39ac",
     tags: [
       "shop=supermarket",
@@ -706,7 +707,8 @@ nw["landuse"="community_food_growing"];`,
     query: `
     nw["shop"~"^(florist|garden_centre|agrarian)$"][~"^(regional|fair_trade|organic|second_hand)$"~"^(yes|only)$"];
     nw["amenity"="vending_machine"]["vending"~"flowers"][~"^(regional|fair_trade|organic|second_hand)$"~"^(yes|only)$"];
-    nw["craft"="gardener"][~"^(regional|fair_trade|organic|second_hand)$"~"^(yes|only)$"];`,
+    nw["craft"="gardener"][~"^(regional|fair_trade|organic|second_hand)$"~"^(yes|only)$"];
+    nwr[~"^(crop|produce)$"~"flower"][~"^(self\_harvesting|self\_service)$"~"^(yes|only)$"];`,
     color: "#DAC01A",
     tags: [
       "shop=florist",
