@@ -690,14 +690,17 @@ nw["landuse"="community_food_growing"];`,
       "shop=supermarket",
       "shop=convenience",
       "shop=farm",
-      "amenity=marketplace"
+      "amenity=marketplace",
+      "self_harvesting=*"
     ],
     edit: [
       "shop=supermarket",
       "shop=convenience",
       "shop=farm",
       "amenity=marketplace",
-      "landuse=farmland"
+      "landuse=farmland",
+      "landuse=orchard",
+      "landuse"
     ]
   },
   {
@@ -716,7 +719,8 @@ nw["landuse"="community_food_growing"];`,
       "shop=garden_centre",
       "shop=agrarian",
       "amenity=vending_machine",
-      "craft=gardener"
+      "craft=gardener",
+      "self_harvesting=*"
     ],
     edit: [
       "shop=florist",
@@ -724,7 +728,8 @@ nw["landuse"="community_food_growing"];`,
       "shop=agrarian",
       "amenity=vending_machine",
       "craft=gardener",
-      "landuse=farmland"
+      "landuse=farmland",
+      "landuse=plant_nursery"
     ]
   },
   {
