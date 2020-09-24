@@ -138,8 +138,8 @@ export function createOverPassLayer<M>(
         const contentElement = createElement(
           "div",
           `<div id="hcard-Name" class="vcard">
-          <a style="float:right;padding: 0 0 0 3px;" href="${href}"><i class="fas fa-pencil-alt"></i></a>
-          <a style="float:right;padding: 0 3px;" href="" class="share"><i class="fas fa-share-alt"></i></a>
+          <a style="float:right;padding: 0 6px;" href="${href}"><i class="fas fa-pencil-alt"></i></a>
+          <a style="float:right;padding: 0 6px 0 3px;" href="" class="share"><i class="fas fa-share-alt"></i></a>
           <strong class="name" title="${toTitle(model)}">${toTitle(
             model
           )}</strong>
@@ -166,21 +166,21 @@ export function createOverPassLayer<M>(
          <a href="https://maps.apple.com/?${utilQsString({
            ll: `${model.address.latitude},${model.address.longitude}`,
            q: toTitle(model)
-         })}">
+         })}"><i class="far fa-compass"></i>
            ${local.route}
-         </a>
-         </small>
-        </div>
-        <div class="img-container">
-        ${
-          model.img || model.wikipedia.image
-            ? `
+        </a>
+        </small>
+       </div>
+       <div class="img-container" style="clear: both;">
+       ${
+         model.img || model.wikipedia.image
+           ? `
           <br />
           <img class="img" dynamic-src="${
             model.img || model.wikipedia.image
           }"/>`
-            : ``
-        }
+           : ``
+       }
         </div>
         <div class="description">
         ${generateHtmlDescription(model)}
@@ -202,14 +202,14 @@ export function createOverPassLayer<M>(
               : ``
           }
         </div>
-        <div class="contact">
-          ${
-            !linksGenerator.empty(tags, value, {}, local)
-              ? `
+        <div class="contact" style="padding-top: 2px;">
+        ${
+          !linksGenerator.empty(tags, value, {}, local)
+            ? `
           <br />
           ${linksGenerator.render(local, tags, value, {})}`
-              : ``
-          }
+            : ``
+        }
         </div>
         </div>`
         );
