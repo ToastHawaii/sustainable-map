@@ -401,14 +401,7 @@ summary:focus {
   display: block;
 }
 
-.leaflet-popup .attribut,
-.leaflet-popup .share {
-  position: relative;
-}
-
-.leaflet-popup .attribut .title,
-.leaflet-popup .share .title,
-button.menu .title {
+button.menu {
   right: 10px;
   bottom: 25px;
   -webkit-border-radius: 50%;
@@ -547,6 +540,7 @@ h1 a {
   color: #333;
   text-decoration: none;
 }
+
 details[open] summary ~ * {
   animation: sweep 0.4s ease-in-out;
 }
@@ -567,13 +561,13 @@ details:not([open]) > *:not(summary) {
   display: none !important;
 }
 
-.attribut,
-.share {
+.leaflet-popup .attribut,
+.leaflet-popup .share {
   position: relative;
 }
 
-.attribut .title,
-.share .title,
+.leaflet-popup .attribut .title,
+.leaflet-popup .share .title,
 button.menu .title {
   position: absolute;
   top: 20px;
@@ -604,6 +598,18 @@ button.menu .title {
 
   animation: fade 0.5s ease-in-out backwards;
 }
+.help .help-text.help-text-right:after {
+  right: auto;
+  left: 36px;
+  color: #666;
+}
+.help #filters.right-collapsed {
+  overflow: visible;
+}
+.help #filters.right-collapsed .help-text.help-text-right:after {
+  top: 0;
+}
+
 @keyframes fade {
   0% {
     opacity: 0;
@@ -614,7 +620,6 @@ button.menu .title {
 }
 
 .leaflet-marker-icon {
-  z-index: 10000 !important;
   animation: pin-down 0.4s ease-in-out;
 }
 @keyframes pin-down {
@@ -627,6 +632,7 @@ button.menu .title {
 }
 
 .leaflet-marker-icon:hover {
+  z-index: 10000 !important;
   animation: 0.4s ease-in-out 0s infinite alternate pin-top;
 }
 @keyframes pin-top {
