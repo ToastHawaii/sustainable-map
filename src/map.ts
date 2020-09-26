@@ -637,7 +637,11 @@ function init<M>(
     query,
     attributes,
     local,
-    color
+    color,
+    () =>
+      (getHtmlElement(
+        `#filters input[value='${group + "/" + value}']`
+      ) as HTMLInputElement).checked
   );
   map.addLayer(layers[value]);
 }
