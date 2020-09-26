@@ -127,4 +127,4 @@ Unterstütze mich mit Kaffee und Kuchen:
 
 ---
 
-[English](/docs)
+<a href="/docs" hreflang="en">English</a>
