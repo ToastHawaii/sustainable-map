@@ -117,7 +117,7 @@ Weitere Karten und Verzeichnisse als Inspiration:
 - Eine Karte mit öffentlichen und kostenlosen Einrichtungen und Angebote. [Unbezahlbar](https://priceless.zottelig.ch/de)
 - Eine Karte mit öffentlichen Bücherschränken. [Öffentlichen Bücherschränke](https://book-exchange.zottelig.ch/de)
 
-Unterstütze mich mit Kaffee und Kuchen:
+Unterstütze mich mit Kaffee ☕ und Kuchen 🍰:
 
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick" />
