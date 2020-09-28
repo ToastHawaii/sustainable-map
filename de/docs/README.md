@@ -2,7 +2,7 @@
 
 Erlebe die Welt nachhaltig.
 
-[Hier geht es zur Karte](https://sustainable.zottelig.ch/de)
+[Hier geht es zur Karte](https://sustainable.zottelig.ch/de/)
 
 Dies ist eine Karte, welche Einrichtungen und Angebote in deiner Nähe anzeigt, die ökologisch-, sozial- und wirtschaftlich nachhaltig sind.
 
@@ -127,4 +127,4 @@ Unterstütze mich mit Kaffee und Kuchen:
 
 ---
 
-<a href="/docs" hreflang="en">English</a>
+[English](/docs/)
