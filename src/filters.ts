@@ -1087,7 +1087,7 @@ nw["social_facility"="soup_kitchen"];`,
       nw["charity"]["charity"!="no"];
       nw["operator:type"~"^(charitable|community|private_non_profit|ngo|association|cooperative)$",i]["amenity"!="parking"];
       nw["operator_type"~"^(charitable|community|private_non_profit|ngo|association|cooperative)$",i]["amenity"!="parking"];
-      nw["operator"="community"]["amenity"!="parking"];
+      nw["operator"~"^community$",i]["amenity"!="parking"];
 
       nwr["healthcare"="blood_donation"];`,
     color: "#FF69B4",
