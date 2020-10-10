@@ -17,7 +17,7 @@
 
 import { type } from "./local.type";
 
-export const local = {
+(window as any).local = {
   code: "",
   title: "Sustainable map",
   description: "Experience the world sustainably.",

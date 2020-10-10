@@ -15,7 +15,7 @@
 // You should have received a copy of the GNU Affero General Public License
 // along with Sustainable map.  If not, see <http://www.gnu.org/licenses/>.
 
-import { utilQsString } from "./utilities/url";
+import { getQueryParams, utilQsString } from "./utilities/url";
 import { Generator, Attribute } from "./Generator";
 import { links } from "./links";
 import { isImage } from "./utilities/image";
@@ -33,7 +33,7 @@ import {
   extractLocality,
   extractStreet
 } from "./data";
-import { textTruncate } from "./utilities/string";
+import { equalsIgnoreCase, textTruncate } from "./utilities/string";
 import { IOverPassLayer } from "leaflet-overpass-layer";
 import { delay } from "./utilities/data";
 
@@ -172,19 +172,19 @@ export function createOverPassLayer<M>(
            q: toTitle(model)
          })}"><i class="far fa-compass"></i>
            ${local.route}
-        </a>
-        </small>
-       </div>
-       <div class="img-container" style="clear: both;">
-       ${
-         model.img || model.wikipedia.image
-           ? `
+         </a>
+         </small>
+        </div>
+        <div class="img-container" style="clear: both;">
+        ${
+          model.img || model.wikipedia.image
+            ? `
           <br />
           <img class="img" dynamic-src="${
             model.img || model.wikipedia.image
           }"/>`
-           : ``
-       }
+            : ``
+        }
         </div>
         <div class="description">
         ${generateHtmlDescription(model)}
@@ -210,18 +210,24 @@ export function createOverPassLayer<M>(
         ${
           !linksGenerator.empty(tags, value, {}, local)
             ? `
-          <br />
+        <br />
           ${linksGenerator.render(local, tags, value, {})}`
             : ``
         }
         </div>
         </div>`
         );
+
+        const info = getQueryParams()["info"];
         const share = contentElement.querySelector(".share") as HTMLLinkElement;
         share.addEventListener("click", function (e) {
           e.preventDefault();
           shareLink(
-            `${window.location.origin}${window.location.pathname}#offers=${group}/${value}&location=${model.address.latitude},${model.address.longitude}`,
+            `${window.location.origin}${
+              window.location.pathname
+            }?offers=${group}/${value}&location=${model.address.latitude},${
+              model.address.longitude
+            }${info ? `&info=${info}` : ``}`,
             share,
             local,
             toTitle(model),

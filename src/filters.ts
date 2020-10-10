@@ -679,7 +679,7 @@ nw["landuse"="community_food_growing"];`,
     query: `
     nw["shop"~"^(supermarket|convenience|health_food|pasta|deli|wholesale|grocery|food|frozen_food|spices)$"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
     nw["shop"~"^(farm|greengrocer|organic|dairy)$"];
-    nw["amenity"="vending_machine"]["vending"~"food"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
+    nw["amenity"="vending_machine"]["vending"~"food|meat"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
     nw["amenity"="vending_machine"]["vending"~"eggs"];
     nw["amenity"="marketplace"];
     nw["craft"="pasta"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
@@ -739,7 +739,7 @@ nw["landuse"="community_food_growing"];`,
     icon: "https://wiki.openstreetmap.org/w/images/c/cc/Confectionery-14.svg",
     query: `
 nw["shop"~"^(confectionery|chocolate|honey|ice_cream|pastry)$"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
-nw["amenity"="vending_machine"]["vending"~"sweets|ice_cream"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
+nw["amenity"="vending_machine"]["vending"~"sweets|ice_cream|honey"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
 nw["craft"~"^(beekeeper|honey)$"];
 nw["craft"="confectionery"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];`,
     color: "#FFC0CB",

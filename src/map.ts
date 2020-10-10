@@ -21,7 +21,7 @@ import * as opening_hours from "opening_hours";
 import * as moment from "moment";
 import { Solver } from "./coloriz/Solver";
 import { Color, hexToRgb } from "./coloriz/Color";
-import { setHashParams, getHashParams } from "./utilities/url";
+import { setQueryParams, getQueryParams } from "./utilities/url";
 import { Attribute } from "./Generator";
 import { getJson } from "./utilities/jsonRequest";
 import { get, set } from "./utilities/storage";
@@ -74,7 +74,7 @@ export function initMap<M>(
 
   (getHtmlElement(
     ".about"
-  ) as HTMLLinkElement).href = `https://sustainable.zottelig.ch${
+  ) as HTMLLinkElement).href = `https://priceless.zottelig.ch${
     local.code ? `/${local.code}` : ""
   }/docs/`;
 
@@ -85,15 +85,17 @@ export function initMap<M>(
   shareButton.addEventListener("click", e => {
     e.preventDefault();
 
+    const info = getQueryParams()["info"];
     const bbox = map.getBounds();
     shareLink(
-      `${window.location.origin}${window.location.pathname}#o=${offersToShort(
-        offers,
-        filterOptions
-      )}&b=${toString(bbox.getSouth(), 4)},${toString(
+      `${window.location.origin}${window.location.pathname}?${
+        offers.length > 0 ? `o=${offersToShort(offers, filterOptions)}&` : ``
+      }b=${toString(bbox.getSouth(), 4)},${toString(
         bbox.getWest(),
         4
-      )},${toString(bbox.getNorth(), 4)},${toString(bbox.getEast(), 4)}`,
+      )},${toString(bbox.getNorth(), 4)},${toString(bbox.getEast(), 4)}${
+        info ? `&info=${info}` : ``
+      }`,
       shareButton,
       local,
       local.title,
@@ -267,13 +269,11 @@ export function initMap<M>(
       value ||
       (document.getElementById("osm-search") as HTMLInputElement).value;
 
-    setHashParams(
-      {
-        offers: offers.toString(),
-        location: value
-      },
-      hashchange
-    );
+    setQueryParams({
+      offers: offers.toString(),
+      location: value,
+      info: getQueryParams()["info"]
+    });
 
     getJson("https://nominatim.openstreetmap.org/search", {
       format: "json",
@@ -290,7 +290,7 @@ export function initMap<M>(
   }
 
   function hashchange() {
-    const params = getHashParams();
+    const params = getQueryParams();
 
     let offersParams: string[] = [];
 
@@ -308,6 +308,9 @@ export function initMap<M>(
             (getHtmlElement(
               `#filters input[value='${f.group + "/" + f.value}']`
             ) as HTMLInputElement).checked = true;
+
+            if (params["info"] === f.group + "/" + f.value)
+              showInfoContainer(f);
           }
 
     if (params["location"]) search(params["location"]);
@@ -320,6 +323,150 @@ export function initMap<M>(
     }
   }
 
+  function showInfoContainer(f: { value: string; query: string; tags: any[] }) {
+    document.title = `${local.type[f.value].name} - ${local.title}`;
+
+    const infoContainer = getHtmlElement(".info-container");
+
+    infoContainer.style.display = "block";
+    getHtmlElement(".info h4", infoContainer).innerText =
+      local.type[f.value].name;
+    (getHtmlElement(
+      ".info .link",
+      infoContainer
+    ) as HTMLAnchorElement).href = `http://overpass-turbo.eu/?Q=${encodeURI(
+      `[out:json][timeout:30][bbox:{{bbox}}];
+(
+${f.query.trim()}
+);
+out center;`
+    )}`;
+    getHtmlElement(".info .query", infoContainer).innerText = f.query.trim();
+
+    const wikiElement = getHtmlElement(".info .wiki", infoContainer);
+
+    wikiElement.innerHTML = `<div class="taglist"
+data-taginfo-taglist-tags="${f.tags.join()}"
+data-taginfo-taglist-options='{"with_count": true, "lang": "${local.code}"}'>
+</div>`;
+    let first = true;
+
+    getHtmlElement("summary", infoContainer).addEventListener("click", () => {
+      if (first) {
+        taginfo_taglist.convert_to_taglist(".taglist");
+        first = false;
+      }
+    });
+
+    getHtmlElement(".info .text", infoContainer).innerText = "";
+    document
+      .querySelector('meta[name="description"]')
+      ?.setAttribute("content", local.description);
+
+    if (local.type[f.value].description) {
+      getHtmlElement(".info .text", infoContainer).innerText =
+        local.type[f.value].description;
+      document
+        .querySelector('meta[name="description"]')
+        ?.setAttribute("content", local.type[f.value].description);
+    } else {
+      if (f.tags) {
+        const tags = [];
+        const keys = [];
+
+        for (const t of f.tags) {
+          if (/=/gi.test(t)) {
+            tags.push(`Tag:${t}`);
+            keys.push(`Key:${t.split(/=/gi)[0]}`);
+          } else keys.push("Key:" + t);
+        }
+        getJson("https://wiki.openstreetmap.org/w/api.php", {
+          format: "json",
+          action: "wbgetentities",
+          languages: local.code || "en",
+          languagefallback: "0",
+          props: "descriptions",
+          origin: "*",
+          sites: "wiki",
+          titles: [tags.join("|"), keys.join("|")].filter(t => t).join("|")
+        }).then(r => {
+          if (r && r.error) return;
+
+          let description = "";
+          for (const prop in r.entities) {
+            if (!r.entities.hasOwnProperty(prop)) continue;
+
+            const entity = r.entities[prop];
+
+            if (
+              entity.descriptions &&
+              Object.keys(entity.descriptions).length > 0
+            ) {
+              description =
+                entity.descriptions[Object.keys(entity.descriptions)[0]].value;
+
+              break;
+            }
+          }
+          getHtmlElement(".info .text", infoContainer).innerText = description;
+          document
+            .querySelector('meta[name="description"]')
+            ?.setAttribute("content", description);
+        });
+      }
+    }
+
+    getHtmlElement(".info .external", infoContainer).innerText = "";
+
+    if (
+      local.type[f.value].externalResources &&
+      local.type[f.value].externalResources.length > 0
+    ) {
+      const links = [];
+      for (const external of local.type[f.value].externalResources) {
+        links.push(
+          `<a class="external-link${
+            external.bounds ? " part-area-visible" : ""
+          }" href="${external.url}" target="_blank"${
+            external.bounds
+              ? ` part-area-visible="${external.bounds.join(",")}"`
+              : ""
+          } href="${external.url}">${external.name}</a>`
+        );
+      }
+
+      getHtmlElement(
+        ".info .external",
+        infoContainer
+      ).innerHTML = `<br/><span class="external-label">${
+        local.externalResources
+      }: </span>${links.join(`<span class="external-separator">, </span>`)}`;
+    }
+
+    for (const a of getHtmlElements(".external-link")) {
+      a.addEventListener("click", () => {
+        const latlng = map.getCenter();
+        const zoom = map.getZoom();
+        const bounds = map.getBounds();
+
+        window.open(
+          (a as HTMLAnchorElement).href
+            .replace(/\{lat\}/i, latlng.lat + "")
+            .replace(/\{lng\}/i, latlng.lng + "")
+            .replace(/\{zoom\}/i, zoom + "")
+            .replace(
+              /\{bbox\}/i,
+              `${bounds.getNorthWest().lat},${bounds.getNorthWest().lng},${
+                bounds.getSouthEast().lat
+              },${bounds.getSouthEast().lng}`
+            ),
+          "_blank"
+        );
+        return false;
+      });
+    }
+  }
+
   window.addEventListener("hashchange", hashchange);
 
   setTimeout(() => {
@@ -327,7 +474,7 @@ export function initMap<M>(
     hashchange();
   }, 0);
 
-  const params = getHashParams();
+  const params = getQueryParams();
 
   let offersParams: string[] = [];
 
@@ -354,13 +501,11 @@ export function initMap<M>(
     const marker = (e as L.PopupEvent & { popup: { _source: L.Marker } }).popup
       ._source;
     const latLng = marker.getLatLng();
-    setHashParams(
-      {
-        offers: offers.toString(),
-        location: `${latLng.lat},${latLng.lng}`
-      },
-      hashchange
-    );
+    setQueryParams({
+      offers: offers.toString(),
+      location: `${latLng.lat},${latLng.lng}`,
+      info: getQueryParams()["info"]
+    });
   });
 
   const groups = groupBy(
@@ -416,32 +561,14 @@ export function initMap<M>(
           "a",
           `<i class="fas fa-info-circle"></i>`
         );
+        aElement.title = local.type[f.value].name;
+        aElement.href = `?offers=${k + "/" + f.value}&info=${
+          k + "/" + f.value
+        }`;
+        aElement.addEventListener("click", ev => {
+          ev.preventDefault();
 
-        aElement.addEventListener("click", () => {
-          getHtmlElement(".info-container").style.display = "block";
-          getHtmlElement(".info-container .info h4").innerText =
-            local.type[f.value].name;
-          (getHtmlElement(
-            ".info-container .info .link"
-          ) as HTMLAnchorElement).href = `http://overpass-turbo.eu/?Q=${encodeURI(
-            `[out:json][timeout:30][bbox:{{bbox}}];
-(
-${overpassSubs(f.query).trim()}
-);
-out center;`
-          )}`;
-          getHtmlElement(
-            ".info-container .info .query"
-          ).innerText = f.query.trim();
-
-          const wikiElement = getHtmlElement(".info-container .info .wiki");
-
-          wikiElement.innerHTML = `<div class="taglist"
-  data-taginfo-taglist-tags="${f.tags.join()}"
-  data-taginfo-taglist-options='{"with_count": true, "lang": "${local.code}"}'>
-</div>`;
-
-          taginfo_taglist.convert_to_taglist(".taglist");
+          const params = getQueryParams();
 
           const input = getHtmlElement("input", contentElement);
           if (!input.checked) {
@@ -449,115 +576,14 @@ out center;`
             offers.push(k + "/" + f.value);
             init(f.group, f.value, f.icon, f.query, attributes, local, f.color);
 
-            const params = getHashParams();
             params["offers"] = offers.toString();
-            setHashParams(params, hashchange);
           }
 
-          getHtmlElement(".info-container .info .text").innerText = "";
+          showInfoContainer(f);
 
-          if (local.type[f.value].description) {
-            getHtmlElement(".info-container .info .text").innerText =
-              local.type[f.value].description;
-          } else {
-            if (f.tags) {
-              const tags = [];
-              const keys = [];
+          params["info"] = f.group + "/" + f.value;
 
-              for (const t of f.tags) {
-                if (/=/gi.test(t)) {
-                  tags.push(`Tag:${t}`);
-                  keys.push(`Key:${t.split(/=/gi)[0]}`);
-                } else keys.push("Key:" + t);
-              }
-              getJson("https://wiki.openstreetmap.org/w/api.php", {
-                format: "json",
-                action: "wbgetentities",
-                languages: local.code || "en",
-                languagefallback: "0",
-                props: "descriptions",
-                origin: "*",
-                sites: "wiki",
-                titles: [tags.join("|"), keys.join("|")]
-                  .filter(t => t)
-                  .join("|")
-              }).then(r => {
-                if (r && r.error) return;
-
-                let description = "";
-                for (const prop in r.entities) {
-                  if (!r.entities.hasOwnProperty(prop)) continue;
-
-                  const entity = r.entities[prop];
-
-                  if (
-                    entity.descriptions &&
-                    Object.keys(entity.descriptions).length > 0
-                  ) {
-                    description =
-                      entity.descriptions[Object.keys(entity.descriptions)[0]]
-                        .value;
-
-                    break;
-                  }
-                }
-                getHtmlElement(
-                  ".info-container .info .text"
-                ).innerText = description;
-              });
-            }
-          }
-
-          getHtmlElement(".info-container .info .external").innerText = "";
-
-          if (
-            local.type[f.value].externalResources &&
-            local.type[f.value].externalResources.length > 0
-          ) {
-            const links = [];
-            for (const external of local.type[f.value].externalResources) {
-              links.push(
-                `<a class="external-link${
-                  external.bounds ? " part-area-visible" : ""
-                }" href="${external.url}" target="_blank"${
-                  external.bounds
-                    ? ` part-area-visible="${external.bounds.join(",")}"`
-                    : ""
-                } href="${external.url}">${external.name}</a>`
-              );
-            }
-
-            getHtmlElement(
-              ".info-container .info .external"
-            ).innerHTML = `<br/><span class="external-label">${
-              local.externalResources
-            }: </span>${links.join(
-              `<span class="external-separator">, </span>`
-            )}`;
-          }
-
-          for (const a of getHtmlElements(".external-link")) {
-            a.addEventListener("click", () => {
-              const latlng = map.getCenter();
-              const zoom = map.getZoom();
-              const bounds = map.getBounds();
-
-              window.open(
-                (a as HTMLAnchorElement).href
-                  .replace(/\{lat\}/i, latlng.lat + "")
-                  .replace(/\{lng\}/i, latlng.lng + "")
-                  .replace(/\{zoom\}/i, zoom + "")
-                  .replace(
-                    /\{bbox\}/i,
-                    `${bounds.getNorthWest().lat},${
-                      bounds.getNorthWest().lng
-                    },${bounds.getSouthEast().lat},${bounds.getSouthEast().lng}`
-                  ),
-                "_blank"
-              );
-              return false;
-            });
-          }
+          setQueryParams(params);
 
           partAreaVisible();
 
@@ -568,6 +594,15 @@ out center;`
           "click",
           () => {
             getHtmlElement(".info-container").style.display = "none";
+
+            document.title = local.title;
+            document
+              .querySelector('meta[name="description"]')
+              ?.setAttribute("content", local.description);
+
+            const params = getQueryParams();
+            params["info"] = "";
+            setQueryParams(params);
           }
         );
 
@@ -603,9 +638,9 @@ out center;`
             map.removeLayer(layers[k + "/" + f.value]);
           }
 
-          const params = getHashParams();
+          const params = getQueryParams();
           params["offers"] = offers.toString();
-          setHashParams(params, hashchange);
+          setQueryParams(params);
 
           updateCount(local);
         }
