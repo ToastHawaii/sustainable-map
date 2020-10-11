@@ -74,7 +74,7 @@ export function initMap<M>(
 
   (getHtmlElement(
     ".about"
-  ) as HTMLLinkElement).href = `https://priceless.zottelig.ch${
+  ) as HTMLLinkElement).href = `https://sustainable.zottelig.ch${
     local.code ? `/${local.code}` : ""
   }/docs/`;
 
