@@ -19,11 +19,12 @@ import "./style.less";
 import { initMap } from "./map";
 import { filters } from "./filters";
 import { attributes } from "./attributes";
-
-initMap(filters, attributes, (window as any).local);
-
 import "details-element-polyfill";
 import { createElement } from "./utilities/html";
+
+export function init(local: any) {
+  initMap(filters, attributes, local);
+}
 
 document.addEventListener("click", e => {
   const titleElement = document.querySelector(".attribut .title");
