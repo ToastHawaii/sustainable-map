@@ -2743,6 +2743,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
 
       // Get
       nw["shop"="bicycle"]["second_hand"~"^(yes|only)$"];
+      nw["service:bicycle:second_hand"~"^(yes|only)$"];
 
       // Rent
       nw["service:bicycle:rental"~"^(yes|only)$"];
@@ -2764,6 +2765,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     tags: [
       "amenity=recycling",
       "shop=bicycle",
+      "service:bicycle:second_hand",
       "amenity=bicycle_rental",
       "amenity=bicycle_repair_station",
       "repair=assisted_self_service",
@@ -2800,7 +2802,8 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     icon: "/lib/maki-icons/bicycle-15.svg",
     button: "fas fa-long-arrow-alt-right",
     query: `
-    nw["shop"="bicycle"]["second_hand"~"^(yes|only)$"];`,
+    nw["shop"="bicycle"]["second_hand"~"^(yes|only)$"];
+    nw["service:bicycle:second_hand"~"^(yes|only)$"];`,
     color: "#4682B4",
     tags: ["shop=bicycle"],
     edit: ["shop=bicycle"]
