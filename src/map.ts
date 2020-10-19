@@ -35,6 +35,25 @@ import {
 import { createOverPassLayer, isIOS, shareLink } from "./createOverPassLayer";
 import BigNumber from "bignumber.js";
 import { funding } from "./funding";
+import "./style.less";
+import "details-element-polyfill";
+
+document.addEventListener("click", e => {
+  const titleElement = document.querySelector(".attribut .title");
+  if (titleElement) titleElement.remove();
+
+  for (const target of e.composedPath() as HTMLElement[]) {
+    if (target?.classList?.contains("attribut")) {
+      const titleElement = createElement("span", target.title, ["title"]);
+
+      target.append(titleElement);
+
+      setTimeout(() => {
+        titleElement.remove();
+      }, 2000);
+    }
+  }
+});
 
 declare var taginfo_taglist: any;
 

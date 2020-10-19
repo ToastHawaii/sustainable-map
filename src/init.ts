@@ -15,30 +15,10 @@
 // You should have received a copy of the GNU Affero General Public License
 // along with Sustainable map.  If not, see <http://www.gnu.org/licenses/>.
 
-import "./style.less";
 import { initMap } from "./map";
 import { filters } from "./filters";
 import { attributes } from "./attributes";
-import "details-element-polyfill";
-import { createElement } from "./utilities/html";
 
 export function init(local: any) {
   initMap(filters, attributes, local);
 }
-
-document.addEventListener("click", e => {
-  const titleElement = document.querySelector(".attribut .title");
-  if (titleElement) titleElement.remove();
-
-  for (const target of e.composedPath() as HTMLElement[]) {
-    if (target?.classList?.contains("attribut")) {
-      const titleElement = createElement("span", target.title, ["title"]);
-
-      target.append(titleElement);
-
-      setTimeout(() => {
-        titleElement.remove();
-      }, 2000);
-    }
-  }
-});
