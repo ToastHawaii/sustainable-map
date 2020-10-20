@@ -32,24 +32,7 @@ module.exports = {
       "process.env.NODE_ENV": JSON.stringify("production")
     }),
     new CopyWebpackPlugin({
-      patterns: [
-        { from: "./www" },
-        {
-          from: "*.css*",
-          to: __dirname + "/../lib/",
-          context: __dirname + "/../node_modules/leaflet/dist/"
-        },
-        {
-          from: "**/*.png",
-          to: __dirname + "/../lib/",
-          context: __dirname + "/../node_modules/leaflet/dist/"
-        },
-        {
-          from: "*.css*",
-          to: __dirname + "/../lib/",
-          context: __dirname + "/../node_modules/leaflet-overpass-layer/dist/"
-        }
-      ]
+      patterns: [{ from: "./www" }]
     }),
     new MiniCssExtractPlugin({
       filename: "[name]/main.css"
@@ -82,7 +65,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.less$/,
+        test: /\.(less|css)$/,
         use: [
           MiniCssExtractPlugin.loader,
           {

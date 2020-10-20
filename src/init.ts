@@ -15,10 +15,10 @@
 // You should have received a copy of the GNU Affero General Public License
 // along with Sustainable map.  If not, see <http://www.gnu.org/licenses/>.
 
-import { initMap } from "./map";
+import { initMap } from "osm-app-component";
 import { filters } from "./filters";
-import { attributes } from "./attributes";
+import "osm-app-component/dist/main.css";
 
 export function init(local: any) {
-  initMap(filters, attributes, local);
+  initMap(filters, local);
 }
