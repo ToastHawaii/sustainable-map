@@ -20,5 +20,5 @@ import { filters } from "./filters";
 import "osm-app-component/dist/main.css";
 
 export function init(local: any) {
-  initMap(filters, local);
+  initMap("https://sustainable.zottelig.ch", filters, local);
 }

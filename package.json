@@ -17,17 +17,9 @@
   },
   "homepage": "https://github.com/ToastHawaii/sustainable-map#readme",
   "dependencies": {
-    "@babel/runtime": "7.11.2",
-    "@types/md5": "2.2.0",
     "@types/moment": "2.13.0",
-    "details-element-polyfill": "2.4.0",
-    "i18next-client": "1.11.4",
     "osm-app-component": "github:ToastHawaii/osm-app-component",
-    "md5": "2.2.1",
-    "moment": "2.27.0",
-    "opening_hours": "3.5.0",
-    "country-language": "0.1.7",
-    "bignumber.js": "9.0.0"
+    "moment": "2.27.0"
   },
   "devDependencies": {
     "@babel/core": "7.11.1",

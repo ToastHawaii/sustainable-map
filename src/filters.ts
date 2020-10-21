@@ -1535,7 +1535,7 @@ nw["amenity"="shower"]&part;
   (
     nwr["attraction"="animal"]&part;
     -(
-      wr["tourism"="zoo"]&part;
+      wr["tourism"="zoo"];
       map_to_area -> .z;
       (
         nwr(area.z)["attraction"="animal"]&part;
