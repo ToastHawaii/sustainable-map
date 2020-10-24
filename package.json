@@ -17,9 +17,7 @@
   },
   "homepage": "https://github.com/ToastHawaii/sustainable-map#readme",
   "dependencies": {
-    "@types/moment": "2.13.0",
-    "osm-app-component": "github:ToastHawaii/osm-app-component",
-    "moment": "2.27.0"
+    "osm-app-component": "github:ToastHawaii/osm-app-component"
   },
   "devDependencies": {
     "@babel/core": "7.11.1",
