@@ -326,8 +326,10 @@ export const attributes: Attribute<{}>[] = [
       (tags.amenity === "library" && tags.library !== "booksharing") ||
       tags.amenity === "toy_library" ||
       tags.amenity === "bicycle_rental" ||
+      tags.amenity === "bicycle_library" ||
       tags.shop === "bicycle_rental" ||
       tags.amenity === "bicycle_sharing" ||
+      tags.shop === "tool_hire" ||
       tags.amenity === "ski_rental" ||
       tags.shop === "ski_rental" ||
       tags.ski === "rental" ||

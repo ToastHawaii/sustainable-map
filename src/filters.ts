@@ -548,9 +548,12 @@ nw["recycling:books"="yes"];`,
 
   node["network"~"Repair Caf[eé]",i];
   node["name"~"Repair Caf[eé]",i];
-  node["brand"~"Repair Caf[eé]",i];`,
+  node["brand"~"Repair Caf[eé]",i];
+  
+  nw["shop"="tool_hire"];
+  `,
     color: "#1975ae",
-    tags: ["repair=assisted_self_service", "leisure=hackerspace", "repair=*"],
+    tags: ["repair=assisted_self_service", "leisure=hackerspace", "shop=tool_hire", "repair=*"],
     edit: ["amenity", "leisure=hackerspace"]
   },
   {
@@ -1046,6 +1049,9 @@ nw["social_facility"="soup_kitchen"];`,
       // Reuse
       nw["amenity"="reuse"]["reuse:books"!="only"];
 
+      //Rent
+      nw["shop"="tool_hire"];
+
       // Shop
       nw["shop"~"^(second_hand|charity|antiques|fair_trade)$"];
       nw["shop"~"^(variety_store|convenience|yes|general|department_store|gift|kiosk|mall|trade|houseware)$"][~"^(charity|regional|fair_trade|second_hand)$"~"^(yes|only)$"];
@@ -1058,6 +1064,7 @@ nw["social_facility"="soup_kitchen"];`,
       "shop=charity",
       "charity=*",
       "amenity=give_box",
+      "shop=tool_hire",
       "fair_trade=*"
     ],
     edit: ["shop=second_hand", "shop=charity", "amenity"]
