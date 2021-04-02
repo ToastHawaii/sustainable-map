@@ -2751,7 +2751,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     nw["bicycle_rental"~"^(yes|only|cargo_bike)$"];
     nw["rental:bicycle"~"^(yes|only)$"];
     nw["rental"~"bicycle|bike"];
-    nw["amenity"~"^(bicycle_rental|bicycle_sharing)$"];
+    nw["amenity"~"^(bicycle_rental|bicycle_sharing|bicycle_library)$"];
     nw["shop"="bicycle_rental"];
     nw["shop"="bicycle"]["rental"~"^(yes|only)$"];
 
@@ -2767,6 +2767,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
       "shop=bicycle",
       "service:bicycle:second_hand",
       "amenity=bicycle_rental",
+      "amenity=bicycle_library",
       "amenity=bicycle_repair_station",
       "repair=assisted_self_service",
       "repair=*",
@@ -2821,11 +2822,11 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     nw["bicycle_rental"~"^(yes|only|cargo_bike)$"];
     nw["rental:bicycle"~"^(yes|only)$"];
     nw["rental"~"bicycle|bike"];
-    nw["amenity"~"^(bicycle_rental|bicycle_sharing)$"];
+    nw["amenity"~"^(bicycle_rental|bicycle_sharing|bicycle_library)$"];
     nw["shop"="bicycle_rental"];
     nw["shop"="bicycle"]["rental"~"^(yes|only)$"];`,
     color: "#4682B4",
-    tags: ["amenity=bicycle_rental"],
+    tags: ["amenity=bicycle_rental", "amenity=bicycle_library"],
     edit: ["amenity=bicycle_rental"]
   },
   {
