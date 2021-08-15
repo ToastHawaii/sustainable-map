@@ -160,6 +160,7 @@ export const type = {
   rock: { name: "Fels", description: "" },
   viewpoint: { name: "Aussichtpunkt", description: "" },
   waterfall: { name: "Wasserfall", description: "" },
+  spring: { name: "Quelle", description: "" },
   assistance: {
     name: "Unterstützung",
     description: "",
