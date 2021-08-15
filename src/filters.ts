@@ -426,7 +426,7 @@ nw["recycling:books"="yes"];`,
     value: "spring",
     icon: "https://wiki.openstreetmap.org/w/images/0/0e/Spring-14.svg",
     query: `
-  nw["natural"="spring";`,
+  nw["natural"="spring"];`,
     color: "#20B2AA",
     tags: ["natural=spring"],
     edit: ["natural=spring"]
