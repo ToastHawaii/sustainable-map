@@ -822,6 +822,7 @@ nw["shop"~"^(butcher|seafood)$"][~"^(regional|fair_trade|organic|second_hand|zer
     query: `
 nw["shop"~"^(beverages|wine|alcohol|tea|drinks)$"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
 nw["craft"~"^(winery|distillery|brewery)$"];
+nw["microbrewery"="yes"];
 nw["amenity"="vending_machine"]["vending"~"milk"];
 nw["amenity"="vending_machine"]["vending"~"drinks"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];`,
     color: "#cc0000",
@@ -833,6 +834,7 @@ nw["amenity"="vending_machine"]["vending"~"drinks"][~"^(regional|fair_trade|orga
       "craft=winery",
       "craft=distillery",
       "craft=brewery",
+      "microbrewery=yes",
       "vending=milk"
     ],
     edit: [
