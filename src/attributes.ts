@@ -293,6 +293,7 @@ export const attributes: Attribute<{}>[] = [
       tags["second_hand"] === "only" ||
       tags["shop"] === "antiques" ||
       tags["amenity"] === "give_box" ||
+      tags["amenity"] === "freeshop" ||
       tags["amenity"] === "public_bookcase",
     template: local => template(local.reuse, "fas fa-sync-alt")
   },
@@ -306,7 +307,8 @@ export const attributes: Attribute<{}>[] = [
       (!tags["reuse:policy"] &&
         (tags["amenity"] === "reuse" ||
           hasPropThatStartsWith(tags, "reuse:", "yes") ||
-          tags["amenity"] === "give_box")),
+          tags["amenity"] === "give_box" ||
+          tags["amenity"] === "freeshop")),
     template: local => template(local.freeToTakeOrGive, "fas fa-exchange-alt")
   },
   {
@@ -562,6 +564,7 @@ function isFree(tags: Tags): boolean {
     parseOpeningHours(tags.fee, "en") ||
     tags["fee:conditional"] ||
     tags.amenity === "give_box" ||
+    tags.amenity === "freeshop" ||
     tags["amenity"] === "public_bookcase"
   );
 }
