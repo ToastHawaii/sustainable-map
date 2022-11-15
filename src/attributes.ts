@@ -513,7 +513,10 @@ export const attributes: Attribute<{}>[] = [
   {
     check: tags =>
       /only|yes|limited/gi.test(
-        tags["zero_waste"] || tags["bulk_purchase"] || ""
+        tags["zero_waste"] || 
+        tags["bulk_purchase"] || 
+        tags["reusable_packaging:accept"] || 
+        tags["reusable_packaging:offer"] || ""
       ) || /milk/gi.test(tags.vending || ""),
     template: local => template(local.avoidPackaging, "fas fa-hands")
   },
