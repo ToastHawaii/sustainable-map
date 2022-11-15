@@ -106,9 +106,6 @@ More maps for inspiration:
 
 - The website was inspired by a map from [Transition Zürich](http://www.transition-zuerich.ch/), which shows sustainable offers, events and facilities in Zurich. Thanks to the developers, publishers and supporters of Transition Zürich for their inspiration and work.
 - Sustainable offers, events and facilities. [Karte von Morgen](https://kartevonmorgen.org/)
-- Sustainable offers, events and facilities in Zurich. [zürich nachhaltig](https://www.zuerich-nachhaltig.ch/en/map)
-- Cargo Velo, Fashion, Leisure & Beauty and Food & Café. [Your sustainable Zurich](https://www.wwf.ch/de/dein-nachhaltiges-zuerich)
-- Cargo Velo, fashion, leisure & beauty and food & coffee. [Dein nachhaltiges Zürich](https://www.wwf.ch/de/dein-nachhaltiges-zuerich)
 - Public and free offers, events and facilities in Zürich. [Zürich unbezahlbar](https://www.zuerichunbezahlbar.ch/map/)
 - Various equipment e.g. pumps, sports fields, etc. [Züriplan](https://www.maps.stadt-zuerich.ch/zueriplan3/Stadtplan.aspx)
 - Places where you can participate in city life without papers and / or money. [SolidaryCityMap](https://solidary.city/)
