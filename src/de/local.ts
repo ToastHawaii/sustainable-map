@@ -84,6 +84,7 @@ export const local = {
   disabled: "Für Behinderte",
   homeless: "Für Benachteiligte",
   migrant: "Für Vertriebene",
+  lgbtq: "LGBTQ+ freundlich",
   hoops: "Körbe",
   light: "Beleuchtet",
   covered: "Überdacht",

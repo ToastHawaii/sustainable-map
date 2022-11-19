@@ -84,6 +84,7 @@ export const local = {
   disabled: "For disabled",
   homeless: "For underprivileged",
   migrant: "For refugees",
+  lgbtq: "LGBTQ+ friendly",
   hoops: "Hoops",
   light: "Lit",
   covered: "Covered",
