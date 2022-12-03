@@ -642,10 +642,11 @@ nw["recycling:books"="yes"];`,
     icon: "https://wiki.openstreetmap.org/w/images/e/e4/Camping.16.svg",
     query: `
     nwr["club"="scout"];
-    nwr["scout"="yes"];`,
+    nwr["scout"="yes"];
+    nwr["community_centre:for"="scout"];`,
     color: "#CD853F",
-    tags: ["club=scout", "scout=yes"],
-    edit: ["club=scout", "tourism=camp_site"],
+    tags: ["club=scout", "scout=yes", "amenity=community_centre"],
+    edit: ["club=scout", "tourism=camp_site", "amenity=community_centre"],
   },
   {
     id: 32,
