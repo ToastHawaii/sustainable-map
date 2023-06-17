@@ -360,6 +360,18 @@ export const type = {
         url:
           "https://www.fairtrade-deutschland.de/einkaufen/einkaufs-finder.html",
         bounds: [47.27, 5.87, 55.1, 15.04]
+      },
+      {
+        name: "Bio Partner",
+        url:
+          "https://www.biopartner.ch/shopfinder/",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
+      },
+      {
+        name: "ZeroWaste Switzerland",
+        url:
+          "https://zerowasteswitzerland.ch/de/karte-zws/?_zws_map={bbox},{zoom}",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923]
       }
     ]
   },
@@ -541,6 +553,11 @@ export const type = {
     name: "Waren bekommen",
     description: "",
     externalResources: [
+      {
+        name: "Brocki Search",
+        url: "https://www.brockisearch.ch/brockenhaeuser/",
+        bounds: [45.818, 5.9559, 47.8085, 10.4923],
+      },
       {
         name: "Fairtrade Deutschland",
         url:
