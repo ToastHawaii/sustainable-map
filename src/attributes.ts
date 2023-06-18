@@ -75,6 +75,7 @@ export const attributes: Attribute<{}>[] = [
   {
     check: (tags) =>
       tags.leisure === "playground" ||
+      tags.leisure === "paddling_pool" ||
       !!tags.playground ||
       tags.swimming_pool === "paddling_pool" ||
       tags.swimming_pool === "kids" ||
