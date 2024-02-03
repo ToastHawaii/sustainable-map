@@ -52,6 +52,52 @@
           | relative_url
       }}" />
   <style>
+@keyframes ticker {
+  0% {
+    transform: translateY(100%);
+  }
+  5%,
+  25% {
+    transform: translateY(0%);
+  }
+  30%,
+  100% {
+    transform: translateY(-100%);
+  }
+}
+.news {
+  width: 350px;
+  height: 32px;
+  overflow: hidden;
+  border: solid 1px green;
+  position: relative;
+}
+#motivierende-sätze-zum-erhalt-unserer-lebensgrundlage + ul {
+  width: 350px;
+  padding-left: 10px;
+}
+#motivierende-sätze-zum-erhalt-unserer-lebensgrundlage + li {
+  position: absolute;
+  top: 0px;
+  line-height: 29px;
+  list-style: none;
+  font-size: 10pt;
+  animation: ticker 8s infinite linear;
+}
+#motivierende-sätze-zum-erhalt-unserer-lebensgrundlage + ul:hover {
+  animation-play-state: paused
+}
+
+#motivierende-sätze-zum-erhalt-unserer-lebensgrundlage + li:nth-child(4) {
+  animation-delay: -2s;
+}
+#motivierende-sätze-zum-erhalt-unserer-lebensgrundlage + li:nth-child(3) {
+  animation-delay: -4s;
+}
+#motivierende-sätze-zum-erhalt-unserer-lebensgrundlage + li:nth-child(2) {
+  animation-delay: -6s;
+}
+   
     html.theme-mode-dark {
       filter: invert(100%) hue-rotate(180deg);
     }
