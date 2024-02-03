@@ -24,6 +24,7 @@ Die Informationen werden von [OpenStreetMap](https://www.openstreetmap.org) gela
 
 ## Motivierende Sätze zum Erhalt unserer Lebensgrundlage
 <div class="news">
+  
 - [Dein Planet braucht dich.](https://schweiz-2050.ch/klimawende/)
 - [Dein Entscheid macht einen Unterschied. Check Labelinfo.ch](https://www.labelinfo.ch/)
 - [Du kannst etwas verändern. Erweitere deinen Handabdruck](https://www.handabdruck.eu/)
@@ -33,6 +34,7 @@ Die Informationen werden von [OpenStreetMap](https://www.openstreetmap.org) gela
 - Du bist wertvoll.
 - [Du kannst mit einem Planet gut Leben. Fussabdruck](https://www.wwf.ch/de/nachhaltig-leben/footprintrechner)
 - [Reparieren macht Glücklich. Repair Café](https://www.repair-cafe.ch/) 
+
 </div>
 
 ## Gibt es diese Karte auch als App?
