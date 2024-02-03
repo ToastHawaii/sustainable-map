@@ -22,7 +22,7 @@ Die Karte unterstützt dabei die Aufmerksamkeit auf nachhaltige Strategien zu le
 
 Die Informationen werden von [OpenStreetMap](https://www.openstreetmap.org) geladen.
 
-## Motivierende Sätze zum Erhalt unserer Lebensgrundlage
+## Motivierende Sätze
 
 - [Dein Planet braucht dich.](https://schweiz-2050.ch/klimawende/)
 - [Dein Entscheid macht einen Unterschied. Check Labelinfo.ch](https://www.labelinfo.ch/)
