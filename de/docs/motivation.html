@@ -1,137 +1,202 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Motivierende Sätze zum Erhalt unserer Lebensgrundlage</title>
-<style>
-body {
-  /* Verwendete Schriftarten in absteigender Reihenfolge der Priorität */
-  font-family: 'Calibri', 'Lucida Sans', 'Verdana', 'Noto Sans', 'Open Sans', 'Source Sans Pro', 'Fira Sans', sans-serif;
-  text-align:center;
-  /* Minimaler Zeichenabstand für verbesserte Lesbarkeit */
-  letter-spacing: 0.03em;
-  
-  /* Zeilenabstand für bessere Lesbarkeit, 1.2 bedeutet 120% der Schriftgröße */
-  line-height: 1.2;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motivierende Sätze zum Erhalt unserer Lebensgrundlage</title>
+  <style>
+    body {
+      /* Verwendete Schriftarten in absteigender Reihenfolge der Priorität */
+      font-family: 'Calibri', 'Lucida Sans', 'Verdana', 'Noto Sans', 'Open Sans', 'Source Sans Pro', 'Fira Sans', sans-serif;
+      text-align: center;
+      /* Minimaler Zeichenabstand für verbesserte Lesbarkeit */
+      letter-spacing: 0.03em;
+      /* Zeilenabstand für bessere Lesbarkeit, 1.2 bedeutet 120% der Schriftgröße */
+      line-height: 1.2;
+    }
 
-#textContainer {
-  display: relative;
-}
+    #textContainer {
+      display: relative;
+    }
 
-/* Verstecke alle Elemente mit der Klasse "text" und füge einen Übergang hinzu */
-.text {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  font-size: 36px;
-  line-height: 1.2;
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  text-decoration:none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  left: 50%;
-  margin-left: -170px;
-  pointer-events: none;
-}
+    /* Verstecke alle Elemente mit der Klasse "text" und füge einen Übergang hinzu */
+    .text {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 36px;
+      line-height: 1.2;
+      width: 300px;
+      height: 300px;
+      position: absolute;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: 50%;
+      margin-left: -170px;
+      pointer-events: none;
+    }
 
-/* Zeige den aktiven Text */
-.active {
-pointer-events: auto;
-  opacity: 1;
-}
+    /* Zeige den aktiven Text */
+    .active {
+      pointer-events: auto;
+      opacity: 1;
+    }
 
-h1 {
-  font-size: 52px;
-}
+    h1 {
+      font-size: 38px;
+    }
 
-/* Hintergrundfarben für die Blöcke */
-.block-1 { background-color: #ff6347; }
-.block-2 { background-color: #4682b4; }
-.block-3 { background-color: #32cd32; }
-.block-4 { background-color: #8a2be2; }
-.block-5 { background-color: #ffd700; }
-.block-6 { background-color: #00ced1; }
-.block-7 { background-color: #ffa07a; }
-.block-8 { background-color: #40e0d0; }
-.block-9 { background-color: #9370db; }
-.block-10 { background-color: #ff8c00; }
-.block-11 { background-color: #87ceeb; }
-.block-12 { background-color: #7fff00; }
-.block-13 { background-color: #d3d3d3; }
-.block-14 { background-color: #ff69b4; } /* pink */
-.block-15 { background-color: #00ffff; } /* cyan */
-.block-16 { background-color: #f08080; } /* lightcoral */
-.block-17 { background-color: #dda0dd; } /* plum */
+    /* Hintergrundfarben für die Blöcke */
+    .block-1 {
+      background-color: #ff6347;
+    }
 
-button{
-  margin-top: 350px;
-  font-size: 24px;
-  padding: 8px 10px;
-  border-radius: 6px;
-}
-</style>
+    .block-2 {
+      background-color: #4682b4;
+    }
+
+    .block-3 {
+      background-color: #32cd32;
+    }
+
+    .block-4 {
+      background-color: #8a2be2;
+    }
+
+    .block-5 {
+      background-color: #ffd700;
+    }
+
+    .block-6 {
+      background-color: #00ced1;
+    }
+
+    .block-7 {
+      background-color: #ffa07a;
+    }
+
+    .block-8 {
+      background-color: #40e0d0;
+    }
+
+    .block-9 {
+      background-color: #9370db;
+    }
+
+    .block-10 {
+      background-color: #ff8c00;
+    }
+
+    .block-11 {
+      background-color: #87ceeb;
+    }
+
+    .block-12 {
+      background-color: #7fff00;
+    }
+
+    .block-13 {
+      background-color: #d3d3d3;
+    }
+
+    .block-14 {
+      background-color: #ff69b4;
+    }
+
+    /* pink */
+    .block-15 {
+      background-color: #00ffff;
+    }
+
+    /* cyan */
+    .block-16 {
+      background-color: #f08080;
+    }
+
+    /* lightcoral */
+    .block-17 {
+      background-color: #dda0dd;
+    }
+
+    /* plum */
+    button {
+      margin-top: 350px;
+      font-size: 24px;
+      padding: 8px 10px;
+      border-radius: 6px;
+    }
+
+  </style>
 </head>
+
 <body>
 
-<h1>Motivierende Sätze zum Erhalt unserer Lebensgrundlage</h1>
+  <h1>Motivierende Sätze zum Erhalt unserer Lebensgrundlage</h1>
 
-<div id="textContainer">
-  <a class="text block-1" href="https://schweiz-2050.ch/klimawende/">Dein Planet braucht dich. 🔗</a>
-  <a class="text block-2" href="https://www.labelinfo.ch/">Dein Entscheid macht einen Unterschied. 🔗</a>
-  <a class="text block-3" href="https://www.handabdruck.eu/">Du kannst etwas verändern. 🔗</a>
-  <span class="text block-4">Vegetarische Gerichte können lecker sein.</span>
-  <span class="text block-5">Die Schweiz hat noch viele interessante Orte, die du entdecken kannst.</span>
-  <span class="text block-6">Du bist liebenswert.</span>
-  <span class="text block-7">Du bist wertvoll.</span>
-  <a class="text block-8" href="https://www.wwf.ch/de/nachhaltig-leben/footprintrechner">Du kannst mit einem Planet gut Leben. 🔗</a>
-  <a class="text block-9" href="https://www.repair-cafe.ch/">Reparieren macht Glücklich. 🔗</a>
-  <a class="text block-10" href="https://climatestrike.ch/">Du bist nicht alleine. 🔗</a>
-  <a class="text block-11" href="https://schweiz-2050.ch/">Sich für die Umwelt einzusetzen kann entspannend sein. 🔗</a>
-  <a class="text block-12" href="https://www.handabdruck.eu/">Sich für die Umwelt einzusetzen kann Freude bereiten. 🔗</a>
-  <a class="text block-13" href="https://foodsharing.network/">Food Waste kann lecker sein. 🔗</a>
-  <a class="text block-14" href="https://wecollect.ch/">Politische Beteiligung ist einfach. 🔗</a>
-  <a class="text block-15" href="https://ecorating.ch/">Deine Stimme zählt. 🔗</a>
-  <a class="text block-16" href="https://www.wwf.ch/de/unsere-ziele/wwf-retailbanking-rating">Dein Geld kann einen Beitrag leisten. 🔗</a>
-  <a class="text block-17" href="https://schweiz-2050.ch/">Reise in die klimaneutrale Schweiz der Zukunft. 🔗</a>
-</div>
+  <div id="textContainer">
+    <a class="text block-1" href="https://schweiz-2050.ch/klimawende/">Dein Planet braucht dich.
+      🔗</a>
+    <a class="text block-2" href="https://www.labelinfo.ch/">Dein Entscheid macht einen Unterschied.
+      🔗</a>
+    <a class="text block-3" href="https://www.handabdruck.eu/">Du kannst etwas verändern. 🔗</a>
+    <span class="text block-4">Vegetarische Gerichte können lecker sein.</span>
+    <span class="text block-5">Die Schweiz hat noch viele interessante Orte, die du entdecken
+      kannst.</span>
+    <span class="text block-6">Du bist liebenswert.</span>
+    <span class="text block-7">Du bist wertvoll.</span>
+    <a class="text block-8" href="https://www.wwf.ch/de/nachhaltig-leben/footprintrechner">Du kannst
+      mit einem Planet gut Leben. 🔗</a>
+    <a class="text block-9" href="https://www.repair-cafe.ch/">Reparieren macht Glücklich. 🔗</a>
+    <a class="text block-10" href="https://climatestrike.ch/">Du bist nicht alleine. 🔗</a>
+    <a class="text block-11" href="https://schweiz-2050.ch/">Sich für die Umwelt einzusetzen kann
+      entspannend sein. 🔗</a>
+    <a class="text block-12" href="https://www.handabdruck.eu/">Sich für die Umwelt einzusetzen kann
+      Freude bereiten. 🔗</a>
+    <a class="text block-13" href="https://foodsharing.network/">Food Waste kann lecker sein. 🔗</a>
+    <a class="text block-14" href="https://wecollect.ch/">Politische Beteiligung ist einfach. 🔗</a>
+    <a class="text block-15" href="https://ecorating.ch/">Deine Stimme zählt. 🔗</a>
+    <a class="text block-16" href="https://www.wwf.ch/de/unsere-ziele/wwf-retailbanking-rating">Dein
+      Geld kann einen Beitrag leisten. 🔗</a>
+    <a class="text block-17" href="https://schweiz-2050.ch/">Reise in die klimaneutrale Schweiz der
+      Zukunft. 🔗</a>
+  </div>
 
-<!--<button onclick="toggleText()">Mehr</button>-->
+  <!--<button onclick="toggleText()">Mehr</button>-->
 
-<script>
-var texts = document.querySelectorAll('.text');
-var currentIndex = 0;
+  <script>
+    var texts = document.querySelectorAll('.text');
+    var currentIndex = 0;
 
-function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+    function getRandomInt(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
 
-function toggleText() {
-  // Verstecke den aktuellen Text
-  texts[currentIndex].classList.remove('active');
+    function toggleText() {
+      // Verstecke den aktuellen Text
+      texts[currentIndex].classList.remove('active');
 
-  // Erhöhe den Index oder setze ihn auf 0 zurück, wenn er das Ende erreicht hat
-  currentIndex = getRandomInt(0, texts.length - 1);
+      // Erhöhe den Index oder setze ihn auf 0 zurück, wenn er das Ende erreicht hat
+      currentIndex = getRandomInt(0, texts.length - 1);
 
-  // Zeige den nächsten Text
-  texts[currentIndex].classList.add('active');
-}
+      // Zeige den nächsten Text
+      texts[currentIndex].classList.add('active');
+    }
 
-// Starte die Funktion, um den ersten Text anzuzeigen
-toggleText();
+    // Starte die Funktion, um den ersten Text anzuzeigen
+    toggleText();
 
-// Aktualisiere die Texte alle 5 Sekunden
-setInterval(toggleText, 5000);
-</script>
+    // Aktualisiere die Texte alle 5 Sekunden
+    setInterval(toggleText, 5000);
+  </script>
 
 </body>
+
 </html>
