@@ -22,18 +22,6 @@ Die Karte unterstützt dabei die Aufmerksamkeit auf nachhaltige Strategien zu le
 
 Die Informationen werden von [OpenStreetMap](https://www.openstreetmap.org) geladen.
 
-## Motivierende Sätze
-
-- [Dein Planet braucht dich.](https://schweiz-2050.ch/klimawende/)
-- [Dein Entscheid macht einen Unterschied. Check Labelinfo.ch](https://www.labelinfo.ch/)
-- [Du kannst etwas verändern. Erweitere deinen Handabdruck](https://www.handabdruck.eu/)
-- Vegetarische Gerichte können lecker sein.
-- Die Schweiz hat noch viele interessante Orte die du entdecken kannst.
-- Du bist liebenswert.
-- Du bist wertvoll.
-- [Du kannst mit einem Planet gut Leben. Fussabdruck](https://www.wwf.ch/de/nachhaltig-leben/footprintrechner)
-- [Reparieren macht Glücklich. Repair Café](https://www.repair-cafe.ch/)
-
 ## Gibt es diese Karte auch als App?
 
 Die Karte ist so gestaltet, dass sie im Browser des Smartphones geöffnet und verwenden werden kann. Über die Funktion "Zum Home-Bildschirm" des Browser (iOS, Android, etc.) kann die Webseite der Startseite hinzufügt werden.
@@ -127,6 +115,8 @@ Weitere Karten und Verzeichnisse als Inspiration:
 - Besuche öffentliche Bücherschränke und trage diese ein. Schau dir dazu [die schöne Karte von Binnette](https://umap.openstreetmap.fr/fr/map/osm-bookcases-and-boite-a-lire_362287#15/45.2010/5.7389) an, welche auf den Daten von [boite-a-lire](https://www.boite-a-lire.com/) basiert. [Hier geht es zur Projekt Webseite von Binnette's bookcases-to-check](https://github.com/Binnette/bookcases-to-check).
 - Eine Karte mit öffentlichen und kostenlosen Einrichtungen und Angebote. [Unbezahlbar](https://priceless.zottelig.ch/de)
 - Eine Karte mit öffentlichen Bücherschränken. [Öffentlichen Bücherschränke](https://book-exchange.zottelig.ch/de)
+
+[Motivierende Sätze](/de/docs/motivation.html)
 
 Unterstütze mich mit Kaffee ☕ und Kuchen 🍰:
 
