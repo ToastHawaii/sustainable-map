@@ -13,4 +13,9 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://sustainable.zottelig.ch/docs/"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://sustainable.zottelig.ch/de/docs/"/>
   </url>
+  <url>
+    <loc>https://sustainable.zottelig.ch/de/motivation.html</loc>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://sustainable.zottelig.ch/de/motivation.html"/>
+  </url>
 </urlset>
