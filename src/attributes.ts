@@ -19,15 +19,15 @@ import { parseOpeningHours } from "osm-app-component";
 import { Attribute, Tags } from "osm-app-component/dist/Generator";
 
 const template = (title: string, icon: string, value?: string) =>
-  `<span title="${title}" class="attribut"><i class="${icon}"></i>${
+  `<div class="attribut"><i class="${icon}"></i>${
     value !== undefined ? " " + value : ""
-  }</span>`;
+  } ${title}</div>`;
 
 export const attributes: Attribute<{}>[] = [
   {
     check: (tags) => !!tags.colour,
     template: (local, tags) =>
-      `<span title="${local.colour}" class="attribut"><i class="fas fa-circle" style="color:${tags.colour};"></i></span>`,
+      `<div class="attribut"><i class="fas fa-circle" style="color:${tags.colour};"></i> ${local.colour}</div>`,
   },
   {
     check: (tags) =>
@@ -36,7 +36,18 @@ export const attributes: Attribute<{}>[] = [
         tags["internet_access:fee"] !== "customers" &&
         tags["internet_access:fee"] !== "yes") ||
       (!!tags.wifi && tags.wifi !== "no"),
-    template: (local) => template(local.internet, "fas fa-wifi"),
+    template: (local, tags) =>
+      template(
+        local.internet,
+        "fas fa-wifi",
+        [
+          tags["internet_access:ssid"],
+          tags[`internet_access:description:${local.code || "en"}`] ||
+            tags["internet_access:description"],
+        ]
+          .filter((el) => el)
+          .join(": ")
+      ),
   },
   {
     check: (tags) => !!tags["piste:difficulty"],
@@ -63,7 +74,13 @@ export const attributes: Attribute<{}>[] = [
       tags["amenity"] === "water_point" ||
       tags["drinking_water"] === "yes" ||
       tags["drinking_water:refill"] === "yes",
-    template: (local) => template(local.water, "fas fa-tint"),
+    template: (local, tags) =>
+      template(
+        local.water,
+        "fas fa-tint",
+        tags[`drinking_water:description:${local.code || "en"}`] ||
+          tags["drinking_water:description"]
+      ),
   },
   {
     check: (tags) =>
@@ -99,7 +116,16 @@ export const attributes: Attribute<{}>[] = [
         tags["changing_table:fee"] !== "yes") ||
       (!!tags.diaper && tags.diaper !== "no" && tags["diaper:fee"] !== "yes") ||
       (!!tags.baby_feeding && tags.baby_feeding !== "no"),
-    template: (local) => template(local.changing_table, "fas fa-baby"),
+    template: (local, tags) =>
+      template(
+        local.changing_table,
+        "fas fa-baby",
+
+        tags[`changing_table:description:${local.code || "en"}`] ||
+          tags[`diaper:description:${local.code || "en"}`] ||
+          tags["changing_table:description"] ||
+          tags["diaper:description"]
+      ),
   },
   {
     check: (tags) =>
@@ -362,7 +388,7 @@ export const attributes: Attribute<{}>[] = [
   {
     check: (tags) => !!tags.hoops,
     template: (local, tags) =>
-      `<span title="${local.hoops}" class="attribut"><img style="height: 13px;vertical-align: text-top;" src="/lib/maki-icons/basketball-15.svg"> ${tags.hoops}</span>`,
+      `<div class="attribut"><img style="height: 13px;vertical-align: text-top;" src="/lib/maki-icons/basketball-15.svg"> ${tags.hoops} ${local.hoops}</div>`,
   },
   {
     check: (tags) =>
@@ -528,8 +554,34 @@ export const attributes: Attribute<{}>[] = [
     check: (tags) => !!wheelchairAccess(tags, {}),
     template: (local, tags) => {
       const access = wheelchairAccess(tags, local);
-      return `<span title="${access?.text}" class="attribut"><i class="fab fa-accessible-icon"></i> <i class="fas fa-${access?.icon}" style="color: ${access?.color};"></i></span>`;
+      return `<div class="attribut"><i class="fab fa-accessible-icon"></i> <i class="fas fa-${
+        access?.icon
+      }" style="color: ${access?.color};"></i> ${access?.text}${
+        !!(
+          tags[`wheelchair:description:${local.code || "en"}`] ||
+          tags["wheelchair:description"]
+        )
+          ? ": " +
+            (tags[`wheelchair:description:${local.code || "en"}`] ||
+              tags["wheelchair:description"])
+          : ""
+      }</div>`;
     },
+  },
+  {
+    check: (tags, _value, _model, local) =>
+      !!(tags["emergency"] === "defibrillator") &&
+      !!(
+        tags[`defibrillator:location:${local.code || "en"}`] ||
+        tags["defibrillator:location"]
+      ),
+    template: (local, tags) =>
+      template(
+        local.defibrillator,
+        "fas fa-heartbeat",
+        tags[`defibrillator:location:${local.code || "en"}`] ||
+          tags["defibrillator:location"]
+      ),
   },
   {
     check: (tags) =>
@@ -546,35 +598,35 @@ export const attributes: Attribute<{}>[] = [
     check: (tags) => !!regional(tags, {}),
     template: (local, tags) => {
       const r = regional(tags, local);
-      return `<span title="${r?.text}" class="attribut"><i class="fas fa-map-marker-alt"></i> <i class="fas fa-${r?.icon}" style="color: ${r?.color};"></i></span>`;
+      return `<div class="attribut"><i class="fas fa-map-marker-alt"></i> <i class="fas fa-${r?.icon}" style="color: ${r?.color};"></i> ${r?.text}</div>`;
     },
   },
   {
     check: (tags) => !!vegetarian(tags, {}),
     template: (local, tags) => {
       const v = vegetarian(tags, local);
-      return `<span title="${v?.text}" class="attribut"><i class="fas fa-cheese"></i> <i class="fas fa-${v?.icon}" style="color: ${v?.color};"></i></span>`;
+      return `<div class="attribut"><i class="fas fa-cheese"></i> <i class="fas fa-${v?.icon}" style="color: ${v?.color};"></i> ${v?.text}</div>`;
     },
   },
   {
     check: (tags) => !!vegan(tags, {}),
     template: (local, tags) => {
       const v = vegan(tags, local);
-      return `<span title="${v?.text}" class="attribut"><i class="fas fa-carrot"></i> <i class="fas fa-${v?.icon}" style="color: ${v?.color};"></i></span>`;
+      return `<div class="attribut"><i class="fas fa-carrot"></i> <i class="fas fa-${v?.icon}" style="color: ${v?.color};"></i> ${v?.text}</div>`;
     },
   },
   {
     check: (tags) => !!organic(tags, {}),
     template: (local, tags) => {
       const o = organic(tags, local);
-      return `<span title="${o?.text}" class="attribut"><i class="fas fa-seedling"></i> <i class="fas fa-${o?.icon}" style="color: ${o?.color};"></i></span>`;
+      return `<div class="attribut"><i class="fas fa-seedling"></i> <i class="fas fa-${o?.icon}" style="color: ${o?.color};"></i> ${o?.text}</div>`;
     },
   },
   {
     check: (tags) => !!fairTrade(tags, {}),
     template: (local, tags) => {
       const f = fairTrade(tags, local);
-      return `<span title="${f?.text}" class="attribut"><i class="fas fa-handshake"></i> <i class="fas fa-${f?.icon}" style="color: ${f?.color};"></i></span>`;
+      return `<div class="attribut"><i class="fas fa-handshake"></i> <i class="fas fa-${f?.icon}" style="color: ${f?.color};"></i> ${f?.text}</div>`;
     },
   },
 ];

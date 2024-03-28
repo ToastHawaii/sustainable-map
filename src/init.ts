@@ -19,14 +19,12 @@ import { initMap } from "osm-app-component";
 import { filters } from "./filters";
 import "osm-app-component/dist/main.css";
 import { attributes } from "./attributes";
-import { attributeDescriptions } from "./attributeDescriptions";
 
 export function init(local: any) {
   initMap(
     "https://sustainable.zottelig.ch",
     filters,
     attributes,
-    attributeDescriptions,
     local
   );
 }
