@@ -2289,7 +2289,6 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
 
       // Give and take
       nw["shop"="mobile_phone"]["second_hand"~"^(yes|only)$"];
-      nw["amenity"="give_box"]["electronics"!="no"];
       nw["amenity"="freeshop"]["electronics"!="no"];
 
       // Repair
@@ -2306,7 +2305,6 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     tags: [
       "shop=mobile_phone",
       "recycling:mobile_phones=yes",
-      "amenity=give_box",
       "amenity=freeshop",
       "repair=assisted_self_service",
       "repair=*",
@@ -2315,7 +2313,6 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     edit: [
       "shop=mobile_phone",
       "amenity=recycling",
-      "amenity=give_box",
       "amenity",
     ],
   },
@@ -2329,11 +2326,10 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     query: `
       nw["recycling:mobile_phones"="yes"];
 
-      nw["amenity"="give_box"]["electronics"!="no"]["give_box:policy"!="free_to_take"];
       nw["amenity"="freeshop"]["electronics"!="no"]["freeshop:policy"!="free_to_take"];`,
     color: "#191970",
-    tags: ["amenity=recycling", "amenity=give_box", "amenity=freeshop"],
-    edit: ["amenity=recycling", "amenity=give_box", "amenity"],
+    tags: ["amenity=recycling", "amenity=freeshop"],
+    edit: ["amenity=recycling", "amenity"],
   },
   {
     id: 108,
@@ -2344,11 +2340,10 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     button: "fas fa-long-arrow-alt-right",
     query: `
       nw["shop"="mobile_phone"]["second_hand"~"^(yes|only)$"];
-      nw["amenity"="give_box"]["electronics"!="no"];
       nw["amenity"="freeshop"]["electronics"!="no"];`,
     color: "#191970",
-    tags: ["shop=mobile_phone", "amenity=give_box", "amenity=freeshop"],
-    edit: ["shop=mobile_phone", "amenity=give_box", "amenity"],
+    tags: ["shop=mobile_phone", "amenity=freeshop"],
+    edit: ["shop=mobile_phone", "amenity"],
   },
   {
     id: 109,
@@ -2379,7 +2374,6 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
 
       // Give and take
       nw["shop"="computer"]["second_hand"~"^(yes|only)$"];
-      nw["amenity"="give_box"]["electronics"!="no"];
       nw["amenity"="freeshop"]["electronics"!="no"];
 
       // Repair
@@ -2392,12 +2386,11 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     tags: [
       "shop=computer",
       "amenity=recycling",
-      "amenity=give_box",
       "amenity=freeshop",
       "repair=assisted_self_service",
       "repair=*",
     ],
-    edit: ["shop=computer", "amenity=recycling", "amenity=give_box", "amenity"],
+    edit: ["shop=computer", "amenity=recycling", "amenity"],
   },
   {
     id: 111,
@@ -2409,11 +2402,10 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     query: `
       nw["recycling:computers"="yes"];
 
-      nw["amenity"="give_box"]["electronics"!="no"]["give_box:policy"!="free_to_take"];
       nw["amenity"="freeshop"]["electronics"!="no"]["freeshop:policy"!="free_to_take"];`,
     color: "#ABAB9A",
-    tags: ["amenity=recycling", "amenity=give_box", "amenity=freeshop"],
-    edit: ["amenity=recycling", "amenity=give_box", "amenity"],
+    tags: ["amenity=recycling", "amenity=freeshop"],
+    edit: ["amenity=recycling", "amenity"],
   },
   {
     id: 112,
@@ -2424,11 +2416,10 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     button: "fas fa-long-arrow-alt-right",
     query: `
       nw["shop"="computer"]["second_hand"~"^(yes|only)$"];
-      nw["amenity"="give_box"]["electronics"!="no"];
       nw["amenity"="freeshop"]["electronics"!="no"];`,
     color: "#ABAB9A",
-    tags: ["shop=computer", "amenity=give_box", "amenity=freeshop"],
-    edit: ["shop=computer", "amenity=give_box", "amenity"],
+    tags: ["shop=computer", "amenity=freeshop"],
+    edit: ["shop=computer", "amenity"],
   },
   {
     id: 113,
@@ -2723,7 +2714,6 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
 
       // Give and take
       nw["shop"~"^(interior_decoration|furniture|bed)$"][~"^(rental|regional|fair_trade|second_hand)$"~"^(yes|only)$"];
-      nw["amenity"="give_box"];
       nw["amenity"="freeshop"];
 
       nw["rental"~"tableware|furniture"];
@@ -2741,7 +2731,6 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
       "shop=interior_decoration",
       "shop=furniture",
       "craft=cabinet_maker",
-      "amenity=give_box",
       "amenity=freeshop",
       "repair=assisted_self_service",
       "repair=*",
@@ -2751,7 +2740,6 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
       "shop=interior_decoration",
       "shop=furniture",
       "craft=cabinet_maker",
-      "amenity=give_box",
       "amenity",
     ],
   },
@@ -2768,16 +2756,14 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
       nw["recycling:wood"="yes"];
       nw["recycling:pallets"="yes"];
 
-      nw["amenity"="give_box"]["give_box:policy"!="free_to_take"];
       nw["amenity"="freeshop"]["freeshop:policy"!="free_to_take"];`,
     color: "#B8860B",
     tags: [
       "recycling:furniture=yes",
       "recycling:wood=yes",
-      "amenity=give_box",
       "amenity=freeshop",
     ],
-    edit: ["amenity=recycling", "amenity=give_box", "amenity"],
+    edit: ["amenity=recycling", "amenity"],
   },
   {
     id: 125,
@@ -2788,7 +2774,6 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     button: "fas fa-long-arrow-alt-right",
     query: `
       nw["shop"~"^(interior_decoration|furniture|bed)$"][~"^(rental|regional|fair_trade|second_hand)$"~"^(yes|only)$"];
-      nw["amenity"="give_box"];
       nw["amenity"="freeshop"];
 
       nw["rental"~"tableware|furniture"];
@@ -2797,13 +2782,11 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     tags: [
       "shop=interior_decoration",
       "shop=furniture",
-      "amenity=give_box",
       "amenity=freeshop",
     ],
     edit: [
       "shop=interior_decoration",
       "craft=cabinet_maker",
-      "amenity=give_box",
       "amenity",
     ],
   },
