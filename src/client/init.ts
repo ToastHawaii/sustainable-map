@@ -15,16 +15,11 @@
 // You should have received a copy of the GNU Affero General Public License
 // along with Sustainable map.  If not, see <http://www.gnu.org/licenses/>.
 
-import { initMap } from "osm-app-component";
+import { initMap } from "../osm-app-component";
 import { filters } from "./filters";
-import "osm-app-component/dist/main.css";
+import "../osm-app-component/style.less";
 import { attributes } from "./attributes";
 
 export function init(local: any) {
-  initMap(
-    "https://sustainable.zottelig.ch",
-    filters,
-    attributes,
-    local
-  );
+  initMap("https://sustainable.zottelig.ch", filters, attributes, local);
 }

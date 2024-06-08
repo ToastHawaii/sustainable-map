@@ -1,19 +1,19 @@
 // Copyright (C) 2020 Markus Peloso
 //
-// This file is part of Priceless map.
+// This file is part of Sustainable map.
 //
-// Priceless map is free software: you can redistribute it and/or modify
+// Sustainable map is free software: you can redistribute it and/or modify
 // it under the terms of the GNU Affero General Public License as
 // published by the Free Software Foundation, either version 3 of the
 // License, or (at your option) any later version.
 //
-// Priceless map is distributed in the hope that it will be useful,
+// Sustainable map is distributed in the hope that it will be useful,
 // but WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 // GNU Affero General Public License for more details.
 //
 // You should have received a copy of the GNU Affero General Public License
-// along with Priceless map.  If not, see <http://www.gnu.org/licenses/>.
+// along with Sustainable map.  If not, see <http://www.gnu.org/licenses/>.
 
 import * as fs from "fs";
 import prettier from "prettier";
@@ -25,16 +25,15 @@ import "./initI18next";
 function Logo() {
   return (
     <img
-      className="community-centre-icon"
-      src="https://wiki.openstreetmap.org/w/images/0/0b/Community_centre-14.svg"
-      style={{ width: "24px", verticalAlign: "text-bottom" }}
+      src="/icons/mstile-144x144.png"
+      style={{ width: "22px", verticalAlign: "text-bottom" }}
     />
   );
 }
 
 render({
   logo: <Logo />,
-  color: "#da532c",
+  color: "#228b22",
   locals: [
     {
       code: "en",
