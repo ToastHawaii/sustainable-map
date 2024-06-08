@@ -56,7 +56,8 @@ Visit already registered facilities and photograph them and link the picture in 
 
 ### Do you want to translate the map into your language?
 
-The texts are located in the [src folder](https://github.com/ToastHawaii/sustainable-map/tree/master/src) in the files local.ts, index.html and README.md. Send me a pull request via [GitHub](https://github.com/ToastHawaii/sustainable-map) or [contact me directly](https://it.zottelig.ch/kontakt).
+You can do this (even without registering) at: [Weblate](https://hosted.weblate.org/projects/sustainable-map/) <a href="https://hosted.weblate.org/engage/sustainable-map/">
+<img src="https://hosted.weblate.org/widgets/sustainable-map/-/svg-badge.svg" alt="Translation status" /></a>
 
 ### Do you like to write?
 
