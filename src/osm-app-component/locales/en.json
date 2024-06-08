@@ -8,7 +8,7 @@
 
   "floor": "({{level}}F)",
   "groundFloor": "(GF)",
-  "basement": "(B{(level)}}F)",
+  "basement": "(B{{level}}F)",
   "amenity": {
     "hunting_stand": "Hunting stand",
     "give_box": "GiveBox"
