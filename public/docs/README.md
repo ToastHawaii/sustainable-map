@@ -129,4 +129,4 @@ Support me with coffee ☕ and cake 🍰:
 
 ---
 
-[Deutsch](/?lang=de) | [Español](/?lang=es)
+[English](https://sustainable.zottelig.ch/?lang=en) | [Deutsch](https://sustainable.zottelig.ch/?lang=de) | [Español](https://sustainable.zottelig.ch/?lang=es)
