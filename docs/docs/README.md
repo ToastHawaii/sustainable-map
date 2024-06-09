@@ -59,6 +59,8 @@ Visit already registered facilities and photograph them and link the picture in 
 You can do this (even without registering) at: [Weblate](https://hosted.weblate.org/projects/sustainable-map/) <a href="https://hosted.weblate.org/engage/sustainable-map/">
 <img src="https://hosted.weblate.org/widgets/sustainable-map/-/svg-badge.svg" alt="Translation status" /></a>
 
+*Some descriptions for a categorie are empty, in this case the text is loaded from a tag or key documetation in [wiki.openstreetmap.org](https://wiki.openstreetmap.org/).*
+
 ### Do you like to write?
 
 Complete the description of the facilities in the [OpenStreetMap Wiki](https://wiki.openstreetmap.org/wiki/Map_Features). You can find a direct link to the Wiki page on the map next to the selection of the facilities via the info button <i class="fas fa-info-circle"></i>.
@@ -127,4 +129,4 @@ Support me with coffee ☕ and cake 🍰:
 
 ---
 
-[Deutsch](/?lang=de)
+[Deutsch](/?lang=de) | [Español](/?lang=es)
