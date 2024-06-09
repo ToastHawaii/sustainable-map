@@ -1,352 +1,352 @@
 {
-    "balance": "Balance",
-    "route": "Ruta",
-    "difficulty": "Dificultad",
-    "type": {
-        "artwork": {
-            "name": "Obra de arte"
-        },
-        "fountain": {
-            "name": "Fuente"
-        },
-        "tourist-attraction": {
-            "name": "Atracción turística"
-        },
-        "archaeological-site": {
-            "name": "Yacimiento arqueológico"
-        },
-        "trail": {
-            "name": "Itinerario didáctico"
-        },
-        "battery-recycling": {
-            "name": "Batería"
-        },
-        "oil-recycling": {
-            "name": "Aceite"
-        },
-        "reusable-bottle-reuse": {
-            "name": "Botella reutilizable"
-        },
-        "rubble-recycling": {
-            "name": "Escombros de construcción"
-        },
-        "plastic-recycling": {
-            "name": "Plástico"
-        },
-        "hazardous-recycling": {
-            "name": "Residuos peligrosos"
-        },
-        "books-get": {
-            "name": "Obtener libros"
-        },
-        "books-borrow": {
-            "name": "Préstamo de libros"
-        },
-        "books-give": {
-            "name": "Libros regalados"
-        },
-        "baking-oven": {
-            "name": "Horno de cocción"
-        },
-        "books-recycle": {
-            "name": "Libros reciclados"
-        },
-        "kneipp_water_cure": {
-            "name": "Instalación Kneipp"
-        },
-        "castle": {
-            "name": "Castillo"
-        },
-        "assisted-repair": {
-            "name": "Asistencia a la reparación",
-            "description": "Aquí podrás reparar cosas rotas junto con profesionales. Conocerás a gente nueva y normalmente también te servirán café y tarta. Los eventos más conocidos son los cafés de reparación."
-        },
-        "history": {
-            "name": "Historia"
-        },
-        "mill": {
-            "name": "Molino"
-        },
-        "monument": {
-            "name": "Monumento"
-        },
-        "memorial": {
-            "name": "Memorial"
-        },
-        "museum": {
-            "name": "Museo"
-        },
-        "assistance-senior": {
-            "name": "Para personas mayores"
-        },
-        "observatory": {
-            "name": "Observatorio"
-        },
-        "ruins": {
-            "name": "Ruinas"
-        },
-        "cave": {
-            "name": "Cueva"
-        },
-        "natural_monument": {
-            "name": "Monumento natural"
-        },
-        "pond": {
-            "name": "Estanque"
-        },
-        "rock": {
-            "name": "Roca"
-        },
-        "viewpoint": {
-            "name": "Punto de vista"
-        },
-        "waterfall": {
-            "name": "Cascada"
-        },
-        "spring": {
-            "name": "Primavera"
-        },
-        "assistance": {
-            "name": "Asistencia"
-        },
-        "assistance-homeless": {
-            "name": "Para los desfavorecidos"
-        },
-        "assistance-female": {
-            "name": "Para mujeres"
-        },
-        "assistance-male": {
-            "name": "Para hombres"
-        },
-        "assistance-disabled": {
-            "name": "Para discapacitados"
-        },
-        "assistance-migrant": {
-            "name": "Para refugiados"
-        },
-        "assistance-children": {
-            "name": "Para niños"
-        },
-        "barbecue": {
-            "name": "Barbacoa"
-        },
-        "baked-goods": {
-            "name": "Productos horneados"
-        },
-        "food-sharing": {
-            "name": "Compartir comida (Banco alimentos, Caritas)",
-            "description": "En este lugar puedes traer y llevar comida. Las condiciones para traer y llevar comida son muy diferentes, puedes informarte al respecto en la página web del operador o en el sitio."
-        },
-        "community-garden": {
-            "description": "Aquí tienes un jardín que puedes cultivar junto con otros. Puede plantar, regar y cosechar verduras, hierbas, flores, etc., y observarlas crecer.",
-            "name": "Jardín comunitario"
-        },
-        "bicycle-self-repair": {
-            "name": "Autoreparación de bicicletas"
-        },
-        "charging-station": {
-            "name": "Estación de carga"
-        },
-        "advertising": {
-            "name": "Espacio publicitario",
-            "description": "Aquí puedes colocar carteles para promocionar tu causa."
-        },
-        "grow": {
-            "name": "Crecer"
-        },
-        "musical_instrument": {
-            "name": "Instrumento"
-        },
-        "community-centre": {
-            "name": "Centro comunitario"
-        },
-        "sweets": {
-            "name": "Dulces"
-        },
-        "grocery": {
-            "name": "Tienda de comestibles"
-        },
-        "dairy": {
-            "name": "Productos lácteos"
-        },
-        "vegetable": {
-            "name": "Frutas / vegetales"
-        },
-        "diaper-changing-table": {
-            "name": "Cambiador"
-        },
-        "meat": {
-            "name": "Productos carnicos"
-        },
-        "beverages": {
-            "name": "Bebidas"
-        },
-        "drinking-water": {
-            "name": "Agua potable"
-        },
-        "defibrillator": {
-            "name": "Desfibrilador"
-        },
-        "dinner": {
-            "name": "Cena"
-        },
-        "sport": {
-            "name": "Deporte"
-        },
-        "books": {
-            "name": "Libros"
-        },
-        "health-products": {
-            "name": "Productos de salud",
-            "description": "Tienda de venta de productos de cuidado personal, cosméticos, limpieza del hogar o médicos."
-        },
-        "bicycle-rental": {
-            "name": "Alquiler de bicicletas"
-        },
-        "scout": {
-            "name": "Grupo Scout"
-        },
-        "plant": {
-            "name": "Planta"
-        }
+  "code": "es",
+  "balance": "Balance",
+  "route": "Ruta",
+  "difficulty": "Dificultad",
+  "type": {
+    "artwork": {
+      "name": "Obra de arte"
     },
-    "code": "es",
-    "menu": {
-        "theme": "Cambiar el tema",
-        "about": "Acerca de esta página",
-        "donate": "Apoyarme",
-        "note": "Agregar nota para cartógrafos",
-        "edit": "Editar mapa",
-        "share": "Comparte ubicacion"
+    "fountain": {
+      "name": "Fuente"
     },
-    "changing_table": "Tiene un cambiador",
-    "bottle": "Es posible rellenar",
-    "pump": "Bomba",
-    "tools": "Herramientas",
-    "repair": "Reparar",
-    "chainTool": "Cadena de herramientas",
-    "internet": "Internet",
-    "water": "Agua potable",
-    "bicycle": "Bicicleta",
-    "park": "Parque",
-    "mobile": "Teléfono móvil",
-    "smallElectronics": "Pequeños aparatos electrónicos",
-    "electronics": "Electrónica",
-    "furniture": "Muebles",
-    "computer": "Ordenador",
-    "rubble": "Escombros de construcción",
-    "plastic_bottles": "Botellas de plástico",
-    "plastic": "Plástico",
-    "polyester": "Poliéster",
-    "polystyrene_foam": "Espuma de poliestireno",
-    "hazardous": "Residuos peligrosos",
-    "hydrargyrum": "Mercurio",
-    "beekeeper": "Apicultor",
-    "marketplace": "Mercado",
-    "milkFillingStation": "Estación de llenado de leche",
-    "shoes": "Zapatos",
-    "recycling": "Reciclaje",
-    "reuse": "Reutilizar",
-    "freeToGive": "Para dar gratis",
-    "freeToTake": "Para tomar gratis",
-    "freeToTakeOrGive": "Libre de tomar o dar",
-    "borrow": "Solo pedir prestado",
-    "hoops": "Aros",
-    "wheelchair": {
-        "limited": "Acceso limitado para sillas de ruedas",
-        "yes": "Accesible silla de ruedas",
-        "no": "No accesible para sillas de ruedas"
+    "tourist-attraction": {
+      "name": "Atracción turística"
     },
-    "vegetarian": {
-        "only": "Solo productos vegetarianos",
-        "yes": "Tiene productos vegetarianos",
-        "no": "Sin productos vegetarianos"
+    "archaeological-site": {
+      "name": "Yacimiento arqueológico"
     },
-    "vegan": {
-        "only": "Solo productos veganos",
-        "yes": "Tiene productos veganos",
-        "no": "Sin productos veganos"
+    "trail": {
+      "name": "Itinerario didáctico"
     },
-    "fairTrade": {
-        "only": "Solo productos de comercio justo",
-        "yes": "Tiene productos de comercio justo",
-        "no": "Sin productos de comercio justo"
+    "battery-recycling": {
+      "name": "Batería"
     },
-    "organic": {
-        "only": "Solo productos orgánicos",
-        "yes": "Tiene productos organicos",
-        "no": "Sin productos orgánicos"
+    "oil-recycling": {
+      "name": "Aceite"
     },
-    "maybeOpen": "Tal vez abierto",
-    "maybeOpens": "Quizás abre",
-    "maybeCloses": "Quizás cierra",
-    "opens": "Abiertos",
-    "closes": "Cerrados",
-    "externalResources": "Otros",
-    "meta": {
-        "title": "Mapa sostenible",
-        "description": "Experimente el mundo de forma sostenible.",
-        "titleShort": "Sostenible"
+    "reusable-bottle-reuse": {
+      "name": "Botella reutilizable"
     },
-    "search": {
-        "placeholder": "Buscar una ubicación"
+    "rubble-recycling": {
+      "name": "Escombros de construcción"
     },
-    "info": {
-        "osmTags": "Documentación",
-        "query": "Consulta",
-        "overpassTurbo": "overpass-turbo"
+    "plastic-recycling": {
+      "name": "Plástico"
     },
-    "capacity": "Capacidad",
+    "hazardous-recycling": {
+      "name": "Residuos peligrosos"
+    },
+    "books-get": {
+      "name": "Obtener libros"
+    },
+    "books-borrow": {
+      "name": "Préstamo de libros"
+    },
+    "books-give": {
+      "name": "Libros regalados"
+    },
+    "baking-oven": {
+      "name": "Horno de cocción"
+    },
+    "books-recycle": {
+      "name": "Libros reciclados"
+    },
+    "kneipp_water_cure": {
+      "name": "Instalación Kneipp"
+    },
+    "castle": {
+      "name": "Castillo"
+    },
+    "assisted-repair": {
+      "name": "Asistencia a la reparación",
+      "description": "Aquí podrás reparar cosas rotas junto con profesionales. Conocerás a gente nueva y normalmente también te servirán café y tarta. Los eventos más conocidos son los cafés de reparación."
+    },
+    "history": {
+      "name": "Historia"
+    },
+    "mill": {
+      "name": "Molino"
+    },
+    "monument": {
+      "name": "Monumento"
+    },
+    "memorial": {
+      "name": "Memorial"
+    },
+    "museum": {
+      "name": "Museo"
+    },
+    "assistance-senior": {
+      "name": "Para personas mayores"
+    },
+    "observatory": {
+      "name": "Observatorio"
+    },
+    "ruins": {
+      "name": "Ruinas"
+    },
+    "cave": {
+      "name": "Cueva"
+    },
+    "natural_monument": {
+      "name": "Monumento natural"
+    },
+    "pond": {
+      "name": "Estanque"
+    },
+    "rock": {
+      "name": "Roca"
+    },
+    "viewpoint": {
+      "name": "Punto de vista"
+    },
+    "waterfall": {
+      "name": "Cascada"
+    },
+    "spring": {
+      "name": "Primavera"
+    },
+    "assistance": {
+      "name": "Asistencia"
+    },
+    "assistance-homeless": {
+      "name": "Para los desfavorecidos"
+    },
+    "assistance-female": {
+      "name": "Para mujeres"
+    },
+    "assistance-male": {
+      "name": "Para hombres"
+    },
+    "assistance-disabled": {
+      "name": "Para discapacitados"
+    },
+    "assistance-migrant": {
+      "name": "Para refugiados"
+    },
+    "assistance-children": {
+      "name": "Para niños"
+    },
+    "barbecue": {
+      "name": "Barbacoa"
+    },
+    "baked-goods": {
+      "name": "Productos horneados"
+    },
+    "food-sharing": {
+      "name": "Compartir comida (Banco alimentos, Caritas)",
+      "description": "En este lugar puedes traer y llevar comida. Las condiciones para traer y llevar comida son muy diferentes, puedes informarte al respecto en la página web del operador o en el sitio."
+    },
+    "community-garden": {
+      "description": "Aquí tienes un jardín que puedes cultivar junto con otros. Puede plantar, regar y cosechar verduras, hierbas, flores, etc., y observarlas crecer.",
+      "name": "Jardín comunitario"
+    },
+    "bicycle-self-repair": {
+      "name": "Autoreparación de bicicletas"
+    },
+    "charging-station": {
+      "name": "Estación de carga"
+    },
+    "advertising": {
+      "name": "Espacio publicitario",
+      "description": "Aquí puedes colocar carteles para promocionar tu causa."
+    },
+    "grow": {
+      "name": "Crecer"
+    },
+    "musical_instrument": {
+      "name": "Instrumento"
+    },
+    "community-centre": {
+      "name": "Centro comunitario"
+    },
+    "sweets": {
+      "name": "Dulces"
+    },
+    "grocery": {
+      "name": "Tienda de comestibles"
+    },
+    "dairy": {
+      "name": "Productos lácteos"
+    },
+    "vegetable": {
+      "name": "Frutas / vegetales"
+    },
+    "diaper-changing-table": {
+      "name": "Cambiador"
+    },
+    "meat": {
+      "name": "Productos carnicos"
+    },
+    "beverages": {
+      "name": "Bebidas"
+    },
+    "drinking-water": {
+      "name": "Agua potable"
+    },
+    "defibrillator": {
+      "name": "Desfibrilador"
+    },
+    "dinner": {
+      "name": "Cena"
+    },
+    "sport": {
+      "name": "Deporte"
+    },
+    "books": {
+      "name": "Libros"
+    },
+    "health-products": {
+      "name": "Productos de salud",
+      "description": "Tienda de venta de productos de cuidado personal, cosméticos, limpieza del hogar o médicos."
+    },
+    "bicycle-rental": {
+      "name": "Alquiler de bicicletas"
+    },
+    "scout": {
+      "name": "Grupo Scout"
+    },
+    "plant": {
+      "name": "Planta"
+    }
+  },
+  "menu": {
+    "theme": "Cambiar el tema",
+    "about": "Acerca de esta página",
+    "donate": "Apoyarme",
+    "note": "Agregar nota para cartógrafos",
+    "edit": "Editar mapa",
+    "share": "Comparte ubicacion"
+  },
+  "changing_table": "Tiene un cambiador",
+  "bottle": "Es posible rellenar",
+  "pump": "Bomba",
+  "tools": "Herramientas",
+  "repair": "Reparar",
+  "chainTool": "Cadena de herramientas",
+  "internet": "Internet",
+  "water": "Agua potable",
+  "bicycle": "Bicicleta",
+  "park": "Parque",
+  "mobile": "Teléfono móvil",
+  "smallElectronics": "Pequeños aparatos electrónicos",
+  "electronics": "Electrónica",
+  "furniture": "Muebles",
+  "computer": "Ordenador",
+  "rubble": "Escombros de construcción",
+  "plastic_bottles": "Botellas de plástico",
+  "plastic": "Plástico",
+  "polyester": "Poliéster",
+  "polystyrene_foam": "Espuma de poliestireno",
+  "hazardous": "Residuos peligrosos",
+  "hydrargyrum": "Mercurio",
+  "beekeeper": "Apicultor",
+  "marketplace": "Mercado",
+  "milkFillingStation": "Estación de llenado de leche",
+  "shoes": "Zapatos",
+  "recycling": "Reciclaje",
+  "reuse": "Reutilizar",
+  "freeToGive": "Para dar gratis",
+  "freeToTake": "Para tomar gratis",
+  "freeToTakeOrGive": "Libre de tomar o dar",
+  "borrow": "Solo pedir prestado",
+  "hoops": "Aros",
+  "wheelchair": {
+    "limited": "Acceso limitado para sillas de ruedas",
+    "yes": "Accesible silla de ruedas",
+    "no": "No accesible para sillas de ruedas"
+  },
+  "vegetarian": {
+    "only": "Solo productos vegetarianos",
+    "yes": "Tiene productos vegetarianos",
+    "no": "Sin productos vegetarianos"
+  },
+  "vegan": {
+    "only": "Solo productos veganos",
+    "yes": "Tiene productos veganos",
+    "no": "Sin productos veganos"
+  },
+  "fairTrade": {
+    "only": "Solo productos de comercio justo",
+    "yes": "Tiene productos de comercio justo",
+    "no": "Sin productos de comercio justo"
+  },
+  "organic": {
+    "only": "Solo productos orgánicos",
+    "yes": "Tiene productos organicos",
+    "no": "Sin productos orgánicos"
+  },
+  "maybeOpen": "Tal vez abierto",
+  "maybeOpens": "Quizás abre",
+  "maybeCloses": "Quizás cierra",
+  "opens": "Abiertos",
+  "closes": "Cerrados",
+  "externalResources": "Otros",
+  "meta": {
     "title": "Mapa sostenible",
     "description": "Experimente el mundo de forma sostenible.",
-    "minZoomMessageNoLayer": "Ninguna capa asignada",
-    "emptyIndicator": "No se encontraron objetos del mapa en esta zona",
-    "minZoomMessage": "Acércate para cargar las características del mapa",
-    "linkCopied": "Enlace copiado al portapapeles",
-    "playground": "Para niños",
-    "charging": "Cargando",
-    "mobileCharging": "Cargando",
-    "car": "Coche",
-    "carBattery": "Batería de coche",
-    "toy": "Juguete",
-    "fee": "Venta",
-    "clothes": "Ropa",
-    "cookingOil": "Aceite de cocina",
-    "engineOil": "Aceite de motor",
-    "oil": "Aceite usado",
-    "paint": "Pintura",
-    "battery": "Batería",
-    "membersOnly": "Solo miembros",
-    "plastic_packaging": "Envases de plástico",
-    "PET": "MASCOTA",
-    "plastic_bags": "Bolsa de plástico",
-    "public": "Acceso público",
-    "customersOnly": "Solo clientes",
-    "indoor": "Interior",
-    "disabled": "Para discapacitados",
-    "female": "Para mujeres",
-    "male": "Para hombres",
-    "senior": "Para personas mayores",
-    "homeless": "Para los desfavorecidos",
-    "lgbtq": "Apto para LGBTQ+",
-    "migrant": "Para refugiados",
-    "covered": "Cubierto",
-    "light": "Iluminado",
-    "regional": {
-        "only": "Solo productos regionales",
-        "yes": "Tiene productos regionales",
-        "no": "Sin productos regionales"
-    },
-    "avoidPackaging": "Evite embalajes innecesarios",
-    "colour": "Color",
-    "open": "Abierto",
-    "thatDependsOn": "Eso depende de",
-    "closed": "Cerrado",
-    "conditionalFee": "Gratis solo en determinados horarios.",
-    "free": "Gratis",
-    "veryCheap": "Gratis o muy barato",
-    "horizontalBar": "Barra horizontal",
-    "parallelBars": "Barras paralelas",
-    "exerciseMachine": "Maquina de ejercicio",
-    "rings": "Tonos"
+    "titleShort": "Sostenible"
+  },
+  "search": {
+    "placeholder": "Buscar una ubicación"
+  },
+  "info": {
+    "osmTags": "Documentación",
+    "query": "Consulta",
+    "overpassTurbo": "overpass-turbo"
+  },
+  "capacity": "Capacidad",
+  "title": "Mapa sostenible",
+  "description": "Experimente el mundo de forma sostenible.",
+  "minZoomMessageNoLayer": "Ninguna capa asignada",
+  "emptyIndicator": "No se encontraron objetos del mapa en esta zona",
+  "minZoomMessage": "Acércate para cargar las características del mapa",
+  "linkCopied": "Enlace copiado al portapapeles",
+  "playground": "Para niños",
+  "charging": "Cargando",
+  "mobileCharging": "Cargando",
+  "car": "Coche",
+  "carBattery": "Batería de coche",
+  "toy": "Juguete",
+  "fee": "Venta",
+  "clothes": "Ropa",
+  "cookingOil": "Aceite de cocina",
+  "engineOil": "Aceite de motor",
+  "oil": "Aceite usado",
+  "paint": "Pintura",
+  "battery": "Batería",
+  "membersOnly": "Solo miembros",
+  "plastic_packaging": "Envases de plástico",
+  "PET": "MASCOTA",
+  "plastic_bags": "Bolsa de plástico",
+  "public": "Acceso público",
+  "customersOnly": "Solo clientes",
+  "indoor": "Interior",
+  "disabled": "Para discapacitados",
+  "female": "Para mujeres",
+  "male": "Para hombres",
+  "senior": "Para personas mayores",
+  "homeless": "Para los desfavorecidos",
+  "lgbtq": "Apto para LGBTQ+",
+  "migrant": "Para refugiados",
+  "covered": "Cubierto",
+  "light": "Iluminado",
+  "regional": {
+    "only": "Solo productos regionales",
+    "yes": "Tiene productos regionales",
+    "no": "Sin productos regionales"
+  },
+  "avoidPackaging": "Evite embalajes innecesarios",
+  "colour": "Color",
+  "open": "Abierto",
+  "thatDependsOn": "Eso depende de",
+  "closed": "Cerrado",
+  "conditionalFee": "Gratis solo en determinados horarios.",
+  "free": "Gratis",
+  "veryCheap": "Gratis o muy barato",
+  "horizontalBar": "Barra horizontal",
+  "parallelBars": "Barras paralelas",
+  "exerciseMachine": "Maquina de ejercicio",
+  "rings": "Tonos"
 }
