@@ -3,12 +3,14 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import moment from "moment";
 import { initReactI18next } from "react-i18next";
 import * as en from "./locales/en.json";
-import * as oapEn from "../osm-app-component/locales/en.json";
+import * as oacEn from "../osm-app-component/locales/en.json";
 
 import * as de from "./locales/de.json";
-import * as oapDe from "../osm-app-component/locales/de.json";
+import * as oacDe from "../osm-app-component/locales/de.json";
 import * as es from "./locales/es.json";
-import * as oapEs from "../osm-app-component/locales/es.json";
+import * as oacEs from "../osm-app-component/locales/es.json";
+import * as pl from "./locales/pl.json";
+import * as oacPl from "../osm-app-component/locales/pl.json";
 
 i18next.on("languageChanged", function (lng) {
   document.documentElement.setAttribute("lang", lng);
@@ -25,9 +27,10 @@ i18next
     fallbackLng: "en",
 
     resources: {
-      en: { translation: { ...en, ...oapEn } },
-      de: { translation: { ...de, ...oapDe } },
-      es: { translation: { ...es, ...oapEs } },
+      en: { translation: { ...en, ...oacEn } },
+      de: { translation: { ...de, ...oacDe } },
+      es: { translation: { ...es, ...oacEs } },
+      pl: { translation: { ...pl, ...oacPl } },
     },
 
     interpolation: {
