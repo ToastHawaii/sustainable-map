@@ -1,1 +1,102 @@
-{}
+{
+    "info": {
+        "osmTags": "Dokumentacja",
+        "overpassTurbo": "overpass-turbo",
+        "query": "Zapytanie"
+    },
+    "search": {
+        "placeholder": "Wyszukaj miejsca"
+    },
+    "menu": {
+        "theme": "Zmień motyw",
+        "about": "O tej stronie",
+        "edit": "Edytuj mapę",
+        "note": "Dodaj notkę dla innych tworzących mapy",
+        "share": "Udostępnij to miejsce"
+    },
+    "furniture": "Meble",
+    "computer": "Komputery",
+    "route": "Trasa",
+    "difficulty": "Poziom trudności",
+    "group": {
+        "mobility": "Mobilność",
+        "health": "Zdrowie",
+        "community": "Społeczność",
+        "sport": "Sport",
+        "trip": "Wycieczka",
+        "goods": "Towary",
+        "food": "Żywność",
+        "culture": "Kultura",
+        "natural": "Natura",
+        "education": "Edukacja"
+    },
+    "type": {
+        "fountain": {
+            "name": "Fontanna"
+        },
+        "sport": {
+            "name": "Sport"
+        },
+        "books": {
+            "name": "Książki"
+        },
+        "cave": {
+            "name": "Jaskinia"
+        },
+        "museum": {
+            "name": "Muzeum"
+        },
+        "observatory": {
+            "name": "Obserwatorium"
+        },
+        "oil-recycling": {
+            "name": "Olej"
+        },
+        "plastic-recycling": {
+            "name": "Plastik"
+        },
+        "history": {
+            "name": "Historia"
+        },
+        "memorial": {
+            "name": "Pomnik"
+        },
+        "castle": {
+            "name": "Zamki"
+        },
+        "ruins": {
+            "name": "Ruiny"
+        },
+        "battery-recycling": {
+            "name": "Baterie"
+        }
+    },
+    "code": "en",
+    "tools": "Narzędzia",
+    "repair": "Napraw",
+    "internet": "Internet",
+    "bicycle": "Rower",
+    "charging": "Ładowanie",
+    "park": "Park",
+    "mobileCharging": "Ładowanie",
+    "car": "Samochód",
+    "electronics": "Elektronika",
+    "toy": "Zabawki",
+    "recycling": "Recykling",
+    "open": "Otwarte",
+    "rings": "Pierścienie",
+    "balance": "Balans",
+    "clothes": "Ubrania",
+    "colour": "Kolor",
+    "free": "Bezpłatne",
+    "battery": "Baterie",
+    "externalResources": "Inne",
+    "paint": "Obrazy",
+    "marketplace": "Bazar",
+    "reuse": "Ponowne użycie",
+    "indoor": "Wewnątrz",
+    "closed": "Zamknięte",
+    "PET": "PET",
+    "polyester": "Poliester",
+    "shoes": "Buty"
+}
