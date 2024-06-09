@@ -293,7 +293,8 @@
     },
     "info": {
         "osmTags": "Documentación",
-        "query": "Consulta"
+        "query": "Consulta",
+        "overpassTurbo": "overpass-turbo"
     },
     "capacity": "Capacidad",
     "title": "Mapa sostenible",
@@ -346,5 +347,6 @@
     "veryCheap": "Gratis o muy barato",
     "horizontalBar": "Barra horizontal",
     "parallelBars": "Barras paralelas",
-    "exerciseMachine": "Maquina de ejercicio"
+    "exerciseMachine": "Maquina de ejercicio",
+    "rings": "Tonos"
 }
