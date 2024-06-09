@@ -55,5 +55,8 @@
         "intermediate": "Intermedio",
         "expert": "Experto"
     },
-    "basement": "(B{{level}}F)"
+    "basement": "(B{{level}}F)",
+    "fitness_station": {
+        "balance_beam": "Barra de equilibrio"
+    }
 }
