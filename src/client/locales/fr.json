@@ -1,3 +1,586 @@
 {
-  "code": "fr"
+    "code": "fr",
+    "meta": {
+        "title": "Carte durable",
+        "description": "Découvrez le monde de manière durable.",
+        "titleShort": "Durable"
+    },
+    "search": {
+        "placeholder": "Rechercher un lieu"
+    },
+    "info": {
+        "osmTags": "Documentation",
+        "query": "Recherche",
+        "overpassTurbo": "overpass-turbo"
+    },
+    "menu": {
+        "edit": "Modifier la carte",
+        "note": "Ajouter une note pour les contributeurs",
+        "share": "Partager le lieu",
+        "theme": "Modifier le thème",
+        "about": "À propos de ce site",
+        "donate": "Me soutenir"
+    },
+    "title": "Carte durable",
+    "description": "Découvrez le monde de manière durable.",
+    "minZoomMessageNoLayer": "Aucun calque assigné",
+    "minZoomMessage": "Effectuez un zoom avant pour afficher les éléments de la carte",
+    "emptyIndicator": "Aucun élément de carte trouvé dans cette zone",
+    "linkCopied": "Lien copié dans le presse papiers",
+    "changing_table": "Table à langer",
+    "bottle": "Remplissage possible",
+    "pump": "Pompe",
+    "tools": "Outils",
+    "internet": "Internet",
+    "water": "Eau potable",
+    "bicycle": "Vélo",
+    "park": "Parc",
+    "charging": "Recharge",
+    "mobileCharging": "Recharge",
+    "car": "Voiture",
+    "mobile": "Téléphone portable",
+    "smallElectronics": "Petits appareils",
+    "electronics": "Appareils",
+    "computer": "Ordinateur",
+    "toy": "Jouet",
+    "clothes": "Vêtements",
+    "battery": "Piles",
+    "furniture": "Meubles",
+    "carBattery": "Batteries de voiture",
+    "cookingOil": "Huile de cuisson",
+    "engineOil": "Huile de moteur",
+    "paint": "Peinture",
+    "rubble": "Gravats",
+    "oil": "Huile usagée",
+    "plastic": "Plastique",
+    "plastic_bottles": "Bouteilles en plastique",
+    "plastic_packaging": "Emballages en plastique",
+    "PET": "PET",
+    "hazardous": "Déchets dangereux",
+    "marketplace": "Marché",
+    "shoes": "Chaussures",
+    "borrow": "Emprunt uniquement",
+    "beekeeper": "Apiculteur",
+    "milkFillingStation": "Station de remplissage du lait",
+    "reuse": "Réutiliser",
+    "fee": "Vente",
+    "indoor": "Intérieur",
+    "female": "Pour femmes",
+    "male": "Pour hommes",
+    "lgbtq": "LGBTQ+ friendly",
+    "homeless": "Pour les personnes défavorisées",
+    "light": "Éclairé",
+    "covered": "Couvert",
+    "hoops": "Cerceaux",
+    "wheelchair": {
+        "no": "Non accessible aux fauteuils roulants",
+        "yes": "Accessible en fauteuil roulant",
+        "limited": "Accès en fauteuil roulant limité"
+    },
+    "regional": {
+        "only": "Produits régionaux uniquement",
+        "yes": "Produits régionaux",
+        "no": "Pas de produits régionaux"
+    },
+    "avoidPackaging": "Évite les emballages inutiles",
+    "vegan": {
+        "only": "Produits vegan uniquement",
+        "yes": "Produits vegan",
+        "no": "Pas de produits vegan"
+    },
+    "veryCheap": "Gratuit ou très peu cher",
+    "horizontalBar": "Barre horizontale",
+    "parallelBars": "Barres parallèles",
+    "difficulty": "Difficulté",
+    "externalResources": "Autres",
+    "group": {
+        "culture": "Culture",
+        "education": "Éducation",
+        "food": "Nourriture",
+        "material": "Recyclage",
+        "trip": "Voyage",
+        "communitySport": "Sport collectif",
+        "sport": "Sport",
+        "community": "Communauté",
+        "mobility": "Mobilité",
+        "health": "Santé",
+        "natural": "Nature"
+    },
+    "route": "Route",
+    "type": {
+        "artwork": {
+            "name": "Œuvre d'art"
+        },
+        "fountain": {
+            "name": "Fontaine"
+        },
+        "archaeological-site": {
+            "name": "Site archéologique"
+        },
+        "oil-recycling": {
+            "name": "Huile"
+        },
+        "reusable-bottle-reuse": {
+            "name": "Bouteille réutilisable"
+        },
+        "trail": {
+            "name": "Parcours pédagogique"
+        },
+        "battery-recycling": {
+            "name": "Pile"
+        },
+        "rubble-recycling": {
+            "name": "Gravats"
+        },
+        "plastic-recycling": {
+            "name": "Plastique"
+        },
+        "hazardous-recycling": {
+            "name": "Déchets dangereux"
+        },
+        "books": {
+            "name": "Livres"
+        },
+        "books-borrow": {
+            "name": "Emprunter des livres"
+        },
+        "books-give": {
+            "name": "Donner des livres"
+        },
+        "books-recycle": {
+            "name": "Recycler des livres"
+        },
+        "books-get": {
+            "name": "Obtenir des livres"
+        },
+        "castle": {
+            "name": "Château"
+        },
+        "mill": {
+            "name": "Moulin"
+        },
+        "history": {
+            "name": "Histoire"
+        },
+        "memorial": {
+            "name": "Mémorial"
+        },
+        "monument": {
+            "name": "Monument"
+        },
+        "museum": {
+            "name": "Musée"
+        },
+        "observatory": {
+            "name": "Observatoire"
+        },
+        "ruins": {
+            "name": "Ruines"
+        },
+        "cave": {
+            "name": "Grotte"
+        },
+        "natural_monument": {
+            "name": "Monument naturel"
+        },
+        "pond": {
+            "name": "Étang"
+        },
+        "rock": {
+            "name": "Rocher"
+        },
+        "viewpoint": {
+            "name": "Point de vue"
+        },
+        "waterfall": {
+            "name": "Cascade"
+        },
+        "spring": {
+            "name": "Source"
+        },
+        "assistance": {
+            "name": "Assistance"
+        },
+        "assistance-female": {
+            "name": "Pour les femmes"
+        },
+        "assistance-homeless": {
+            "name": "Pour les personnes défavorisées"
+        },
+        "assisted-repair": {
+            "name": "Réparation assistée",
+            "description": "Ici, vous pouvez réparer des objets cassés avec des professionnels. Vous rencontrerez de nouvelles personnes et, en général, vous aurez droit à un café et à un gâteau. Les repair cafés sont des événements très connus."
+        },
+        "assistance-migrant": {
+            "name": "Pour les réfugiés"
+        },
+        "assistance-children": {
+            "name": "Pour les enfants"
+        },
+        "barbecue": {
+            "name": "Barbecue"
+        },
+        "health-products": {
+            "name": "Produits de santé",
+            "description": "Magasin vendant des produits d'hygiène personnelle, des cosmétiques, des produits d'entretien ménager ou des produits médicaux."
+        },
+        "bicycle-self-repair": {
+            "name": "Réparation de vélo autonome"
+        },
+        "bicycle-rental": {
+            "name": "Location de vélos"
+        },
+        "charging-station": {
+            "name": "Station de recharge"
+        },
+        "musical_instrument": {
+            "name": "Instrument"
+        },
+        "advertising": {
+            "name": "Espace publicitaire",
+            "description": "Vous pouvez ici accrocher des affiches pour faire connaître vos activités."
+        },
+        "community-centre": {
+            "name": "Centre communautaire"
+        },
+        "scout": {
+            "name": "Group scout"
+        },
+        "community-garden": {
+            "name": "Jardin partagé",
+            "description": "Voici un jardin que vous pouvez cultiver avec d'autres. Vous pouvez planter, arroser et récolter des légumes, des herbes, des fleurs, etc. et les regarder pousser."
+        },
+        "grocery": {
+            "name": "Épicerie"
+        },
+        "grow": {
+            "name": "Plantation"
+        },
+        "sweets": {
+            "name": "Bonbons"
+        },
+        "plant": {
+            "name": "Usine"
+        },
+        "baked-goods": {
+            "name": "Produits de boulangerie"
+        },
+        "dairy": {
+            "name": "Produits laitiers"
+        },
+        "food-sharing": {
+            "name": "Partage de nourriture",
+            "description": "Dans ce lieu, il est possible d'apporter et d'emporter de la nourriture. Les conditions pour apporter et prendre de la nourriture sont très différentes, vous pouvez vous informer sur le site web de l'opérateur ou sur place."
+        },
+        "dinner": {
+            "name": "Restaurant"
+        },
+        "coworking": {
+            "name": "Espace de coworking"
+        },
+        "goods-exchange": {
+            "name": "Échange de biens",
+            "description": "Vous y trouverez une table, une étagère ou un magasin pour apporter et prendre des objets. Les magasins de dons et les boîtes de dons sont des installations bien connues."
+        },
+        "contribute": {
+            "name": "Contribuer"
+        },
+        "map": {
+            "name": "Carte"
+        },
+        "openstreetmap": {
+            "name": "OpenStreetMap"
+        },
+        "internet": {
+            "name": "Internet"
+        },
+        "public-shower": {
+            "name": "Douche publique"
+        },
+        "basketball": {
+            "name": "Basketball"
+        },
+        "bath": {
+            "name": "Baignoire"
+        },
+        "rings": {
+            "name": "Anneaux"
+        },
+        "exercise-machine": {
+            "name": "Équipement sportif"
+        },
+        "fitness-trail": {
+            "name": "Parcours de santé"
+        },
+        "sledding": {
+            "name": "Luge"
+        },
+        "running": {
+            "name": "Course"
+        },
+        "soccer": {
+            "name": "Football"
+        },
+        "table-tennis": {
+            "name": "Tennis de table"
+        },
+        "table-soccer": {
+            "name": "Babyfoot"
+        },
+        "boules": {
+            "name": "Pétanque"
+        },
+        "volleyball": {
+            "name": "Volleyball"
+        },
+        "observation": {
+            "name": "Observation d'animaux"
+        },
+        "maze": {
+            "name": "Labyrinthe"
+        },
+        "webcam": {
+            "name": "Webcam"
+        },
+        "fireplace": {
+            "name": "Cheminée"
+        },
+        "garden": {
+            "name": "Jardin"
+        },
+        "garden-with-name": {
+            "name": "Jardin (avec un nom)"
+        },
+        "nature-park": {
+            "name": "Parc naturel"
+        },
+        "park": {
+            "name": "Parc"
+        },
+        "park-with-name": {
+            "name": "Parc (avec nom)"
+        },
+        "picnic-site": {
+            "name": "Lieu de pique-nique"
+        },
+        "square": {
+            "name": "Square"
+        },
+        "playground": {
+            "name": "Aire de jeux"
+        },
+        "clothes-repair": {
+            "name": "Vêtements (Réparer)"
+        },
+        "mobile-phones": {
+            "name": "Téléphone"
+        },
+        "mobile-phones-give": {
+            "name": "Téléphone (Donner)"
+        },
+        "mobile-phones-take": {
+            "name": "Téléphone (Prendre)"
+        },
+        "mobile-phones-repair": {
+            "name": "Téléphone (Réparer)"
+        },
+        "computers": {
+            "name": "Ordinateur"
+        },
+        "computers-give": {
+            "name": "Ordinateur (Donner)"
+        },
+        "toys": {
+            "name": "Jouet"
+        },
+        "toys-rent": {
+            "name": "Jouer (Louer)"
+        },
+        "toys-repair": {
+            "name": "Jouet (Réparer)"
+        },
+        "electronics": {
+            "name": "Électronique"
+        },
+        "electronics-give": {
+            "name": "Électronique (Donner)"
+        },
+        "electronics-take": {
+            "name": "Électronique (Prendre)"
+        },
+        "bicycle-get": {
+            "name": "Vélo (Prendre)"
+        },
+        "tourist-attraction": {
+            "name": "Attraction touristique"
+        },
+        "sport": {
+            "name": "Sport"
+        },
+        "meat": {
+            "name": "Produits carnés"
+        },
+        "beverages": {
+            "name": "Boissons"
+        },
+        "diaper-changing-table": {
+            "name": "Table à langer"
+        },
+        "drinking-water": {
+            "name": "Eau potable"
+        },
+        "assistance-male": {
+            "name": "Pour les hommes"
+        },
+        "defibrillator": {
+            "name": "Défibrillateur"
+        },
+        "assistance-senior": {
+            "name": "Pour les personnes âgées"
+        },
+        "assistance-disabled": {
+            "name": "Pour les personnes handicapées"
+        },
+        "baking-oven": {
+            "name": "Four"
+        },
+        "vegetable": {
+            "name": "Fruits et légumes"
+        },
+        "pump": {
+            "name": "Pompe"
+        },
+        "chess": {
+            "name": "Jeu d'échec"
+        },
+        "climbing": {
+            "name": "Escalade"
+        },
+        "printer": {
+            "name": "Copie et impression"
+        },
+        "bikepark": {
+            "name": "Parking à vélos"
+        },
+        "skatepark": {
+            "name": "Skatepark"
+        },
+        "toilet": {
+            "name": "Toilettes publiques"
+        },
+        "fitness": {
+            "name": "Musculation"
+        },
+        "horizontal_bar": {
+            "name": "Barre horizontale"
+        },
+        "balance": {
+            "name": "Balance"
+        },
+        "parallel_bars": {
+            "name": "Barres parallèles"
+        },
+        "animal": {
+            "name": "Enclos pour animaux"
+        },
+        "square-with-name": {
+            "name": "Square (avec nom)"
+        },
+        "lounger": {
+            "name": "Chaise longue"
+        },
+        "clothes-take": {
+            "name": "Vêtements (Prendre)"
+        },
+        "computers-repair": {
+            "name": "Ordinateur (Réparer)"
+        },
+        "clothes": {
+            "name": "Vêtements"
+        },
+        "clothes-give": {
+            "name": "Vêtements (Donner)"
+        },
+        "computers-take": {
+            "name": "Ordinateur (Prendre)"
+        },
+        "toys-give": {
+            "name": "Jouet (Donner)"
+        },
+        "toys-take": {
+            "name": "Jouet (Prendre)"
+        },
+        "bicycle-rent": {
+            "name": "Vélo (Louer)"
+        },
+        "electronics-repair": {
+            "name": "Électronique (Réparer)"
+        },
+        "furniture": {
+            "name": "Meubles"
+        },
+        "furniture-give": {
+            "name": "Meubles (Donner)"
+        },
+        "furniture-repair": {
+            "name": "Meubles (Réparer)"
+        },
+        "furniture-take": {
+            "name": "Meubles (Prendre)"
+        },
+        "bicycle-give": {
+            "name": "Vélo (Donner)"
+        },
+        "bicycle": {
+            "name": "Vélo"
+        },
+        "bicycle-repair": {
+            "name": "Vélo (Réparer)"
+        }
+    },
+    "customersOnly": "Clients uniquement",
+    "capacity": "Capacité",
+    "plastic_bags": "Sacs en plastique",
+    "playground": "Pour les enfants",
+    "repair": "Réparation",
+    "polyester": "Polyester",
+    "public": "Accessible au public",
+    "polystyrene_foam": "Polystyrène",
+    "recycling": "Recyclage",
+    "membersOnly": "Membres uniquement",
+    "disabled": "Pour handicapés",
+    "migrant": "Pour les réfugiés",
+    "senior": "Pour personnes âgées",
+    "maybeOpens": "Ouvre peut-être",
+    "colour": "Couleur",
+    "thatDependsOn": "Cela dépend",
+    "free": "Gratuit",
+    "vegetarian": {
+        "no": "Pas de produits végétariens",
+        "only": "Produits végétariens uniquement",
+        "yes": "Produits végétariens"
+    },
+    "fairTrade": {
+        "yes": "Produits du commerce équitable",
+        "only": "Produits du commerce équitable uniquement",
+        "no": "Pas de produits du commerce équitable"
+    },
+    "organic": {
+        "only": "Produits bio uniquement",
+        "yes": "Produits bio",
+        "no": "Pas de produits bio"
+    },
+    "open": "Ouvert",
+    "closed": "Fermé",
+    "maybeOpen": "Peut-être ouvert",
+    "maybeCloses": "Ferme peut-être",
+    "opens": "Ouvre",
+    "closes": "Ferme",
+    "conditionalFee": "Gratuit à certaines périodes.",
+    "rings": "Anneaux",
+    "exerciseMachine": "Équipement sportif",
+    "balance": "Balance",
+    "freeToTake": "À emporter",
+    "freeToTakeOrGive": "À prendre ou à donner",
+    "freeToGive": "À donner"
 }
