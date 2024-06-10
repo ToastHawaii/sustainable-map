@@ -22,15 +22,15 @@ The map helps to draw attention to sustainable strategies such as
 
 The information is loaded from [OpenStreetMap](https://www.openstreetmap.org).
 
-The app is licensed under the [GNU Affero General Public License v3.0](https://github.com/ToastHawaii/sustainable-map/blob/master/LICENSE). The code is free for use, copying and modification if you publish under the same license. [View the source code on GitHub](https://github.com/ToastHawaii/sustainable-map)
+The app is licensed under the [GNU Affero General Public License v3.0](https://github.com/ToastHawaii/sustainable-map/blob/master/LICENSE). The code is free for use, copying and modification if you publish under the same license. [View the source code on GitHub](https://github.com/ToastHawaii/sustainable-map).
 
-[English](https://sustainable.zottelig.ch/?lang=en) | [Deutsch](https://sustainable.zottelig.ch/?lang=de) | [Español](https://sustainable.zottelig.ch/?lang=es) | [Français](https://sustainable.zottelig.ch/?lang=fr) | [Polski](https://sustainable.zottelig.ch/?lang=pl) | [Help translate](https://hosted.weblate.org/projects/sustainable-map/)
+[English](https://sustainable.zottelig.ch/?lang=en) | [Deutsch](https://sustainable.zottelig.ch/?lang=de) | [Español](https://sustainable.zottelig.ch/?lang=es) | [Français](https://sustainable.zottelig.ch/?lang=fr) | [Polski](https://sustainable.zottelig.ch/?lang=pl) | [Help translate](https://hosted.weblate.org/engage/sustainable-map/)
 
 <a href="https://hosted.weblate.org/engage/sustainable-map/">
 <img src="https://hosted.weblate.org/widgets/sustainable-map/-/svg-badge.svg" alt="Translation status" /></a>
 
 ---
 
-- [About me](https://wiki.openstreetmap.org/wiki/User:ToastHawaii)
-- [How to contribute](https://wiki.openstreetmap.org/wiki/How_to_contribute)
 - [More apps based on OSM](https://osm-apps.zottelig.ch/)
+- [How to contribute](https://wiki.openstreetmap.org/wiki/How_to_contribute)
+- [About me](https://wiki.openstreetmap.org/wiki/User:ToastHawaii)
