@@ -31,6 +31,6 @@ The app is licensed under the [GNU Affero General Public License v3.0](https://g
 
 ---
 
-- [More apps based on OSM](https://osm-apps.zottelig.ch/)
 - [How to contribute to OSM](https://wiki.openstreetmap.org/wiki/How_to_contribute)
+- [More apps based on OSM](https://osm-apps.zottelig.ch/)
 - [About me](https://wiki.openstreetmap.org/wiki/User:ToastHawaii)
