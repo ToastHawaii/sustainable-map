@@ -15,7 +15,7 @@ The map helps to draw attention to sustainable strategies such as
 - <i class="fas fa-handshake"></i> [Fair trade](https://wiki.openstreetmap.org/wiki/Key:fair_trade)
 - <i class="fas fa-map-marker-alt"></i> Short transport distances, Regional
 - <i class="fas fa-redo-alt"></i> Sharing, Lending
-- <i class="fas fa-tools"></i> Repair
+- <i class="fas fa-tools"></i> [Repair](https://wiki.openstreetmap.org/wiki/Key:repair)
 - <i class="fas fa-exchange-alt"></i> Reuse
 - <i class="fas fa-recycle"></i> [Recycling](https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drecycling)
 - [Community](https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcommunity_centre), [Participation](https://wiki.openstreetmap.org/wiki/Key:operator:type)
@@ -32,5 +32,5 @@ The app is licensed under the [GNU Affero General Public License v3.0](https://g
 ---
 
 - [More apps based on OSM](https://osm-apps.zottelig.ch/)
-- [How to contribute](https://wiki.openstreetmap.org/wiki/How_to_contribute)
+- [How to contribute to OSM](https://wiki.openstreetmap.org/wiki/How_to_contribute)
 - [About me](https://wiki.openstreetmap.org/wiki/User:ToastHawaii)
