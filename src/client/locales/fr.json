@@ -42,7 +42,7 @@
     "smallElectronics": "Petits appareils",
     "electronics": "Appareils",
     "computer": "Ordinateur",
-    "toy": "Jouet",
+    "toy": "Jouets",
     "clothes": "Vêtements",
     "battery": "Piles",
     "furniture": "Meubles",
@@ -104,7 +104,8 @@
         "community": "Communauté",
         "mobility": "Mobilité",
         "health": "Santé",
-        "natural": "Nature"
+        "natural": "Nature",
+        "goods": "Biens"
     },
     "route": "Route",
     "type": {
@@ -121,7 +122,7 @@
             "name": "Huile"
         },
         "reusable-bottle-reuse": {
-            "name": "Bouteille réutilisable"
+            "name": "Consigne du verre"
         },
         "trail": {
             "name": "Parcours pédagogique"
@@ -244,7 +245,7 @@
             "name": "Centre communautaire"
         },
         "scout": {
-            "name": "Group scout"
+            "name": "Groupe scout"
         },
         "community-garden": {
             "name": "Jardin partagé",
@@ -301,7 +302,7 @@
             "name": "Basketball"
         },
         "bath": {
-            "name": "Baignoire"
+            "name": "Baignade"
         },
         "rings": {
             "name": "Anneaux"
@@ -391,13 +392,13 @@
             "name": "Ordinateur (Donner)"
         },
         "toys": {
-            "name": "Jouet"
+            "name": "Jouets"
         },
         "toys-rent": {
-            "name": "Jouer (Louer)"
+            "name": "Jouets (Louer)"
         },
         "toys-repair": {
-            "name": "Jouet (Réparer)"
+            "name": "Jouets (Réparer)"
         },
         "electronics": {
             "name": "Électronique"
@@ -442,7 +443,7 @@
             "name": "Pour les personnes handicapées"
         },
         "baking-oven": {
-            "name": "Four"
+            "name": "Four à pain"
         },
         "vegetable": {
             "name": "Fruits et légumes"
@@ -505,10 +506,10 @@
             "name": "Ordinateur (Prendre)"
         },
         "toys-give": {
-            "name": "Jouet (Donner)"
+            "name": "Jouets (Donner)"
         },
         "toys-take": {
-            "name": "Jouet (Prendre)"
+            "name": "Jouets (Prendre)"
         },
         "bicycle-rent": {
             "name": "Vélo (Louer)"
@@ -536,6 +537,9 @@
         },
         "bicycle-repair": {
             "name": "Vélo (Réparer)"
+        },
+        "goods-get": {
+            "name": "Obtenir des biens"
         }
     },
     "customersOnly": "Clients uniquement",
