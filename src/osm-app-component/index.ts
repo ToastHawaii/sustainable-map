@@ -162,12 +162,17 @@ export async function initMap<M>(
       }
     });
 
+  document.querySelector(".about")?.addEventListener("click", () => {
+    getHtmlElement(".intro-container").style.display = "block";
+  });
+
   (getHtmlElement(".about") as HTMLLinkElement).href = combine(
     baseUrl,
     `/docs`
   );
 
-  (getHtmlElement(".donate") as HTMLLinkElement).href = funding.en;
+  (getHtmlElement(".donate") as HTMLLinkElement).href =
+    t("code") === "de" ? funding.de : funding.en;
 
   const shareButton = getHtmlElement(".share");
   shareButton.addEventListener("click", (e) => {
@@ -499,6 +504,7 @@ export async function initMap<M>(
   function showInfoContainer(f: { value: string; query: string; tags: any[] }) {
     document.title = `${t("type." + f.value + ".name")} - ${t("title")}`;
 
+    getHtmlElement(".intro-container").style.display = "none";
     const infoContainer = getHtmlElement(".info-container");
 
     infoContainer.style.display = "block";
@@ -594,10 +600,7 @@ data-taginfo-taglist-options='{"with_count": true, "lang": "${t("code")}"}'>
 
     getHtmlElement(".info .external", infoContainer).innerText = "";
 
-    if (
-      externalResources[f.value] &&
-      externalResources[f.value].length > 0
-    ) {
+    if (externalResources[f.value] && externalResources[f.value].length > 0) {
       const links = [];
       for (const external of externalResources[f.value]) {
         links.push(
@@ -614,9 +617,9 @@ data-taginfo-taglist-options='{"with_count": true, "lang": "${t("code")}"}'>
       getHtmlElement(
         ".info .external",
         infoContainer
-      ).innerHTML = `<br/><span class="external-label">${t("externalResources")}: </span>${links.join(
-        `<span class="external-separator">, </span>`
-      )}`;
+      ).innerHTML = `<br/><span class="external-label">${t(
+        "externalResources"
+      )}: </span>${links.join(`<span class="external-separator">, </span>`)}`;
     }
 
     for (const a of getHtmlElements(".external-link")) {

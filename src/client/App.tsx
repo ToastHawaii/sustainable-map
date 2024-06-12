@@ -16,7 +16,7 @@
 // along with Sustainable map.  If not, see <http://www.gnu.org/licenses/>.
 
 import React, { useEffect } from "react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { init } from "./init";
 import "./initI18next";
 
@@ -48,7 +48,7 @@ export function App() {
           <img
             src="/icons/mstile-144x144.png"
             style={{ width: "22px", verticalAlign: "text-bottom" }}
-          />
+          />{" "}
           {t("meta.titleShort")}
         </a>
       </h1>
@@ -78,6 +78,7 @@ export function App() {
           </form>
         </div>
       </div>
+      {Intro()}
       <div className="info-container">
         <div className="info">
           <h4></h4>
@@ -144,9 +145,9 @@ export function App() {
         >
           <i className="fas fa-adjust"></i>
         </button>
-        <a className="menu about help-text" title={t("menu.about")}>
+        <button className="menu about help-text" title={t("menu.about")}>
           <i className="fas fa-info"></i>
-        </a>
+        </button>
         <a
           className="menu donate help-text"
           target="_blank"
@@ -159,5 +160,186 @@ export function App() {
         <i className="fas fa-ellipsis-v"></i>
       </a>
     </>
+  );
+}
+function Intro() {
+  const { t } = useTranslation();
+
+  return (
+    <div className="intro-container" style={{ display: "block" }}>
+      <div className="info">
+        <h4>{t("intro.title")}</h4>
+
+        <p>{t("intro.tagline")}</p>
+        <p>{t("intro.description")}</p>
+
+        <p>{t("intro.legend")}</p>
+
+        <ul>
+          <li>
+            <i className="fas fa-universal-access"></i>{" "}
+            <a href="https://wiki.openstreetmap.org/wiki/Key:access">
+              {t("intro.accessible")}
+            </a>
+          </li>
+          <li>
+            <i className="fas fa-heart"></i>{" "}
+            <a href="https://wiki.openstreetmap.org/wiki/Key:fee">
+              {t("intro.freeOfCharge")}
+            </a>
+            ,{" "}
+            <a href="https://wiki.openstreetmap.org/wiki/Key:social_facility">
+              {t("intro.social")}
+            </a>
+          </li>
+          <li>
+            {t("intro.production")}, <i className="fas fa-seedling"></i>{" "}
+            <a href="https://wiki.openstreetmap.org/wiki/Key:organic">
+              {t("intro.organic")}
+            </a>
+            , {t("intro.seasonal")}, <i className="fas fa-cheese"></i>{" "}
+            <i className="fas fa-carrot"></i>{" "}
+            <a href="https://wiki.openstreetmap.org/wiki/Key:diet">
+              {t("intro.vegetarian")}
+            </a>
+          </li>
+          <li>
+            <i className="fas fa-hands"></i> {t("intro.packed")},{" "}
+            <a href="https://wiki.openstreetmap.org/wiki/Key:bulk_purchase">
+              {t("intro.unpacked")}
+            </a>
+            ,{" "}
+            <a href="https://wiki.openstreetmap.org/wiki/Key:zero_waste">
+              {t("intro.zeroWaste")}
+            </a>
+          </li>
+          <li>
+            <i className="fas fa-handshake"></i>{" "}
+            <a href="https://wiki.openstreetmap.org/wiki/Key:fair_trade">
+              {t("intro.fairTrade")}
+            </a>
+          </li>
+          <li>
+            <i className="fas fa-map-marker-alt"></i> {t("intro.transport")},
+            {t("intro.regional")}
+          </li>
+          <li>
+            <i className="fas fa-redo-alt"></i> {t("intro.sharing")},{" "}
+            {t("intro.lending")}
+          </li>
+          <li>
+            <i className="fas fa-tools"></i>{" "}
+            <a href="https://wiki.openstreetmap.org/wiki/Key:repair">
+              {t("intro.repair")}
+            </a>
+          </li>
+          <li>
+            <i className="fas fa-exchange-alt"></i> {t("intro.reuse")}
+          </li>
+          <li>
+            <i className="fas fa-recycle"></i>{" "}
+            <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drecycling">
+              {t("intro.recycling")}
+            </a>
+          </li>
+          <li>
+            <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcommunity_centre">
+              {t("intro.community")}
+            </a>
+            ,{" "}
+            <a href="https://wiki.openstreetmap.org/wiki/Key:operator:type">
+              {t("intro.participation")}
+            </a>
+          </li>
+        </ul>
+
+        <p>
+          <Trans
+            i18nKey="intro.osm"
+            components={{
+              a: <a href="https://www.openstreetmap.org" />,
+            }}
+          ></Trans>
+        </p>
+
+        <p>
+          <Trans
+            i18nKey="intro.license"
+            components={{
+              a: (
+                <a href="https://github.com/ToastHawaii/sustainable-map/blob/master/LICENSE" />
+              ),
+            }}
+          ></Trans>{" "}
+          <a href="https://github.com/ToastHawaii/sustainable-map">
+            {t("intro.viewSourceCode")}
+          </a>
+        </p>
+
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <a href="/?lang=en">English</a>
+              </td>
+              <td>
+                <a href="/?lang=de">Deutsch</a>
+              </td>
+              <td>
+                <a href="/?lang=es">Español</a>
+              </td>
+              <td>
+                <a href="/?lang=fr">Français</a>
+              </td>
+              <td>
+                <a href="/?lang=pl">Polski</a>
+              </td>
+              <td>
+                <a href="https://hosted.weblate.org/engage/sustainable-map/">
+                  {t("intro.translate")}
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          <a href="https://hosted.weblate.org/engage/sustainable-map/">
+            <img
+              src="https://hosted.weblate.org/widgets/sustainable-map/-/svg-badge.svg"
+              alt={t("intro.translationStatus")}
+            />
+          </a>
+        </p>
+
+        <hr />
+
+        <ul>
+          <li>
+            <a href="https://wiki.openstreetmap.org/wiki/How_to_contribute">
+              {t("intro.contribute")}
+            </a>
+          </li>
+          <li>
+            <a href="https://osm-apps.zottelig.ch/">{t("intro.moreApps")}</a>
+          </li>
+          <li>
+            <a href="https://wiki.openstreetmap.org/wiki/User:ToastHawaii">
+              {t("intro.aboutMe")}
+            </a>
+          </li>
+        </ul>
+      </div>
+      <button
+        className="close-button"
+        onClick={() => {
+          (
+            document.querySelector(".intro-container") as HTMLElement
+          ).style.display = "none";
+        }}
+      >
+        ×
+      </button>
+    </div>
   );
 }
