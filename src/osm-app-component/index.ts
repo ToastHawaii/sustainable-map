@@ -164,12 +164,8 @@ export async function initMap<M>(
 
   document.querySelector(".about")?.addEventListener("click", () => {
     getHtmlElement(".intro-container").style.display = "block";
+    getHtmlElement(".menu-group").classList.toggle("collapsed");
   });
-
-  (getHtmlElement(".about") as HTMLLinkElement).href = combine(
-    baseUrl,
-    `/docs`
-  );
 
   (getHtmlElement(".donate") as HTMLLinkElement).href =
     t("code") === "de" ? funding.de : funding.en;

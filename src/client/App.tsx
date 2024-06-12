@@ -44,7 +44,7 @@ export function App() {
     <>
       <div id="map"></div>
       <h1>
-        <a href="/docs/">
+        <a href="/">
           <img
             src="/icons/mstile-144x144.png"
             style={{ width: "22px", verticalAlign: "text-bottom" }}
@@ -270,7 +270,8 @@ function Intro() {
                 <a href="https://github.com/ToastHawaii/sustainable-map/blob/master/LICENSE" />
               ),
             }}
-          ></Trans>{" "}
+          ></Trans>
+          <br />
           <a href="https://github.com/ToastHawaii/sustainable-map">
             {t("intro.viewSourceCode")}
           </a>

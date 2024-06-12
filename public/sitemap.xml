@@ -5,12 +5,4 @@
     <loc>https://sustainable.zottelig.ch</loc>
     <priority>1.0</priority>
     </url>
-  <url>
-    <loc>https://sustainable.zottelig.ch/docs/</loc>
-    <priority>0.6</priority>
-    </url>
-  <url>
-    <loc>https://sustainable.zottelig.ch/de/docs/motivation.html</loc>
-    <priority>0.6</priority>
-  </url>
 </urlset>
