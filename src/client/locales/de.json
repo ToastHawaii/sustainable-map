@@ -757,6 +757,13 @@
         "reuse": "Weiterverwenden",
         "recycling": "Weiterverwertung",
         "community": "Gemeinschaft",
-        "participation": "Partizipation"
+        "participation": "Partizipation",
+        "translate": "Hilf übersetzen",
+        "translationStatus": "Stand der Übersetzung",
+        "moreApps": "Mehr Apps basierend auf OpenStreetMap",
+        "aboutMe": "Über mich",
+        "osm": "Die Informationen werden von <o>OpenStreetMap</o> geladen. <e>Füge dir bekannte Orte hinzu.</e>",
+        "contribute": "Wie du zu OpenStreetMap beitragen kannst",
+        "license": "Die Anwendung ist unter der <l>GNU Affero General Public License v3.0</l> lizenziert. Der <c>Code</c> steht frei zur Verwendung, Kopierung und Modifizierung, wenn er unter der gleichen Lizenz veröffentlichet wird."
     }
 }
