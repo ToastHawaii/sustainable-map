@@ -161,6 +161,7 @@ export async function initMap<M>(
 
   document.querySelector(".about")?.addEventListener("click", () => {
     getHtmlElement(".intro-container").style.display = "block";
+    getHtmlElement(".info-container").style.display = "none";
     getHtmlElement(".menu-group").classList.remove("collapsed");
   });
 

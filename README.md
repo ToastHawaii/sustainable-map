@@ -20,9 +20,9 @@ The map helps to draw attention to sustainable strategies such as
 - <i class="fas fa-recycle"></i> [Recycling](https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drecycling)
 - [Community](https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dcommunity_centre), [Participation](https://wiki.openstreetmap.org/wiki/Key:operator:type)
 
-The information is loaded from [OpenStreetMap](https://www.openstreetmap.org).
+The information is loaded from [OpenStreetMap](https://www.openstreetmap.org). [Add places you know.](https://openstreetmap.org/edit)
 
-The app is licensed under the [GNU Affero General Public License v3.0](https://github.com/ToastHawaii/sustainable-map/blob/master/LICENSE). The code is free for use, copying and modification if you publish under the same license. [View the source code on GitHub](https://github.com/ToastHawaii/sustainable-map).
+The app is licensed under the [GNU Affero General Public License v3.0](https://github.com/ToastHawaii/sustainable-map/blob/master/LICENSE). The [code](https://github.com/ToastHawaii/sustainable-map) is free for use, copying and modification if you publish under the same license. 
 
 [English](https://sustainable.zottelig.ch/?lang=en) | [Deutsch](https://sustainable.zottelig.ch/?lang=de) | [Español](https://sustainable.zottelig.ch/?lang=es) | [Français](https://sustainable.zottelig.ch/?lang=fr) | [Polski](https://sustainable.zottelig.ch/?lang=pl) | [Help translate](https://hosted.weblate.org/engage/sustainable-map/)
 
@@ -31,6 +31,6 @@ The app is licensed under the [GNU Affero General Public License v3.0](https://g
 
 ---
 
-- [How to contribute to OSM](https://wiki.openstreetmap.org/wiki/How_to_contribute)
-- [More apps based on OSM](https://osm-apps.zottelig.ch/)
+- [How to contribute to OpenStreetMap](https://wiki.openstreetmap.org/wiki/How_to_contribute)
+- [More apps based on OpenStreetMap](https://osm-apps.zottelig.ch/)
 - [About me](https://wiki.openstreetmap.org/wiki/User:ToastHawaii)
