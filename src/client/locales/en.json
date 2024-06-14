@@ -33,13 +33,12 @@
     "recycling": "Recycling",
     "community": "Community",
     "participation": "Participation",
-    "osm": "The information is loaded from OpenStreetMap.",
-    "license": "The app is licensed under the <a>GNU Affero General Public License v3.0</a>. The code is free for use, copying and modification if you publish under the same license.",
-    "viewSourceCode": "View the source code on GitHub.",
+    "osm": "The information is loaded from <o>OpenStreetMap</o>. <e>Add places you now.<e>",
+    "license": "The app is licensed under the <l>GNU Affero General Public License v3.0</l>. The <c>code</c> is free for use, copying and modification if you publish under the same license.",
     "translate": "Help translate",
     "translationStatus": "Translation status",
-    "contribute": "How to contribute to OSM",
-    "moreApps": "More apps based on OSM",
+    "contribute": "How to contribute to OpenStreetMap",
+    "moreApps": "More apps based on OpenStreetMap",
     "aboutMe": "About me"
   },
   "info": {

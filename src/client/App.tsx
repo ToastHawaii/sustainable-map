@@ -52,7 +52,7 @@ export function App() {
           {t("meta.titleShort")}
         </a>
       </h1>
-      <div id="filters">
+      <div id="filters" className="right-collapsed">
         <div className="right-collapse">
           <i className="fas fa-list"></i>
         </div>
@@ -257,7 +257,8 @@ function Intro() {
           <Trans
             i18nKey="intro.osm"
             components={{
-              a: <a href="https://www.openstreetmap.org" />,
+              o: <a href="https://www.openstreetmap.org" />,
+              e: <a href="#" className="edit" />,
             }}
           ></Trans>
         </p>
@@ -266,43 +267,42 @@ function Intro() {
           <Trans
             i18nKey="intro.license"
             components={{
-              a: (
+              l: (
                 <a href="https://github.com/ToastHawaii/sustainable-map/blob/master/LICENSE" />
               ),
+              c: <a href="https://github.com/ToastHawaii/sustainable-map" />,
             }}
           ></Trans>
-          <br />
-          <a href="https://github.com/ToastHawaii/sustainable-map">
-            {t("intro.viewSourceCode")}
-          </a>
         </p>
 
-        <table>
-          <tbody>
-            <tr>
-              <td>
-                <a href="/?lang=en">English</a>
-              </td>
-              <td>
-                <a href="/?lang=de">Deutsch</a>
-              </td>
-              <td>
-                <a href="/?lang=es">Español</a>
-              </td>
-              <td>
-                <a href="/?lang=fr">Français</a>
-              </td>
-              <td>
-                <a href="/?lang=pl">Polski</a>
-              </td>
-              <td>
-                <a href="https://hosted.weblate.org/engage/sustainable-map/">
-                  {t("intro.translate")}
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div className="responsive-table">
+          <table>
+            <tbody>
+              <tr>
+                <td>
+                  <a href="/?lang=en">English</a>
+                </td>
+                <td>
+                  <a href="/?lang=de">Deutsch</a>
+                </td>
+                <td>
+                  <a href="/?lang=es">Español</a>
+                </td>
+                <td>
+                  <a href="/?lang=fr">Français</a>
+                </td>
+                <td>
+                  <a href="/?lang=pl">Polski</a>
+                </td>
+                <td>
+                  <a href="https://hosted.weblate.org/engage/sustainable-map/">
+                    {t("intro.translate")}
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <p>
           <a href="https://hosted.weblate.org/engage/sustainable-map/">
