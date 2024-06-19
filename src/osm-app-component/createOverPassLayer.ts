@@ -43,6 +43,7 @@ export function createOverPassLayer<M extends {}>(
   icon: string,
   query: string,
   attributes: Attribute<M>[],
+  map: L.Map,
   t: TFunction<"translation", undefined>,
   color: string,
   minZoom: number,
@@ -482,7 +483,7 @@ export function createOverPassLayer<M extends {}>(
         marker.bindPopup(popup);
         this._markers?.addLayer(marker);
       }
-      updateCount(t("emptyIndicator"), minZoom);
+      updateCount(map, t("emptyIndicator"), minZoom);
     },
   });
 }

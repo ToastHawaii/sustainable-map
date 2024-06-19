@@ -94,7 +94,6 @@ function scrollIntoViewIfNeeded(target: HTMLElement) {
 
 declare var taginfo_taglist: any;
 
-let map: L.Map;
 const layers: { [name: string]: L.Layer } = {};
 let offers: string[] = [];
 
@@ -114,6 +113,7 @@ export async function initMap<M>(
     tags: string[];
   }[],
   attributes: Attribute<M>[],
+  map: L.Map,
   t: TFunction<"translation", undefined>,
   globalFilter?: (tags: any, group: any, value: any) => boolean,
   minZoom = 14,
@@ -125,21 +125,6 @@ export async function initMap<M>(
     return false;
   });
 
-  let watchLocation = false;
-  getHtmlElement(".geo").addEventListener("click", () => {
-    watchLocation = !watchLocation;
-    if (watchLocation) {
-      map.locate({ setView: true, maxZoom: 16, watch: true });
-    } else {
-      map.stopLocate();
-    }
-
-    return false;
-  });
-
-  getHtmlElement(".toggle").addEventListener("click", () => {
-    getHtmlElement(".menu-group").classList.toggle("collapsed");
-  });
 
   document
     .querySelector("#filters .right-collapse")
@@ -192,69 +177,6 @@ export async function initMap<M>(
     );
   });
 
-  const startTheme = localStorage.getItem("theme") || "system";
-  if (!startTheme) {
-    localStorage.setItem("theme", startTheme);
-  }
-
-  function setThemeClass(theme: string) {
-    const isSystemThemeDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
-
-    if ((theme === "system" && isSystemThemeDark) || theme === "dark") {
-      document.documentElement.classList.add("theme-mode-dark");
-    } else {
-      document.documentElement.classList.remove("theme-mode-dark");
-    }
-
-    if (theme === "system") {
-      document.documentElement.classList.add("theme-mode-system");
-    } else {
-      document.documentElement.classList.remove("theme-mode-system");
-    }
-  }
-
-  setThemeClass(startTheme);
-
-  getHtmlElements(".theme").forEach((e) => {
-    e.addEventListener("click", () => {
-      let theme = localStorage.getItem("theme") || "system";
-
-      const isSystemThemeDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-      ).matches;
-
-      if (isSystemThemeDark) {
-        if (theme === "system") {
-          theme = "light";
-        } else if (theme === "light") {
-          theme = "dark";
-        } else if (theme === "dark") {
-          theme = "system";
-        }
-      } else {
-        if (theme === "system") {
-          theme = "dark";
-        } else if (theme === "dark") {
-          theme = "light";
-        } else if (theme === "light") {
-          theme = "system";
-        }
-      }
-
-      localStorage.setItem("theme", theme);
-      setThemeClass(theme);
-    });
-  });
-
-  getHtmlElement(".note").addEventListener("click", () => {
-    const latlng = map.getCenter();
-    const zoom = map.getZoom();
-
-    window.location.href = `https://www.openstreetmap.org/note/new#map=${zoom}/${latlng.lat}/${latlng.lng}`;
-  });
-
   getHtmlElements(".edit").forEach((e) =>
     e.addEventListener("click", function () {
       const latlng = map.getCenter();
@@ -279,19 +201,6 @@ export async function initMap<M>(
     })
   );
 
-  const attribution = [
-    'Map data &copy; <a href="https://openstreetmap.org/">OpenStreetMap</a>',
-    'POI via <a href="https://www.overpass-api.de/">Overpass</a>',
-  ];
-
-  const osm = new L.TileLayer(
-    "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-    {
-      opacity: 0.7,
-      attribution: attribution.join(" | "),
-    }
-  );
-
   type State = { lat: number; lng: number; zoom: number };
 
   const state = get<State>("position") || {
@@ -300,16 +209,14 @@ export async function initMap<M>(
     zoom: minZoom,
   };
 
-  map = new L.Map("map")
-    .addLayer(osm)
-    .setView(new L.LatLng(state.lat, state.lng), state.zoom);
+  map.setView(new L.LatLng(state.lat, state.lng), state.zoom);
 
   // placeholders for the L.marker and L.circle representing user's current position and accuracy
   let currentPosition: L.Layer | L.Marker<any>;
   let currentAccuracy: L.Layer | L.Circle<any>;
 
   map.on("moveend zoomend", () => {
-    updateCount(t("emptyIndicator"), minZoom);
+    updateCount(map, t("emptyIndicator"), minZoom);
     const center = map.getCenter();
     const state = { lat: center.lat, lng: center.lng, zoom: map.getZoom() };
     set<State>("position", state);
@@ -455,6 +362,7 @@ export async function initMap<M>(
                 f.icon,
                 f.query,
                 attributes,
+                map,
                 t,
                 f.color,
                 minZoom,
@@ -479,6 +387,7 @@ export async function initMap<M>(
           f.icon,
           f.query,
           attributes,
+          map,
           t,
           f.color,
           minZoom,
@@ -829,6 +738,7 @@ data-taginfo-taglist-options='{"with_count": true, "lang": "${t("code")}"}'>
                 f.icon,
                 f.query,
                 attributes,
+                map,
                 t,
                 f.color,
                 minZoom,
@@ -850,7 +760,7 @@ data-taginfo-taglist-options='{"with_count": true, "lang": "${t("code")}"}'>
               params["offers"] = offers.toString();
             setQueryParams(params);
 
-            updateCount(t("emptyIndicator"), minZoom);
+            updateCount(map, t("emptyIndicator"), minZoom);
 
             const filter = document.querySelector<HTMLElement>(
               "#filters .filters-clear"
@@ -875,6 +785,33 @@ data-taginfo-taglist-options='{"with_count": true, "lang": "${t("code")}"}'>
     } else {
       filter.style.display = "none";
     }
+
+  setInterval(async () => {
+    if (!document.getElementsByTagName("html")[0].classList.contains("help"))
+      return;
+
+    const markers: HTMLElement[] = [];
+
+    if (!map) return;
+    const mapBounds = map.getBounds();
+    map.eachLayer((layer) => {
+      if (layer instanceof L.Marker) {
+        if (mapBounds.contains(layer.getLatLng())) {
+          markers.push((layer as L.Marker).getElement() as HTMLElement);
+        }
+      }
+    });
+
+    const marker = markers[getRandomInt(0, markers.length - 1)];
+
+    if (!marker) return;
+
+    marker.style.animation = "0.4s ease-in-out 0s forwards alternate pin-top";
+
+    await delay(400);
+
+    marker.style.animation = "";
+  }, 2000);
 }
 
 function init<M>(
@@ -883,6 +820,7 @@ function init<M>(
   icon: string,
   query: string,
   attributes: Attribute<M>[],
+  map: L.Map,
   t: TFunction<"translation", undefined>,
   color: string,
   minZoom: number,
@@ -895,6 +833,7 @@ function init<M>(
     icon,
     query,
     attributes as any,
+    map,
     t,
     color,
     minZoom,
@@ -942,7 +881,11 @@ export function parseOpeningHours(
 
 let emptyIndicatorElement: HTMLDivElement | undefined;
 
-export function updateCount(emptyIndicator: string, minZoom: number) {
+export function updateCount(
+  map: L.Map,
+  emptyIndicator: string,
+  minZoom: number
+) {
   const visible =
     countMarkersInView(map) === 0 &&
     offers.length > 0 &&
@@ -1023,30 +966,3 @@ function offersfromShort(
 
   return offers;
 }
-
-setInterval(async () => {
-  if (!document.getElementsByTagName("html")[0].classList.contains("help"))
-    return;
-
-  const markers: HTMLElement[] = [];
-
-  if (!map) return;
-  const mapBounds = map.getBounds();
-  map.eachLayer((layer) => {
-    if (layer instanceof L.Marker) {
-      if (mapBounds.contains(layer.getLatLng())) {
-        markers.push((layer as L.Marker).getElement() as HTMLElement);
-      }
-    }
-  });
-
-  const marker = markers[getRandomInt(0, markers.length - 1)];
-
-  if (!marker) return;
-
-  marker.style.animation = "0.4s ease-in-out 0s forwards alternate pin-top";
-
-  await delay(400);
-
-  marker.style.animation = "";
-}, 2000);

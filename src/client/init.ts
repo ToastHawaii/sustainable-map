@@ -23,11 +23,12 @@ import { TFunction } from "i18next";
 import externalResourcesEn from "./externalResources/en.json";
 import externalResourcesDe from "./externalResources/de.json";
 
-export function init(t: TFunction<"translation", undefined>) {
+export function init(t: TFunction<"translation", undefined>, map: L.Map) {
   initMap(
     "https://sustainable.zottelig.ch",
     filters,
     attributes,
+    map,
     t,
     undefined,
     undefined,
