@@ -16,7 +16,7 @@
 // along with Sustainable map.  If not, see <http://www.gnu.org/licenses/>.
 
 import { TFunction } from "i18next";
-import { parseOpeningHours } from "../osm-app-component";
+import { parseOpeningHours } from "../osm-app-component/initMap";
 import { Attribute, Tags } from "../osm-app-component/Generator";
 
 const template = (title: string, icon: string, value?: string) =>

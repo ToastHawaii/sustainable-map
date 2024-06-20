@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Intro(props: { children: any }) {
+export function IntroContainer(props: { children: any }) {
   return (
     <div className="intro-container" style={{ display: "block" }}>
       <div className="info">{props.children}</div>

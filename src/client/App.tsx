@@ -19,19 +19,14 @@ import React, { useEffect } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import "./initI18next";
 import { Info } from "../osm-app-component/control/Info";
-import { Intro } from "../osm-app-component/control/Intro";
+import { IntroContainer } from "../osm-app-component/control/IntroContainer";
 import { Filters } from "../osm-app-component/control/Filters";
 import { OsmMapContainer } from "../osm-app-component/control/OsmMapContainer";
 import { attributes } from "./attributes";
 import externalResourcesEn from "./externalResources/en.json";
 import externalResourcesDe from "./externalResources/de.json";
 import { filters } from "./filters";
-
-function setMeta(name: string, value: string) {
-  document
-    .querySelector("meta[name='" + name + "']")
-    ?.setAttribute("value", value);
-}
+import { setMeta } from "../osm-app-component/utilities/meta";
 
 export function App() {
   let { t } = useTranslation();
@@ -63,7 +58,7 @@ export function App() {
         </a>
       </h1>
       <Filters />
-      <Intro>
+      <IntroContainer>
         <h4>{t("intro.title")}</h4>
         <p>{t("intro.tagline")}</p>
         <p>{t("intro.description")}</p>
@@ -217,7 +212,7 @@ export function App() {
             </a>
           </li>
         </ul>
-      </Intro>
+      </IntroContainer>
       <Info />
     </>
   );

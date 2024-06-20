@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, useMap } from "react-leaflet";
 import { Menu } from "./Menu";
 import { Search } from "./Search";
 import { Attribute } from "../Generator";
-import { initMap } from "..";
+import { initMap } from "../initMap";
 import { useTranslation } from "react-i18next";
 
 let initalized = false;

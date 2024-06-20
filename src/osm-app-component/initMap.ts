@@ -19,7 +19,7 @@ import * as L from "leaflet";
 import * as opening_hours from "opening_hours";
 import { Solver } from "./coloriz/Solver";
 import { Color, hexToRgb } from "./coloriz/Color";
-import { setQueryParams, getQueryParams, combine } from "./utilities/url";
+import { setQueryParams, getQueryParams } from "./utilities/url";
 import { Attribute } from "./Generator";
 import { getJson } from "./utilities/jsonRequest";
 import { get, set } from "./utilities/storage";
@@ -73,25 +73,6 @@ document.addEventListener("click", (e) => {
   }
 });
 
-document.addEventListener("click", async (e) => {
-  for (const target of e.composedPath() as HTMLElement[]) {
-    if (target?.tagName?.toUpperCase() === "DETAILS") {
-      await delay(0);
-      scrollIntoViewIfNeeded(target);
-    }
-  }
-});
-
-function scrollIntoViewIfNeeded(target: HTMLElement) {
-  if (target.getBoundingClientRect().bottom > window.innerHeight) {
-    target.scrollIntoView(false);
-  }
-
-  if (target.getBoundingClientRect().top < 0) {
-    target.scrollIntoView();
-  }
-}
-
 declare var taginfo_taglist: any;
 
 const layers: { [name: string]: L.Layer } = {};
@@ -124,7 +105,6 @@ export async function initMap<M>(
     search();
     return false;
   });
-
 
   document
     .querySelector("#filters .right-collapse")
