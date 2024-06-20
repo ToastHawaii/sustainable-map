@@ -17,34 +17,20 @@
 
 import React, { useEffect } from "react";
 import { Trans, useTranslation } from "react-i18next";
-import { init } from "./init";
 import "./initI18next";
-import { MapContainer, TileLayer, useMap } from "react-leaflet";
-import { Menu } from "../osm-app-component/control/Menu";
 import { Info } from "../osm-app-component/control/Info";
 import { Intro } from "../osm-app-component/control/Intro";
 import { Filters } from "../osm-app-component/control/Filters";
-import { Search } from "../osm-app-component/control/Search";
+import { OsmMapContainer } from "../osm-app-component/control/OsmMapContainer";
+import { attributes } from "./attributes";
+import externalResourcesEn from "./externalResources/en.json";
+import externalResourcesDe from "./externalResources/de.json";
+import { filters } from "./filters";
 
 function setMeta(name: string, value: string) {
   document
     .querySelector("meta[name='" + name + "']")
     ?.setAttribute("value", value);
-}
-
-let initalized = false;
-function Init() {
-  let { t } = useTranslation();
-  const map = useMap();
-
-  useEffect(() => {
-    if (initalized) {
-      init(t, map);
-    }
-    initalized = true;
-  });
-
-  return null;
 }
 
 export function App() {
@@ -59,16 +45,14 @@ export function App() {
 
   return (
     <>
-      <MapContainer id="map">
-        <TileLayer
-          opacity={0.7}
-          attribution='Map data &copy; <a href="https://openstreetmap.org/">OpenStreetMap</a> | POI via <a href="https://www.overpass-api.de/">Overpass</a>'
-          url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <Init />
-        <Menu />
-        <Search />
-      </MapContainer>
+      <OsmMapContainer
+        baseUrl="https://sustainable.zottelig.ch"
+        filterOptions={filters}
+        attributes={attributes}
+        externalResources={
+          t("code") === "de" ? externalResourcesDe : externalResourcesEn
+        }
+      />
       <h1>
         <a href="/">
           <img
