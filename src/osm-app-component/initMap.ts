@@ -25,6 +25,7 @@ import { getJson } from "./utilities/jsonRequest";
 import { get, set } from "./utilities/storage";
 import { groupBy, delay, getRandomInt } from "./utilities/data";
 import { toString } from "./utilities/string";
+import "./DetailsImprove";
 import {
   getHtmlElement,
   getHtmlElements,
@@ -52,26 +53,6 @@ L.Icon.Default.mergeOptions({
   iconRetinaUrl: icon2x,
   iconUrl: icon,
   shadowUrl: iconShadow,
-});
-
-document.addEventListener("click", (e) => {
-  const titleElement = document.querySelector(".attribut .title");
-  if (titleElement) titleElement.remove();
-
-  for (const target of e.composedPath() as HTMLElement[]) {
-    if (target?.classList?.contains("attribut")) {
-      const titleElement = createElement("span", target.title, ["title"]);
-      titleElement.setAttribute(
-        "style",
-        `top:${target?.offsetTop + 20}px;left:${target?.offsetLeft}px;`
-      );
-      target.append(titleElement);
-
-      setTimeout(() => {
-        titleElement.remove();
-      }, 2000);
-    }
-  }
 });
 
 declare var taginfo_taglist: any;

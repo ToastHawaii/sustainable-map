@@ -1,17 +1,22 @@
-import React from "react";
 
-export function IntroContainer(props: { children: any }) {
+export function IntroContainer({
+  onClose,
+  children,
+}: {
+  onClose: () => void;
+  children: any;
+}) {
+
+  const handleCloseClick = () => {
+    onClose();
+  };
+
   return (
-    <div className="intro-container" style={{ display: "block" }}>
-      <div className="info">{props.children}</div>
-      <button
-        className="close-button"
-        onClick={() => {
-          (
-            document.querySelector(".intro-container") as HTMLElement
-          ).style.display = "none";
-        }}
-      >
+    <div
+      className="intro-container"
+    >
+      <div className="info">{children}</div>
+      <button className="close-button" onClick={handleCloseClick}>
         ×
       </button>
     </div>
