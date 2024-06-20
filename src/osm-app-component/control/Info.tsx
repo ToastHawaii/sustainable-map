@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 
-export function Info() {
+export function Info({ onClose }: { onClose: () => void }) {
   const { t } = useTranslation();
 
+  const [visible, setVisible] = useState(false);
+
+  const handleCloseClick = () => {
+    setVisible(false);
+    onClose();
+  };
+
   return (
-    <div className="info-container">
+    <div className="info-container" style={{ display: !visible ? "none" : "" }}>
       <div className="info">
         <h4></h4>
         <span className="text"></span>
@@ -26,7 +33,9 @@ export function Info() {
         </small>
         <small className="external"></small>
       </div>
-      <button className="close-button">×</button>
+      <button className="close-button" onClick={handleCloseClick}>
+        ×
+      </button>
     </div>
   );
 }

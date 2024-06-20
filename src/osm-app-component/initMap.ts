@@ -668,24 +668,7 @@ data-taginfo-taglist-options='{"with_count": true, "lang": "${t("code")}"}'>
             return false;
           });
           detailsElement.appendChild(aElement);
-          getHtmlElement(".info-container .close-button").addEventListener(
-            "click",
-            () => {
-              getHtmlElement(".info-container").style.display = "none";
-              document
-                .getElementById("filters")
-                ?.classList.remove("right-collapsed");
-
-              document.title = t("title");
-              document
-                .querySelector('meta[name="description"]')
-                ?.setAttribute("content", t("description"));
-
-              const params = getQueryParams();
-              params["info"] = "";
-              setQueryParams(params);
-            }
-          );
+        
 
           detailsElement.appendChild(contentElement);
         } else {

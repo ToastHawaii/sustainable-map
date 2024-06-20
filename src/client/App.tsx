@@ -27,9 +27,24 @@ import externalResourcesEn from "./externalResources/en.json";
 import externalResourcesDe from "./externalResources/de.json";
 import { filters } from "./filters";
 import { setMeta } from "../osm-app-component/utilities/meta";
+import {
+  getQueryParams,
+  setQueryParams,
+} from "../osm-app-component/utilities/url";
 
 export function App() {
   let { t } = useTranslation();
+
+  const handleInfoClose = () => {
+    document.getElementById("filters")?.classList.remove("right-collapsed");
+
+    document.title = t("title");
+    setMeta("description", t("description"));
+
+    const params = getQueryParams();
+    params["info"] = "";
+    setQueryParams(params);
+  };
 
   useEffect(() => {
     document.title = t("meta.title");
@@ -213,7 +228,7 @@ export function App() {
           </li>
         </ul>
       </IntroContainer>
-      <Info />
+      <Info onClose={handleInfoClose} />
     </>
   );
 }
