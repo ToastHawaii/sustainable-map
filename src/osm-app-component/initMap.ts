@@ -44,6 +44,7 @@ import icon from "leaflet/dist/images/marker-icon.png";
 import icon2x from "leaflet/dist/images/marker-icon-2x.png";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
 import { TFunction } from "i18next";
+import { setMeta } from "./utilities/meta";
 
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 
@@ -425,17 +426,13 @@ data-taginfo-taglist-options='{"with_count": true, "lang": "${t("code")}"}'>
     });
 
     getHtmlElement(".info .text", infoContainer).innerText = "";
-    document
-      .querySelector('meta[name="description"]')
-      ?.setAttribute("content", t("description"));
+    setMeta("description", t("description"));
 
     if (t("type." + f.value + ".description")) {
       getHtmlElement(".info .text", infoContainer).innerText = t(
         "type." + f.value + ".description"
       );
-      document
-        .querySelector('meta[name="description"]')
-        ?.setAttribute("content", t("type." + f.value + ".description"));
+      setMeta("description", t("type." + f.value + ".description"));
     } else {
       if (f.tags) {
         const tags = [];
@@ -476,9 +473,7 @@ data-taginfo-taglist-options='{"with_count": true, "lang": "${t("code")}"}'>
             }
           }
           getHtmlElement(".info .text", infoContainer).innerText = description;
-          document
-            .querySelector('meta[name="description"]')
-            ?.setAttribute("content", description);
+          setMeta("description", description);
         });
       }
     }
@@ -668,7 +663,6 @@ data-taginfo-taglist-options='{"with_count": true, "lang": "${t("code")}"}'>
             return false;
           });
           detailsElement.appendChild(aElement);
-        
 
           detailsElement.appendChild(contentElement);
         } else {
