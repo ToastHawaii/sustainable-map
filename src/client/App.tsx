@@ -15,12 +15,16 @@
 // You should have received a copy of the GNU Affero General Public License
 // along with Sustainable map.  If not, see <http://www.gnu.org/licenses/>.
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import { init } from "./init";
 import "./initI18next";
 import { MapContainer, TileLayer, useMap } from "react-leaflet";
-import { Menu } from "./Menu";
+import { Menu } from "../osm-app-component/control/Menu";
+import { Info } from "../osm-app-component/control/Info";
+import { Intro } from "../osm-app-component/control/Intro";
+import { Filters } from "../osm-app-component/control/Filters";
+import { Search } from "../osm-app-component/control/Search";
 
 function setMeta(name: string, value: string) {
   document
@@ -63,22 +67,7 @@ export function App() {
         />
         <Init />
         <Menu />
-        <div className="box">
-          <div className="container">
-            <form className="search">
-              <GeoButton />
-              <input
-                type="search"
-                id="osm-search"
-                placeholder={t("search.placeholder")}
-                required
-              />
-              <button className="icon" type="submit">
-                <i className="fas fa-search"></i>
-              </button>
-            </form>
-          </div>
-        </div>
+        <Search />
       </MapContainer>
       <h1>
         <a href="/">
@@ -89,86 +78,12 @@ export function App() {
           {t("meta.titleShort")}
         </a>
       </h1>
-      <div id="filters" className="right-collapsed">
-        <div className="right-collapse">
-          <i className="fas fa-list"></i>
-        </div>
-        <div className="filters-clear" style={{ display: "none" }}>
-          <i className="fas fa-times"></i>
-        </div>
-      </div>
-      <Intro />
-      <Info />
-    </>
-  );
-}
-
-function Info() {
-  const { t } = useTranslation();
-
-  return (
-    <div className="info-container">
-      <div className="info">
-        <h4></h4>
-        <span className="text"></span>
-        <hr />
-        <small>
-          <details>
-            <summary>
-              <strong>{t("info.osmTags")}</strong>
-            </summary>
-            <br />
-            <div className="wiki"></div>
-            <strong>{t("info.query")}</strong>
-            <code className="query"></code>
-            <a className="link" target="_blank">
-              {t("info.overpassTurbo")}
-            </a>
-          </details>
-        </small>
-        <small className="external"></small>
-      </div>
-      <button className="close-button">×</button>
-    </div>
-  );
-}
-
-function GeoButton() {
-  const map = useMap();
-  const [watchLocation, setWatchLocation] = useState(false);
-
-  return (
-    <button
-      className="geo"
-      type="button"
-      onClick={() => {
-        setWatchLocation(!watchLocation);
-
-        if (!watchLocation) {
-          map.locate({ setView: true, maxZoom: 16, watch: true });
-        } else {
-          map.stopLocate();
-        }
-      }}
-    >
-      <i className="far fa-dot-circle"></i>
-    </button>
-  );
-}
-
-function Intro() {
-  const { t } = useTranslation();
-
-  return (
-    <div className="intro-container" style={{ display: "block" }}>
-      <div className="info">
+      <Filters />
+      <Intro>
         <h4>{t("intro.title")}</h4>
-
         <p>{t("intro.tagline")}</p>
         <p>{t("intro.description")}</p>
-
         <p>{t("intro.legend")}</p>
-
         <ul>
           <li>
             <i className="fas fa-universal-access"></i>{" "}
@@ -246,7 +161,6 @@ function Intro() {
             </a>
           </li>
         </ul>
-
         <p>
           <Trans
             i18nKey="intro.osm"
@@ -256,7 +170,6 @@ function Intro() {
             }}
           ></Trans>
         </p>
-
         <p>
           <Trans
             i18nKey="intro.license"
@@ -268,7 +181,6 @@ function Intro() {
             }}
           ></Trans>
         </p>
-
         <div className="responsive-table">
           <table>
             <tbody>
@@ -297,7 +209,6 @@ function Intro() {
             </tbody>
           </table>
         </div>
-
         <p>
           <a href="https://hosted.weblate.org/engage/sustainable-map/">
             <img
@@ -306,9 +217,7 @@ function Intro() {
             />
           </a>
         </p>
-
         <hr />
-
         <ul>
           <li>
             <a href="https://wiki.openstreetmap.org/wiki/How_to_contribute">
@@ -324,17 +233,8 @@ function Intro() {
             </a>
           </li>
         </ul>
-      </div>
-      <button
-        className="close-button"
-        onClick={() => {
-          (
-            document.querySelector(".intro-container") as HTMLElement
-          ).style.display = "none";
-        }}
-      >
-        ×
-      </button>
-    </div>
+      </Intro>
+      <Info />
+    </>
   );
 }
