@@ -49,7 +49,8 @@ export function createOverPassLayer<M extends {}>(
   minZoom: number,
   single: boolean,
   isActive: () => boolean,
-  globalFilter?: (tags: any, group: string, value: string) => boolean
+  globalFilter?: (tags: any, group: string, value: string) => boolean,
+  afterLoad: () => void = () => {}
 ) {
   return new L.OverPassLayer({
     markerIcon: L.divIcon({
@@ -483,7 +484,7 @@ export function createOverPassLayer<M extends {}>(
         marker.bindPopup(popup);
         this._markers?.addLayer(marker);
       }
-      updateCount(map, t("emptyIndicator"), minZoom);
+      afterLoad();
     },
   });
 }

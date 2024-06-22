@@ -26,6 +26,8 @@ type Props<M> = {
   globalFilter?: (tags: any, group: any, value: any) => boolean;
   minZoom?: number;
   externalResources?: any;
+  offers: string[];
+  onAbout: () => void;
 };
 
 export function Init<M>({
@@ -35,6 +37,7 @@ export function Init<M>({
   globalFilter,
   minZoom = 14,
   externalResources = {},
+  offers,
 }: Props<M>) {
   let { t } = useTranslation();
   const map = useMap();
@@ -49,7 +52,8 @@ export function Init<M>({
         t,
         globalFilter,
         minZoom,
-        externalResources
+        externalResources,
+        offers
       );
     }
     initalized = true;
@@ -67,7 +71,11 @@ export function OsmMapContainer<M>(props: Props<M>) {
         url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Init {...props} />
-      <Menu />
+      <Menu
+        filterOptions={props.filterOptions}
+        offers={props.offers}
+        onAbout={props.onAbout}
+      />
       <Search />
     </MapContainer>
   );

@@ -36,6 +36,8 @@ export function App() {
   const { t } = useTranslation();
   const [filterCollapsed, setFilterCollapsed] = useState(true);
   const [intro, setIntro] = useState(true);
+  const [_info, setInfo] = useState(false);
+  const [offers, _setOffers] = useState([]);
 
   function reset() {
     setFilterCollapsed(false);
@@ -64,6 +66,11 @@ export function App() {
         externalResources={
           t("code") === "de" ? externalResourcesDe : externalResourcesEn
         }
+        offers={offers}
+        onAbout={() => {
+          setIntro(true);
+          setInfo(false);
+        }}
       />
       <h1>
         <a href="/">
@@ -74,7 +81,17 @@ export function App() {
           {t("meta.titleShort")}
         </a>
       </h1>
-      <Filters collapsed={filterCollapsed} />
+      <Filters
+        onOpen={() => {
+          setIntro(false);
+          setFilterCollapsed(false);
+        }}
+        onClose={() => {
+          setFilterCollapsed(true);
+        }}
+        onClear={() => {}}
+        collapsed={filterCollapsed}
+      />
       {intro ? (
         <IntroContainer
           onClose={() => {

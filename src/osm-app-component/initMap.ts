@@ -31,10 +31,9 @@ import {
   getHtmlElements,
   createElement,
 } from "./utilities/html";
-import { createOverPassLayer, isIOS, shareLink } from "./createOverPassLayer";
+import { createOverPassLayer, shareLink } from "./createOverPassLayer";
 
 import BigNumber from "bignumber.js";
-import { funding } from "./funding";
 import "leaflet/dist/leaflet.css";
 import "leaflet-overpass-layer/dist/OverPassLayer.css";
 import "./style.scss";
@@ -58,7 +57,6 @@ L.Icon.Default.mergeOptions({
 declare var taginfo_taglist: any;
 
 const layers: { [name: string]: L.Layer } = {};
-let offers: string[] = [];
 
 export async function initMap<M>(
   baseUrl: string,
@@ -80,20 +78,14 @@ export async function initMap<M>(
   t: TFunction<"translation", undefined>,
   globalFilter?: (tags: any, group: any, value: any) => boolean,
   minZoom = 14,
-  externalResources: any = {}
+  externalResources: any = {},
+  offers: string[] = []
 ) {
   getHtmlElement(".search").addEventListener("submit", (ev) => {
     ev.preventDefault();
     search();
     return false;
   });
-
-  document
-    .querySelector("#filters .right-collapse")
-    ?.addEventListener("click", () => {
-      document.getElementById("filters")?.classList.toggle("right-collapsed");
-      getHtmlElement(".info-container").style.display = "none";
-    });
 
   document
     .querySelector("#filters .filters-clear")
@@ -105,15 +97,6 @@ export async function initMap<M>(
         input.dispatchEvent(new Event("change"));
       }
     });
-
-  document.querySelector(".about")?.addEventListener("click", () => {
-    getHtmlElement(".intro-container").style.display = "block";
-    getHtmlElement(".info-container").style.display = "none";
-    getHtmlElement(".menu-group").classList.remove("collapsed");
-  });
-
-  (getHtmlElement(".donate") as HTMLLinkElement).href =
-    t("code") === "de" ? funding.de : funding.en;
 
   const shareButton = getHtmlElement(".share");
   shareButton.addEventListener("click", (e) => {
@@ -139,30 +122,6 @@ export async function initMap<M>(
     );
   });
 
-  getHtmlElements(".edit").forEach((e) =>
-    e.addEventListener("click", function () {
-      const latlng = map.getCenter();
-      const zoom = map.getZoom();
-
-      let presets = "";
-      for (const o of offers) {
-        const p = filterOptions
-          .filter((f) => `${f.group}/${f.value}` === o)
-          .map((o) => o.edit.map((t) => t.replace(/=/gi, "/")).join(","))
-          .filter((o) => o)
-          .join(",");
-        presets += (presets && p ? "," : "") + p;
-      }
-
-      if (isIOS())
-        window.location.href = `https://gomaposm.com/edit?center=${latlng.lat},${latlng.lng}&zoom=${zoom}`;
-      else
-        window.location.href = `https://www.openstreetmap.org/edit#editor=id&map=${zoom}/${
-          latlng.lat
-        }/${latlng.lng}${presets ? `&presets=${presets}` : ``}`;
-    })
-  );
-
   type State = { lat: number; lng: number; zoom: number };
 
   const state = get<State>("position") || {
@@ -178,7 +137,7 @@ export async function initMap<M>(
   let currentAccuracy: L.Layer | L.Circle<any>;
 
   map.on("moveend zoomend", () => {
-    updateCount(map, t("emptyIndicator"), minZoom);
+    updateCount(map, t("emptyIndicator"), minZoom, offers);
     const center = map.getCenter();
     const state = { lat: center.lat, lng: center.lng, zoom: map.getZoom() };
     set<State>("position", state);
@@ -329,7 +288,8 @@ export async function initMap<M>(
                 f.color,
                 minZoom,
                 single,
-                globalFilter
+                globalFilter,
+                offers
               );
 
               (
@@ -354,7 +314,8 @@ export async function initMap<M>(
           f.color,
           minZoom,
           single,
-          globalFilter
+          globalFilter,
+          offers
         );
     }
 
@@ -681,7 +642,8 @@ data-taginfo-taglist-options='{"with_count": true, "lang": "${t("code")}"}'>
                 f.color,
                 minZoom,
                 filterOptions.length <= 1,
-                globalFilter
+                globalFilter,
+                offers
               );
             } else {
               const index = offers.indexOf(k + "/" + f.value);
@@ -698,7 +660,7 @@ data-taginfo-taglist-options='{"with_count": true, "lang": "${t("code")}"}'>
               params["offers"] = offers.toString();
             setQueryParams(params);
 
-            updateCount(map, t("emptyIndicator"), minZoom);
+            updateCount(map, t("emptyIndicator"), minZoom, offers);
 
             const filter = document.querySelector<HTMLElement>(
               "#filters .filters-clear"
@@ -763,7 +725,8 @@ function init<M>(
   color: string,
   minZoom: number,
   single: boolean,
-  globalFilter?: (tags: any, group: any, value: any) => boolean
+  globalFilter?: (tags: any, group: any, value: any) => boolean,
+  offers: string[] = []
 ) {
   layers[group + "/" + value] = createOverPassLayer(
     group,
@@ -783,7 +746,10 @@ function init<M>(
       if (filterElement) return filterElement.checked;
       else return true;
     },
-    globalFilter
+    globalFilter,
+    () => {
+      updateCount(map, t("emptyIndicator"), minZoom, offers);
+    }
   );
   map.addLayer(layers[group + "/" + value]);
 }
@@ -822,7 +788,8 @@ let emptyIndicatorElement: HTMLDivElement | undefined;
 export function updateCount(
   map: L.Map,
   emptyIndicator: string,
-  minZoom: number
+  minZoom: number,
+  offers: string[]
 ) {
   const visible =
     countMarkersInView(map) === 0 &&

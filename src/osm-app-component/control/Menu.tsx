@@ -1,10 +1,55 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useMap } from "react-leaflet";
+import { isIOS } from "../createOverPassLayer";
+import { funding } from "../funding";
 
-export function Menu() {
+export function Menu({
+  filterOptions,
+  offers,
+  onAbout,
+}: {
+  filterOptions: {
+    id: number;
+    group: string;
+    subgroup?: string;
+    order?: number;
+    value: string;
+    icon: string;
+    button?: string;
+    query: string;
+    color: string;
+    edit: string[];
+    tags: string[];
+  }[];
+  offers: string[];
+  onAbout: () => void;
+}) {
   const { t } = useTranslation();
   const [collapsed, setCollapsed] = useState(true);
+  const map = useMap();
+
+  function handleEdit() {
+    const latlng = map.getCenter();
+    const zoom = map.getZoom();
+
+    let presets = "";
+    for (const o of offers) {
+      const p = filterOptions
+        .filter((f) => `${f.group}/${f.value}` === o)
+        .map((o) => o.edit.map((t) => t.replace(/=/gi, "/")).join(","))
+        .filter((o) => o)
+        .join(",");
+      presets += (presets && p ? "," : "") + p;
+    }
+
+    if (isIOS())
+      window.location.href = `https://gomaposm.com/edit?center=${latlng.lat},${latlng.lng}&zoom=${zoom}`;
+    else
+      window.location.href = `https://www.openstreetmap.org/edit#editor=id&map=${zoom}/${
+        latlng.lat
+      }/${latlng.lng}${presets ? `&presets=${presets}` : ``}`;
+  }
 
   return (
     <>
@@ -14,6 +59,7 @@ export function Menu() {
           className="menu edit help-text"
           type="button"
           title={t("menu.edit")}
+          onClick={handleEdit}
         >
           <i className="fas fa-pencil-alt"></i>
         </button>
@@ -25,13 +71,21 @@ export function Menu() {
           <i className="fas fa-share-alt"></i>
         </button>
         <ThemeButton />
-        <button className="menu about help-text" title={t("menu.about")}>
+        <button
+          className="menu about help-text"
+          title={t("menu.about")}
+          onClick={() => {
+            setCollapsed(true);
+            onAbout();
+          }}
+        >
           <i className="fas fa-info"></i>
         </button>
         <a
           className="menu donate help-text"
           target="_blank"
           title={t("menu.donate")}
+          href={t("code") === "de" ? funding.de : funding.en}
         >
           <i className="fas fa-mug-hot"></i>
         </a>
