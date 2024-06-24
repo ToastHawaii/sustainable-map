@@ -500,6 +500,18 @@ a.menu {
   max-width: calc(100% - 268px);
 }
 
+.external-link {
+  &::after {
+    content: ",";
+  }
+}
+
+.external-link:last-child {
+  &::after {
+    content: " ";
+  }
+}
+
 .external {
   display: block;
 }
@@ -536,7 +548,10 @@ a.menu {
     padding: 5px;
     border-radius: 5px;
     border: 2px solid #ccc;
-    word-break: break-all;
+
+    word-break: keep-all;
+    white-space: pre;
+    overflow-x: auto;
   }
 }
 

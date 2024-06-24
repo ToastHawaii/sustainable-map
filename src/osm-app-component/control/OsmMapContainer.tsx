@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import { MapContainer, TileLayer, useMap } from "react-leaflet";
+import { Map } from "leaflet";
 import { Menu } from "./Menu";
 import { Search } from "./Search";
 import { Attribute } from "../Generator";
 import { initMap } from "../initMap";
 import { useTranslation } from "react-i18next";
+import { Filter } from "./Filters";
 
 let initalized = false;
 type Props<M> = {
@@ -23,14 +25,17 @@ type Props<M> = {
     tags: string[];
   }[];
   attributes: Attribute<M>[];
+  info: Filter | undefined;
   globalFilter?: (tags: any, group: any, value: any) => boolean;
   minZoom?: number;
   externalResources?: any;
   offers: string[];
   onAbout: () => void;
+  onLoaded: (map: Map) => void;
 };
 
 export function Init<M>({
+  onLoaded,
   baseUrl,
   filterOptions,
   attributes,
@@ -43,7 +48,8 @@ export function Init<M>({
   const map = useMap();
 
   useEffect(() => {
-    if (initalized) {
+    if (!initalized) {
+      onLoaded(map);
       initMap(
         baseUrl,
         filterOptions,

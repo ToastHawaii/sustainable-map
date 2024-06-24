@@ -18,26 +18,28 @@
 import React, { useEffect, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
 import "./initI18next";
-import { Info } from "../osm-app-component/control/Info";
 import { IntroContainer } from "../osm-app-component/control/IntroContainer";
-import { Filters } from "../osm-app-component/control/Filters";
+import { Filter, Filters } from "../osm-app-component/control/Filters";
 import { OsmMapContainer } from "../osm-app-component/control/OsmMapContainer";
 import { attributes } from "./attributes";
 import externalResourcesEn from "./externalResources/en.json";
 import externalResourcesDe from "./externalResources/de.json";
 import { filters } from "./filters";
 import { setMeta } from "../osm-app-component/utilities/meta";
+import { Map } from "leaflet";
 import {
   getQueryParams,
   setQueryParams,
 } from "../osm-app-component/utilities/url";
+import { Info } from "../osm-app-component/control/Info";
 
 export function App() {
   const { t } = useTranslation();
   const [filterCollapsed, setFilterCollapsed] = useState(true);
+  const [info, setInfo] = useState<Filter | undefined>(undefined);
   const [intro, setIntro] = useState(true);
-  const [_info, setInfo] = useState(false);
-  const [offers, _setOffers] = useState([]);
+  const [offers, setOffers] = useState<string[]>([]);
+  const [map, setMap] = useState<Map | undefined>(undefined);
 
   function reset() {
     setFilterCollapsed(false);
@@ -60,6 +62,9 @@ export function App() {
   return (
     <>
       <OsmMapContainer
+        onLoaded={(map) => {
+          setMap(map);
+        }}
         baseUrl="https://sustainable.zottelig.ch"
         filterOptions={filters}
         attributes={attributes}
@@ -67,9 +72,10 @@ export function App() {
           t("code") === "de" ? externalResourcesDe : externalResourcesEn
         }
         offers={offers}
+        info={info}
         onAbout={() => {
           setIntro(true);
-          setInfo(false);
+          setInfo(undefined);
         }}
       />
       <h1>
@@ -81,17 +87,34 @@ export function App() {
           {t("meta.titleShort")}
         </a>
       </h1>
-      <Filters
-        onOpen={() => {
-          setIntro(false);
-          setFilterCollapsed(false);
-        }}
-        onClose={() => {
-          setFilterCollapsed(true);
-        }}
-        onClear={() => {}}
-        collapsed={filterCollapsed}
-      />
+      {filters.length >= 1 ? (
+        <Filters
+          onOpen={() => {
+            setIntro(false);
+            setFilterCollapsed(false);
+          }}
+          onClose={() => {
+            setFilterCollapsed(true);
+          }}
+          onClear={() => {
+            setOffers([]);
+          }}
+          collapsed={filterCollapsed}
+          filterOptions={filters}
+          offers={offers}
+          onActivate={(f) => {
+            setOffers([...new Set([...offers, f.group + "/" + f.value])]);
+          }}
+          onDeactivate={(f) => {
+            setOffers(offers.filter((o) => o !== f.group + "/" + f.value));
+          }}
+          onInfo={(f) => {
+            setOffers([...new Set([...offers, f.group + "/" + f.value])]);
+            setInfo(f);
+          }}
+        />
+      ) : null}
+
       {intro ? (
         <IntroContainer
           onClose={() => {
@@ -254,11 +277,20 @@ export function App() {
           </ul>
         </IntroContainer>
       ) : null}
-      <Info
-        onClose={() => {
-          reset();
-        }}
-      />
+
+      {info ? (
+        <Info
+          map={map}
+          onClose={() => {
+            setInfo(undefined);
+            reset();
+          }}
+          filter={info}
+          externalResources={
+            t("code") === "de" ? externalResourcesDe : externalResourcesEn
+          }
+        />
+      ) : null}
     </>
   );
 }
