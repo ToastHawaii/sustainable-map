@@ -68,9 +68,6 @@ export function App() {
         baseUrl="https://sustainable.zottelig.ch"
         filterOptions={filters}
         attributes={attributes}
-        externalResources={
-          t("code") === "de" ? externalResourcesDe : externalResourcesEn
-        }
         offers={offers}
         info={info}
         onAbout={() => {

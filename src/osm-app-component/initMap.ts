@@ -54,7 +54,6 @@ L.Icon.Default.mergeOptions({
   shadowUrl: iconShadow,
 });
 
-declare var taginfo_taglist: any;
 
 const layers: { [name: string]: L.Layer } = {};
 
@@ -78,7 +77,6 @@ export async function initMap<M>(
   t: TFunction<"translation", undefined>,
   globalFilter?: (tags: any, group: any, value: any) => boolean,
   minZoom = 14,
-  externalResources: any = {},
   offers: string[] = []
 ) {
   getHtmlElement(".search").addEventListener("submit", (ev) => {
@@ -86,17 +84,6 @@ export async function initMap<M>(
     search();
     return false;
   });
-
-  document
-    .querySelector("#filters .filters-clear")
-    ?.addEventListener("click", () => {
-      const inputs = getHtmlElements("#filters input");
-
-      for (const input of inputs.filter((i: any) => i.checked)) {
-        (input as any).checked = false;
-        input.dispatchEvent(new Event("change"));
-      }
-    });
 
   const shareButton = getHtmlElement(".share");
   shareButton.addEventListener("click", (e) => {
@@ -298,8 +285,8 @@ export async function initMap<M>(
                 ) as HTMLInputElement
               ).checked = true;
 
-              if (params["info"] === f.group + "/" + f.value)
-                showInfoContainer(f);
+              // if (params["info"] === f.group + "/" + f.value)
+              //  showInfoContainer(f);
             }
     } else {
       for (const f of filterOptions)
@@ -326,145 +313,6 @@ export async function initMap<M>(
         [bounds[0], bounds[1]],
         [bounds[2], bounds[3]],
       ]);
-    }
-  }
-
-  function showInfoContainer(f: { value: string; query: string; tags: any[] }) {
-    document.title = `${t("type." + f.value + ".name")} - ${t("title")}`;
-
-    getHtmlElement(".intro-container").style.display = "none";
-    const infoContainer = getHtmlElement(".info-container");
-
-    infoContainer.style.display = "block";
-    getHtmlElement(".info h4", infoContainer).innerText = t(
-      "type." + f.value + ".name"
-    );
-    (
-      getHtmlElement(".info .link", infoContainer) as HTMLAnchorElement
-    ).href = `https://overpass-turbo.eu/?Q=${encodeURI(
-      `[out:json][timeout:30][bbox:{{bbox}}];
-(
-${overpassSubs(f.query).trim()}
-);
-out center;`
-    )}`;
-    getHtmlElement(".info .query", infoContainer).innerText = overpassSubs(
-      f.query
-    ).trim();
-
-    const wikiElement = getHtmlElement(".info .wiki", infoContainer);
-
-    wikiElement.innerHTML = `<div class="taglist"
-data-taginfo-taglist-tags="${f.tags.join()}"
-data-taginfo-taglist-options='{"with_count": true, "lang": "${t("code")}"}'>
-</div>`;
-    let first = true;
-
-    getHtmlElement("summary", infoContainer).addEventListener("click", () => {
-      if (first) {
-        taginfo_taglist.convert_to_taglist(".taglist");
-        first = false;
-      }
-    });
-
-    getHtmlElement(".info .text", infoContainer).innerText = "";
-    setMeta("description", t("description"));
-
-    if (t("type." + f.value + ".description")) {
-      getHtmlElement(".info .text", infoContainer).innerText = t(
-        "type." + f.value + ".description"
-      );
-      setMeta("description", t("type." + f.value + ".description"));
-    } else {
-      if (f.tags) {
-        const tags = [];
-        const keys = [];
-
-        for (const t of f.tags) {
-          if (/=/gi.test(t)) {
-            tags.push(`Tag:${t}`);
-            keys.push(`Key:${t.split(/=/gi)[0]}`);
-          } else keys.push("Key:" + t);
-        }
-        getJson("https://wiki.openstreetmap.org/w/api.php", {
-          format: "json",
-          action: "wbgetentities",
-          languages: t("code"),
-          languagefallback: "0",
-          props: "descriptions",
-          origin: "*",
-          sites: "wiki",
-          titles: [tags.join("|"), keys.join("|")].filter((t) => t).join("|"),
-        }).then((r) => {
-          if (r && r.error) return;
-
-          let description = "";
-          for (const prop in r.entities) {
-            if (!r.entities.hasOwnProperty(prop)) continue;
-
-            const entity = r.entities[prop];
-
-            if (
-              entity.descriptions &&
-              Object.keys(entity.descriptions).length > 0
-            ) {
-              description =
-                entity.descriptions[Object.keys(entity.descriptions)[0]].value;
-
-              break;
-            }
-          }
-          getHtmlElement(".info .text", infoContainer).innerText = description;
-          setMeta("description", description);
-        });
-      }
-    }
-
-    getHtmlElement(".info .external", infoContainer).innerText = "";
-
-    if (externalResources[f.value] && externalResources[f.value].length > 0) {
-      const links = [];
-      for (const external of externalResources[f.value]) {
-        links.push(
-          `<a class="external-link${
-            external.bounds ? " part-area-visible" : ""
-          }" href="${external.url}" target="_blank"${
-            external.bounds
-              ? ` part-area-visible="${external.bounds.join(",")}"`
-              : ""
-          } href="${external.url}">${external.name}</a>`
-        );
-      }
-
-      getHtmlElement(
-        ".info .external",
-        infoContainer
-      ).innerHTML = `<br/><span class="external-label">${t(
-        "externalResources"
-      )}: </span>${links.join(`<span class="external-separator">, </span>`)}`;
-    }
-
-    for (const a of getHtmlElements(".external-link")) {
-      a.addEventListener("click", () => {
-        const latlng = map.getCenter();
-        const zoom = map.getZoom();
-        const bounds = map.getBounds();
-
-        window.open(
-          (a as HTMLAnchorElement).href
-            .replace(/\{lat\}/i, latlng.lat + "")
-            .replace(/\{lng\}/i, latlng.lng + "")
-            .replace(/\{zoom\}/i, zoom + "")
-            .replace(
-              /\{bbox\}/i,
-              `${bounds.getNorthWest().lat},${bounds.getNorthWest().lng},${
-                bounds.getSouthEast().lat
-              },${bounds.getSouthEast().lng}`
-            ),
-          "_blank"
-        );
-        return false;
-      });
     }
   }
 
@@ -529,8 +377,6 @@ data-taginfo-taglist-options='{"with_count": true, "lang": "${t("code")}"}'>
   }
   const style = createElement("style", iconColors);
   document.head.appendChild(style);
-
-
 
   setInterval(async () => {
     if (!document.getElementsByTagName("html")[0].classList.contains("help"))

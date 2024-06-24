@@ -28,7 +28,6 @@ type Props<M> = {
   info: Filter | undefined;
   globalFilter?: (tags: any, group: any, value: any) => boolean;
   minZoom?: number;
-  externalResources?: any;
   offers: string[];
   onAbout: () => void;
   onLoaded: (map: Map) => void;
@@ -41,7 +40,6 @@ export function Init<M>({
   attributes,
   globalFilter,
   minZoom = 14,
-  externalResources = {},
   offers,
 }: Props<M>) {
   let { t } = useTranslation();
@@ -58,7 +56,6 @@ export function Init<M>({
         t,
         globalFilter,
         minZoom,
-        externalResources,
         offers
       );
     }
