@@ -76,6 +76,7 @@ export function App() {
         onAbout={() => {
           setIntro(true);
           setInfo(undefined);
+          setFilterCollapsed(true);
         }}
       />
       <h1>
