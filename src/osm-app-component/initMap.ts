@@ -44,7 +44,6 @@ import icon from "leaflet/dist/images/marker-icon.png";
 import icon2x from "leaflet/dist/images/marker-icon-2x.png";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
 import { TFunction } from "i18next";
-import { setMeta } from "./utilities/meta";
 
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 
@@ -54,11 +53,9 @@ L.Icon.Default.mergeOptions({
   shadowUrl: iconShadow,
 });
 
-
 const layers: { [name: string]: L.Layer } = {};
 
 export async function initMap<M>(
-  baseUrl: string,
   filterOptions: {
     id: number;
     group: string;

@@ -32,6 +32,8 @@ import {
   setQueryParams,
 } from "../osm-app-component/utilities/url";
 import { Info } from "../osm-app-component/control/Info";
+import { createOverPassLayer } from "../osm-app-component/createOverPassLayer";
+import { updateCount } from "../osm-app-component/initMap";
 
 export function App() {
   const { t } = useTranslation();
@@ -47,9 +49,9 @@ export function App() {
     document.title = t("title");
     setMeta("description", t("description"));
 
-    const params = getQueryParams();
-    params["info"] = "";
-    setQueryParams(params);
+    // const params = getQueryParams();
+    // params["info"] = "";
+    // setQueryParams(params);
   }
 
   useEffect(() => {
@@ -65,7 +67,6 @@ export function App() {
         onLoaded={(map) => {
           setMap(map);
         }}
-        baseUrl="https://sustainable.zottelig.ch"
         filterOptions={filters}
         attributes={attributes}
         offers={offers}
@@ -100,8 +101,32 @@ export function App() {
           collapsed={filterCollapsed}
           filterOptions={filters}
           offers={offers}
-          onActivate={(f) => {
-            setOffers([...new Set([...offers, f.group + "/" + f.value])]);
+          onActivate={(filter) => {
+            if (!map) return;
+            const layer = createOverPassLayer(
+              filter.group,
+              filter.value,
+              filter.icon,
+              filter.query,
+              attributes as any,
+              map,
+              t,
+              filter.color,
+              14,
+              filters.length <= 1,
+              () => {
+                return offers.includes(filter.group + "/" + filter.value);
+              },
+              undefined,
+              () => {
+                updateCount(map, t("emptyIndicator"), 14, offers);
+              }
+            );
+            map.addLayer(layer);
+
+            setOffers([
+              ...new Set([...offers, filter.group + "/" + filter.value]),
+            ]);
           }}
           onDeactivate={(f) => {
             setOffers(offers.filter((o) => o !== f.group + "/" + f.value));

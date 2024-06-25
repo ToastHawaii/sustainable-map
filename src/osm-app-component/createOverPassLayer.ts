@@ -22,7 +22,7 @@ import { isImage } from "./utilities/image";
 import { toTitle, toLevel, toOpenOrClose, toSeasonal } from "./view";
 import { getJson } from "./utilities/jsonRequest";
 import { getHtmlElement, createElement } from "./utilities/html";
-import { parseOpeningHours, overpassSubs, updateCount } from "./initMap";
+import { parseOpeningHours, overpassSubs } from "./initMap";
 import * as L from "leaflet";
 import {
   extractName,

@@ -4,13 +4,13 @@ import { Map } from "leaflet";
 import { Menu } from "./Menu";
 import { Search } from "./Search";
 import { Attribute } from "../Generator";
-import { initMap } from "../initMap";
+import { initMap, updateCount } from "../initMap";
 import { useTranslation } from "react-i18next";
 import { Filter } from "./Filters";
+import { createOverPassLayer } from "../createOverPassLayer";
 
 let initalized = false;
 type Props<M> = {
-  baseUrl: string;
   filterOptions: {
     id: number;
     group: string;
@@ -35,7 +35,6 @@ type Props<M> = {
 
 export function Init<M>({
   onLoaded,
-  baseUrl,
   filterOptions,
   attributes,
   globalFilter,
@@ -49,7 +48,6 @@ export function Init<M>({
     if (!initalized) {
       onLoaded(map);
       initMap(
-        baseUrl,
         filterOptions,
         attributes,
         map,
@@ -61,6 +59,35 @@ export function Init<M>({
     }
     initalized = true;
   });
+
+  // useEffect(() => {
+  //   for (const offer of offers)
+  //     for (const filter of filterOptions)
+  //       if (filter.group + "/" + filter.value === offer) {
+  //         const layer = createOverPassLayer(
+  //           filter.group,
+  //           filter.value,
+  //           filter.icon,
+  //           filter.query,
+  //           attributes as any,
+  //           map,
+  //           t,
+  //           filter.color,
+  //           minZoom,
+  //           filterOptions.length <= 1,
+  //           () => {
+  //             return offer.includes(filter.group + "/" + filter.value);
+  //           },
+  //           globalFilter,
+  //           () => {
+  //             updateCount(map, t("emptyIndicator"), minZoom, offers);
+  //           }
+  //         );
+  //         map.addLayer(layer);
+  //       }
+
+  //   return () => {};
+  // }, [attributes, filterOptions, globalFilter, map, minZoom, offers, t]);
 
   return null;
 }
