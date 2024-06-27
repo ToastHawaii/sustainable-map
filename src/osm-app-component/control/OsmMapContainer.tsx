@@ -27,7 +27,7 @@ type Props<M> = {
   attributes: Attribute<M>[];
   info: Filter | undefined;
   globalFilter?: (tags: any, group: any, value: any) => boolean;
-  minZoom?: number;
+  minZoom: number;
   offers: string[];
   onAbout: () => void;
   onLoaded: (map: Map) => void;
@@ -38,56 +38,66 @@ export function Init<M>({
   filterOptions,
   attributes,
   globalFilter,
-  minZoom = 14,
+  minZoom,
   offers,
 }: Props<M>) {
-  let { t } = useTranslation();
+  const { t } = useTranslation();
   const map = useMap();
 
   useEffect(() => {
     if (!initalized) {
       onLoaded(map);
-      initMap(
-        filterOptions,
-        attributes,
-        map,
-        t,
-        globalFilter,
-        minZoom,
-        offers
-      );
+      initMap(filterOptions, attributes, map, t, globalFilter, minZoom, offers);
     }
     initalized = true;
   });
 
-  // useEffect(() => {
-  //   for (const offer of offers)
-  //     for (const filter of filterOptions)
-  //       if (filter.group + "/" + filter.value === offer) {
-  //         const layer = createOverPassLayer(
-  //           filter.group,
-  //           filter.value,
-  //           filter.icon,
-  //           filter.query,
-  //           attributes as any,
-  //           map,
-  //           t,
-  //           filter.color,
-  //           minZoom,
-  //           filterOptions.length <= 1,
-  //           () => {
-  //             return offer.includes(filter.group + "/" + filter.value);
-  //           },
-  //           globalFilter,
-  //           () => {
-  //             updateCount(map, t("emptyIndicator"), minZoom, offers);
-  //           }
-  //         );
-  //         map.addLayer(layer);
-  //       }
+  return null;
+}
 
-  //   return () => {};
-  // }, [attributes, filterOptions, globalFilter, map, minZoom, offers, t]);
+function OverPassLayer<M>({
+  filter,
+  attributes,
+  minZoom,
+  single,
+  isActive,
+  globalFilter,
+  afterLoad = () => {},
+}: {
+  filter: Filter;
+  attributes: Attribute<M>[];
+  minZoom: number;
+  single: boolean;
+  isActive: () => boolean;
+  globalFilter?: (tags: any, group: string, value: string) => boolean;
+  afterLoad?: () => void;
+}) {
+  const { t } = useTranslation();
+  const map = useMap();
+
+  useEffect(() => {
+    let removed = false;
+    const layer = createOverPassLayer(
+      filter.group,
+      filter.value,
+      filter.icon,
+      filter.query,
+      attributes as any,
+      t,
+      filter.color,
+      minZoom,
+      single,
+      () => !removed && isActive(),
+      globalFilter,
+      afterLoad
+    );
+    map.addLayer(layer);
+
+    return () => {
+      removed = true;
+      map.removeLayer(layer);
+    };
+  });
 
   return null;
 }
@@ -101,6 +111,34 @@ export function OsmMapContainer<M>(props: Props<M>) {
         url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Init {...props} />
+      {props.offers.map((offer) => {
+        const filter = props.filterOptions.filter(
+          (f) => f.group + "/" + f.value === offer
+        )[0];
+        if (!filter) throw new Error("Unexpected undefined: filter");
+
+        return (
+          <OverPassLayer
+            key={offer}
+            filter={filter}
+            attributes={props.attributes}
+            minZoom={props.minZoom}
+            single={props.filterOptions.length <= 1}
+            isActive={() => {
+              return offer.includes(filter.group + "/" + filter.value);
+            }}
+            globalFilter={props.globalFilter}
+            afterLoad={() => {
+              // updateCount(
+              //   map,
+              //   t("emptyIndicator"),
+              //   props.minZoom,
+              //   props.offers
+              // );
+            }}
+          ></OverPassLayer>
+        );
+      })}
       <Menu
         filterOptions={props.filterOptions}
         offers={props.offers}

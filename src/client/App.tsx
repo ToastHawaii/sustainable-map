@@ -76,6 +76,7 @@ export function App() {
           setInfo(undefined);
           setFilterCollapsed(true);
         }}
+        minZoom={14}
       />
       <h1>
         <a href="/">
@@ -102,28 +103,6 @@ export function App() {
           filterOptions={filters}
           offers={offers}
           onActivate={(filter) => {
-            if (!map) return;
-            const layer = createOverPassLayer(
-              filter.group,
-              filter.value,
-              filter.icon,
-              filter.query,
-              attributes as any,
-              map,
-              t,
-              filter.color,
-              14,
-              filters.length <= 1,
-              () => {
-                return offers.includes(filter.group + "/" + filter.value);
-              },
-              undefined,
-              () => {
-                updateCount(map, t("emptyIndicator"), 14, offers);
-              }
-            );
-            map.addLayer(layer);
-
             setOffers([
               ...new Set([...offers, filter.group + "/" + filter.value]),
             ]);

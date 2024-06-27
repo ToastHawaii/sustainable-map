@@ -43,7 +43,6 @@ export function createOverPassLayer<M extends {}>(
   icon: string,
   query: string,
   attributes: Attribute<M>[],
-  map: L.Map,
   t: TFunction<"translation", undefined>,
   color: string,
   minZoom: number,
@@ -85,14 +84,14 @@ export function createOverPassLayer<M extends {}>(
         let pos: L.LatLng;
         let marker;
 
-        if (!e.tags) throw "Unexpected undefined";
+        if (!e.tags) throw "Unexpected undefined: e.tags";
         const tags = e.tags;
         if (globalFilter && globalFilter(tags, group, value)) continue;
         if (e.type === "node") {
           pos = L.latLng(e.lat, e.lon);
         } else {
           if (!(e.center && e.center.lat && e.center.lon))
-            throw "Unexpected undefined";
+            throw "Unexpected undefined: e.center";
           pos = L.latLng(e.center.lat, e.center.lon);
         }
         if (this.options.markerIcon) {

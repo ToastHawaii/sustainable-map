@@ -246,82 +246,82 @@ export async function initMap<M>(
     });
   }
 
-  function hashchange(single: boolean) {
-    const params = getQueryParams();
+  // function hashchange(single: boolean) {
+  //   const params = getQueryParams();
 
-    if (!single) {
-      let offersParams: string[] = [];
+  //   if (!single) {
+  //     let offersParams: string[] = [];
 
-      if (params["offers"]) offersParams = params["offers"].split(",");
-      else if (params["o"])
-        offersParams = offersfromShort(params["o"], filterOptions);
+  //     if (params["offers"]) offersParams = params["offers"].split(",");
+  //     else if (params["o"])
+  //       offersParams = offersfromShort(params["o"], filterOptions);
 
-      for (const o of offersParams)
-        if (offers.indexOf(o) === -1)
-          for (const f of filterOptions)
-            if (f.group + "/" + f.value === o) {
-              offers.push(f.group + "/" + f.value);
-              init(
-                f.group,
-                f.value,
-                f.icon,
-                f.query,
-                attributes,
-                map,
-                t,
-                f.color,
-                minZoom,
-                single,
-                globalFilter,
-                offers
-              );
+  //     for (const o of offersParams)
+  //       if (offers.indexOf(o) === -1)
+  //         for (const f of filterOptions)
+  //           if (f.group + "/" + f.value === o) {
+  //             offers.push(f.group + "/" + f.value);
+  //             init(
+  //               f.group,
+  //               f.value,
+  //               f.icon,
+  //               f.query,
+  //               attributes,
+  //               map,
+  //               t,
+  //               f.color,
+  //               minZoom,
+  //               single,
+  //               globalFilter,
+  //               offers
+  //             );
 
-              (
-                getHtmlElement(
-                  `#filters input[value='${f.group + "/" + f.value}']`
-                ) as HTMLInputElement
-              ).checked = true;
+  //             (
+  //               getHtmlElement(
+  //                 `#filters input[value='${f.group + "/" + f.value}']`
+  //               ) as HTMLInputElement
+  //             ).checked = true;
 
-              // if (params["info"] === f.group + "/" + f.value)
-              //  showInfoContainer(f);
-            }
-    } else {
-      for (const f of filterOptions)
-        init(
-          f.group,
-          f.value,
-          f.icon,
-          f.query,
-          attributes,
-          map,
-          t,
-          f.color,
-          minZoom,
-          single,
-          globalFilter,
-          offers
-        );
-    }
+  //             // if (params["info"] === f.group + "/" + f.value)
+  //             //  showInfoContainer(f);
+  //           }
+  //   } else {
+  //     for (const f of filterOptions)
+  //       init(
+  //         f.group,
+  //         f.value,
+  //         f.icon,
+  //         f.query,
+  //         attributes,
+  //         map,
+  //         t,
+  //         f.color,
+  //         minZoom,
+  //         single,
+  //         globalFilter,
+  //         offers
+  //       );
+  //   }
 
-    if (params["location"]) search(params["location"]);
-    else if (params["b"]) {
-      const bounds = params["b"].split(",").map((b) => parseFloat(b));
-      map.fitBounds([
-        [bounds[0], bounds[1]],
-        [bounds[2], bounds[3]],
-      ]);
-    }
-  }
+  //   if (params["location"]) search(params["location"]);
+  //   else if (params["b"]) {
+  //     const bounds = params["b"].split(",").map((b) => parseFloat(b));
+  //     map.fitBounds([
+  //       [bounds[0], bounds[1]],
+  //       [bounds[2], bounds[3]],
+  //     ]);
+  //   }
+  // }
 
-  window.addEventListener("hashchange", () => {
-    hashchange(filterOptions.length <= 1);
-  });
+  // window.addEventListener("hashchange", () => {
+  //   hashchange(filterOptions.length <= 1);
+  // });
 
-  setTimeout(() => {
-    if (filterOptions.length > 1) offers = [];
-    else offers = filterOptions.map((f) => `${f.group}/${f.value}`);
-    hashchange(filterOptions.length <= 1);
-  }, 0);
+  // setTimeout(() => {
+  //   if (filterOptions.length > 1) offers = [];
+  //   else offers = filterOptions.map((f) => `${f.group}/${f.value}`);
+  //   hashchange(filterOptions.length <= 1);
+  // }, 0);
 
   const params = getQueryParams();
 
@@ -401,46 +401,6 @@ export async function initMap<M>(
 
     marker.style.animation = "";
   }, 2000);
-}
-
-function init<M>(
-  group: string,
-  value: string,
-  icon: string,
-  query: string,
-  attributes: Attribute<M>[],
-  map: L.Map,
-  t: TFunction<"translation", undefined>,
-  color: string,
-  minZoom: number,
-  single: boolean,
-  globalFilter?: (tags: any, group: any, value: any) => boolean,
-  offers: string[] = []
-) {
-  layers[group + "/" + value] = createOverPassLayer(
-    group,
-    value,
-    icon,
-    query,
-    attributes as any,
-    map,
-    t,
-    color,
-    minZoom,
-    single,
-    () => {
-      const filterElement = document.querySelector(
-        `#filters input[value='${group + "/" + value}']`
-      ) as HTMLInputElement;
-      if (filterElement) return filterElement.checked;
-      else return true;
-    },
-    globalFilter,
-    () => {
-      updateCount(map, t("emptyIndicator"), minZoom, offers);
-    }
-  );
-  map.addLayer(layers[group + "/" + value]);
 }
 
 export function overpassSubs(query: string) {
