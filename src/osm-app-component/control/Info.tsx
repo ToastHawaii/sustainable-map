@@ -147,9 +147,7 @@ out center;`
           externalResources[filter.value].length > 0 ? (
             <>
               <br />
-              <span className="external-label">
-                {t("externalResources")}:{" "}
-              </span>{" "}
+              <span className="external-label">{t("externalResources")}: </span>
               {externalResources[filter.value].map((external: any) => {
                 return (
                   <React.Fragment key={external.name}>
@@ -181,7 +179,7 @@ out center;`
                           "_blank"
                         );
                         return false;
-                      }}
+                      }} rel="noreferrer"
                     >
                       {external.name}
                     </a>{" "}

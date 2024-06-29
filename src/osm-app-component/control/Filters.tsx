@@ -169,17 +169,6 @@ export function Filters({
   //           params["offers"] = offers.toString();
   //         setQueryParams(params);
 
-  //         updateCount(map, t("emptyIndicator"), minZoom, offers);
-
-  //         const filter = document.querySelector<HTMLElement>(
-  //           "#filters .filters-clear"
-  //         );
-  //         if (filter)
-  //           if (offers.length >= 1) {
-  //             filter.style.display = "";
-  //           } else {
-  //             filter.style.display = "none";
-  //           }
   //       }
   //     );
   //   }

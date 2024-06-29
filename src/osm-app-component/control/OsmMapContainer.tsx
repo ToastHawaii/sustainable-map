@@ -1,13 +1,19 @@
-import React, { useEffect } from "react";
-import { MapContainer, TileLayer, useMap } from "react-leaflet";
+import React, { useEffect, useState } from "react";
+import {
+  MapContainer,
+  TileLayer,
+  useMap,
+  useMapEvents,
+} from "react-leaflet";
 import { Map } from "leaflet";
 import { Menu } from "./Menu";
 import { Search } from "./Search";
 import { Attribute } from "../Generator";
-import { initMap, updateCount } from "../initMap";
+import { initMap } from "../initMap";
 import { useTranslation } from "react-i18next";
 import { Filter } from "./Filters";
 import { OverPassLayer } from "./OverPassLayer";
+import L from "leaflet";
 
 let initalized = false;
 type Props<M> = {
@@ -57,7 +63,7 @@ export function Init<M>({
 
 export function OsmMapContainer<M>(props: Props<M>) {
   return (
-    <MapContainer id="map">
+    <MapContainer id="map" center={{ lat: 47.37, lng: 8.54 }} zoom={14}>
       <TileLayer
         opacity={0.7}
         attribution='Map data &copy; <a href="https://openstreetmap.org/">OpenStreetMap</a> | POI via <a href="https://www.overpass-api.de/">Overpass</a>'
@@ -81,14 +87,6 @@ export function OsmMapContainer<M>(props: Props<M>) {
               return offer.includes(filter.group + "/" + filter.value);
             }}
             globalFilter={props.globalFilter}
-            afterLoad={() => {
-              // updateCount(
-              //   map,
-              //   t("emptyIndicator"),
-              //   props.minZoom,
-              //   props.offers
-              // );
-            }}
           ></OverPassLayer>
         );
       })}
@@ -98,6 +96,66 @@ export function OsmMapContainer<M>(props: Props<M>) {
         onAbout={props.onAbout}
       />
       <Search />
+      <EmptyIndicator minZoom={props.minZoom} offers={props.offers} />
     </MapContainer>
   );
+}
+function EmptyIndicator({
+  minZoom,
+  offers,
+}: {
+  minZoom: number;
+  offers: string[];
+}) {
+  const { t } = useTranslation();
+  const [visible, setVisible] = useState(false);
+
+  function calcVisible() {
+    setVisible(
+      countMarkersInView(map) === 0 &&
+        offers.length > 0 &&
+        map.getZoom() >= minZoom
+    );
+  }
+
+  const map = useMapEvents({
+    layeradd() {
+      calcVisible();
+    },
+    zoomend() {
+      calcVisible();
+    },
+    moveend() {
+      calcVisible();
+    },
+  });
+
+  useEffect(() => {
+    calcVisible();
+  });
+
+  if (!visible) {
+    return null;
+  }
+
+  return (
+    <div className="leaflet-bottom leaflet-left">
+      <div className="leaflet-control-emptyIndicator leaflet-control">
+        {t("emptyIndicator")}
+      </div>
+    </div>
+  );
+}
+
+function countMarkersInView(map: L.Map) {
+  let count = 0;
+  const mapBounds = map.getBounds();
+  map.eachLayer((layer) => {
+    if (layer instanceof L.Marker) {
+      if (mapBounds.contains(layer.getLatLng())) {
+        count++;
+      }
+    }
+  });
+  return count;
 }

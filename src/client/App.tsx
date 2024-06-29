@@ -33,7 +33,6 @@ import {
 } from "../osm-app-component/utilities/url";
 import { Info } from "../osm-app-component/control/Info";
 import { createOverPassLayer } from "../osm-app-component/createOverPassLayer";
-import { updateCount } from "../osm-app-component/initMap";
 
 export function App() {
   const { t } = useTranslation();
@@ -279,7 +278,6 @@ export function App() {
           </ul>
         </IntroContainer>
       ) : null}
-
       {info ? (
         <Info
           map={map}

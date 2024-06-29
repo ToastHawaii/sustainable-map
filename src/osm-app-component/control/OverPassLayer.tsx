@@ -12,7 +12,6 @@ export function OverPassLayer<M>({
   single,
   isActive,
   globalFilter,
-  afterLoad = () => {},
 }: {
   filter: Filter;
   attributes: Attribute<M>[];
@@ -20,7 +19,6 @@ export function OverPassLayer<M>({
   single: boolean;
   isActive: () => boolean;
   globalFilter?: (tags: any, group: string, value: string) => boolean;
-  afterLoad?: () => void;
 }) {
   const { t } = useTranslation();
   const map = useMap();
@@ -38,8 +36,7 @@ export function OverPassLayer<M>({
       minZoom,
       single,
       () => !removed && isActive(),
-      globalFilter,
-      afterLoad
+      globalFilter
     );
     map.addLayer(layer);
 

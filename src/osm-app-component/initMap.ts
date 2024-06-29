@@ -121,7 +121,6 @@ export async function initMap<M>(
   let currentAccuracy: L.Layer | L.Circle<any>;
 
   map.on("moveend zoomend", () => {
-    updateCount(map, t("emptyIndicator"), minZoom, offers);
     const center = map.getCenter();
     const state = { lat: center.lat, lng: center.lng, zoom: map.getZoom() };
     set<State>("position", state);
@@ -430,47 +429,6 @@ export function parseOpeningHours(
     console.warn(e);
     return undefined;
   }
-}
-
-let emptyIndicatorElement: HTMLDivElement | undefined;
-
-export function updateCount(
-  map: L.Map,
-  emptyIndicator: string,
-  minZoom: number,
-  offers: string[]
-) {
-  const visible =
-    countMarkersInView(map) === 0 &&
-    offers.length > 0 &&
-    map.getZoom() >= minZoom;
-  if (visible && !emptyIndicatorElement) {
-    emptyIndicatorElement = createElement(
-      "div",
-      `<div class="leaflet-control-emptyIndicator leaflet-control">${emptyIndicator}</div>`,
-      ["leaflet-bottom", "leaflet-left"]
-    );
-
-    getHtmlElement(".leaflet-control-container").appendChild(
-      emptyIndicatorElement
-    );
-  } else if (!visible && emptyIndicatorElement) {
-    emptyIndicatorElement.remove();
-    emptyIndicatorElement = undefined;
-  }
-}
-
-function countMarkersInView(map: L.Map) {
-  let count = 0;
-  const mapBounds = map.getBounds();
-  map.eachLayer((layer) => {
-    if (layer instanceof L.Marker) {
-      if (mapBounds.contains(layer.getLatLng())) {
-        count++;
-      }
-    }
-  });
-  return count;
 }
 
 function offersToShort(
