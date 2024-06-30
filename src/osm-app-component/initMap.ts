@@ -53,7 +53,6 @@ L.Icon.Default.mergeOptions({
   shadowUrl: iconShadow,
 });
 
-const layers: { [name: string]: L.Layer } = {};
 
 export async function initMap<M>(
   filterOptions: {

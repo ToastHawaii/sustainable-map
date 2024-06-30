@@ -13,6 +13,8 @@ import * as fr from "./locales/fr.json";
 import * as oacFr from "../osm-app-component/locales/fr.json";
 import * as pl from "./locales/pl.json";
 import * as oacPl from "../osm-app-component/locales/pl.json";
+import * as zhHant from "./locales/zh_Hant.json";
+import * as oacZhHant from "../osm-app-component/locales/zh-Hant.json";
 
 i18next.on("languageChanged", function (lng) {
   document.documentElement.setAttribute("lang", lng);
@@ -34,6 +36,7 @@ i18next
       es: { translation: { ...es, ...oacEs } },
       fr: { translation: { ...fr, ...oacFr } },
       pl: { translation: { ...pl, ...oacPl } },
+      zh_Hant: { translation: { ...zhHant, ...oacZhHant } },
     },
 
     interpolation: {
