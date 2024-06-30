@@ -1,1 +1,30 @@
-{}
+{
+    "route": "路線",
+    "veryCheap": "免費或非常便宜",
+    "difficulty": "難度",
+    "externalResources": "其他",
+    "meta": {
+        "title": "可持續發展地圖",
+        "titleShort": "可持續發展"
+    },
+    "intro": {
+        "title": "可持續發展",
+        "organic": "有機",
+        "seasonal": "季節性",
+        "vegetarian": "素食",
+        "repair": "維修",
+        "reuse": "重複利用",
+        "recycling": "回收",
+        "community": "社群"
+    },
+    "free": "免費",
+    "group": {
+        "education": "教育",
+        "natural": "自然",
+        "health": "健康",
+        "community": "社群",
+        "sport": "運動",
+        "communitySport": "社群運動",
+        "material": "材料回收"
+    }
+}
