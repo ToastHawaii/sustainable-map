@@ -33,6 +33,7 @@ import {
 } from "../osm-app-component/utilities/url";
 import { Info } from "../osm-app-component/control/Info";
 import { createOverPassLayer } from "../osm-app-component/createOverPassLayer";
+import { Search } from "../osm-app-component/control/Search";
 
 export function App() {
   const { t } = useTranslation();
@@ -77,6 +78,7 @@ export function App() {
         }}
         minZoom={14}
       />
+      {map ? <Search map={map} /> : null}
       <h1>
         <a href="/">
           <img

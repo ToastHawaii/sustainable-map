@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { useMap } from "react-leaflet";
+import { Map } from "leaflet";
 
-export function GeoButton() {
-  const map = useMap();
+export function GeoButton({ map }: { map: Map }) {
   const [watchLocation, setWatchLocation] = useState(false);
 
   return (

@@ -95,7 +95,6 @@ export function OsmMapContainer<M>(props: Props<M>) {
         offers={props.offers}
         onAbout={props.onAbout}
       />
-      <Search />
       <EmptyIndicator minZoom={props.minZoom} offers={props.offers} />
     </MapContainer>
   );

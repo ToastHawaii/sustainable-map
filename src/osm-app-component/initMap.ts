@@ -75,11 +75,7 @@ export async function initMap<M>(
   minZoom = 14,
   offers: string[] = []
 ) {
-  getHtmlElement(".search").addEventListener("submit", (ev) => {
-    ev.preventDefault();
-    search();
-    return false;
-  });
+
 
   const shareButton = getHtmlElement(".share");
   shareButton.addEventListener("click", (e) => {
@@ -124,26 +120,6 @@ export async function initMap<M>(
     const state = { lat: center.lat, lng: center.lng, zoom: map.getZoom() };
     set<State>("position", state);
   });
-
-  let timeoutToken: any;
-  let popopopen = false;
-  map
-    .on("movestart zoomstart popupopen", () => {
-      if (timeoutToken) clearTimeout(timeoutToken);
-      getHtmlElement("html").classList.remove("help");
-    })
-    .on("moveend zoomend popupclose", () => {
-      timeoutToken = setTimeout(() => {
-        if (!popopopen) getHtmlElement("html").classList.add("help");
-      }, 1500);
-    });
-  map
-    .on("popupopen", () => {
-      popopopen = true;
-    })
-    .on("popupclose", () => {
-      popopopen = false;
-    });
 
   function partAreaVisible() {
     const visibles = getHtmlElements(`.external-link`);
@@ -219,30 +195,7 @@ export async function initMap<M>(
     }
   );
 
-  function search(value?: string) {
-    value =
-      value ||
-      (document.getElementById("osm-search") as HTMLInputElement).value;
-
-    setQueryParams({
-      offers: !(filterOptions.length <= 1) ? offers.toString() : "",
-      location: value,
-      info: getQueryParams()["info"],
-    });
-
-    getJson("https://nominatim.openstreetmap.org/search", {
-      format: "json",
-      q: value,
-      limit: 1,
-    }).then((r) => {
-      const result = r[0];
-      if (!result) return;
-      map.flyToBounds([
-        [result.boundingbox[0], result.boundingbox[2]],
-        [result.boundingbox[1], result.boundingbox[3]],
-      ]);
-    });
-  }
+ 
 
   // function hashchange(single: boolean) {
   //   const params = getQueryParams();
@@ -336,7 +289,7 @@ export async function initMap<M>(
         if (f.group + "/" + f.value === o) offers.push(f.group + "/" + f.value);
 
   if (params["location"]) {
-    search(params["location"]);
+    // search(params["location"]);
   } else if (params["b"]) {
     const bounds = params["b"].split(",").map((b) => parseFloat(b));
     map.fitBounds([
