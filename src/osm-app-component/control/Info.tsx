@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Filter } from "./Filters";
 import { Map } from "leaflet";
-import { overpassSubs } from "../initMap";
+import { overpassSubs, partAreaVisible } from "../initMap";
 import { setMeta } from "../utilities/meta";
 import { getJson } from "../utilities/jsonRequest";
 
@@ -88,6 +88,13 @@ export function Info({
     }
   }, [t, filter, description]);
 
+  useEffect(() => {
+    if (!map) {
+      return;
+    }
+    partAreaVisible(map);
+  });
+
   if (!map) {
     return null;
   }
@@ -150,7 +157,7 @@ out center;`
               <span className="external-label">{t("externalResources")}: </span>
               {externalResources[filter.value].map((external: any) => {
                 return (
-                  <React.Fragment key={external.name}>
+                  <span key={external.name} className="external-separator">
                     <a
                       className={`external-link${
                         external.bounds ? " part-area-visible" : ""
@@ -179,11 +186,12 @@ out center;`
                           "_blank"
                         );
                         return false;
-                      }} rel="noreferrer"
+                      }}
+                      rel="noreferrer"
                     >
                       {external.name}
                     </a>{" "}
-                  </React.Fragment>
+                  </span>
                 );
               })}
             </>

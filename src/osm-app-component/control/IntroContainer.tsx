@@ -1,4 +1,3 @@
-
 export function IntroContainer({
   onClose,
   children,
@@ -6,15 +5,12 @@ export function IntroContainer({
   onClose: () => void;
   children: any;
 }) {
-
   const handleCloseClick = () => {
     onClose();
   };
 
   return (
-    <div
-      className="intro-container"
-    >
+    <div className="intro-container">
       <div className="info">{children}</div>
       <button className="close-button" onClick={handleCloseClick}>
         ×

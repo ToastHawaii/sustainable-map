@@ -22,6 +22,7 @@ import { Color, hexToRgb } from "./coloriz/Color";
 import { setQueryParams, getQueryParams } from "./utilities/url";
 import { Attribute } from "./Generator";
 import { getJson } from "./utilities/jsonRequest";
+import { Map } from "leaflet";
 import { get, set } from "./utilities/storage";
 import { groupBy, delay, getRandomInt } from "./utilities/data";
 import { toString } from "./utilities/string";
@@ -53,6 +54,58 @@ L.Icon.Default.mergeOptions({
   iconUrl: icon,
   shadowUrl: iconShadow,
 });
+
+export function partAreaVisible(map: Map) {
+  const visibles = getHtmlElements(`.external-link`);
+  let hasPrev = false;
+  for (const e of visibles) {
+    if (!e.classList.contains("part-area-visible")) {
+      if (
+        e.previousElementSibling?.className === "external-separator" &&
+        hasPrev
+      )
+        (e.previousElementSibling as HTMLElement).style.display = "";
+
+      hasPrev = true;
+      continue;
+    }
+
+    const c = (e.getAttribute("part-area-visible") || "")
+      .split(",")
+      .map((n) => parseFloat(n));
+
+    if (e.previousElementSibling as HTMLElement)
+      (e.previousElementSibling as HTMLElement).style.display = "none";
+
+    if (e.nextElementSibling as HTMLElement)
+      (e.nextElementSibling as HTMLElement).style.display = "none";
+
+    if (
+      map
+        .getBounds()
+        .intersects(L.latLngBounds(L.latLng(c[0], c[1]), L.latLng(c[2], c[3])))
+    ) {
+      if (
+        e.previousElementSibling?.className === "external-separator" &&
+        hasPrev
+      )
+        (e.previousElementSibling as HTMLElement).style.display = "";
+
+      e.classList.remove("part-area-hidden");
+      hasPrev = true;
+    } else {
+      e.classList.add("part-area-hidden");
+    }
+  }
+  const hiddens = getHtmlElements(`.part-area-hidden`);
+  if (visibles.length === hiddens.length) {
+    getHtmlElements(".external-label").forEach(
+      (l) => (l.style.display = "none")
+    );
+  } else {
+    getHtmlElements(".external-label").forEach((l) => (l.style.display = ""));
+  }
+}
 
 export async function initMap<M>(
   filterOptions: {
@@ -119,60 +172,7 @@ export async function initMap<M>(
     set<State>("position", state);
   });
 
-  function partAreaVisible() {
-    const visibles = getHtmlElements(`.external-link`);
-    let hasPrev = false;
-    for (const e of visibles) {
-      if (!e.classList.contains("part-area-visible")) {
-        if (
-          e.previousElementSibling?.className === "external-separator" &&
-          hasPrev
-        )
-          (e.previousElementSibling as HTMLElement).style.display = "";
-
-        hasPrev = true;
-        continue;
-      }
-
-      const c = (e.getAttribute("part-area-visible") || "")
-        .split(",")
-        .map((n) => parseFloat(n));
-
-      (e.previousElementSibling as HTMLElement).style.display = "none";
-
-      if (e.nextElementSibling as HTMLElement)
-        (e.nextElementSibling as HTMLElement).style.display = "none";
-
-      if (
-        map
-          .getBounds()
-          .intersects(
-            L.latLngBounds(L.latLng(c[0], c[1]), L.latLng(c[2], c[3]))
-          )
-      ) {
-        if (
-          e.previousElementSibling?.className === "external-separator" &&
-          hasPrev
-        )
-          (e.previousElementSibling as HTMLElement).style.display = "";
-
-        e.classList.remove("part-area-hidden");
-        hasPrev = true;
-      } else {
-        e.classList.add("part-area-hidden");
-      }
-    }
-    const hiddens = getHtmlElements(`.part-area-hidden`);
-    if (visibles.length === hiddens.length) {
-      getHtmlElements(".external-label").forEach(
-        (l) => (l.style.display = "none")
-      );
-    } else {
-      getHtmlElements(".external-label").forEach((l) => (l.style.display = ""));
-    }
-  }
-
-  map.on("moveend zoomend", partAreaVisible);
+  map.on("moveend zoomend", () => partAreaVisible(map));
 
   map.on(
     "locationfound",
