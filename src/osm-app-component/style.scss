@@ -500,15 +500,15 @@ a.menu {
   max-width: calc(100% - 268px);
 }
 
-.external-link {
+.external-separator > a {
   &::after {
     content: ",";
   }
 }
 
-.external-link:last-child {
+.external-separator:last-child > a {
   &::after {
-    content: " ";
+    content: "";
   }
 }
 
