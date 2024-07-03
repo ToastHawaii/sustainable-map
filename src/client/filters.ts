@@ -15,7 +15,7 @@
 // You should have received a copy of the GNU Affero General Public License
 // along with Sustainable map.  If not, see <http://www.gnu.org/licenses/>.
 
-export const filters: {
+export type Filter = {
   id: number;
   group: string;
   subgroup?: string;
@@ -27,7 +27,9 @@ export const filters: {
   color: string;
   edit: string[];
   tags: string[];
-}[] = [
+};
+
+export const filters: Filter[] = [
   {
     id: 0,
     group: "culture",
@@ -2310,11 +2312,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
       "repair=*",
       "amenity=device_charging_station",
     ],
-    edit: [
-      "shop=mobile_phone",
-      "amenity=recycling",
-      "amenity",
-    ],
+    edit: ["shop=mobile_phone", "amenity=recycling", "amenity"],
   },
   {
     id: 107,
@@ -2758,11 +2756,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
 
       nw["amenity"="freeshop"]["freeshop:policy"!="free_to_take"];`,
     color: "#B8860B",
-    tags: [
-      "recycling:furniture=yes",
-      "recycling:wood=yes",
-      "amenity=freeshop",
-    ],
+    tags: ["recycling:furniture=yes", "recycling:wood=yes", "amenity=freeshop"],
     edit: ["amenity=recycling", "amenity"],
   },
   {
@@ -2779,16 +2773,8 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
       nw["rental"~"tableware|furniture"];
       nw["shop"="furniture"]["rental"~"^(yes|only)$"];`,
     color: "#B8860B",
-    tags: [
-      "shop=interior_decoration",
-      "shop=furniture",
-      "amenity=freeshop",
-    ],
-    edit: [
-      "shop=interior_decoration",
-      "craft=cabinet_maker",
-      "amenity",
-    ],
+    tags: ["shop=interior_decoration", "shop=furniture", "amenity=freeshop"],
+    edit: ["shop=interior_decoration", "craft=cabinet_maker", "amenity"],
   },
   {
     id: 126,

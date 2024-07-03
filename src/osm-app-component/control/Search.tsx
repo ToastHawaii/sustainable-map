@@ -3,15 +3,10 @@ import { useTranslation } from "react-i18next";
 import { Map } from "leaflet";
 import { GeoButton } from "./GeoButton";
 import { getJson } from "../utilities/jsonRequest";
-import { setQueryParams } from "../utilities/url";
+import { getQueryParams, setQueryParams } from "../utilities/url";
+import { Filter } from "./Filters";
 
-function search(map:Map, value: string) {
-  // setQueryParams({
-  //   offers: !(filterOptions.length <= 1) ? offers.toString() : "",
-  //   location: value,
-  //   info: getQueryParams()["info"],
-  // });
-
+export function search(map: Map, value: string) {
   getJson("https://nominatim.openstreetmap.org/search", {
     format: "json",
     q: value,
@@ -26,10 +21,20 @@ function search(map:Map, value: string) {
   });
 }
 
-export function Search({ map }: { map: Map }) {
+export function Search({
+  map,
+  filterOptions,
+  offers,
+}: {
+  map: Map;
+  filterOptions: Filter[];
+  offers: string[];
+}) {
   const { t } = useTranslation();
 
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const location = getQueryParams()["location"];
 
   function submitHandle(ev: React.FormEvent<HTMLFormElement>) {
     ev.preventDefault();
@@ -38,7 +43,15 @@ export function Search({ map }: { map: Map }) {
       return false;
     }
 
-    search(map, inputRef.current.value);
+    const value = inputRef.current.value;
+
+    setQueryParams({
+      offers: !(filterOptions.length <= 1) ? offers.toString() : "",
+      location: value,
+      info: getQueryParams()["info"],
+    });
+
+    search(map, value);
 
     return false;
   }
@@ -54,6 +67,7 @@ export function Search({ map }: { map: Map }) {
             id="osm-search"
             placeholder={t("search.placeholder")}
             required
+            defaultValue={location}
           />
           <button className="icon" type="submit">
             <i className="fas fa-search"></i>

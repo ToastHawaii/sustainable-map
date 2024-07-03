@@ -44,6 +44,7 @@ import icon from "leaflet/dist/images/marker-icon.png";
 import icon2x from "leaflet/dist/images/marker-icon-2x.png";
 import iconShadow from "leaflet/dist/images/marker-shadow.png";
 import { TFunction } from "i18next";
+import { search } from "./control/Search";
 
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 
@@ -52,7 +53,6 @@ L.Icon.Default.mergeOptions({
   iconUrl: icon,
   shadowUrl: iconShadow,
 });
-
 
 export async function initMap<M>(
   filterOptions: {
@@ -75,8 +75,6 @@ export async function initMap<M>(
   minZoom = 14,
   offers: string[] = []
 ) {
-
-
   const shareButton = getHtmlElement(".share");
   shareButton.addEventListener("click", (e) => {
     e.preventDefault();
@@ -195,84 +193,82 @@ export async function initMap<M>(
     }
   );
 
- 
+  function hashchange(single: boolean) {
+    const params = getQueryParams();
 
-  // function hashchange(single: boolean) {
-  //   const params = getQueryParams();
+    // if (!single) {
+    //   let offersParams: string[] = [];
 
-  //   if (!single) {
-  //     let offersParams: string[] = [];
+    //   if (params["offers"]) offersParams = params["offers"].split(",");
+    //   else if (params["o"])
+    //     offersParams = offersfromShort(params["o"], filterOptions);
 
-  //     if (params["offers"]) offersParams = params["offers"].split(",");
-  //     else if (params["o"])
-  //       offersParams = offersfromShort(params["o"], filterOptions);
+    //   for (const o of offersParams)
+    //     if (offers.indexOf(o) === -1)
+    //       for (const f of filterOptions)
+    //         if (f.group + "/" + f.value === o) {
+    //           offers.push(f.group + "/" + f.value);
+    //           init(
+    //             f.group,
+    //             f.value,
+    //             f.icon,
+    //             f.query,
+    //             attributes,
+    //             map,
+    //             t,
+    //             f.color,
+    //             minZoom,
+    //             single,
+    //             globalFilter,
+    //             offers
+    //           );
 
-  //     for (const o of offersParams)
-  //       if (offers.indexOf(o) === -1)
-  //         for (const f of filterOptions)
-  //           if (f.group + "/" + f.value === o) {
-  //             offers.push(f.group + "/" + f.value);
-  //             init(
-  //               f.group,
-  //               f.value,
-  //               f.icon,
-  //               f.query,
-  //               attributes,
-  //               map,
-  //               t,
-  //               f.color,
-  //               minZoom,
-  //               single,
-  //               globalFilter,
-  //               offers
-  //             );
+    //           (
+    //             getHtmlElement(
+    //               `#filters input[value='${f.group + "/" + f.value}']`
+    //             ) as HTMLInputElement
+    //           ).checked = true;
 
-  //             (
-  //               getHtmlElement(
-  //                 `#filters input[value='${f.group + "/" + f.value}']`
-  //               ) as HTMLInputElement
-  //             ).checked = true;
+    //           // if (params["info"] === f.group + "/" + f.value)
+    //           //  showInfoContainer(f);
+    //         }
+    // } else {
+    //   for (const f of filterOptions)
+    //     init(
+    //       f.group,
+    //       f.value,
+    //       f.icon,
+    //       f.query,
+    //       attributes,
+    //       map,
+    //       t,
+    //       f.color,
+    //       minZoom,
+    //       single,
+    //       globalFilter,
+    //       offers
+    //     );
+    // }
 
-  //             // if (params["info"] === f.group + "/" + f.value)
-  //             //  showInfoContainer(f);
-  //           }
-  //   } else {
-  //     for (const f of filterOptions)
-  //       init(
-  //         f.group,
-  //         f.value,
-  //         f.icon,
-  //         f.query,
-  //         attributes,
-  //         map,
-  //         t,
-  //         f.color,
-  //         minZoom,
-  //         single,
-  //         globalFilter,
-  //         offers
-  //       );
-  //   }
+    if (params["location"]) search(map, params["location"]);
+    else if (params["b"]) {
+      const bounds = params["b"].split(",").map((b) => parseFloat(b));
+      map.fitBounds([
+        [bounds[0], bounds[1]],
+        [bounds[2], bounds[3]],
+      ]);
+    }
+  }
 
-  //   if (params["location"]) search(params["location"]);
-  //   else if (params["b"]) {
-  //     const bounds = params["b"].split(",").map((b) => parseFloat(b));
-  //     map.fitBounds([
-  //       [bounds[0], bounds[1]],
-  //       [bounds[2], bounds[3]],
-  //     ]);
-  //   }
-  // }
+  window.addEventListener("hashchange", () => {
+    hashchange(filterOptions.length <= 1);
+  });
 
-  // window.addEventListener("hashchange", () => {
-  //   hashchange(filterOptions.length <= 1);
-  // });
-
-  // setTimeout(() => {
-  //   if (filterOptions.length > 1) offers = [];
-  //   else offers = filterOptions.map((f) => `${f.group}/${f.value}`);
-  //   hashchange(filterOptions.length <= 1);
-  // }, 0);
+  setTimeout(() => {
+    if (filterOptions.length > 1) offers = [];
+    else offers = filterOptions.map((f) => `${f.group}/${f.value}`);
+    hashchange(filterOptions.length <= 1);
+  }, 0);
 
   const params = getQueryParams();
 
@@ -289,7 +285,7 @@ export async function initMap<M>(
         if (f.group + "/" + f.value === o) offers.push(f.group + "/" + f.value);
 
   if (params["location"]) {
-    // search(params["location"]);
+    search(map, params["location"]);
   } else if (params["b"]) {
     const bounds = params["b"].split(",").map((b) => parseFloat(b));
     map.fitBounds([

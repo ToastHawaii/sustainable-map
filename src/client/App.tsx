@@ -78,7 +78,9 @@ export function App() {
         }}
         minZoom={14}
       />
-      {map ? <Search map={map} /> : null}
+      {map ? (
+        <Search map={map} filterOptions={filters} offers={offers} />
+      ) : null}
       <h1>
         <a href="/">
           <img
