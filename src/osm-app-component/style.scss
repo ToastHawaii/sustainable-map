@@ -624,7 +624,8 @@ details:not([open]) > *:not(summary) {
 }
 
 button.menu .title,
-a.menu .title {
+a.menu .title,
+.share .title {
   position: fixed;
   background: white;
   border: 1px solid #333;
@@ -636,7 +637,8 @@ a.menu .title {
   z-index: 1100;
 }
 button.menu .title,
-a.menu .title {
+a.menu .title,
+.share .title {
   right: 0;
   left: auto;
 }
