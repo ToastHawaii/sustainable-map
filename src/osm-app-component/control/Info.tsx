@@ -11,12 +11,20 @@ declare var taginfo_taglist: any;
 export function Info({
   map,
   filter,
+  filterOptions,
+  offers,
   externalResources,
+  onActivate,
+  onDeactivate,
   onClose,
 }: {
   map: Map | undefined;
   filter: Filter;
+  filterOptions: Filter[];
+  offers: string[];
   externalResources: any;
+  onActivate: (filter: Filter) => void;
+  onDeactivate: (filter: Filter) => void;
   onClose: () => void;
 }) {
   const { t } = useTranslation();
@@ -104,6 +112,40 @@ export function Info({
       <div className="info">
         <h4>{t("type." + filter.value + ".name")}</h4>
         <span className="text">{description}</span>
+        <div className="filters">
+          {t("info.moreFilters")}
+          {filterOptions
+            .filter(
+              (f) => f.group === filter.group && f.subgroup === filter.value
+            )
+            .map((f) => (
+              <React.Fragment key={`${f.group}/${f.value}`}>
+                <label
+                  className={
+                    "filter filter-sub filter-" + f.group + "-" + f.value
+                  }
+                >
+                  <input
+                    value={`${f.group}/${f.value}`}
+                    type="checkbox"
+                    checked={offers.includes(`${f.group}/${f.value}`)}
+                    onChange={(e) => {
+                      if (e.currentTarget.checked) {
+                        onActivate(f);
+                      } else {
+                        onDeactivate(f);
+                      }
+                    }}
+                  />
+                  <div className="filter-sub-background"></div>
+                  <div className="filter-label">
+                    <i className={`${f.button}`} style={{ color: f.color }}></i>{" "}
+                    <span>{t("type." + f.value + ".name")}</span>
+                  </div>
+                </label>
+              </React.Fragment>
+            ))}
+        </div>
         <hr />
         <small>
           <details open={open}>
@@ -143,7 +185,8 @@ export function Info({
 ${overpassSubs(filter.query).trim()}
 );
 out center;`
-              )}`} rel="noreferrer"
+              )}`}
+              rel="noreferrer"
             >
               {t("info.overpassTurbo")}
             </a>

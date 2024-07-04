@@ -9,6 +9,7 @@
         "placeholder": "Einen Ort suchen"
     },
     "info": {
+        "moreFilters": "Mehr Filters:",
         "osmTags": "Dokumentation",
         "query": "Abfrage",
         "overpassTurbo": "overpass-turbo"

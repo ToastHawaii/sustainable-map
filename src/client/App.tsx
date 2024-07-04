@@ -322,11 +322,21 @@ export function App() {
       {info ? (
         <Info
           map={map}
+          onActivate={(filter) => {
+            setOffers([
+              ...new Set([...offers, filter.group + "/" + filter.value]),
+            ]);
+          }}
+          onDeactivate={(f) => {
+            setOffers(offers.filter((o) => o !== f.group + "/" + f.value));
+          }}
           onClose={() => {
             setInfo(undefined);
             reset();
           }}
           filter={info}
+          filterOptions={filters}
+          offers={offers}
           externalResources={
             t("code") === "de" ? externalResourcesDe : externalResourcesEn
           }

@@ -42,6 +42,7 @@
     "aboutMe": "About me"
   },
   "info": {
+    "moreFilters": "More filters:",
     "osmTags": "Documentation",
     "query": "Query",
     "overpassTurbo": "overpass-turbo"

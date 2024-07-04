@@ -54,39 +54,6 @@ export function Filters({
       .sort((a, b) => (b.order || 1000) - (a.order || 1000)),
     "group"
   );
-  // for (const k in groups) {
-  //   const group = groups[k];
-  //   const detailsElement = createElement("details");
-
-  //   const count = offers.filter((o) => o.startsWith(k + "/")).length;
-  //   const countElement = createElement("span", count ? `(${count})` : "", [
-  //     "count",
-  //   ]);
-  //   const labelElement = createElement("span", t("group." + k));
-  //   const summaryElement = createElement("summary");
-  //   summaryElement.appendChild(labelElement);
-  //   summaryElement.insertBefore(countElement, labelElement);
-  //   detailsElement.appendChild(summaryElement);
-
-  //   for (const f of group) {
-  //     let contentElement: HTMLLabelElement;
-    
-  //       const group = getHtmlElement(
-  //         ".filter-" + k + "-" + f.subgroup,
-  //         detailsElement
-  //       );
-
-  //       contentElement = createElement(
-  //         "label",
-  //         `<input value="${k + "/" + f.value}" type="checkbox" />
-  //               <div class="filter-sub-background"></div>
-  //               <i class="${f.button}" style="color: ${f.color}" title="${t(
-  //           "type." + f.value + ".name"
-  //         )}"></i>`,
-  //         ["filter", "filter-sub", "filter-" + k + "-" + f.value]
-  //       );
-
-  //       detailsElement.insertBefore(contentElement, group);
 
   return (
     <>
