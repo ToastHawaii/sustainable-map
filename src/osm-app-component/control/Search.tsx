@@ -4,7 +4,6 @@ import { Map } from "leaflet";
 import { GeoButton } from "./GeoButton";
 import { getJson } from "../utilities/jsonRequest";
 import { getQueryParams, setQueryParams } from "../utilities/url";
-import { Filter } from "./Filters";
 
 export function search(map: Map, value: string) {
   getJson("https://nominatim.openstreetmap.org/search", {
@@ -21,15 +20,7 @@ export function search(map: Map, value: string) {
   });
 }
 
-export function Search({
-  map,
-  filterOptions,
-  offers,
-}: {
-  map: Map;
-  filterOptions: Filter[];
-  offers: string[];
-}) {
+export function Search({ map }: { map: Map }) {
   const { t } = useTranslation();
 
   const inputRef = useRef<HTMLInputElement>(null);
@@ -46,7 +37,7 @@ export function Search({
     const value = inputRef.current.value;
 
     setQueryParams({
-      offers: !(filterOptions.length <= 1) ? offers.toString() : "",
+      offers: getQueryParams()["offers"],
       location: value,
       info: getQueryParams()["info"],
     });

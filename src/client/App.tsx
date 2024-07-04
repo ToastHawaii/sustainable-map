@@ -34,24 +34,60 @@ import {
 import { Info } from "../osm-app-component/control/Info";
 import { createOverPassLayer } from "../osm-app-component/createOverPassLayer";
 import { Search } from "../osm-app-component/control/Search";
+import { offersfromShort } from "../osm-app-component/initMap";
 
 export function App() {
   const { t } = useTranslation();
-  const [filterCollapsed, setFilterCollapsed] = useState(true);
-  const [info, setInfo] = useState<Filter | undefined>(undefined);
-  const [intro, setIntro] = useState(true);
-  const [offers, setOffers] = useState<string[]>([]);
+
+  const params = getQueryParams();
+
+  let offersParams: string[] = [];
+  let initOffers: string[] = [];
+
+  if (!(filters.length <= 1) && params["offers"])
+    offersParams = params["offers"].split(",");
+
+  if (params["o"]) offersParams = offersfromShort(params["o"], filters);
+
+  for (const o of offersParams)
+    if (initOffers.indexOf(o) === -1)
+      for (const f of filters)
+        if (f.group + "/" + f.value === o)
+          initOffers.push(f.group + "/" + f.value);
+
+  const [filterCollapsed, setFilterCollapsed] = useState(!params["offers"]);
+  const [info, setInfoValue] = useState<Filter | undefined>(
+    filters.find((f) => params["info"] === f.group + "/" + f.value)
+  );
+  const [intro, setIntro] = useState(!params["info"]);
+  const [offers, setOffersValue] = useState<string[]>(initOffers);
   const [map, setMap] = useState<Map | undefined>(undefined);
+
+  function setInfo(value: Filter | undefined) {
+    setInfoValue(value);
+
+    setQueryParams({
+      offers: getQueryParams()["offers"],
+      location: getQueryParams()["location"],
+      info: value ? value.group + "/" + value.value : "",
+    });
+  }
+
+  function setOffers(value: string[]) {
+    setOffersValue(value);
+
+    setQueryParams({
+      offers: !(filters.length <= 1) ? value.toString() : "",
+      location: getQueryParams()["location"],
+      info: getQueryParams()["info"],
+    });
+  }
 
   function reset() {
     setFilterCollapsed(false);
 
     document.title = t("title");
     setMeta("description", t("description"));
-
-    // const params = getQueryParams();
-    // params["info"] = "";
-    // setQueryParams(params);
   }
 
   useEffect(() => {
@@ -78,9 +114,7 @@ export function App() {
         }}
         minZoom={14}
       />
-      {map ? (
-        <Search map={map} filterOptions={filters} offers={offers} />
-      ) : null}
+      {map ? <Search map={map} /> : null}
       <h1>
         <a href="/">
           <img

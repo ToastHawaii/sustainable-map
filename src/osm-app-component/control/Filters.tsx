@@ -70,53 +70,7 @@ export function Filters({
 
   //   for (const f of group) {
   //     let contentElement: HTMLLabelElement;
-
-  //     if (!f.subgroup) {
-  //       contentElement = createElement(
-  //         "label",
-  //         `
-  //           <input value="${k + "/" + f.value}" type="checkbox" />
-  //           <div class="filter-background"></div>
-  //           <div class="filter-label">
-  //             <img class="${f.value}-icon"
-  //               src="${f.icon}"
-  //             />
-  //             <span>${t("type." + f.value + ".name")}</span>
-  //           </div>`,
-  //         ["filter", "filter-" + k + "-" + f.value]
-  //       );
-
-  //       const aElement = createElement(
-  //         "a",
-  //         `<i class="fas fa-info-circle"></i>`
-  //       );
-  //       aElement.title = t("type." + f.value + ".name");
-  //       aElement.href = `?offers=${k + "/" + f.value}&info=${
-  //         k + "/" + f.value
-  //       }`;
-  //       aElement.addEventListener("click", (ev) => {
-  //         ev.preventDefault();
-
-  //         const params = getQueryParams();
-
-  //         const input = getHtmlElement("input", contentElement);
-  //         if (!input.checked) {
-  //           input.checked = true;
-  //           input.dispatchEvent(new Event("change"));
-  //         }
-
-  //         showInfoContainer(f);
-
-  //         params["info"] = f.group + "/" + f.value;
-
-  //         partAreaVisible();
-
-  //         return false;
-  //       });
-  //       detailsElement.appendChild(aElement);
-
-  //       detailsElement.appendChild(contentElement);
-  //     } else {
+    
   //       const group = getHtmlElement(
   //         ".filter-" + k + "-" + f.subgroup,
   //         detailsElement
@@ -133,47 +87,6 @@ export function Filters({
   //       );
 
   //       detailsElement.insertBefore(contentElement, group);
-  //     }
-
-  //     getHtmlElement("input", contentElement).addEventListener(
-  //       "change",
-  //       function () {
-  //         if (this.checked) {
-  //           offers.push(k + "/" + f.value);
-  //           init(
-  //             f.group,
-  //             f.value,
-  //             f.icon,
-  //             f.query,
-  //             attributes,
-  //             map,
-  //             t,
-  //             f.color,
-  //             minZoom,
-  //             filterOptions.length <= 1,
-  //             globalFilter,
-  //             offers
-  //           );
-  //         } else {
-  //           const index = offers.indexOf(k + "/" + f.value);
-  //           if (index > -1) offers.splice(index, 1);
-
-  //           map.removeLayer(layers[k + "/" + f.value]);
-  //         }
-
-  //         const count = offers.filter((o) => o.startsWith(k + "/")).length;
-  //         countElement.innerText = count ? `(${count})` : "";
-
-  //         const params = getQueryParams();
-  //         if (!(filterOptions.length <= 1))
-  //           params["offers"] = offers.toString();
-  //         setQueryParams(params);
-
-  //       }
-  //     );
-  //   }
-  //   getHtmlElement("#filters").appendChild(detailsElement);
-  // }
 
   return (
     <>

@@ -143,7 +143,7 @@ export function Info({
 ${overpassSubs(filter.query).trim()}
 );
 out center;`
-              )}`}
+              )}`} rel="noreferrer"
             >
               {t("info.overpassTurbo")}
             </a>

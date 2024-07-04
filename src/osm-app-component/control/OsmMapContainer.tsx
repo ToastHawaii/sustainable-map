@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from "react";
-import {
-  MapContainer,
-  TileLayer,
-  useMap,
-  useMapEvents,
-} from "react-leaflet";
+import { MapContainer, TileLayer, useMap, useMapEvents } from "react-leaflet";
 import { Map } from "leaflet";
 import { Menu } from "./Menu";
-import { Search } from "./Search";
 import { Attribute } from "../Generator";
 import { initMap } from "../initMap";
 import { useTranslation } from "react-i18next";
@@ -42,8 +36,6 @@ type Props<M> = {
 export function Init<M>({
   onLoaded,
   filterOptions,
-  attributes,
-  globalFilter,
   minZoom,
   offers,
 }: Props<M>) {
@@ -53,7 +45,7 @@ export function Init<M>({
   useEffect(() => {
     if (!initalized) {
       onLoaded(map);
-      initMap(filterOptions, attributes, map, t, globalFilter, minZoom, offers);
+      initMap(filterOptions, map, t, minZoom, offers);
     }
     initalized = true;
   });

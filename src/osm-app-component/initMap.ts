@@ -107,7 +107,7 @@ export function partAreaVisible(map: Map) {
   }
 }
 
-export async function initMap<M>(
+export async function initMap(
   filterOptions: {
     id: number;
     group: string;
@@ -121,10 +121,8 @@ export async function initMap<M>(
     edit: string[];
     tags: string[];
   }[],
-  attributes: Attribute<M>[],
   map: L.Map,
   t: TFunction<"translation", undefined>,
-  globalFilter?: (tags: any, group: any, value: any) => boolean,
   minZoom = 14,
   offers: string[] = []
 ) {
@@ -193,62 +191,8 @@ export async function initMap<M>(
     }
   );
 
-  function hashchange(single: boolean) {
+  function hashchange() {
     const params = getQueryParams();
-
-    // if (!single) {
-    //   let offersParams: string[] = [];
-
-    //   if (params["offers"]) offersParams = params["offers"].split(",");
-    //   else if (params["o"])
-    //     offersParams = offersfromShort(params["o"], filterOptions);
-
-    //   for (const o of offersParams)
-    //     if (offers.indexOf(o) === -1)
-    //       for (const f of filterOptions)
-    //         if (f.group + "/" + f.value === o) {
-    //           offers.push(f.group + "/" + f.value);
-    //           init(
-    //             f.group,
-    //             f.value,
-    //             f.icon,
-    //             f.query,
-    //             attributes,
-    //             map,
-    //             t,
-    //             f.color,
-    //             minZoom,
-    //             single,
-    //             globalFilter,
-    //             offers
-    //           );
-
-    //           (
-    //             getHtmlElement(
-    //               `#filters input[value='${f.group + "/" + f.value}']`
-    //             ) as HTMLInputElement
-    //           ).checked = true;
-
-    //           // if (params["info"] === f.group + "/" + f.value)
-    //           //  showInfoContainer(f);
-    //         }
-    // } else {
-    //   for (const f of filterOptions)
-    //     init(
-    //       f.group,
-    //       f.value,
-    //       f.icon,
-    //       f.query,
-    //       attributes,
-    //       map,
-    //       t,
-    //       f.color,
-    //       minZoom,
-    //       single,
-    //       globalFilter,
-    //       offers
-    //     );
-    // }
 
     if (params["location"]) search(map, params["location"]);
     else if (params["b"]) {
@@ -260,14 +204,8 @@ export async function initMap<M>(
     }
   }
 
-  window.addEventListener("hashchange", () => {
-    hashchange(filterOptions.length <= 1);
-  });
-
   setTimeout(() => {
-    if (filterOptions.length > 1) offers = [];
-    else offers = filterOptions.map((f) => `${f.group}/${f.value}`);
-    hashchange(filterOptions.length <= 1);
+    hashchange();
   }, 0);
 
   const params = getQueryParams();
@@ -299,8 +237,16 @@ export async function initMap<M>(
       ._source;
     const latLng = marker.getLatLng();
     setQueryParams({
-      offers: !(filterOptions.length <= 1) ? offers.toString() : "",
+      offers: getQueryParams()["offers"],
       location: `${latLng.lat},${latLng.lng}`,
+      info: getQueryParams()["info"],
+    });
+  });
+
+  map.on("popupclose", (e) => {
+    setQueryParams({
+      offers: getQueryParams()["offers"],
+      location: "",
       info: getQueryParams()["info"],
     });
   });
@@ -403,7 +349,7 @@ function offersToShort(
   return new BigNumber(result, 2).toString(36);
 }
 
-function offersfromShort(
+export function offersfromShort(
   value: string,
   filters: {
     id: number;
