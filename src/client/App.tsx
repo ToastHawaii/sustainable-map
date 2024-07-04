@@ -32,7 +32,6 @@ import {
   setQueryParams,
 } from "../osm-app-component/utilities/url";
 import { Info } from "../osm-app-component/control/Info";
-import { createOverPassLayer } from "../osm-app-component/createOverPassLayer";
 import { Search } from "../osm-app-component/control/Search";
 import { offersfromShort } from "../osm-app-component/initMap";
 
