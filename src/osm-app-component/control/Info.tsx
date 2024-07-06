@@ -22,7 +22,7 @@ export function Info({
   filter: Filter;
   filterOptions: Filter[];
   offers: string[];
-  externalResources: any;
+  externalResources?: any;
   onActivate: (filter: Filter) => void;
   onDeactivate: (filter: Filter) => void;
   onClose: () => void;
@@ -195,7 +195,7 @@ out center;`
           </details>
         </small>
         <small className="external">
-          {externalResources[filter.value] &&
+          {externalResources?.[filter.value] &&
           externalResources[filter.value].length > 0 ? (
             <>
               <br />

@@ -2,6 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { App } from "./osm-app-component/App";
 import { Trans, useTranslation } from "react-i18next";
+import { attributes } from "./client/attributes";
+import externalResources from "./client/externalResources.json";
+import { filters } from "./client/filters";
 
 import "./client/initI18next";
 
@@ -190,6 +193,12 @@ function Intro() {
 
 root.render(
   <React.StrictMode>
-    <App logo={<Logo />} intro={<Intro />} />
+    <App
+      logo={<Logo />}
+      intro={<Intro />}
+      filters={filters}
+      attributes={attributes}
+      externalResources={externalResources}
+    />
   </React.StrictMode>
 );

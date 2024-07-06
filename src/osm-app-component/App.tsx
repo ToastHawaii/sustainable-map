@@ -20,23 +20,26 @@ import { useTranslation } from "react-i18next";
 import { IntroContainer } from "./control/IntroContainer";
 import { Filter, Filters } from "./control/Filters";
 import { OsmMapContainer } from "./control/OsmMapContainer";
-import { attributes } from "../client/attributes";
-import externalResourcesEn from "../client/externalResources/en.json";
-import externalResourcesDe from "../client/externalResources/de.json";
-import { filters } from "../client/filters";
 import { setMeta } from "./utilities/meta";
 import { Map } from "leaflet";
 import { getQueryParams, setQueryParams } from "./utilities/url";
 import { Info } from "./control/Info";
 import { Search } from "./control/Search";
 import { offersfromShort } from "./initMap";
+import { Attribute } from "./Generator";
 
-export function App({
+export function App<M>({
   logo: logoElement,
   intro: introElement,
+  filters,
+  attributes,
+  externalResources,
 }: {
   logo: any;
   intro: any;
+  filters: Filter[];
+  attributes: Attribute<M>[];
+  externalResources?: any;
 }) {
   const { t } = useTranslation();
 
@@ -55,6 +58,10 @@ export function App({
       for (const f of filters)
         if (f.group + "/" + f.value === o)
           initOffers.push(f.group + "/" + f.value);
+
+  if (filters.length <= 1) {
+    initOffers.push(...filters.map((f) => f.group + "/" + f.value));
+  }
 
   const [filterCollapsed, setFilterCollapsed] = useState(!params["offers"]);
   const [info, setInfoValue] = useState<Filter | undefined>(
@@ -119,7 +126,7 @@ export function App({
       <h1>
         <a href="/">{logoElement}</a>
       </h1>
-      {filters.length >= 1 ? (
+      {filters.length > 1 ? (
         <Filters
           onOpen={() => {
             setIntro(false);
@@ -177,9 +184,7 @@ export function App({
           filter={info}
           filterOptions={filters}
           offers={offers}
-          externalResources={
-            t("code") === "de" ? externalResourcesDe : externalResourcesEn
-          }
+          externalResources={externalResources}
         />
       ) : null}
     </>
