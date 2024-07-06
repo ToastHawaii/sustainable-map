@@ -16,5 +16,7 @@
     "note": "Dodaj notkę dla innych tworzących mapy",
     "share": "Udostępnij to miejsce"
   },
-  "route": "Trasa"
+  "route": "Trasa",
+  "open": "Otwarte",
+  "closed": "Zamknięte"
 }
