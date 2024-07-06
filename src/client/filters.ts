@@ -447,20 +447,19 @@ nw["recycling:books"="yes"];`,
     tags: ["social_facility=outreach", "amenity=social_centre", "healthcare"],
     edit: ["amenity=social_facility", "amenity=social_centre", "healthcare"],
   },
-  // {
-  //   id: 137,
-  //   group: "community",
-  //   subgroup: "assistance",
-  //   value: "assistance-senior",
-  //   button: "fas fa-blind",
-  //   icon:
-  //     "https://wiki.openstreetmap.org/w/images/0/0b/Community_centre-14.svg",
-  //   query: `
-  //     nwr["social_facility:for"~"senior|elderly"];`,
-  //   color: "#DC143C",
-  //   tags: ["social_facility"],
-  //   edit: ["amenity=social_facility"]
-  // },
+  {
+    id: 137,
+    group: "community",
+    subgroup: "assistance",
+    value: "assistance-senior",
+    button: "fas fa-blind",
+    icon: "https://wiki.openstreetmap.org/w/images/0/0b/Community_centre-14.svg",
+    query: `
+      nwr["social_facility:for"~"senior|elderly"];`,
+    color: "#DC143C",
+    tags: ["social_facility"],
+    edit: ["amenity=social_facility"],
+  },
   {
     id: 138,
     group: "community",
@@ -514,20 +513,19 @@ nw["recycling:books"="yes"];`,
     tags: ["social_facility"],
     edit: ["amenity=social_facility"],
   },
-  // {
-  //   id: 142,
-  //   group: "community",
-  //   subgroup: "assistance",
-  //   value: "assistance-male",
-  //   button: "fas fa-male",
-  //   icon:
-  //     "https://wiki.openstreetmap.org/w/images/0/0b/Community_centre-14.svg",
-  //   query: `
-  //     nwr["social_facility:for"~"men"];`,
-  //   color: "#DC143C",
-  //   tags: ["social_facility"],
-  //   edit: ["amenity=social_facility"]
-  // },
+  {
+    id: 142,
+    group: "community",
+    subgroup: "assistance",
+    value: "assistance-male",
+    button: "fas fa-male",
+    icon: "https://wiki.openstreetmap.org/w/images/0/0b/Community_centre-14.svg",
+    query: `
+      nwr["social_facility:for"~"men"];`,
+    color: "#DC143C",
+    tags: ["social_facility"],
+    edit: ["amenity=social_facility"],
+  },
   {
     id: 143,
     group: "community",
@@ -2784,10 +2782,10 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     icon: "/lib/temaki-icons/furniture.svg",
     button: "fas fa-tools",
     query: `
-    nw["service:furniture:repair"="yes"];
-    nw["furniture:repair"~"^(yes|only)$"];
-    nw["shop"="furniture"]["repair"~"^(yes|only)$"];
-    nw["craft"="cabinet_maker"]["repair"~"^(yes|only)$"];`,
+nw["service:furniture:repair"="yes"];
+nw["furniture:repair"~"^(yes|only)$"];
+nw["shop"="furniture"]["repair"~"^(yes|only)$"];
+nw["craft"="cabinet_maker"]["repair"~"^(yes|only)$"];`,
     color: "#B8860B",
     tags: ["repair=assisted_self_service", "repair=*", "craft=cabinet_maker"],
     edit: ["shop=furniture", "craft=cabinet_maker", "amenity"],
@@ -2798,29 +2796,29 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     value: "bicycle",
     icon: "/lib/maki-icons/bicycle-15.svg",
     query: `
-      // Give
-      nw["recycling:bicycles"="yes"];
+// Give
+nw["recycling:bicycles"="yes"];
 
-      // Get
-      nw["shop"="bicycle"]["second_hand"~"^(yes|only)$"];
-      nw["service:bicycle:second_hand"~"^(yes|only)$"];
+// Get
+nw["shop"="bicycle"]["second_hand"~"^(yes|only)$"];
+nw["service:bicycle:second_hand"~"^(yes|only)$"];
 
-      // Rent
-      nw["service:bicycle:rental"~"^(yes|only)$"];
-    nw["bicycle:rental"~"^(yes|only)$"];
-    nw["bicycle_rental"~"^(yes|only|cargo_bike)$"];
-    nw["rental:bicycle"~"^(yes|only)$"];
-    nw["rental"~"bicycle|bike"];
-    nw["amenity"~"^(bicycle_rental|bicycle_sharing|bicycle_library)$"];
-    nw["shop"="bicycle_rental"];
-    nw["shop"="bicycle"]["rental"~"^(yes|only)$"];
+// Rent
+nw["service:bicycle:rental"~"^(yes|only)$"];
+nw["bicycle:rental"~"^(yes|only)$"];
+nw["bicycle_rental"~"^(yes|only|cargo_bike)$"];
+nw["rental:bicycle"~"^(yes|only)$"];
+nw["rental"~"bicycle|bike"];
+nw["amenity"~"^(bicycle_rental|bicycle_sharing|bicycle_library)$"];
+nw["shop"="bicycle_rental"];
+nw["shop"="bicycle"]["rental"~"^(yes|only)$"];
 
-      // Repair
-      nw["service:bicycle:repair"~"^(yes|only)$"];
-      nw["bicycle:repair"~"^(yes|only)$"];
-      nw["amenity"="bicycle_repair_station"];
-      nw["shop"="bicycle"]["repair"~"^(yes|only)$"];
-      nw["service:bicycle:diy"="yes"];`,
+// Repair
+nw["service:bicycle:repair"~"^(yes|only)$"];
+nw["bicycle:repair"~"^(yes|only)$"];
+nw["amenity"="bicycle_repair_station"];
+nw["shop"="bicycle"]["repair"~"^(yes|only)$"];
+nw["service:bicycle:diy"="yes"];`,
     color: "#4682B4",
     tags: [
       "amenity=recycling",
@@ -2850,7 +2848,7 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     icon: "/lib/maki-icons/bicycle-15.svg",
     button: "fas fa-sync-alt",
     query: `
-      nw["recycling:bicycles"="yes"];`,
+nw["recycling:bicycles"="yes"];`,
     color: "#4682B4",
     tags: ["amenity=recycling"],
     edit: ["amenity=recycling"],
@@ -2863,8 +2861,8 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     icon: "/lib/maki-icons/bicycle-15.svg",
     button: "fas fa-long-arrow-alt-right",
     query: `
-    nw["shop"="bicycle"]["second_hand"~"^(yes|only)$"];
-    nw["service:bicycle:second_hand"~"^(yes|only)$"];`,
+nw["shop"="bicycle"]["second_hand"~"^(yes|only)$"];
+nw["service:bicycle:second_hand"~"^(yes|only)$"];`,
     color: "#4682B4",
     tags: ["shop=bicycle"],
     edit: ["shop=bicycle"],
@@ -2877,14 +2875,14 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     icon: "/lib/maki-icons/bicycle-15.svg",
     button: "fas fa-redo-alt",
     query: `
-    nw["service:bicycle:rental"~"^(yes|only)$"];
-    nw["bicycle:rental"~"^(yes|only)$"];
-    nw["bicycle_rental"~"^(yes|only|cargo_bike)$"];
-    nw["rental:bicycle"~"^(yes|only)$"];
-    nw["rental"~"bicycle|bike"];
-    nw["amenity"~"^(bicycle_rental|bicycle_sharing|bicycle_library)$"];
-    nw["shop"="bicycle_rental"];
-    nw["shop"="bicycle"]["rental"~"^(yes|only)$"];`,
+nw["service:bicycle:rental"~"^(yes|only)$"];
+nw["bicycle:rental"~"^(yes|only)$"];
+nw["bicycle_rental"~"^(yes|only|cargo_bike)$"];
+nw["rental:bicycle"~"^(yes|only)$"];
+nw["rental"~"bicycle|bike"];
+nw["amenity"~"^(bicycle_rental|bicycle_sharing|bicycle_library)$"];
+nw["shop"="bicycle_rental"];
+nw["shop"="bicycle"]["rental"~"^(yes|only)$"];`,
     color: "#4682B4",
     tags: ["amenity=bicycle_rental", "amenity=bicycle_library"],
     edit: ["amenity=bicycle_rental"],
@@ -2897,11 +2895,11 @@ way["highway"="footway"]["area"="yes"]["name"]&part;`,
     icon: "/lib/maki-icons/bicycle-15.svg",
     button: "fas fa-tools",
     query: `
-    nw["service:bicycle:repair"~"^(yes|only)$"];
-    nw["bicycle:repair"~"^(yes|only)$"];
-    nw["amenity"="bicycle_repair_station"];
-    nw["shop"="bicycle"]["repair"~"^(yes|only)$"];
-    nw["service:bicycle:diy"="yes"];`,
+nw["service:bicycle:repair"~"^(yes|only)$"];
+nw["bicycle:repair"~"^(yes|only)$"];
+nw["amenity"="bicycle_repair_station"];
+nw["shop"="bicycle"]["repair"~"^(yes|only)$"];
+nw["service:bicycle:diy"="yes"];`,
     color: "#4682B4",
     tags: [
       "amenity=bicycle_repair_station",
