@@ -1,33 +1,12 @@
 {
-    "code": "de",
     "meta": {
         "title": "Nachhaltig Karte",
         "titleShort": "Nachhaltig",
         "description": "Erlebe die Welt nachhaltig."
     },
-    "search": {
-        "placeholder": "Einen Ort suchen"
-    },
-    "info": {
-        "moreFilters": "Mehr Filters:",
-        "osmTags": "Dokumentation",
-        "query": "Abfrage",
-        "overpassTurbo": "overpass-turbo"
-    },
-    "menu": {
-        "note": "Hinweis für Kartographen hinzufügen",
-        "edit": "Karte bearbeiten",
-        "share": "Ort teilen",
-        "theme": "Theme ändern",
-        "about": "Über diese Seite",
-        "donate": "Mich unterstützen"
-    },
     "title": "Nachhaltig Karte",
     "description": "Erlebe die Welt nachhaltig.",
-    "minZoomMessageNoLayer": "Keine Ebene zugewiesen",
-    "minZoomMessage": "Zoome hinein, um Kartenmerkmale zu laden",
-    "emptyIndicator": "Keine Kartenobjekte in diesem Bereich gefunden",
-    "linkCopied": "Link in die Zwischenablage kopiert",
+   
     "capacity": "Kapazität",
     "playground": "Für Kinder",
     "changing_table": "Hat einen Wickeltisch",
@@ -123,17 +102,9 @@
         "no": "Keine bio Produkte"
     },
     "colour": "Farbe",
-    "open": "Geöffnet",
-    "closed": "Geschlossen",
-    "maybeOpen": "Vielleicht geöffnet",
-    "maybeOpens": "Öffnet vielleicht",
-    "maybeCloses": "Schliesst vielleicht",
-    "opens": "Öffnet",
-    "closes": "Schliesst",
-    "thatDependsOn": "Das hängt ab von",
+   
     "free": "Kostenlos",
     "veryCheap": "Kostenlos oder sehr günstig",
-    "conditionalFee": "Nur zu bestimmten Zeiten kostenlos.",
     "horizontalBar": "Reck",
     "parallelBars": "Parallelbarren",
     "rings": "Ringe",
@@ -141,7 +112,6 @@
     "balance": "Gleichgewicht",
     "route": "Routen",
     "difficulty": "Schwierigkeitsgrad",
-    "externalResources": "Andere",
     "group": {
         "culture": "Kultur",
         "education": "Bildung",

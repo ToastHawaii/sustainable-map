@@ -1,12 +1,8 @@
 {
-  "code": "en",
   "meta": {
     "title": "Sustainable map",
     "description": "Experience the world sustainably.",
     "titleShort": "Sustainable"
-  },
-  "search": {
-    "placeholder": "Search a location"
   },
   "intro": {
     "title": "Sustainable",
@@ -41,26 +37,8 @@
     "moreApps": "More apps based on OpenStreetMap",
     "aboutMe": "About me"
   },
-  "info": {
-    "moreFilters": "More filters:",
-    "osmTags": "Documentation",
-    "query": "Query",
-    "overpassTurbo": "overpass-turbo"
-  },
-  "menu": {
-    "note": "Add note for mappers",
-    "edit": "Edit map",
-    "share": "Share place",
-    "theme": "Change theme",
-    "about": "About this site",
-    "donate": "Support me"
-  },
   "title": "Sustainable map",
   "description": "Experience the world sustainably.",
-  "minZoomMessageNoLayer": "No layer assigned",
-  "minZoomMessage": "Zoom in to load map features",
-  "emptyIndicator": "No map features found in this area",
-  "linkCopied": "Link copied to the clipboard",
   "capacity": "Capacity",
   "playground": "For children",
   "changing_table": "Has a changing table",
@@ -156,15 +134,6 @@
     "no": "No organic products"
   },
   "colour": "Color",
-  "open": "Open",
-  "closed": "Closed",
-  "maybeOpen": "Maybe open",
-  "maybeOpens": "Maybe opens",
-  "maybeCloses": "Maybe closes",
-  "opens": "Opens",
-  "closes": "Closes",
-  "thatDependsOn": "That depends on",
-  "conditionalFee": "Only free at certain times.",
   "free": "Free",
   "veryCheap": "Free of charge or very cheap",
   "horizontalBar": "Horizontal bar",
@@ -172,9 +141,7 @@
   "rings": "Rings",
   "exerciseMachine": "Exercise machine",
   "balance": "Balance",
-  "route": "Route",
   "difficulty": "Difficulty",
-  "externalResources": "Others",
   "group": {
     "culture": "Culture",
     "education": "Education",

@@ -1,23 +1,6 @@
 {
-  "code": "pl",
-  "info": {
-    "osmTags": "Dokumentacja",
-    "overpassTurbo": "overpass-turbo",
-    "query": "Zapytanie"
-  },
-  "search": {
-    "placeholder": "Wyszukaj miejsca"
-  },
-  "menu": {
-    "theme": "Zmień motyw",
-    "about": "O tej stronie",
-    "edit": "Edytuj mapę",
-    "note": "Dodaj notkę dla innych tworzących mapy",
-    "share": "Udostępnij to miejsce"
-  },
   "furniture": "Meble",
   "computer": "Komputery",
-  "route": "Trasa",
   "difficulty": "Poziom trudności",
   "group": {
     "mobility": "Mobilność",
@@ -90,7 +73,6 @@
   "colour": "Kolor",
   "free": "Bezpłatne",
   "battery": "Baterie",
-  "externalResources": "Inne",
   "paint": "Obrazy",
   "marketplace": "Bazar",
   "reuse": "Ponowne użycie",

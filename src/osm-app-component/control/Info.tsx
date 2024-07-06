@@ -197,7 +197,9 @@ out center;`
           externalResources[filter.value].length > 0 ? (
             <>
               <br />
-              <span className="external-label">{t("externalResources")}: </span>
+              <span className="external-label">
+                {t("info.externalResources")}:{" "}
+              </span>
               {externalResources[filter.value].map((external: any) => {
                 return (
                   <span key={external.name} className="external-separator">

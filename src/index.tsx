@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { App } from "./client/App";
+import { App } from "./osm-app-component/App";
 import { Trans, useTranslation } from "react-i18next";
 
 import "./client/initI18next";

@@ -17,22 +17,19 @@
 
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { IntroContainer } from "../osm-app-component/control/IntroContainer";
-import { Filter, Filters } from "../osm-app-component/control/Filters";
-import { OsmMapContainer } from "../osm-app-component/control/OsmMapContainer";
-import { attributes } from "./attributes";
-import externalResourcesEn from "./externalResources/en.json";
-import externalResourcesDe from "./externalResources/de.json";
-import { filters } from "./filters";
-import { setMeta } from "../osm-app-component/utilities/meta";
+import { IntroContainer } from "./control/IntroContainer";
+import { Filter, Filters } from "./control/Filters";
+import { OsmMapContainer } from "./control/OsmMapContainer";
+import { attributes } from "../client/attributes";
+import externalResourcesEn from "../client/externalResources/en.json";
+import externalResourcesDe from "../client/externalResources/de.json";
+import { filters } from "../client/filters";
+import { setMeta } from "./utilities/meta";
 import { Map } from "leaflet";
-import {
-  getQueryParams,
-  setQueryParams,
-} from "../osm-app-component/utilities/url";
-import { Info } from "../osm-app-component/control/Info";
-import { Search } from "../osm-app-component/control/Search";
-import { offersfromShort } from "../osm-app-component/initMap";
+import { getQueryParams, setQueryParams } from "./utilities/url";
+import { Info } from "./control/Info";
+import { Search } from "./control/Search";
+import { offersfromShort } from "./initMap";
 
 export function App({
   logo: logoElement,

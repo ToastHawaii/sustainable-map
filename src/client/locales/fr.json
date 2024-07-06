@@ -1,32 +1,12 @@
 {
-    "code": "fr",
     "meta": {
         "title": "Carte durable",
         "description": "Découvrez le monde de manière durable.",
         "titleShort": "Durable"
     },
-    "search": {
-        "placeholder": "Rechercher un lieu"
-    },
-    "info": {
-        "osmTags": "Documentation",
-        "query": "Recherche",
-        "overpassTurbo": "overpass-turbo"
-    },
-    "menu": {
-        "edit": "Modifier la carte",
-        "note": "Ajouter une note pour les contributeurs",
-        "share": "Partager le lieu",
-        "theme": "Modifier le thème",
-        "about": "À propos de ce site",
-        "donate": "Me soutenir"
-    },
     "title": "Carte durable",
     "description": "Découvrez le monde de manière durable.",
-    "minZoomMessageNoLayer": "Aucun calque assigné",
-    "minZoomMessage": "Effectuez un zoom avant pour afficher les éléments de la carte",
-    "emptyIndicator": "Aucun élément de carte trouvé dans cette zone",
-    "linkCopied": "Lien copié dans le presse papiers",
+    
     "changing_table": "Table à langer",
     "bottle": "Remplissage possible",
     "pump": "Pompe",
@@ -92,7 +72,6 @@
     "horizontalBar": "Barre horizontale",
     "parallelBars": "Barres parallèles",
     "difficulty": "Difficulté",
-    "externalResources": "Autres",
     "group": {
         "culture": "Culture",
         "education": "Éducation",
@@ -555,9 +534,7 @@
     "disabled": "Pour handicapés",
     "migrant": "Pour les réfugiés",
     "senior": "Pour personnes âgées",
-    "maybeOpens": "Ouvre peut-être",
     "colour": "Couleur",
-    "thatDependsOn": "Cela dépend",
     "free": "Gratuit",
     "vegetarian": {
         "no": "Pas de produits végétariens",
@@ -574,13 +551,6 @@
         "yes": "Produits bio",
         "no": "Pas de produits bio"
     },
-    "open": "Ouvert",
-    "closed": "Fermé",
-    "maybeOpen": "Peut-être ouvert",
-    "maybeCloses": "Ferme peut-être",
-    "opens": "Ouvre",
-    "closes": "Ferme",
-    "conditionalFee": "Gratuit à certaines périodes.",
     "rings": "Anneaux",
     "exerciseMachine": "Équipement sportif",
     "balance": "Balance",

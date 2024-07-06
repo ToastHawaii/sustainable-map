@@ -1,7 +1,5 @@
 {
-  "code": "es",
   "balance": "Balance",
-  "route": "Ruta",
   "difficulty": "Dificultad",
   "type": {
     "artwork": {
@@ -211,14 +209,6 @@
       "name": "Planta"
     }
   },
-  "menu": {
-    "theme": "Cambiar el tema",
-    "about": "Acerca de esta página",
-    "donate": "Apoyarme",
-    "note": "Agregar nota para cartógrafos",
-    "edit": "Editar mapa",
-    "share": "Comparte ubicacion"
-  },
   "changing_table": "Tiene un cambiador",
   "bottle": "Es posible rellenar",
   "pump": "Bomba",
@@ -277,32 +267,15 @@
     "yes": "Tiene productos organicos",
     "no": "Sin productos orgánicos"
   },
-  "maybeOpen": "Tal vez abierto",
-  "maybeOpens": "Quizás abre",
-  "maybeCloses": "Quizás cierra",
-  "opens": "Abiertos",
-  "closes": "Cerrados",
-  "externalResources": "Otros",
   "meta": {
     "title": "Mapa sostenible",
     "description": "Experimente el mundo de forma sostenible.",
     "titleShort": "Sostenible"
   },
-  "search": {
-    "placeholder": "Buscar una ubicación"
-  },
-  "info": {
-    "osmTags": "Documentación",
-    "query": "Consulta",
-    "overpassTurbo": "overpass-turbo"
-  },
   "capacity": "Capacidad",
   "title": "Mapa sostenible",
   "description": "Experimente el mundo de forma sostenible.",
-  "minZoomMessageNoLayer": "Ninguna capa asignada",
-  "emptyIndicator": "No se encontraron objetos del mapa en esta zona",
-  "minZoomMessage": "Acércate para cargar las características del mapa",
-  "linkCopied": "Enlace copiado al portapapeles",
+  
   "playground": "Para niños",
   "charging": "Cargando",
   "mobileCharging": "Cargando",
@@ -339,10 +312,6 @@
   },
   "avoidPackaging": "Evite embalajes innecesarios",
   "colour": "Color",
-  "open": "Abierto",
-  "thatDependsOn": "Eso depende de",
-  "closed": "Cerrado",
-  "conditionalFee": "Gratis solo en determinados horarios.",
   "free": "Gratis",
   "veryCheap": "Gratis o muy barato",
   "horizontalBar": "Barra horizontal",
