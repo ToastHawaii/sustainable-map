@@ -2,7 +2,7 @@
   "code": "de",
 
   "info": {
-    "moreFilters": "Ergebnisse filtern:",
+    "moreFilters": "Mehr Filter:",
     "osmTags": "Dokumentation",
     "query": "Abfrage",
     "overpassTurbo": "overpass-turbo",

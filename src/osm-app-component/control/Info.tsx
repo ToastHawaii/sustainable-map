@@ -103,6 +103,10 @@ export function Info({
     partAreaVisible(map);
   });
 
+  const filters = filterOptions.filter(
+    (f) => f.group === filter.group && f.subgroup === filter.value
+  );
+
   if (!map) {
     return null;
   }
@@ -112,13 +116,10 @@ export function Info({
       <div className="info">
         <h4>{t("type." + filter.value + ".name")}</h4>
         <span className="text">{description}</span>
-        <div className="filters">
-          {t("info.moreFilters")}
-          {filterOptions
-            .filter(
-              (f) => f.group === filter.group && f.subgroup === filter.value
-            )
-            .map((f) => (
+        {filters.length > 0 ? (
+          <div className="filters">
+            {t("info.moreFilters")}
+            {filters.map((f) => (
               <React.Fragment key={`${f.group}/${f.value}`}>
                 <label
                   className={
@@ -145,7 +146,8 @@ export function Info({
                 </label>
               </React.Fragment>
             ))}
-        </div>
+          </div>
+        ) : null}
         <hr />
         <small>
           <details open={open}>
