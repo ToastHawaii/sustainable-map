@@ -6,7 +6,6 @@
     },
     "title": "Nachhaltig Karte",
     "description": "Erlebe die Welt nachhaltig.",
-   
     "capacity": "Kapazität",
     "playground": "Für Kinder",
     "changing_table": "Hat einen Wickeltisch",
@@ -102,7 +101,6 @@
         "no": "Keine bio Produkte"
     },
     "colour": "Farbe",
-   
     "free": "Kostenlos",
     "veryCheap": "Kostenlos oder sehr günstig",
     "horizontalBar": "Reck",
@@ -110,7 +108,6 @@
     "rings": "Ringe",
     "exerciseMachine": "Übungsgerät",
     "balance": "Gleichgewicht",
-    "route": "Routen",
     "difficulty": "Schwierigkeitsgrad",
     "group": {
         "culture": "Kultur",

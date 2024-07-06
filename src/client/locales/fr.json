@@ -6,7 +6,6 @@
     },
     "title": "Carte durable",
     "description": "Découvrez le monde de manière durable.",
-    
     "changing_table": "Table à langer",
     "bottle": "Remplissage possible",
     "pump": "Pompe",
@@ -86,7 +85,6 @@
         "natural": "Nature",
         "goods": "Biens"
     },
-    "route": "Route",
     "type": {
         "artwork": {
             "name": "Œuvre d'art"
