@@ -59,10 +59,10 @@ nwr["playground"="splash_pad"]&part;`,
     value: "tourist-attraction",
     icon: "/lib/maki-icons/attraction-15.svg",
     query: `
-  nwr["tourism"="attraction"]["attraction"!="animal"]["attraction"!="maze"]&part;
-  nwr["tourism"="yes"]&part;
+nwr["tourism"="attraction"]["attraction"!="animal"]["attraction"!="maze"]&part;
+nwr["tourism"="yes"]&part;
 
-  nwr["heritage"]&part;`,
+nwr["heritage"]&part;`,
     color: "#FFD700",
     tags: ["tourism=attraction", "tourism=*", "heritage=*"],
     edit: [
@@ -80,8 +80,8 @@ nwr["playground"="splash_pad"]&part;`,
     value: "archaeological-site",
     icon: "https://wiki.openstreetmap.org/w/images/7/7d/Archaeological-site-16.svg",
     query: `
-      nwr["historic"="archaeological_site"]&part;
-      nwr["geological"="palaeontological_site"]&part;`,
+nwr["historic"="archaeological_site"]&part;
+nwr["geological"="palaeontological_site"]&part;`,
     color: "#F4A460",
     tags: ["historic=archaeological_site", "geological=palaeontological_site"],
     edit: ["historic=archaeological_site"],
@@ -92,12 +92,12 @@ nwr["playground"="splash_pad"]&part;`,
     value: "trail",
     icon: "https://wiki.openstreetmap.org/w/images/7/77/Board-14.svg",
     query: `
-      nw["information"="board"]["board_type"~"wildlife|plants|geology|nature|planet_walk|astronomy|forestry|botany|biology|birds|tree|panorama|agriculture|science|technology"]&part;
-      nw["information"="nature"]&part;
-      nw["information"="wild_life"]&part;
-      nw["information"="wildlife"]&part;
-      relation["type"="route"]["educational"="yes"]&part;
-      relation["route"="educational_trail"]&part;`,
+nw["information"="board"]["board_type"~"wildlife|plants|geology|nature|planet_walk|astronomy|forestry|botany|biology|birds|tree|panorama|agriculture|science|technology"]&part;
+nw["information"="nature"]&part;
+nw["information"="wild_life"]&part;
+nw["information"="wildlife"]&part;
+relation["type"="route"]["educational"="yes"]&part;
+relation["route"="educational_trail"]&part;`,
     color: "#222222",
     tags: [
       "educational=yes",
@@ -222,9 +222,9 @@ nw["recycling:books"="yes"];`,
     value: "internet",
     icon: "https://wiki.openstreetmap.org/w/images/8/89/Internet_cafe-14.svg",
     query: `
-         nwr["internet_access"]["internet_access"!="no"]["internet_access:fee"!~"^(customers|yes)$"]&part;
+nwr["internet_access"]["internet_access"!="no"]["internet_access:fee"!~"^(customers|yes)$"]&part;
 
-         nwr["wifi"]["wifi"!="no"]&part;`,
+nwr["wifi"]["wifi"!="no"]&part;`,
     color: "#FF1493",
     tags: ["internet_access=*", "wifi=*"],
     edit: ["amenity", "shop"],
@@ -235,14 +235,14 @@ nw["recycling:books"="yes"];`,
     value: "castle",
     icon: "https://wiki.openstreetmap.org/w/images/3/31/Fortress-14.svg",
     query: `
-  nwr["historic"="castle"][!"ruins"]&part;
-  nwr["historic"="castle"]["ruins"="no"]&part;
+nwr["historic"="castle"][!"ruins"]&part;
+nwr["historic"="castle"]["ruins"="no"]&part;
 
-  nwr["historic"="tower"][!"ruins"]&part;
-  nwr["historic"="tower"]["ruins"="no"]&part;
+nwr["historic"="tower"][!"ruins"]&part;
+nwr["historic"="tower"]["ruins"="no"]&part;
 
-  nwr["historic"="fort"][!"ruins"]&part;
-  nwr["historic"="fort"]["ruins"="no"]&part;`,
+nwr["historic"="fort"][!"ruins"]&part;
+nwr["historic"="fort"]["ruins"="no"]&part;`,
     color: "#808080",
     tags: ["historic=castle", "historic=tower", "historic=fort"],
     edit: ["historic=castle", "historic=fort", "historic"],
@@ -253,11 +253,11 @@ nw["recycling:books"="yes"];`,
     value: "mill",
     icon: "https://wiki.openstreetmap.org/w/images/0/0b/Windmill-16.svg",
     query: `
-  nwr["man_made"="watermill"][!"ruins"]&part;
-  nwr["man_made"="watermill"]["ruins"="no"]&part;
+nwr["man_made"="watermill"][!"ruins"]&part;
+nwr["man_made"="watermill"]["ruins"="no"]&part;
 
-  nwr["man_made"="windmill"][!"ruins"]&part;
-  nwr["man_made"="windmill"]["ruins"="no"]&part;`,
+nwr["man_made"="windmill"][!"ruins"]&part;
+nwr["man_made"="windmill"]["ruins"="no"]&part;`,
     color: "#e63d00",
     tags: ["man_made=watermill", "man_made=windmill"],
     edit: ["man_made=watermill", "man_made=windmill"],
@@ -268,10 +268,10 @@ nw["recycling:books"="yes"];`,
     value: "history",
     icon: "https://wiki.openstreetmap.org/w/images/c/c8/Acheological.png",
     query: `
-    nwr["historic"]["historic"!~"^(castle|tower|fort|ruins|memorial|monument|archaeological_site)$"]["building"!="bunker"]["military"!="bunker"]&part;
+nwr["historic"]["historic"!~"^(castle|tower|fort|ruins|memorial|monument|archaeological_site)$"]["building"!="bunker"]["military"!="bunker"]&part;
 
-    nw["board_type"="history"]["historic"!~"^(castle|tower|fort|ruins|memorial|monument|archaeological_site)$"]["building"!="bunker"]["military"!="bunker"]&part;
-    nw["information"="history"]["historic"!~"^(castle|tower|fort|ruins|memorial|monument|archaeological_site)$"]["building"!="bunker"]["military"!="bunker"]&part;`,
+nw["board_type"="history"]["historic"!~"^(castle|tower|fort|ruins|memorial|monument|archaeological_site)$"]["building"!="bunker"]["military"!="bunker"]&part;
+nw["information"="history"]["historic"!~"^(castle|tower|fort|ruins|memorial|monument|archaeological_site)$"]["building"!="bunker"]["military"!="bunker"]&part;`,
     color: "#e0e094",
     tags: ["historic=*", "board_type=history"],
     edit: ["historic", "tourism=information"],
@@ -282,7 +282,7 @@ nw["recycling:books"="yes"];`,
     value: "memorial",
     icon: "https://wiki.openstreetmap.org/w/images/6/6e/Memorial-16.svg",
     query: `
-  nwr["historic"="memorial"]&part;`,
+nwr["historic"="memorial"]&part;`,
     color: "#B8860B",
     tags: ["historic=memorial"],
     edit: ["historic=memorial"],
@@ -293,7 +293,7 @@ nw["recycling:books"="yes"];`,
     value: "monument",
     icon: "https://wiki.openstreetmap.org/w/images/9/94/Monument-16.svg",
     query: `
-  nwr["historic"="monument"]&part;`,
+nwr["historic"="monument"]&part;`,
     color: "#DAA520",
     tags: ["historic=monument"],
     edit: ["historic=monument"],
@@ -304,9 +304,9 @@ nw["recycling:books"="yes"];`,
     value: "museum",
     icon: "https://wiki.openstreetmap.org/w/images/a/a9/Museum-16.svg",
     query: `
-      nwr["tourism"="museum"]&free;
-     nw["tourism"="gallery"]&free;
-     nw["amenity"="arts_centre"]&free;`,
+nwr["tourism"="museum"]&free;
+nw["tourism"="gallery"]&free;
+nw["amenity"="arts_centre"]&free;`,
     color: "#DCDCDC",
     tags: ["tourism=museum", "tourism=gallery", "amenity=arts_centre"],
     edit: ["tourism=museum", "tourism=gallery", "amenity=arts_centre"],
@@ -317,9 +317,9 @@ nw["recycling:books"="yes"];`,
     value: "observatory",
     icon: "https://wiki.openstreetmap.org/w/images/e/e0/Telescope_dome-14.svg",
     query: `
-  nwr["man_made"="observatory"]&free;
-  nwr["amenity"="observatory"]&free;
-  nwr["landuse"="observatory"]&free;`,
+nwr["man_made"="observatory"]&free;
+nwr["amenity"="observatory"]&free;
+nwr["landuse"="observatory"]&free;`,
     color: "#00008B",
     tags: ["man_made=observatory"],
     edit: ["man_made=observatory", "landuse"],
@@ -330,11 +330,11 @@ nw["recycling:books"="yes"];`,
     value: "ruins",
     icon: "https://wiki.openstreetmap.org/w/images/7/78/Building_ruins_generic.svg",
     query: `
-  nwr["historic"="ruins"]&part;
+nwr["historic"="ruins"]&part;
 
-  nwr["ruins"]["ruins"!="no"]&part;
+nwr["ruins"]["ruins"!="no"]&part;
 
-  nwr["building"="ruins"]&part;`,
+nwr["building"="ruins"]&part;`,
     color: "#A9A9A9",
     tags: ["historic=ruins", "building=ruins", "ruins=*"],
     edit: ["historic=ruins", "building=ruins", "historic", "building"],
@@ -345,7 +345,7 @@ nw["recycling:books"="yes"];`,
     value: "cave",
     icon: "https://wiki.openstreetmap.org/w/images/b/b1/Cave.14.svg",
     query: `
-  nw["natural"="cave_entrance"]&part;`,
+nw["natural"="cave_entrance"]&part;`,
     color: "#2F4F4F",
     tags: ["natural=cave_entrance"],
     edit: ["natural=cave_entrance"],
@@ -356,13 +356,13 @@ nw["recycling:books"="yes"];`,
     value: "natural_monument",
     icon: "/lib/maki-icons/park-15.svg",
     query: `
-      nw["denotation"~"^(natural_monument|landmark|religious|memorial)$"]&part;
+nw["denotation"~"^(natural_monument|landmark|religious|memorial)$"]&part;
 
-      node["natural"="tree"]["religion"]&part;
-      way["natural"="tree_row"]["religion"]&part;
+node["natural"="tree"]["religion"]&part;
+way["natural"="tree_row"]["religion"]&part;
 
-      node["natural"="tree"]["historic"]&part;
-      way["natural"="tree_row"]["historic"]&part;`,
+node["natural"="tree"]["historic"]&part;
+way["natural"="tree_row"]["historic"]&part;`,
     color: "#228B22",
     tags: ["denotation=natural_monument", "denotation=landmark"],
     edit: ["natural=tree", "natural=tree_row", "natural"],
@@ -373,7 +373,7 @@ nw["recycling:books"="yes"];`,
     value: "pond",
     icon: "/lib/maki-icons/water-15.svg",
     query: `
-  nwr["natural"="water"]["water"~"^(pond|lake|reservoir|reflecting_pool)$"]&part;`,
+nwr["natural"="water"]["water"~"^(pond|lake|reservoir|reflecting_pool)$"]&part;`,
     color: "#5F9EA0",
     tags: [
       "natural=water",
@@ -390,7 +390,7 @@ nw["recycling:books"="yes"];`,
     value: "rock",
     icon: "/lib/maki-icons/circle-15.svg",
     query: `
-  nwr["natural"~"^(rock|stone)$"]&part;`,
+nwr["natural"~"^(rock|stone)$"]&part;`,
     color: "#D3D3D3",
     tags: ["natural=rock", "natural=stone"],
     edit: ["natural=rock", "natural=stone"],
@@ -401,10 +401,10 @@ nw["recycling:books"="yes"];`,
     value: "viewpoint",
     icon: "https://wiki.openstreetmap.org/w/images/c/c2/Viewpoint-16.svg",
     query: `
-  nwr["tourism"="viewpoint"]&part;
-  nw["viewpoint"="yes"]&part;
+nwr["tourism"="viewpoint"]&part;
+nw["viewpoint"="yes"]&part;
 
-  nwr["tower:type"="observation"]&part;`,
+nwr["tower:type"="observation"]&part;`,
     color: "#98FB98",
     tags: ["tourism=viewpoint", "viewpoint=*", "tower:type=observation"],
     edit: ["tourism=viewpoint", "man_made=tower", "man_made", "natural"],
@@ -415,7 +415,7 @@ nw["recycling:books"="yes"];`,
     value: "waterfall",
     icon: "https://wiki.openstreetmap.org/w/images/7/72/Waterfall-14.svg",
     query: `
-  nwr["waterway"~"^(waterfall|dam|weir)$"]&part;`,
+nwr["waterway"~"^(waterfall|dam|weir)$"]&part;`,
     color: "#20B2AA",
     tags: ["waterway=waterfall", "waterway=dam", "waterway=weir"],
     edit: ["waterway=waterfall", "waterway=dam", "waterway=weir"],
@@ -426,7 +426,7 @@ nw["recycling:books"="yes"];`,
     value: "spring",
     icon: "https://wiki.openstreetmap.org/w/images/0/0e/Spring-14.svg",
     query: `
-  nw["natural"="spring"];`,
+nw["natural"="spring"];`,
     color: "#20B2AA",
     tags: ["natural=spring"],
     edit: ["natural=spring"],
@@ -437,12 +437,12 @@ nw["recycling:books"="yes"];`,
     value: "assistance",
     icon: "https://wiki.openstreetmap.org/w/images/0/0b/Community_centre-14.svg",
     query: `
-      nwr["social_facility"="outreach"];
-      nwr["social_facility:for"~"community|all"];
+nwr["social_facility"="outreach"];
+nwr["social_facility:for"~"community|all"];
 
-      nwr["amenity"="social_centre"];
+nwr["amenity"="social_centre"];
 
-     nw["healthcare"]&free;`,
+nw["healthcare"]&free;`,
     color: "#DC143C",
     tags: ["social_facility=outreach", "amenity=social_centre", "healthcare"],
     edit: ["amenity=social_facility", "amenity=social_centre", "healthcare"],
@@ -455,7 +455,7 @@ nw["recycling:books"="yes"];`,
     button: "fas fa-blind",
     icon: "https://wiki.openstreetmap.org/w/images/0/0b/Community_centre-14.svg",
     query: `
-      nwr["social_facility:for"~"senior|elderly"];`,
+nwr["social_facility:for"~"senior|elderly"];`,
     color: "#DC143C",
     tags: ["social_facility"],
     edit: ["amenity=social_facility"],
@@ -468,7 +468,7 @@ nw["recycling:books"="yes"];`,
     button: "fab fa-accessible-icon",
     icon: "https://wiki.openstreetmap.org/w/images/0/0b/Community_centre-14.svg",
     query: `
-      nwr["social_facility:for"~"disabled|mental_health|diseased"];`,
+nwr["social_facility:for"~"disabled|mental_health|diseased"];`,
     color: "#DC143C",
     tags: ["social_facility"],
     edit: ["amenity=social_facility"],
@@ -481,7 +481,7 @@ nw["recycling:books"="yes"];`,
     button: "fas fa-angle-up",
     icon: "https://wiki.openstreetmap.org/w/images/0/0b/Community_centre-14.svg",
     query: `
-      nwr["social_facility:for"~"homeless|underprivileged|drug_addicted|unemployed"];`,
+nwr["social_facility:for"~"homeless|underprivileged|drug_addicted|unemployed"];`,
     color: "#DC143C",
     tags: ["social_facility"],
     edit: ["amenity=social_facility"],
@@ -494,8 +494,8 @@ nw["recycling:books"="yes"];`,
     button: "fas fa-running",
     icon: "https://wiki.openstreetmap.org/w/images/0/0b/Community_centre-14.svg",
     query: `
-      nwr["social_facility:for"~"migrant|refugees|refugee|displaced|migrants"];
-      nwr["emergency:social_facility:for"~"displaced"];`,
+nwr["social_facility:for"~"migrant|refugees|refugee|displaced|migrants"];
+nwr["emergency:social_facility:for"~"displaced"];`,
     color: "#DC143C",
     tags: ["social_facility"],
     edit: ["amenity=social_facility"],
@@ -508,7 +508,7 @@ nw["recycling:books"="yes"];`,
     button: "fas fa-female",
     icon: "https://wiki.openstreetmap.org/w/images/0/0b/Community_centre-14.svg",
     query: `
-      nwr["social_facility:for"~"woman|women",i];`,
+nwr["social_facility:for"~"woman|women",i];`,
     color: "#DC143C",
     tags: ["social_facility"],
     edit: ["amenity=social_facility"],
@@ -521,7 +521,7 @@ nw["recycling:books"="yes"];`,
     button: "fas fa-male",
     icon: "https://wiki.openstreetmap.org/w/images/0/0b/Community_centre-14.svg",
     query: `
-      nwr["social_facility:for"~"men"];`,
+nwr["social_facility:for"~"men"];`,
     color: "#DC143C",
     tags: ["social_facility"],
     edit: ["amenity=social_facility"],
@@ -534,7 +534,7 @@ nw["recycling:books"="yes"];`,
     button: "fas fa-child",
     icon: "https://wiki.openstreetmap.org/w/images/0/0b/Community_centre-14.svg",
     query: `
-      nwr["social_facility:for"~"child|juvenile|orphan|children|youth"];`,
+nwr["social_facility:for"~"child|juvenile|orphan|children|youth"];`,
     color: "#DC143C",
     tags: ["social_facility"],
     edit: ["amenity=social_facility"],
@@ -545,15 +545,15 @@ nw["recycling:books"="yes"];`,
     value: "assisted-repair",
     icon: "/lib/temaki-icons/tools.svg",
     query: `
-  node["repair"="assisted_self_service"];
+node["repair"="assisted_self_service"];
 
-  nw["leisure"="hackerspace"]["repair"];
+nw["leisure"="hackerspace"]["repair"];
 
-  node["network"~"Repair Caf[eé]",i];
-  node["name"~"Repair Caf[eé]",i];
-  node["brand"~"Repair Caf[eé]",i];
-  
-  nw["shop"="tool_hire"];
+node["network"~"Repair Caf[eé]",i];
+node["name"~"Repair Caf[eé]",i];
+node["brand"~"Repair Caf[eé]",i];
+
+nw["shop"="tool_hire"];
   `,
     color: "#1975ae",
     tags: [
