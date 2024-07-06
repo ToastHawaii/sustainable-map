@@ -686,14 +686,14 @@ nw["landuse"="community_food_growing"];`,
     value: "grocery",
     icon: "https://wiki.openstreetmap.org/w/images/9/96/Convenience-14.svg",
     query: `
-    nw["shop"~"^(supermarket|convenience|health_food|pasta|deli|wholesale|grocery|food|frozen_food|spices)$"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
-    nw["shop"~"^(farm|greengrocer|organic|dairy)$"];
-    nw["amenity"="vending_machine"]["vending"~"food|meat"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
-    nw["amenity"="vending_machine"]["vending"~"eggs"];
-    nw["amenity"="marketplace"];
-    nw["craft"="pasta"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
-    nw["shop"="yes"]["organic"~"^(yes|only)$"];
-    nwr[~"^(crop|produce)$"~".*"]["crop"!~"^(sun)?flowers?$"]["produce"!~"^(sun)?flowers?$"][~"^(self\_harvesting|self\_service)$"~"^(yes|only)$"];`,
+nw["shop"~"^(supermarket|convenience|health_food|pasta|deli|wholesale|grocery|food|frozen_food|spices)$"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
+nw["shop"~"^(farm|greengrocer|organic|dairy)$"];
+nw["amenity"="vending_machine"]["vending"~"food|meat"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
+nw["amenity"="vending_machine"]["vending"~"eggs"];
+nw["amenity"="marketplace"];
+nw["craft"="pasta"][~"^(regional|fair_trade|organic|second_hand|zero_waste|bulk_purchase)$"~"^(yes|only)$"];
+nw["shop"="yes"]["organic"~"^(yes|only)$"];
+nwr[~"^(crop|produce)$"~".*"]["crop"!~"^(sun)?flowers?$"]["produce"!~"^(sun)?flowers?$"][~"^(self\_harvesting|self\_service)$"~"^(yes|only)$"];`,
     color: "#ac39ac",
     tags: [
       "shop=supermarket",
@@ -718,10 +718,10 @@ nw["landuse"="community_food_growing"];`,
     value: "plant",
     icon: "https://wiki.openstreetmap.org/w/images/6/69/Florist-16.svg",
     query: `
-    nw["shop"~"^(florist|garden_centre|agrarian)$"][~"^(regional|fair_trade|organic|second_hand)$"~"^(yes|only)$"];
-    nw["amenity"="vending_machine"]["vending"~"flowers"][~"^(regional|fair_trade|organic|second_hand)$"~"^(yes|only)$"];
-    nw["craft"="gardener"][~"^(regional|fair_trade|organic|second_hand)$"~"^(yes|only)$"];
-    nwr[~"^(crop|produce)$"~"flower"][~"^(self\_harvesting|self\_service)$"~"^(yes|only)$"];`,
+nw["shop"~"^(florist|garden_centre|agrarian)$"][~"^(regional|fair_trade|organic|second_hand)$"~"^(yes|only)$"];
+nw["amenity"="vending_machine"]["vending"~"flowers"][~"^(regional|fair_trade|organic|second_hand)$"~"^(yes|only)$"];
+nw["craft"="gardener"][~"^(regional|fair_trade|organic|second_hand)$"~"^(yes|only)$"];
+nwr[~"^(crop|produce)$"~"flower"][~"^(self\_harvesting|self\_service)$"~"^(yes|only)$"];`,
     color: "#DAC01A",
     tags: [
       "shop=florist",
@@ -803,8 +803,8 @@ nw["shop"~"^(butcher|seafood)$"][~"^(regional|fair_trade|organic|second_hand|zer
     value: "vegetable",
     icon: "https://wiki.openstreetmap.org/w/images/d/d8/Greengrocer-14.svg",
     query: `
-    nw["shop"="greengrocer"][!"origin"];
-    nw["shop"="greengrocer"]["origin"="regional"];`,
+nw["shop"="greengrocer"][!"origin"];
+nw["shop"="greengrocer"]["origin"="regional"];`,
     color: "#32CD32",
     tags: ["shop=greengrocer"],
     edit: ["shop=greengrocer"],
@@ -1161,10 +1161,10 @@ nw["social_facility"="soup_kitchen"];`,
     value: "public-shower",
     icon: "https://wiki.openstreetmap.org/w/images/5/5a/Shower-14.svg",
     query: `
-     // Show only showers that are not inside a bath
+// Show only showers that are not inside a bath
+(
   (
-    (
-nw["amenity"="shower"]&part;
+    nw["amenity"="shower"]&part;
   );
   -(
     (
@@ -1241,34 +1241,34 @@ nw["amenity"="shower"]&part;
     value: "bath",
     icon: "https://wiki.openstreetmap.org/w/images/0/01/Public_bath.svg",
     query: `
-  nwr["amenity"="public_bath"]&free;
-  nwr["leisure"="water_park"]&free;
-  nwr["leisure"="bathing_place"]&part;
+nwr["amenity"="public_bath"]&free;
+nwr["leisure"="water_park"]&free;
+nwr["leisure"="bathing_place"]&part;
 
-  nwr["sport"="swimming"]["leisure"~"sports_centre|stadium"]&free;
+nwr["sport"="swimming"]["leisure"~"sports_centre|stadium"]&free;
 
-  // Show only swimming pools that are not inside a bath
+// Show only swimming pools that are not inside a bath
+(
   (
+    nwr["leisure"="swimming_pool"]&part;
+    nwr["leisure"="swimming_area"]&part;
+    nwr["leisure"="paddling_pool"]&part;
+    nwr["sport"="swimming"]["leisure"!~"sports_centre|stadium"]&part;
+  );
+  -(
     (
-      nwr["leisure"="swimming_pool"]&part;
-      nwr["leisure"="swimming_area"]&part;
-      nwr["leisure"="paddling_pool"]&part;
-      nwr["sport"="swimming"]["leisure"!~"sports_centre|stadium"]&part;
+      wr["amenity"="public_bath"];
+      wr["leisure"~"water_park|sports_centre|stadium"];
     );
-    -(
-      (
-        wr["amenity"="public_bath"];
-        wr["leisure"~"water_park|sports_centre|stadium"];
-      );
-      map_to_area -> .b;
-      (
-        nwr(area.b)["leisure"="swimming_pool"]&part;
-        nwr(area.b)["leisure"="swimming_area"]&part;
-        nwr(area.b)["leisure"="paddling_pool"]&part;
-        nwr(area.b)["sport"="swimming"]["leisure"!~"sports_centre|stadium"]&part;
-      );
+    map_to_area -> .b;
+    (
+      nwr(area.b)["leisure"="swimming_pool"]&part;
+      nwr(area.b)["leisure"="swimming_area"]&part;
+      nwr(area.b)["leisure"="paddling_pool"]&part;
+      nwr(area.b)["sport"="swimming"]["leisure"!~"sports_centre|stadium"]&part;
     );
-  );`,
+  );
+);`,
     color: "#0000CD",
     tags: [
       "sport=swimming",
@@ -1328,11 +1328,11 @@ nw["amenity"="shower"]&part;
     value: "climbing",
     icon: "/lib/temaki-icons/abseiling.svg",
     query: `
-      // climbing and rock_climbing
-  nwr["sport"~"climbing"]["leisure"!~"sports_centre|stadium"]&part;
-  nwr["sport"~"climbing"]["leisure"~"sports_centre|stadium"]&free;
+// climbing and rock_climbing
+nwr["sport"~"climbing"]["leisure"!~"sports_centre|stadium"]&part;
+nwr["sport"~"climbing"]["leisure"~"sports_centre|stadium"]&free;
 
-  nwr["playground"="climbingwall"]&part;`,
+nwr["playground"="climbingwall"]&part;`,
     color: "#696969",
     tags: ["sport=climbing", "playground=climbingwall"],
     edit: ["natural", "landuse=recreation_ground", "playground"],
@@ -1465,11 +1465,11 @@ nw["amenity"="shower"]&part;
     value: "sledding",
     icon: "/lib/temaki-icons/sledding.svg",
     query: `
-  nwr["sport"="toboggan"]&part;
+nwr["sport"="toboggan"]&part;
 
-  nwr["piste:type"="sled"]&part;
+nwr["piste:type"="sled"]&part;
 
-  nwr["playground"="sledding"]&part;`,
+nwr["playground"="sledding"]&part;`,
     color: "#D2691E",
     tags: ["sport=toboggan", "piste:type=sled", "playground=sledding"],
     edit: [],
@@ -1480,7 +1480,7 @@ nw["amenity"="shower"]&part;
     value: "fitness-trail",
     icon: "/lib/maki-icons/pitch-15.svg",
     query: `
-  nwr["route"="fitness_trail"]&part;`,
+nwr["route"="fitness_trail"]&part;`,
     color: "#8B008B",
     tags: ["route=fitness_trail"],
     edit: ["type=route"],
@@ -1491,10 +1491,10 @@ nw["amenity"="shower"]&part;
     value: "running",
     icon: "/lib/maki-icons/pitch-15.svg",
     query: `
-  nwr["sport"="running"]["leisure"!~"sports_centre|stadium"]&part;
-  nwr["sport"="running"]["leisure"~"sports_centre|stadium"]&free;
+nwr["sport"="running"]["leisure"!~"sports_centre|stadium"]&part;
+nwr["sport"="running"]["leisure"~"sports_centre|stadium"]&free;
 
-  nwr["leisure"="track"]["sport"="athletics"]&part;`,
+nwr["leisure"="track"]["sport"="athletics"]&part;`,
     color: "#8B0000",
     tags: ["sport=running", "sport=athletics"],
     edit: ["sport=running", "sport=athletics"],
@@ -1505,9 +1505,9 @@ nw["amenity"="shower"]&part;
     value: "soccer",
     icon: "/lib/maki-icons/soccer-15.svg",
     query: `
-    // exclude table_soccer
-      nwr["sport"~"(^soccer)|;soccer|multi"]["leisure"!~"sports_centre|stadium"]&part;
-      nwr["sport"~"(^soccer)|;soccer|multi"]["leisure"~"sports_centre|stadium"]&free;`,
+// exclude table_soccer
+nwr["sport"~"(^soccer)|;soccer|multi"]["leisure"!~"sports_centre|stadium"]&part;
+nwr["sport"~"(^soccer)|;soccer|multi"]["leisure"~"sports_centre|stadium"]&free;`,
     color: "#ADFF2F",
     tags: ["leisure=pitch", "sport=soccer", "sport=multi"],
     edit: ["leisure=pitch"],
@@ -1518,11 +1518,11 @@ nw["amenity"="shower"]&part;
     value: "table-tennis",
     icon: "/lib/maki-icons/table-tennis-15.svg",
     query: `
-  // Table tennis
-  nw["sport"="table_tennis"];
+// Table tennis
+nw["sport"="table_tennis"];
 
-  // Table tennis (obsolete)
-  nw["leisure"="table_tennis_table"];`,
+// Table tennis (obsolete)
+nw["leisure"="table_tennis_table"];`,
     color: "#008000",
     tags: ["sport=table_tennis"],
     edit: ["leisure=pitch"],
@@ -1533,7 +1533,7 @@ nw["amenity"="shower"]&part;
     value: "table-soccer",
     icon: "https://wiki.openstreetmap.org/w/images/c/c8/Kicker02.png",
     query: `
-      nwr["leisure"="pitch"]["sport"="table_soccer"]["fee"];`,
+nwr["leisure"="pitch"]["sport"="table_soccer"]["fee"];`,
     color: "#7CFC00",
     tags: ["sport=table_soccer"],
     edit: ["leisure=pitch"],
@@ -1544,9 +1544,9 @@ nw["amenity"="shower"]&part;
     value: "volleyball",
     icon: "/lib/maki-icons/volleyball-15.svg",
     query: `
-      // volleyball and beachvolleyball
-      nwr["sport"~"volleyball"]["leisure"!~"sports_centre|stadium"]&part;
-      nwr["sport"~"volleyball"]["leisure"~"sports_centre|stadium"]&free;`,
+// volleyball and beachvolleyball
+nwr["sport"~"volleyball"]["leisure"!~"sports_centre|stadium"]&part;
+nwr["sport"~"volleyball"]["leisure"~"sports_centre|stadium"]&free;`,
     color: "#F4A460",
     tags: ["leisure=pitch", "sport=volleyball", "sport=beachvolleyball"],
     edit: ["leisure=pitch"],
@@ -1688,27 +1688,27 @@ node["man_made"="surveillance"]["image"];`,
     value: "musical_instrument",
     icon: "/lib/maki-icons/music-15.svg",
     query: `
-    // Get
-  nw["shop"="musical_instrument"]["second_hand"~"^(yes|only)$"];
+// Get
+nw["shop"="musical_instrument"]["second_hand"~"^(yes|only)$"];
 
-  // Rent / Share
-  nw["amenity"="piano"][!"craft"][!"shop"]&access;
-  nw["piano"="yes"][!"craft"][!"shop"]&access;
+// Rent / Share
+nw["amenity"="piano"][!"craft"][!"shop"]&access;
+nw["piano"="yes"][!"craft"][!"shop"]&access;
 
-  nw["playground"="musical_instrument"]&access;
-  nw["amenity"="musical_instrument"]&access;
-  nw["musical_instrument"][!"craft"][!"shop"]&access;
-  nw[~"^musical_instrument:.*$"~"yes"][!"craft"][!"shop"]&access;
+nw["playground"="musical_instrument"]&access;
+nw["amenity"="musical_instrument"]&access;
+nw["musical_instrument"][!"craft"][!"shop"]&access;
+nw[~"^musical_instrument:.*$"~"yes"][!"craft"][!"shop"]&access;
 
-  nw["musical_instrument:rental"~"^(yes|only)$"];
-  nw["shop"="musical_instrument"]["rental"~"^(yes|only)$"];
-  nw["craft"="musical_instrument"]["rental"~"^(yes|only)$"];
+nw["musical_instrument:rental"~"^(yes|only)$"];
+nw["shop"="musical_instrument"]["rental"~"^(yes|only)$"];
+nw["craft"="musical_instrument"]["rental"~"^(yes|only)$"];
 
-  // Repair
-  nw["musical_instrument:repair"~"^(yes|only)$"];
-  nw["shop"="musical_instrument"]["repair"~"^(yes|only)$"];
-  nw["craft"="musical_instrument"]["repair"~"^(yes|only)$"];
-  nw["craft"="luthier"]["repair"~"^(yes|only)$"];`,
+// Repair
+nw["musical_instrument:repair"~"^(yes|only)$"];
+nw["shop"="musical_instrument"]["repair"~"^(yes|only)$"];
+nw["craft"="musical_instrument"]["repair"~"^(yes|only)$"];
+nw["craft"="luthier"]["repair"~"^(yes|only)$"];`,
     color: "#008B8B",
     tags: [
       "shop=musical_instrument",
@@ -1737,29 +1737,29 @@ node["man_made"="surveillance"]["image"];`,
     value: "sport",
     icon: "https://wiki.openstreetmap.org/w/images/7/76/Outdoor-14.svg",
     query: `
-    // Get
-    nw["shop"="sport"]["second_hand"~"^(yes|only)$"];
-    nw["shop"="ski"]["second_hand"~"^(yes|only)$"];
+// Get
+nw["shop"="sport"]["second_hand"~"^(yes|only)$"];
+nw["shop"="ski"]["second_hand"~"^(yes|only)$"];
 
-    // Rent / Share
-    nw["ski:rental"~"^(yes|only)$"];
-    nw["snowboard:rental"~"^(yes|only)$"];
-    nw["scuba_diving:rental"~"^(yes|only)$"];
-    nw["standup_paddleboard_rental"~"^(yes|only)$"];
-    nw["board_rental"~"^(yes|only)$"];
-    nw["rental"~"ski|sled|skates|snowboard|surf|sailboard"];
-    nw["amenity"="ski_rental"];
-    nw["shop"="ski_rental"];
-    nw["ski"="rental"];
-    nw["shop"~"^(sports|ski|surf|outdoor|scuba_diving)$"]["rental"~"^(yes|only)$"];
-    nw["amenity"="ski_school"]["rental"~"^(yes|only)$"];
+// Rent / Share
+nw["ski:rental"~"^(yes|only)$"];
+nw["snowboard:rental"~"^(yes|only)$"];
+nw["scuba_diving:rental"~"^(yes|only)$"];
+nw["standup_paddleboard_rental"~"^(yes|only)$"];
+nw["board_rental"~"^(yes|only)$"];
+nw["rental"~"ski|sled|skates|snowboard|surf|sailboard"];
+nw["amenity"="ski_rental"];
+nw["shop"="ski_rental"];
+nw["ski"="rental"];
+nw["shop"~"^(sports|ski|surf|outdoor|scuba_diving)$"]["rental"~"^(yes|only)$"];
+nw["amenity"="ski_school"]["rental"~"^(yes|only)$"];
 
-    // Repair
-    nw["scuba_diving:repair"~"^(yes|only)$"];
-    nw["ski:repair"~"^(yes|only)$"];
-    nw["repair"="ski"];
-    nw["shop"~"^(sports|outdoor|ski)$"]["repair"~"^(yes|only)$"];
-    nw["amenity"~"^(ski_rental|dive_centre)$"]["repair"~"^(yes|only)$"];`,
+// Repair
+nw["scuba_diving:repair"~"^(yes|only)$"];
+nw["ski:repair"~"^(yes|only)$"];
+nw["repair"="ski"];
+nw["shop"~"^(sports|outdoor|ski)$"]["repair"~"^(yes|only)$"];
+nw["amenity"~"^(ski_rental|dive_centre)$"]["repair"~"^(yes|only)$"];`,
     color: "#DC143C",
     tags: [
       "shop=sports",
@@ -1785,13 +1785,13 @@ node["man_made"="surveillance"]["image"];`,
     value: "advertising",
     icon: "https://wiki.openstreetmap.org/w/images/2/20/Column-14.svg",
     query: `
-      nwr["advertising"]["access"]&part;
-      nwr["man_made"="advertising"]["access"]&part;
+nwr["advertising"]["access"]&part;
+nwr["man_made"="advertising"]["access"]&part;
 
-      node["advertising"]["operator:type"="community"]&part;
-      node["advertising"]["operator:type"="public"]&part;
+node["advertising"]["operator:type"="community"]&part;
+node["advertising"]["operator:type"="public"]&part;
 
-      nw["board_type"="notice"]["access"]&part;`,
+nw["board_type"="notice"]["access"]&part;`,
     color: "#e6007a",
     tags: ["man_made=advertising", "board_type=notice"],
     edit: [
