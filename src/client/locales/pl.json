@@ -66,6 +66,7 @@
   "electronics": "Elektronika",
   "toy": "Zabawki",
   "recycling": "Recykling",
+  "open": "Otwarte",
   "rings": "Pierścienie",
   "balance": "Balans",
   "clothes": "Ubrania",
@@ -76,6 +77,7 @@
   "marketplace": "Bazar",
   "reuse": "Ponowne użycie",
   "indoor": "Wewnątrz",
+  "closed": "Zamknięte",
   "PET": "PET",
   "polyester": "Poliester",
   "shoes": "Buty"
