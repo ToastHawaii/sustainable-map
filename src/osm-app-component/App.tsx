@@ -42,6 +42,8 @@ export function App<M>({
   externalResources?: any;
 }) {
   const { t } = useTranslation();
+  
+  // printTagInfoList(t, "https://sustainable.zottelig.ch/", filters);
 
   const params = getQueryParams();
 

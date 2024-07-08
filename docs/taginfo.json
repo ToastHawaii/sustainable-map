@@ -10,328 +10,1912 @@
     "contact_email": "info@zottelig.ch"
   },
   "tags": [
-    { "key": "tourism", "value": "artwork" },
-    { "key": "amenity", "value": "fountain" },
-    { "key": "playground", "value": "splash_pad" },
-    { "key": "tourism", "value": "attraction" },
-    { "key": "tourism" },
-    { "key": "heritage" },
-    { "key": "historic", "value": "archaeological_site" },
-    { "key": "geological", "value": "palaeontological_site" },
-    { "key": "educational", "value": "yes" },
-    { "key": "route", "value": "educational_trail" },
-    { "key": "board_type", "value": "wildlife" },
-    { "key": "board_type", "value": "plants" },
-    { "key": "board_type", "value": "geology" },
-    { "key": "board_type", "value": "nature" },
-    { "key": "board_type", "value": "planet_walk" },
-    { "key": "board_type", "value": "astronomy" },
-    { "key": "board_type", "value": "forestry" },
-    { "key": "board_type", "value": "botany" },
-    { "key": "board_type", "value": "biology" },
-    { "key": "board_type", "value": "birds" },
-    { "key": "board_type", "value": "tree" },
-    { "key": "board_type", "value": "panorama" },
-    { "key": "board_type", "value": "science" },
-    { "key": "board_type", "value": "technology" },
-    { "key": "shop", "value": "books" },
-    { "key": "amenity", "value": "public_bookcase" },
-    { "key": "amenity", "value": "library" },
-    { "key": "amenity", "value": "mobile_library" },
-    { "key": "recycling:books", "value": "yes" },
-    { "key": "internet_access" },
-    { "key": "wifi" },
-    { "key": "historic", "value": "castle" },
-    { "key": "historic", "value": "tower" },
-    { "key": "historic", "value": "fort" },
-    { "key": "man_made", "value": "watermill" },
-    { "key": "man_made", "value": "windmill" },
-    { "key": "historic" },
-    { "key": "board_type", "value": "history" },
-    { "key": "historic", "value": "memorial" },
-    { "key": "historic", "value": "monument" },
-    { "key": "tourism", "value": "museum" },
-    { "key": "tourism", "value": "gallery" },
-    { "key": "amenity", "value": "arts_centre" },
-    { "key": "man_made", "value": "observatory" },
-    { "key": "historic", "value": "ruins" },
-    { "key": "building", "value": "ruins" },
-    { "key": "ruins" },
-    { "key": "natural", "value": "cave_entrance" },
-    { "key": "denotation", "value": "natural_monument" },
-    { "key": "denotation", "value": "landmark" },
-    { "key": "natural", "value": "water" },
-    { "key": "water", "value": "pond" },
-    { "key": "water", "value": "lake" },
-    { "key": "water", "value": "reservoir" },
-    { "key": "water", "value": "reflecting_pool" },
-    { "key": "natural", "value": "rock" },
-    { "key": "natural", "value": "stone" },
-    { "key": "tourism", "value": "viewpoint" },
-    { "key": "viewpoint" },
-    { "key": "tower:type", "value": "observation" },
-    { "key": "waterway", "value": "waterfall" },
-    { "key": "waterway", "value": "dam" },
-    { "key": "waterway", "value": "weir" },
-    { "key": "natural", "value": "spring" },
-    { "key": "social_facility", "value": "outreach" },
-    { "key": "amenity", "value": "social_centre" },
-    { "key": "healthcare" },
-    { "key": "social_facility" },
-    { "key": "repair", "value": "assisted_self_service" },
-    { "key": "leisure", "value": "hackerspace" },
-    { "key": "shop", "value": "tool_hire" },
-    { "key": "repair" },
-    { "key": "amenity", "value": "bbq" },
-    { "key": "bbq" },
-    { "key": "amenity", "value": "baking_oven" },
-    { "key": "building", "value": "bakehouse" },
-    { "key": "amenity", "value": "bicycle_repair_station" },
-    { "key": "service:bicycle:repair" },
-    { "key": "bicycle:repair" },
-    { "key": "service:bicycle:diy" },
-    { "key": "amenity", "value": "charging_station" },
-    { "key": "amenity", "value": "community_centre" },
-    { "key": "club", "value": "scout" },
-    { "key": "scout", "value": "yes" },
-    { "key": "garden:type", "value": "community" },
-    { "key": "landuse", "value": "community_food_growing" },
-    { "key": "landuse", "value": "allotments" },
-    { "key": "shop", "value": "supermarket" },
-    { "key": "shop", "value": "convenience" },
-    { "key": "shop", "value": "farm" },
-    { "key": "amenity", "value": "marketplace" },
-    { "key": "self_harvesting" },
-    { "key": "shop", "value": "florist" },
-    { "key": "shop", "value": "garden_centre" },
-    { "key": "shop", "value": "agrarian" },
-    { "key": "amenity", "value": "vending_machine" },
-    { "key": "craft", "value": "gardener" },
-    { "key": "shop", "value": "confectionery" },
-    { "key": "shop", "value": "chocolate" },
-    { "key": "shop", "value": "ice_cream" },
-    { "key": "shop", "value": "pastry" },
-    { "key": "craft", "value": "beekeeper" },
-    { "key": "shop", "value": "bakery" },
-    { "key": "shop", "value": "cheese" },
-    { "key": "shop", "value": "dairy" },
-    { "key": "craft", "value": "cheese_maker" },
-    { "key": "vending", "value": "milk" },
-    { "key": "shop", "value": "butcher" },
-    { "key": "shop", "value": "seafood" },
-    { "key": "shop", "value": "greengrocer" },
-    { "key": "shop", "value": "beverages" },
-    { "key": "shop", "value": "wine" },
-    { "key": "shop", "value": "alcohol" },
-    { "key": "shop", "value": "tea" },
-    { "key": "craft", "value": "winery" },
-    { "key": "craft", "value": "distillery" },
-    { "key": "craft", "value": "brewery" },
-    { "key": "microbrewery", "value": "yes" },
-    { "key": "changing_table" },
-    { "key": "shop", "value": "chemist" },
-    { "key": "shop", "value": "health_food" },
-    { "key": "shop", "value": "hairdresser" },
-    { "key": "shop", "value": "cosmetics" },
-    { "key": "shop", "value": "herbalist" },
-    { "key": "shop", "value": "beauty" },
-    { "key": "shop", "value": "perfumery" },
-    { "key": "shop", "value": "nutrition_supplements" },
-    { "key": "amenity", "value": "pharmacy" },
-    { "key": "craft", "value": "soap" },
-    { "key": "vending", "value": "chemist" },
-    { "key": "amenity", "value": "kneipp_water_cure" },
-    { "key": "amenity", "value": "drinking_water" },
-    { "key": "drinking_water" },
-    { "key": "amenity", "value": "water_point" },
-    { "key": "drinking_water:refill" },
-    { "key": "emergency", "value": "defibrillator" },
-    { "key": "amenity", "value": "food_sharing" },
-    { "key": "social_facility", "value": "food_bank" },
-    { "key": "social_facility", "value": "soup_kitchen" },
-    { "key": "social_facility", "value": "dairy_kitchen" },
-    { "key": "amenity", "value": "restaurant" },
-    { "key": "amenity", "value": "biergarten" },
-    { "key": "amenity", "value": "fast_food" },
-    { "key": "amenity", "value": "ice_cream" },
-    { "key": "amenity", "value": "pub" },
-    { "key": "amenity", "value": "bar" },
-    { "key": "amenity", "value": "cafe" },
-    { "key": "amenity", "value": "canteen" },
-    { "key": "amenity", "value": "juice_bar" },
-    { "key": "amenity", "value": "give_box" },
-    { "key": "amenity", "value": "freeshop" },
-    { "key": "shop", "value": "charity" },
-    { "key": "shop", "value": "second_hand" },
-    { "key": "amenity", "value": "toy_library" },
-    { "key": "shop", "value": "antiques" },
-    { "key": "second_hand" },
-    { "key": "charity" },
-    { "key": "fair_trade" },
-    { "key": "club", "value": "doityourself" },
-    { "key": "office", "value": "charity" },
-    { "key": "charity", "value": "yes" },
-    { "key": "operator:type", "value": "private_non_profit" },
-    { "key": "operator:type", "value": "charitable" },
-    { "key": "operator:type", "value": "community" },
-    { "key": "office", "value": "ngo" },
-    { "key": "operator:type", "value": "ngo" },
-    { "key": "office", "value": "foundation" },
-    { "key": "office", "value": "association" },
-    { "key": "healthcare", "value": "blood_donation" },
-    { "key": "amenity", "value": "coworking_space" },
-    { "key": "office", "value": "coworking" },
-    { "key": "amenity", "value": "shower" },
-    { "key": "amenity", "value": "compressed_air" },
-    { "key": "compressed_air" },
-    { "key": "service:bicycle:pump" },
-    { "key": "amenity", "value": "toilets" },
-    { "key": "building", "value": "toilets" },
-    { "key": "toilets" },
-    { "key": "leisure", "value": "pitch" },
-    { "key": "sport", "value": "basketball" },
-    { "key": "sport", "value": "multi" },
-    { "key": "sport", "value": "swimming" },
-    { "key": "amenity", "value": "public_bath" },
-    { "key": "leisure", "value": "water_park" },
-    { "key": "leisure", "value": "swimming_pool" },
-    { "key": "leisure", "value": "swimming_area" },
-    { "key": "leisure", "value": "paddling_pool" },
-    { "key": "sport", "value": "bmx" },
-    { "key": "sport", "value": "cycling" },
-    { "key": "sport", "value": "skateboard" },
-    { "key": "sport", "value": "chess" },
-    { "key": "sport", "value": "climbing" },
-    { "key": "playground", "value": "climbingwall" },
-    { "key": "sport", "value": "boules" },
-    { "key": "sport", "value": "bowls" },
-    { "key": "leisure", "value": "fitness_station" },
-    { "key": "sport" },
-    { "key": "playground" },
-    { "key": "sport", "value": "toboggan" },
-    { "key": "piste:type", "value": "sled" },
-    { "key": "playground", "value": "sledding" },
-    { "key": "route", "value": "fitness_trail" },
-    { "key": "sport", "value": "running" },
-    { "key": "sport", "value": "athletics" },
-    { "key": "sport", "value": "soccer" },
-    { "key": "sport", "value": "table_tennis" },
-    { "key": "sport", "value": "table_soccer" },
-    { "key": "sport", "value": "volleyball" },
-    { "key": "sport", "value": "beachvolleyball" },
-    { "key": "tourism", "value": "zoo" },
-    { "key": "attraction", "value": "animal" },
-    { "key": "tourism", "value": "aquarium" },
-    { "key": "man_made", "value": "beehive" },
-    { "key": "landuse", "value": "apiary" },
-    { "key": "landuse", "value": "animal_keeping" },
-    { "key": "landuse", "value": "meadow" },
-    { "key": "landuse", "value": "farmyard" },
-    { "key": "leisure", "value": "bird_hide" },
-    { "key": "leisure", "value": "wildlife_hide" },
-    { "key": "observation", "value": "wild_animal" },
-    { "key": "man_made", "value": "nesting_site" },
-    { "key": "man_made", "value": "insect_hotel" },
-    { "key": "natural", "value": "anthill" },
-    { "key": "natural", "value": "termite_mound" },
-    { "key": "attraction", "value": "maze" },
-    { "key": "man_made", "value": "surveillance" },
-    { "key": "shop", "value": "musical_instrument" },
-    { "key": "musical_instrument:rental" },
-    { "key": "musical_instrument" },
-    { "key": "amenity", "value": "piano" },
-    { "key": "amenity", "value": "printer" },
-    { "key": "shop", "value": "copyshop" },
-    { "key": "shop", "value": "printing" },
-    { "key": "shop", "value": "sports" },
-    { "key": "shop", "value": "outdoor" },
-    { "key": "shop", "value": "scuba_diving" },
-    { "key": "amenity", "value": "dive_centre" },
-    { "key": "shop", "value": "ski" },
-    { "key": "shop", "value": "surf" },
-    { "key": "amenity", "value": "ski_rental" },
-    { "key": "man_made", "value": "advertising" },
-    { "key": "board_type", "value": "notice" },
-    { "key": "leisure", "value": "firepit" },
-    { "key": "fireplace" },
-    { "key": "openfire" },
-    { "key": "information", "value": "map" },
-    { "key": "leisure", "value": "garden" },
-    { "key": "leisure", "value": "nature_reserve" },
-    { "key": "boundary", "value": "national_park" },
-    { "key": "boundary", "value": "protected_area" },
-    { "key": "leisure", "value": "park" },
-    { "key": "landuse", "value": "recreation_ground" },
-    { "key": "recycling:batteries", "value": "yes" },
-    { "key": "recycling:car_batteries", "value": "yes" },
-    { "key": "vending", "value": "bottle_return" },
-    { "key": "recycling:cooking_oil", "value": "yes" },
-    { "key": "recycling:engine_oil", "value": "yes" },
-    { "key": "recycling:oil", "value": "yes" },
-    { "key": "recycling:waste_oil", "value": "yes" },
-    { "key": "recycling:hazardous_waste", "value": "yes" },
-    { "key": "recycling:hydrargyrum", "value": "yes" },
-    { "key": "recycling:paint", "value": "yes" },
-    { "key": "recycling:hardcore", "value": "yes" },
-    { "key": "recycling:rubble", "value": "yes" },
-    { "key": "recycling:plastic", "value": "yes" },
-    { "key": "recycling:plastic_bottles", "value": "yes" },
-    { "key": "recycling:plastic_packaging", "value": "yes" },
-    { "key": "recycling:PET", "value": "yes" },
-    { "key": "recycling:plastic_bags", "value": "yes" },
-    { "key": "recycling:polystyrene_foam", "value": "yes" },
-    { "key": "recycling:polyester", "value": "yes" },
-    { "key": "recycling:styrofoam", "value": "yes" },
-    { "key": "recycling:foil", "value": "yes" },
-    { "key": "tourism", "value": "picnic_site" },
-    { "key": "leisure", "value": "picnic_table" },
-    { "key": "shelter_type", "value": "picnic_shelter" },
-    { "key": "place", "value": "square" },
-    { "key": "leisure", "value": "common" },
-    { "key": "highway", "value": "pedestrian" },
-    { "key": "highway", "value": "footway" },
-    { "key": "leisure", "value": "playground" },
-    { "key": "amenity", "value": "lounger" },
-    { "key": "amenity", "value": "hammock" },
-    { "key": "shop", "value": "clothes" },
-    { "key": "shop", "value": "boutique" },
-    { "key": "shop", "value": "fashion" },
-    { "key": "shop", "value": "shoes" },
-    { "key": "shop", "value": "bag" },
-    { "key": "shop", "value": "sewing" },
-    { "key": "shop", "value": "tailor" },
-    { "key": "shop", "value": "fabric" },
-    { "key": "shop", "value": "shoe_repair" },
-    { "key": "craft", "value": "shoemaker" },
-    { "key": "craft", "value": "dressmaker" },
-    { "key": "craft", "value": "tailor" },
-    { "key": "recycling:clothes", "value": "yes" },
-    { "key": "recycling:shoes", "value": "yes" },
-    { "key": "social_facility", "value": "clothing_bank" },
-    { "key": "shop", "value": "mobile_phone" },
-    { "key": "recycling:mobile_phones", "value": "yes" },
-    { "key": "amenity", "value": "device_charging_station" },
-    { "key": "amenity", "value": "recycling" },
-    { "key": "shop", "value": "computer" },
-    { "key": "recycling:toys", "value": "yes" },
-    { "key": "shop", "value": "toys" },
-    { "key": "shop", "value": "electronics" },
-    { "key": "shop", "value": "hifi" },
-    { "key": "shop", "value": "appliance" },
-    { "key": "shop", "value": "camera" },
-    { "key": "shop", "value": "kitchen" },
-    { "key": "shop", "value": "radiotechnics" },
-    { "key": "shop", "value": "electrical" },
-    { "key": "shop", "value": "vacuum_cleaner" },
-    { "key": "craft", "value": "electronics_repair" },
-    { "key": "recycling:furniture", "value": "yes" },
-    { "key": "recycling:wood", "value": "yes" },
-    { "key": "shop", "value": "interior_decoration" },
-    { "key": "shop", "value": "furniture" },
-    { "key": "craft", "value": "cabinet_maker" },
-    { "key": "shop", "value": "bicycle" },
-    { "key": "service:bicycle:second_hand" },
-    { "key": "amenity", "value": "bicycle_rental" },
-    { "key": "amenity", "value": "bicycle_library" }
+    {
+      "key": "man_made",
+      "value": "advertising",
+      "description": "Community/Advertising space",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/advertising&info=community/advertising"
+    },
+    {
+      "key": "board_type",
+      "value": "notice",
+      "description": "Community/Advertising space",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/advertising&info=community/advertising"
+    },
+    {
+      "key": "social_facility",
+      "value": "outreach",
+      "description": "Community/Assistance",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/assistance&info=community/assistance"
+    },
+    {
+      "key": "amenity",
+      "value": "social_centre",
+      "description": "Community/Assistance",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/assistance&info=community/assistance"
+    },
+    {
+      "key": "healthcare",
+      "description": "Community/Assistance",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/assistance&info=community/assistance"
+    },
+    {
+      "key": "repair",
+      "value": "assisted_self_service",
+      "description": "Community/Assisted repair, Goods/Computer, Goods/Electronic, Goods/Furniture, Goods/Phone, Goods/Toy, Mobility/Bicycle, Mobility/Bicycle self repair, Mobility/Bicycle (Repair), Goods/Computer (Repair), Goods/Electronic (Repair), Goods/Furniture (Repair), Goods/Phone (Repair), Goods/Toy (Repair)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/assisted-repair&info=community/assisted-repair"
+    },
+    {
+      "key": "leisure",
+      "value": "hackerspace",
+      "description": "Community/Assisted repair, Goods/Hackerspace",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/assisted-repair&info=community/assisted-repair"
+    },
+    {
+      "key": "shop",
+      "value": "tool_hire",
+      "description": "Community/Assisted repair, Goods/Get goods",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/assisted-repair&info=community/assisted-repair"
+    },
+    {
+      "key": "repair",
+      "description": "Community/Assisted repair, Goods/Computer, Goods/Electronic, Goods/Furniture, Goods/Phone, Goods/Toy, Mobility/Bicycle, Mobility/Bicycle (Repair), Goods/Computer (Repair), Goods/Electronic (Repair), Goods/Furniture (Repair), Goods/Phone (Repair), Goods/Toy (Repair)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/assisted-repair&info=community/assisted-repair"
+    },
+    {
+      "key": "amenity",
+      "value": "community_centre",
+      "description": "Community/Community centre, Community/Scout Group",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/community-centre&info=community/community-centre"
+    },
+    {
+      "key": "garden:type",
+      "value": "community",
+      "description": "Community/Community garden, Food/Grow",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/community-garden&info=community/community-garden"
+    },
+    {
+      "key": "landuse",
+      "value": "community_food_growing",
+      "description": "Community/Community garden, Food/Grow",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/community-garden&info=community/community-garden"
+    },
+    {
+      "key": "office",
+      "value": "charity",
+      "description": "Community/Contribute",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute"
+    },
+    {
+      "key": "shop",
+      "value": "charity",
+      "description": "Community/Contribute, Goods/Get goods, Goods/Goods exchange",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute"
+    },
+    {
+      "key": "charity",
+      "value": "yes",
+      "description": "Community/Contribute",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute"
+    },
+    {
+      "key": "operator:type",
+      "value": "private_non_profit",
+      "description": "Community/Contribute",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute"
+    },
+    {
+      "key": "operator:type",
+      "value": "charitable",
+      "description": "Community/Contribute",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute"
+    },
+    {
+      "key": "operator:type",
+      "value": "community",
+      "description": "Community/Contribute",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute"
+    },
+    {
+      "key": "office",
+      "value": "ngo",
+      "description": "Community/Contribute",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute"
+    },
+    {
+      "key": "operator:type",
+      "value": "ngo",
+      "description": "Community/Contribute",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute"
+    },
+    {
+      "key": "office",
+      "value": "foundation",
+      "description": "Community/Contribute",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute"
+    },
+    {
+      "key": "office",
+      "value": "association",
+      "description": "Community/Contribute",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute"
+    },
+    {
+      "key": "healthcare",
+      "value": "blood_donation",
+      "description": "Community/Contribute",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute"
+    },
+    {
+      "key": "amenity",
+      "value": "coworking_space",
+      "description": "Community/Coworking",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/coworking&info=community/coworking"
+    },
+    {
+      "key": "office",
+      "value": "coworking",
+      "description": "Community/Coworking",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/coworking&info=community/coworking"
+    },
+    {
+      "key": "club",
+      "value": "scout",
+      "description": "Community/Scout Group",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/scout&info=community/scout"
+    },
+    {
+      "key": "scout",
+      "value": "yes",
+      "description": "Community/Scout Group",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/scout&info=community/scout"
+    },
+    {
+      "key": "leisure",
+      "value": "pitch",
+      "description": "Community sport/Basketball, Community sport/Soccer, Community sport/Volleyball",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/basketball&info=communitySport/basketball"
+    },
+    {
+      "key": "sport",
+      "value": "basketball",
+      "description": "Community sport/Basketball",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/basketball&info=communitySport/basketball"
+    },
+    {
+      "key": "sport",
+      "value": "multi",
+      "description": "Community sport/Basketball, Community sport/Soccer",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/basketball&info=communitySport/basketball"
+    },
+    {
+      "key": "sport",
+      "value": "boules",
+      "description": "Community sport/Boules",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/boules&info=communitySport/boules"
+    },
+    {
+      "key": "sport",
+      "value": "bowls",
+      "description": "Community sport/Boules",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/boules&info=communitySport/boules"
+    },
+    {
+      "key": "sport",
+      "value": "soccer",
+      "description": "Community sport/Soccer",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/soccer&info=communitySport/soccer"
+    },
+    {
+      "key": "sport",
+      "value": "chess",
+      "description": "Community sport/Street chess",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/chess&info=communitySport/chess"
+    },
+    {
+      "key": "sport",
+      "value": "table_soccer",
+      "description": "Community sport/Table soccer",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/table-soccer&info=communitySport/table-soccer"
+    },
+    {
+      "key": "sport",
+      "value": "table_tennis",
+      "description": "Community sport/Table tennis",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/table-tennis&info=communitySport/table-tennis"
+    },
+    {
+      "key": "sport",
+      "value": "volleyball",
+      "description": "Community sport/Volleyball",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/volleyball&info=communitySport/volleyball"
+    },
+    {
+      "key": "sport",
+      "value": "beachvolleyball",
+      "description": "Community sport/Volleyball",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/volleyball&info=communitySport/volleyball"
+    },
+    {
+      "key": "historic",
+      "value": "archaeological_site",
+      "description": "Culture/Archaeological site",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/archaeological-site&info=culture/archaeological-site"
+    },
+    {
+      "key": "geological",
+      "value": "palaeontological_site",
+      "description": "Culture/Archaeological site",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/archaeological-site&info=culture/archaeological-site"
+    },
+    {
+      "key": "tourism",
+      "value": "artwork",
+      "description": "Culture/Artwork",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/artwork&info=culture/artwork"
+    },
+    {
+      "key": "historic",
+      "value": "castle",
+      "description": "Culture/Castle",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/castle&info=culture/castle"
+    },
+    {
+      "key": "historic",
+      "value": "tower",
+      "description": "Culture/Castle",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/castle&info=culture/castle"
+    },
+    {
+      "key": "historic",
+      "value": "fort",
+      "description": "Culture/Castle",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/castle&info=culture/castle"
+    },
+    {
+      "key": "amenity",
+      "value": "fountain",
+      "description": "Culture/Fountain",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/fountain&info=culture/fountain"
+    },
+    {
+      "key": "playground",
+      "value": "splash_pad",
+      "description": "Culture/Fountain",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/fountain&info=culture/fountain"
+    },
+    {
+      "key": "historic",
+      "description": "Culture/History",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/history&info=culture/history"
+    },
+    {
+      "key": "board_type",
+      "value": "history",
+      "description": "Culture/History",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/history&info=culture/history"
+    },
+    {
+      "key": "historic",
+      "value": "memorial",
+      "description": "Culture/Memorial",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/memorial&info=culture/memorial"
+    },
+    {
+      "key": "man_made",
+      "value": "watermill",
+      "description": "Culture/Mill",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/mill&info=culture/mill"
+    },
+    {
+      "key": "man_made",
+      "value": "windmill",
+      "description": "Culture/Mill",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/mill&info=culture/mill"
+    },
+    {
+      "key": "historic",
+      "value": "monument",
+      "description": "Culture/Monument",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/monument&info=culture/monument"
+    },
+    {
+      "key": "historic",
+      "value": "ruins",
+      "description": "Culture/Ruins",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/ruins&info=culture/ruins"
+    },
+    {
+      "key": "building",
+      "value": "ruins",
+      "description": "Culture/Ruins",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/ruins&info=culture/ruins"
+    },
+    {
+      "key": "ruins",
+      "description": "Culture/Ruins",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/ruins&info=culture/ruins"
+    },
+    {
+      "key": "tourism",
+      "value": "attraction",
+      "description": "Culture/Tourist attraction",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/tourist-attraction&info=culture/tourist-attraction"
+    },
+    {
+      "key": "tourism",
+      "description": "Culture/Tourist attraction",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/tourist-attraction&info=culture/tourist-attraction"
+    },
+    {
+      "key": "heritage",
+      "description": "Culture/Tourist attraction",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/tourist-attraction&info=culture/tourist-attraction"
+    },
+    {
+      "key": "shop",
+      "value": "books",
+      "description": "Education/Books, Education/Get books",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/books&info=education/books"
+    },
+    {
+      "key": "amenity",
+      "value": "public_bookcase",
+      "description": "Education/Books, Education/Give books, Education/Borrow books, Education/Get books",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/books&info=education/books"
+    },
+    {
+      "key": "amenity",
+      "value": "library",
+      "description": "Education/Books, Education/Borrow books",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/books&info=education/books"
+    },
+    {
+      "key": "amenity",
+      "value": "mobile_library",
+      "description": "Education/Books, Education/Borrow books",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/books&info=education/books"
+    },
+    {
+      "key": "recycling:books",
+      "value": "yes",
+      "description": "Education/Books, Education/Recycle books",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/books&info=education/books"
+    },
+    {
+      "key": "educational",
+      "value": "yes",
+      "description": "Education/Educational trail",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+    },
+    {
+      "key": "route",
+      "value": "educational_trail",
+      "description": "Education/Educational trail",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+    },
+    {
+      "key": "board_type",
+      "value": "wildlife",
+      "description": "Education/Educational trail",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+    },
+    {
+      "key": "board_type",
+      "value": "plants",
+      "description": "Education/Educational trail",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+    },
+    {
+      "key": "board_type",
+      "value": "geology",
+      "description": "Education/Educational trail",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+    },
+    {
+      "key": "board_type",
+      "value": "nature",
+      "description": "Education/Educational trail",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+    },
+    {
+      "key": "board_type",
+      "value": "planet_walk",
+      "description": "Education/Educational trail",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+    },
+    {
+      "key": "board_type",
+      "value": "astronomy",
+      "description": "Education/Educational trail",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+    },
+    {
+      "key": "board_type",
+      "value": "forestry",
+      "description": "Education/Educational trail",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+    },
+    {
+      "key": "board_type",
+      "value": "botany",
+      "description": "Education/Educational trail",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+    },
+    {
+      "key": "board_type",
+      "value": "biology",
+      "description": "Education/Educational trail",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+    },
+    {
+      "key": "board_type",
+      "value": "birds",
+      "description": "Education/Educational trail",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+    },
+    {
+      "key": "board_type",
+      "value": "tree",
+      "description": "Education/Educational trail",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+    },
+    {
+      "key": "board_type",
+      "value": "panorama",
+      "description": "Education/Educational trail",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+    },
+    {
+      "key": "board_type",
+      "value": "science",
+      "description": "Education/Educational trail",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+    },
+    {
+      "key": "board_type",
+      "value": "technology",
+      "description": "Education/Educational trail",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+    },
+    {
+      "key": "internet_access",
+      "description": "Education/Internet",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/internet&info=education/internet"
+    },
+    {
+      "key": "wifi",
+      "description": "Education/Internet",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/internet&info=education/internet"
+    },
+    {
+      "key": "tourism",
+      "value": "museum",
+      "description": "Education/Museum",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/museum&info=education/museum"
+    },
+    {
+      "key": "tourism",
+      "value": "gallery",
+      "description": "Education/Museum",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/museum&info=education/museum"
+    },
+    {
+      "key": "amenity",
+      "value": "arts_centre",
+      "description": "Education/Museum",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/museum&info=education/museum"
+    },
+    {
+      "key": "man_made",
+      "value": "observatory",
+      "description": "Education/Observatory",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/observatory&info=education/observatory"
+    },
+    {
+      "key": "shop",
+      "value": "bakery",
+      "description": "Food/Baked goods",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/baked-goods&info=food/baked-goods"
+    },
+    {
+      "key": "shop",
+      "value": "beverages",
+      "description": "Food/Beverages",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages"
+    },
+    {
+      "key": "shop",
+      "value": "wine",
+      "description": "Food/Beverages",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages"
+    },
+    {
+      "key": "shop",
+      "value": "alcohol",
+      "description": "Food/Beverages",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages"
+    },
+    {
+      "key": "shop",
+      "value": "tea",
+      "description": "Food/Beverages",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages"
+    },
+    {
+      "key": "craft",
+      "value": "winery",
+      "description": "Food/Beverages",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages"
+    },
+    {
+      "key": "craft",
+      "value": "distillery",
+      "description": "Food/Beverages",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages"
+    },
+    {
+      "key": "craft",
+      "value": "brewery",
+      "description": "Food/Beverages",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages"
+    },
+    {
+      "key": "microbrewery",
+      "value": "yes",
+      "description": "Food/Beverages",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages"
+    },
+    {
+      "key": "vending",
+      "value": "milk",
+      "description": "Food/Beverages, Food/Dairy products",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages"
+    },
+    {
+      "key": "shop",
+      "value": "cheese",
+      "description": "Food/Dairy products",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dairy&info=food/dairy"
+    },
+    {
+      "key": "shop",
+      "value": "dairy",
+      "description": "Food/Dairy products",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dairy&info=food/dairy"
+    },
+    {
+      "key": "craft",
+      "value": "cheese_maker",
+      "description": "Food/Dairy products",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dairy&info=food/dairy"
+    },
+    {
+      "key": "amenity",
+      "value": "restaurant",
+      "description": "Food/Dinner",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner"
+    },
+    {
+      "key": "amenity",
+      "value": "biergarten",
+      "description": "Food/Dinner",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner"
+    },
+    {
+      "key": "amenity",
+      "value": "fast_food",
+      "description": "Food/Dinner",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner"
+    },
+    {
+      "key": "amenity",
+      "value": "ice_cream",
+      "description": "Food/Dinner",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner"
+    },
+    {
+      "key": "amenity",
+      "value": "pub",
+      "description": "Food/Dinner",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner"
+    },
+    {
+      "key": "amenity",
+      "value": "bar",
+      "description": "Food/Dinner",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner"
+    },
+    {
+      "key": "amenity",
+      "value": "cafe",
+      "description": "Food/Dinner",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner"
+    },
+    {
+      "key": "amenity",
+      "value": "canteen",
+      "description": "Food/Dinner",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner"
+    },
+    {
+      "key": "amenity",
+      "value": "juice_bar",
+      "description": "Food/Dinner",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner"
+    },
+    {
+      "key": "social_facility",
+      "value": "soup_kitchen",
+      "description": "Food/Dinner, Food/Food sharing",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner"
+    },
+    {
+      "key": "amenity",
+      "value": "drinking_water",
+      "description": "Food/Drinking water",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/drinking-water&info=food/drinking-water"
+    },
+    {
+      "key": "drinking_water",
+      "description": "Food/Drinking water",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/drinking-water&info=food/drinking-water"
+    },
+    {
+      "key": "amenity",
+      "value": "water_point",
+      "description": "Food/Drinking water",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/drinking-water&info=food/drinking-water"
+    },
+    {
+      "key": "drinking_water:refill",
+      "description": "Food/Drinking water",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/drinking-water&info=food/drinking-water"
+    },
+    {
+      "key": "amenity",
+      "value": "food_sharing",
+      "description": "Food/Food sharing",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/food-sharing&info=food/food-sharing"
+    },
+    {
+      "key": "social_facility",
+      "value": "food_bank",
+      "description": "Food/Food sharing",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/food-sharing&info=food/food-sharing"
+    },
+    {
+      "key": "social_facility",
+      "value": "dairy_kitchen",
+      "description": "Food/Food sharing",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/food-sharing&info=food/food-sharing"
+    },
+    {
+      "key": "shop",
+      "value": "greengrocer",
+      "description": "Food/Fruit / vegetables",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/vegetable&info=food/vegetable"
+    },
+    {
+      "key": "shop",
+      "value": "supermarket",
+      "description": "Food/Grocery",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/grocery&info=food/grocery"
+    },
+    {
+      "key": "shop",
+      "value": "convenience",
+      "description": "Food/Grocery",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/grocery&info=food/grocery"
+    },
+    {
+      "key": "shop",
+      "value": "farm",
+      "description": "Food/Grocery",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/grocery&info=food/grocery"
+    },
+    {
+      "key": "amenity",
+      "value": "marketplace",
+      "description": "Food/Grocery",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/grocery&info=food/grocery"
+    },
+    {
+      "key": "self_harvesting",
+      "description": "Food/Grocery, Food/Plant",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/grocery&info=food/grocery"
+    },
+    {
+      "key": "landuse",
+      "value": "allotments",
+      "description": "Food/Grow",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/grow&info=food/grow"
+    },
+    {
+      "key": "shop",
+      "value": "butcher",
+      "description": "Food/Meat products",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/meat&info=food/meat"
+    },
+    {
+      "key": "shop",
+      "value": "seafood",
+      "description": "Food/Meat products",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/meat&info=food/meat"
+    },
+    {
+      "key": "shop",
+      "value": "florist",
+      "description": "Food/Plant",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/plant&info=food/plant"
+    },
+    {
+      "key": "shop",
+      "value": "garden_centre",
+      "description": "Food/Plant",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/plant&info=food/plant"
+    },
+    {
+      "key": "shop",
+      "value": "agrarian",
+      "description": "Food/Plant",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/plant&info=food/plant"
+    },
+    {
+      "key": "amenity",
+      "value": "vending_machine",
+      "description": "Food/Plant",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/plant&info=food/plant"
+    },
+    {
+      "key": "craft",
+      "value": "gardener",
+      "description": "Food/Plant",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/plant&info=food/plant"
+    },
+    {
+      "key": "shop",
+      "value": "confectionery",
+      "description": "Food/Sweets",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/sweets&info=food/sweets"
+    },
+    {
+      "key": "shop",
+      "value": "chocolate",
+      "description": "Food/Sweets",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/sweets&info=food/sweets"
+    },
+    {
+      "key": "shop",
+      "value": "ice_cream",
+      "description": "Food/Sweets",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/sweets&info=food/sweets"
+    },
+    {
+      "key": "shop",
+      "value": "pastry",
+      "description": "Food/Sweets",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/sweets&info=food/sweets"
+    },
+    {
+      "key": "craft",
+      "value": "beekeeper",
+      "description": "Food/Sweets",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/sweets&info=food/sweets"
+    },
+    {
+      "key": "amenity",
+      "value": "baking_oven",
+      "description": "Goods/Baking oven",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/baking-oven&info=goods/baking-oven"
+    },
+    {
+      "key": "building",
+      "value": "bakehouse",
+      "description": "Goods/Baking oven",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/baking-oven&info=goods/baking-oven"
+    },
+    {
+      "key": "amenity",
+      "value": "bbq",
+      "description": "Goods/Barbecue, Trip/Fireplace",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/barbecue&info=goods/barbecue"
+    },
+    {
+      "key": "bbq",
+      "description": "Goods/Barbecue, Trip/Fireplace",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/barbecue&info=goods/barbecue"
+    },
+    {
+      "key": "shop",
+      "value": "clothes",
+      "description": "Goods/Clothes, Goods/Clothes (Take)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+    },
+    {
+      "key": "shop",
+      "value": "boutique",
+      "description": "Goods/Clothes, Goods/Clothes (Take)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+    },
+    {
+      "key": "shop",
+      "value": "fashion",
+      "description": "Goods/Clothes, Goods/Clothes (Take)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+    },
+    {
+      "key": "shop",
+      "value": "shoes",
+      "description": "Goods/Clothes, Goods/Clothes (Take)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+    },
+    {
+      "key": "shop",
+      "value": "bag",
+      "description": "Goods/Clothes, Goods/Clothes (Take)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+    },
+    {
+      "key": "shop",
+      "value": "sewing",
+      "description": "Goods/Clothes, Goods/Clothes (Take)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+    },
+    {
+      "key": "shop",
+      "value": "tailor",
+      "description": "Goods/Clothes, Goods/Clothes (Take)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+    },
+    {
+      "key": "shop",
+      "value": "fabric",
+      "description": "Goods/Clothes, Goods/Clothes (Take)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+    },
+    {
+      "key": "shop",
+      "value": "shoe_repair",
+      "description": "Goods/Clothes, Goods/Clothes (Repair)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+    },
+    {
+      "key": "craft",
+      "value": "shoemaker",
+      "description": "Goods/Clothes, Goods/Clothes (Repair)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+    },
+    {
+      "key": "craft",
+      "value": "dressmaker",
+      "description": "Goods/Clothes, Goods/Clothes (Repair)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+    },
+    {
+      "key": "craft",
+      "value": "tailor",
+      "description": "Goods/Clothes, Goods/Clothes (Repair)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+    },
+    {
+      "key": "recycling:clothes",
+      "value": "yes",
+      "description": "Goods/Clothes, Goods/Clothes (Give)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+    },
+    {
+      "key": "recycling:shoes",
+      "value": "yes",
+      "description": "Goods/Clothes, Goods/Clothes (Give)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+    },
+    {
+      "key": "social_facility",
+      "value": "clothing_bank",
+      "description": "Goods/Clothes, Goods/Clothes (Give), Goods/Clothes (Take)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+    },
+    {
+      "key": "amenity",
+      "value": "give_box",
+      "description": "Goods/Clothes, Goods/Electronic, Goods/Get goods, Goods/Goods exchange, Goods/Toy, Goods/Clothes (Give), Goods/Clothes (Take), Goods/Electronic (Give), Goods/Electronic (Take), Goods/Toy (Give), Goods/Toy (Take)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+    },
+    {
+      "key": "amenity",
+      "value": "freeshop",
+      "description": "Goods/Clothes, Goods/Computer, Goods/Electronic, Goods/Furniture, Goods/Get goods, Goods/Goods exchange, Goods/Phone, Goods/Toy, Goods/Clothes (Give), Goods/Clothes (Take), Goods/Computer (Give), Goods/Computer (Take), Goods/Electronic (Give), Goods/Electronic (Take), Goods/Furniture (Give), Goods/Furniture (Take), Goods/Phone (Give), Goods/Phone (Take), Goods/Toy (Give), Goods/Toy (Take)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+    },
+    {
+      "key": "shop",
+      "value": "computer",
+      "description": "Goods/Computer, Goods/Computer (Repair), Goods/Computer (Take)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/computers&info=goods/computers"
+    },
+    {
+      "key": "amenity",
+      "value": "recycling",
+      "description": "Goods/Computer, Goods/Electronic, Mobility/Bicycle, Mobility/Bicycle (Give), Goods/Computer (Give), Goods/Electronic (Give), Goods/Phone (Give)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/computers&info=goods/computers"
+    },
+    {
+      "key": "amenity",
+      "value": "printer",
+      "description": "Goods/Coping & printing",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/printer&info=goods/printer"
+    },
+    {
+      "key": "shop",
+      "value": "copyshop",
+      "description": "Goods/Coping & printing",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/printer&info=goods/printer"
+    },
+    {
+      "key": "shop",
+      "value": "printing",
+      "description": "Goods/Coping & printing",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/printer&info=goods/printer"
+    },
+    {
+      "key": "shop",
+      "value": "electronics",
+      "description": "Goods/Electronic, Goods/Electronic (Repair)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics"
+    },
+    {
+      "key": "shop",
+      "value": "hifi",
+      "description": "Goods/Electronic, Goods/Electronic (Repair)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics"
+    },
+    {
+      "key": "shop",
+      "value": "appliance",
+      "description": "Goods/Electronic, Goods/Electronic (Repair)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics"
+    },
+    {
+      "key": "shop",
+      "value": "camera",
+      "description": "Goods/Electronic, Goods/Electronic (Repair)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics"
+    },
+    {
+      "key": "shop",
+      "value": "kitchen",
+      "description": "Goods/Electronic, Goods/Electronic (Repair)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics"
+    },
+    {
+      "key": "shop",
+      "value": "radiotechnics",
+      "description": "Goods/Electronic, Goods/Electronic (Repair)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics"
+    },
+    {
+      "key": "shop",
+      "value": "electrical",
+      "description": "Goods/Electronic, Goods/Electronic (Repair)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics"
+    },
+    {
+      "key": "shop",
+      "value": "vacuum_cleaner",
+      "description": "Goods/Electronic, Goods/Electronic (Repair)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics"
+    },
+    {
+      "key": "craft",
+      "value": "electronics_repair",
+      "description": "Goods/Electronic, Goods/Electronic (Repair)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics"
+    },
+    {
+      "key": "recycling:furniture",
+      "value": "yes",
+      "description": "Goods/Furniture, Goods/Furniture (Give)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/furniture&info=goods/furniture"
+    },
+    {
+      "key": "recycling:wood",
+      "value": "yes",
+      "description": "Goods/Furniture, Goods/Furniture (Give)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/furniture&info=goods/furniture"
+    },
+    {
+      "key": "shop",
+      "value": "interior_decoration",
+      "description": "Goods/Furniture, Goods/Furniture (Take)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/furniture&info=goods/furniture"
+    },
+    {
+      "key": "shop",
+      "value": "furniture",
+      "description": "Goods/Furniture, Goods/Furniture (Take)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/furniture&info=goods/furniture"
+    },
+    {
+      "key": "craft",
+      "value": "cabinet_maker",
+      "description": "Goods/Furniture, Goods/Furniture (Repair)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/furniture&info=goods/furniture"
+    },
+    {
+      "key": "shop",
+      "value": "second_hand",
+      "description": "Goods/Get goods, Goods/Goods exchange",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/goods-get&info=goods/goods-get"
+    },
+    {
+      "key": "shop",
+      "value": "antiques",
+      "description": "Goods/Get goods",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/goods-get&info=goods/goods-get"
+    },
+    {
+      "key": "second_hand",
+      "description": "Goods/Get goods",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/goods-get&info=goods/goods-get"
+    },
+    {
+      "key": "charity",
+      "description": "Goods/Get goods",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/goods-get&info=goods/goods-get"
+    },
+    {
+      "key": "fair_trade",
+      "description": "Goods/Get goods",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/goods-get&info=goods/goods-get"
+    },
+    {
+      "key": "amenity",
+      "value": "toy_library",
+      "description": "Goods/Goods exchange, Goods/Toy, Goods/Toy (Rent)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/goods-exchange&info=goods/goods-exchange"
+    },
+    {
+      "key": "club",
+      "value": "doityourself",
+      "description": "Goods/Hackerspace",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/hackerspace&info=goods/hackerspace"
+    },
+    {
+      "key": "shop",
+      "value": "musical_instrument",
+      "description": "Goods/Instrument",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/musical_instrument&info=goods/musical_instrument"
+    },
+    {
+      "key": "musical_instrument:rental",
+      "description": "Goods/Instrument",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/musical_instrument&info=goods/musical_instrument"
+    },
+    {
+      "key": "musical_instrument",
+      "description": "Goods/Instrument",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/musical_instrument&info=goods/musical_instrument"
+    },
+    {
+      "key": "amenity",
+      "value": "piano",
+      "description": "Goods/Instrument",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/musical_instrument&info=goods/musical_instrument"
+    },
+    {
+      "key": "shop",
+      "value": "mobile_phone",
+      "description": "Goods/Phone, Goods/Phone (Repair), Goods/Phone (Take)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/mobile-phones&info=goods/mobile-phones"
+    },
+    {
+      "key": "recycling:mobile_phones",
+      "value": "yes",
+      "description": "Goods/Phone",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/mobile-phones&info=goods/mobile-phones"
+    },
+    {
+      "key": "amenity",
+      "value": "device_charging_station",
+      "description": "Goods/Phone",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/mobile-phones&info=goods/mobile-phones"
+    },
+    {
+      "key": "shop",
+      "value": "sports",
+      "description": "Goods/Sport",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/sport&info=goods/sport"
+    },
+    {
+      "key": "shop",
+      "value": "outdoor",
+      "description": "Goods/Sport",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/sport&info=goods/sport"
+    },
+    {
+      "key": "shop",
+      "value": "scuba_diving",
+      "description": "Goods/Sport",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/sport&info=goods/sport"
+    },
+    {
+      "key": "amenity",
+      "value": "dive_centre",
+      "description": "Goods/Sport",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/sport&info=goods/sport"
+    },
+    {
+      "key": "shop",
+      "value": "ski",
+      "description": "Goods/Sport",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/sport&info=goods/sport"
+    },
+    {
+      "key": "shop",
+      "value": "surf",
+      "description": "Goods/Sport",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/sport&info=goods/sport"
+    },
+    {
+      "key": "amenity",
+      "value": "ski_rental",
+      "description": "Goods/Sport",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/sport&info=goods/sport"
+    },
+    {
+      "key": "recycling:toys",
+      "value": "yes",
+      "description": "Goods/Toy, Goods/Toy (Give)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/toys&info=goods/toys"
+    },
+    {
+      "key": "shop",
+      "value": "toys",
+      "description": "Goods/Toy, Goods/Toy (Take)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/toys&info=goods/toys"
+    },
+    {
+      "key": "emergency",
+      "value": "defibrillator",
+      "description": "Health/Defibrillator",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/defibrillator&info=health/defibrillator"
+    },
+    {
+      "key": "changing_table",
+      "description": "Health/Diaper-changing table",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/diaper-changing-table&info=health/diaper-changing-table"
+    },
+    {
+      "key": "shop",
+      "value": "chemist",
+      "description": "Health/Health products",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products"
+    },
+    {
+      "key": "shop",
+      "value": "health_food",
+      "description": "Health/Health products",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products"
+    },
+    {
+      "key": "shop",
+      "value": "hairdresser",
+      "description": "Health/Health products",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products"
+    },
+    {
+      "key": "shop",
+      "value": "cosmetics",
+      "description": "Health/Health products",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products"
+    },
+    {
+      "key": "shop",
+      "value": "herbalist",
+      "description": "Health/Health products",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products"
+    },
+    {
+      "key": "shop",
+      "value": "beauty",
+      "description": "Health/Health products",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products"
+    },
+    {
+      "key": "shop",
+      "value": "perfumery",
+      "description": "Health/Health products",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products"
+    },
+    {
+      "key": "shop",
+      "value": "nutrition_supplements",
+      "description": "Health/Health products",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products"
+    },
+    {
+      "key": "amenity",
+      "value": "pharmacy",
+      "description": "Health/Health products",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products"
+    },
+    {
+      "key": "craft",
+      "value": "soap",
+      "description": "Health/Health products",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products"
+    },
+    {
+      "key": "vending",
+      "value": "chemist",
+      "description": "Health/Health products",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products"
+    },
+    {
+      "key": "amenity",
+      "value": "kneipp_water_cure",
+      "description": "Health/Kneipp facility",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/kneipp_water_cure&info=health/kneipp_water_cure"
+    },
+    {
+      "key": "amenity",
+      "value": "shower",
+      "description": "Health/Public shower",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/public-shower&info=health/public-shower"
+    },
+    {
+      "key": "amenity",
+      "value": "toilets",
+      "description": "Health/Public toilet",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/toilet&info=health/toilet"
+    },
+    {
+      "key": "building",
+      "value": "toilets",
+      "description": "Health/Public toilet",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/toilet&info=health/toilet"
+    },
+    {
+      "key": "toilets",
+      "description": "Health/Public toilet",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/toilet&info=health/toilet"
+    },
+    {
+      "key": "recycling:batteries",
+      "value": "yes",
+      "description": "Material recycling/Battery",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/battery-recycling&info=material/battery-recycling"
+    },
+    {
+      "key": "recycling:car_batteries",
+      "value": "yes",
+      "description": "Material recycling/Battery",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/battery-recycling&info=material/battery-recycling"
+    },
+    {
+      "key": "recycling:hardcore",
+      "value": "yes",
+      "description": "Material recycling/Building rubble",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/rubble-recycling&info=material/rubble-recycling"
+    },
+    {
+      "key": "recycling:rubble",
+      "value": "yes",
+      "description": "Material recycling/Building rubble",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/rubble-recycling&info=material/rubble-recycling"
+    },
+    {
+      "key": "recycling:hazardous_waste",
+      "value": "yes",
+      "description": "Material recycling/Hazardous waste",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/hazardous-recycling&info=material/hazardous-recycling"
+    },
+    {
+      "key": "recycling:hydrargyrum",
+      "value": "yes",
+      "description": "Material recycling/Hazardous waste",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/hazardous-recycling&info=material/hazardous-recycling"
+    },
+    {
+      "key": "recycling:paint",
+      "value": "yes",
+      "description": "Material recycling/Hazardous waste",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/hazardous-recycling&info=material/hazardous-recycling"
+    },
+    {
+      "key": "recycling:cooking_oil",
+      "value": "yes",
+      "description": "Material recycling/Oil",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/oil-recycling&info=material/oil-recycling"
+    },
+    {
+      "key": "recycling:engine_oil",
+      "value": "yes",
+      "description": "Material recycling/Oil",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/oil-recycling&info=material/oil-recycling"
+    },
+    {
+      "key": "recycling:oil",
+      "value": "yes",
+      "description": "Material recycling/Oil",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/oil-recycling&info=material/oil-recycling"
+    },
+    {
+      "key": "recycling:waste_oil",
+      "value": "yes",
+      "description": "Material recycling/Oil",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/oil-recycling&info=material/oil-recycling"
+    },
+    {
+      "key": "recycling:plastic",
+      "value": "yes",
+      "description": "Material recycling/Plastic",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling"
+    },
+    {
+      "key": "recycling:plastic_bottles",
+      "value": "yes",
+      "description": "Material recycling/Plastic",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling"
+    },
+    {
+      "key": "recycling:plastic_packaging",
+      "value": "yes",
+      "description": "Material recycling/Plastic",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling"
+    },
+    {
+      "key": "recycling:PET",
+      "value": "yes",
+      "description": "Material recycling/Plastic",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling"
+    },
+    {
+      "key": "recycling:plastic_bags",
+      "value": "yes",
+      "description": "Material recycling/Plastic",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling"
+    },
+    {
+      "key": "recycling:polystyrene_foam",
+      "value": "yes",
+      "description": "Material recycling/Plastic",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling"
+    },
+    {
+      "key": "recycling:polyester",
+      "value": "yes",
+      "description": "Material recycling/Plastic",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling"
+    },
+    {
+      "key": "recycling:styrofoam",
+      "value": "yes",
+      "description": "Material recycling/Plastic",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling"
+    },
+    {
+      "key": "recycling:foil",
+      "value": "yes",
+      "description": "Material recycling/Plastic",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling"
+    },
+    {
+      "key": "vending",
+      "value": "bottle_return",
+      "description": "Material recycling/Reusable bottle",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/reusable-bottle-reuse&info=material/reusable-bottle-reuse"
+    },
+    {
+      "key": "shop",
+      "value": "bicycle",
+      "description": "Mobility/Bicycle, Mobility/Bicycle (Get)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/bicycle&info=mobility/bicycle"
+    },
+    {
+      "key": "service:bicycle:second_hand",
+      "description": "Mobility/Bicycle",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/bicycle&info=mobility/bicycle"
+    },
+    {
+      "key": "amenity",
+      "value": "bicycle_rental",
+      "description": "Mobility/Bicycle, Mobility/Bicycle (Rent)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/bicycle&info=mobility/bicycle"
+    },
+    {
+      "key": "amenity",
+      "value": "bicycle_library",
+      "description": "Mobility/Bicycle, Mobility/Bicycle (Rent)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/bicycle&info=mobility/bicycle"
+    },
+    {
+      "key": "amenity",
+      "value": "bicycle_repair_station",
+      "description": "Mobility/Bicycle, Mobility/Bicycle self repair, Mobility/Bicycle (Repair)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/bicycle&info=mobility/bicycle"
+    },
+    {
+      "key": "service:bicycle:repair",
+      "description": "Mobility/Bicycle, Mobility/Bicycle self repair, Mobility/Bicycle (Repair)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/bicycle&info=mobility/bicycle"
+    },
+    {
+      "key": "service:bicycle:diy",
+      "description": "Mobility/Bicycle, Mobility/Bicycle self repair, Mobility/Bicycle (Repair)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/bicycle&info=mobility/bicycle"
+    },
+    {
+      "key": "bicycle:repair",
+      "description": "Mobility/Bicycle self repair",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/bicycle-self-repair&info=mobility/bicycle-self-repair"
+    },
+    {
+      "key": "amenity",
+      "value": "charging_station",
+      "description": "Mobility/Charging station",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/charging-station&info=mobility/charging-station"
+    },
+    {
+      "key": "amenity",
+      "value": "compressed_air",
+      "description": "Mobility/Pump",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/pump&info=mobility/pump"
+    },
+    {
+      "key": "compressed_air",
+      "description": "Mobility/Pump",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/pump&info=mobility/pump"
+    },
+    {
+      "key": "service:bicycle:pump",
+      "description": "Mobility/Pump",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/pump&info=mobility/pump"
+    },
+    {
+      "key": "natural",
+      "value": "cave_entrance",
+      "description": "Nature/Cave",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/cave&info=natural/cave"
+    },
+    {
+      "key": "denotation",
+      "value": "natural_monument",
+      "description": "Nature/Natural monument",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/natural_monument&info=natural/natural_monument"
+    },
+    {
+      "key": "denotation",
+      "value": "landmark",
+      "description": "Nature/Natural monument",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/natural_monument&info=natural/natural_monument"
+    },
+    {
+      "key": "leisure",
+      "value": "nature_reserve",
+      "description": "Nature/Nature park",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/nature-park&info=natural/nature-park"
+    },
+    {
+      "key": "boundary",
+      "value": "national_park",
+      "description": "Nature/Nature park",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/nature-park&info=natural/nature-park"
+    },
+    {
+      "key": "boundary",
+      "value": "protected_area",
+      "description": "Nature/Nature park",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/nature-park&info=natural/nature-park"
+    },
+    {
+      "key": "natural",
+      "value": "water",
+      "description": "Nature/Pond",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/pond&info=natural/pond"
+    },
+    {
+      "key": "water",
+      "value": "pond",
+      "description": "Nature/Pond",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/pond&info=natural/pond"
+    },
+    {
+      "key": "water",
+      "value": "lake",
+      "description": "Nature/Pond",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/pond&info=natural/pond"
+    },
+    {
+      "key": "water",
+      "value": "reservoir",
+      "description": "Nature/Pond",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/pond&info=natural/pond"
+    },
+    {
+      "key": "water",
+      "value": "reflecting_pool",
+      "description": "Nature/Pond",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/pond&info=natural/pond"
+    },
+    {
+      "key": "natural",
+      "value": "rock",
+      "description": "Nature/Rock",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/rock&info=natural/rock"
+    },
+    {
+      "key": "natural",
+      "value": "stone",
+      "description": "Nature/Rock",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/rock&info=natural/rock"
+    },
+    {
+      "key": "natural",
+      "value": "spring",
+      "description": "Nature/Spring",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/spring&info=natural/spring"
+    },
+    {
+      "key": "tourism",
+      "value": "viewpoint",
+      "description": "Nature/Viewpoint",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/viewpoint&info=natural/viewpoint"
+    },
+    {
+      "key": "viewpoint",
+      "description": "Nature/Viewpoint",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/viewpoint&info=natural/viewpoint"
+    },
+    {
+      "key": "tower:type",
+      "value": "observation",
+      "description": "Nature/Viewpoint",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/viewpoint&info=natural/viewpoint"
+    },
+    {
+      "key": "waterway",
+      "value": "waterfall",
+      "description": "Nature/Waterfall",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/waterfall&info=natural/waterfall"
+    },
+    {
+      "key": "waterway",
+      "value": "dam",
+      "description": "Nature/Waterfall",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/waterfall&info=natural/waterfall"
+    },
+    {
+      "key": "waterway",
+      "value": "weir",
+      "description": "Nature/Waterfall",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/waterfall&info=natural/waterfall"
+    },
+    {
+      "key": "sport",
+      "value": "swimming",
+      "description": "Sport/Bath",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/bath&info=sport/bath"
+    },
+    {
+      "key": "amenity",
+      "value": "public_bath",
+      "description": "Sport/Bath",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/bath&info=sport/bath"
+    },
+    {
+      "key": "leisure",
+      "value": "water_park",
+      "description": "Sport/Bath",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/bath&info=sport/bath"
+    },
+    {
+      "key": "leisure",
+      "value": "swimming_pool",
+      "description": "Sport/Bath",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/bath&info=sport/bath"
+    },
+    {
+      "key": "leisure",
+      "value": "swimming_area",
+      "description": "Sport/Bath",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/bath&info=sport/bath"
+    },
+    {
+      "key": "leisure",
+      "value": "paddling_pool",
+      "description": "Sport/Bath",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/bath&info=sport/bath"
+    },
+    {
+      "key": "sport",
+      "value": "bmx",
+      "description": "Sport/Bikepark",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/bikepark&info=sport/bikepark"
+    },
+    {
+      "key": "sport",
+      "value": "cycling",
+      "description": "Sport/Bikepark",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/bikepark&info=sport/bikepark"
+    },
+    {
+      "key": "sport",
+      "value": "climbing",
+      "description": "Sport/Climbing",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/climbing&info=sport/climbing"
+    },
+    {
+      "key": "playground",
+      "value": "climbingwall",
+      "description": "Sport/Climbing",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/climbing&info=sport/climbing"
+    },
+    {
+      "key": "leisure",
+      "value": "fitness_station",
+      "description": "Sport/Fitness, Sport/Balance, Sport/Exercise machine, Sport/Horizontal bar, Sport/Parallel bars, Sport/Rings",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/fitness&info=sport/fitness"
+    },
+    {
+      "key": "sport",
+      "description": "Sport/Fitness, Sport/Balance, Sport/Exercise machine, Sport/Horizontal bar, Sport/Parallel bars, Sport/Rings",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/fitness&info=sport/fitness"
+    },
+    {
+      "key": "playground",
+      "description": "Sport/Fitness, Trip/Playground, Sport/Balance, Sport/Exercise machine, Sport/Horizontal bar, Sport/Parallel bars, Sport/Rings",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/fitness&info=sport/fitness"
+    },
+    {
+      "key": "route",
+      "value": "fitness_trail",
+      "description": "Sport/Fitness trail",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/fitness-trail&info=sport/fitness-trail"
+    },
+    {
+      "key": "sport",
+      "value": "running",
+      "description": "Sport/Running",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/running&info=sport/running"
+    },
+    {
+      "key": "sport",
+      "value": "athletics",
+      "description": "Sport/Running",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/running&info=sport/running"
+    },
+    {
+      "key": "sport",
+      "value": "skateboard",
+      "description": "Sport/Skatepark",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/skatepark&info=sport/skatepark"
+    },
+    {
+      "key": "sport",
+      "value": "toboggan",
+      "description": "Sport/Sledding",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/sledding&info=sport/sledding"
+    },
+    {
+      "key": "piste:type",
+      "value": "sled",
+      "description": "Sport/Sledding",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/sledding&info=sport/sledding"
+    },
+    {
+      "key": "playground",
+      "value": "sledding",
+      "description": "Sport/Sledding",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/sledding&info=sport/sledding"
+    },
+    {
+      "key": "tourism",
+      "value": "zoo",
+      "description": "Trip/Animal enclosure",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/animal&info=trip/animal"
+    },
+    {
+      "key": "attraction",
+      "value": "animal",
+      "description": "Trip/Animal enclosure",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/animal&info=trip/animal"
+    },
+    {
+      "key": "tourism",
+      "value": "aquarium",
+      "description": "Trip/Animal enclosure",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/animal&info=trip/animal"
+    },
+    {
+      "key": "man_made",
+      "value": "beehive",
+      "description": "Trip/Animal enclosure",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/animal&info=trip/animal"
+    },
+    {
+      "key": "landuse",
+      "value": "apiary",
+      "description": "Trip/Animal enclosure",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/animal&info=trip/animal"
+    },
+    {
+      "key": "landuse",
+      "value": "animal_keeping",
+      "description": "Trip/Animal enclosure",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/animal&info=trip/animal"
+    },
+    {
+      "key": "landuse",
+      "value": "meadow",
+      "description": "Trip/Animal enclosure",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/animal&info=trip/animal"
+    },
+    {
+      "key": "landuse",
+      "value": "farmyard",
+      "description": "Trip/Animal enclosure",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/animal&info=trip/animal"
+    },
+    {
+      "key": "leisure",
+      "value": "firepit",
+      "description": "Trip/Fireplace",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/fireplace&info=trip/fireplace"
+    },
+    {
+      "key": "fireplace",
+      "description": "Trip/Fireplace",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/fireplace&info=trip/fireplace"
+    },
+    {
+      "key": "openfire",
+      "description": "Trip/Fireplace",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/fireplace&info=trip/fireplace"
+    },
+    {
+      "key": "leisure",
+      "value": "garden",
+      "description": "Trip/Garden, Trip/Garden (With name)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/garden&info=trip/garden"
+    },
+    {
+      "key": "amenity",
+      "value": "lounger",
+      "description": "Trip/Lounger",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/lounger&info=trip/lounger"
+    },
+    {
+      "key": "amenity",
+      "value": "hammock",
+      "description": "Trip/Lounger",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/lounger&info=trip/lounger"
+    },
+    {
+      "key": "information",
+      "value": "map",
+      "description": "Trip/Map, Trip/OpenStreetMap",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/map&info=trip/map"
+    },
+    {
+      "key": "attraction",
+      "value": "maze",
+      "description": "Trip/Maze",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/maze&info=trip/maze"
+    },
+    {
+      "key": "leisure",
+      "value": "park",
+      "description": "Trip/Park, Trip/Park (With name)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/park&info=trip/park"
+    },
+    {
+      "key": "landuse",
+      "value": "recreation_ground",
+      "description": "Trip/Park, Trip/Park (With name)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/park&info=trip/park"
+    },
+    {
+      "key": "tourism",
+      "value": "picnic_site",
+      "description": "Trip/Picnic site",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/picnic-site&info=trip/picnic-site"
+    },
+    {
+      "key": "leisure",
+      "value": "picnic_table",
+      "description": "Trip/Picnic site",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/picnic-site&info=trip/picnic-site"
+    },
+    {
+      "key": "shelter_type",
+      "value": "picnic_shelter",
+      "description": "Trip/Picnic site",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/picnic-site&info=trip/picnic-site"
+    },
+    {
+      "key": "leisure",
+      "value": "playground",
+      "description": "Trip/Playground",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/playground&info=trip/playground"
+    },
+    {
+      "key": "place",
+      "value": "square",
+      "description": "Trip/Square, Trip/Square (With name)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/square&info=trip/square"
+    },
+    {
+      "key": "leisure",
+      "value": "common",
+      "description": "Trip/Square, Trip/Square (With name)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/square&info=trip/square"
+    },
+    {
+      "key": "highway",
+      "value": "pedestrian",
+      "description": "Trip/Square, Trip/Square (With name)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/square&info=trip/square"
+    },
+    {
+      "key": "highway",
+      "value": "footway",
+      "description": "Trip/Square, Trip/Square (With name)",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/square&info=trip/square"
+    },
+    {
+      "key": "man_made",
+      "value": "surveillance",
+      "description": "Trip/Webcam",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/webcam&info=trip/webcam"
+    },
+    {
+      "key": "leisure",
+      "value": "bird_hide",
+      "description": "Trip/Animal observation",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/observation&info=trip/observation"
+    },
+    {
+      "key": "leisure",
+      "value": "wildlife_hide",
+      "description": "Trip/Animal observation",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/observation&info=trip/observation"
+    },
+    {
+      "key": "observation",
+      "value": "wild_animal",
+      "description": "Trip/Animal observation",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/observation&info=trip/observation"
+    },
+    {
+      "key": "man_made",
+      "value": "nesting_site",
+      "description": "Trip/Animal observation",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/observation&info=trip/observation"
+    },
+    {
+      "key": "man_made",
+      "value": "insect_hotel",
+      "description": "Trip/Animal observation",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/observation&info=trip/observation"
+    },
+    {
+      "key": "natural",
+      "value": "anthill",
+      "description": "Trip/Animal observation",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/observation&info=trip/observation"
+    },
+    {
+      "key": "natural",
+      "value": "termite_mound",
+      "description": "Trip/Animal observation",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/observation&info=trip/observation"
+    },
+    {
+      "key": "social_facility",
+      "description": "Community/For children, Community/For disabled, Community/For elderly, Community/For men, Community/For refugees, Community/For underprivileged, Community/For women",
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/assistance-children&info=community/assistance-children"
+    }
   ]
 }
