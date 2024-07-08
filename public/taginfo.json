@@ -14,1908 +14,2231 @@
       "key": "man_made",
       "value": "advertising",
       "description": "Community/Advertising space",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/advertising&info=community/advertising"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/advertising&info=community/advertising",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/2/20/Column-14.svg"
     },
     {
       "key": "board_type",
       "value": "notice",
       "description": "Community/Advertising space",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/advertising&info=community/advertising"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/advertising&info=community/advertising",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/2/20/Column-14.svg"
     },
     {
       "key": "social_facility",
       "value": "outreach",
       "description": "Community/Assistance",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/assistance&info=community/assistance"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/assistance&info=community/assistance",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/0b/Community_centre-14.svg"
     },
     {
       "key": "amenity",
       "value": "social_centre",
       "description": "Community/Assistance",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/assistance&info=community/assistance"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/assistance&info=community/assistance",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/0b/Community_centre-14.svg"
     },
     {
       "key": "healthcare",
       "description": "Community/Assistance",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/assistance&info=community/assistance"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/assistance&info=community/assistance",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/0b/Community_centre-14.svg"
     },
     {
       "key": "repair",
       "value": "assisted_self_service",
       "description": "Community/Assisted repair, Goods/Computer, Goods/Electronic, Goods/Furniture, Goods/Phone, Goods/Toy, Mobility/Bicycle, Mobility/Bicycle self repair, Mobility/Bicycle (Repair), Goods/Computer (Repair), Goods/Electronic (Repair), Goods/Furniture (Repair), Goods/Phone (Repair), Goods/Toy (Repair)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/assisted-repair&info=community/assisted-repair"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/assisted-repair&info=community/assisted-repair",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/tools.svg"
     },
     {
       "key": "leisure",
       "value": "hackerspace",
       "description": "Community/Assisted repair, Goods/Hackerspace",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/assisted-repair&info=community/assisted-repair"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/assisted-repair&info=community/assisted-repair",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/tools.svg"
     },
     {
       "key": "shop",
       "value": "tool_hire",
       "description": "Community/Assisted repair, Goods/Get goods",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/assisted-repair&info=community/assisted-repair"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/assisted-repair&info=community/assisted-repair",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/tools.svg"
     },
     {
       "key": "repair",
       "description": "Community/Assisted repair, Goods/Computer, Goods/Electronic, Goods/Furniture, Goods/Phone, Goods/Toy, Mobility/Bicycle, Mobility/Bicycle (Repair), Goods/Computer (Repair), Goods/Electronic (Repair), Goods/Furniture (Repair), Goods/Phone (Repair), Goods/Toy (Repair)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/assisted-repair&info=community/assisted-repair"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/assisted-repair&info=community/assisted-repair",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/tools.svg"
     },
     {
       "key": "amenity",
       "value": "community_centre",
       "description": "Community/Community centre, Community/Scout Group",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/community-centre&info=community/community-centre"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/community-centre&info=community/community-centre",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/0b/Community_centre-14.svg"
     },
     {
       "key": "garden:type",
       "value": "community",
       "description": "Community/Community garden, Food/Grow",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/community-garden&info=community/community-garden"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/community-garden&info=community/community-garden",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/garden-centre-15.svg"
     },
     {
       "key": "landuse",
       "value": "community_food_growing",
       "description": "Community/Community garden, Food/Grow",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/community-garden&info=community/community-garden"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/community-garden&info=community/community-garden",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/garden-centre-15.svg"
     },
     {
       "key": "office",
       "value": "charity",
       "description": "Community/Contribute",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/heart-15.svg"
     },
     {
       "key": "shop",
       "value": "charity",
       "description": "Community/Contribute, Goods/Get goods, Goods/Goods exchange",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/heart-15.svg"
     },
     {
       "key": "charity",
       "value": "yes",
       "description": "Community/Contribute",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/heart-15.svg"
     },
     {
       "key": "operator:type",
       "value": "private_non_profit",
       "description": "Community/Contribute",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/heart-15.svg"
     },
     {
       "key": "operator:type",
       "value": "charitable",
       "description": "Community/Contribute",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/heart-15.svg"
     },
     {
       "key": "operator:type",
       "value": "community",
       "description": "Community/Contribute",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/heart-15.svg"
     },
     {
       "key": "office",
       "value": "ngo",
       "description": "Community/Contribute",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/heart-15.svg"
     },
     {
       "key": "operator:type",
       "value": "ngo",
       "description": "Community/Contribute",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/heart-15.svg"
     },
     {
       "key": "office",
       "value": "foundation",
       "description": "Community/Contribute",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/heart-15.svg"
     },
     {
       "key": "office",
       "value": "association",
       "description": "Community/Contribute",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/heart-15.svg"
     },
     {
       "key": "healthcare",
       "value": "blood_donation",
       "description": "Community/Contribute",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/contribute&info=community/contribute",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/heart-15.svg"
     },
     {
       "key": "amenity",
       "value": "coworking_space",
       "description": "Community/Coworking",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/coworking&info=community/coworking"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/coworking&info=community/coworking",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/building-15.svg"
     },
     {
       "key": "office",
       "value": "coworking",
       "description": "Community/Coworking",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/coworking&info=community/coworking"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/coworking&info=community/coworking",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/building-15.svg"
     },
     {
       "key": "club",
       "value": "scout",
       "description": "Community/Scout Group",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/scout&info=community/scout"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/scout&info=community/scout",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/e/e4/Camping.16.svg"
     },
     {
       "key": "scout",
       "value": "yes",
       "description": "Community/Scout Group",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/scout&info=community/scout"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/scout&info=community/scout",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/e/e4/Camping.16.svg"
     },
     {
       "key": "leisure",
       "value": "pitch",
       "description": "Community sport/Basketball, Community sport/Soccer, Community sport/Volleyball",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/basketball&info=communitySport/basketball"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/basketball&info=communitySport/basketball",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/basketball-15.svg"
     },
     {
       "key": "sport",
       "value": "basketball",
       "description": "Community sport/Basketball",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/basketball&info=communitySport/basketball"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/basketball&info=communitySport/basketball",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/basketball-15.svg"
     },
     {
       "key": "sport",
       "value": "multi",
       "description": "Community sport/Basketball, Community sport/Soccer",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/basketball&info=communitySport/basketball"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/basketball&info=communitySport/basketball",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/basketball-15.svg"
     },
     {
       "key": "sport",
       "value": "boules",
       "description": "Community sport/Boules",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/boules&info=communitySport/boules"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/boules&info=communitySport/boules",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/pitch-15.svg"
     },
     {
       "key": "sport",
       "value": "bowls",
       "description": "Community sport/Boules",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/boules&info=communitySport/boules"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/boules&info=communitySport/boules",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/pitch-15.svg"
     },
     {
       "key": "sport",
       "value": "soccer",
       "description": "Community sport/Soccer",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/soccer&info=communitySport/soccer"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/soccer&info=communitySport/soccer",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/soccer-15.svg"
     },
     {
       "key": "sport",
       "value": "chess",
       "description": "Community sport/Street chess",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/chess&info=communitySport/chess"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/chess&info=communitySport/chess",
+      "icon_url": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Chess_pictogram.svg"
     },
     {
       "key": "sport",
       "value": "table_soccer",
       "description": "Community sport/Table soccer",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/table-soccer&info=communitySport/table-soccer"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/table-soccer&info=communitySport/table-soccer",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/c/c8/Kicker02.png"
     },
     {
       "key": "sport",
       "value": "table_tennis",
       "description": "Community sport/Table tennis",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/table-tennis&info=communitySport/table-tennis"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/table-tennis&info=communitySport/table-tennis",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/table-tennis-15.svg"
     },
     {
       "key": "sport",
       "value": "volleyball",
       "description": "Community sport/Volleyball",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/volleyball&info=communitySport/volleyball"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/volleyball&info=communitySport/volleyball",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/volleyball-15.svg"
     },
     {
       "key": "sport",
       "value": "beachvolleyball",
       "description": "Community sport/Volleyball",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/volleyball&info=communitySport/volleyball"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=communitySport/volleyball&info=communitySport/volleyball",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/volleyball-15.svg"
     },
     {
       "key": "historic",
       "value": "archaeological_site",
       "description": "Culture/Archaeological site",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/archaeological-site&info=culture/archaeological-site"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/archaeological-site&info=culture/archaeological-site",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/7d/Archaeological-site-16.svg"
     },
     {
       "key": "geological",
       "value": "palaeontological_site",
       "description": "Culture/Archaeological site",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/archaeological-site&info=culture/archaeological-site"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/archaeological-site&info=culture/archaeological-site",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/7d/Archaeological-site-16.svg"
     },
     {
       "key": "tourism",
       "value": "artwork",
       "description": "Culture/Artwork",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/artwork&info=culture/artwork"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/artwork&info=culture/artwork",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/1/12/Artwork-14.svg"
     },
     {
       "key": "historic",
       "value": "castle",
       "description": "Culture/Castle",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/castle&info=culture/castle"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/castle&info=culture/castle",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/3/31/Fortress-14.svg"
     },
     {
       "key": "historic",
       "value": "tower",
       "description": "Culture/Castle",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/castle&info=culture/castle"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/castle&info=culture/castle",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/3/31/Fortress-14.svg"
     },
     {
       "key": "historic",
       "value": "fort",
       "description": "Culture/Castle",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/castle&info=culture/castle"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/castle&info=culture/castle",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/3/31/Fortress-14.svg"
     },
     {
       "key": "amenity",
       "value": "fountain",
       "description": "Culture/Fountain",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/fountain&info=culture/fountain"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/fountain&info=culture/fountain",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/a/a1/Fountain-14.svg"
     },
     {
       "key": "playground",
       "value": "splash_pad",
       "description": "Culture/Fountain",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/fountain&info=culture/fountain"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/fountain&info=culture/fountain",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/a/a1/Fountain-14.svg"
     },
     {
       "key": "historic",
       "description": "Culture/History",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/history&info=culture/history"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/history&info=culture/history",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/c/c8/Acheological.png"
     },
     {
       "key": "board_type",
       "value": "history",
       "description": "Culture/History",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/history&info=culture/history"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/history&info=culture/history",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/c/c8/Acheological.png"
     },
     {
       "key": "historic",
       "value": "memorial",
       "description": "Culture/Memorial",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/memorial&info=culture/memorial"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/memorial&info=culture/memorial",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/6/6e/Memorial-16.svg"
     },
     {
       "key": "man_made",
       "value": "watermill",
       "description": "Culture/Mill",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/mill&info=culture/mill"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/mill&info=culture/mill",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/0b/Windmill-16.svg"
     },
     {
       "key": "man_made",
       "value": "windmill",
       "description": "Culture/Mill",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/mill&info=culture/mill"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/mill&info=culture/mill",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/0b/Windmill-16.svg"
     },
     {
       "key": "historic",
       "value": "monument",
       "description": "Culture/Monument",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/monument&info=culture/monument"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/monument&info=culture/monument",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/9/94/Monument-16.svg"
     },
     {
       "key": "historic",
       "value": "ruins",
       "description": "Culture/Ruins",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/ruins&info=culture/ruins"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/ruins&info=culture/ruins",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/78/Building_ruins_generic.svg"
     },
     {
       "key": "building",
       "value": "ruins",
       "description": "Culture/Ruins",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/ruins&info=culture/ruins"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/ruins&info=culture/ruins",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/78/Building_ruins_generic.svg"
     },
     {
       "key": "ruins",
       "description": "Culture/Ruins",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/ruins&info=culture/ruins"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/ruins&info=culture/ruins",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/78/Building_ruins_generic.svg"
     },
     {
       "key": "tourism",
       "value": "attraction",
       "description": "Culture/Tourist attraction",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/tourist-attraction&info=culture/tourist-attraction"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/tourist-attraction&info=culture/tourist-attraction",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/attraction-15.svg"
     },
     {
       "key": "tourism",
       "description": "Culture/Tourist attraction",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/tourist-attraction&info=culture/tourist-attraction"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/tourist-attraction&info=culture/tourist-attraction",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/attraction-15.svg"
     },
     {
       "key": "heritage",
       "description": "Culture/Tourist attraction",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/tourist-attraction&info=culture/tourist-attraction"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=culture/tourist-attraction&info=culture/tourist-attraction",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/attraction-15.svg"
     },
     {
       "key": "shop",
       "value": "books",
       "description": "Education/Books, Education/Get books",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/books&info=education/books"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/books&info=education/books",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/1/18/Books-16.svg"
     },
     {
       "key": "amenity",
       "value": "public_bookcase",
       "description": "Education/Books, Education/Give books, Education/Borrow books, Education/Get books",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/books&info=education/books"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/books&info=education/books",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/1/18/Books-16.svg"
     },
     {
       "key": "amenity",
       "value": "library",
       "description": "Education/Books, Education/Borrow books",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/books&info=education/books"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/books&info=education/books",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/1/18/Books-16.svg"
     },
     {
       "key": "amenity",
       "value": "mobile_library",
       "description": "Education/Books, Education/Borrow books",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/books&info=education/books"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/books&info=education/books",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/1/18/Books-16.svg"
     },
     {
       "key": "recycling:books",
       "value": "yes",
       "description": "Education/Books, Education/Recycle books",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/books&info=education/books"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/books&info=education/books",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/1/18/Books-16.svg"
     },
     {
       "key": "educational",
       "value": "yes",
       "description": "Education/Educational trail",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/77/Board-14.svg"
     },
     {
       "key": "route",
       "value": "educational_trail",
       "description": "Education/Educational trail",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/77/Board-14.svg"
     },
     {
       "key": "board_type",
       "value": "wildlife",
       "description": "Education/Educational trail",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/77/Board-14.svg"
     },
     {
       "key": "board_type",
       "value": "plants",
       "description": "Education/Educational trail",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/77/Board-14.svg"
     },
     {
       "key": "board_type",
       "value": "geology",
       "description": "Education/Educational trail",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/77/Board-14.svg"
     },
     {
       "key": "board_type",
       "value": "nature",
       "description": "Education/Educational trail",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/77/Board-14.svg"
     },
     {
       "key": "board_type",
       "value": "planet_walk",
       "description": "Education/Educational trail",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/77/Board-14.svg"
     },
     {
       "key": "board_type",
       "value": "astronomy",
       "description": "Education/Educational trail",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/77/Board-14.svg"
     },
     {
       "key": "board_type",
       "value": "forestry",
       "description": "Education/Educational trail",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/77/Board-14.svg"
     },
     {
       "key": "board_type",
       "value": "botany",
       "description": "Education/Educational trail",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/77/Board-14.svg"
     },
     {
       "key": "board_type",
       "value": "biology",
       "description": "Education/Educational trail",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/77/Board-14.svg"
     },
     {
       "key": "board_type",
       "value": "birds",
       "description": "Education/Educational trail",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/77/Board-14.svg"
     },
     {
       "key": "board_type",
       "value": "tree",
       "description": "Education/Educational trail",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/77/Board-14.svg"
     },
     {
       "key": "board_type",
       "value": "panorama",
       "description": "Education/Educational trail",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/77/Board-14.svg"
     },
     {
       "key": "board_type",
       "value": "science",
       "description": "Education/Educational trail",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/77/Board-14.svg"
     },
     {
       "key": "board_type",
       "value": "technology",
       "description": "Education/Educational trail",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/trail&info=education/trail",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/77/Board-14.svg"
     },
     {
       "key": "internet_access",
       "description": "Education/Internet",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/internet&info=education/internet"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/internet&info=education/internet",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/8/89/Internet_cafe-14.svg"
     },
     {
       "key": "wifi",
       "description": "Education/Internet",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/internet&info=education/internet"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/internet&info=education/internet",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/8/89/Internet_cafe-14.svg"
     },
     {
       "key": "tourism",
       "value": "museum",
       "description": "Education/Museum",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/museum&info=education/museum"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/museum&info=education/museum",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/a/a9/Museum-16.svg"
     },
     {
       "key": "tourism",
       "value": "gallery",
       "description": "Education/Museum",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/museum&info=education/museum"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/museum&info=education/museum",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/a/a9/Museum-16.svg"
     },
     {
       "key": "amenity",
       "value": "arts_centre",
       "description": "Education/Museum",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/museum&info=education/museum"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/museum&info=education/museum",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/a/a9/Museum-16.svg"
     },
     {
       "key": "man_made",
       "value": "observatory",
       "description": "Education/Observatory",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=education/observatory&info=education/observatory"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=education/observatory&info=education/observatory",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/e/e0/Telescope_dome-14.svg"
     },
     {
       "key": "shop",
       "value": "bakery",
       "description": "Food/Baked goods",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/baked-goods&info=food/baked-goods"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/baked-goods&info=food/baked-goods",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/bakery-15.svg"
     },
     {
       "key": "shop",
       "value": "beverages",
       "description": "Food/Beverages",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/e/eb/Alcohol-16.svg"
     },
     {
       "key": "shop",
       "value": "wine",
       "description": "Food/Beverages",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/e/eb/Alcohol-16.svg"
     },
     {
       "key": "shop",
       "value": "alcohol",
       "description": "Food/Beverages",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/e/eb/Alcohol-16.svg"
     },
     {
       "key": "shop",
       "value": "tea",
       "description": "Food/Beverages",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/e/eb/Alcohol-16.svg"
     },
     {
       "key": "craft",
       "value": "winery",
       "description": "Food/Beverages",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/e/eb/Alcohol-16.svg"
     },
     {
       "key": "craft",
       "value": "distillery",
       "description": "Food/Beverages",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/e/eb/Alcohol-16.svg"
     },
     {
       "key": "craft",
       "value": "brewery",
       "description": "Food/Beverages",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/e/eb/Alcohol-16.svg"
     },
     {
       "key": "microbrewery",
       "value": "yes",
       "description": "Food/Beverages",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/e/eb/Alcohol-16.svg"
     },
     {
       "key": "vending",
       "value": "milk",
       "description": "Food/Beverages, Food/Dairy products",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/beverages&info=food/beverages",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/e/eb/Alcohol-16.svg"
     },
     {
       "key": "shop",
       "value": "cheese",
       "description": "Food/Dairy products",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dairy&info=food/dairy"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dairy&info=food/dairy",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/0e/Dairy.svg"
     },
     {
       "key": "shop",
       "value": "dairy",
       "description": "Food/Dairy products",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dairy&info=food/dairy"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dairy&info=food/dairy",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/0e/Dairy.svg"
     },
     {
       "key": "craft",
       "value": "cheese_maker",
       "description": "Food/Dairy products",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dairy&info=food/dairy"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dairy&info=food/dairy",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/0e/Dairy.svg"
     },
     {
       "key": "amenity",
       "value": "restaurant",
       "description": "Food/Dinner",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/b/bb/Restaurant-14.svg"
     },
     {
       "key": "amenity",
       "value": "biergarten",
       "description": "Food/Dinner",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/b/bb/Restaurant-14.svg"
     },
     {
       "key": "amenity",
       "value": "fast_food",
       "description": "Food/Dinner",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/b/bb/Restaurant-14.svg"
     },
     {
       "key": "amenity",
       "value": "ice_cream",
       "description": "Food/Dinner",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/b/bb/Restaurant-14.svg"
     },
     {
       "key": "amenity",
       "value": "pub",
       "description": "Food/Dinner",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/b/bb/Restaurant-14.svg"
     },
     {
       "key": "amenity",
       "value": "bar",
       "description": "Food/Dinner",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/b/bb/Restaurant-14.svg"
     },
     {
       "key": "amenity",
       "value": "cafe",
       "description": "Food/Dinner",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/b/bb/Restaurant-14.svg"
     },
     {
       "key": "amenity",
       "value": "canteen",
       "description": "Food/Dinner",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/b/bb/Restaurant-14.svg"
     },
     {
       "key": "amenity",
       "value": "juice_bar",
       "description": "Food/Dinner",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/b/bb/Restaurant-14.svg"
     },
     {
       "key": "social_facility",
       "value": "soup_kitchen",
       "description": "Food/Dinner, Food/Food sharing",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/dinner&info=food/dinner",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/b/bb/Restaurant-14.svg"
     },
     {
       "key": "amenity",
       "value": "drinking_water",
       "description": "Food/Drinking water",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/drinking-water&info=food/drinking-water"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/drinking-water&info=food/drinking-water",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/08/Drinking-water-16.svg"
     },
     {
       "key": "drinking_water",
       "description": "Food/Drinking water",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/drinking-water&info=food/drinking-water"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/drinking-water&info=food/drinking-water",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/08/Drinking-water-16.svg"
     },
     {
       "key": "amenity",
       "value": "water_point",
       "description": "Food/Drinking water",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/drinking-water&info=food/drinking-water"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/drinking-water&info=food/drinking-water",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/08/Drinking-water-16.svg"
     },
     {
       "key": "drinking_water:refill",
       "description": "Food/Drinking water",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/drinking-water&info=food/drinking-water"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/drinking-water&info=food/drinking-water",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/08/Drinking-water-16.svg"
     },
     {
       "key": "amenity",
       "value": "food_sharing",
       "description": "Food/Food sharing",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/food-sharing&info=food/food-sharing"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/food-sharing&info=food/food-sharing",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/3/3c/Foodbank.svg"
     },
     {
       "key": "social_facility",
       "value": "food_bank",
       "description": "Food/Food sharing",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/food-sharing&info=food/food-sharing"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/food-sharing&info=food/food-sharing",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/3/3c/Foodbank.svg"
     },
     {
       "key": "social_facility",
       "value": "dairy_kitchen",
       "description": "Food/Food sharing",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/food-sharing&info=food/food-sharing"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/food-sharing&info=food/food-sharing",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/3/3c/Foodbank.svg"
     },
     {
       "key": "shop",
       "value": "greengrocer",
       "description": "Food/Fruit / vegetables",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/vegetable&info=food/vegetable"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/vegetable&info=food/vegetable",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/d/d8/Greengrocer-14.svg"
     },
     {
       "key": "shop",
       "value": "supermarket",
       "description": "Food/Grocery",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/grocery&info=food/grocery"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/grocery&info=food/grocery",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/9/96/Convenience-14.svg"
     },
     {
       "key": "shop",
       "value": "convenience",
       "description": "Food/Grocery",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/grocery&info=food/grocery"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/grocery&info=food/grocery",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/9/96/Convenience-14.svg"
     },
     {
       "key": "shop",
       "value": "farm",
       "description": "Food/Grocery",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/grocery&info=food/grocery"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/grocery&info=food/grocery",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/9/96/Convenience-14.svg"
     },
     {
       "key": "amenity",
       "value": "marketplace",
       "description": "Food/Grocery",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/grocery&info=food/grocery"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/grocery&info=food/grocery",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/9/96/Convenience-14.svg"
     },
     {
       "key": "self_harvesting",
       "description": "Food/Grocery, Food/Plant",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/grocery&info=food/grocery"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/grocery&info=food/grocery",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/9/96/Convenience-14.svg"
     },
     {
       "key": "landuse",
       "value": "allotments",
       "description": "Food/Grow",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/grow&info=food/grow"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/grow&info=food/grow",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/garden-centre-15.svg"
     },
     {
       "key": "shop",
       "value": "butcher",
       "description": "Food/Meat products",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/meat&info=food/meat"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/meat&info=food/meat",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/b/b8/Butcher.svg"
     },
     {
       "key": "shop",
       "value": "seafood",
       "description": "Food/Meat products",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/meat&info=food/meat"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/meat&info=food/meat",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/b/b8/Butcher.svg"
     },
     {
       "key": "shop",
       "value": "florist",
       "description": "Food/Plant",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/plant&info=food/plant"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/plant&info=food/plant",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/6/69/Florist-16.svg"
     },
     {
       "key": "shop",
       "value": "garden_centre",
       "description": "Food/Plant",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/plant&info=food/plant"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/plant&info=food/plant",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/6/69/Florist-16.svg"
     },
     {
       "key": "shop",
       "value": "agrarian",
       "description": "Food/Plant",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/plant&info=food/plant"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/plant&info=food/plant",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/6/69/Florist-16.svg"
     },
     {
       "key": "amenity",
       "value": "vending_machine",
       "description": "Food/Plant",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/plant&info=food/plant"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/plant&info=food/plant",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/6/69/Florist-16.svg"
     },
     {
       "key": "craft",
       "value": "gardener",
       "description": "Food/Plant",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/plant&info=food/plant"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/plant&info=food/plant",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/6/69/Florist-16.svg"
     },
     {
       "key": "shop",
       "value": "confectionery",
       "description": "Food/Sweets",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/sweets&info=food/sweets"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/sweets&info=food/sweets",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/c/cc/Confectionery-14.svg"
     },
     {
       "key": "shop",
       "value": "chocolate",
       "description": "Food/Sweets",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/sweets&info=food/sweets"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/sweets&info=food/sweets",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/c/cc/Confectionery-14.svg"
     },
     {
       "key": "shop",
       "value": "ice_cream",
       "description": "Food/Sweets",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/sweets&info=food/sweets"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/sweets&info=food/sweets",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/c/cc/Confectionery-14.svg"
     },
     {
       "key": "shop",
       "value": "pastry",
       "description": "Food/Sweets",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/sweets&info=food/sweets"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/sweets&info=food/sweets",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/c/cc/Confectionery-14.svg"
     },
     {
       "key": "craft",
       "value": "beekeeper",
       "description": "Food/Sweets",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=food/sweets&info=food/sweets"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=food/sweets&info=food/sweets",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/c/cc/Confectionery-14.svg"
     },
     {
       "key": "amenity",
       "value": "baking_oven",
       "description": "Goods/Baking oven",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/baking-oven&info=goods/baking-oven"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/baking-oven&info=goods/baking-oven",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/f/fe/Bakery-16.svg"
     },
     {
       "key": "building",
       "value": "bakehouse",
       "description": "Goods/Baking oven",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/baking-oven&info=goods/baking-oven"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/baking-oven&info=goods/baking-oven",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/f/fe/Bakery-16.svg"
     },
     {
       "key": "amenity",
       "value": "bbq",
       "description": "Goods/Barbecue, Trip/Fireplace",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/barbecue&info=goods/barbecue"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/barbecue&info=goods/barbecue",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/5/50/Bbq-14.svg"
     },
     {
       "key": "bbq",
       "description": "Goods/Barbecue, Trip/Fireplace",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/barbecue&info=goods/barbecue"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/barbecue&info=goods/barbecue",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/5/50/Bbq-14.svg"
     },
     {
       "key": "shop",
       "value": "clothes",
       "description": "Goods/Clothes, Goods/Clothes (Take)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/clothing-store-15.svg"
     },
     {
       "key": "shop",
       "value": "boutique",
       "description": "Goods/Clothes, Goods/Clothes (Take)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/clothing-store-15.svg"
     },
     {
       "key": "shop",
       "value": "fashion",
       "description": "Goods/Clothes, Goods/Clothes (Take)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/clothing-store-15.svg"
     },
     {
       "key": "shop",
       "value": "shoes",
       "description": "Goods/Clothes, Goods/Clothes (Take)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/clothing-store-15.svg"
     },
     {
       "key": "shop",
       "value": "bag",
       "description": "Goods/Clothes, Goods/Clothes (Take)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/clothing-store-15.svg"
     },
     {
       "key": "shop",
       "value": "sewing",
       "description": "Goods/Clothes, Goods/Clothes (Take)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/clothing-store-15.svg"
     },
     {
       "key": "shop",
       "value": "tailor",
       "description": "Goods/Clothes, Goods/Clothes (Take)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/clothing-store-15.svg"
     },
     {
       "key": "shop",
       "value": "fabric",
       "description": "Goods/Clothes, Goods/Clothes (Take)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/clothing-store-15.svg"
     },
     {
       "key": "shop",
       "value": "shoe_repair",
       "description": "Goods/Clothes, Goods/Clothes (Repair)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/clothing-store-15.svg"
     },
     {
       "key": "craft",
       "value": "shoemaker",
       "description": "Goods/Clothes, Goods/Clothes (Repair)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/clothing-store-15.svg"
     },
     {
       "key": "craft",
       "value": "dressmaker",
       "description": "Goods/Clothes, Goods/Clothes (Repair)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/clothing-store-15.svg"
     },
     {
       "key": "craft",
       "value": "tailor",
       "description": "Goods/Clothes, Goods/Clothes (Repair)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/clothing-store-15.svg"
     },
     {
       "key": "recycling:clothes",
       "value": "yes",
       "description": "Goods/Clothes, Goods/Clothes (Give)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/clothing-store-15.svg"
     },
     {
       "key": "recycling:shoes",
       "value": "yes",
       "description": "Goods/Clothes, Goods/Clothes (Give)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/clothing-store-15.svg"
     },
     {
       "key": "social_facility",
       "value": "clothing_bank",
       "description": "Goods/Clothes, Goods/Clothes (Give), Goods/Clothes (Take)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/clothing-store-15.svg"
     },
     {
       "key": "amenity",
       "value": "give_box",
       "description": "Goods/Clothes, Goods/Electronic, Goods/Get goods, Goods/Goods exchange, Goods/Toy, Goods/Clothes (Give), Goods/Clothes (Take), Goods/Electronic (Give), Goods/Electronic (Take), Goods/Toy (Give), Goods/Toy (Take)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/clothing-store-15.svg"
     },
     {
       "key": "amenity",
       "value": "freeshop",
       "description": "Goods/Clothes, Goods/Computer, Goods/Electronic, Goods/Furniture, Goods/Get goods, Goods/Goods exchange, Goods/Phone, Goods/Toy, Goods/Clothes (Give), Goods/Clothes (Take), Goods/Computer (Give), Goods/Computer (Take), Goods/Electronic (Give), Goods/Electronic (Take), Goods/Furniture (Give), Goods/Furniture (Take), Goods/Phone (Give), Goods/Phone (Take), Goods/Toy (Give), Goods/Toy (Take)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/clothes&info=goods/clothes",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/clothing-store-15.svg"
     },
     {
       "key": "shop",
       "value": "computer",
       "description": "Goods/Computer, Goods/Computer (Repair), Goods/Computer (Take)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/computers&info=goods/computers"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/computers&info=goods/computers",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/b/bb/Computer-14.svg"
     },
     {
       "key": "amenity",
       "value": "recycling",
       "description": "Goods/Computer, Goods/Electronic, Mobility/Bicycle, Mobility/Bicycle (Give), Goods/Computer (Give), Goods/Electronic (Give), Goods/Phone (Give)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/computers&info=goods/computers"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/computers&info=goods/computers",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/b/bb/Computer-14.svg"
     },
     {
       "key": "amenity",
       "value": "printer",
       "description": "Goods/Coping & printing",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/printer&info=goods/printer"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/printer&info=goods/printer",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/2/2c/Copyshop-14.svg"
     },
     {
       "key": "shop",
       "value": "copyshop",
       "description": "Goods/Coping & printing",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/printer&info=goods/printer"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/printer&info=goods/printer",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/2/2c/Copyshop-14.svg"
     },
     {
       "key": "shop",
       "value": "printing",
       "description": "Goods/Coping & printing",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/printer&info=goods/printer"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/printer&info=goods/printer",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/2/2c/Copyshop-14.svg"
     },
     {
       "key": "shop",
       "value": "electronics",
       "description": "Goods/Electronic, Goods/Electronic (Repair)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/electronic.svg"
     },
     {
       "key": "shop",
       "value": "hifi",
       "description": "Goods/Electronic, Goods/Electronic (Repair)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/electronic.svg"
     },
     {
       "key": "shop",
       "value": "appliance",
       "description": "Goods/Electronic, Goods/Electronic (Repair)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/electronic.svg"
     },
     {
       "key": "shop",
       "value": "camera",
       "description": "Goods/Electronic, Goods/Electronic (Repair)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/electronic.svg"
     },
     {
       "key": "shop",
       "value": "kitchen",
       "description": "Goods/Electronic, Goods/Electronic (Repair)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/electronic.svg"
     },
     {
       "key": "shop",
       "value": "radiotechnics",
       "description": "Goods/Electronic, Goods/Electronic (Repair)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/electronic.svg"
     },
     {
       "key": "shop",
       "value": "electrical",
       "description": "Goods/Electronic, Goods/Electronic (Repair)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/electronic.svg"
     },
     {
       "key": "shop",
       "value": "vacuum_cleaner",
       "description": "Goods/Electronic, Goods/Electronic (Repair)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/electronic.svg"
     },
     {
       "key": "craft",
       "value": "electronics_repair",
       "description": "Goods/Electronic, Goods/Electronic (Repair)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/electronics&info=goods/electronics",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/electronic.svg"
     },
     {
       "key": "recycling:furniture",
       "value": "yes",
       "description": "Goods/Furniture, Goods/Furniture (Give)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/furniture&info=goods/furniture"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/furniture&info=goods/furniture",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/furniture.svg"
     },
     {
       "key": "recycling:wood",
       "value": "yes",
       "description": "Goods/Furniture, Goods/Furniture (Give)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/furniture&info=goods/furniture"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/furniture&info=goods/furniture",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/furniture.svg"
     },
     {
       "key": "shop",
       "value": "interior_decoration",
       "description": "Goods/Furniture, Goods/Furniture (Take)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/furniture&info=goods/furniture"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/furniture&info=goods/furniture",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/furniture.svg"
     },
     {
       "key": "shop",
       "value": "furniture",
       "description": "Goods/Furniture, Goods/Furniture (Take)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/furniture&info=goods/furniture"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/furniture&info=goods/furniture",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/furniture.svg"
     },
     {
       "key": "craft",
       "value": "cabinet_maker",
       "description": "Goods/Furniture, Goods/Furniture (Repair)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/furniture&info=goods/furniture"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/furniture&info=goods/furniture",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/furniture.svg"
     },
     {
       "key": "shop",
       "value": "second_hand",
       "description": "Goods/Get goods, Goods/Goods exchange",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/goods-get&info=goods/goods-get"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/goods-get&info=goods/goods-get",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/8/85/Charity-14.svg"
     },
     {
       "key": "shop",
       "value": "antiques",
       "description": "Goods/Get goods",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/goods-get&info=goods/goods-get"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/goods-get&info=goods/goods-get",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/8/85/Charity-14.svg"
     },
     {
       "key": "second_hand",
       "description": "Goods/Get goods",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/goods-get&info=goods/goods-get"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/goods-get&info=goods/goods-get",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/8/85/Charity-14.svg"
     },
     {
       "key": "charity",
       "description": "Goods/Get goods",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/goods-get&info=goods/goods-get"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/goods-get&info=goods/goods-get",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/8/85/Charity-14.svg"
     },
     {
       "key": "fair_trade",
       "description": "Goods/Get goods",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/goods-get&info=goods/goods-get"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/goods-get&info=goods/goods-get",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/8/85/Charity-14.svg"
     },
     {
       "key": "amenity",
       "value": "toy_library",
       "description": "Goods/Goods exchange, Goods/Toy, Goods/Toy (Rent)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/goods-exchange&info=goods/goods-exchange"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/goods-exchange&info=goods/goods-exchange",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/gift-15.svg"
     },
     {
       "key": "club",
       "value": "doityourself",
       "description": "Goods/Hackerspace",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/hackerspace&info=goods/hackerspace"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/hackerspace&info=goods/hackerspace",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/toolbox.svg"
     },
     {
       "key": "shop",
       "value": "musical_instrument",
       "description": "Goods/Instrument",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/musical_instrument&info=goods/musical_instrument"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/musical_instrument&info=goods/musical_instrument",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/music-15.svg"
     },
     {
       "key": "musical_instrument:rental",
       "description": "Goods/Instrument",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/musical_instrument&info=goods/musical_instrument"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/musical_instrument&info=goods/musical_instrument",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/music-15.svg"
     },
     {
       "key": "musical_instrument",
       "description": "Goods/Instrument",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/musical_instrument&info=goods/musical_instrument"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/musical_instrument&info=goods/musical_instrument",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/music-15.svg"
     },
     {
       "key": "amenity",
       "value": "piano",
       "description": "Goods/Instrument",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/musical_instrument&info=goods/musical_instrument"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/musical_instrument&info=goods/musical_instrument",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/music-15.svg"
     },
     {
       "key": "shop",
       "value": "mobile_phone",
       "description": "Goods/Phone, Goods/Phone (Repair), Goods/Phone (Take)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/mobile-phones&info=goods/mobile-phones"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/mobile-phones&info=goods/mobile-phones",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/mobile-phone-15.svg"
     },
     {
       "key": "recycling:mobile_phones",
       "value": "yes",
       "description": "Goods/Phone",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/mobile-phones&info=goods/mobile-phones"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/mobile-phones&info=goods/mobile-phones",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/mobile-phone-15.svg"
     },
     {
       "key": "amenity",
       "value": "device_charging_station",
       "description": "Goods/Phone",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/mobile-phones&info=goods/mobile-phones"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/mobile-phones&info=goods/mobile-phones",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/mobile-phone-15.svg"
     },
     {
       "key": "shop",
       "value": "sports",
       "description": "Goods/Sport",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/sport&info=goods/sport"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/sport&info=goods/sport",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/76/Outdoor-14.svg"
     },
     {
       "key": "shop",
       "value": "outdoor",
       "description": "Goods/Sport",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/sport&info=goods/sport"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/sport&info=goods/sport",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/76/Outdoor-14.svg"
     },
     {
       "key": "shop",
       "value": "scuba_diving",
       "description": "Goods/Sport",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/sport&info=goods/sport"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/sport&info=goods/sport",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/76/Outdoor-14.svg"
     },
     {
       "key": "amenity",
       "value": "dive_centre",
       "description": "Goods/Sport",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/sport&info=goods/sport"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/sport&info=goods/sport",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/76/Outdoor-14.svg"
     },
     {
       "key": "shop",
       "value": "ski",
       "description": "Goods/Sport",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/sport&info=goods/sport"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/sport&info=goods/sport",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/76/Outdoor-14.svg"
     },
     {
       "key": "shop",
       "value": "surf",
       "description": "Goods/Sport",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/sport&info=goods/sport"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/sport&info=goods/sport",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/76/Outdoor-14.svg"
     },
     {
       "key": "amenity",
       "value": "ski_rental",
       "description": "Goods/Sport",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/sport&info=goods/sport"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/sport&info=goods/sport",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/76/Outdoor-14.svg"
     },
     {
       "key": "recycling:toys",
       "value": "yes",
       "description": "Goods/Toy, Goods/Toy (Give)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/toys&info=goods/toys"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/toys&info=goods/toys",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/6/62/Toys-14.svg"
     },
     {
       "key": "shop",
       "value": "toys",
       "description": "Goods/Toy, Goods/Toy (Take)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/toys&info=goods/toys"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=goods/toys&info=goods/toys",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/6/62/Toys-14.svg"
     },
     {
       "key": "emergency",
       "value": "defibrillator",
       "description": "Health/Defibrillator",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=health/defibrillator&info=health/defibrillator"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/defibrillator&info=health/defibrillator",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/defibrillator-15.svg"
     },
     {
       "key": "changing_table",
       "description": "Health/Diaper-changing table",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=health/diaper-changing-table&info=health/diaper-changing-table"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/diaper-changing-table&info=health/diaper-changing-table",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/f/ff/Babycare_01.png"
     },
     {
       "key": "shop",
       "value": "chemist",
       "description": "Health/Health products",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/3/36/Chemist-14.svg"
     },
     {
       "key": "shop",
       "value": "health_food",
       "description": "Health/Health products",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/3/36/Chemist-14.svg"
     },
     {
       "key": "shop",
       "value": "hairdresser",
       "description": "Health/Health products",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/3/36/Chemist-14.svg"
     },
     {
       "key": "shop",
       "value": "cosmetics",
       "description": "Health/Health products",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/3/36/Chemist-14.svg"
     },
     {
       "key": "shop",
       "value": "herbalist",
       "description": "Health/Health products",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/3/36/Chemist-14.svg"
     },
     {
       "key": "shop",
       "value": "beauty",
       "description": "Health/Health products",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/3/36/Chemist-14.svg"
     },
     {
       "key": "shop",
       "value": "perfumery",
       "description": "Health/Health products",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/3/36/Chemist-14.svg"
     },
     {
       "key": "shop",
       "value": "nutrition_supplements",
       "description": "Health/Health products",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/3/36/Chemist-14.svg"
     },
     {
       "key": "amenity",
       "value": "pharmacy",
       "description": "Health/Health products",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/3/36/Chemist-14.svg"
     },
     {
       "key": "craft",
       "value": "soap",
       "description": "Health/Health products",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/3/36/Chemist-14.svg"
     },
     {
       "key": "vending",
       "value": "chemist",
       "description": "Health/Health products",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/health-products&info=health/health-products",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/3/36/Chemist-14.svg"
     },
     {
       "key": "amenity",
       "value": "kneipp_water_cure",
       "description": "Health/Kneipp facility",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=health/kneipp_water_cure&info=health/kneipp_water_cure"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/kneipp_water_cure&info=health/kneipp_water_cure",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/c/c1/Kneipp_water_cure.svg"
     },
     {
       "key": "amenity",
       "value": "shower",
       "description": "Health/Public shower",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=health/public-shower&info=health/public-shower"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/public-shower&info=health/public-shower",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/5/5a/Shower-14.svg"
     },
     {
       "key": "amenity",
       "value": "toilets",
       "description": "Health/Public toilet",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=health/toilet&info=health/toilet"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/toilet&info=health/toilet",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/f/fa/Toilets-16.svg"
     },
     {
       "key": "building",
       "value": "toilets",
       "description": "Health/Public toilet",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=health/toilet&info=health/toilet"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/toilet&info=health/toilet",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/f/fa/Toilets-16.svg"
     },
     {
       "key": "toilets",
       "description": "Health/Public toilet",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=health/toilet&info=health/toilet"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=health/toilet&info=health/toilet",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/f/fa/Toilets-16.svg"
     },
     {
       "key": "recycling:batteries",
       "value": "yes",
       "description": "Material recycling/Battery",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=material/battery-recycling&info=material/battery-recycling"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/battery-recycling&info=material/battery-recycling",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/power.svg"
     },
     {
       "key": "recycling:car_batteries",
       "value": "yes",
       "description": "Material recycling/Battery",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=material/battery-recycling&info=material/battery-recycling"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/battery-recycling&info=material/battery-recycling",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/power.svg"
     },
     {
       "key": "recycling:hardcore",
       "value": "yes",
       "description": "Material recycling/Building rubble",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=material/rubble-recycling&info=material/rubble-recycling"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/rubble-recycling&info=material/rubble-recycling",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/ruins.svg"
     },
     {
       "key": "recycling:rubble",
       "value": "yes",
       "description": "Material recycling/Building rubble",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=material/rubble-recycling&info=material/rubble-recycling"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/rubble-recycling&info=material/rubble-recycling",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/ruins.svg"
     },
     {
       "key": "recycling:hazardous_waste",
       "value": "yes",
       "description": "Material recycling/Hazardous waste",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=material/hazardous-recycling&info=material/hazardous-recycling"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/hazardous-recycling&info=material/hazardous-recycling",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/danger-15.svg"
     },
     {
       "key": "recycling:hydrargyrum",
       "value": "yes",
       "description": "Material recycling/Hazardous waste",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=material/hazardous-recycling&info=material/hazardous-recycling"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/hazardous-recycling&info=material/hazardous-recycling",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/danger-15.svg"
     },
     {
       "key": "recycling:paint",
       "value": "yes",
       "description": "Material recycling/Hazardous waste",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=material/hazardous-recycling&info=material/hazardous-recycling"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/hazardous-recycling&info=material/hazardous-recycling",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/danger-15.svg"
     },
     {
       "key": "recycling:cooking_oil",
       "value": "yes",
       "description": "Material recycling/Oil",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=material/oil-recycling&info=material/oil-recycling"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/oil-recycling&info=material/oil-recycling",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/water-15.svg"
     },
     {
       "key": "recycling:engine_oil",
       "value": "yes",
       "description": "Material recycling/Oil",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=material/oil-recycling&info=material/oil-recycling"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/oil-recycling&info=material/oil-recycling",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/water-15.svg"
     },
     {
       "key": "recycling:oil",
       "value": "yes",
       "description": "Material recycling/Oil",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=material/oil-recycling&info=material/oil-recycling"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/oil-recycling&info=material/oil-recycling",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/water-15.svg"
     },
     {
       "key": "recycling:waste_oil",
       "value": "yes",
       "description": "Material recycling/Oil",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=material/oil-recycling&info=material/oil-recycling"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/oil-recycling&info=material/oil-recycling",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/water-15.svg"
     },
     {
       "key": "recycling:plastic",
       "value": "yes",
       "description": "Material recycling/Plastic",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/9/98/Beverages-14.svg"
     },
     {
       "key": "recycling:plastic_bottles",
       "value": "yes",
       "description": "Material recycling/Plastic",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/9/98/Beverages-14.svg"
     },
     {
       "key": "recycling:plastic_packaging",
       "value": "yes",
       "description": "Material recycling/Plastic",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/9/98/Beverages-14.svg"
     },
     {
       "key": "recycling:PET",
       "value": "yes",
       "description": "Material recycling/Plastic",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/9/98/Beverages-14.svg"
     },
     {
       "key": "recycling:plastic_bags",
       "value": "yes",
       "description": "Material recycling/Plastic",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/9/98/Beverages-14.svg"
     },
     {
       "key": "recycling:polystyrene_foam",
       "value": "yes",
       "description": "Material recycling/Plastic",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/9/98/Beverages-14.svg"
     },
     {
       "key": "recycling:polyester",
       "value": "yes",
       "description": "Material recycling/Plastic",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/9/98/Beverages-14.svg"
     },
     {
       "key": "recycling:styrofoam",
       "value": "yes",
       "description": "Material recycling/Plastic",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/9/98/Beverages-14.svg"
     },
     {
       "key": "recycling:foil",
       "value": "yes",
       "description": "Material recycling/Plastic",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/plastic-recycling&info=material/plastic-recycling",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/9/98/Beverages-14.svg"
     },
     {
       "key": "vending",
       "value": "bottle_return",
       "description": "Material recycling/Reusable bottle",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=material/reusable-bottle-reuse&info=material/reusable-bottle-reuse"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=material/reusable-bottle-reuse&info=material/reusable-bottle-reuse",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/e/eb/Alcohol-16.svg"
     },
     {
       "key": "shop",
       "value": "bicycle",
       "description": "Mobility/Bicycle, Mobility/Bicycle (Get)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/bicycle&info=mobility/bicycle"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/bicycle&info=mobility/bicycle",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/bicycle-15.svg"
     },
     {
       "key": "service:bicycle:second_hand",
       "description": "Mobility/Bicycle",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/bicycle&info=mobility/bicycle"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/bicycle&info=mobility/bicycle",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/bicycle-15.svg"
     },
     {
       "key": "amenity",
       "value": "bicycle_rental",
       "description": "Mobility/Bicycle, Mobility/Bicycle (Rent)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/bicycle&info=mobility/bicycle"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/bicycle&info=mobility/bicycle",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/bicycle-15.svg"
     },
     {
       "key": "amenity",
       "value": "bicycle_library",
       "description": "Mobility/Bicycle, Mobility/Bicycle (Rent)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/bicycle&info=mobility/bicycle"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/bicycle&info=mobility/bicycle",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/bicycle-15.svg"
     },
     {
       "key": "amenity",
       "value": "bicycle_repair_station",
       "description": "Mobility/Bicycle, Mobility/Bicycle self repair, Mobility/Bicycle (Repair)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/bicycle&info=mobility/bicycle"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/bicycle&info=mobility/bicycle",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/bicycle-15.svg"
     },
     {
       "key": "service:bicycle:repair",
       "description": "Mobility/Bicycle, Mobility/Bicycle self repair, Mobility/Bicycle (Repair)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/bicycle&info=mobility/bicycle"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/bicycle&info=mobility/bicycle",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/bicycle-15.svg"
     },
     {
       "key": "service:bicycle:diy",
       "description": "Mobility/Bicycle, Mobility/Bicycle self repair, Mobility/Bicycle (Repair)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/bicycle&info=mobility/bicycle"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/bicycle&info=mobility/bicycle",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/bicycle-15.svg"
     },
     {
       "key": "bicycle:repair",
       "description": "Mobility/Bicycle self repair",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/bicycle-self-repair&info=mobility/bicycle-self-repair"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/bicycle-self-repair&info=mobility/bicycle-self-repair",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/01/Bicycle_repair_station-14.svg"
     },
     {
       "key": "amenity",
       "value": "charging_station",
       "description": "Mobility/Charging station",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/charging-station&info=mobility/charging-station"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/charging-station&info=mobility/charging-station",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/a/af/Charging_station.16.svg"
     },
     {
       "key": "amenity",
       "value": "compressed_air",
       "description": "Mobility/Pump",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/pump&info=mobility/pump"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/pump&info=mobility/pump",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/01/Bicycle_repair_station-14.svg"
     },
     {
       "key": "compressed_air",
       "description": "Mobility/Pump",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/pump&info=mobility/pump"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/pump&info=mobility/pump",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/01/Bicycle_repair_station-14.svg"
     },
     {
       "key": "service:bicycle:pump",
       "description": "Mobility/Pump",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/pump&info=mobility/pump"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=mobility/pump&info=mobility/pump",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/01/Bicycle_repair_station-14.svg"
     },
     {
       "key": "natural",
       "value": "cave_entrance",
       "description": "Nature/Cave",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/cave&info=natural/cave"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/cave&info=natural/cave",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/b/b1/Cave.14.svg"
     },
     {
       "key": "denotation",
       "value": "natural_monument",
       "description": "Nature/Natural monument",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/natural_monument&info=natural/natural_monument"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/natural_monument&info=natural/natural_monument",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/park-15.svg"
     },
     {
       "key": "denotation",
       "value": "landmark",
       "description": "Nature/Natural monument",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/natural_monument&info=natural/natural_monument"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/natural_monument&info=natural/natural_monument",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/park-15.svg"
     },
     {
       "key": "leisure",
       "value": "nature_reserve",
       "description": "Nature/Nature park",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/nature-park&info=natural/nature-park"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/nature-park&info=natural/nature-park",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/natural-15.svg"
     },
     {
       "key": "boundary",
       "value": "national_park",
       "description": "Nature/Nature park",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/nature-park&info=natural/nature-park"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/nature-park&info=natural/nature-park",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/natural-15.svg"
     },
     {
       "key": "boundary",
       "value": "protected_area",
       "description": "Nature/Nature park",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/nature-park&info=natural/nature-park"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/nature-park&info=natural/nature-park",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/natural-15.svg"
     },
     {
       "key": "natural",
       "value": "water",
       "description": "Nature/Pond",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/pond&info=natural/pond"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/pond&info=natural/pond",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/water-15.svg"
     },
     {
       "key": "water",
       "value": "pond",
       "description": "Nature/Pond",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/pond&info=natural/pond"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/pond&info=natural/pond",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/water-15.svg"
     },
     {
       "key": "water",
       "value": "lake",
       "description": "Nature/Pond",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/pond&info=natural/pond"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/pond&info=natural/pond",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/water-15.svg"
     },
     {
       "key": "water",
       "value": "reservoir",
       "description": "Nature/Pond",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/pond&info=natural/pond"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/pond&info=natural/pond",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/water-15.svg"
     },
     {
       "key": "water",
       "value": "reflecting_pool",
       "description": "Nature/Pond",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/pond&info=natural/pond"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/pond&info=natural/pond",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/water-15.svg"
     },
     {
       "key": "natural",
       "value": "rock",
       "description": "Nature/Rock",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/rock&info=natural/rock"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/rock&info=natural/rock",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/circle-15.svg"
     },
     {
       "key": "natural",
       "value": "stone",
       "description": "Nature/Rock",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/rock&info=natural/rock"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/rock&info=natural/rock",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/circle-15.svg"
     },
     {
       "key": "natural",
       "value": "spring",
       "description": "Nature/Spring",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/spring&info=natural/spring"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/spring&info=natural/spring",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/0e/Spring-14.svg"
     },
     {
       "key": "tourism",
       "value": "viewpoint",
       "description": "Nature/Viewpoint",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/viewpoint&info=natural/viewpoint"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/viewpoint&info=natural/viewpoint",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/c/c2/Viewpoint-16.svg"
     },
     {
       "key": "viewpoint",
       "description": "Nature/Viewpoint",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/viewpoint&info=natural/viewpoint"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/viewpoint&info=natural/viewpoint",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/c/c2/Viewpoint-16.svg"
     },
     {
       "key": "tower:type",
       "value": "observation",
       "description": "Nature/Viewpoint",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/viewpoint&info=natural/viewpoint"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/viewpoint&info=natural/viewpoint",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/c/c2/Viewpoint-16.svg"
     },
     {
       "key": "waterway",
       "value": "waterfall",
       "description": "Nature/Waterfall",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/waterfall&info=natural/waterfall"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/waterfall&info=natural/waterfall",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/72/Waterfall-14.svg"
     },
     {
       "key": "waterway",
       "value": "dam",
       "description": "Nature/Waterfall",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/waterfall&info=natural/waterfall"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/waterfall&info=natural/waterfall",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/72/Waterfall-14.svg"
     },
     {
       "key": "waterway",
       "value": "weir",
       "description": "Nature/Waterfall",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/waterfall&info=natural/waterfall"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=natural/waterfall&info=natural/waterfall",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/7/72/Waterfall-14.svg"
     },
     {
       "key": "sport",
       "value": "swimming",
       "description": "Sport/Bath",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/bath&info=sport/bath"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/bath&info=sport/bath",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/01/Public_bath.svg"
     },
     {
       "key": "amenity",
       "value": "public_bath",
       "description": "Sport/Bath",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/bath&info=sport/bath"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/bath&info=sport/bath",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/01/Public_bath.svg"
     },
     {
       "key": "leisure",
       "value": "water_park",
       "description": "Sport/Bath",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/bath&info=sport/bath"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/bath&info=sport/bath",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/01/Public_bath.svg"
     },
     {
       "key": "leisure",
       "value": "swimming_pool",
       "description": "Sport/Bath",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/bath&info=sport/bath"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/bath&info=sport/bath",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/01/Public_bath.svg"
     },
     {
       "key": "leisure",
       "value": "swimming_area",
       "description": "Sport/Bath",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/bath&info=sport/bath"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/bath&info=sport/bath",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/01/Public_bath.svg"
     },
     {
       "key": "leisure",
       "value": "paddling_pool",
       "description": "Sport/Bath",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/bath&info=sport/bath"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/bath&info=sport/bath",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/01/Public_bath.svg"
     },
     {
       "key": "sport",
       "value": "bmx",
       "description": "Sport/Bikepark",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/bikepark&info=sport/bikepark"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/bikepark&info=sport/bikepark",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/bicycle-15.svg"
     },
     {
       "key": "sport",
       "value": "cycling",
       "description": "Sport/Bikepark",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/bikepark&info=sport/bikepark"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/bikepark&info=sport/bikepark",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/bicycle-15.svg"
     },
     {
       "key": "sport",
       "value": "climbing",
       "description": "Sport/Climbing",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/climbing&info=sport/climbing"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/climbing&info=sport/climbing",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/abseiling.svg"
     },
     {
       "key": "playground",
       "value": "climbingwall",
       "description": "Sport/Climbing",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/climbing&info=sport/climbing"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/climbing&info=sport/climbing",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/abseiling.svg"
     },
     {
       "key": "leisure",
       "value": "fitness_station",
       "description": "Sport/Fitness, Sport/Balance, Sport/Exercise machine, Sport/Horizontal bar, Sport/Parallel bars, Sport/Rings",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/fitness&info=sport/fitness"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/fitness&info=sport/fitness",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/fitness-centre-15.svg"
     },
     {
       "key": "sport",
       "description": "Sport/Fitness, Sport/Balance, Sport/Exercise machine, Sport/Horizontal bar, Sport/Parallel bars, Sport/Rings",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/fitness&info=sport/fitness"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/fitness&info=sport/fitness",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/fitness-centre-15.svg"
     },
     {
       "key": "playground",
       "description": "Sport/Fitness, Trip/Playground, Sport/Balance, Sport/Exercise machine, Sport/Horizontal bar, Sport/Parallel bars, Sport/Rings",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/fitness&info=sport/fitness"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/fitness&info=sport/fitness",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/fitness-centre-15.svg"
     },
     {
       "key": "route",
       "value": "fitness_trail",
       "description": "Sport/Fitness trail",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/fitness-trail&info=sport/fitness-trail"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/fitness-trail&info=sport/fitness-trail",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/pitch-15.svg"
     },
     {
       "key": "sport",
       "value": "running",
       "description": "Sport/Running",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/running&info=sport/running"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/running&info=sport/running",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/pitch-15.svg"
     },
     {
       "key": "sport",
       "value": "athletics",
       "description": "Sport/Running",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/running&info=sport/running"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/running&info=sport/running",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/pitch-15.svg"
     },
     {
       "key": "sport",
       "value": "skateboard",
       "description": "Sport/Skatepark",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/skatepark&info=sport/skatepark"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/skatepark&info=sport/skatepark",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/skateboarding.svg"
     },
     {
       "key": "sport",
       "value": "toboggan",
       "description": "Sport/Sledding",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/sledding&info=sport/sledding"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/sledding&info=sport/sledding",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/sledding.svg"
     },
     {
       "key": "piste:type",
       "value": "sled",
       "description": "Sport/Sledding",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/sledding&info=sport/sledding"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/sledding&info=sport/sledding",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/sledding.svg"
     },
     {
       "key": "playground",
       "value": "sledding",
       "description": "Sport/Sledding",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/sledding&info=sport/sledding"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=sport/sledding&info=sport/sledding",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/sledding.svg"
     },
     {
       "key": "tourism",
       "value": "zoo",
       "description": "Trip/Animal enclosure",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/animal&info=trip/animal"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/animal&info=trip/animal",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/zoo-15.svg"
     },
     {
       "key": "attraction",
       "value": "animal",
       "description": "Trip/Animal enclosure",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/animal&info=trip/animal"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/animal&info=trip/animal",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/zoo-15.svg"
     },
     {
       "key": "tourism",
       "value": "aquarium",
       "description": "Trip/Animal enclosure",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/animal&info=trip/animal"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/animal&info=trip/animal",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/zoo-15.svg"
     },
     {
       "key": "man_made",
       "value": "beehive",
       "description": "Trip/Animal enclosure",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/animal&info=trip/animal"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/animal&info=trip/animal",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/zoo-15.svg"
     },
     {
       "key": "landuse",
       "value": "apiary",
       "description": "Trip/Animal enclosure",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/animal&info=trip/animal"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/animal&info=trip/animal",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/zoo-15.svg"
     },
     {
       "key": "landuse",
       "value": "animal_keeping",
       "description": "Trip/Animal enclosure",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/animal&info=trip/animal"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/animal&info=trip/animal",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/zoo-15.svg"
     },
     {
       "key": "landuse",
       "value": "meadow",
       "description": "Trip/Animal enclosure",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/animal&info=trip/animal"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/animal&info=trip/animal",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/zoo-15.svg"
     },
     {
       "key": "landuse",
       "value": "farmyard",
       "description": "Trip/Animal enclosure",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/animal&info=trip/animal"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/animal&info=trip/animal",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/zoo-15.svg"
     },
     {
       "key": "leisure",
       "value": "firepit",
       "description": "Trip/Fireplace",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/fireplace&info=trip/fireplace"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/fireplace&info=trip/fireplace",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/d/df/Firepit.svg"
     },
     {
       "key": "fireplace",
       "description": "Trip/Fireplace",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/fireplace&info=trip/fireplace"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/fireplace&info=trip/fireplace",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/d/df/Firepit.svg"
     },
     {
       "key": "openfire",
       "description": "Trip/Fireplace",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/fireplace&info=trip/fireplace"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/fireplace&info=trip/fireplace",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/d/df/Firepit.svg"
     },
     {
       "key": "leisure",
       "value": "garden",
       "description": "Trip/Garden, Trip/Garden (With name)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/garden&info=trip/garden"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/garden&info=trip/garden",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/garden-15.svg"
     },
     {
       "key": "amenity",
       "value": "lounger",
       "description": "Trip/Lounger",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/lounger&info=trip/lounger"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/lounger&info=trip/lounger",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/beach-15.svg"
     },
     {
       "key": "amenity",
       "value": "hammock",
       "description": "Trip/Lounger",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/lounger&info=trip/lounger"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/lounger&info=trip/lounger",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/beach-15.svg"
     },
     {
       "key": "information",
       "value": "map",
       "description": "Trip/Map, Trip/OpenStreetMap",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/map&info=trip/map"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/map&info=trip/map",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/c/ca/Map-14.svg"
     },
     {
       "key": "attraction",
       "value": "maze",
       "description": "Trip/Maze",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/maze&info=trip/maze"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/maze&info=trip/maze",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/compass.svg"
     },
     {
       "key": "leisure",
       "value": "park",
       "description": "Trip/Park, Trip/Park (With name)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/park&info=trip/park"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/park&info=trip/park",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/park-15.svg"
     },
     {
       "key": "landuse",
       "value": "recreation_ground",
       "description": "Trip/Park, Trip/Park (With name)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/park&info=trip/park"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/park&info=trip/park",
+      "icon_url": "https://sustainable.zottelig.ch/lib/maki-icons/park-15.svg"
     },
     {
       "key": "tourism",
       "value": "picnic_site",
       "description": "Trip/Picnic site",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/picnic-site&info=trip/picnic-site"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/picnic-site&info=trip/picnic-site",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/f/fc/Picnic_site.svg"
     },
     {
       "key": "leisure",
       "value": "picnic_table",
       "description": "Trip/Picnic site",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/picnic-site&info=trip/picnic-site"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/picnic-site&info=trip/picnic-site",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/f/fc/Picnic_site.svg"
     },
     {
       "key": "shelter_type",
       "value": "picnic_shelter",
       "description": "Trip/Picnic site",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/picnic-site&info=trip/picnic-site"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/picnic-site&info=trip/picnic-site",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/f/fc/Picnic_site.svg"
     },
     {
       "key": "leisure",
       "value": "playground",
       "description": "Trip/Playground",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/playground&info=trip/playground"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/playground&info=trip/playground",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/3/31/Playground-16.svg"
     },
     {
       "key": "place",
       "value": "square",
       "description": "Trip/Square, Trip/Square (With name)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/square&info=trip/square"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/square&info=trip/square",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/pedestrian.svg"
     },
     {
       "key": "leisure",
       "value": "common",
       "description": "Trip/Square, Trip/Square (With name)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/square&info=trip/square"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/square&info=trip/square",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/pedestrian.svg"
     },
     {
       "key": "highway",
       "value": "pedestrian",
       "description": "Trip/Square, Trip/Square (With name)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/square&info=trip/square"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/square&info=trip/square",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/pedestrian.svg"
     },
     {
       "key": "highway",
       "value": "footway",
       "description": "Trip/Square, Trip/Square (With name)",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/square&info=trip/square"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/square&info=trip/square",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/pedestrian.svg"
     },
     {
       "key": "man_made",
       "value": "surveillance",
       "description": "Trip/Webcam",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/webcam&info=trip/webcam"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/webcam&info=trip/webcam",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/security_camera.svg"
     },
     {
       "key": "leisure",
       "value": "bird_hide",
       "description": "Trip/Animal observation",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/observation&info=trip/observation"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/observation&info=trip/observation",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/binoculars.svg"
     },
     {
       "key": "leisure",
       "value": "wildlife_hide",
       "description": "Trip/Animal observation",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/observation&info=trip/observation"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/observation&info=trip/observation",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/binoculars.svg"
     },
     {
       "key": "observation",
       "value": "wild_animal",
       "description": "Trip/Animal observation",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/observation&info=trip/observation"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/observation&info=trip/observation",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/binoculars.svg"
     },
     {
       "key": "man_made",
       "value": "nesting_site",
       "description": "Trip/Animal observation",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/observation&info=trip/observation"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/observation&info=trip/observation",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/binoculars.svg"
     },
     {
       "key": "man_made",
       "value": "insect_hotel",
       "description": "Trip/Animal observation",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/observation&info=trip/observation"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/observation&info=trip/observation",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/binoculars.svg"
     },
     {
       "key": "natural",
       "value": "anthill",
       "description": "Trip/Animal observation",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/observation&info=trip/observation"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/observation&info=trip/observation",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/binoculars.svg"
     },
     {
       "key": "natural",
       "value": "termite_mound",
       "description": "Trip/Animal observation",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/observation&info=trip/observation"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=trip/observation&info=trip/observation",
+      "icon_url": "https://sustainable.zottelig.ch/lib/temaki-icons/binoculars.svg"
     },
     {
       "key": "social_facility",
       "description": "Community/For children, Community/For disabled, Community/For elderly, Community/For men, Community/For refugees, Community/For underprivileged, Community/For women",
-      "doc_url": "https://sustainable.zottelig.ch/?offers=community/assistance-children&info=community/assistance-children"
+      "doc_url": "https://sustainable.zottelig.ch/?offers=community/assistance-children&info=community/assistance-children",
+      "icon_url": "https://wiki.openstreetmap.org/w/images/0/0b/Community_centre-14.svg"
     }
   ]
 }
