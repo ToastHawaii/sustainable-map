@@ -301,10 +301,13 @@ export async function initMap(
     if (!marker) return;
 
     marker.style.animation = "0.4s ease-in-out 0s forwards alternate pin-top";
+    (marker.firstChild as any).style.animation =
+      "0.4s ease-in-out 0s forwards alternate pin-top-shadow";
 
     await delay(400);
 
     marker.style.animation = "";
+    (marker.firstChild as any).style.animation = "";
   }, 2000);
 }
 

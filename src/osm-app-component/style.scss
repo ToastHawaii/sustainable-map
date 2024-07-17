@@ -745,6 +745,11 @@ a.menu .title,
 }
 
 .leaflet-marker-icon {
+  > .marker-pin {
+    box-shadow: -5px -5px 10px #ffffffab, 5px -10px 10px #ffffffba,
+      5px 5px 10px #0009, 2px 3px 4px #000000bf;
+    animation: pin-down-shadow 0.4s ease-in-out;
+  }
   animation: pin-down 0.4s ease-in-out;
 }
 @keyframes pin-down {
@@ -755,10 +760,23 @@ a.menu .title,
     top: 0px;
   }
 }
+@keyframes pin-down-shadow {
+  0% {
+    box-shadow: -3px -3px 15px #ffffffab, 7px -8px 15px #ffffffba,
+      7px 7px 15px #0009, 3px 4px 9px #000000bf;
+  }
+  100% {
+    box-shadow: -5px -5px 10px #ffffffab, 5px -10px 10px #ffffffba,
+      5px 5px 10px #0009, 2px 3px 4px #000000bf;
+  }
+}
 
 .leaflet-marker-icon:hover {
   z-index: 10000 !important;
   animation: 0.4s ease-in-out 0s infinite alternate pin-top;
+  > .marker-pin {
+    animation: 0.4s ease-in-out 0s infinite alternate pin-top-shadow;
+  }
 }
 @keyframes pin-top {
   0% {
@@ -766,6 +784,16 @@ a.menu .title,
   }
   100% {
     top: -5px;
+  }
+}
+@keyframes pin-top-shadow {
+  0% {
+    box-shadow: -5px -5px 10px #ffffffab, 5px -10px 10px #ffffffba,
+      5px 5px 10px #0009, 2px 3px 4px #000000bf;
+  }
+  100% {
+    box-shadow: -3px -3px 15px #ffffffab, 7px -8px 15px #ffffffba,
+      7px 7px 15px #0009, 3px 4px 9px #000000bf;
   }
 }
 
