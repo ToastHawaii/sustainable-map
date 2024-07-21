@@ -759,13 +759,16 @@ a.menu .title,
 .custom-div-icon-shadow {
   pointer-events: none;
   animation: pin-down 0.4s ease-in-out;
-  > .marker-pin {
-    box-shadow: -5px -5px 10px #ffffffab, 5px -10px 10px #ffffffba,
-      5px 5px 10px #0009, 2px 3px 4px #000000bf;
-    animation: pin-down-shadow 0.4s ease-in-out;
-  }
+
   z-index: -100000 !important;
 }
+
+html:not(.theme-mode-dark) .custom-div-icon-shadow > .marker-pin {
+  box-shadow: -5px -5px 10px #ffffffab, 5px -10px 10px #ffffffba,
+    5px 5px 10px #0009, 2px 3px 4px #000000bf;
+  animation: pin-down-shadow 0.4s ease-in-out;
+}
+
 @keyframes pin-down-shadow {
   0% {
     box-shadow: -3px -3px 15px #ffffffab, 7px -8px 15px #ffffffba,
@@ -792,9 +795,13 @@ a.menu .title,
 
 .custom-div-icon-pin:hover + .custom-div-icon-shadow {
   animation: 0.4s ease-in-out 0s infinite alternate pin-top;
+}
+
+html:not(.theme-mode-dark)
+  .custom-div-icon-pin:hover
+  + .custom-div-icon-shadow
   > .marker-pin {
-    animation: 0.4s ease-in-out 0s infinite alternate pin-top-shadow;
-  }
+  animation: 0.4s ease-in-out 0s infinite alternate pin-top-shadow;
 }
 
 @keyframes pin-top-shadow {

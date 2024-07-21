@@ -306,10 +306,13 @@ export async function initMap(
     if (!marker) return;
 
     marker.style.animation = "0.4s ease-in-out 0s forwards alternate pin-top";
+
     (marker.nextElementSibling as any).style.animation =
-      "0.4s ease-in-out 0s forwards alternate pin-top";
-    (marker.nextElementSibling as any).firstChild.style.animation =
-      "0.4s ease-in-out 0s forwards alternate pin-top-shadow";
+    "0.4s ease-in-out 0s forwards alternate pin-top";
+    if (!document.documentElement.className.includes("theme-mode-dark")) {
+      (marker.nextElementSibling as any).firstChild.style.animation =
+        "0.4s ease-in-out 0s forwards alternate pin-top-shadow";
+    }
 
     await delay(400);
 
