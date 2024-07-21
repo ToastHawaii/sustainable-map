@@ -52,7 +52,7 @@ export function createOverPassLayer<M extends {}>(
 ) {
   return new L.OverPassLayer({
     markerIcon: L.divIcon({
-      className: "custom-div-icon",
+      className: "custom-div-icon custom-div-icon-pin",
       html: `<div style="background-color:${
         color || "#000000"
       };" class="marker-pin"></div><div class="marker-icon ${value}-icon" style="background-image:url('${icon}');"></div>`,
@@ -82,6 +82,7 @@ export function createOverPassLayer<M extends {}>(
 
         let pos: L.LatLng;
         let marker;
+        let markerShadow;
 
         if (!e.tags) throw "Unexpected undefined: e.tags";
         const tags = e.tags;
@@ -95,6 +96,21 @@ export function createOverPassLayer<M extends {}>(
         }
         if (this.options.markerIcon) {
           marker = L.marker(pos, { icon: this.options.markerIcon });
+          if (
+            this.options.markerIcon.options.className?.includes(
+              "custom-div-icon-pin"
+            )
+          ) {
+            markerShadow = L.marker(pos, {
+              icon: L.divIcon({
+                className: "custom-div-icon custom-div-icon-shadow",
+                html: `<div class="marker-pin"></div>`,
+
+                iconSize: [36, 48],
+                iconAnchor: [18, 48],
+              }),
+            });
+          }
         } else {
           marker = L.circle(pos, 20, {
             stroke: false,
@@ -481,6 +497,9 @@ export function createOverPassLayer<M extends {}>(
         });
         marker.bindPopup(popup);
         this._markers?.addLayer(marker);
+        if (markerShadow) {
+          this._markers?.addLayer(markerShadow);
+        }
       }
     },
   });

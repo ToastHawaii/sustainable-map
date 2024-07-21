@@ -289,7 +289,12 @@ export async function initMap(
     if (!map) return;
     const mapBounds = map.getBounds();
     map.eachLayer((layer) => {
-      if (layer instanceof L.Marker) {
+      if (
+        layer instanceof L.Marker &&
+        (layer as L.Marker)
+          .getElement()
+          ?.className.includes("custom-div-icon-pin")
+      ) {
         if (mapBounds.contains(layer.getLatLng())) {
           markers.push((layer as L.Marker).getElement() as HTMLElement);
         }
@@ -301,13 +306,18 @@ export async function initMap(
     if (!marker) return;
 
     marker.style.animation = "0.4s ease-in-out 0s forwards alternate pin-top";
-    (marker.firstChild as any).style.animation =
+    (marker.nextElementSibling as any).style.animation =
+      "0.4s ease-in-out 0s forwards alternate pin-top";
+    (marker.nextElementSibling as any).firstChild.style.animation =
       "0.4s ease-in-out 0s forwards alternate pin-top-shadow";
 
     await delay(400);
 
     marker.style.animation = "";
-    (marker.firstChild as any).style.animation = "";
+    if (marker.nextElementSibling) {
+      (marker.nextElementSibling as any).style.animation = "";
+      (marker.nextElementSibling as any).firstChild.style.animation = "";
+    }
   }, 2000);
 }
 
