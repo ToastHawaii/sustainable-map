@@ -764,7 +764,7 @@ a.menu .title,
       5px 5px 10px #0009, 2px 3px 4px #000000bf;
     animation: pin-down-shadow 0.4s ease-in-out;
   }
-  z-index: 0 !important;
+  z-index: -100000 !important;
 }
 @keyframes pin-down-shadow {
   0% {
