@@ -1013,10 +1013,7 @@ nw["social_facility"="soup_kitchen"];`,
     value: "goods-exchange",
     icon: "/lib/maki-icons/gift-15.svg",
     query: `
-      // Givebox (Preferred tag)
       nw["amenity"="give_box"];
-
-      nw["amenity"="givebox"];
 
       // Reuse
       nw["amenity"="reuse"]["reuse:books"!="only"];
@@ -1060,8 +1057,6 @@ nw["social_facility"="soup_kitchen"];`,
     query: `
       // Givebox
       nw["amenity"="give_box"];
-
-      nw["amenity"="givebox"];
 
       nw["amenity"="freeshop"];
 
