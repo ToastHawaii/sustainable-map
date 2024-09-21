@@ -1,1 +1,73 @@
-{}
+{
+    "edit": "Upravit",
+    "shop": {
+        "books": "Knihkupectví"
+    },
+    "code": "cs",
+    "info": {
+        "externalResources": "Ostatní",
+        "moreFilters": "Další filtry:",
+        "query": "Databázový dotaz",
+        "osmTags": "Dokumentace",
+        "overpassTurbo": "overpass-turbo"
+    },
+    "menu": {
+        "about": "O tomto webu",
+        "donate": "Podpořte mne",
+        "note": "Přidat poznámku pro mappery",
+        "edit": "Upravit mapu",
+        "share": "Sdílet místo",
+        "theme": "Změna motivu"
+    },
+    "minZoomMessage": "Přiblížit pro načtení prvků mapy",
+    "linkCopied": "Odkaz zkopírován do schránky",
+    "documentation": "Dokumentace",
+    "open": "Otevřeno",
+    "maybeOpens": "Možná otevře",
+    "maybeCloses": "Možná zavře",
+    "opens": "Otevírá",
+    "groundFloor": "(přízemí)",
+    "basement": "({{level}} patro)",
+    "amenity": {
+        "give_box": "GiveBox",
+        "hunting_stand": "Lovecké stanoviště"
+    },
+    "leisure": {
+        "bird_hide": "Místo pro pozorování ptactva",
+        "wildlife_hide": "Místo pro pozorování volně žijících zvířat"
+    },
+    "man_made": {
+        "water_well": "Studna",
+        "watermill": "Vodní mlýn",
+        "windmill": "Větrný mlýn",
+        "mineshaft": "Důlní šachta",
+        "drinking_fountain": "Fontánka na pití",
+        "tower": "Věž",
+        "beehive": "Včelí úl",
+        "insect_hotel": "Hmyzí hotel",
+        "nesting_site": "Pomůcka pro hnízdění"
+    },
+    "landuse": {
+        "apiary": "Včelí úl"
+    },
+    "natural": {
+        "anthill": "Mraveniště",
+        "termite_mound": "Termitiště"
+    },
+    "sport": {
+        "bowls": "Misky"
+    },
+    "search": {
+        "placeholder": "Vyhledat místo"
+    },
+    "minZoomMessageNoLayer": "Žádná přidělená vrstva",
+    "emptyIndicator": "V této oblasti nebyly nalezeny žádné mapové prvky",
+    "route": "Trasa",
+    "share": "Sdílet",
+    "thatDependsOn": "To závisí na",
+    "conditionalFee": "Zdarma pouze v určitých časech.",
+    "closed": "Zavřeno",
+    "maybeOpen": "Možná otevřeno",
+    "closes": "Zavírá",
+    "floor": "({{level}} patro)"
+}
