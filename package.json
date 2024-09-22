@@ -14,11 +14,11 @@
   "dependencies": {
     "@types/leaflet": "1.9.8",
     "@types/md5": "2.3.5",
-    "@types/react": "18.3.3",
+    "@types/react": "18.3.8",
     "@types/react-dom": "18.3.0",
     "bignumber.js": "9.1.2",
     "details-element-polyfill": "2.4.0",
-    "i18next": "23.11.5",
+    "i18next": "23.15.1",
     "i18next-client": "1.11.4",
     "leaflet": "1.9.4",
     "leaflet-overpass-layer": "github:ToastHawaii/leaflet-overpass-layer",
@@ -28,10 +28,10 @@
     "opening_hours": "3.8.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-i18next": "14.1.2",
+    "react-i18next": "15.0.2",
     "react-leaflet": "4.2.1",
     "react-scripts": "5.0.1",
-    "sass": "1.77.6",
+    "sass": "1.79.3",
     "typescript": "4.9.5"
   },
   "scripts": {
