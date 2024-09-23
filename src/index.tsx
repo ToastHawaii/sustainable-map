@@ -140,6 +140,9 @@ function Intro() {
                 <a href="/?lang=en">English</a>
               </td>
               <td>
+                <a href="/?lang=cs">čeština</a>
+              </td>
+              <td>
                 <a href="/?lang=de">Deutsch</a>
               </td>
               <td>
