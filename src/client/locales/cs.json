@@ -1,0 +1,48 @@
+{
+    "meta": {
+        "title": "Mapa udržitelnosti",
+        "description": "Poznávejte svět udržitelným způsobem.",
+        "titleShort": "Udržitelný"
+    },
+    "intro": {
+        "title": "Udržitelné",
+        "tagline": "Poznávejte svět udržitelným způsobem.",
+        "accessible": "Veřejně přístupné",
+        "organic": "Organické",
+        "seasonal": "Sezónní",
+        "packed": "Ekologicky šetrné balení",
+        "unpacked": "Nebalené",
+        "fairTrade": "Fair trade",
+        "regional": "Regionální",
+        "reuse": "Znovupoužití",
+        "participation": "Participace",
+        "legend": "Mapa pomáhá upozornit na udržitelné strategie, jako jsou například",
+        "description": "Tato mapa zobrazuje zařízení a služby ve vašem okolí, které jsou ekologicky, sociálně a ekonomicky udržitelné.",
+        "freeOfCharge": "Zdarma",
+        "social": "Sociální",
+        "production": "Ekologicky šetrná výroba",
+        "transport": "Krátké přepravní vzdálenosti",
+        "osm": "Informace se načítají z <o>OpenStreetMap</o>. <e>Přidejte místa, která znáte.</e>",
+        "vegetarian": "Vegetariánské",
+        "zeroWaste": "Bezodpadové",
+        "sharing": "Sdílení",
+        "lending": "Půjčování",
+        "repair": "Opravy",
+        "recycling": "Recyklování",
+        "community": "Komunita",
+        "license": "Aplikace je licencována pod <l>GNU Affero General Public License v3.0</l>. <c>Kód</c> je možné volně používat, kopírovat a upravovat, pokud jej zveřejníte pod stejnou licencí."
+    },
+    "group": {
+        "health": "Zdraví",
+        "community": "Komunita",
+        "sport": "Sport",
+        "communitySport": "Komunitní sport",
+        "material": "Recyklace materiálů",
+        "education": "Vzdělání",
+        "natural": "Příroda",
+        "culture": "Kultura",
+        "food": "Jídlo",
+        "trip": "Výlet",
+        "goods": "Zboží"
+    }
+}
