@@ -20,11 +20,9 @@ import * as opening_hours from "opening_hours";
 import { Solver } from "./coloriz/Solver";
 import { Color, hexToRgb } from "./coloriz/Color";
 import { setQueryParams, getQueryParams } from "./utilities/url";
-import { Attribute } from "./Generator";
-import { getJson } from "./utilities/jsonRequest";
 import { Map } from "leaflet";
 import { get, set } from "./utilities/storage";
-import { groupBy, delay, getRandomInt } from "./utilities/data";
+import { delay, getRandomInt } from "./utilities/data";
 import { toString } from "./utilities/string";
 import "./DetailsImprove";
 import {
@@ -32,7 +30,7 @@ import {
   getHtmlElements,
   createElement,
 } from "./utilities/html";
-import { createOverPassLayer, shareLink } from "./createOverPassLayer";
+import { shareLink } from "./createOverPassLayer";
 
 import BigNumber from "bignumber.js";
 import "leaflet/dist/leaflet.css";
@@ -308,7 +306,7 @@ export async function initMap(
     marker.style.animation = "0.4s ease-in-out 0s forwards alternate pin-top";
 
     (marker.nextElementSibling as any).style.animation =
-    "0.4s ease-in-out 0s forwards alternate pin-top";
+      "0.4s ease-in-out 0s forwards alternate pin-top";
     if (!document.documentElement.className.includes("theme-mode-dark")) {
       (marker.nextElementSibling as any).firstChild.style.animation =
         "0.4s ease-in-out 0s forwards alternate pin-top-shadow";

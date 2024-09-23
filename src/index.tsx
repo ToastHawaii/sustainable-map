@@ -212,6 +212,6 @@ setTimeout(() => {
   if (flag) {
     flag.setAttribute("viewBox", "0 0 21 14");
     flag.innerHTML = `<path fill="#80b" d="M0 0h21v3H0z"/><path fill="#00f" d="M0 2h21v3H0z"/><path fill="#8bd" d="M0 4h21v3H0z"/><path fill="#6b4" d="M0 6h21v3H0z"/><path fill="#fe0" d="M0 8h21v3H0z"/><path fill="#f41" d="M0 10h21v3H0z"/><path fill="#f10" d="M0 12h21v2H0z"/>`;
-  flag.after(" | ")
+    flag.after(" | ");
   }
 }, 0);
