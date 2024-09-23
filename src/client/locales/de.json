@@ -125,580 +125,442 @@
     },
     "type": {
         "artwork": {
-            "name": "Strassenkunst",
-            "description": ""
+            "name": "Strassenkunst"
         },
         "fountain": {
-            "name": "Springbrunnen",
-            "description": ""
+            "name": "Springbrunnen"
         },
         "tourist-attraction": {
-            "name": "Sehenswürdigkeit",
-            "description": ""
+            "name": "Sehenswürdigkeit"
         },
         "archaeological-site": {
-            "name": "Archäologische Stätte",
-            "description": ""
+            "name": "Archäologische Stätte"
         },
         "trail": {
-            "name": "Lehrpfad",
-            "description": ""
+            "name": "Lehrpfad"
         },
         "battery-recycling": {
-            "name": "Batterie",
-            "description": ""
+            "name": "Batterie"
         },
         "oil-recycling": {
-            "name": "Öl",
-            "description": ""
+            "name": "Öl"
         },
         "reusable-bottle-reuse": {
-            "name": "Mehrwegflasche",
-            "description": ""
+            "name": "Mehrwegflasche"
         },
         "rubble-recycling": {
-            "name": "Steingut",
-            "description": ""
+            "name": "Steingut"
         },
         "plastic-recycling": {
-            "name": "Plastik",
-            "description": ""
+            "name": "Plastik"
         },
         "hazardous-recycling": {
-            "name": "Sondermüll",
-            "description": ""
+            "name": "Sondermüll"
         },
         "sport": {
-            "name": "Sport",
-            "description": ""
+            "name": "Sport"
         },
         "books": {
-            "name": "Bücher",
-            "description": ""
+            "name": "Bücher"
         },
         "books-get": {
-            "name": "Bücher bekommen",
-            "description": ""
+            "name": "Bücher bekommen"
         },
         "books-borrow": {
-            "name": "Bücher ausleihen",
-            "description": ""
+            "name": "Bücher ausleihen"
         },
         "books-give": {
-            "name": "Bücher geben",
-            "description": ""
+            "name": "Bücher geben"
         },
         "books-recycle": {
-            "name": "Bücher weiterverwerten",
-            "description": ""
+            "name": "Bücher weiterverwerten"
         },
         "kneipp_water_cure": {
-            "name": "Kneippanlage",
-            "description": ""
+            "name": "Kneippanlage"
         },
         "castle": {
-            "name": "Burg",
-            "description": ""
+            "name": "Burg"
         },
         "mill": {
-            "name": "Mühle",
-            "description": ""
+            "name": "Mühle"
         },
         "history": {
-            "name": "Geschichte",
-            "description": ""
+            "name": "Geschichte"
         },
         "memorial": {
-            "name": "Gedenkstätte",
-            "description": ""
+            "name": "Gedenkstätte"
         },
         "monument": {
-            "name": "Monument",
-            "description": ""
+            "name": "Monument"
         },
         "museum": {
-            "name": "Museum",
-            "description": ""
+            "name": "Museum"
         },
         "observatory": {
-            "name": "Observatorium",
-            "description": ""
+            "name": "Observatorium"
         },
         "ruins": {
-            "name": "Ruine",
-            "description": ""
+            "name": "Ruine"
         },
         "cave": {
-            "name": "Höhle",
-            "description": ""
+            "name": "Höhle"
         },
         "natural_monument": {
-            "name": "Naturdenkmal",
-            "description": ""
+            "name": "Naturdenkmal"
         },
         "pond": {
-            "name": "Teich",
-            "description": ""
+            "name": "Teich"
         },
         "rock": {
-            "name": "Fels",
-            "description": ""
+            "name": "Fels"
         },
         "viewpoint": {
-            "name": "Aussichtpunkt",
-            "description": ""
+            "name": "Aussichtpunkt"
         },
         "waterfall": {
-            "name": "Wasserfall",
-            "description": ""
+            "name": "Wasserfall"
         },
         "spring": {
-            "name": "Quelle",
-            "description": ""
+            "name": "Quelle"
         },
         "assistance": {
-            "name": "Unterstützung",
-            "description": ""
+            "name": "Unterstützung"
         },
         "assistance-female": {
-            "name": "Für Frauen",
-            "description": ""
+            "name": "Für Frauen"
         },
         "assistance-male": {
-            "name": "Für Männer",
-            "description": ""
+            "name": "Für Männer"
         },
         "assistance-senior": {
-            "name": "Für Ältere",
-            "description": ""
+            "name": "Für Ältere"
         },
         "assistance-disabled": {
-            "name": "Für Behinderte",
-            "description": ""
+            "name": "Für Behinderte"
         },
         "assistance-homeless": {
-            "name": "Für Benachteiligte",
-            "description": ""
+            "name": "Für Benachteiligte"
         },
         "assistance-migrant": {
-            "name": "Für Vertriebene",
-            "description": ""
+            "name": "Für Vertriebene"
         },
         "assistance-children": {
-            "name": "Für Kinder",
-            "description": ""
+            "name": "Für Kinder"
         },
         "assisted-repair": {
             "name": "Begleitete Reparatur",
             "description": "Hier kannst du defekte Gegenstände gemeinsam mit Profis reparieren. Du triffst neue Leute und meistens gibt es auch Kaffee und Kuchen. Bekannte Veranstaltungen sind Repair Cafés."
         },
         "barbecue": {
-            "name": "Grill",
-            "description": ""
+            "name": "Grill"
         },
         "baking-oven": {
-            "name": "Backofen",
-            "description": ""
+            "name": "Backofen"
         },
         "health-products": {
             "name": "Gesundheitsprodukte",
             "description": "Ein Geschäft, das Körperpflege, Kosmetik, Haushaltsreinigung oder medizinische Produkte verkauft."
         },
         "bicycle-rental": {
-            "name": "Velo Verleih",
-            "description": ""
+            "name": "Velo Verleih"
         },
         "bicycle-self-repair": {
-            "name": "Velo Selbstreparatur",
-            "description": ""
+            "name": "Velo Selbstreparatur"
         },
         "charging-station": {
-            "name": "Ladestation",
-            "description": ""
+            "name": "Ladestation"
         },
         "musical_instrument": {
-            "name": "Instrument",
-            "description": ""
+            "name": "Instrument"
         },
         "advertising": {
             "name": "Werbefläche",
             "description": "Hier kannst du Plakate anbringen um für deine Sache zu werben."
         },
         "community-centre": {
-            "name": "Gemeinschaftscenter",
-            "description": ""
+            "name": "Gemeinschaftscenter"
         },
         "scout": {
-            "name": "Pfadfinder",
-            "description": ""
+            "name": "Pfadfinder"
         },
         "community-garden": {
             "name": "Gemeinschaftsgarten",
             "description": "Hier ist ein Garten, welchen du gemeinsam mit anderen bewirtschaften kannst. Du kannst Gemüse, Kräuter, Blumen etc. anpflanzen, gießen und ernten und beim Wachsen zuschauen."
         },
         "grow": {
-            "name": "Anbauen",
-            "description": ""
+            "name": "Anbauen"
         },
         "grocery": {
-            "name": "Lebensmittel",
-            "description": ""
+            "name": "Lebensmittel"
         },
         "plant": {
-            "name": "Pflanze",
-            "description": ""
+            "name": "Pflanze"
         },
         "sweets": {
-            "name": "Süssigkeiten",
-            "description": ""
+            "name": "Süssigkeiten"
         },
         "baked-goods": {
-            "name": "Backwaren",
-            "description": ""
+            "name": "Backwaren"
         },
         "dairy": {
-            "name": "Milchprodukte",
-            "description": ""
+            "name": "Milchprodukte"
         },
         "meat": {
-            "name": "Fleischprodukte",
-            "description": ""
+            "name": "Fleischprodukte"
         },
         "vegetable": {
-            "name": "Obst / Gemüse",
-            "description": ""
+            "name": "Obst / Gemüse"
         },
         "beverages": {
-            "name": "Getränke",
-            "description": ""
+            "name": "Getränke"
         },
         "diaper-changing-table": {
-            "name": "Wickeltische",
-            "description": ""
+            "name": "Wickeltische"
         },
         "drinking-water": {
-            "name": "Trinkwasser",
-            "description": ""
+            "name": "Trinkwasser"
         },
         "defibrillator": {
-            "name": "Defibrillator",
-            "description": ""
+            "name": "Defibrillator"
         },
         "food-sharing": {
             "name": "Lebensmittel teilen",
             "description": "An diesem Ort kannst du Lebensmittel abgeben und holen. Die Bedingungen für das Abgeben und Holen sind sehr unterschiedlich, über die Webseite des Betreibers oder vor Ort kannst du dich darüber informieren."
         },
         "dinner": {
-            "name": "Essen",
-            "description": ""
+            "name": "Essen"
         },
         "goods-get": {
-            "name": "Waren bekommen",
-            "description": ""
+            "name": "Waren bekommen"
         },
         "goods-exchange": {
             "name": "Waren Tausch",
             "description": "Hier findest du einen Tisch, ein Regal oder ein Laden um Gegenstände zu bringen und zu holen. Bekannte Einrichtungen sind Umsonstläden und Giveboxen."
         },
         "hackerspace": {
-            "name": "Offene Werkstatt",
-            "description": ""
+            "name": "Offene Werkstatt"
         },
         "coworking": {
-            "name": "Zusammenarbeit",
-            "description": ""
+            "name": "Zusammenarbeit"
         },
         "contribute": {
-            "name": "Beitragen",
-            "description": ""
+            "name": "Beitragen"
         },
         "map": {
-            "name": "Karte",
-            "description": ""
+            "name": "Karte"
         },
         "openstreetmap": {
-            "name": "OpenStreetMap",
-            "description": ""
+            "name": "OpenStreetMap"
         },
         "internet": {
-            "name": "Internet",
-            "description": ""
+            "name": "Internet"
         },
         "public-shower": {
-            "name": "Öffentliche Dusche",
-            "description": ""
+            "name": "Öffentliche Dusche"
         },
         "pump": {
-            "name": "Pumpe",
-            "description": ""
+            "name": "Pumpe"
         },
         "printer": {
-            "name": "Kopieren & Drucken",
-            "description": ""
+            "name": "Kopieren & Drucken"
         },
         "toilet": {
-            "name": "Öffentliche Toilette",
-            "description": ""
+            "name": "Öffentliche Toilette"
         },
         "basketball": {
-            "name": "Basketball",
-            "description": ""
+            "name": "Basketball"
         },
         "bath": {
-            "name": "Bad",
-            "description": ""
+            "name": "Bad"
         },
         "bikepark": {
-            "name": "Bikepark",
-            "description": ""
+            "name": "Bikepark"
         },
         "skatepark": {
-            "name": "Skatepark",
-            "description": ""
+            "name": "Skatepark"
         },
         "chess": {
-            "name": "Strassenschach",
-            "description": ""
+            "name": "Strassenschach"
         },
         "climbing": {
-            "name": "Klettern",
-            "description": ""
+            "name": "Klettern"
         },
         "fitness": {
-            "name": "Fitness",
-            "description": ""
+            "name": "Fitness"
         },
         "horizontal_bar": {
-            "name": "Reck",
-            "description": ""
+            "name": "Reck"
         },
         "parallel_bars": {
-            "name": "Parallelbarren",
-            "description": ""
+            "name": "Parallelbarren"
         },
         "rings": {
-            "name": "Ringe",
-            "description": ""
+            "name": "Ringe"
         },
         "exercise-machine": {
-            "name": "Übungsgerät",
-            "description": ""
+            "name": "Übungsgerät"
         },
         "balance": {
-            "name": "Gleichgewicht",
-            "description": ""
+            "name": "Gleichgewicht"
         },
         "fitness-trail": {
-            "name": "Vitaparcours",
-            "description": ""
+            "name": "Vitaparcours"
         },
         "sledding": {
-            "name": "Schlitteln",
-            "description": ""
+            "name": "Schlitteln"
         },
         "running": {
-            "name": "Laufsport",
-            "description": ""
+            "name": "Laufsport"
         },
         "soccer": {
-            "name": "Fussball",
-            "description": ""
+            "name": "Fussball"
         },
         "table-tennis": {
-            "name": "Tischtennis",
-            "description": ""
+            "name": "Tischtennis"
         },
         "table-soccer": {
-            "name": "Tischfussball",
-            "description": ""
+            "name": "Tischfussball"
         },
         "boules": {
-            "name": "Boule",
-            "description": ""
+            "name": "Boule"
         },
         "volleyball": {
-            "name": "Volleyball",
-            "description": ""
+            "name": "Volleyball"
         },
         "animal": {
-            "name": "Tiere",
-            "description": ""
+            "name": "Tiere"
         },
         "observation": {
-            "name": "Tiere beobachten",
-            "description": ""
+            "name": "Tiere beobachten"
         },
         "maze": {
-            "name": "Irrgarten",
-            "description": ""
+            "name": "Irrgarten"
         },
         "webcam": {
-            "name": "Webcam",
-            "description": ""
+            "name": "Webcam"
         },
         "fireplace": {
-            "name": "Feuerstelle",
-            "description": ""
+            "name": "Feuerstelle"
         },
         "garden": {
-            "name": "Garten",
-            "description": ""
+            "name": "Garten"
         },
         "garden-with-name": {
-            "name": "Garten (Mit Name)",
-            "description": ""
+            "name": "Garten (Mit Name)"
         },
         "nature-park": {
-            "name": "Naturpark",
-            "description": ""
+            "name": "Naturpark"
         },
         "park": {
-            "name": "Park",
-            "description": ""
+            "name": "Park"
         },
         "park-with-name": {
-            "name": "Park (Mit Name)",
-            "description": ""
+            "name": "Park (Mit Name)"
         },
         "picnic-site": {
-            "name": "Picknickplatz",
-            "description": ""
+            "name": "Picknickplatz"
         },
         "square": {
-            "name": "Platz",
-            "description": ""
+            "name": "Platz"
         },
         "square-with-name": {
-            "name": "Platz (Mit Name)",
-            "description": ""
+            "name": "Platz (Mit Name)"
         },
         "playground": {
-            "name": "Spielplatz",
-            "description": ""
+            "name": "Spielplatz"
         },
         "lounger": {
-            "name": "Liege",
-            "description": ""
+            "name": "Liege"
         },
         "clothes": {
-            "name": "Kleider",
-            "description": ""
+            "name": "Kleider"
         },
         "clothes-give": {
-            "name": "Kleider (Geben)",
-            "description": ""
+            "name": "Kleider (Geben)"
         },
         "clothes-take": {
-            "name": "Kleider (Bekommen)",
-            "description": ""
+            "name": "Kleider (Bekommen)"
         },
         "clothes-repair": {
-            "name": "Kleider (Reparieren)",
-            "description": ""
+            "name": "Kleider (Reparieren)"
         },
         "mobile-phones": {
-            "name": "Handy",
-            "description": ""
+            "name": "Handy"
         },
         "mobile-phones-give": {
-            "name": "Handy (Geben)",
-            "description": ""
+            "name": "Handy (Geben)"
         },
         "mobile-phones-take": {
-            "name": "Handy (Bekommen)",
-            "description": ""
+            "name": "Handy (Bekommen)"
         },
         "mobile-phones-repair": {
-            "name": "Handy (Reparieren)",
-            "description": ""
+            "name": "Handy (Reparieren)"
         },
         "computers": {
-            "name": "Computer",
-            "description": ""
+            "name": "Computer"
         },
         "computers-give": {
-            "name": "Computer (Geben)",
-            "description": ""
+            "name": "Computer (Geben)"
         },
         "computers-take": {
-            "name": "Computer (Bekommen)",
-            "description": ""
+            "name": "Computer (Bekommen)"
         },
         "computers-repair": {
-            "name": "Computer (Reparieren)",
-            "description": ""
+            "name": "Computer (Reparieren)"
         },
         "toys": {
-            "name": "Spielzeug",
-            "description": ""
+            "name": "Spielzeug"
         },
         "toys-give": {
-            "name": "Spielzeug (Geben)",
-            "description": ""
+            "name": "Spielzeug (Geben)"
         },
         "toys-take": {
-            "name": "Spielzeug (Bekommen)",
-            "description": ""
+            "name": "Spielzeug (Bekommen)"
         },
         "toys-rent": {
-            "name": "Spielzeug (Ausleihen)",
-            "description": ""
+            "name": "Spielzeug (Ausleihen)"
         },
         "toys-repair": {
-            "name": "Spielzeug (Reparieren)",
-            "description": ""
+            "name": "Spielzeug (Reparieren)"
         },
         "electronics": {
-            "name": "Elektrogerät",
-            "description": ""
+            "name": "Elektrogerät"
         },
         "electronics-give": {
-            "name": "Elektrogerät (Geben)",
-            "description": ""
+            "name": "Elektrogerät (Geben)"
         },
         "electronics-take": {
-            "name": "Elektrogerät (Bekommen)",
-            "description": ""
+            "name": "Elektrogerät (Bekommen)"
         },
         "electronics-repair": {
-            "name": "Elektrogerät (Reparieren)",
-            "description": ""
+            "name": "Elektrogerät (Reparieren)"
         },
         "furniture": {
-            "name": "Möbel",
-            "description": ""
+            "name": "Möbel"
         },
         "furniture-give": {
-            "name": "Möbel (Geben)",
-            "description": ""
+            "name": "Möbel (Geben)"
         },
         "furniture-take": {
-            "name": "Möbel (Bekommen)",
-            "description": ""
+            "name": "Möbel (Bekommen)"
         },
         "furniture-repair": {
-            "name": "Möbel (Reparieren)",
-            "description": ""
+            "name": "Möbel (Reparieren)"
         },
         "bicycle": {
-            "name": "Velo",
-            "description": ""
+            "name": "Velo"
         },
         "bicycle-give": {
-            "name": "Velo (Geben)",
-            "description": ""
+            "name": "Velo (Geben)"
         },
         "bicycle-get": {
-            "name": "Bicycle (Bekommen)",
-            "description": ""
+            "name": "Bicycle (Bekommen)"
         },
         "bicycle-rent": {
-            "name": "Velo (Ausleihen)",
-            "description": ""
+            "name": "Velo (Ausleihen)"
         },
         "bicycle-repair": {
-            "name": "Velo (Reparieren)",
-            "description": ""
+            "name": "Velo (Reparieren)"
         }
     },
     "intro": {
