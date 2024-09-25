@@ -120,5 +120,244 @@
     },
     "capacity": "Kapacita",
     "reuse": "Reuse",
-    "freeToGive": "Volně k darování"
+    "freeToGive": "Volně k darování",
+    "regional": {
+        "only": "Pouze regionální produkty",
+        "yes": "Má regionální produkty",
+        "no": "Žádné regionální produkty"
+    },
+    "avoidPackaging": "Vyhýbají se zbytečným obalům",
+    "vegetarian": {
+        "only": "Pouze vegetariánské produkty",
+        "yes": "Má vegetariánské produkty",
+        "no": "Žádné vegetariánské produkty"
+    },
+    "vegan": {
+        "only": "Pouze veganské produkty",
+        "yes": "Má veganské produkty",
+        "no": "Žádné veganské produkty"
+    },
+    "fairTrade": {
+        "only": "Pouze fair trade produkty",
+        "yes": "Má fair trade produkty",
+        "no": "Žádné fair trade produkty"
+    },
+    "organic": {
+        "only": "Pouze ekologické produkty",
+        "yes": "Má ekologické produkty",
+        "no": "Žádné ekologické produkty"
+    },
+    "colour": "Barva",
+    "free": "Zdarma",
+    "veryCheap": "Bezplatně nebo velmi levně",
+    "horizontalBar": "Vodorovný pruh",
+    "parallelBars": "Rovnoběžné pruhy",
+    "rings": "Kroužky",
+    "exerciseMachine": "Cvičební stroj",
+    "balance": "Vyvážení",
+    "difficulty": "Obtížnost",
+    "type": {
+        "artwork": {
+            "name": "Umělecké dílo",
+            "description": " "
+        },
+        "fountain": {
+            "name": "Fontána",
+            "description": " "
+        },
+        "tourist-attraction": {
+            "name": "Turistická zajímavost",
+            "description": " "
+        },
+        "archaeological-site": {
+            "name": "Archeologická lokalita",
+            "description": " "
+        },
+        "trail": {
+            "name": "Naučná stezka",
+            "description": " "
+        },
+        "battery-recycling": {
+            "name": "Baterie",
+            "description": " "
+        },
+        "reusable-bottle-reuse": {
+            "name": "Opakovaně použitelná láhev",
+            "description": " "
+        },
+        "oil-recycling": {
+            "name": "Olej",
+            "description": " "
+        },
+        "rubble-recycling": {
+            "name": "Stavební suť",
+            "description": " "
+        },
+        "plastic-recycling": {
+            "name": "Plast",
+            "description": " "
+        },
+        "hazardous-recycling": {
+            "name": "Nebezpečný odpad",
+            "description": " "
+        },
+        "books": {
+            "description": " ",
+            "name": "Knihy"
+        },
+        "sport": {
+            "name": "Sport",
+            "description": " "
+        },
+        "books-get": {
+            "name": "Získání knih",
+            "description": " "
+        },
+        "books-borrow": {
+            "name": "Půjčování knih",
+            "description": " "
+        },
+        "books-give": {
+            "name": "Darování knih",
+            "description": " "
+        },
+        "books-recycle": {
+            "name": "Recyklace knih",
+            "description": " "
+        },
+        "kneipp_water_cure": {
+            "name": "Kneipp zařízení",
+            "description": " "
+        },
+        "castle": {
+            "name": "Hrad",
+            "description": " "
+        },
+        "mill": {
+            "name": "Mlýn",
+            "description": " "
+        },
+        "history": {
+            "name": "Historie",
+            "description": " "
+        },
+        "memorial": {
+            "name": "Památník",
+            "description": " "
+        },
+        "monument": {
+            "name": "Monument",
+            "description": " "
+        },
+        "museum": {
+            "name": "Muzeum",
+            "description": " "
+        },
+        "observatory": {
+            "name": "Observatoř",
+            "description": " "
+        },
+        "cave": {
+            "description": " ",
+            "name": "Jeskyně"
+        },
+        "natural_monument": {
+            "name": "Přírodní památka",
+            "description": " "
+        },
+        "pond": {
+            "name": "Rybník",
+            "description": " "
+        },
+        "rock": {
+            "name": "Skála",
+            "description": " "
+        },
+        "viewpoint": {
+            "name": "Výhledový bod",
+            "description": " "
+        },
+        "waterfall": {
+            "name": "Vodopád",
+            "description": " "
+        },
+        "spring": {
+            "name": "Pramen",
+            "description": " "
+        },
+        "assistance": {
+            "name": "Asistence",
+            "description": " "
+        },
+        "assistance-female": {
+            "name": "Pro ženy",
+            "description": " "
+        },
+        "assistance-male": {
+            "name": "Pro muže",
+            "description": " "
+        },
+        "assistance-senior": {
+            "name": "Pro seniory",
+            "description": " "
+        },
+        "assistance-disabled": {
+            "name": "Pro zdravotně postižené",
+            "description": " "
+        },
+        "assistance-homeless": {
+            "name": "Pro znevýhodněné",
+            "description": " "
+        },
+        "assistance-migrant": {
+            "name": "Pro uprchlíky",
+            "description": " "
+        },
+        "assistance-children": {
+            "name": "Pro děti",
+            "description": " "
+        },
+        "assisted-repair": {
+            "name": "Oprava s asistencí",
+            "description": "Zde můžete opravit rozbité věci společně s profesionály. Seznámíte se s novými lidmi a obvykle dostanete i kávu a dort. Známé akce jsou opravárenské kavárny."
+        },
+        "barbecue": {
+            "name": "Grilování"
+        },
+        "baking-oven": {
+            "name": "Pečící trouba",
+            "description": " "
+        },
+        "health-products": {
+            "name": "Zdravotní produkty",
+            "description": "Obchod s výrobky pro osobní hygienu, kosmetikou, čisticími prostředky pro domácnost nebo zdravotnickými prostředky."
+        },
+        "bicycle-rental": {
+            "name": "Půjčovna kol",
+            "description": " "
+        },
+        "bicycle-self-repair": {
+            "name": "Vlastní opravy jízdních kol",
+            "description": " "
+        },
+        "charging-station": {
+            "name": "Nabíjecí stanice",
+            "description": " "
+        },
+        "advertising": {
+            "description": "Zde můžete vyvěsit plakáty, které propagují váš podnik.",
+            "name": "Reklamní plocha"
+        },
+        "community-centre": {
+            "name": "Komunitní centrum"
+        },
+        "ruins": {
+            "name": "Ruiny",
+            "description": " "
+        },
+        "musical_instrument": {
+            "name": "Nástroj",
+            "description": " "
+        }
+    }
 }
