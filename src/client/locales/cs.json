@@ -30,7 +30,12 @@
         "repair": "Opravy",
         "recycling": "Recyklování",
         "community": "Komunita",
-        "license": "Aplikace je licencována pod <l>GNU Affero General Public License v3.0</l>. <c>Kód</c> je možné volně používat, kopírovat a upravovat, pokud jej zveřejníte pod stejnou licencí."
+        "license": "Aplikace je licencována pod <l>GNU Affero General Public License v3.0</l>. <c>Kód</c> je možné volně používat, kopírovat a upravovat, pokud jej zveřejníte pod stejnou licencí.",
+        "contribute": "jak přispět do OpenStreetMap",
+        "moreApps": "Více aplikací založených na OpenStreetMap",
+        "aboutMe": "O nás",
+        "translate": "Pomozte překládat",
+        "translationStatus": "Stav překladu"
     },
     "group": {
         "health": "Zdraví",
@@ -43,6 +48,316 @@
         "culture": "Kultura",
         "food": "Jídlo",
         "trip": "Výlet",
-        "goods": "Zboží"
+        "goods": "Zboží",
+        "mobility": "Mobilita"
+    },
+    "title": "Mapa Udržitelně",
+    "description": "Poznejte svět udržitelně.",
+    "playground": "Pro děti",
+    "changing_table": "Má přebalovací pult",
+    "bottle": "Je možné doplnit náplň",
+    "pump": "Pumpa",
+    "tools": "Nářadí",
+    "repair": "Opravy",
+    "chainTool": "Nástroj na řetěz",
+    "internet": "Internet",
+    "water": "Pitná voda",
+    "bicycle": "Kolo",
+    "park": "Park",
+    "charging": "Nabíjení",
+    "mobileCharging": "Nabíjení telefonů",
+    "car": "Auto",
+    "mobile": "Mobilní telefon",
+    "smallElectronics": "Malá elektronika",
+    "electronics": "Elektronika",
+    "furniture": "Nábytek",
+    "computer": "Počítač",
+    "toy": "Hračky",
+    "clothes": "Oblečení",
+    "battery": "Baterie",
+    "carBattery": "Autobaterie",
+    "cookingOil": "Kuchyňský olej",
+    "engineOil": "Motorový olej",
+    "oil": "Odpadní olej",
+    "paint": "Barviva",
+    "rubble": "Stavební suť",
+    "plastic": "Plasty",
+    "plastic_bottles": "Plastové lahve",
+    "plastic_packaging": "Plastové obaly",
+    "PET": "PET",
+    "plastic_bags": "Plastové pytle",
+    "polyester": "Polyester",
+    "polystyrene_foam": "Polystyrenová pěna",
+    "hazardous": "Nebezpečný odpad",
+    "hydrargyrum": "Rtuť",
+    "beekeeper": "Včelař",
+    "marketplace": "Tržiště",
+    "milkFillingStation": "Mlékomat",
+    "shoes": "Boty",
+    "recycling": "Recyklace",
+    "freeToTake": "Volně k odběru",
+    "freeToTakeOrGive": "Volně k odběru nebo darování",
+    "borrow": "Pouze výpůjčky",
+    "public": "Veřejně přístupné",
+    "customersOnly": "Pouze zákazníci",
+    "membersOnly": "Pouze pro členy",
+    "fee": "Prodej",
+    "indoor": "Uvnitř",
+    "female": "Pro ženy",
+    "male": "Pro muže",
+    "senior": "Pro seniory",
+    "disabled": "Pro zdravotně postižené",
+    "homeless": "Pro znevýhodněné",
+    "migrant": "Pro uprchlíky",
+    "lgbtq": "Vhodné pro LGBTQ+",
+    "hoops": "Obruče",
+    "light": "Osvětlení",
+    "covered": "Krytý",
+    "wheelchair": {
+        "yes": "Bezbariérový přístup",
+        "limited": "Omezený bezbariérový přístup",
+        "no": "Není bezbariérový"
+    },
+    "capacity": "Kapacita",
+    "reuse": "Reuse",
+    "freeToGive": "Volně k darování",
+    "regional": {
+        "only": "Pouze regionální produkty",
+        "yes": "Má regionální produkty",
+        "no": "Žádné regionální produkty"
+    },
+    "avoidPackaging": "Vyhýbají se zbytečným obalům",
+    "vegetarian": {
+        "only": "Pouze vegetariánské produkty",
+        "yes": "Má vegetariánské produkty",
+        "no": "Žádné vegetariánské produkty"
+    },
+    "vegan": {
+        "only": "Pouze veganské produkty",
+        "yes": "Má veganské produkty",
+        "no": "Žádné veganské produkty"
+    },
+    "fairTrade": {
+        "only": "Pouze fair trade produkty",
+        "yes": "Má fair trade produkty",
+        "no": "Žádné fair trade produkty"
+    },
+    "organic": {
+        "only": "Pouze ekologické produkty",
+        "yes": "Má ekologické produkty",
+        "no": "Žádné ekologické produkty"
+    },
+    "colour": "Barva",
+    "free": "Zdarma",
+    "veryCheap": "Bezplatně nebo velmi levně",
+    "horizontalBar": "Vodorovný pruh",
+    "parallelBars": "Rovnoběžné pruhy",
+    "rings": "Kroužky",
+    "exerciseMachine": "Cvičební stroj",
+    "balance": "Vyvážení",
+    "difficulty": "Obtížnost",
+    "type": {
+        "artwork": {
+            "name": "Umělecké dílo",
+            "description": " "
+        },
+        "fountain": {
+            "name": "Fontána",
+            "description": " "
+        },
+        "tourist-attraction": {
+            "name": "Turistická zajímavost",
+            "description": " "
+        },
+        "archaeological-site": {
+            "name": "Archeologická lokalita",
+            "description": " "
+        },
+        "trail": {
+            "name": "Naučná stezka",
+            "description": " "
+        },
+        "battery-recycling": {
+            "name": "Baterie",
+            "description": " "
+        },
+        "reusable-bottle-reuse": {
+            "name": "Opakovaně použitelná láhev",
+            "description": " "
+        },
+        "oil-recycling": {
+            "name": "Olej",
+            "description": " "
+        },
+        "rubble-recycling": {
+            "name": "Stavební suť",
+            "description": " "
+        },
+        "plastic-recycling": {
+            "name": "Plast",
+            "description": " "
+        },
+        "hazardous-recycling": {
+            "name": "Nebezpečný odpad",
+            "description": " "
+        },
+        "books": {
+            "description": " ",
+            "name": "Knihy"
+        },
+        "sport": {
+            "name": "Sport",
+            "description": " "
+        },
+        "books-get": {
+            "name": "Získání knih",
+            "description": " "
+        },
+        "books-borrow": {
+            "name": "Půjčování knih",
+            "description": " "
+        },
+        "books-give": {
+            "name": "Darování knih",
+            "description": " "
+        },
+        "books-recycle": {
+            "name": "Recyklace knih",
+            "description": " "
+        },
+        "kneipp_water_cure": {
+            "name": "Kneipp zařízení",
+            "description": " "
+        },
+        "castle": {
+            "name": "Hrad",
+            "description": " "
+        },
+        "mill": {
+            "name": "Mlýn",
+            "description": " "
+        },
+        "history": {
+            "name": "Historie",
+            "description": " "
+        },
+        "memorial": {
+            "name": "Památník",
+            "description": " "
+        },
+        "monument": {
+            "name": "Monument",
+            "description": " "
+        },
+        "museum": {
+            "name": "Muzeum",
+            "description": " "
+        },
+        "observatory": {
+            "name": "Observatoř",
+            "description": " "
+        },
+        "cave": {
+            "description": " ",
+            "name": "Jeskyně"
+        },
+        "natural_monument": {
+            "name": "Přírodní památka",
+            "description": " "
+        },
+        "pond": {
+            "name": "Rybník",
+            "description": " "
+        },
+        "rock": {
+            "name": "Skála",
+            "description": " "
+        },
+        "viewpoint": {
+            "name": "Výhledový bod",
+            "description": " "
+        },
+        "waterfall": {
+            "name": "Vodopád",
+            "description": " "
+        },
+        "spring": {
+            "name": "Pramen",
+            "description": " "
+        },
+        "assistance": {
+            "name": "Asistence",
+            "description": " "
+        },
+        "assistance-female": {
+            "name": "Pro ženy",
+            "description": " "
+        },
+        "assistance-male": {
+            "name": "Pro muže",
+            "description": " "
+        },
+        "assistance-senior": {
+            "name": "Pro seniory",
+            "description": " "
+        },
+        "assistance-disabled": {
+            "name": "Pro zdravotně postižené",
+            "description": " "
+        },
+        "assistance-homeless": {
+            "name": "Pro znevýhodněné",
+            "description": " "
+        },
+        "assistance-migrant": {
+            "name": "Pro uprchlíky",
+            "description": " "
+        },
+        "assistance-children": {
+            "name": "Pro děti",
+            "description": " "
+        },
+        "assisted-repair": {
+            "name": "Oprava s asistencí",
+            "description": "Zde můžete opravit rozbité věci společně s profesionály. Seznámíte se s novými lidmi a obvykle dostanete i kávu a dort. Známé akce jsou opravárenské kavárny."
+        },
+        "barbecue": {
+            "name": "Grilování"
+        },
+        "baking-oven": {
+            "name": "Pečící trouba",
+            "description": " "
+        },
+        "health-products": {
+            "name": "Zdravotní produkty",
+            "description": "Obchod s výrobky pro osobní hygienu, kosmetikou, čisticími prostředky pro domácnost nebo zdravotnickými prostředky."
+        },
+        "bicycle-rental": {
+            "name": "Půjčovna kol",
+            "description": " "
+        },
+        "bicycle-self-repair": {
+            "name": "Vlastní opravy jízdních kol",
+            "description": " "
+        },
+        "charging-station": {
+            "name": "Nabíjecí stanice",
+            "description": " "
+        },
+        "advertising": {
+            "description": "Zde můžete vyvěsit plakáty, které propagují váš podnik.",
+            "name": "Reklamní plocha"
+        },
+        "community-centre": {
+            "name": "Komunitní centrum"
+        },
+        "ruins": {
+            "name": "Ruiny",
+            "description": " "
+        },
+        "musical_instrument": {
+            "name": "Nástroj",
+            "description": " "
+        }
     }
 }
