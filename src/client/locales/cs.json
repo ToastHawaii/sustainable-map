@@ -413,7 +413,12 @@
             "description": " "
         },
         "defibrillator": {
-            "name": "Defibrilátor"
+            "name": "Defibrilátor",
+            "description": " "
+        },
+        "food-sharing": {
+            "name": "Sdílení potravin",
+            "description": "Na tomto místě si můžete přinést i odnést jídlo. Podmínky pro dovoz a odvoz jídla se velmi liší, můžete se o nich informovat na webových stránkách provozovatele nebo na místě."
         }
     }
 }
