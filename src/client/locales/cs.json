@@ -322,7 +322,8 @@
             "description": "Zde můžete opravit rozbité věci společně s profesionály. Seznámíte se s novými lidmi a obvykle dostanete i kávu a dort. Známé akce jsou opravárenské kavárny."
         },
         "barbecue": {
-            "name": "Grilování"
+            "name": "Grilování",
+            "description": " "
         },
         "baking-oven": {
             "name": "Pečící trouba",
@@ -349,7 +350,8 @@
             "name": "Reklamní plocha"
         },
         "community-centre": {
-            "name": "Komunitní centrum"
+            "name": "Komunitní centrum",
+            "description": " "
         },
         "ruins": {
             "name": "Ruiny",
@@ -358,6 +360,65 @@
         "musical_instrument": {
             "name": "Nástroj",
             "description": " "
+        },
+        "scout": {
+            "name": "Skautský oddíl",
+            "description": " "
+        },
+        "community-garden": {
+            "name": "Komunitní zahrada",
+            "description": "Zde je zahrada, kterou můžete obdělávat společně s ostatními. Můžete sázet, zalévat a sklízet zeleninu, bylinky, květiny atd. a sledovat, jak rostou."
+        },
+        "grow": {
+            "name": "Pěstování",
+            "description": " "
+        },
+        "grocery": {
+            "name": "Potraviny",
+            "description": " "
+        },
+        "plant": {
+            "name": "Rostlina",
+            "description": " "
+        },
+        "sweets": {
+            "name": "Cukrovinky",
+            "description": " "
+        },
+        "baked-goods": {
+            "name": "Pečivo"
+        },
+        "dairy": {
+            "name": "Mléčné výrobky",
+            "description": " "
+        },
+        "meat": {
+            "name": "Masné výrobky",
+            "description": " "
+        },
+        "vegetable": {
+            "name": "Ovoce / zelenina",
+            "description": " "
+        },
+        "beverages": {
+            "name": "Nápoje",
+            "description": " "
+        },
+        "diaper-changing-table": {
+            "name": "Stůl na přebalování",
+            "description": " "
+        },
+        "drinking-water": {
+            "name": "Pitná voda",
+            "description": " "
+        },
+        "defibrillator": {
+            "name": "Defibrilátor",
+            "description": " "
+        },
+        "food-sharing": {
+            "name": "Sdílení potravin",
+            "description": "Na tomto místě si můžete přinést i odnést jídlo. Podmínky pro dovoz a odvoz jídla se velmi liší, můžete se o nich informovat na webových stránkách provozovatele nebo na místě."
         }
     }
 }
