@@ -419,6 +419,48 @@
         "food-sharing": {
             "name": "Sdílení potravin",
             "description": "Na tomto místě si můžete přinést i odnést jídlo. Podmínky pro dovoz a odvoz jídla se velmi liší, můžete se o nich informovat na webových stránkách provozovatele nebo na místě."
+        },
+        "dinner": {
+            "name": "Večeře",
+            "description": " "
+        },
+        "goods-get": {
+            "name": "Získat zboží",
+            "description": " "
+        },
+        "goods-exchange": {
+            "name": "Burza zboží",
+            "description": "Zde najdete stůl, regál nebo obchod, kam si můžete věci přinést a odnést. Známými zařízeními jsou výdejny a darovací schránky."
+        },
+        "hackerspace": {
+            "name": "Hackerspace",
+            "description": " "
+        },
+        "coworking": {
+            "name": "Coworkingové centrum"
+        },
+        "contribute": {
+            "name": "Přispějte",
+            "description": " "
+        },
+        "map": {
+            "name": "Mapa",
+            "description": " "
+        },
+        "openstreetmap": {
+            "name": "OpenStreetMap",
+            "description": " "
+        },
+        "internet": {
+            "name": "Internet",
+            "description": " "
+        },
+        "public-shower": {
+            "name": "Veřejná sprcha",
+            "description": " "
+        },
+        "pump": {
+            "name": "Pumpa"
         }
     }
 }
