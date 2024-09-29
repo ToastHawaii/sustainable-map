@@ -151,8 +151,8 @@
     "free": "Zdarma",
     "veryCheap": "Bezplatně nebo velmi levně",
     "horizontalBar": "Vodorovný pruh",
-    "parallelBars": "Rovnoběžné pruhy",
-    "rings": "Kroužky",
+    "parallelBars": "Paralelní bradla",
+    "rings": "Kruhy",
     "exerciseMachine": "Cvičební stroj",
     "balance": "Vyvážení",
     "difficulty": "Obtížnost",
@@ -386,7 +386,8 @@
             "description": " "
         },
         "baked-goods": {
-            "name": "Pečivo"
+            "name": "Pečivo",
+            "description": " "
         },
         "dairy": {
             "name": "Mléčné výrobky",
@@ -437,7 +438,8 @@
             "description": " "
         },
         "coworking": {
-            "name": "Coworkingové centrum"
+            "name": "Coworkingové centrum",
+            "description": " "
         },
         "contribute": {
             "name": "Přispějte",
@@ -460,7 +462,276 @@
             "description": " "
         },
         "pump": {
-            "name": "Pumpa"
+            "name": "Pumpa",
+            "description": " "
+        },
+        "printer": {
+            "name": "Kopírování a tisk",
+            "description": " "
+        },
+        "toilet": {
+            "name": "Veřejné toalety",
+            "description": " "
+        },
+        "basketball": {
+            "name": "Basketbal",
+            "description": " "
+        },
+        "bath": {
+            "name": "Vana",
+            "description": " "
+        },
+        "bikepark": {
+            "name": "Cyklopark",
+            "description": " "
+        },
+        "skatepark": {
+            "name": "Skatepark",
+            "description": " "
+        },
+        "chess": {
+            "name": "Pouliční šachy",
+            "description": " "
+        },
+        "climbing": {
+            "name": "Lezení",
+            "description": " "
+        },
+        "fitness": {
+            "name": "Posilovna",
+            "description": " "
+        },
+        "horizontal_bar": {
+            "name": "Vodorovný pruh",
+            "description": " "
+        },
+        "parallel_bars": {
+            "description": " ",
+            "name": "Paralelní bradla"
+        },
+        "rings": {
+            "name": "Kruhy",
+            "description": " "
+        },
+        "exercise-machine": {
+            "name": "Cvičební stroj",
+            "description": " "
+        },
+        "balance": {
+            "name": "Rovnováha",
+            "description": " "
+        },
+        "fitness-trail": {
+            "name": "Stezka fitness",
+            "description": " "
+        },
+        "sledding": {
+            "name": "Sáňkování",
+            "description": " "
+        },
+        "running": {
+            "name": "Běh",
+            "description": " "
+        },
+        "soccer": {
+            "name": "Fotbal",
+            "description": " "
+        },
+        "table-tennis": {
+            "name": "Stolní tenis",
+            "description": " "
+        },
+        "table-soccer": {
+            "name": "Stolní fotbal",
+            "description": " "
+        },
+        "boules": {
+            "name": "Boule",
+            "description": " "
+        },
+        "volleyball": {
+            "name": "Volejbal",
+            "description": " "
+        },
+        "animal": {
+            "name": "Výběh pro zvířata",
+            "description": " "
+        },
+        "observation": {
+            "name": "Pozorování zvířat",
+            "description": " "
+        },
+        "maze": {
+            "name": "Labyrint",
+            "description": " "
+        },
+        "webcam": {
+            "name": "Webová kamera",
+            "description": " "
+        },
+        "fireplace": {
+            "name": "Ohniště",
+            "description": " "
+        },
+        "garden": {
+            "name": "Zahrada",
+            "description": " "
+        },
+        "garden-with-name": {
+            "name": "Zahrada (s názvem)",
+            "description": " "
+        },
+        "nature-park": {
+            "name": "Přírodní rezervace",
+            "description": " "
+        },
+        "park": {
+            "name": "Park",
+            "description": " "
+        },
+        "park-with-name": {
+            "name": "Park (s názvem)",
+            "description": " "
+        },
+        "picnic-site": {
+            "name": "Místo na piknik",
+            "description": " "
+        },
+        "square": {
+            "name": "Náměstí",
+            "description": " "
+        },
+        "square-with-name": {
+            "name": "Náměstí (s názvem)",
+            "description": " "
+        },
+        "playground": {
+            "name": "Dětské hřiště",
+            "description": " "
+        },
+        "lounger": {
+            "name": "Lehátko",
+            "description": " "
+        },
+        "clothes": {
+            "name": "Oblečení",
+            "description": " "
+        },
+        "clothes-give": {
+            "name": "Oblečení (darovat)",
+            "description": " "
+        },
+        "clothes-take": {
+            "name": "Oblečení (vzít)",
+            "description": " "
+        },
+        "clothes-repair": {
+            "name": "Oblečení (opravy)",
+            "description": " "
+        },
+        "mobile-phones": {
+            "name": "Telefon",
+            "description": " "
+        },
+        "mobile-phones-give": {
+            "name": "Telefon (darovat)",
+            "description": " "
+        },
+        "mobile-phones-take": {
+            "name": "Telefon (převzít)",
+            "description": " "
+        },
+        "mobile-phones-repair": {
+            "name": "Telefon (opravy)",
+            "description": " "
+        },
+        "computers": {
+            "name": "Počítač",
+            "description": " "
+        },
+        "computers-give": {
+            "name": "Počítač (darovat)",
+            "description": " "
+        },
+        "computers-take": {
+            "name": "Počítač (převzít)",
+            "description": " "
+        },
+        "computers-repair": {
+            "name": "Počítač (opravy)",
+            "description": " "
+        },
+        "toys": {
+            "name": "Hračky",
+            "description": " "
+        },
+        "toys-give": {
+            "name": "Hračky (darovat)",
+            "description": " "
+        },
+        "toys-take": {
+            "name": "Hračky (převzít)",
+            "description": " "
+        },
+        "toys-rent": {
+            "name": "Hračky ( půjčovna)",
+            "description": " "
+        },
+        "toys-repair": {
+            "name": "Hračky (opravy)",
+            "description": " "
+        },
+        "electronics": {
+            "name": "Elektronika",
+            "description": " "
+        },
+        "electronics-give": {
+            "name": "Elektronika (darovat)",
+            "description": " "
+        },
+        "electronics-take": {
+            "name": "Elektronika (převzít)",
+            "description": " "
+        },
+        "electronics-repair": {
+            "name": "Elektronika (opravy)",
+            "description": " "
+        },
+        "furniture": {
+            "name": "Nábytek",
+            "description": " "
+        },
+        "furniture-give": {
+            "name": "Nábytek (darovat)",
+            "description": " "
+        },
+        "furniture-take": {
+            "name": "Nábytek (převzít)",
+            "description": " "
+        },
+        "furniture-repair": {
+            "name": "Nábytek (opravy)",
+            "description": " "
+        },
+        "bicycle": {
+            "name": "Kolo",
+            "description": " "
+        },
+        "bicycle-give": {
+            "name": "Kolo (darovat)",
+            "description": " "
+        },
+        "bicycle-get": {
+            "name": "Kolo (převzít)",
+            "description": " "
+        },
+        "bicycle-rent": {
+            "name": "Kolo (půjčit)",
+            "description": " "
+        },
+        "bicycle-repair": {
+            "name": "Kolo (opravit)",
+            "description": " "
         }
     }
 }
