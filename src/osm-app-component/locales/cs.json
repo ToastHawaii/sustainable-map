@@ -81,8 +81,8 @@
     "piste:difficulty": {
         "novice": "Začátečník",
         "easy": "Snadné",
-        "intermediate": "Středně pokročilé",
-        "advanced": "Pokročilé",
+        "intermediate": "Středně pokročilý",
+        "advanced": "Pokročilý",
         "expert": "Expert",
         "freeride": "Freeride",
         "extreme": "Extrém"
@@ -96,7 +96,7 @@
         "parallel_bars": "Paralelní bradla",
         "push-up": "Místo na kliky",
         "rings": "Cvičební kruhy",
-        "sign": "Značka pokynů ke cvičení",
+        "sign": "Cedule pokynů ke cvičení",
         "sit-up": "Místo pro sedy-lehy",
         "stairs": "Cvičební schody",
         "beam_jump": "Skok přes kladinu",
@@ -107,7 +107,7 @@
         "stretch_bars": "Protahovací tyče"
     },
     "historic": {
-        "aircraft": "Letadlo",
+        "aircraft": "Historické letadlo",
         "aqueduct": "Akvadukt",
         "archaeological_site": "Archeologická lokalita",
         "battlefield": "Bojiště",
@@ -188,6 +188,29 @@
         "medical_garden": "Léčebná zahrada",
         "kitchen": "Kuchyňská zahrada",
         "flower_garden": "Květinová zahrada",
-        "cottage_garden": "Zahrada u chaty"
+        "cottage_garden": "Zahrada u chaty",
+        "walled_garden": "Zahrada obehnaná zdí"
+    },
+    "public_bookcase:type": {
+        "building": "Veřejná knihovnička",
+        "glass_cabinet": "Skleněná knihobudka",
+        "metal_cabinet": "kovová knihobudka",
+        "movable_cabinet": "přenosná knihobudka",
+        "phone_box": "Knihobudka z telefonní budky",
+        "reading_box": "Krabice s knihami",
+        "sculpture": "Umělecká knihobudka",
+        "shelf": "Veřejná police na knihy",
+        "shelter": "Přístřešek na knihy",
+        "wooden_cabinet": "Dřevěná skříňka na knihy"
+    },
+    "seasonal": {
+        "yes": "Sezónní",
+        "no": "Celoroční",
+        "spring": "Jen najaře",
+        "summer": "Jen v létě",
+        "autumn": "Jen na podzim",
+        "winter": "Jen v zimě",
+        "wet_season": "V období dešťů",
+        "dry_season": "V období sucha"
     }
 }
