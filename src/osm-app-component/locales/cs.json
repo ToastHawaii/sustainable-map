@@ -146,6 +146,48 @@
     },
     "site_type": {
         "megalith": "Megalit",
-        "bigstone": "Velký kámen"
+        "bigstone": "Velký kámen",
+        "tumulus": "Mohyla",
+        "fortification": "Opevnění",
+        "petroglyph": "Petroglyf",
+        "geoglyph": "Geoglyf",
+        "city": "Historické město",
+        "settlement": "Osada",
+        "hut_circle": "Kruhová chýše",
+        "roman_villa": "Římská vila",
+        "domus": "Dům",
+        "roman_circus": "Římský cirkus",
+        "necropolis": "Nekropole"
+    },
+    "castle_type": {
+        "defensive": "Obranný hrad",
+        "palace": "Palác",
+        "stately": "Reprezentační dům",
+        "manor": "Panské sídlo",
+        "fortress": "Pevnost",
+        "castrum": "Římské opevnění ",
+        "shiro": "Širo",
+        "kremlin": "Kreml",
+        "hillfort": "Hradiště"
+    },
+    "garden:type": {
+        "botanical": "Botanická zahrada",
+        "community": "Komunitní zahrada",
+        "residential": "Obytná zahrada",
+        "roof_garden": "Zahrada na střeše"
+    },
+    "garden:style": {
+        "english": "Anglická zahrada",
+        "french": "Francouzská zahrada",
+        "chinese": "Čínská zahrada",
+        "japanese": "Japonská zahrada",
+        "zen": "Zenová zahrada",
+        "monastery": "Zahrada středověkého kláštera",
+        "rosarium": "Růžová zahrada",
+        "herb_garden": "Bylinková zahrada",
+        "medical_garden": "Léčebná zahrada",
+        "kitchen": "Kuchyňská zahrada",
+        "flower_garden": "Květinová zahrada",
+        "cottage_garden": "Zahrada u chaty"
     }
 }
