@@ -55,7 +55,8 @@
         "termite_mound": "Termitiště"
     },
     "sport": {
-        "bowls": "Misky"
+        "bowls": "Misky",
+        "boules": "Boule"
     },
     "search": {
         "placeholder": "Vyhledat místo"
@@ -69,5 +70,82 @@
     "closed": "Zavřeno",
     "maybeOpen": "Možná otevřeno",
     "closes": "Zavírá",
-    "floor": "({{level}} patro)"
+    "floor": "({{level}} patro)",
+    "boules": {
+        "petanque": "Pétanque",
+        "lyonnaise": "Provensálská hra",
+        "boule_de_fort": "Boule de fort",
+        "pétanque": "Pétanque",
+        "bocce": "Bocce"
+    },
+    "piste:difficulty": {
+        "novice": "Začátečník",
+        "easy": "Snadné",
+        "intermediate": "Středně pokročilé",
+        "advanced": "Pokročilé",
+        "expert": "Expert",
+        "freeride": "Freeride",
+        "extreme": "Extrém"
+    },
+    "fitness_station": {
+        "balance_beam": "Cvičení na kladině",
+        "box": "Cvičební bedna",
+        "horizontal_bar": "Cvičící kladina",
+        "horizontal_ladder": "Opičí dráhy na cvičení",
+        "hyperextension": "Místo na protahování",
+        "parallel_bars": "Paralelní bradla",
+        "push-up": "Místo na kliky",
+        "rings": "Cvičební kruhy",
+        "sign": "Značka pokynů ke cvičení",
+        "sit-up": "Místo pro sedy-lehy",
+        "stairs": "Cvičební schody",
+        "beam_jump": "Skok přes kladinu",
+        "stepping_stone": "Odrazový můstek",
+        "bench": "Lavice",
+        "body_raise": "Zvedání břemene",
+        "slalom": "Slalom",
+        "stretch_bars": "Protahovací tyče"
+    },
+    "historic": {
+        "aircraft": "Letadlo",
+        "aqueduct": "Akvadukt",
+        "archaeological_site": "Archeologická lokalita",
+        "battlefield": "Bojiště",
+        "boundary_stone": "Hraniční kámen",
+        "building": "Budova",
+        "cannon": "Dělo",
+        "castle": "Hrad",
+        "castle_wall": "Hradní zeď",
+        "church": "Kostel",
+        "city_gate": "Městská brána",
+        "citywalls": "Městské hradby",
+        "farm": "Farma",
+        "fort": "Pevnost",
+        "gallows": "Šibenice",
+        "locomotive": "Lokomotiva",
+        "manor": "Statek",
+        "memorial": "Památník",
+        "mine": "Důl",
+        "mine_shaft": "Důlní šachta",
+        "milestone": "Milník",
+        "monastery": "Klášter",
+        "monument": "Monument",
+        "optical_telegraph": "Optický telegraf",
+        "pillory": "Pilíř",
+        "railway_car": "Železniční vůz",
+        "ruins": "Ruiny",
+        "rune_stone": "Runový kámen",
+        "ship": "Loď",
+        "tomb": "Hrobka",
+        "tower": "Věž",
+        "tree_shrine": "Stromová kaple",
+        "wayside_cross": "Kříž u cesty",
+        "wayside_shrine": "Kaplička u cesty",
+        "wreck": "Vrak",
+        "highwater_mark": "Značka vysoké vody"
+    },
+    "site_type": {
+        "megalith": "Megalit",
+        "bigstone": "Velký kámen"
+    }
 }
