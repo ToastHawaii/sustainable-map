@@ -37,13 +37,13 @@ function Intro() {
       <p>{t("intro.legend")}</p>
       <ul>
         <li>
-          <i className="fas fa-universal-access"></i>{" "}
+          <i className="fas fa-universal-access fa-fw"></i>{" "}
           <a href="https://wiki.openstreetmap.org/wiki/Key:access">
             {t("intro.accessible")}
           </a>
         </li>
         <li>
-          <i className="fas fa-heart"></i>{" "}
+          <i className="fas fa-heart fa-fw"></i>{" "}
           <a href="https://wiki.openstreetmap.org/wiki/Key:fee">
             {t("intro.freeOfCharge")}
           </a>
@@ -64,7 +64,7 @@ function Intro() {
           </a>
         </li>
         <li>
-          <i className="fas fa-hands"></i> {t("intro.packed")},{" "}
+          <i className="fas fa-hands fa-fw"></i> {t("intro.packed")},{" "}
           <a href="https://wiki.openstreetmap.org/wiki/Key:bulk_purchase">
             {t("intro.unpacked")}
           </a>
@@ -74,30 +74,30 @@ function Intro() {
           </a>
         </li>
         <li>
-          <i className="fas fa-handshake"></i>{" "}
+          <i className="fas fa-handshake fa-fw"></i>{" "}
           <a href="https://wiki.openstreetmap.org/wiki/Key:fair_trade">
             {t("intro.fairTrade")}
           </a>
         </li>
         <li>
-          <i className="fas fa-map-marker-alt"></i> {t("intro.transport")},
+          <i className="fas fa-map-marker-alt fa-fw"></i> {t("intro.transport")},
           {t("intro.regional")}
         </li>
         <li>
-          <i className="fas fa-redo-alt"></i> {t("intro.sharing")},{" "}
+          <i className="fas fa-redo-alt fa-fw"></i> {t("intro.sharing")},{" "}
           {t("intro.lending")}
         </li>
         <li>
-          <i className="fas fa-tools"></i>{" "}
+          <i className="fas fa-tools fa-fw"></i>{" "}
           <a href="https://wiki.openstreetmap.org/wiki/Key:repair">
             {t("intro.repair")}
           </a>
         </li>
         <li>
-          <i className="fas fa-exchange-alt"></i> {t("intro.reuse")}
+          <i className="fas fa-exchange-alt fa-fw"></i> {t("intro.reuse")}
         </li>
         <li>
-          <i className="fas fa-recycle"></i>{" "}
+          <i className="fas fa-recycle fa-fw"></i>{" "}
           <a href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Drecycling">
             {t("intro.recycling")}
           </a>
