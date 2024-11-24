@@ -80,8 +80,8 @@ function Intro() {
           </a>
         </li>
         <li>
-          <i className="fas fa-map-marker-alt fa-fw"></i> {t("intro.transport")},
-          {t("intro.regional")}
+          <i className="fas fa-map-marker-alt fa-fw"></i> {t("intro.transport")}
+          ,{t("intro.regional")}
         </li>
         <li>
           <i className="fas fa-redo-alt fa-fw"></i> {t("intro.sharing")},{" "}
@@ -176,6 +176,15 @@ function Intro() {
       </p>
       <hr />
       <ul>
+        <li>
+          <Trans
+            i18nKey="intro.joinCommunity"
+            components={{
+              m: <a href="https://usergroups.openstreetmap.de/" />,
+              t: <a href="https://community.osm.be/" />,
+            }}
+          ></Trans>
+        </li>
         <li>
           <a href="https://wiki.openstreetmap.org/wiki/How_to_contribute">
             {t("intro.contribute")}
