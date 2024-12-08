@@ -36,7 +36,7 @@
         "aboutMe": "O nás",
         "translate": "Pomozte překládat",
         "translationStatus": "Stav překladu",
-        "joinCommunity": "<j>Připojte se ke komunitě OSM</j>: <m>Seznamte se</m> a <t>Diskutujte</t>"
+        "joinCommunity": "Připojte se ke <c>komunitě OSM</c>: <j>Připojte se k místní skupině</j>, <m>scházejte se</m> a <t>chatujte</t>"
     },
     "group": {
         "health": "Zdraví",
