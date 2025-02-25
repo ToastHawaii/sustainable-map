@@ -1,1 +1,18 @@
-{}
+{
+    "group": {
+        "culture": "Культура",
+        "education": "Образование",
+        "natural": "Природа",
+        "health": "Здоровье",
+        "community": "Общество",
+        "sport": "Спорт",
+        "communitySport": "Общественный спорт",
+        "trip": "Поездка",
+        "food": "Еда",
+        "material": "Переработка",
+        "mobility": "Подвижность"
+    },
+    "meta": {
+        "titleShort": "Экологичный"
+    }
+}
