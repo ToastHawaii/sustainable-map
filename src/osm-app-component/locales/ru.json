@@ -1,1 +1,60 @@
-{}
+{
+    "minZoomMessage": "Приблизьте, чтобы загрузить детали карты",
+    "maybeOpen": "Возможно открыто",
+    "info": {
+        "moreFilters": "Больше фильтров:",
+        "osmTags": "Документация",
+        "query": "Запрос",
+        "externalResources": "Другие"
+    },
+    "menu": {
+        "share": "Поделиться местом",
+        "theme": "Поменять тему",
+        "donate": "Поддержать меня",
+        "note": "Добавить заметку для картографов",
+        "about": "Об этом сайте",
+        "edit": "Редактировать карту"
+    },
+    "minZoomMessageNoLayer": "Слой не указан",
+    "linkCopied": "Ссылка скопирована в буфер обмена",
+    "route": "Маршрут",
+    "share": "Поделиться",
+    "edit": "Редактировать",
+    "documentation": "Документация",
+    "thatDependsOn": "Это зависит от",
+    "conditionalFee": "Бесплатно в некоторые периоды времени.",
+    "open": "Открыто",
+    "closed": "Закрыто",
+    "maybeOpens": "Возможно откроется",
+    "maybeCloses": "Возможно закроется",
+    "amenity": {
+        "give_box": "GiveBox"
+    },
+    "leisure": {
+        "bird_hide": "Место для наблюдения за птицами",
+        "wildlife_hide": "Место для наблюдения за дикой природой"
+    },
+    "man_made": {
+        "watermill": "Водяная мельница",
+        "windmill": "Ветряная мельница",
+        "mineshaft": "Шахта",
+        "tower": "Башня",
+        "beehive": "Пчелиный улей",
+        "insect_hotel": "Отель для насекомых",
+        "water_well": "Колодец",
+        "drinking_fountain": "Питьевой фонтан"
+    },
+    "natural": {
+        "anthill": "Муравейник"
+    },
+    "piste:difficulty": {
+        "novice": "Новичок",
+        "easy": "Легкий",
+        "intermediate": "Средний",
+        "expert": "Эксперт",
+        "advanced": "Продвинутый"
+    },
+    "search": {
+        "placeholder": "Найти локацию"
+    }
+}
