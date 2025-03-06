@@ -1,1 +1,216 @@
-{}
+{
+    "maybeCloses": "ஒருவேளை மூடலாம்",
+    "opens": "திறப்புகள்",
+    "seasonal": {
+        "wet_season": "ஈரமான பருவத்தில்",
+        "dry_season": "வறண்ட காலங்களில்",
+        "yes": "பருவகால",
+        "no": "பருவகாலமாக இல்லை",
+        "spring": "வசந்த காலத்தில்",
+        "summer": "கோடையில்",
+        "autumn": "இலையுதிர்காலத்தில்",
+        "winter": "குளிர்காலத்தில்"
+    },
+    "code": "என்",
+    "info": {
+        "moreFilters": "மேலும் வடிப்பான்கள்:",
+        "osmTags": "ஆவணப்படுத்துதல்",
+        "query": "வினவல்",
+        "overpassTurbo": "ஓவர் பாச்-டர்போ",
+        "externalResources": "மற்றவர்கள்"
+    },
+    "search": {
+        "placeholder": "ஒரு இடத்தைத் தேடுங்கள்"
+    },
+    "menu": {
+        "note": "மேப்பர்களுக்கான குறிப்பைச் சேர்க்கவும்",
+        "edit": "வரைபடத்தைத் திருத்து",
+        "share": "இடத்தைப் பகிரவும்",
+        "theme": "கருப்பொருள் மாற்றவும்",
+        "about": "இந்த தளம் பற்றி",
+        "donate": "என்னை ஆதரிக்கவும்"
+    },
+    "minZoomMessageNoLayer": "எந்த அடுக்கு ஒதுக்கப்படவில்லை",
+    "minZoomMessage": "வரைபட அம்சங்களை ஏற்ற பெரிதாக்கவும்",
+    "emptyIndicator": "இந்த பகுதியில் வரைபட நற்பொருத்தங்கள் எதுவும் காணப்படவில்லை",
+    "linkCopied": "கிளிப்போர்டில் இணைப்பு நகலெடுக்கப்பட்டது",
+    "route": "பாதை",
+    "share": "பங்கு",
+    "edit": "தொகு",
+    "documentation": "ஆவணப்படுத்துதல்",
+    "thatDependsOn": "அது சார்ந்துள்ளது",
+    "conditionalFee": "குறிப்பிட்ட நேரங்களில் மட்டுமே இலவசம்.",
+    "open": "திற",
+    "closed": "மூடப்பட்டது",
+    "maybeOpen": "ஒருவேளை திறந்திருக்கலாம்",
+    "maybeOpens": "ஒருவேளை திறக்கும்",
+    "closes": "மூடுகிறது",
+    "floor": "({{level}} f)",
+    "groundFloor": "(சி.எஃப்)",
+    "basement": "(B {{level}} f)",
+    "amenity": {
+        "hunting_stand": "வேட்டை நிலைப்பாடு",
+        "give_box": "கொடுங்கள்"
+    },
+    "shop": {
+        "books": "புத்தகக் கடை"
+    },
+    "leisure": {
+        "bird_hide": "பறவைகளைக் கவனிக்க இடம்",
+        "wildlife_hide": "வனவிலங்குகளை அவதானிக்க இடம்"
+    },
+    "man_made": {
+        "water_well": "நீர் கிணறு",
+        "watermill": "வாட்டர்மில்",
+        "windmill": "காற்றாலை",
+        "mineshaft": "Mineshaft",
+        "drinking_fountain": "நீரூற்று குடிப்பது",
+        "tower": "கோபுரம்",
+        "beehive": "தேனீ",
+        "insect_hotel": "பூச்சி ஓட்டல்",
+        "nesting_site": "கூடு உதவி"
+    },
+    "landuse": {
+        "apiary": "தேனீ"
+    },
+    "natural": {
+        "anthill": "Anthill",
+        "termite_mound": "டெர்மைட் மவுண்ட்"
+    },
+    "sport": {
+        "bowls": "கிண்ணங்கள்",
+        "boules": "பந்துகள்"
+    },
+    "boules": {
+        "petanque": "Pétanque",
+        "lyonnaise": "புரோவென்சல் விளையாட்டு",
+        "boule_de_fort": "கோட்டை பந்து",
+        "pétanque": "Pétanque",
+        "bocce": "போச்"
+    },
+    "piste:difficulty": {
+        "novice": "புதியவர்",
+        "easy": "எளிதானது",
+        "intermediate": "இடைநிலை",
+        "advanced": "மேம்பட்ட",
+        "expert": "வல்லுநர்",
+        "freeride": "ஃப்ரீரைடு",
+        "extreme": "எக்ச்ட்ரீம்"
+    },
+    "fitness_station": {
+        "balance_beam": "சமநிலை கற்றை உடற்பயிற்சி",
+        "box": "உடற்பயிற்சி பெட்டி",
+        "horizontal_bar": "கிடைமட்ட பட்டியை உடற்பயிற்சி செய்யுங்கள்",
+        "horizontal_ladder": "குரங்கு பார்களை உடற்பயிற்சி செய்யுங்கள்",
+        "hyperextension": "மிகைப்படுத்தல் நிலையம்",
+        "parallel_bars": "இணை பார்கள்",
+        "push-up": "புச்-அப் நிலையம்",
+        "rings": "உடற்பயிற்சி மோதிரங்கள்",
+        "sign": "உடற்பயிற்சி அறிவுறுத்தல் அடையாளம்",
+        "sit-up": "உட்கார்ந்து நிலையம்",
+        "stairs": "படிக்கட்டுகளில் உடற்பயிற்சி செய்யுங்கள்",
+        "beam_jump": "பீம் சம்ப்",
+        "stepping_stone": "ச்டெப்பிங் ச்டோன்",
+        "bench": "பென்ச்",
+        "body_raise": "உடல் உயர்வு",
+        "slalom": "ச்லாலோம்",
+        "stretch_bars": "பட்டிகளை நீட்டவும்"
+    },
+    "historic": {
+        "aircraft": "வானூர்தி",
+        "aqueduct": "நீர்வாழ்",
+        "archaeological_site": "தொல்பொருள் தளம்",
+        "battlefield": "போர்க்களம்",
+        "boundary_stone": "எல்லைக் கல்",
+        "building": "கட்டிடம்",
+        "cannon": "பீரங்கி",
+        "castle": "கோட்டை",
+        "castle_wall": "கோட்டை சுவர்",
+        "church": "தேவாலயம்",
+        "city_gate": "நகர வாயில்",
+        "citywalls": "சிட்ட்வால்ச்",
+        "farm": "பண்ணை",
+        "fort": "கோட்டை",
+        "gallows": "தூக்கு மேடை",
+        "highwater_mark": "ஐவாட்டர் குறி",
+        "locomotive": "உந்துபொறி",
+        "manor": "மேனர்",
+        "memorial": "நினைவு",
+        "mine": "என்னுடையது",
+        "mine_shaft": "என்னுடைய தண்டு",
+        "milestone": "மைல்கல்",
+        "monastery": "மடாலயம்",
+        "monument": "நினைவுச்சின்னம்",
+        "optical_telegraph": "ஆப்டிகல் டெலிகிராப்",
+        "pillory": "தலையணை",
+        "railway_car": "ரயில்வே கார்",
+        "ruins": "இடிபாடுகள்",
+        "rune_stone": "ரூன் கல்",
+        "ship": "கப்பல்",
+        "tomb": "கல்லறை",
+        "tower": "கோபுரம்",
+        "tree_shrine": "மரம் சன்னதி",
+        "wayside_cross": "வேசைட் கிராச்",
+        "wayside_shrine": "வேசைட் சன்னதி",
+        "wreck": "சிதைவு"
+    },
+    "site_type": {
+        "megalith": "மெகாலித்",
+        "bigstone": "பிக்ச்டோன்",
+        "tumulus": "டுமுலச்",
+        "fortification": "வலுவூட்டல்",
+        "petroglyph": "பெட்ரோகிளிஃப்",
+        "geoglyph": "சியோகிளிஃப்",
+        "city": "வரலாற்று நகரம்",
+        "settlement": "தீர்வு",
+        "hut_circle": "குடிசை வட்டம்",
+        "roman_villa": "ரோமன் வில்லா",
+        "domus": "டோமச்",
+        "roman_circus": "ரோமன் சர்க்கச்",
+        "necropolis": "நெக்ரோபோலிச்"
+    },
+    "castle_type": {
+        "defensive": "தற்காப்பு கோட்டை",
+        "palace": "அரண்மனை",
+        "stately": "கம்பீரமான வீடு",
+        "manor": "மேனர் அவுச்",
+        "fortress": "கோட்டை",
+        "castrum": "ரோமானிய கோட்டை ",
+        "shiro": "சிரோ",
+        "kremlin": "கிரெம்ளின்",
+        "hillfort": "மில்ஃபோர்ட்"
+    },
+    "garden:type": {
+        "botanical": "செடியியல் தோட்டம்",
+        "community": "சமூக தோட்டம்",
+        "residential": "குடியிருப்பு தோட்டம்",
+        "roof_garden": "கூரை தோட்டம்"
+    },
+    "garden:style": {
+        "english": "ஆங்கில இயற்கை தோட்டம்",
+        "french": "பிரஞ்சு தோட்டம்",
+        "chinese": "சீன தோட்டம்",
+        "japanese": "சப்பானிய தோட்டம்",
+        "zen": "தோட்டமாக இருந்தது",
+        "monastery": "இடைக்கால மடம் தோட்டம்",
+        "rosarium": "ரோசா தோட்டம்",
+        "herb_garden": "மூலிகை தோட்டம்",
+        "medical_garden": "இயற்பியல் தோட்டம்",
+        "kitchen": "சமையலறை தோட்டம்",
+        "flower_garden": "மலர் தோட்டம்",
+        "cottage_garden": "குடிசை தோட்டம்",
+        "walled_garden": "சுவர் தோட்டம்"
+    },
+    "public_bookcase:type": {
+        "building": "பொது புத்தக அலமாரி",
+        "glass_cabinet": "பொது புத்தக அலமாரி",
+        "metal_cabinet": "பொது புத்தக அலமாரி",
+        "movable_cabinet": "பொது புத்தக அலமாரி",
+        "phone_box": "பொது புத்தக அலமாரி",
+        "reading_box": "பொது புத்தக அலமாரி",
+        "sculpture": "பொது புத்தக அலமாரி",
+        "shelf": "பொது புத்தக அலமாரி",
+        "shelter": "பொது புத்தக அலமாரி",
+        "wooden_cabinet": "பொது புத்தக அலமாரி"
+    }
+}
