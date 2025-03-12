@@ -34,7 +34,10 @@
         "tower": "Torony",
         "wayside_cross": "Út menti kereszt",
         "wayside_shrine": "Út menti kegyhely",
-        "wreck": "Roncs"
+        "wreck": "Roncs",
+        "gallows": "Akasztófa",
+        "pillory": "Pellengér",
+        "tree_shrine": "Fára erősített kegykép"
     },
     "menu": {
         "theme": "Téma módosítása",
@@ -68,13 +71,15 @@
     "route": "Útvonal",
     "share": "Megosztás",
     "castle_type": {
-        "fortress": "Erőd",
+        "fortress": "Erődített település (újkor)",
         "stately": "Kastély",
-        "defensive": "Vár",
+        "defensive": "Középkori vár",
         "palace": "Palota",
         "castrum": "Római erőd ",
         "shiro": "Siro",
-        "kremlin": "Kreml"
+        "kremlin": "Kreml",
+        "manor": "Udvarház, kúria",
+        "hillfort": "Dombra épült földvár"
     },
     "closed": "Zárva",
     "fitness_station": {
@@ -109,7 +114,9 @@
         "advanced": "Haladó",
         "novice": "Nagyon könnyű",
         "easy": "Könnyű",
-        "expert": "Nagyon nehéz"
+        "expert": "Nagyon nehéz",
+        "freeride": "Freeride",
+        "extreme": "Extrém nehéz"
     },
     "leisure": {
         "wildlife_hide": "Vadles",
@@ -122,7 +129,13 @@
         "megalith": "Megalit",
         "tumulus": "Halomsír",
         "petroglyph": "Sziklarajz",
-        "city": "Történelmi város"
+        "city": "Történelmi város",
+        "bigstone": "Nagy megmunkált kő (megalit)",
+        "fortification": "Erődítmény",
+        "geoglyph": "Geoglifa (talajrajz)",
+        "hut_circle": "Kunyhókör",
+        "settlement": "Település",
+        "domus": "Domus (római ház)"
     },
     "seasonal": {
         "dry_season": "Száraz évszakban",
@@ -135,7 +148,11 @@
         "wet_season": "Esős évszakban"
     },
     "boules": {
-        "petanque": "Pétanque"
+        "petanque": "Pétanque",
+        "boule_de_fort": "Boule de fort",
+        "pétanque": "Pétanque",
+        "lyonnaise": "Provence-i golyójáték",
+        "bocce": "Bocce"
     },
     "garden:style": {
         "french": "Franciakert",
@@ -179,7 +196,8 @@
     "groundFloor": "(fsz.)",
     "basement": "(-{{level}} pinceszint)",
     "amenity": {
-        "hunting_stand": "Magasles"
+        "hunting_stand": "Magasles",
+        "give_box": "Adománygyűjtő doboz"
     },
     "shop": {
         "books": "Könyvesbolt"
@@ -190,5 +208,9 @@
     "natural": {
         "anthill": "Hangyaboly",
         "termite_mound": "Termeszvár"
+    },
+    "sport": {
+        "boules": "Golyósport",
+        "bowls": "Bowls"
     }
 }
