@@ -1,0 +1,216 @@
+{
+    "documentation": "Dokumentáció",
+    "opens": "Kinyit",
+    "historic": {
+        "tomb": "Sír",
+        "building": "Épület",
+        "castle": "Vár",
+        "city_gate": "Városkapu",
+        "citywalls": "Városfal",
+        "mine_shaft": "Bányaakna",
+        "farm": "Tanya",
+        "locomotive": "Mozdony",
+        "memorial": "Emlékmű",
+        "monument": "Monumentális emlékmű",
+        "ship": "Hajó",
+        "battlefield": "Csatatér",
+        "cannon": "Ágyú",
+        "fort": "Erőd",
+        "milestone": "Mérföldkő",
+        "boundary_stone": "Határkő",
+        "aircraft": "Repülőgép",
+        "aqueduct": "Vízvezeték",
+        "archaeological_site": "Régészeti lelőhely",
+        "castle_wall": "Várfal",
+        "church": "Templom",
+        "highwater_mark": "Árvízszintjelző felirat",
+        "manor": "Kúria",
+        "mine": "Bánya",
+        "monastery": "Kolostor",
+        "optical_telegraph": "Optikai távíró",
+        "railway_car": "Vasúti kocsi",
+        "ruins": "Rom",
+        "rune_stone": "Rúnakő",
+        "tower": "Torony",
+        "wayside_cross": "Út menti kereszt",
+        "wayside_shrine": "Út menti kegyhely",
+        "wreck": "Roncs",
+        "gallows": "Akasztófa",
+        "pillory": "Pellengér",
+        "tree_shrine": "Fára erősített kegykép"
+    },
+    "menu": {
+        "theme": "Téma módosítása",
+        "share": "Hely megosztása",
+        "edit": "Térkép szerkesztése",
+        "note": "Jegyzet hozzáadása más térképészeknek",
+        "about": "Oldal névjegye",
+        "donate": "Támogass"
+    },
+    "info": {
+        "osmTags": "Dokumentáció",
+        "overpassTurbo": "overpass-turbo",
+        "moreFilters": "További szűrők:",
+        "query": "Keresés",
+        "externalResources": "Más"
+    },
+    "edit": "Szerkesztés",
+    "maybeCloses": "Talán bezár",
+    "man_made": {
+        "beehive": "Kaptár",
+        "windmill": "Szélmalom",
+        "water_well": "Kút",
+        "watermill": "Vízimalom",
+        "mineshaft": "Bányaakna",
+        "drinking_fountain": "Ivókút",
+        "tower": "Torony",
+        "insect_hotel": "Rovarszálló",
+        "nesting_site": "Madárodú"
+    },
+    "linkCopied": "Link vágólapra másolva",
+    "route": "Útvonal",
+    "share": "Megosztás",
+    "castle_type": {
+        "fortress": "Erődített település (újkor)",
+        "stately": "Kastély",
+        "defensive": "Középkori vár",
+        "palace": "Palota",
+        "castrum": "Római erőd ",
+        "shiro": "Siro",
+        "kremlin": "Kreml",
+        "manor": "Udvarház, kúria",
+        "hillfort": "Dombra épült földvár"
+    },
+    "closed": "Zárva",
+    "fitness_station": {
+        "push-up": "Fekvőtámaszállvány",
+        "rings": "Gyűrű",
+        "horizontal_bar": "Nyújtó",
+        "slalom": "Szlalomozás",
+        "stepping_stone": "Lépőkő",
+        "bench": "Pad",
+        "balance_beam": "Egyensúlyozó gerenda",
+        "box": "Ugrózsámoly",
+        "horizontal_ladder": "Vízszintes létra (függeszkedéshez)",
+        "hyperextension": "Hátnyújtó pad",
+        "parallel_bars": "Párhuzamos korlát",
+        "sign": "Útmutató tábla a tornagyakorlatokhoz",
+        "sit-up": "Felülés",
+        "stairs": "Lépcsők",
+        "beam_jump": "Ugrórönkök",
+        "body_raise": "Testemelés",
+        "stretch_bars": "Nyújtórudak"
+    },
+    "maybeOpens": "Talán kinyit",
+    "garden:type": {
+        "roof_garden": "Tetőkert",
+        "community": "Közösségi kert",
+        "botanical": "Botanikus kert",
+        "residential": "Lakóház kertje"
+    },
+    "floor": "({{level}}. em.)",
+    "piste:difficulty": {
+        "intermediate": "Közepes",
+        "advanced": "Haladó",
+        "novice": "Nagyon könnyű",
+        "easy": "Könnyű",
+        "expert": "Nagyon nehéz",
+        "freeride": "Freeride",
+        "extreme": "Extrém nehéz"
+    },
+    "leisure": {
+        "wildlife_hide": "Vadles",
+        "bird_hide": "Madárvárta"
+    },
+    "site_type": {
+        "roman_villa": "Római villa",
+        "necropolis": "Nekropolisz",
+        "roman_circus": "Cirkusz (ókori római)",
+        "megalith": "Megalit",
+        "tumulus": "Halomsír",
+        "petroglyph": "Sziklarajz",
+        "city": "Történelmi város",
+        "bigstone": "Nagy megmunkált kő (megalit)",
+        "fortification": "Erődítmény",
+        "geoglyph": "Geoglifa (talajrajz)",
+        "hut_circle": "Kunyhókör",
+        "settlement": "Település",
+        "domus": "Domus (római ház)"
+    },
+    "seasonal": {
+        "dry_season": "Száraz évszakban",
+        "yes": "Szezonális",
+        "summer": "Nyáron",
+        "spring": "Tavasszal",
+        "winter": "Télen",
+        "no": "Nem szezonális",
+        "autumn": "Ősszel",
+        "wet_season": "Esős évszakban"
+    },
+    "boules": {
+        "petanque": "Pétanque",
+        "boule_de_fort": "Boule de fort",
+        "pétanque": "Pétanque",
+        "lyonnaise": "Provence-i golyójáték",
+        "bocce": "Bocce"
+    },
+    "garden:style": {
+        "french": "Franciakert",
+        "monastery": "Középkori kolostorkert",
+        "english": "Angol tájkert",
+        "zen": "Zen kert",
+        "chinese": "Kínai kert",
+        "kitchen": "Konyhakert",
+        "japanese": "Japánkert",
+        "rosarium": "Rózsakert",
+        "flower_garden": "Virágoskert",
+        "medical_garden": "Gyógynövénykert",
+        "herb_garden": "Fűszernövénykert",
+        "cottage_garden": "Házikert (cottage garden)",
+        "walled_garden": "Fallal körülvett kert"
+    },
+    "public_bookcase:type": {
+        "glass_cabinet": "Nyilávnos könyvszekrény (üvegezett)",
+        "building": "Nyilvános könyvszekrény (önálló épület)",
+        "metal_cabinet": "Nyilvános könyvszekrény (fém)",
+        "movable_cabinet": "Nyilvános könyvszekrény (mozgatható)",
+        "phone_box": "Nyilvános könyvszekrény (telefonfülke)",
+        "reading_box": "Nyilvános könyvszekrény (doboz)",
+        "sculpture": "Nyilvános könyvszekrény (műalkotás)",
+        "shelf": "Nyilvános könyvszekrény (polc)",
+        "shelter": "Nyilvános könyvszekrény (esőbeállóban)",
+        "wooden_cabinet": "Nyilvános könyvszekrény (faházikó)"
+    },
+    "maybeOpen": "Talán nyitva",
+    "closes": "Bezár",
+    "thatDependsOn": "Ez a következőtől függ:",
+    "code": "hu",
+    "search": {
+        "placeholder": "Hely keresése"
+    },
+    "minZoomMessageNoLayer": "Nincs hozzárendelt réteg",
+    "minZoomMessage": "Nagyíts a térképelemek betöltéséhez",
+    "emptyIndicator": "Ezen a területen nincs térképelem",
+    "conditionalFee": "Csak bizonyos időszakokban ingyenes.",
+    "open": "Nyitva",
+    "groundFloor": "(fsz.)",
+    "basement": "(-{{level}} pinceszint)",
+    "amenity": {
+        "hunting_stand": "Magasles",
+        "give_box": "Adománygyűjtő doboz"
+    },
+    "shop": {
+        "books": "Könyvesbolt"
+    },
+    "landuse": {
+        "apiary": "Méhkaptáros terület"
+    },
+    "natural": {
+        "anthill": "Hangyaboly",
+        "termite_mound": "Termeszvár"
+    },
+    "sport": {
+        "boules": "Golyósport",
+        "bowls": "Bowls"
+    }
+}
