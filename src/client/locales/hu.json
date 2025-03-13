@@ -1,1 +1,580 @@
-{}
+{
+    "meta": {
+        "title": "Fenntarthatósági térkép",
+        "description": "Tapasztald meg a világot fenntartható módon.",
+        "titleShort": "Fenntartható"
+    },
+    "intro": {
+        "title": "Fenntartható",
+        "tagline": "Tapasztald meg a világot fenntartható módon.",
+        "legend": "A térkép olyan fenntartható stratégiákra segít felhívni a figyelmet, mint például",
+        "social": "Szociális",
+        "production": "Környezetbarát módon előállított",
+        "organic": "Biotermék",
+        "seasonal": "Szezonális",
+        "vegetarian": "Vegetáriánus",
+        "packed": "Környezetbarát módon csomagolt",
+        "unpacked": "Csomagolatlan",
+        "zeroWaste": "Hulladékmentes",
+        "fairTrade": "Méltányos kereskedelemn (fair trade)",
+        "transport": "Rövid szállítási távolságok",
+        "regional": "Regionális",
+        "sharing": "Megosztás",
+        "lending": "Kölcsönzés",
+        "repair": "Javítás",
+        "reuse": "Újrafelhasználás",
+        "recycling": "Újrahasznosítás",
+        "community": "Közösség",
+        "participation": "Részvétel",
+        "osm": "Az adatok az <o>OpenStreetMap</o>ről származnak. <e>Adj hozzá általad ismert helyeket.</e>",
+        "translate": "Segítség a fordításban",
+        "translationStatus": "Fordítás állapota",
+        "contribute": "Az OpenStreetMap szerkesztése",
+        "moreApps": "További OpenStreetMap-alapú alkalmazások",
+        "freeOfCharge": "Ingyenes",
+        "accessible": "Nyilvánosan használható",
+        "description": "Ez a térkép környezetileg, társadalmilag és gazdaságilag fenntartható létesítményeket és szolgáltatásokat mutat be a környékeden.",
+        "joinCommunity": "Csatlakozz az <c>OSM közösségéhez</c>: <j>lépj be egy helyi csoportba</j>, <m>találkozz</m> és <t>csevegj</t> a térképészekkel",
+        "license": "Az alkalmazás a <l>GNU Affero General Public License v3.0</l> licenc alatt áll. A <c>kód</c> szabadon felhasználható, másolható és módosítható, ha ugyanezen licenc alatt teszed közzé.",
+        "aboutMe": "Névjegy"
+    },
+    "title": "Fenntarthatósági térkép",
+    "description": "Éld meg a világot fenntartható módon.",
+    "playground": "Gyermekeknek",
+    "changing_table": "Pelenkázóasztal van",
+    "bottle": "Újratöltési lehetőség",
+    "tools": "Szerszám",
+    "repair": "Javítás",
+    "chainTool": "Kerékpárláncszerszám",
+    "internet": "Internet",
+    "water": "Ivóvíz",
+    "bicycle": "Kerékpár",
+    "mobileCharging": "Töltés",
+    "car": "Gépkocsi",
+    "mobile": "Mobiltelefon",
+    "furniture": "Bútor",
+    "computer": "Számítógép",
+    "battery": "Akkumulátor",
+    "carBattery": "Autóakkumulátor",
+    "cookingOil": "Étolaj",
+    "paint": "Festék",
+    "rubble": "Építési hulladék (sitt)",
+    "plastic": "Műanyag",
+    "plastic_bottles": "Műanyag palack",
+    "polyester": "Poliészter",
+    "polystyrene_foam": "Poliészterhab",
+    "hazardous": "Veszélyes hulladék",
+    "beekeeper": "Méhészet",
+    "marketplace": "Piac",
+    "milkFillingStation": "Tejtöltő berendezés",
+    "shoes": "Cipő",
+    "recycling": "Újrahasznosítás",
+    "reuse": "Újrafelhasználás",
+    "borrow": "Csak kölcsönzés",
+    "membersOnly": "Csak tagoknak",
+    "fee": "Eladás",
+    "indoor": "Beltéri",
+    "female": "Nőknek",
+    "male": "Férfiaknak",
+    "senior": "Időseknek",
+    "disabled": "Fogyatékkal élőknek",
+    "homeless": "Hátrányos helyzetűeknek",
+    "migrant": "Menekülteknek",
+    "lgbtq": "LMBTQ+ barát",
+    "hoops": "Kosárlabdapalánkok",
+    "light": "Kivilágított",
+    "covered": "Fedett",
+    "wheelchair": {
+        "limited": "Korlátozottan akadálymentes",
+        "yes": "Akadálymentes",
+        "no": "Nem akadálymentes"
+    },
+    "regional": {
+        "only": "Csak helyi termék",
+        "yes": "Helyi termék is",
+        "no": "Helyi termék nincs"
+    },
+    "avoidPackaging": "Fölösleges csomagolás kiküszöbölése",
+    "vegetarian": {
+        "only": "Csak vegetáriánus termék",
+        "yes": "Vegetáriánus termék is",
+        "no": "Vegetáriánus termék nincs"
+    },
+    "vegan": {
+        "only": "Csak vegán termék",
+        "yes": "Vegán termék is",
+        "no": "Vegán termék nincs"
+    },
+    "fairTrade": {
+        "yes": "Fair trade termék is",
+        "no": "Fair trade termék nincs",
+        "only": "Csak fair trade termék"
+    },
+    "organic": {
+        "no": "Biotermék nincs",
+        "only": "Csak biotermék",
+        "yes": "Biotermék is"
+    },
+    "free": "Ingyenes",
+    "veryCheap": "Ingyenes vagy nagyon olcsó",
+    "parallelBars": "Párhuzamos korlát",
+    "group": {
+        "culture": "Kultúra",
+        "education": "Oktatás",
+        "natural": "Természet",
+        "health": "Egészségügy",
+        "mobility": "Mobilitás",
+        "communitySport": "Közösségi sport",
+        "trip": "Kirándulás",
+        "goods": "Anyagi javak",
+        "food": "Élelmiszer",
+        "material": "Újrahasznosítás",
+        "sport": "Sport",
+        "community": "Közösség"
+    },
+    "exerciseMachine": "Sporteszköz",
+    "rings": "Gyűrű",
+    "difficulty": "Nehézség",
+    "type": {
+        "artwork": {
+            "name": "Műalkotás"
+        },
+        "fountain": {
+            "name": "Szökőkút"
+        },
+        "tourist-attraction": {
+            "name": "Turisztikai látványosság"
+        },
+        "archaeological-site": {
+            "name": "Régészeti lelőhely"
+        },
+        "trail": {
+            "name": "Tanösvény"
+        },
+        "battery-recycling": {
+            "name": "Elem, akkumulátor"
+        },
+        "oil-recycling": {
+            "name": "Olaj"
+        },
+        "reusable-bottle-reuse": {
+            "name": "Újrafelhasználható palack"
+        },
+        "rubble-recycling": {
+            "name": "Építési hulladék"
+        },
+        "plastic-recycling": {
+            "name": "Műanyag"
+        },
+        "hazardous-recycling": {
+            "name": "Veszélyes hulladék"
+        },
+        "sport": {
+            "name": "Sport"
+        },
+        "books": {
+            "name": "Könyv"
+        },
+        "books-get": {
+            "name": "Könyv beszerzése"
+        },
+        "books-borrow": {
+            "name": "Könyv kölcsönzése"
+        },
+        "books-give": {
+            "name": "Könyv adása"
+        },
+        "kneipp_water_cure": {
+            "name": "Kneipp-létesítmény"
+        },
+        "castle": {
+            "name": "Vár"
+        },
+        "mill": {
+            "name": "Malom"
+        },
+        "memorial": {
+            "name": "Emlékmű"
+        },
+        "museum": {
+            "name": "Múzeum"
+        },
+        "observatory": {
+            "name": "Obszervatórium"
+        },
+        "ruins": {
+            "name": "Rom"
+        },
+        "cave": {
+            "name": "Barlang"
+        },
+        "pond": {
+            "name": "Kis tó"
+        },
+        "rock": {
+            "name": "Szikla"
+        },
+        "viewpoint": {
+            "name": "Kilátóhely"
+        },
+        "waterfall": {
+            "name": "Vízesés"
+        },
+        "assistance-female": {
+            "name": "Nőknek"
+        },
+        "assistance-male": {
+            "name": "Férfiaknak"
+        },
+        "assistance-senior": {
+            "name": "Időseknek"
+        },
+        "assistance-disabled": {
+            "name": "Fogyatékkal élőknek"
+        },
+        "assistance-homeless": {
+            "name": "Hátrányos helyzetűeknek"
+        },
+        "assistance-migrant": {
+            "name": "Menekülteknek"
+        },
+        "assisted-repair": {
+            "name": "Közös javítás",
+            "description": "Itt szakemberekkel együtt javíthatsz meg elromlott dolgokat. Új emberekkel találkozhatsz, és általában kávét és süteményt is kapsz. A javító kávézók jól ismert rendezvények."
+        },
+        "barbecue": {
+            "name": "Barbecue"
+        },
+        "baking-oven": {
+            "name": "Kemence"
+        },
+        "health-products": {
+            "name": "Egészségügyi termék",
+            "description": "Testápolási, kozmetikai vagy gyógyászati terméket és háztartási tisztítószert árusító üzlet."
+        },
+        "bicycle-rental": {
+            "name": "Kerékpárkölcsönzés"
+        },
+        "bicycle-self-repair": {
+            "name": "Önálló kerékpárszerelés"
+        },
+        "charging-station": {
+            "name": "Töltőállomás"
+        },
+        "musical_instrument": {
+            "name": "Hangszer"
+        },
+        "advertising": {
+            "description": "Itt egy ügy hirdetése érdekében plakátokat lehet kifüggeszteni.",
+            "name": "Reklámfelület"
+        },
+        "scout": {
+            "name": "Cserkészcsapat"
+        },
+        "community-garden": {
+            "name": "Közösségi kert",
+            "description": "Olyan kert, amelyet másokkal együtt művelhetsz. Ültethetsz, öntözhetsz és betakaríthatsz zöldségeket, fűszernövényeket, virágokat stb. és nézheted, ahogy nőnek."
+        },
+        "grocery": {
+            "name": "Tartósélelmiszer-bolt"
+        },
+        "plant": {
+            "name": "Növény"
+        },
+        "sweets": {
+            "name": "Édesség"
+        },
+        "baked-goods": {
+            "name": "Pékáru"
+        },
+        "dairy": {
+            "name": "Tejtermék"
+        },
+        "meat": {
+            "name": "Hústermék"
+        },
+        "vegetable": {
+            "name": "Zöldség, gyümölcs"
+        },
+        "beverages": {
+            "name": "Ital"
+        },
+        "dinner": {
+            "name": "Étkezés"
+        },
+        "contribute": {
+            "name": "Közreműködés"
+        },
+        "map": {
+            "name": "Térkép"
+        },
+        "openstreetmap": {
+            "name": "OpenStreetMap"
+        },
+        "pump": {
+            "name": "Pumpa"
+        },
+        "printer": {
+            "name": "Fénymásolás és nyomtatás"
+        },
+        "toilet": {
+            "name": "Nyilvános WC"
+        },
+        "basketball": {
+            "name": "Kosárlabda"
+        },
+        "bath": {
+            "name": "Fürdő"
+        },
+        "bikepark": {
+            "name": "Kerékpárpark"
+        },
+        "skatepark": {
+            "name": "Gördeszkapark"
+        },
+        "chess": {
+            "name": "Utcai sakk"
+        },
+        "climbing": {
+            "name": "Falmászás"
+        },
+        "exercise-machine": {
+            "name": "Fitneszgép"
+        },
+        "fitness-trail": {
+            "name": "Erdei tornapálya"
+        },
+        "running": {
+            "name": "Futás"
+        },
+        "soccer": {
+            "name": "Labdarúgás"
+        },
+        "table-tennis": {
+            "name": "Asztalitenisz"
+        },
+        "volleyball": {
+            "name": "Röplabda"
+        },
+        "animal": {
+            "name": "Állatkarám"
+        },
+        "observation": {
+            "name": "Állatmegfigyelés"
+        },
+        "maze": {
+            "name": "Labirintus"
+        },
+        "webcam": {
+            "name": "Webkamera"
+        },
+        "fireplace": {
+            "name": "Tűzrakóhely"
+        },
+        "garden": {
+            "name": "Kert"
+        },
+        "garden-with-name": {
+            "name": "Kert (névvel)"
+        },
+        "park": {
+            "name": "Park"
+        },
+        "picnic-site": {
+            "name": "Piknikezőhely"
+        },
+        "lounger": {
+            "name": "Nyugágy"
+        },
+        "clothes-repair": {
+            "name": "Ruha (javítás)"
+        },
+        "mobile-phones": {
+            "name": "Mobiltelefon"
+        },
+        "clothes-take": {
+            "name": "Ruha (ingyenes átvétel)"
+        },
+        "mobile-phones-give": {
+            "name": "Mobiltelefon (adományozás)"
+        },
+        "mobile-phones-repair": {
+            "name": "Mobiltelefon (javítás)"
+        },
+        "computers-give": {
+            "name": "Számítógép (adományozás)"
+        },
+        "computers-take": {
+            "name": "Számítógép (ingyenes átvétel)"
+        },
+        "toys-take": {
+            "name": "Játék (ingyenes átvétel)"
+        },
+        "toys-rent": {
+            "name": "Játék (kölcsönzés)"
+        },
+        "electronics": {
+            "name": "Elektromos berendezés"
+        },
+        "electronics-give": {
+            "name": "Elektromos berendezés (adományozás)"
+        },
+        "electronics-take": {
+            "name": "Elektromos berendezés (ingyenes átvétel)"
+        },
+        "furniture-give": {
+            "name": "Bútor (adományozás)"
+        },
+        "furniture-take": {
+            "name": "Bútor (ingyenes átvétel)"
+        },
+        "bicycle": {
+            "name": "Kerékpár"
+        },
+        "bicycle-give": {
+            "name": "Kerékpár (adományozás)"
+        },
+        "bicycle-get": {
+            "name": "Kerékpár (ingyenes átvétel)"
+        },
+        "bicycle-rent": {
+            "name": "Kerékpár (kölcsönzés)"
+        },
+        "bicycle-repair": {
+            "name": "Kerékpár (javítás)"
+        },
+        "monument": {
+            "name": "Monumentális emlékmű"
+        },
+        "clothes-give": {
+            "name": "Ruha (adományozás)"
+        },
+        "defibrillator": {
+            "name": "Defibrillátor"
+        },
+        "toys-repair": {
+            "name": "Játék (javítás)"
+        },
+        "park-with-name": {
+            "name": "Park (névvel)"
+        },
+        "books-recycle": {
+            "name": "Könyv újrahasznosítása"
+        },
+        "history": {
+            "name": "Történelem"
+        },
+        "spring": {
+            "name": "Forrás"
+        },
+        "assistance-children": {
+            "name": "Gyermekeknek"
+        },
+        "square": {
+            "name": "Tér"
+        },
+        "community-centre": {
+            "name": "Közösségi ház"
+        },
+        "diaper-changing-table": {
+            "name": "Pelenkázóasztal"
+        },
+        "internet": {
+            "name": "Internet"
+        },
+        "drinking-water": {
+            "name": "Ivóvíz"
+        },
+        "food-sharing": {
+            "name": "Élelmiszer-megosztás",
+            "description": "Élelmiszerleadó és -átvevő hely. A leadás és az átvétel feltételei nagymértékben eltérnek; erről az üzemeltető honlapján vagy a helyszínen tájékozódhatsz."
+        },
+        "hackerspace": {
+            "name": "Hackerspace"
+        },
+        "goods-exchange": {
+            "name": "Áru cserélése",
+            "description": "Olyan asztal, polc vagy bolt, ahová bevihetsz és ahonnan elvihetsz tárgyakat. Ilyenek például az adományboltok vagy adományozó dobozok."
+        },
+        "goods-get": {
+            "name": "Áru megkapása"
+        },
+        "horizontal_bar": {
+            "name": "Nyújtó (vízszintes rúd)"
+        },
+        "table-soccer": {
+            "name": "Csocsó"
+        },
+        "square-with-name": {
+            "name": "Tér (névvel)"
+        },
+        "parallel_bars": {
+            "name": "Párhuzamos korlát"
+        },
+        "rings": {
+            "name": "Gyűrű"
+        },
+        "computers-repair": {
+            "name": "Számítógép (javítás)"
+        },
+        "toys-give": {
+            "name": "Játék (adományozás)"
+        },
+        "mobile-phones-take": {
+            "name": "Mobiltelefon (ingyenes átvétel)"
+        },
+        "toys": {
+            "name": "Játék"
+        },
+        "public-shower": {
+            "name": "Nyilvános zuhanyzó"
+        },
+        "sledding": {
+            "name": "Szánkó"
+        },
+        "clothes": {
+            "name": "Ruha"
+        },
+        "electronics-repair": {
+            "name": "Elektromos berendezés (javítás)"
+        },
+        "fitness": {
+            "name": "Fitnesz"
+        },
+        "furniture": {
+            "name": "Bútor"
+        },
+        "coworking": {
+            "name": "Coworking iroda"
+        },
+        "playground": {
+            "name": "Játszótér"
+        },
+        "computers": {
+            "name": "Számítógép"
+        },
+        "furniture-repair": {
+            "name": "Bútor (javítás)"
+        }
+    },
+    "freeToTakeOrGive": "Ingyen odaadható vagy elvihető",
+    "park": "Park",
+    "smallElectronics": "Kis elektromos készülék",
+    "clothes": "Ruha",
+    "engineOil": "Motorolaj",
+    "plastic_packaging": "Műanyag csomagolás",
+    "hydrargyrum": "Higany",
+    "capacity": "Kapacitás",
+    "charging": "Töltés",
+    "electronics": "Elektromos készülék",
+    "oil": "Hulladékolaj",
+    "PET": "PET",
+    "pump": "Pumpa",
+    "toy": "Játék",
+    "plastic_bags": "Nejlonzacskó",
+    "freeToGive": "Ingyen odaadható",
+    "freeToTake": "Ingyen elvihető",
+    "public": "Nyilvánosan használható",
+    "customersOnly": "Csak ügyfeleknek",
+    "colour": "Szín"
+}
