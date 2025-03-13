@@ -137,8 +137,7 @@
     "difficulty": "Nehézség",
     "type": {
         "artwork": {
-            "name": "Műalkotás",
-            "description": ""
+            "name": "Műalkotás"
         },
         "fountain": {
             "name": "Szökőkút"
