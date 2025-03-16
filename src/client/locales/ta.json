@@ -1,1 +1,738 @@
-{}
+{
+    "meta": {
+        "titleShort": "வளங்குன்றா",
+        "title": "நிலையான வரைபடம்",
+        "description": "உலகை நிலையான முறையில் அனுபவிக்கவும்."
+    },
+    "intro": {
+        "title": "வளங்குன்றா",
+        "tagline": "உலகை நிலையான முறையில் அனுபவிக்கவும்.",
+        "freeOfCharge": "இலவசம்",
+        "unpacked": "தொகுக்கப்படாதது",
+        "zeroWaste": "சுழிய கழிவு",
+        "transport": "குறுகிய போக்குவரத்து தூரம்",
+        "sharing": "பகிர்வு",
+        "lending": "கடன்",
+        "recycling": "மறுசுழற்சி",
+        "community": "சமூகம்",
+        "participation": "பங்கேற்பு",
+        "osm": "செய்தி <o> openstreetmap </o> இலிருந்து ஏற்றப்பட்டுள்ளது. <e> உங்களுக்குத் தெரிந்த இடங்களைச் சேர்க்கவும். </e>",
+        "license": "இந்த பயன்பாடு <l> குனு அஃபெரோ பொது பொது உரிமம் V3.0 </l> இன் கீழ் உரிமம் பெற்றது. <c> குறியீடு </c> நீங்கள் ஒரே உரிமத்தின் கீழ் வெளியிட்டால் பயன்பாடு, நகலெடுத்தல் மற்றும் மாற்றத்திற்கு இலவசம்.",
+        "moreApps": "OpenStreetMap ஐ அடிப்படையாகக் கொண்ட கூடுதல் பயன்பாடுகள்",
+        "aboutMe": "என்னைப் பற்றி",
+        "legend": "போன்ற நிலையான உத்திகளுக்கு கவனத்தை ஈர்க்க வரைபடம் உதவுகிறது",
+        "description": "இது உங்கள் பகுதியில் உள்ள வசதிகள் மற்றும் சேவைகளை சுற்றுச்சூழல், சமூக மற்றும் பொருளாதார ரீதியாக நிலையானதாகக் காட்டும் வரைபடம்.",
+        "accessible": "பகிரங்கமாக அணுகக்கூடியது",
+        "social": "சமூக",
+        "production": "சுற்றுச்சூழல் நட்பு விளைவாக்கம்",
+        "organic": "ஆர்கானிக்",
+        "seasonal": "பருவகால",
+        "vegetarian": "மரக்கறி",
+        "packed": "சுற்றுச்சூழல் நட்பு நிரம்பியுள்ளது",
+        "fairTrade": "நியாயமான வணிகம்",
+        "regional": "பிராந்திய",
+        "repair": "பழுது",
+        "reuse": "மறுபயன்பாடு",
+        "translate": "மொழிபெயர்க்க உதவுங்கள்",
+        "translationStatus": "மொழிபெயர்ப்பு நிலை",
+        "joinCommunity": "<c> OSM சமூகத்தில் சேரவும் </c>: <j> உள்ளக குழுவில் சேரவும் </j>, <m> சந்திப்பு </m> & <t> அரட்டை </t>",
+        "contribute": "OpenStreetMap க்கு பங்களிப்பு செய்யுங்கள்"
+    },
+    "title": "நிலையான வரைபடம்",
+    "changing_table": "மாறும் அட்டவணை உள்ளது",
+    "bottle": "நிரப்புதல் சாத்தியமாகும்",
+    "tools": "கருவிகள்",
+    "chainTool": "சங்கிலி கருவி",
+    "internet": "இணையம்",
+    "water": "குடிநீர்",
+    "bicycle": "சைக்கிள்",
+    "park": "பூங்கா",
+    "electronics": "மின்னணுவியல்",
+    "furniture": "தளபாடங்கள்",
+    "computer": "கணிப்பொறி, கணிணி",
+    "plastic_packaging": "பிளாச்டிக் பேக்கேசிங்",
+    "PET": "செல்லப்பிள்ளை",
+    "plastic_bags": "பிளாச்டிக் பை",
+    "polyester": "பலபடியத்தர், பலமரிழை",
+    "polystyrene_foam": "பாலிச்டிரீன் நுரை",
+    "hazardous": "அபாயகரமான கழிவு",
+    "hydrargyrum": "குவிக்சில்வர்",
+    "beekeeper": "தேனீ வளர்ப்பவர்",
+    "shoes": "காலணிகள்",
+    "recycling": "மறுசுழற்சி",
+    "reuse": "மறுபயன்பாடு",
+    "freeToGive": "கொடுக்க இலவசம்",
+    "public": "பகிரங்கமாக அணுகக்கூடியது",
+    "customersOnly": "வாடிக்கையாளர்கள் மட்டுமே",
+    "membersOnly": "உறுப்பினர்கள் மட்டுமே",
+    "homeless": "வறியவருக்கு",
+    "migrant": "அகதிகளுக்கு",
+    "lgbtq": "LGBTQ+ நட்பு",
+    "hoops": "வளையங்கள்",
+    "wheelchair": {
+        "limited": "வரையறுக்கப்பட்ட சக்கர நாற்காலி அணுகக்கூடியது",
+        "no": "சக்கர நாற்காலி அணுக முடியாது",
+        "yes": "சக்கர நாற்காலி அணுகக்கூடியது"
+    },
+    "regional": {
+        "only": "பிராந்திய தயாரிப்புகள் மட்டுமே",
+        "yes": "பிராந்திய தயாரிப்புகள் உள்ளன",
+        "no": "பிராந்திய தயாரிப்புகள் இல்லை"
+    },
+    "avoidPackaging": "தேவையற்ற பேக்கேசிங்கைத் தவிர்க்கவும்",
+    "vegetarian": {
+        "yes": "சைவ பொருட்கள் உள்ளன",
+        "no": "சைவ பொருட்கள் இல்லை",
+        "only": "சைவ பொருட்கள் மட்டுமே"
+    },
+    "vegan": {
+        "only": "சைவ பொருட்கள் மட்டுமே",
+        "yes": "சைவ தயாரிப்புகள் உள்ளன",
+        "no": "சைவ தயாரிப்புகள் இல்லை"
+    },
+    "fairTrade": {
+        "only": "நியாயமான வர்த்தக தயாரிப்புகள் மட்டுமே",
+        "yes": "நியாயமான வர்த்தக தயாரிப்புகள் உள்ளன",
+        "no": "நியாயமான வர்த்தக தயாரிப்புகள் இல்லை"
+    },
+    "organic": {
+        "no": "கரிம பொருட்கள் இல்லை",
+        "only": "கரிம பொருட்கள் மட்டுமே",
+        "yes": "கரிம தயாரிப்புகள் உள்ளன"
+    },
+    "free": "இலவசம்",
+    "veryCheap": "இலவசம் அல்லது மிகவும் மலிவானது",
+    "parallelBars": "இணை பார்கள்",
+    "rings": "மோதிரங்கள்",
+    "exerciseMachine": "உடற்பயிற்சி இயந்திரம்",
+    "balance": "இருப்பு",
+    "difficulty": "தொல்லை",
+    "group": {
+        "mobility": "நகர்கை",
+        "community": "சமூகம்",
+        "sport": "விளையாட்டு",
+        "culture": "பண்பாடு",
+        "education": "கல்வி",
+        "natural": "இயற்கை",
+        "health": "உடல்நலம்",
+        "communitySport": "சமூக விளையாட்டு",
+        "trip": "பயணம்",
+        "goods": "பொருட்கள்",
+        "food": "உணவு",
+        "material": "பொருள் மறுசுழற்சி"
+    },
+    "type": {
+        "oil-recycling": {
+            "name": "எண்ணெய்",
+            "description": "type.oil-recycling.description"
+        },
+        "reusable-bottle-reuse": {
+            "name": "மீண்டும் பயன்படுத்தக்கூடிய பாட்டில்",
+            "description": "type.reusable-bottle-reuse.description"
+        },
+        "rubble-recycling": {
+            "name": "கட்டிடம் இடிபாடுகள்",
+            "description": "type.rubble-recycling.description"
+        },
+        "plastic-recycling": {
+            "name": "நெகிழி",
+            "description": "type.plastic-recycling.description"
+        },
+        "hazardous-recycling": {
+            "name": "அபாயகரமான கழிவு",
+            "description": "type.hazardous- மறுசுழற்சி. விவரக்குறிப்பு"
+        },
+        "mill": {
+            "name": "மில்",
+            "description": "type.mill.description"
+        },
+        "history": {
+            "name": "வரலாறு",
+            "description": "type.history.description"
+        },
+        "memorial": {
+            "name": "நினைவு",
+            "description": "type.memorial.description"
+        },
+        "monument": {
+            "name": "நினைவுச்சின்னம்",
+            "description": "type.monument.description"
+        },
+        "museum": {
+            "name": "அருங்காட்சியகம்",
+            "description": "type.museum.description"
+        },
+        "observatory": {
+            "name": "ஆய்வகம்",
+            "description": "type.observatory.description"
+        },
+        "viewpoint": {
+            "name": "பார்வை",
+            "description": "type.viewpoint.description"
+        },
+        "assisted-repair": {
+            "description": "இங்கே நீங்கள் நிபுணர்களுடன் உடைந்த விசயங்களை சரிசெய்யலாம். நீங்கள் புதிய நபர்களைச் சந்திப்பீர்கள், பொதுவாக நீங்கள் காபி மற்றும் கேக் பெறுவீர்கள். நன்கு அறியப்பட்ட நிகழ்வுகள் பழுதுபார்க்கும் கஃபேக்கள்.",
+            "name": "உதவி பழுது"
+        },
+        "musical_instrument": {
+            "name": "கருவி",
+            "description": "type.musical instrument.description"
+        },
+        "community-centre": {
+            "name": "சமூக நடுவண்",
+            "description": "type.community-centre.description"
+        },
+        "scout": {
+            "name": "சாரணர் குழு",
+            "description": "type.scout.description"
+        },
+        "community-garden": {
+            "name": "சமூக தோட்டம்",
+            "description": "இங்கே நீங்கள் மற்றவர்களுடன் சேர்ந்து பயிரிடக்கூடிய ஒரு தோட்டம். காய்கறிகள், மூலிகைகள், பூக்கள் மற்றும் பலவற்றை நீங்கள் நடவு செய்யலாம், தண்ணீர் மற்றும் அறுவடை செய்யலாம் மற்றும் அவை வளர்வதைப் பார்க்கலாம்."
+        },
+        "grow": {
+            "name": "வளர",
+            "description": "type.grow.description"
+        },
+        "plant": {
+            "name": "ஆலை",
+            "description": "type.plant.description"
+        },
+        "sweets": {
+            "name": "இனிப்புகள்",
+            "description": "type.sweets.description"
+        },
+        "baked-goods": {
+            "name": "வேகவைத்த பொருட்கள்",
+            "description": "type.paked-goods.description"
+        },
+        "dairy": {
+            "name": "பால் தயாரிப்புகள்",
+            "description": "type.dairy.description"
+        },
+        "beverages": {
+            "name": "பானங்கள்",
+            "description": "type.beverages.description"
+        },
+        "diaper-changing-table": {
+            "name": "டயபர் மாற்றும் அட்டவணை",
+            "description": "type.diaper- மாறும்-அட்டவணை. விவரம்"
+        },
+        "food-sharing": {
+            "description": "இந்த இடத்தில் நீங்கள் உணவைக் கொண்டு வந்து எடுக்கலாம். உணவைக் கொண்டுவருவதற்கும் எடுப்பதற்கும் நிபந்தனைகள் மிகவும் வேறுபட்டவை, ஆபரேட்டரின் வலைத்தளத்திலோ அல்லது தளத்திலோ இதைப் பற்றி நீங்கள் தெரிவிக்கலாம்.",
+            "name": "உணவு பகிர்வு"
+        },
+        "goods-exchange": {
+            "description": "இங்கே நீங்கள் ஒரு அட்டவணை, ஒரு அலமாரி அல்லது ஒரு கடையை கொண்டு வரவும், பொருட்களைக் கொண்டு செல்லவும் காணலாம். நன்கு அறியப்பட்ட வசதிகள் கொடுக்கும் கடைகள் மற்றும் கொடுப்புப் பெட்டிகள்.",
+            "name": "பொருட்கள் பரிமாற்றம்"
+        },
+        "coworking": {
+            "name": "தம பணியாளர்",
+            "description": "type.coworking.description"
+        },
+        "contribute": {
+            "name": "பங்களிப்பு",
+            "description": "type.contribute.description"
+        },
+        "pump": {
+            "name": "இறைப்பி",
+            "description": "type.pump.description"
+        },
+        "printer": {
+            "name": "சமாளித்தல் மற்றும் அச்சிடுதல்",
+            "description": "type.printer.description"
+        },
+        "toilet": {
+            "name": "பொது கழிப்பறை",
+            "description": "type.toilet.description"
+        },
+        "basketball": {
+            "name": "கூடைப்பந்து",
+            "description": "type.basketball.description"
+        },
+        "fitness": {
+            "name": "உடற்பயிற்சி",
+            "description": "type.fitness.description"
+        },
+        "parallel_bars": {
+            "name": "இணை பார்கள்",
+            "description": "type.paralle_bars.description"
+        },
+        "rings": {
+            "name": "மோதிரங்கள்",
+            "description": "type.rings.description"
+        },
+        "exercise-machine": {
+            "name": "உடற்பயிற்சி இயந்திரம்",
+            "description": "type.exercise-machine.description"
+        },
+        "balance": {
+            "name": "இருப்பு",
+            "description": "type.palance.description"
+        },
+        "fitness-trail": {
+            "name": "உடற்பயிற்சி பாதை",
+            "description": "type.fitness-trail.description"
+        },
+        "sledding": {
+            "name": "ச்லெடிங்",
+            "description": "type.sledding.description"
+        },
+        "fireplace": {
+            "name": "நெருப்பிடம்",
+            "description": "type.fireplace.description"
+        },
+        "garden": {
+            "name": "தோட்டம்",
+            "description": "type.garden.description"
+        },
+        "garden-with-name": {
+            "name": "தோட்டம் (பெயருடன்)",
+            "description": "type.garden-with-name.description"
+        },
+        "nature-park": {
+            "name": "இயற்கை பூங்கா",
+            "description": "type.nature-park.description"
+        },
+        "mobile-phones-give": {
+            "name": "தொலைபேசி (கொடுங்கள்)",
+            "description": "type.mobile-phones-give.description"
+        },
+        "mobile-phones-take": {
+            "name": "தொலைபேசி (எடுத்துக் கொள்ளுங்கள்)",
+            "description": "type.mobile-phones-dake.description"
+        },
+        "mobile-phones-repair": {
+            "name": "தொலைபேசி (பழுது)",
+            "description": "type.mobile-phones-repair.description"
+        },
+        "computers-give": {
+            "name": "கணினி (கொடுங்கள்)",
+            "description": "type.computers-give.description"
+        },
+        "toys-take": {
+            "name": "பொம்மை (எடுத்துக் கொள்ளுங்கள்)",
+            "description": "type.toys-dake.description"
+        },
+        "toys-rent": {
+            "name": "பொம்மை (வாடகை)",
+            "description": "type.toys-rent.description"
+        },
+        "electronics-give": {
+            "name": "மின்னணு (கொடுங்கள்)",
+            "description": "type.electronics-give.description"
+        },
+        "electronics-take": {
+            "name": "மின்னணு (எடுத்துக் கொள்ளுங்கள்)",
+            "description": "type.electronics-dake.description"
+        },
+        "electronics-repair": {
+            "name": "மின்னணு (பழுது)",
+            "description": "type.electronics-repair.description"
+        },
+        "furniture": {
+            "name": "தளபாடங்கள்",
+            "description": "type.furniture.description"
+        },
+        "furniture-give": {
+            "name": "தளபாடங்கள் (கொடுங்கள்)",
+            "description": "type.furnution-give.description"
+        },
+        "furniture-take": {
+            "name": "தளபாடங்கள் (எடுத்துக் கொள்ளுங்கள்)",
+            "description": "type.furniture-dake.description"
+        },
+        "furniture-repair": {
+            "name": "தளபாடங்கள் (பழுது)",
+            "description": "type.furnution-repair.description"
+        },
+        "bicycle": {
+            "name": "சைக்கிள்",
+            "description": "type.bicycle.description"
+        },
+        "bicycle-give": {
+            "name": "சைக்கிள் (கொடுங்கள்)",
+            "description": "type.bicycle-give.description"
+        },
+        "bicycle-get": {
+            "name": "சைக்கிள் (கிடைக்கும்)",
+            "description": "type.bicycle-get.description"
+        },
+        "bicycle-rent": {
+            "name": "சைக்கிள் (வாடகை)",
+            "description": "type.bicycle-rent.description"
+        },
+        "computers": {
+            "name": "கணிணி",
+            "description": "type.computers.description"
+        },
+        "books": {
+            "description": "type.books.description",
+            "name": "புத்தகங்கள்"
+        },
+        "soccer": {
+            "description": "type.soccer.description",
+            "name": "கால்பந்து"
+        },
+        "clothes": {
+            "description": "type.clothes.description",
+            "name": "ஆடைகள்"
+        },
+        "artwork": {
+            "name": "ஒளிமறைப்பு",
+            "description": "type.artwork.description"
+        },
+        "fountain": {
+            "name": "நீரூற்று",
+            "description": "type.fountain.description"
+        },
+        "tourist-attraction": {
+            "name": "சுற்றுலா ஈர்ப்பு",
+            "description": "type.tourist-attraction.description"
+        },
+        "archaeological-site": {
+            "name": "தொல்பொருள் தளம்",
+            "description": "type.archaelogical-site.description"
+        },
+        "trail": {
+            "name": "கல்வி பாதை",
+            "description": "type.trail.description"
+        },
+        "battery-recycling": {
+            "name": "மின்கலம்",
+            "description": "type.battery- மறுசுழற்சி. விவரக்குறிப்பு"
+        },
+        "sport": {
+            "name": "விளையாட்டு",
+            "description": "type.sport.description"
+        },
+        "books-get": {
+            "name": "புத்தகங்களைப் பெறுங்கள்",
+            "description": "type.books-get.description"
+        },
+        "books-borrow": {
+            "name": "புத்தகங்களை கடன் வாங்கவும்",
+            "description": "type.books-borrow.description"
+        },
+        "books-give": {
+            "name": "புத்தகங்களைக் கொடுங்கள்",
+            "description": "type.books-give.description"
+        },
+        "books-recycle": {
+            "name": "புத்தகங்களை மறுசுழற்சி செய்யுங்கள்",
+            "description": "type.books-recycle.description"
+        },
+        "kneipp_water_cure": {
+            "name": "Kneipp வசதி",
+            "description": "type.kneipp_water_cure.description"
+        },
+        "castle": {
+            "name": "கோட்டை",
+            "description": "type.castle.description"
+        },
+        "ruins": {
+            "name": "இடிபாடுகள்",
+            "description": "type.ruins.description"
+        },
+        "cave": {
+            "name": "குகை",
+            "description": "type.cave.description"
+        },
+        "natural_monument": {
+            "name": "இயற்கை நினைவுச்சின்னம்",
+            "description": "type.natural_monument.description"
+        },
+        "pond": {
+            "name": "குளம்",
+            "description": "type.pond.description"
+        },
+        "rock": {
+            "name": "பாறை",
+            "description": "type.rock.description"
+        },
+        "waterfall": {
+            "name": "நீர்வீழ்ச்சி",
+            "description": "type.waterfall.description"
+        },
+        "spring": {
+            "name": "வேனில்",
+            "description": "type.spring.description"
+        },
+        "assistance": {
+            "name": "உதவி",
+            "description": "type.assistance.description"
+        },
+        "assistance-female": {
+            "name": "பெண்களுக்கு",
+            "description": "type.assistance-female.description"
+        },
+        "assistance-male": {
+            "name": "ஆண்களுக்கு",
+            "description": "type.assistance-male.description"
+        },
+        "assistance-senior": {
+            "name": "வயதானவர்களுக்கு",
+            "description": "type.assistance-senior.description"
+        },
+        "assistance-disabled": {
+            "name": "ஊனமுற்றோருக்கு",
+            "description": "type.assistance- துரிதப்படுத்தப்பட்ட. விவரக்குறிப்பு"
+        },
+        "assistance-homeless": {
+            "name": "வறியவருக்கு",
+            "description": "type.assistance-homess.description"
+        },
+        "assistance-migrant": {
+            "name": "அகதிகளுக்கு",
+            "description": "type.assistance- குடியேறியவர். விவரம்"
+        },
+        "assistance-children": {
+            "name": "குழந்தைகளுக்கு",
+            "description": "type.assistance-children.description"
+        },
+        "barbecue": {
+            "name": "பார்பிக்யூ",
+            "description": "type.barbecue.description"
+        },
+        "baking-oven": {
+            "name": "பேக்கிங் அடுப்பு",
+            "description": "type.baking-oven.description"
+        },
+        "health-products": {
+            "name": "சுகாதார தயாரிப்புகள்",
+            "description": "தனிப்பட்ட பராமரிப்பு, அழகுசாதனப் பொருட்கள், வீட்டு தூய்மை அல்லது மருத்துவ தயாரிப்புகளை விற்கும் கடை."
+        },
+        "bicycle-rental": {
+            "name": "சைக்கிள் வாடகை",
+            "description": "type.bicycel- வாடகை. விவரக்குறிப்பு"
+        },
+        "bicycle-self-repair": {
+            "name": "சைக்கிள் தன்வய பழுது",
+            "description": "type.bicycle- சுய-பழுதுபார்ப்பு"
+        },
+        "charging-station": {
+            "name": "சார்சிங் நிலையம்",
+            "description": "type.charging-station.description"
+        },
+        "advertising": {
+            "name": "விளம்பர இடம்",
+            "description": "உங்கள் கவலையை விளம்பரப்படுத்த இங்கே நீங்கள் சுவரொட்டிகளைத் தொங்கவிடலாம்."
+        },
+        "grocery": {
+            "name": "மளிகை",
+            "description": "type.grocery.description"
+        },
+        "meat": {
+            "name": "இறைச்சி பொருட்கள்",
+            "description": "type.meat.description"
+        },
+        "vegetable": {
+            "name": "பழம் / காய்கறிகள்",
+            "description": "type.vegetable.description"
+        },
+        "drinking-water": {
+            "name": "குடிநீர்",
+            "description": "type.rinking- நீர். விவரம்"
+        },
+        "defibrillator": {
+            "name": "டிஃபிபிரிலேட்டர்",
+            "description": "type.defibrillator.description"
+        },
+        "dinner": {
+            "name": "இரவு உணவு",
+            "description": "type.dinner.description"
+        },
+        "goods-get": {
+            "name": "பொருட்களைப் பெறுங்கள்",
+            "description": "type.goods-get.description"
+        },
+        "hackerspace": {
+            "name": "ஏக்கர்ச்பேச்",
+            "description": "Type.hachchespace.description"
+        },
+        "map": {
+            "name": "வரைபடம்",
+            "description": "type.map.description"
+        },
+        "openstreetmap": {
+            "name": "ஓபன்ச்ட்ரீட் வரைபடம்",
+            "description": "type.openstreetmap.description"
+        },
+        "internet": {
+            "name": "இணையம்",
+            "description": "type.internet.description"
+        },
+        "public-shower": {
+            "name": "பொது மழை",
+            "description": "type.public-shower.description"
+        },
+        "bath": {
+            "name": "குளியல்",
+            "description": "type.bath.description"
+        },
+        "bikepark": {
+            "name": "பைக் பார்க்",
+            "description": "type.bikepark.description"
+        },
+        "skatepark": {
+            "name": "ச்கேட்பார்க்",
+            "description": "type.skatepark.description"
+        },
+        "chess": {
+            "name": "தெரு சதுரங்கம்",
+            "description": "type.chess.description"
+        },
+        "climbing": {
+            "name": "ஏறுதல்",
+            "description": "type.climbing.description"
+        },
+        "horizontal_bar": {
+            "name": "கிடைமட்ட பட்டி",
+            "description": "type.horizontal_bar.description"
+        },
+        "running": {
+            "name": "இயங்கும்",
+            "description": "type.running.description"
+        },
+        "table-tennis": {
+            "name": "அட்டவணை டென்னிச்",
+            "description": "type.table-tennis.description"
+        },
+        "table-soccer": {
+            "name": "அட்டவணை கால்பந்து",
+            "description": "type.table-saccer.description"
+        },
+        "boules": {
+            "name": "பந்துகள்",
+            "description": "தட்டச்சு செய்க."
+        },
+        "volleyball": {
+            "name": "கைப்பந்து",
+            "description": "type.vollewhball.description"
+        },
+        "animal": {
+            "name": "விலங்கு உறை",
+            "description": "type.animal.description"
+        },
+        "observation": {
+            "name": "விலங்கு கவனிப்பு",
+            "description": "type.observation.description"
+        },
+        "maze": {
+            "name": "பிரமை",
+            "description": "type.maze.description"
+        },
+        "webcam": {
+            "name": "வெப்கேம்",
+            "description": "type.webcam.description"
+        },
+        "park": {
+            "name": "பூங்கா",
+            "description": "type.park.description"
+        },
+        "park-with-name": {
+            "name": "பூங்கா (பெயருடன்)",
+            "description": "type.park-with-name.description"
+        },
+        "picnic-site": {
+            "name": "சுற்றுலா தளம்",
+            "description": "type.picnic-site.description"
+        },
+        "square": {
+            "name": "நாற்கை",
+            "description": "type.square.description"
+        },
+        "square-with-name": {
+            "name": "நாற்கை (பெயருடன்)",
+            "description": "type.cquare-with-name.description"
+        },
+        "playground": {
+            "name": "விளையாட்டு மைதானம்",
+            "description": "type.playground.description"
+        },
+        "lounger": {
+            "name": "லவுஞ்சர்",
+            "description": "type.lounger.description"
+        },
+        "clothes-give": {
+            "name": "ஆடைகள் (கொடுங்கள்)",
+            "description": "type.clothes-give.description"
+        },
+        "clothes-take": {
+            "name": "ஆடைகள் (எடுத்துக் கொள்ளுங்கள்)",
+            "description": "type.clothes-dake.description"
+        },
+        "clothes-repair": {
+            "name": "உடைகள் (பழுது)",
+            "description": "type.clothes-repair.description"
+        },
+        "mobile-phones": {
+            "name": "தொலைபேசி",
+            "description": "type.mobile-phones.description"
+        },
+        "computers-take": {
+            "name": "கணினி (எடுத்துக் கொள்ளுங்கள்)",
+            "description": "type.computers-take.description"
+        },
+        "computers-repair": {
+            "name": "கணினி (பழுது)",
+            "description": "type.computers-repair.description"
+        },
+        "toys": {
+            "name": "பொம்மை",
+            "description": "type.toys.description"
+        },
+        "toys-give": {
+            "name": "பொம்மை (கொடுங்கள்)",
+            "description": "type.toys-give.description"
+        },
+        "toys-repair": {
+            "name": "பொம்மை (பழுது)",
+            "description": "type.toys-repair.description"
+        },
+        "electronics": {
+            "name": "மின்னணு",
+            "description": "type.electronics.description"
+        },
+        "bicycle-repair": {
+            "name": "சைக்கிள் (பழுது)",
+            "description": "type.bicycle-repair.description"
+        }
+    },
+    "description": "உலகை நிலையான முறையில் அனுபவிக்கவும்.",
+    "capacity": "திறன்",
+    "playground": "குழந்தைகளுக்கு",
+    "pump": "இறைப்பி",
+    "repair": "பழுது",
+    "charging": "சார்சிங்",
+    "mobileCharging": "சார்சிங்",
+    "car": "கார்",
+    "mobile": "மொபைல் போன்",
+    "smallElectronics": "சிறிய மின்னணுவியல்",
+    "toy": "பொம்மை",
+    "clothes": "ஆடைகள்",
+    "battery": "மின்கலம்",
+    "carBattery": "கார் பேட்டரி",
+    "cookingOil": "சமையல் எண்ணெய்",
+    "engineOil": "எஞ்சின் எண்ணெய்",
+    "oil": "கழிவு எண்ணெய்",
+    "paint": "வண்ணப்பூச்சு",
+    "rubble": "கட்டிடம் இடிபாடுகள்",
+    "plastic": "நெகிழி",
+    "plastic_bottles": "பிளாச்டிக் பாட்டில்கள்",
+    "marketplace": "சந்தை",
+    "milkFillingStation": "பால் நிரப்புதல் நிலையம்",
+    "freeToTake": "எடுக்க இலவசம்",
+    "freeToTakeOrGive": "எடுக்க அல்லது கொடுக்க இலவசம்",
+    "borrow": "கடன் மட்டுமே",
+    "fee": "விற்பனை",
+    "indoor": "உட்புறம்",
+    "female": "பெண்களுக்கு",
+    "male": "ஆண்களுக்கு",
+    "senior": "வயதானவர்களுக்கு",
+    "disabled": "ஊனமுற்றோருக்கு",
+    "light": "லைட்",
+    "covered": "மூடப்பட்ட",
+    "colour": "நிறம்",
+    "horizontalBar": "கிடைமட்ட பட்டி"
+}
