@@ -152,7 +152,13 @@ function Intro() {
                 <a href="/?lang=fr">Français</a>
               </td>
               <td>
+                <a href="/?lang=hu">magyar</a>
+              </td>
+              <td>
                 <a href="/?lang=pl">Polski</a>
+              </td>
+              <td>
+                <a href="/?lang=ta">தமிழ்</a>
               </td>
               {/* <td>
           <a href="/?lang=zh_Hant">中文（繁體）</a>
