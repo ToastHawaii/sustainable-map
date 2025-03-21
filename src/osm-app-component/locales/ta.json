@@ -63,7 +63,7 @@
         "water_well": "நீர் கிணறு",
         "watermill": "வாட்டர்மில்",
         "windmill": "காற்றாலை",
-        "mineshaft": "Mineshaft",
+        "mineshaft": "மின்தண்டு",
         "drinking_fountain": "நீரூற்று குடிப்பது",
         "tower": "கோபுரம்",
         "beehive": "தேனீ",
@@ -74,7 +74,7 @@
         "apiary": "தேனீ"
     },
     "natural": {
-        "anthill": "Anthill",
+        "anthill": "சுரங்கப் பற்று",
         "termite_mound": "டெர்மைட் மவுண்ட்"
     },
     "sport": {
@@ -82,10 +82,10 @@
         "boules": "பந்துகள்"
     },
     "boules": {
-        "petanque": "Pétanque",
+        "petanque": "பெட்டான்க்யூ",
         "lyonnaise": "புரோவென்சல் விளையாட்டு",
         "boule_de_fort": "கோட்டை பந்து",
-        "pétanque": "Pétanque",
+        "pétanque": "பெட்டான்க்யூ",
         "bocce": "போச்"
     },
     "piste:difficulty": {
