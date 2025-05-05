@@ -175,7 +175,7 @@ function Intro() {
       <p>
         <a href="https://hosted.weblate.org/engage/sustainable-map/">
           <img
-            src="https://hosted.weblate.org/widgets/sustainable-map/-/svg-badge.svg"
+            src="https://hosted.weblate.org/widget/sustainable-map/svg-badge.svg"
             alt={t("intro.translationStatus")}
           />
         </a>

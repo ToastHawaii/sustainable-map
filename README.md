@@ -27,7 +27,8 @@ The app is licensed under the [GNU Affero General Public License v3.0](https://g
 [English](https://sustainable.zottelig.ch/?lang=en) | [čeština](https://sustainable.zottelig.ch/?lang=cs) | [Deutsch](https://sustainable.zottelig.ch/?lang=de) | [Español](https://sustainable.zottelig.ch/?lang=es) | [Français](https://sustainable.zottelig.ch/?lang=fr) | [magyar](https://sustainable.zottelig.ch/?lang=hu), | [Polski](https://sustainable.zottelig.ch/?lang=pl) | [தமிழ்](https://sustainable.zottelig.ch/?lang=ta) | <!-- [中文（繁體）](https://sustainable.zottelig.ch/?lang=zh_Hant) |--> [Help translate](https://hosted.weblate.org/engage/sustainable-map/)
 
 <a href="https://hosted.weblate.org/engage/sustainable-map/">
-<img src="https://hosted.weblate.org/widgets/sustainable-map/-/svg-badge.svg" alt="Translation status" /></a>
+<img src="https://hosted.weblate.org/widget/sustainable-map/svg-badge.svg" alt="Translation status" />
+</a>
 
 ---
 
