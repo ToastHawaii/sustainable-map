@@ -201,7 +201,7 @@ function Intro() {
           </a>
         </li>
         <li>
-          <a href="https://osm-apps.zottelig.ch/">{t("intro.moreApps")}</a>
+          <a href="https://osm-apps.org/">{t("intro.moreApps")}</a>
         </li>
         <li>
           <a href="https://wiki.openstreetmap.org/wiki/User:ToastHawaii">
