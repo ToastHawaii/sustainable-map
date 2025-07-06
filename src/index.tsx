@@ -31,16 +31,9 @@ function Logo() {
 function Intro() {
   const { t } = useTranslation();
 
-  const map = useMap();
-
   function handleEdit() {
-    const latlng = map.getCenter();
-    const zoom = map.getZoom();
-
-    if (isIOS())
-      window.location.href = `https://gomaposm.com/edit?center=${latlng.lat},${latlng.lng}&zoom=${zoom}`;
-    else
-      window.location.href = `https://www.openstreetmap.org/edit#editor=id&map=${zoom}/${latlng.lat}/${latlng.lng}}`;
+    if (isIOS()) window.location.href = `https://gomaposm.com/edit`;
+    else window.location.href = `https://www.openstreetmap.org/edit#editor=id`;
   }
 
   return (
@@ -131,7 +124,7 @@ function Intro() {
           i18nKey="intro.osm"
           components={{
             o: <a href="https://www.openstreetmap.org" />,
-            e: <a href="#" className="edit" onClick={handleEdit}/>,
+            e: <a href="#" className="edit" onClick={handleEdit} />,
           }}
         ></Trans>
       </p>
