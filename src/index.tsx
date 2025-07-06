@@ -7,6 +7,8 @@ import externalResources from "./client/externalResources.json";
 import { filters } from "./client/filters";
 
 import "./client/initI18next";
+import { useMap } from "react-leaflet";
+import { isIOS } from "./osm-app-component/createOverPassLayer";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -28,6 +30,18 @@ function Logo() {
 
 function Intro() {
   const { t } = useTranslation();
+
+  const map = useMap();
+
+  function handleEdit() {
+    const latlng = map.getCenter();
+    const zoom = map.getZoom();
+
+    if (isIOS())
+      window.location.href = `https://gomaposm.com/edit?center=${latlng.lat},${latlng.lng}&zoom=${zoom}`;
+    else
+      window.location.href = `https://www.openstreetmap.org/edit#editor=id&map=${zoom}/${latlng.lat}/${latlng.lng}}`;
+  }
 
   return (
     <>
@@ -117,7 +131,7 @@ function Intro() {
           i18nKey="intro.osm"
           components={{
             o: <a href="https://www.openstreetmap.org" />,
-            e: <a href="#" className="edit" />,
+            e: <a href="#" className="edit" onClick={handleEdit}/>,
           }}
         ></Trans>
       </p>
