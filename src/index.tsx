@@ -170,6 +170,9 @@ function Intro() {
               {/* <td>
           <a href="/?lang=zh_Hant">中文（繁體）</a>
         </td> */}
+              {/* <td>
+          <a href="/?lang=uk">Українська</a>
+        </td> */}
               <td>
                 <a href="https://hosted.weblate.org/engage/sustainable-map/">
                   {t("intro.translate")}
