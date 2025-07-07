@@ -595,6 +595,6 @@
         "osm": "Die Informationen werden von <o>OpenStreetMap</o> geladen. <e>Füge dir bekannte Orte hinzu.</e>",
         "contribute": "Zu OpenStreetMap beitragen",
         "license": "Die Anwendung ist unter der <l>GNU Affero General Public License v3.0</l> lizenziert. Der <c>Code</c> steht frei zur Verwendung, Kopierung und Modifizierung, wenn er unter der gleichen Lizenz veröffentlichet wird.",
-        "joinCommunity": "Werde Teil der <c>OSM-Community</>: <j>Tritt einer lokalen Gruppe bei</j>, <m>triff dich mit anderen</m> und <t>chatte</t>"
+        "joinCommunity": "Werde Teil der <c>OSM-Community</c>: <j>Tritt einer lokalen Gruppe bei</j>, <m>triff dich mit anderen</m> und <t>chatte</t>"
     }
 }
