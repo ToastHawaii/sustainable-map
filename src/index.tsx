@@ -124,7 +124,7 @@ function Intro() {
           i18nKey="intro.osm"
           components={{
             o: <a href="https://www.openstreetmap.org" />,
-            e: <a href="#" className="edit" onClick={handleEdit} />,
+            e: <a href="https://www.openstreetmap.org/edit" className="edit" onClick={handleEdit} />,
           }}
         ></Trans>
       </p>
