@@ -48,6 +48,24 @@
         "watermill": "Водяний млин",
         "windmill": "Вітряк",
         "mineshaft": "Шахта",
-        "drinking_fountain": "Питний фонтан"
+        "drinking_fountain": "Питний фонтан",
+        "tower": "Вежа",
+        "beehive": "Вулик",
+        "insect_hotel": "Готель для комах",
+        "nesting_site": "Допомога при гніздуванні"
+    },
+    "landuse": {
+        "apiary": "Вулик"
+    },
+    "natural": {
+        "anthill": "Мурашник",
+        "termite_mound": "Термітник"
+    },
+    "sport": {
+        "bowls": "Боулз",
+        "boules": "Бочче"
+    },
+    "boules": {
+        "petanque": "Петанк"
     }
 }
