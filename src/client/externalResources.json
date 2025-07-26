@@ -142,7 +142,7 @@
     },
     {
       "name": "Reparaturführer",
-      "url": "https://reparaturfuehrer.ch/kategorien/fahrraeder-ebikes/",
+      "url": "https://reparaturfuehrer.ch/kategorien/fahrraeder-e-bikes/",
       "bounds": [45.818, 5.9559, 47.8085, 10.4923]
     },
     {
@@ -661,7 +661,7 @@
     },
     {
       "name": "Reparaturführer",
-      "url": "https://reparaturfuehrer.ch/kategorien/fahrraeder-ebikes/",
+      "url": "https://reparaturfuehrer.ch/kategorien/fahrraeder-e-bikes/",
       "bounds": [45.818, 5.9559, 47.8085, 10.4923]
     },
     {
@@ -672,7 +672,7 @@
   "bicycle-repair": [
     {
       "name": "Reparaturführer",
-      "url": "https://reparaturfuehrer.ch/kategorien/fahrraeder-ebikes/",
+      "url": "https://reparaturfuehrer.ch/kategorien/fahrraeder-e-bikes/",
       "bounds": [45.818, 5.9559, 47.8085, 10.4923]
     }
   ]
