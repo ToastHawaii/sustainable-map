@@ -124,7 +124,13 @@ function Intro() {
           i18nKey="intro.osm"
           components={{
             o: <a href="https://www.openstreetmap.org" />,
-            e: <a href="https://www.openstreetmap.org/edit" className="edit" onClick={handleEdit} />,
+            e: (
+              <a
+                href="https://www.openstreetmap.org/edit"
+                className="edit"
+                onClick={handleEdit}
+              />
+            ),
           }}
         ></Trans>
       </p>
@@ -167,11 +173,11 @@ function Intro() {
               <td>
                 <a href="/?lang=ta">தமிழ்</a>
               </td>
+              <td>
+                <a href="/?lang=uk">Українська</a>
+              </td>
               {/* <td>
           <a href="/?lang=zh_Hant">中文（繁體）</a>
-        </td> */}
-              {/* <td>
-          <a href="/?lang=uk">Українська</a>
         </td> */}
               <td>
                 <a href="https://hosted.weblate.org/engage/sustainable-map/">

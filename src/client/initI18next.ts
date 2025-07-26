@@ -19,6 +19,8 @@ import * as ru from "./locales/ru.json";
 import * as oacRu from "../osm-app-component/locales/ru.json";
 import * as ta from "./locales/ta.json";
 import * as oacTa from "../osm-app-component/locales/ta.json";
+import * as uk from "./locales/uk.json";
+import * as oacUk from "../osm-app-component/locales/uk.json";
 import * as zhHant from "./locales/zh_Hant.json";
 import * as oacZhHant from "../osm-app-component/locales/zh-Hant.json";
 
@@ -32,6 +34,7 @@ export const Resources = {
   pl: { translation: { ...pl, ...oacPl } },
   ru: { translation: { ...ru, ...oacRu } },
   ta: { translation: { ...ta, ...oacTa } },
+  uk: { translation: { ...uk, ...oacUk } },
   zh_Hant: { translation: { ...zhHant, ...oacZhHant } },
 };
 
