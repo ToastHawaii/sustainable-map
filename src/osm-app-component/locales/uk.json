@@ -3,7 +3,8 @@
         "moreFilters": "Більше фільтрів:",
         "osmTags": "Документація",
         "query": "Запит",
-        "externalResources": "Інші"
+        "externalResources": "Інші",
+        "overpassTurbo": "overpass-turbo"
     },
     "search": {
         "placeholder": "Пошук місця"
@@ -34,7 +35,8 @@
     "opens": "Відкрито",
     "closes": "Закрито",
     "amenity": {
-        "hunting_stand": "Мисливська стоянка"
+        "hunting_stand": "Мисливська стоянка",
+        "give_box": "GiveBox"
     },
     "shop": {
         "books": "Книгарня"
@@ -66,6 +68,19 @@
         "boules": "Бочче"
     },
     "boules": {
-        "petanque": "Петанк"
+        "petanque": "Петанк",
+        "lyonnaise": "Провансальська гра",
+        "boule_de_fort": "Boule de fort",
+        "pétanque": "Pétanque",
+        "bocce": "Бочче"
+    },
+    "floor": "({{level}}F)",
+    "code": "uk",
+    "piste:difficulty": {
+        "novice": "Новачок",
+        "easy": "Легко",
+        "intermediate": "Середній рівень",
+        "advanced": "Розширений",
+        "expert": "Експерт"
     }
 }
