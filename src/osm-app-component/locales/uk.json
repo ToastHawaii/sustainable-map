@@ -81,6 +81,34 @@
         "easy": "Легко",
         "intermediate": "Середній рівень",
         "advanced": "Розширений",
-        "expert": "Експерт"
+        "expert": "Експерт",
+        "freeride": "Фрірайд",
+        "extreme": "Екстрім"
+    },
+    "fitness_station": {
+        "balance_beam": "Вправа на колоді",
+        "box": "Коробка для вправ",
+        "horizontal_bar": "Вправа на турніку",
+        "horizontal_ladder": "Вправи на турніках",
+        "hyperextension": "Станція гіперекстензії",
+        "parallel_bars": "Паралельні бруси",
+        "push-up": "Станція для віджимань",
+        "rings": "Кільця для вправ",
+        "sign": "Знак інструкції з вправ",
+        "sit-up": "Станція для сидіння",
+        "stairs": "Сходи для вправ",
+        "beam_jump": "Стрибок з жердиною",
+        "stepping_stone": "Сходовий камінь",
+        "bench": "Лавка",
+        "body_raise": "Підняття тіла",
+        "slalom": "Слалом",
+        "stretch_bars": "Розтяжні бруси"
+    },
+    "historic": {
+        "aircraft": "Літак",
+        "aqueduct": "Акведук",
+        "archaeological_site": "Археологічна пам'ятка",
+        "battlefield": "Поле битви",
+        "boundary_stone": "Межовий камінь"
     }
 }
