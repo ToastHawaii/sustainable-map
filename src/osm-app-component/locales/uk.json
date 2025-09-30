@@ -134,6 +134,22 @@
         "railway_car": "Залізничний вагон",
         "ruins": "Руїни",
         "rune_stone": "Рунічний камінь",
-        "ship": "Корабель"
+        "ship": "Корабель",
+        "tomb": "Гробниця",
+        "tower": "Вежа",
+        "tree_shrine": "Дерево-святиня",
+        "wayside_cross": "Придорожній хрест",
+        "wayside_shrine": "Придорожнє святилище",
+        "wreck": "Аварія"
+    },
+    "site_type": {
+        "megalith": "Мегаліт",
+        "bigstone": "Бігстоун",
+        "tumulus": "Курган",
+        "fortification": "Фортифікація",
+        "petroglyph": "Петрогліф",
+        "geoglyph": "Геогліф",
+        "city": "Історичне місто",
+        "settlement": "Поселення"
     }
 }
