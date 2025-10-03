@@ -150,6 +150,32 @@
         "petroglyph": "Петрогліф",
         "geoglyph": "Геогліф",
         "city": "Історичне місто",
-        "settlement": "Поселення"
+        "settlement": "Поселення",
+        "roman_villa": "Римська вілла",
+        "domus": "Домус",
+        "roman_circus": "Римський цирк",
+        "necropolis": "Некрополь"
+    },
+    "castle_type": {
+        "defensive": "Оборонний замок",
+        "palace": "Палац",
+        "stately": "Величний маєток",
+        "manor": "Садиба",
+        "fortress": "Фортеця",
+        "castrum": "Римський форт ",
+        "shiro": "Широ",
+        "kremlin": "Кремль",
+        "hillfort": "Городище"
+    },
+    "garden:type": {
+        "botanical": "Ботанічний сад",
+        "community": "Громадський сад",
+        "residential": "Житловий сад",
+        "roof_garden": "Сад на даху"
+    },
+    "garden:style": {
+        "english": "Англійський ландшафтний сад",
+        "french": "Французький сад",
+        "chinese": "Китайський сад"
     }
 }
