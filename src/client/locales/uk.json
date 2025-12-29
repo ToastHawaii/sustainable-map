@@ -151,5 +151,61 @@
     "veryCheap": "Безкоштовно або дуже дешево",
     "horizontalBar": "Горизонтальна смуга",
     "parallelBars": "Паралельні бруси",
-    "rings": "Кільця"
+    "rings": "Кільця",
+    "exerciseMachine": "Тренажер",
+    "balance": "Баланс",
+    "difficulty": "Складність",
+    "type": {
+        "artwork": {
+            "name": "Виріб мистецтва"
+        },
+        "fountain": {
+            "name": "Фонтан"
+        },
+        "tourist-attraction": {
+            "name": "Туристична пам'ятка"
+        },
+        "archaeological-site": {
+            "name": "Археологічна пам'ятка"
+        },
+        "trail": {
+            "name": "Навчальний маршрут"
+        },
+        "battery-recycling": {
+            "name": "Акумулятор"
+        },
+        "oil-recycling": {
+            "name": "Олія"
+        },
+        "reusable-bottle-reuse": {
+            "name": "Пляшка багаторазового використання"
+        },
+        "rubble-recycling": {
+            "name": "Будівельний щебінь"
+        },
+        "plastic-recycling": {
+            "name": "Пластик"
+        },
+        "hazardous-recycling": {
+            "name": "Небезпечні відходи"
+        },
+        "sport": {
+            "name": "Спорт"
+        },
+        "books": {
+            "name": "Книги"
+        },
+        "books-get": {
+            "name": "Отримати книги"
+        },
+        "books-borrow": {
+            "name": "Позичання книг"
+        },
+        "books-give": {
+            "name": "Даруйте книги"
+        },
+        "books-recycle": {
+            "name": "Переробка книг"
+        }
+    }
 }
