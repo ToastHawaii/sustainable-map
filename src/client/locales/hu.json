@@ -576,5 +576,7 @@
     "freeToTake": "Ingyen elvihető",
     "public": "Nyilvánosan használható",
     "customersOnly": "Csak ügyfeleknek",
-    "colour": "Szín"
+    "colour": "Szín",
+    "horizontalBar": "Vízszintes rúd",
+    "balance": "Egyensúlyozás"
 }
