@@ -16,7 +16,11 @@
 // along with osm-app-component.  If not, see <http://www.gnu.org/licenses/>.
 
 import { TFunction } from "i18next";
-import { toWikimediaCommonsUrl, toMapillaryUrl } from "./utilities/image";
+import {
+  toWikimediaCommonsUrl,
+  toMapillaryUrl,
+  toPanoramaxUrl,
+} from "./utilities/image";
 import { toUrl } from "./utilities/url";
 
 export function extractName(tags: any, langCode: string) {
@@ -47,7 +51,7 @@ export function extractName(tags: any, langCode: string) {
 export function extractType(
   t: TFunction<"translation", undefined>,
   tags: any,
-  value: string
+  value: string,
 ) {
   return (
     t("public_bookcase:type." + tags["public_bookcase:type"], {
@@ -88,6 +92,7 @@ export function extractOperator(tags: any) {
 export function extractImage(tags: any): string | undefined {
   return (
     toWikimediaCommonsUrl(tags.wikimedia_commons) ||
+    toPanoramaxUrl(tags["panoramax:view"] || tags.panoramax) ||
     toMapillaryUrl(tags.mapillary) ||
     toUrl(tags.flickr) ||
     toWikimediaCommonsUrl(tags.image) ||
