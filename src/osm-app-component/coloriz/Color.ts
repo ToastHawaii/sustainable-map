@@ -24,22 +24,26 @@ export function hexToRgb(hex: string) {
 
   const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
 
-  if (!result) throw "hex has a unexpected format.";
+  if (!result) throw new Error("hex has a unexpected format.");
 
   return [
     parseInt(result[1], 16),
     parseInt(result[2], 16),
-    parseInt(result[3], 16)
+    parseInt(result[3], 16),
   ];
 }
 
 export class Color {
-  constructor(public r: number, public g: number, public b: number) {
+  constructor(
+    public r: number,
+    public g: number,
+    public b: number,
+  ) {
     this.set(r, g, b);
   }
   public toString() {
     return `rgb(${Math.round(this.r)}, ${Math.round(this.g)}, ${Math.round(
-      this.b
+      this.b,
     )})`;
   }
   public set(r: number, g: number, b: number) {
@@ -60,7 +64,7 @@ export class Color {
       0.072 - cos * 0.072 - sin * 0.283,
       0.213 - cos * 0.213 - sin * 0.787,
       0.715 - cos * 0.715 + sin * 0.715,
-      0.072 + cos * 0.928 + sin * 0.072
+      0.072 + cos * 0.928 + sin * 0.072,
     ]);
   }
   public grayscale(value = 1) {
@@ -73,7 +77,7 @@ export class Color {
       0.0722 - 0.0722 * (1 - value),
       0.2126 - 0.2126 * (1 - value),
       0.7152 - 0.7152 * (1 - value),
-      0.0722 + 0.9278 * (1 - value)
+      0.0722 + 0.9278 * (1 - value),
     ]);
   }
   public sepia(value = 1) {
@@ -86,7 +90,7 @@ export class Color {
       0.168 - 0.168 * (1 - value),
       0.272 - 0.272 * (1 - value),
       0.534 - 0.534 * (1 - value),
-      0.131 + 0.869 * (1 - value)
+      0.131 + 0.869 * (1 - value),
     ]);
   }
   public saturate(value = 1) {
@@ -99,18 +103,18 @@ export class Color {
       0.072 - 0.072 * value,
       0.213 - 0.213 * value,
       0.715 - 0.715 * value,
-      0.072 + 0.928 * value
+      0.072 + 0.928 * value,
     ]);
   }
   public multiply(matrix: number[]) {
     const newR = this.clamp(
-      this.r * matrix[0] + this.g * matrix[1] + this.b * matrix[2]
+      this.r * matrix[0] + this.g * matrix[1] + this.b * matrix[2],
     );
     const newG = this.clamp(
-      this.r * matrix[3] + this.g * matrix[4] + this.b * matrix[5]
+      this.r * matrix[3] + this.g * matrix[4] + this.b * matrix[5],
     );
     const newB = this.clamp(
-      this.r * matrix[6] + this.g * matrix[7] + this.b * matrix[8]
+      this.r * matrix[6] + this.g * matrix[7] + this.b * matrix[8],
     );
     this.r = newR;
     this.g = newG;
@@ -163,7 +167,7 @@ export class Color {
     return {
       h: h * 100,
       s: s * 100,
-      l: l * 100
+      l: l * 100,
     };
   }
   public clamp(value: number) {

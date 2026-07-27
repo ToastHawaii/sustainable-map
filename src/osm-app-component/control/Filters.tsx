@@ -1,7 +1,6 @@
 import React from "react";
 import { groupBy } from "../utilities/data";
 import { useTranslation } from "react-i18next";
-import { getQueryParams, setQueryParams } from "../utilities/url";
 
 export type Filter = {
   id: number;
@@ -44,15 +43,15 @@ export function Filters({
     filterOptions
       .sort((a, b) =>
         t("type." + a.value + ".name").localeCompare(
-          t("type." + b.value + ".name")
-        )
+          t("type." + b.value + ".name"),
+        ),
       )
       .sort((a, b) =>
-        t("group." + a.group).localeCompare(t("group." + b.group))
+        t("group." + a.group).localeCompare(t("group." + b.group)),
       )
       .sort((a, b) => (a.subgroup || "").localeCompare(b.subgroup || ""))
       .sort((a, b) => (b.order || 1000) - (a.order || 1000)),
-    "group"
+    "group",
   );
 
   return (

@@ -50,30 +50,30 @@ export function extractType(
   value: string
 ) {
   return (
-    t("public_bookcase:type" + "." + tags["public_bookcase:type"], {
+    t("public_bookcase:type." + tags["public_bookcase:type"], {
       defaultValue: "",
     }) ||
-    t("garden:type" + "." + tags["garden:type"], { defaultValue: "" }) ||
-    t("garden:style" + "." + tags["garden:style"], { defaultValue: "" }) ||
-    t("castle_type" + "." + tags["castle_type"], { defaultValue: "" }) ||
-    t("historic" + "." + tags["historic"], { defaultValue: "" }) ||
-    t("fitness_station" + "." + tags["fitness_station"], {
+    t("garden:type." + tags["garden:type"], { defaultValue: "" }) ||
+    t("garden:style." + tags["garden:style"], { defaultValue: "" }) ||
+    t("castle_type." + tags["castle_type"], { defaultValue: "" }) ||
+    t("historic." + tags["historic"], { defaultValue: "" }) ||
+    t("fitness_station." + tags["fitness_station"], {
       defaultValue: "",
     }) ||
-    t("site_type" + "." + tags["site_type"], { defaultValue: "" }) ||
+    t("site_type." + tags["site_type"], { defaultValue: "" }) ||
     tags["species:" + t("code")] ||
     tags.species ||
     tags["genus:" + t("code")] ||
     tags.genus ||
     tags.protection_title ||
-    t("boules" + "." + tags.boules, { defaultValue: "" }) ||
-    t("sport" + "." + tags.sport, { defaultValue: "" }) ||
-    t("amenity" + "." + tags.amenity, { defaultValue: "" }) ||
-    t("leisure" + "." + tags.leisure, { defaultValue: "" }) ||
-    t("man_made" + "." + tags.man_made, { defaultValue: "" }) ||
-    t("landuse" + "." + tags.landuse, { defaultValue: "" }) ||
-    t("natural" + "." + tags.natural, { defaultValue: "" }) ||
-    t("shop" + "." + tags.shop, { defaultValue: "" }) ||
+    t("boules." + tags.boules, { defaultValue: "" }) ||
+    t("sport." + tags.sport, { defaultValue: "" }) ||
+    t("amenity." + tags.amenity, { defaultValue: "" }) ||
+    t("leisure." + tags.leisure, { defaultValue: "" }) ||
+    t("man_made." + tags.man_made, { defaultValue: "" }) ||
+    t("landuse." + tags.landuse, { defaultValue: "" }) ||
+    t("natural." + tags.natural, { defaultValue: "" }) ||
+    t("shop." + tags.shop, { defaultValue: "" }) ||
     t("type." + value + ".name", { defaultValue: "" }) ||
     t("def", { defaultValue: "" })
   );

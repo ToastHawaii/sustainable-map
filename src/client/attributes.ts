@@ -58,7 +58,7 @@ export const attributes: Attribute<{}>[] = [
       template(
         t("difficulty"),
         "fas fa-exclamation-circle",
-        t("piste:difficulty" + "." + tags["piste:difficulty"], {
+        t("piste:difficulty." + tags["piste:difficulty"], {
           defaultValue: "",
         })
       ),
