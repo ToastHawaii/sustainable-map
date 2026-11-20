@@ -554,7 +554,7 @@
             "name": "Velo (Geben)"
         },
         "bicycle-get": {
-            "name": "Bicycle (Bekommen)"
+            "name": "Velo (Bekommen)"
         },
         "bicycle-rent": {
             "name": "Velo (Ausleihen)"
